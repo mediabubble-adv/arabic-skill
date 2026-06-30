@@ -1,0 +1,236 @@
+# 🇪🇬 مصري — Egyptian Arabic (Masri)
+
+**Population:** ~105 million | **Prestige:** Highest in Arab world due to cinema, TV, music dominance
+**Primary markets:** Cairo, Alexandria, Delta cities, Upper Egypt (Saeed)
+**When to use:** Egypt-targeted content, pan-Arab content when dialect must appeal broadly
+
+---
+
+## 1. Phonology — Sound Rules
+
+| Classical/MSA | Masri equivalent | Example |
+|---|---|---|
+| ق (qaf) | ء (glottal stop) | قلب → ألب / قديم → ءديم |
+| ج (jeem) | g | جمهورية → gumhuriyya |
+| ث (tha) | s or t | ثلاثة → talata / ثقيل → tʔeel |
+| ذ (dhal) | z or d | ذهب → dahab / ذكي → zaki |
+| ظ (dha) | z | ظريف → zarif |
+| Long vowels | often shortened | كتاب → ketab |
+
+**Key feature:** Hamzation of qaf is the single most reliable Masri marker. "قلبي" said as "ألبي" = instantly Egyptian.
+
+---
+
+## 2. Core Vocabulary Reference
+
+### Everyday high-frequency words
+| Masri | MSA | Meaning |
+|---|---|---|
+| إيه / إيه ده | ما هذا | what / what is this |
+| مش / مش كده | ليس / أليس كذلك | not / isn't that right? |
+| عارف / عارفة | يعلم / تعلم | know (m/f) |
+| بتاع / بتاعت | خاص بـ / ملك | belonging to |
+| لسه | لا يزال / بعد | still / not yet |
+| خلاص | انتهى / كافٍ | finished / that's enough |
+| أوي | جداً | very |
+| يعني | يعني / أي | means / like / you know |
+| زي | مثل | like / as |
+| مش هينفع | لن يجدي | won't work |
+| بقى | أصبح / إذن | became / so then (filler) |
+| جامد | رائع | awesome / cool |
+| تمام | جيد / حسناً | good / okay |
+| معلش | لا بأس | it's okay / never mind |
+| طب | إذن / حسناً | so / well then (thought transition) |
+
+### Emotional vocabulary
+| Masri | Meaning | Register |
+|---|---|---|
+| بجد | seriously / really | casual intensifier |
+| والله العظيم | by God (serious oath) | strong conviction |
+| يا ساتر / يا لطيف | expression of surprise/alarm | general |
+| روعة | wonderful | positive surprise |
+| مش طبيعي | unbelievable (positive) | high praise |
+| عملة | a gem / very special person | affectionate |
+| حبيبي / حبيبتي | my love (casual address) | warm/familiar |
+| يا عم | man / dude (address) | casual masculine |
+| يا ست الكل | madam / best of all (address) | feminine flattery |
+| هوله / هوله | OMG / yikes | surprise/shock |
+
+### Business & digital vocabulary
+| Masri | English origin | Meaning |
+|---|---|---|
+| شغل | — | work / business |
+| برنامج | — | app / software |
+| أبليكيشن | application | app |
+| أونلاين | online | online |
+| لينك | link | link |
+| فيديو | video | video |
+| كوبون | coupon | discount code |
+| أوفر | offer | deal |
+| ديل | deal | deal |
+| فولورز | followers | followers |
+
+---
+
+## 3. Grammar Patterns
+
+### Verb conjugation (present continuous — بـ prefix)
+| Person | Pattern | Example (write = كتب) |
+|---|---|---|
+| I | بـ + verb | بكتب (ba-ktib) |
+| You (m) | بتـ + verb | بتكتب (bit-ktib) |
+| You (f) | بتـ + verb + ي | بتكتبي (bit-ktibi) |
+| He | بيـ + verb | بيكتب (bi-yiktib) |
+| She | بتـ + verb | بتكتب (bit-ktib) |
+| We | بنـ + verb | بنكتب (bin-ktib) |
+| They | بيـ + verb + وا | بيكتبوا (bi-yiktibu) |
+
+### Future tense (هـ prefix)
+"هيكتب" (hiyiktib) = will write. Contract: "هكتب" (ha-ktib) = I will write.
+
+### Negation — double negation sandwich
+`ما + verb + ش`
+- ما كتبش = didn't write
+- ما بكتبش = don't write / am not writing
+- ما هكتبش = won't write
+
+Single `مش` negates nouns/adjectives: "مش كويس" = not good.
+
+### Question formation
+- Yes/no: rising intonation only. No particle needed.
+- "هو كتب؟" = Did he write?
+- Specific questions: إيه (what), مين (who), فين (where), إمتى (when), ليه (why), إزاي (how), قد إيه (how much/many)
+
+---
+
+## 4. Register Scale
+
+| Level | Description | When to use | Example phrase |
+|---|---|---|---|
+| L1 — Saidi/Baladi | Rural / traditional | Folklore, traditional brands, food brands | "اللي يتكلم كتير، بيعمل قليل" |
+| L2 — Sha'bi | Working class urban | Street-level brands, affordable goods, mass market | "يا عم، الحاجة دي بجد زاكية" |
+| L3 — Masri Standard | Cairo educated middle class | Most commercial content, social media | "بجد ده شغل محترم" |
+| L4 — Masri-Formal | Professional/business | B2B, corporate, LinkedIn | "الشركة بتقدم حلول فعلية في [field]" |
+| L5 — Mixed MSA | Formal presentations | Legal copy, official statements, govt | Heavy MSA, minimal Masri markers |
+
+**Most commercial content should land at L3.** Going lower risks alienating the target; going higher sounds corporate and loses the audience.
+
+---
+
+## 5. Platform & Audience Profile
+
+| Platform | Dominant in Egypt | Content register | Hook style |
+|---|---|---|---|
+| TikTok | Gen Z (15–28) | L2–L3, very casual | Verbal hook first 2 sec |
+| Instagram Reels | Millennials (22–35) | L3 | Visual + caption hook |
+| Instagram Feed | 25–40, established audience | L3–L4 | Thoughtful caption |
+| YouTube | All ages, long content | L3, storytelling | Strong verbal hook |
+| Facebook | 30–55, family audience | L3, community-focused | Emotional hook, longer text |
+| Threads | 20–35, opinion-leaders | L3, conversational | Short hot take |
+| WhatsApp | All ages | L2–L3, personal | Very brief, personal |
+| LinkedIn | 25–45, B2B | L4 | Insight + proof |
+| Snapchat | 15–25 | L2, playful | Story-based |
+
+---
+
+## 6. Brand Voice Guide
+
+### Warm & familiar brands (food, lifestyle, consumer)
+- Use حبيبي / يا عم as address
+- Contractions everywhere: "مش" not "ليس", "بتاعتك" not "خاصتك"
+- Self-aware humor — Masri audiences love brands that know they're marketing
+- Directness over elegance
+
+### Premium brands (beauty, fashion, travel) in Egypt
+- Still Masri, but cleaner. L3–L4.
+- Avoid sha'bi vocabulary but keep the energy warm
+- "جودة مش محتاج تتأكد منها" beats "جودة عالية المستوى"
+
+### B2B / tech brands
+- L4 Masri or light MSA
+- Still use "بيشتغل" not "يعمل" — small Masri markers matter for credibility
+- Avoid pretending to be Western: "احنا بنفهم السوق المصري" outperforms "we know your market"
+
+---
+
+## 7. Humanization Markers (Masri-specific)
+
+Add to every output — pick 1–2:
+- **والله بجد** before the key claim — signals genuine belief
+- **طب** as thought transitions ("طب والسبب؟" / "طب ولو؟")
+- **مش كده؟** at the end of a statement that invites agreement
+- **ماشي** as casual confirmation / ongoing agreement
+- **خلاص** as a decisive closer — stops the loop
+- Trailing ellipsis for unfinished thoughts: "والكلام ده..."
+- Self-interruption: "كنت هقول [X] — لأ، الأصح إن [Y]"
+
+**Remove immediately if present:**
+- يُعدّ / يُشكّل / يُسهم — rewrite actively
+- Formal SVO order in every sentence
+- في ظل التطورات — delete + say the actual point
+
+---
+
+## 8. Sub-regional Nuance
+
+### القاهرة (Cairo)
+Most commercial content defaults to Cairene Masri. Fast-paced, irony-aware, sophisticated.
+
+### الإسكندرية (Alexandria)
+Slightly softer pronunciation. More Mediterranean feel. References the sea, informality, relaxed pace.
+
+### الصعيد (Upper Egypt — Saeid)
+Distinct accent (hard ج, distinct vowels). Tap into family values, tradition, hospitality. Brands that use authentic Saidi markers earn trust from this segment. Don't mock.
+
+### دلتا (Delta)
+Close to Cairene but slightly slower. Agricultural roots. Family-business register.
+
+---
+
+## 9. Content Samples
+
+### Caption — Masri (L3, lifestyle product)
+```
+مش كل يوم بتلاقي حاجة بالضبط زي ما عايزها.
+
+ده حصل معايا لما جربت [product].
+
+أول مرة حسيت إني مش بتنازل — لا في الجودة، ولا في السعر.
+
+جرب بنفسك. الرأي رأيك.
+#اسم_المنتج #مصر
+```
+
+### Hook — Masri (L3, educational content)
+```
+في مصر، 8 من 10 أشخاص بيعملوا [common mistake].
+
+وأنا كنت واحد منهم.
+
+لحد ما عرفت الحاجة دي...
+```
+
+### B2B opener — Masri (L4)
+```
+بعد ما اشتغلنا مع [number] شركة في مصر، شفنا نفس المشكلة بتتكرر.
+
+مش في المنتج. في طريقة التنفيذ.
+
+الكلام ده هيوضح ليك.
+```
+
+---
+
+## 10. Cross-Dialect Contamination — Avoid These
+
+| Phrase | Dialect it belongs to | Replace with in Masri |
+|---|---|---|
+| بصراحة (as opener) | Khaliji | بجد / فعلاً |
+| والله (as general filler) | Khaliji / Gulf | والنبي or بجد or فعلاً |
+| هيك | Levantine | كده / بالشكل ده |
+| يعني (overused as filler) | Levantine / MSA | بقى or طب |
+| شو | Levantine | إيه |
+| ما شاء الله (as praise opener) | Gulf/KSA | جامد / روعة (informal) |
+| والو | Moroccan | مفيش حاجة |
+| راه | Moroccan | it doesn't exist in Masri |
+| ما كان عندي | Khaliji | ما كانش عندي |

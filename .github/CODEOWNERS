@@ -1,0 +1,5 @@
+# CODEOWNERS — require review for high-impact paths
+/arabic/SKILL.md       @mediabubble-adv/maintainers
+/arabic/dialects/      @mediabubble-adv/maintainers
+/VERSION                         @mediabubble-adv/maintainers
+/.github/workflows/            @mediabubble-adv/maintainers

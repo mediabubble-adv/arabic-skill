@@ -1,0 +1,29 @@
+name: Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate skill references
+        run: ./scripts/validate-skill.sh
+
+      - name: Validate documentation links
+        run: ./scripts/validate-docs.sh
+
+      - name: Check version sync
+        run: |
+          ROOT_VERSION=$(tr -d '[:space:]' < VERSION)
+          SKILL_VERSION=$(grep -E '^version:' arabic/SKILL.md | head -1 | sed 's/.*"\(.*\)".*/\1/')
+          if [ "$ROOT_VERSION" != "$SKILL_VERSION" ]; then
+            echo "VERSION ($ROOT_VERSION) != SKILL.md ($SKILL_VERSION)"
+            exit 1
+          fi
+          echo "Version OK: $ROOT_VERSION"
