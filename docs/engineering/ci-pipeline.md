@@ -57,8 +57,9 @@ Before opening a PR:
 
 | Gate | Phase | Purpose |
 |------|-------|---------|
-| Golden prompt tests | v1.5.0 | 12 acceptance scenarios |
-| Frontmatter lint | v1.1.0 | SKILL.md YAML schema |
+| Golden prompt tests (G1–G12) | **v1.0.0 gate** | Skill acceptance scenarios — see [implementation-plan §0.3](../planning/implementation-plan.md#03-golden-test-master-table-g1g18) |
+| Golden prompt tests (G13–G18) | v1.1.0 | Website acceptance scenarios |
+| Frontmatter lint (`validate-frontmatter.sh`) | v1.1.0 | SKILL.md YAML schema |
 | Reference sync check | v1.2.0 | Distillation drift detection |
 | `npx arabic detect` | v2.0.0 | AI-ism scanner for output |
 | Install website + Pages deploy | Post-v1 test | Public install site at `website/` |

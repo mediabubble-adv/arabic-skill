@@ -210,7 +210,7 @@ From public skill ecosystems, install sites, and our strategic assessment:
 | Version | Meaning | Git tag? | Public release? |
 |---------|---------|----------|-----------------|
 | **0.1.x** | Development baseline | Optional `v0.1.0` | Dev/pre-release only |
-| **1.0.0** | PRD §12 + implementation plan Phases 1–5 complete | **Required** `v1.0.0` | **First public release** |
+| **1.0.0** | PRD §12 + implementation plan Phases P1–P6 complete | **Required** `v1.0.0` | **First public release** |
 | **1.1.0** | Distribution layer (website, `npx skills add`, CLI) | Yes | Public |
 | **2.0.0** | Breaking routing or removed modes | Yes | Public + migration notes |
 
@@ -229,8 +229,8 @@ See [Versioning and Releases](../engineering/versioning-and-releases.md).
 
 ### Release checklist (v1.0.0)
 
-1. [ ] All 10 PRD success criteria pass
-2. [ ] 12/12 golden acceptance tests pass
+1. [ ] All 11 PRD success criteria pass
+2. [ ] G1–G12 golden tests pass (G13–G18 gate v1.1.0)
 3. [ ] `validate-skill.sh` — 0 errors (warnings only for deferred v1.1 items)
 4. [ ] `VERSION`, `SKILL.md`, `CHANGELOG.md` aligned
 5. [ ] README install block tested on Cursor + Claude

@@ -1,5 +1,70 @@
 # Implementation Plan: `arabic`
 
+> **Canonical numbering:** This document is the **single source of truth** for phase IDs and golden tests. `roadmap.md`, `versioning-and-releases.md`, `ci-pipeline.md`, and `CHANGELOG.md` reference these IDs; they do not define their own.
+
+## 0. Canonical Phase Map & Golden Tests (source of truth)
+
+### 0.1 Unified phase map
+
+Linear product phases **P0–P6** ship **v1.0.0**. Two cross-cutting tracks (**R**, **C**) run in parallel. **P7** ships **v1.1.0**.
+
+| Phase | Theme | Release | Key deliverables | Golden tests |
+|-------|-------|---------|------------------|--------------|
+| **P0** | Architecture Lock | v1.0.0 prep | Truthful inventory (INDEX), this phase map, G1–G18 table, CI fixes | — |
+| **P1** | Advisory Core | v1.0.0 | `SKILL.md` advisory rewrite, `advisory-mode.md`, intake protocols | G1, G2, G12 |
+| **P2** | Quality Engine | v1.0.0 | Humanization v2, Audit Mode, `examples.md`, hybrid engines | G9 |
+| **P3** | Coach & Memory | v1.0.0 | `prompt-engineering.md`, **`voice.md`** (persistence folded here), save/load | G3 |
+| **P4** | Masri Commercial Depth | v1.0.0 | `ads-service-matrix.md`, `domains/ads-media.md`, `seo-aeo-masri.md`, `seasonal-calendar.md`, masri expansion | G5 |
+| **P5** | Project Mode & Dev-Tech | v1.0.0 | `project-mode.md`, `book-writing.md`, `domains/dev-tech.md`, `project-context-scanner.md` | G4, G6, G11 |
+| **P6** | Runtime Integration & Validation | v1.0.0 **gate** | Wire routing, `INDEX.md` sync, examples QA, run G1–G12 | G1–G12 suite |
+| **R0–R4** | Research Intelligence (cross-cutting) | R0 v1.0.0-prep → R4 v1.2.0 | `research/` scaffold, distillation, `/arabic research` | research fixtures |
+| **C0–C5** | Command Surface (cross-cutting) | C0 plan → C5 v1.1.0 | `command-router.md`, `/arabic`, `.arabic/`, scanner wiring | G7, G8, G10 |
+| **P7** | Website & Distribution | v1.1.0 | `website/`, design system, `npx` install, releases | G13–G18 |
+
+### 0.2 Crosswalk (old numbering → unified)
+
+The detailed phase sections below retain their original prose; each heading is tagged with its unified ID. Older roadmap themes also map here.
+
+| Old (this doc) | Old (roadmap) | Unified |
+|----------------|---------------|---------|
+| Phase 0 Architecture Lock | Phase 0 | **P0** |
+| Phase 1 Behavioral Core | Phase 1 Advisory | **P1** |
+| Phase 2 Humanization v2 | Phase 2 Quality | **P2** |
+| Phase 7 Persistence | Phase 3 Coach & Memory | **P3** |
+| Phase 3 Capability Expansion | Phase 4 Masri | **P4** |
+| Phase 4 Project Mode | Phase 5 Project Mode | **P5** |
+| Phase 5 Runtime Integration + Phase 6 Examples/QA + Phase 8 Validation | — | **P6** |
+| — | Phase R | **R0–R4** |
+| — | Phase C | **C0–C5** |
+| — | Phase 6 Distribution | **P7** |
+
+### 0.3 Golden Test Master Table (G1–G18)
+
+**Gate split:** **G1–G12 gate v1.0.0**; **G13–G18 gate v1.1.0** (website). PRD § refers to `prd.md` §12 (11 criteria).
+
+| ID | Name | Phase | PRD §12 | Command | Pass criteria |
+|----|------|-------|---------|---------|---------------|
+| G1 | Advisory caption flow | P1 | #1 | `/arabic guide` | Guides before write |
+| G2 | Pro Mode ad brief | P1 | #1 | `/arabic write meta` | Compressed intake, review still runs |
+| G3 | Prompt Coach | P3 | #3 | `/arabic coach` | Upgraded prompt + why |
+| G4 | Website project | P5 | #5 | `/arabic plan website` | Staged plan output |
+| G5 | Campaign bundle | P4 | #6 | `/arabic plan campaign` | Multi-channel ads |
+| G6 | Book workflow | P5 | #5 | `/arabic plan book` | Outline + sample chapter + continuity |
+| G7 | Command advisory | C1 | #1 | `/arabic` | Same as G1 via command |
+| G8 | Command write pro | C1 | #1 | `/arabic write caption` | Pro path, no re-intake |
+| G9 | Command audit | C2 | #11 | `/arabic audit` | Scored report |
+| G10 | Command plan | C3 | #5 | `/arabic plan website` | Writes `.arabic/projects/` |
+| G11 | Command auto + project scan | C4 / P5 | #8 | `/arabic auto explain` | Infers verb, uses repo evidence, avoids secrets |
+| G12 | Dialect lock | P1 | #2 | `/arabic write caption --dialect masri` | No MSA bleed |
+| G13 | Website routes | P7 | — | — | 6+ routes render |
+| G14 | Website install copy | P7 | — | — | Matches README |
+| G15 | Website mobile UX | P7 | — | — | 3+ interactive components |
+| G16 | Website Arabic QA | P7 | #10 | — | Audit pass |
+| G17 | Website build | P7 | — | — | `npm run build` passes |
+| G18 | Website deploy | P7 | — | — | Preview URL documented |
+
+---
+
 ## 1. Goal of the Plan
 
 Implement the advisory-first upgrade in a way that changes system behavior first, then expands capability, then hardens integration and validation.
@@ -19,7 +84,7 @@ Implementation should follow this order:
 7. examples and QA assets
 8. validation and acceptance
 
-## 3. Phase 0 — Architecture Lock
+## 3. Phase 0 — Architecture Lock `(P0)`
 
 ### Goal
 
@@ -43,7 +108,7 @@ Prevent drift before adding new content.
 - runtime file map is truthful
 - no planned file is assumed to exist without being created
 
-## 4. Phase 1 — Behavioral Core
+## 4. Phase 1 — Behavioral Core `(P1)`
 
 ### Goal
 
@@ -89,7 +154,7 @@ Create a new file defining:
 - each mode has an explicit flow
 - intake behavior changes based on user clarity
 
-## 5. Phase 2 — Humanization v2.0
+## 5. Phase 2 — Humanization v2.0 `(P2)`
 
 ### Goal
 
@@ -156,7 +221,7 @@ Different rules for:
 - humanization goes beyond phrase deletion
 - review rules are actionable, not decorative
 
-## 6. Phase 3 — Capability Expansion
+## 6. Phase 3 — Capability Expansion `(→ P4 Masri Commercial Depth)`
 
 ### Goal
 
@@ -284,7 +349,7 @@ It should include:
 - each new file has a clear responsibility
 - the new files map to explicit product features
 
-## 7. Phase 4 — Project Mode Expansion
+## 7. Phase 4 — Project Mode Expansion `(→ P5 Project Mode & Dev-Tech)`
 
 ### Goal
 
@@ -331,7 +396,7 @@ Add:
 - output templates match the new operating model
 - project-aware Arabic explanations are based on real repo evidence, not invented product claims
 
-## 8. Phase 5 — Runtime Integration
+## 8. Phase 5 — Runtime Integration `(→ P6 Integration & Validation)`
 
 ### Goal
 
@@ -407,7 +472,7 @@ Add:
 - new files are reachable from runtime routing
 - project scan behavior is reachable from `/arabic auto` and Dev-Tech tasks
 
-## 9. Phase 6 — Examples and QA Assets
+## 9. Phase 6 — Examples and QA Assets `(→ P6 Integration & Validation)`
 
 ### Goal
 
@@ -441,7 +506,7 @@ Raise the quality floor and make new capabilities testable.
 - examples cover the new product surface
 - examples show both good and bad patterns where useful
 
-## 10. Phase 7 — Persistence Layer
+## 10. Phase 7 — Persistence Layer `(→ P3 Coach & Memory)`
 
 ### Goal
 
@@ -464,7 +529,7 @@ Make saved brand context reusable.
 
 - a saved voice profile can be reused without full re-intake
 
-## 11. Phase 8 — Validation and Acceptance
+## 11. Phase 8 — Validation and Acceptance `(→ P6 Integration & Validation)`
 
 ### Goal
 
@@ -481,6 +546,8 @@ Ensure the repo is internally consistent and the plan is shippable.
 - project workflows cover website, campaign, and book cases
 
 ### Final Acceptance Tests
+
+> These narrative tests are the detailed form of the golden tests; the canonical IDs and pass criteria live in [§0.3 Golden Test Master Table](#03-golden-test-master-table-g1g18). Tests 1–8 below correspond to G1–G6, G11.
 
 #### Test 1 — Advisory Caption Flow
 

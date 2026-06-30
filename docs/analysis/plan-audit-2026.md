@@ -3,10 +3,20 @@
 
 > **Method:** Read on disk only. Phase 0 discovery covered `arabic/` runtime (42 `.md` files), all `docs/` (product, planning, analysis, engineering, supported), `reference/` (38 packs, sampled deeply), `scripts/`, `.github/`, root metadata. Validation scripts were executed. This report was written **before any rewrite**; the rewrite phases (D–H) remain paused pending maintainer decisions (§12).
 
-> **Post-audit remediation (2026-06-30, same session):** four safe, decision-independent fixes were applied immediately after this audit was written — they do not pre-empt any §12 decision. Items marked ✅ FIXED below reflect that follow-up. The contested items (phase numbering, G1–G18 definition, SKILL.md advisory rewrite, creating planned runtime files) were intentionally **left untouched**.
+> **Post-audit remediation (2026-06-30, same session).**
+>
+> **A — Immediate safe fixes (decision-independent):**
 > 1. ✅ **`scripts/validate-skill.sh` regex** — `(?:…)` → `(…)`; the reference-integrity scan now runs (verified: catches an injected missing ref; real repo still exits 0). *(P0-3)*
 > 2. ✅ **`arabic/references/INDEX.md`** — `taboos.md` added to build status; totals corrected 37 → 42; build-status rows now self-consistently sum to 42. *(P0-4)*
-> 3. ✅ **`docs/engineering/versioning-and-releases.md`** — v1.0.0 gate "PRD §12 (10 items)" → "(11 items)". *(P3-3, partial — PRD G1–G18 traceability column still pending the golden-test decision)*
+> 3. ✅ **`versioning-and-releases.md`** + **`skill-craft-and-release-research.md`** — PRD criteria count "10" → "11". *(P3-3, partial — PRD §12 G1–G18 traceability column still pending)*
+>
+> **B — Post-decision reconciliation (after maintainer answered §12 Q1/Q2/Q3):**
+> 4. ✅ **Unified phase scheme P0–P7** authored in `implementation-plan.md §0` (single source of truth) with an old→new crosswalk; `roadmap.md`, `versioning-and-releases.md`, `ci-pipeline.md`, `skill-craft-and-release-research.md`, `CHANGELOG.md` reconciled. *(P0-1)*
+> 5. ✅ **G1–G18 golden-test master table** authored in `implementation-plan.md §0.3`; gate split **G1–G12 → v1.0.0, G13–G18 → v1.1.0**; conflicting counts removed across docs. *(P0-2)*
+> 6. ✅ **`voice.md` placed in P3** (Coach & Memory), resolving the roadmap-vs-impl-plan sequencing conflict.
+> 7. ✅ **Git initialized** — baseline commit on `main`; this reconciliation lives on branch `docs/plan-unify-scheme`.
+>
+> Still intentionally **untouched** (separate, larger work): the SKILL.md advisory rewrite and creation of the 13 planned runtime files. The §1 risks and §4.3 conflicts below describe the **as-found** state; the items above are now resolved.
 
 ---
 
@@ -195,8 +205,8 @@ Bash's `[[ =~ ]]` uses POSIX ERE, which does **not** support the PCRE non-captur
 
 | ID | Recommendation | Effort | Impact | Target phase |
 |----|----------------|--------|--------|--------------|
-| P0-1 | Adopt **one canonical phase numbering**; make `implementation-plan.md` the source and have roadmap/versioning/changelog reference it | M | High | Phase 0 |
-| P0-2 | Author the full **G1–G18 golden-test master table** in `implementation-plan.md`; delete the conflicting partial lists | M | High | Phase 0/8 |
+| P0-1 | ✅ **FIXED** — unified scheme P0–P7 in `implementation-plan.md §0`; all docs reconciled | M | High | P0 |
+| P0-2 | ✅ **FIXED** — G1–G18 master table in `implementation-plan.md §0.3`; conflicting lists removed | M | High | P0 |
 | P0-3 | ✅ **FIXED** — `validate-skill.sh` regex repaired; reference-integrity scan now runs | S | High | Phase 0 (chore) |
 | P0-4 | ✅ **FIXED** — `INDEX.md` corrected (37→42, `taboos.md` added to build status) | S | High | Phase 0 |
 | P1-1 | Rewrite `SKILL.md` to advisory-first 5-mode model + create `advisory-mode.md` | L | High | Phase 1 |
