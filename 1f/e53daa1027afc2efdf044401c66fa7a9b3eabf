@@ -1,0 +1,23 @@
+arabic/references/command-router.md
+  s_e3335146bd3549::t_f9724f857b8c4c 77-83
+arabic/references/INDEX.md
+  s_e3335146bd3549::t_f9724f857b8c4c 18
+README.md
+  s_e3335146bd3549::t_74251f9143f194 25,77,109,119,145,147-149,151
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "1fe53daa1027afc2efdf044401c66fa7a9b3eabf",
+  "prompts": {},
+  "sessions": {
+    "s_e3335146bd3549": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f187b-09dc-7e60-8b3c-3cbe926406d8",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
