@@ -57,6 +57,7 @@ How and when to build.
 | [Research Intelligence Plan](./planning/research-intelligence-plan.md) | Internet + AI research pipeline + `reference/` distillation |
 | [Command Surface](./planning/command-surface.md) | `/arabic` command tree, subcommands, workspace automation |
 | [Reference Distillation](./planning/reference-distillation.md) | How to absorb `reference/` into runtime |
+| [Website Design System](./planning/website-design-system.md) | v1.1.0 site tokens, typography (AR+EN), motion |
 
 ### Engineering
 

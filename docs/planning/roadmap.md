@@ -183,7 +183,7 @@ Commands: see [Command Surface](./command-surface.md).
 
 | Item | Action |
 |------|--------|
-| `website/` | **Post-v1 test project** — install site (impeccable.style-style) |
+| `website/` | **Post-v1 test project** — install site (impeccable.style-style); spec: [website-design-system.md](./website-design-system.md) |
 | `docs/supported/cursor/` | Full adapter + `/arabic` command tree |
 | `docs/supported/claude/` | Skill packaging guide |
 | `scripts/install.js` | `npx arabic install` (future) |
