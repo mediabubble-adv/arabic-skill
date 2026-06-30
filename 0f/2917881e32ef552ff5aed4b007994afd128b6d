@@ -1,0 +1,25 @@
+docs/planning/website-design-system.md
+  s_43baa3459d9e83::t_2245946bd08495 1-126
+docs/README.md
+  s_43baa3459d9e83::t_62eaf3d0410529 60
+docs/analysis/plan-audit-2026.md
+  s_43baa3459d9e83::t_4ebd18cb38669d 221
+docs/planning/roadmap.md
+  s_43baa3459d9e83::t_f7193dc2b5fe2b 186
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "0f2917881e32ef552ff5aed4b007994afd128b6d",
+  "prompts": {},
+  "sessions": {
+    "s_43baa3459d9e83": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "407f5859-bc41-48e2-b0ae-88957d23495b",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
