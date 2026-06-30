@@ -45,15 +45,13 @@ user asks -> guide -> clarify -> recommend -> write -> review
 
 ## Install
 
-### NPX installer
-
-After the npm package is published:
+Install with `npx`:
 
 ```bash
 npx @mediabubble-adv/arabic-skill install --target cursor
 ```
 
-Other targets:
+Available targets:
 
 ```bash
 npx @mediabubble-adv/arabic-skill install --target claude
@@ -62,29 +60,7 @@ npx @mediabubble-adv/arabic-skill install --target all
 npx @mediabubble-adv/arabic-skill install --dir ~/.cursor/skills --force
 ```
 
-### Cursor
-
-```bash
-git clone https://github.com/mediabubble-adv/arabic-skill.git
-cd arabic-skill
-cp -r arabic ~/.cursor/skills/arabic
-```
-
-See [Cursor support](./docs/supported/cursor/README.md).
-
-### Claude Code / Claude Desktop
-
-```bash
-git clone https://github.com/mediabubble-adv/arabic-skill.git
-cd arabic-skill
-cp -r arabic ~/.claude/skills/arabic
-```
-
-See [Claude support](./docs/supported/claude/README.md).
-
-### Other tools
-
-See the [supported tools index](./docs/supported/README.md). The repo currently documents 22 AI coding surfaces. Website and `npx skills add` registry distribution remain deferred to `v1.1.0`.
+See [Cursor support](./docs/supported/cursor/README.md), [Claude support](./docs/supported/claude/README.md), or the [supported tools index](./docs/supported/README.md). The repo currently documents 22 AI coding surfaces. Website and `npx skills add` registry distribution remain deferred to `v1.1.0`.
 
 ## Supported Tool Assets
 
