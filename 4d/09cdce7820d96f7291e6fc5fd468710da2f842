@@ -1,0 +1,51 @@
+public/assets/windsurf.svg
+  s_50c7111536e17d::t_a55029e2cc3d90 1-11
+public/assets/Claude.svg
+  s_e3335146bd3549::t_745a89cb90a3a0 1
+public/assets/vscode.svg
+  s_50c7111536e17d::t_76c268ecab0f49 1-41
+public/assets/gemini.svg
+  s_50c7111536e17d::t_cfb46589c89111 1
+.gitignore
+  s_e3335146bd3549::t_96342b19c204ac 7
+public/assets/copilot.svg
+  s_50c7111536e17d::t_cfb46589c89111 1
+public/assets/jetbrains-junie.svg
+  s_50c7111536e17d::t_acc15a84062b6c 1-12
+public/assets/replit-agent.svg
+  s_50c7111536e17d::t_0dabff851943a1 1
+public/assets/amp.svg
+  s_50c7111536e17d::t_04a2641570c09f 1-11
+public/assets/sourcegraph-cody.svg
+  s_50c7111536e17d::t_d1c5421795ac79 1-29
+public/assets/cursor.svg
+  s_50c7111536e17d::t_0dabff851943a1 1
+public/assets/cline.svg
+  s_50c7111536e17d::t_dfc5ad9e07ac13 1
+public/assets/Qwen_Logo.svg
+  s_e3335146bd3549::t_140ce682260f69 1-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "4d09cdce7820d96f7291e6fc5fd468710da2f842",
+  "prompts": {},
+  "sessions": {
+    "s_50c7111536e17d": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_0e724ece5ffeh3s9jkrstUV3zt",
+        "model": "kimi-k2.6"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    },
+    "s_e3335146bd3549": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f187b-09dc-7e60-8b3c-3cbe926406d8",
+        "model": "gpt-5.5"
+      },
+      "human_author": null
+    }
+  }
+}
