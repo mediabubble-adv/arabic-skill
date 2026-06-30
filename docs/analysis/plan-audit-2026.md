@@ -209,7 +209,7 @@ Bash's `[[ =~ ]]` uses POSIX ERE, which does **not** support the PCRE non-captur
 | P0-2 | ✅ **FIXED** — G1–G18 master table in `implementation-plan.md §0.3`; conflicting lists removed | M | High | P0 |
 | P0-3 | ✅ **FIXED** — `validate-skill.sh` regex repaired; reference-integrity scan now runs | S | High | Phase 0 (chore) |
 | P0-4 | ✅ **FIXED** — `INDEX.md` corrected (37→42, `taboos.md` added to build status) | S | High | Phase 0 |
-| P1-1 | Rewrite `SKILL.md` to advisory-first 5-mode model + create `advisory-mode.md` | L | High | Phase 1 |
+| P1-1 | ✅ **FIXED** — `SKILL.md` rewritten to advisory-first 5-mode model; `advisory-mode.md` created; G1/G7/G12 satisfied by construction (no auto-runner yet). Later P2–P5 runtime files remain future phases | L | High | P1 |
 | P1-2 | ✅ **FIXED** — golden-test timing reconciled (G1–G12 gate v1.0.0); `validate-frontmatter.sh` documented as a planned v1.1.0 gate (consistent across roadmap + ci-pipeline) | S | Med | P1 |
 | P1-3 | ✅ **FIXED** — `voice.md` placed in P3 (Coach & Memory) across all docs | S | Med | P3 |
 | P2-1 | ✅ **FIXED (spec)** — flag-reference, error-handling, mermaid, routing-pipeline proof added to `command-surface.md`; `cursor/commands.md` created. Runtime `command-router.md`/`project-context-scanner.md` remain in the build phase (P1-1/C1) | L | High | C1 |
