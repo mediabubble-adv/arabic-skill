@@ -234,3 +234,94 @@ Close to Cairene but slightly slower. Agricultural roots. Family-business regist
 | والو | Moroccan | مفيش حاجة |
 | راه | Moroccan | it doesn't exist in Masri |
 | ما كان عندي | Khaliji | ما كانش عندي |
+
+---
+
+## 11. Ad & Marketing Jargon (Masri agency register)
+
+Egyptian agency and performance-marketing talk freely mixes English — this is **native and credible**, not lazy. Over-Arabizing ("معدل العائد على الإنفاق الإعلاني") sounds robotic; "الروّاس" sounds like a real marketer.
+
+| Masri (as spoken) | Meaning | Register note |
+|---|---|---|
+| الكرييتف | ad creative | L3–L4 agency |
+| الروّاس / الـ ROAS | return on ad spend | L4, said in English |
+| التارجت / الاستهداف | targeting | L3–L4 |
+| الريتارجتنج | retargeting | L4 |
+| الليدز | leads | L4 |
+| الكونفيرجن / التحويلات | conversions | L4 |
+| اللاندنج | landing page | L4 |
+| البوست الممول | boosted post | L3 |
+| السي بي إم / الـ CPM | cost per mille | L4 |
+| الفنل / قمع المبيعات | funnel | L4 |
+| نعمل بوست / نطلّع كرييتف | publish a post / ship creative | L3 |
+| الإعلان شغّال / مش شغّال | the ad is performing / not | L3 |
+| نسكيل / نكبّر الميزانية | scale / raise budget | L4 |
+
+**Sample (L4 agency, internal-to-client):**
+```
+الكرييتف الجديد رفع الـ CTR، بس الروّاس لسه أقل من التارجت.
+خلينا نسكيل اللي شغّال ونوقف الباقي.
+```
+
+---
+
+## 12. Dev / Tech Slang (Masri)
+
+Egyptian developers and tech founders code-switch heavily. Keep small Masri markers ("بيشتغل" not "يعمل") for credibility, but don't translate established English terms.
+
+| Masri (as spoken) | Meaning | Note |
+|---|---|---|
+| الكود بيشتغل / مش شغّال | the code works / doesn't | keep بيشتغل (Masri marker) |
+| نديبلوي / نرفع | deploy | English verb, Masri conjugation |
+| باگ / بق | bug | |
+| نفكس / نظبط | fix | "نظبط" warmer/local |
+| الـ API / الإندبوينت | API / endpoint | never Arabize |
+| الفرونت / الباك | frontend / backend | |
+| نمرج / نعمل ميرج | merge | |
+| الريبو | repo | |
+| نعمل ريفيو | review | |
+| الفيتشر | feature | |
+| دوكيومنتيشن / دوكس | docs | |
+| البرفورمانس بطيء | performance is slow | |
+
+**Sample (L4 dev marketing / README intro, Masri-flavored MSA):**
+```
+المكتبة دي بتخلّيك تعمل [feature] في سطرين كود بس —
+من غير setup معقّد، ومن غير ما تغيّر حاجة في الـ stack بتاعك.
+ابدأ في أقل من 5 دقايق 👇
+```
+
+---
+
+## 13. L4 Professional Layer (Business & B2B Masri)
+
+L4 is **professional Masri**, not MSA. It keeps light dialect markers for warmth and credibility while sounding competent. Use for LinkedIn, B2B ads, agency-to-client, dev marketing, and corporate social.
+
+**What L4 keeps (Masri markers for trust):**
+- بيشتغل / بنفهم / بنشتغل (active, dialectal verbs)
+- احنا / إحنا (we) over نحن in conversational B2B
+- "احنا بنفهم السوق المصري" > "نحن نتفهم السوق المصري"
+
+**What L4 drops (no sha'bi):**
+- يا عم / حبيبي / بجد as fillers
+- heavy slang, oaths (والنبي)
+- ironic/meme register
+
+**What L4 borrows from MSA:**
+- clean sentence structure, precise terminology
+- numbers, proof, outcome language
+
+| Sha'bi (L2) | Professional Masri (L4) |
+|---|---|
+| الشغل ده جامد أوي | الشغل ده على مستوى عالي فعلاً |
+| احنا الأحسن بجد | احنا بنقدّم نتايج بنقدر نثبتها |
+| كلّمنا واحنا نظبطك | تواصل معانا ونرجعلك بخطة واضحة |
+
+**Sample (L4 LinkedIn, B2B):**
+```
+بعد ما اشتغلنا مع أكتر من 40 شركة في السوق المصري،
+لاحظنا إن المشكلة مش في الميزانية — المشكلة في طريقة الاستهداف.
+
+كتبنا دليل عملي بيوضح إزاي تقلّل تكلفة الـ Lead من غير ما تزوّد الإنفاق.
+حمّله من اللينك 👇
+```

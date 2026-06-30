@@ -46,6 +46,7 @@ This is the product's default behavior, not an optional style.
 | Vague / partial idea | **Advisory** (default) | guide → clarify → recommend → write → review |
 | Complete structured brief, "just write", Pro user | **Pro** | clarify critical gaps → recommend briefly → write → review |
 | Large multi-piece (website / campaign / book) | **Project** | guide → clarify → research → recommend → plan → execute → test → refine |
+| Multi-channel ad campaign / `/arabic plan campaign` | **Project (Campaign)** | clarify spine → map channels to funnel → write per-platform bundle → seasonal + taboo scan → review (loads `references/ads-service-matrix.md` + `references/seasonal-calendar.md` + `domains/ads-media.md`) |
 | Existing Arabic draft to fix | **Audit** | inspect → diagnose → explain → recommend fixes → optionally rewrite (loads `references/audit-mode.md`) |
 | Weak prompt / "help me ask better" | **Prompt Coach** | guide → clarify intent → recommend structure → rewrite prompt → review (loads `references/prompt-engineering.md`) |
 
@@ -55,9 +56,10 @@ Compress the flow when the user says "just write" / "skip questions", provides a
 brief, is in Pro Mode, or is iterating on an approved direction. **Even then: final review always runs,
 and contradictions still pause the flow** (see Core Directive 1).
 
-> Prompt Coach is fully specified in `references/prompt-engineering.md`. Project Mode's detailed
-> reference arrives in a later phase; until then run it from `references/advisory-mode.md` +
-> `references/intake-protocols.md` + `references/engines.md`.
+> Prompt Coach is fully specified in `references/prompt-engineering.md`. Campaign projects are
+> specified by the Campaign Bundle Builder in `references/ads-service-matrix.md` §3. Project Mode's
+> general (website / book) reference arrives in a later phase; until then run it from
+> `references/advisory-mode.md` + `references/intake-protocols.md` + `references/engines.md`.
 
 ### Brand Voice Memory
 
@@ -142,6 +144,7 @@ After dialect is locked, check for industry context. If found, load the matching
 
 | Industry | File |
 |---|---|
+| Paid media & advertising | `domains/ads-media.md` |
 | Healthcare & medical | `domains/healthcare.md` |
 | Finance & banking | `domains/finance-banking.md` |
 | Legal services | `domains/legal.md` |
