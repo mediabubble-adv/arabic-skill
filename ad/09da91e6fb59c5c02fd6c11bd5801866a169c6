@@ -1,0 +1,21 @@
+arabic/SKILL.md
+  s_6fe008e60e0c3b::t_ad5b180c7c2044 66
+arabic/references/INDEX.md
+  s_6fe008e60e0c3b::t_2ec010101e85f1 5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "ad09da91e6fb59c5c02fd6c11bd5801866a169c6",
+  "prompts": {},
+  "sessions": {
+    "s_6fe008e60e0c3b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5f81b423-82fe-45f6-9c97-cca51a82eb87",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
