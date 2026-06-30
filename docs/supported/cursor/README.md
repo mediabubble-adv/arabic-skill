@@ -52,6 +52,6 @@ Cursor aligns well with a repo-driven skill model because it works well with:
 
 ## Fixes for First-Class Support
 
-- create a dedicated Cursor adapter doc later if needed
+- keep `commands.md`, `.cursor/commands/arabic.md`, and `.cursor/rules/arabic.mdc` aligned with `arabic/references/command-router.md`
 - standardize how commands map to runtime files
 - define how project mode should be invoked inside Cursor

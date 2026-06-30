@@ -4,4 +4,9 @@
 .vscode/
 node_modules/
 .kilocode/
-.cursor/
+!.cursor/
+.cursor/*
+!.cursor/commands/
+!.cursor/rules/
+!.cursor/commands/arabic.md
+!.cursor/rules/arabic.mdc

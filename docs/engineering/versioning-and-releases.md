@@ -5,7 +5,7 @@
 The canonical product version lives in the repository root:
 
 ```text
-VERSION          → 0.1.0 (development)
+VERSION          → 1.0.0 (first public release)
 CHANGELOG.md     → human-readable history
 arabic/SKILL.md → version field in YAML frontmatter (must match VERSION)
 ```
@@ -23,7 +23,7 @@ arabic/SKILL.md → version field in YAML frontmatter (must match VERSION)
 | **Distribution** | `1.1.0` | Website, `npx skills add`, enhanced install UX |
 | **Breaking changes** | `2.0.0` | Removed modes, restructured routing, incompatible `voice.md` |
 
-**Important:** Do **not** tag or market `v1.0.0` until the plan is finished. Current state is **`0.1.0` — dev baseline**.
+**Important:** `v1.0.0` is the first public release. Current state is **`1.0.0`**.
 
 ---
 

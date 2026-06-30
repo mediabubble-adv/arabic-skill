@@ -1,19 +1,19 @@
 # Cursor — `/arabic` Command Reference
 
-> Copy-paste examples for the `/arabic` command surface in Cursor. Full spec: [command-surface.md](../../planning/command-surface.md). This adapter is implemented at **C1/C2** (see [implementation-plan §0](../../planning/implementation-plan.md#0-canonical-phase-map--golden-tests-source-of-truth)).
+> Copy-paste examples for the `/arabic` command surface in Cursor. Full spec: [command-surface.md](../../planning/command-surface.md). The adapter now ships with the runtime `command-router.md` and Cursor command/rule files (see [implementation-plan §0](../../planning/implementation-plan.md#0-canonical-phase-map--golden-tests-source-of-truth)).
 
 Natural language always works; commands are the **fast path**.
 
 ---
 
-## Setup (planned, C2)
+## Setup files
 
 | File | Purpose |
 |------|---------|
 | `.cursor/commands/arabic.md` | Root `/arabic` slash command |
 | `.cursor/rules/arabic.mdc` | Auto-load skill on `/arabic` or Arabic-writing tasks |
 
-Until shipped, invoke the skill in chat and paste the examples below.
+Invoke the skill in chat or through Cursor slash commands; the examples below remain valid either way.
 
 ---
 

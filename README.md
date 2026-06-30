@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/mediabubble-adv/arabic-skill/releases"><img src="https://img.shields.io/badge/version-0.1.0--dev-orange" alt="version"></a>
+  <a href="https://github.com/mediabubble-adv/arabic-skill/releases"><img src="https://img.shields.io/badge/version-1.0.0-blue" alt="version"></a>
   <a href="./docs/README.md"><img src="https://img.shields.io/badge/docs-index-green" alt="docs"></a>
   <a href="./docs/supported/README.md"><img src="https://img.shields.io/badge/install-supported_tools-purple" alt="install"></a>
   <img src="https://img.shields.io/badge/runtime-arabic-blue" alt="runtime folder">
@@ -14,7 +14,7 @@
 
 **Awesome Arabic Skill** (`arabic`) is a MediaBubble skill for Arabic content creation, strategy, research distillation, and review. It is designed to behave like a senior Arabic content partner inside AI coding tools: it reads context, clarifies intent, recommends a direction, writes, humanizes, and audits before delivery.
 
-It is **not** a translation shortcut and it is **not** ready for a `v1.0.0` public tag yet. Current version is `0.1.0` development baseline while the v1 implementation plan is being completed.
+It is **not** a translation shortcut. Current version is `1.0.0`, the first public release.
 
 ```text
 user asks -> guide -> clarify -> recommend -> write -> review
@@ -27,10 +27,10 @@ user asks -> guide -> clarify -> recommend -> write -> review
 | Arabic content creation | Captions, ads, landing pages, blogs, scripts, sales copy, books, UI microcopy, and professional documents |
 | Dialect routing | Masri-first, pan-Arab capable, with 11 dialect modules |
 | Humanization | Removes translationese, AI phrasing, stiff rhythm, and wrong register |
-| Project awareness | Planned `/arabic auto` flow scans project files so the skill can explain a product, tool, or codebase in natural Arabic |
+| Project awareness | `/arabic auto` scans project files so the skill can explain a product, tool, or codebase in natural Arabic |
 | Research intelligence | Combines internet research, official sources, and `reference/` packs before distilling updates into runtime files |
-| Command system | Planned one-command UX: `/arabic` with subcommands for guide, write, audit, coach, plan, research, voice, auto, and help |
-| Website dogfooding | After v1.0.0, the skill will be tested by creating an Arabic-first multi-page install and tutorial website |
+| Command system | `/arabic` with subcommands for guide, write, audit, coach, plan, research, voice, auto, and help |
+| Website dogfooding | v1.1.0 will test the skill by creating an Arabic-first multi-page install and tutorial website |
 
 ## Install
 
@@ -174,9 +174,9 @@ Runtime install folder is `arabic/`. The GitHub repo can stay `mediabubble-adv/a
 ## Release Policy
 
 - `0.1.x` means development.
-- `v1.0.0` is the first public release only after PRD §12, implementation Phases 1-5, and golden tests pass.
+- `v1.0.0` is the first public release and the current tagged release.
 - `v1.1.0` is for the Arabic-first tutorial website and distribution layer.
-- Do not tag or market `v1.0.0` for docs-only work.
+- Future release tags should only be created after the documented gates pass.
 
 See [Versioning and Releases](./docs/engineering/versioning-and-releases.md).
 
