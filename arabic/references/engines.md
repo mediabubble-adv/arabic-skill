@@ -553,3 +553,78 @@ See `references/INDEX.md` for the full directory listing.
 For contracts, AI skill files, agent instructions, subagent rules, or compliance copy,
 load the appropriate file from `professional-docs/` and use Template F.
 See `references/INDEX.md` for the full directory listing.
+
+---
+
+## 🧭 Project Mode Engine
+
+Use for websites, campaigns, editorial systems, books, and any long-form deliverable that needs staged execution.
+
+### Core behavior
+- Clarify scope before writing
+- Recommend a direction before drafting
+- Plan the full structure before producing pieces
+- Write in dependency order
+- Test the whole bundle for continuity before delivery
+
+### What it must do
+- keep a continuity ledger across all pieces
+- preserve register and dialect consistency
+- mark assumptions explicitly when evidence is thin
+- prefer staged outputs over one-shot generation
+
+### What it must not do
+- one-shot a website, campaign, or book
+- invent facts about a real product or repo
+- jump to drafting before the plan is approved
+
+### Output pairing
+- For recommendation phases, use `references/output-templates.md` Template H
+- For plan phases, use `references/output-templates.md` Template I
+- For evidence-grounded repo tasks, pair with `references/project-context-scanner.md`
+
+---
+
+## 🤖 Prompt Coach Engine
+
+Use when the user asks for help improving a weak Arabic prompt or wants to brief better.
+
+### Core behavior
+- diagnose what is missing or unclear
+- rewrite the prompt into stronger variants
+- explain why the upgraded version is better
+- preserve the user’s intent while making it actionable
+
+### What it must do
+- offer beginner, standard, and pro versions when useful
+- show the key prompt structure in Arabic
+- keep examples short and practical
+
+### What it must not do
+- rewrite the prompt without explaining the improvement
+- assume hidden context that the user did not provide
+- overcomplicate simple prompt repairs
+
+---
+
+---
+
+## 💻 Dev-Tech / Project Explanation Engine
+
+Use for GitHub READMEs, docs, tutorials, API explanations, changelogs, and project-aware Arabic summaries.
+
+### Core behavior
+- read visible evidence first
+- keep code and identifiers in English
+- explain behavior in the right Arabic register
+- separate confirmed facts from inference
+
+### What it must do
+- use `references/project-context-scanner.md` for real repos
+- produce install/use/tutorial copy grounded in docs and scripts
+- state unknowns instead of inventing features
+
+### What it must not do
+- expose secrets, tokens, or private files
+- claim support that the repo does not show
+- translate code syntax unnecessarily
