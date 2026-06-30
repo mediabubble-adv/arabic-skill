@@ -1,0 +1,28 @@
+docs/supported/cursor/README.md
+  s_43baa3459d9e83::t_d00ad352bbad40 5-6
+docs/analysis/plan-audit-2026.md
+  s_43baa3459d9e83::t_55a08f088194ee 215
+docs/planning/command-surface.md
+  s_43baa3459d9e83::t_f2d23ee28532c9 42-57
+  s_43baa3459d9e83::t_fa89a9ceb79b2d 359-361,372-411
+  s_43baa3459d9e83::t_fa390f5214ad0c 183-198
+  s_43baa3459d9e83::t_98f8bc17633b53 412
+docs/supported/cursor/commands.md
+  s_43baa3459d9e83::t_1345f0e7fcf2ce 1-93
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "efa46813ed0cac315b22b3b69ce18d29ae70caa1",
+  "prompts": {},
+  "sessions": {
+    "s_43baa3459d9e83": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "407f5859-bc41-48e2-b0ae-88957d23495b",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
