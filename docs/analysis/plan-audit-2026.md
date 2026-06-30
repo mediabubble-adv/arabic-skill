@@ -212,7 +212,7 @@ Bash's `[[ =~ ]]` uses POSIX ERE, which does **not** support the PCRE non-captur
 | P1-1 | Rewrite `SKILL.md` to advisory-first 5-mode model + create `advisory-mode.md` | L | High | Phase 1 |
 | P1-2 | Resolve golden-test **timing** (v1.0.0 gate vs ci-pipeline v1.5.0) and add `validate-frontmatter.sh` | S | Med | Phase 1 |
 | P1-3 | Reconcile `voice.md` phase (Coach vs Persistence) | S | Med | Phase 1/3 |
-| P2-1 | Create `command-router.md` + `project-context-scanner.md` specs; add flag-reference + error-handling + mermaid to `command-surface.md`; create `cursor/commands.md` | L | High | C1 |
+| P2-1 | ✅ **FIXED (spec)** — flag-reference, error-handling, mermaid, routing-pipeline proof added to `command-surface.md`; `cursor/commands.md` created. Runtime `command-router.md`/`project-context-scanner.md` remain in the build phase (P1-1/C1) | L | High | C1 |
 | P2-2 | ✅ **FIXED** — research plan upgraded: 5 named prompts, KB/sources.yaml/index.json schemas, web-research behavior, decision-tree mermaid, git workflow | M | Med | R0 |
 | P2-3 | ✅ **FIXED** — per-pack line budgets + do-not-copy table added to `reference-distillation.md` | M | Med | P2 |
 | P3-1 | ✅ **FIXED** — `release-playbook.md` created; per-phase git playbook added to implementation-plan §15 | M | Med | P6 |
