@@ -1,0 +1,20 @@
+docs/analysis/plan-audit-2026.md
+  s_43baa3459d9e83::t_853c82251eeb6e 27
+  s_43baa3459d9e83::t_5277e2a825739a 213-214
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "5aeb4e2f0538f4ca735b1450fad6ec9b5b02da34",
+  "prompts": {},
+  "sessions": {
+    "s_43baa3459d9e83": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "407f5859-bc41-48e2-b0ae-88957d23495b",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
