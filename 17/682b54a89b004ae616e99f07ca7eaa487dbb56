@@ -1,0 +1,57 @@
+VERSION
+  s_e3335146bd3549::t_6da590150ec3c0 1
+.arabic/projects/.gitkeep
+  s_e3335146bd3549::t_e4bdd37fb60382 1
+arabic/references/INDEX.md
+  s_e3335146bd3549::t_71e4d7d6df12f0 122
+  s_e3335146bd3549::t_29aa81fadb9785 5,28,119,121,124
+docs/supported/cursor/README.md
+  s_e3335146bd3549::t_16c0058cdceae5 55
+.cursor/commands/arabic.md
+  s_e3335146bd3549::t_e4bdd37fb60382 1-34
+docs/engineering/versioning-and-releases.md
+  s_e3335146bd3549::t_e3a2cc25734862 8
+  s_e3335146bd3549::t_1e986ad71aecba 26
+CHANGELOG.md
+  s_e3335146bd3549::t_e3a2cc25734862 57-58
+  s_e3335146bd3549::t_0c672dc4cd8329 10-21,24-27
+.arabic/last-run.json
+  s_e3335146bd3549::t_e4bdd37fb60382 1-7
+docs/supported/cursor/commands.md
+  s_e3335146bd3549::t_1b67b9ff8e0d9b 3,9,16
+.gitignore
+  s_e3335146bd3549::t_0f9ceb36df1f88 7-8
+  s_e3335146bd3549::t_34df59406eed27 9-12
+.arabic/config.yaml
+  s_e3335146bd3549::t_e4bdd37fb60382 1-7
+arabic/references/command-router.md
+  s_e3335146bd3549::t_e4bdd37fb60382 1-188
+arabic/SKILL.md
+  s_e3335146bd3549::t_e56c1588623c9c 190-191
+  s_e3335146bd3549::t_6da590150ec3c0 4
+README.md
+  s_e3335146bd3549::t_e3a2cc25734862 177,179
+  s_e3335146bd3549::t_7fb8bbcf2fec10 8,17,30,32-33
+.arabic/voice.md
+  s_e3335146bd3549::t_e4bdd37fb60382 1-27
+.arabic/briefs/.gitkeep
+  s_e3335146bd3549::t_e4bdd37fb60382 1
+.cursor/rules/arabic.mdc
+  s_e3335146bd3549::t_e4bdd37fb60382 1-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "17682b54a89b004ae616e99f07ca7eaa487dbb56",
+  "prompts": {},
+  "sessions": {
+    "s_e3335146bd3549": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f187b-09dc-7e60-8b3c-3cbe926406d8",
+        "model": "gpt-5.4-mini"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
