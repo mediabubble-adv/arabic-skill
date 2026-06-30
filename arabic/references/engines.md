@@ -607,26 +607,6 @@ Use when the user asks for help improving a weak Arabic prompt or wants to brief
 
 ---
 
-## 📚 Book Writing Engine
-
-Use for book planning and drafting, whether fiction or non-fiction.
-
-### Core behavior
-- define premise and promise first
-- build the chapter map before prose
-- maintain a continuity ledger
-- draft chapter by chapter, not all at once
-
-### What it must do
-- keep narrator register stable
-- keep character voice distinct
-- run continuity QA before final delivery
-
-### What it must not do
-- draft a full manuscript in one pass
-- let one chapter contradict another
-- let dialect drift across characters or sections
-
 ---
 
 ## 💻 Dev-Tech / Project Explanation Engine
