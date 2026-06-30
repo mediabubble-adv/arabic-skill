@@ -2,7 +2,7 @@
 
 ## Token Load Strategy
 Max 6 files per task. Always start with SKILL.md + 1 dialect file + 1–2 task-relevant references.
-Never load all 38 files. Load strictly on demand.
+Never load all 46 files. Load strictly on demand.
 
 ---
 
@@ -11,15 +11,17 @@ Never load all 38 files. Load strictly on demand.
 |---|---|---|
 | `SKILL.md` | Master router — 7 tools, all modules | ✅ Yes |
 | `references/INDEX.md` | This file | ✅ Yes |
+| `voice.md` | Brand voice memory (root) — load before writing if present | Load if exists |
 
 ---
 
-## References — Load by Task (9 files)
+## References — Load by Task (10 files)
 
 | File | Load when |
 |---|---|
 | `references/advisory-mode.md` | Start of any task that is not a complete brief (default operating model) |
 | `references/audit-mode.md` | Audit Mode / `/arabic audit`, and as the final 9-point QA review |
+| `references/prompt-engineering.md` | Prompt Coach Mode / `/arabic coach`, or any weak-prompt arrival |
 | `references/intake-protocols.md` | Before asking intake questions (every new task) |
 | `references/engines.md` | Before generating content (every task) |
 | `references/output-templates.md` | After engine is selected (every task) |
@@ -102,8 +104,9 @@ Never load all 38 files. Load strictly on demand.
 | Phase 5 | 6 conversation files + 4 professional-docs files | ✅ Complete |
 | P1 (advisory core) | advisory-mode.md + SKILL.md advisory rewrite | ✅ Complete |
 | P2 (quality engine) | audit-mode.md + humanization-protocol.md v2 (anti-translationese, channel layers) | ✅ Complete |
+| P3 (coach & memory) | prompt-engineering.md + voice.md (brand voice persistence) | ✅ Complete |
 
-**Total planned files:** 44
-**Total built:** 44 — v0.1.0 dev baseline (v1.0.0 when plan ships)
+**Total planned files:** 46
+**Total built:** 46 — v0.1.0 dev baseline (v1.0.0 when plan ships)
 
-Breakdown: SKILL.md (1) + references/ (10, incl. this INDEX) + dialects/ (11) + domains/ (12) + conversations/ (6) + professional-docs/ (4) = 44.
+Breakdown: SKILL.md (1) + voice.md (1) + references/ (11, incl. this INDEX) + dialects/ (11) + domains/ (12) + conversations/ (6) + professional-docs/ (4) = 46.

@@ -21,6 +21,7 @@ Working toward **v1.0.0** — first public release when [PRD success criteria](.
 - Upgraded research-intelligence-plan (5 canonical prompts, KB/sources/index schemas, web-research behavior, decision-tree mermaid) and command-surface (flag reference, auto-flow mermaid, routing-pipeline proof, error handling); added `docs/supported/cursor/commands.md`, `docs/engineering/release-playbook.md`, `docs/planning/website-design-system.md`
 - **P1 Advisory Core (runtime):** rewrote `arabic/SKILL.md` to advisory-first operating model (guide → clarify → recommend → write → review) with a 5-mode router; added `arabic/references/advisory-mode.md`; INDEX 42 → 43. VERSION stays `0.1.0`.
 - **P2 Quality Engine (runtime):** added `arabic/references/audit-mode.md` (9-point QA pipeline distilled from `reference/arabic-qa`, scoring + report format, dialect-general); Humanization v2 — new Anti-Translationese and Channel Humanization layers in `humanization-protocol.md` + back-translation/channel-fit self-tests; wired Audit Mode into SKILL.md orchestration; INDEX 43 → 44.
+- **P3 Coach & Memory (runtime):** added `arabic/references/prompt-engineering.md` (Prompt Coach — weak-prompt diagnosis, prompt anatomy, repair workflow, beginner/standard/pro tiers, bad→good examples) and `arabic/voice.md` (brand-voice persistence schema + save/load/show protocol); wired Prompt Coach + voice loading into SKILL.md; INDEX 44 → 46.
 
 ### Planned for v1.0.0
 - Advisory operating model (`advisory-mode.md`, SKILL.md rewrite)
