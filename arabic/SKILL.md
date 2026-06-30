@@ -63,7 +63,7 @@ and contradictions still pause the flow** (see Core Directive 1).
 
 If `voice.md` (or `.arabic/voice.md`) exists, **load it before writing** — inject dialect, register,
 tone axes, lexicon, and CTA style into the write step; the `avoid` list feeds humanization. Commands:
-`voice save` / `voice load` / `voice show`. If a brief contradicts saved voice, pause and clarify.
+`/arabic voice save` / `/arabic voice load` / `/arabic voice show`. If a brief contradicts saved voice, pause and clarify.
 
 ---
 

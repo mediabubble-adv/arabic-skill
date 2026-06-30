@@ -2,7 +2,7 @@
 
 ## Token Load Strategy
 Max 6 files per task. Always start with SKILL.md + 1 dialect file + 1–2 task-relevant references.
-Never load all 38 files. Load strictly on demand.
+Never load all 46 files. Load strictly on demand.
 
 ---
 
