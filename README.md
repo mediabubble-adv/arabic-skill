@@ -16,6 +16,17 @@
 
 It is **not** a translation shortcut. Current version is `1.0.0`, the first public release.
 
+<p align="center">
+  <img src="./public/assets/claude-color.svg" alt="Claude" width="26" height="26">
+  <img src="./public/assets/cursor.svg" alt="Cursor" width="26" height="26">
+  <img src="./public/assets/codex-color.svg" alt="Codex" width="26" height="26">
+  <img src="./public/assets/ChatGPT_Logo_2025.svg" alt="ChatGPT" width="26" height="26">
+  <img src="./public/assets/gemini-color.svg" alt="Gemini" width="26" height="26">
+  <img src="./public/assets/Qwen_Logo.svg" alt="Qwen" width="26" height="26">
+  <img src="./public/assets/windsurf.svg" alt="Windsurf" width="26" height="26">
+  <img src="./public/assets/code.svg" alt="VS Code" width="26" height="26">
+</p>
+
 ```text
 user asks -> guide -> clarify -> recommend -> write -> review
 ```
@@ -57,6 +68,25 @@ See [Claude support](./docs/supported/claude/README.md).
 ### Other tools
 
 See the [supported tools index](./docs/supported/README.md). The repo currently documents 22 AI coding surfaces. Website and `npx skills add` distribution are deferred to `v1.1.0`.
+
+## Supported Tool Assets
+
+The repository includes local logo assets under [`public/assets/`](./public/assets/) for README, docs, and the future install website. GitHub renders these relative paths directly in Markdown, so docs can use either Markdown images or HTML `<img>` tags when fixed icon sizing is needed.
+
+<p>
+  <img src="./public/assets/claude-color.svg" alt="Claude" width="24" height="24">
+  <img src="./public/assets/cursor.svg" alt="Cursor" width="24" height="24">
+  <img src="./public/assets/codex-color.svg" alt="Codex" width="24" height="24">
+  <img src="./public/assets/ChatGPT_Logo_2025.svg" alt="ChatGPT" width="24" height="24">
+  <img src="./public/assets/gemini-color.svg" alt="Gemini" width="24" height="24">
+  <img src="./public/assets/Qwen_Logo.svg" alt="Qwen" width="24" height="24">
+  <img src="./public/assets/windsurf.svg" alt="Windsurf" width="24" height="24">
+  <img src="./public/assets/code.svg" alt="VS Code" width="24" height="24">
+  <img src="./public/assets/copilot.svg" alt="GitHub Copilot" width="24" height="24">
+  <img src="./public/assets/replit-color.svg" alt="Replit Agent" width="24" height="24">
+  <img src="./public/assets/openhands-color.svg" alt="OpenHands" width="24" height="24">
+  <img src="./public/assets/zed.svg" alt="Zed" width="24" height="24">
+</p>
 
 ## Usage Examples
 

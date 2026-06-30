@@ -15,6 +15,25 @@ Use this folder to answer three questions:
 - [Integration Model](./integration-model.md)
 - [Support Matrix](./support-matrix.md)
 
+## Icon Assets
+
+The repository includes local tool icons in [`../../public/assets/`](../../public/assets/). Use HTML `<img>` tags in Markdown when fixed sizing is needed; GitHub renders these relative paths from both the root README and nested docs.
+
+| Tool | Asset |
+|---|---|
+| Claude | <img src="../../public/assets/claude-color.svg" alt="Claude" width="20" height="20"> `public/assets/claude-color.svg` |
+| Cursor | <img src="../../public/assets/cursor.svg" alt="Cursor" width="20" height="20"> `public/assets/cursor.svg` |
+| Codex | <img src="../../public/assets/codex-color.svg" alt="Codex" width="20" height="20"> `public/assets/codex-color.svg` |
+| ChatGPT | <img src="../../public/assets/ChatGPT_Logo_2025.svg" alt="ChatGPT" width="20" height="20"> `public/assets/ChatGPT_Logo_2025.svg` |
+| Gemini | <img src="../../public/assets/gemini-color.svg" alt="Gemini" width="20" height="20"> `public/assets/gemini-color.svg` |
+| Qwen | <img src="../../public/assets/Qwen_Logo.svg" alt="Qwen" width="20" height="20"> `public/assets/Qwen_Logo.svg` |
+| Windsurf | <img src="../../public/assets/windsurf.svg" alt="Windsurf" width="20" height="20"> `public/assets/windsurf.svg` |
+| VS Code | <img src="../../public/assets/code.svg" alt="VS Code" width="20" height="20"> `public/assets/code.svg` |
+| GitHub Copilot | <img src="../../public/assets/copilot.svg" alt="GitHub Copilot" width="20" height="20"> `public/assets/copilot.svg` |
+| Replit Agent | <img src="../../public/assets/replit-color.svg" alt="Replit Agent" width="20" height="20"> `public/assets/replit-color.svg` |
+| OpenHands | <img src="../../public/assets/openhands-color.svg" alt="OpenHands" width="20" height="20"> `public/assets/openhands-color.svg` |
+| Zed | <img src="../../public/assets/zed.svg" alt="Zed" width="20" height="20"> `public/assets/zed.svg` |
+
 ## Tool Folders
 
 - [Claude](./claude/README.md)
