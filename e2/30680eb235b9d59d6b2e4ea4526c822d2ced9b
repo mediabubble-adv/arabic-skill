@@ -1,0 +1,24 @@
+docs/analysis/plan-audit-2026.md
+  s_43baa3459d9e83::t_dd799621c34acc 216
+docs/planning/research-intelligence-plan.md
+  s_43baa3459d9e83::t_fceb14d87497d9 187-277
+  s_43baa3459d9e83::t_5e1000f088b57b 54-55,57-59
+  s_43baa3459d9e83::t_c0629b6bdf5099 314-327
+  s_43baa3459d9e83::t_64a83900e50590 154-163
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "e230680eb235b9d59d6b2e4ea4526c822d2ced9b",
+  "prompts": {},
+  "sessions": {
+    "s_43baa3459d9e83": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "407f5859-bc41-48e2-b0ae-88957d23495b",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
