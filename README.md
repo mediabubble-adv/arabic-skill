@@ -45,6 +45,23 @@ user asks -> guide -> clarify -> recommend -> write -> review
 
 ## Install
 
+### NPX installer
+
+After the npm package is published:
+
+```bash
+npx @mediabubble-adv/arabic-skill install --target cursor
+```
+
+Other targets:
+
+```bash
+npx @mediabubble-adv/arabic-skill install --target claude
+npx @mediabubble-adv/arabic-skill install --target codex
+npx @mediabubble-adv/arabic-skill install --target all
+npx @mediabubble-adv/arabic-skill install --dir ~/.cursor/skills --force
+```
+
 ### Cursor
 
 ```bash
@@ -67,7 +84,7 @@ See [Claude support](./docs/supported/claude/README.md).
 
 ### Other tools
 
-See the [supported tools index](./docs/supported/README.md). The repo currently documents 22 AI coding surfaces. Website and `npx skills add` distribution are deferred to `v1.1.0`.
+See the [supported tools index](./docs/supported/README.md). The repo currently documents 22 AI coding surfaces. Website and `npx skills add` registry distribution remain deferred to `v1.1.0`.
 
 ## Supported Tool Assets
 

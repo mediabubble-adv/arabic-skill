@@ -70,6 +70,7 @@ Versioning, CI, branching, and collaboration.
 | [Collaboration Rules](./engineering/collaboration-rules.md) | PR requirements and ownership |
 | [CI Pipeline](./engineering/ci-pipeline.md) | Automated validation and deploy |
 | [Release Playbook](./engineering/release-playbook.md) | Step-by-step release procedure (v1.0.0 / v1.1.0) |
+| [npm Publishing](./engineering/npm-publishing.md) | Package checks, publish command, and npx installer usage |
 
 ### Supported Tools
 

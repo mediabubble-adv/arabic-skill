@@ -9,6 +9,9 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 Working toward **v1.1.0** — website + distribution layer.
 
+### Added
+- npm package scaffold for `@mediabubble-adv/arabic-skill`, including the `arabic-skill` bin and `npx @mediabubble-adv/arabic-skill install` workflow.
+
 ## [1.0.0] - 2026-06-30
 
 **First public release.** The runtime skill now ships with advisory-first routing, project-aware project scanning, the `/arabic` command surface, Cursor adapter files, and the release-gated runtime/docs sync.

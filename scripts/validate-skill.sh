@@ -71,6 +71,17 @@ if [[ -f "$VERSION_FILE" ]]; then
   else
     echo "OK: Version sync ($ROOT_VERSION)"
   fi
+
+  PACKAGE_JSON="$ROOT/package.json"
+  if [[ -f "$PACKAGE_JSON" ]]; then
+    PACKAGE_VERSION="$(grep -E '"version":' "$PACKAGE_JSON" | head -1 | sed 's/.*"version": *"\([^"]*\)".*/\1/')"
+    if [[ "$ROOT_VERSION" != "$PACKAGE_VERSION" ]]; then
+      echo "ERROR: VERSION ($ROOT_VERSION) != package.json version ($PACKAGE_VERSION)"
+      ERRORS=$((ERRORS + 1))
+    else
+      echo "OK: Package version sync ($PACKAGE_VERSION)"
+    fi
+  fi
 fi
 
 if [[ $ERRORS -gt 0 ]]; then

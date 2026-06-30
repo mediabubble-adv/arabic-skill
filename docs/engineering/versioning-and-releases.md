@@ -20,7 +20,7 @@ arabic/SKILL.md → version field in YAML frontmatter (must match VERSION)
 |-------|---------------|---------|
 | **Development** | `0.1.x` | Architecture, docs, validation — **not** the public product launch |
 | **First public release** | **`1.0.0`** | All [PRD success criteria](../product/prd.md#12-success-criteria) met + [implementation plan](../planning/implementation-plan.md) Phases **P1–P6** complete |
-| **Distribution** | `1.1.0` | Website, `npx skills add`, enhanced install UX |
+| **Distribution** | `1.1.0` | Website, npm `npx` installer, `npx skills add`, enhanced install UX |
 | **Breaking changes** | `2.0.0` | Removed modes, restructured routing, incompatible `voice.md` |
 
 **Important:** `v1.0.0` is the first public release. Current state is **`1.0.0`**.
@@ -129,7 +129,8 @@ Follow [Keep a Changelog](https://keepachangelog.com/):
 |---------|----------------|
 | Git clone + manual copy | Now |
 | GitHub Releases (zip) | v1.0.0+ |
-| `npx skills add mediabubble-adv/arabic-skill` | v1.1.0 (planned) |
+| `npx @mediabubble-adv/arabic-skill install` | v1.1.0 distribution work (package scaffold present) |
+| `npx skills add mediabubble-adv/arabic-skill` | v1.1.0 registry/discovery work (planned) |
 | Install website | v1.1.0 (post-v1 test project) |
 
 ---
@@ -139,5 +140,6 @@ Follow [Keep a Changelog](https://keepachangelog.com/):
 - [Branching Strategy](./branching-strategy.md)
 - [CI Pipeline](./ci-pipeline.md)
 - [Collaboration Rules](./collaboration-rules.md)
+- [npm Publishing](./npm-publishing.md)
 - [Roadmap](../planning/roadmap.md)
 - [Skill Craft Research](../analysis/skill-craft-and-release-research.md)
