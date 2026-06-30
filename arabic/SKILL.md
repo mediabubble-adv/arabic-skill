@@ -47,7 +47,7 @@ This is the product's default behavior, not an optional style.
 | Complete structured brief, "just write", Pro user | **Pro** | clarify critical gaps → recommend briefly → write → review |
 | Large multi-piece (website / campaign / book) | **Project** | guide → clarify → research → recommend → plan → execute → test → refine |
 | Existing Arabic draft to fix | **Audit** | inspect → diagnose → explain → recommend fixes → optionally rewrite (loads `references/audit-mode.md`) |
-| Weak prompt / "help me ask better" | **Prompt Coach** | guide → clarify intent → recommend structure → rewrite prompt → review |
+| Weak prompt / "help me ask better" | **Prompt Coach** | guide → clarify intent → recommend structure → rewrite prompt → review (loads `references/prompt-engineering.md`) |
 
 ### Direct-write exceptions (compress, never skip review)
 
@@ -55,8 +55,15 @@ Compress the flow when the user says "just write" / "skip questions", provides a
 brief, is in Pro Mode, or is iterating on an approved direction. **Even then: final review always runs,
 and contradictions still pause the flow** (see Core Directive 1).
 
-> Detailed Prompt Coach and Project Mode references arrive in later phases; until then run those flows
-> from `references/advisory-mode.md` + `references/intake-protocols.md` + `references/engines.md`.
+> Prompt Coach is fully specified in `references/prompt-engineering.md`. Project Mode's detailed
+> reference arrives in a later phase; until then run it from `references/advisory-mode.md` +
+> `references/intake-protocols.md` + `references/engines.md`.
+
+### Brand Voice Memory
+
+If `voice.md` (or `.arabic/voice.md`) exists, **load it before writing** — inject dialect, register,
+tone axes, lexicon, and CTA style into the write step; the `avoid` list feeds humanization. Commands:
+`voice save` / `voice load` / `voice show`. If a brief contradicts saved voice, pause and clarify.
 
 ---
 
