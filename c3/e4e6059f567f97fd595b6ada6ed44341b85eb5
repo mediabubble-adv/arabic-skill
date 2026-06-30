@@ -1,0 +1,38 @@
+arabic/domains/dev-tech.md
+  s_e3335146bd3549::t_37de5b0ac8103d 1-144
+arabic/references/INDEX.md
+  s_e3335146bd3549::t_4b0de950e31eb1 18,59
+  s_e3335146bd3549::t_a5b9dd0dd2a31a 5,33-35,76,117,119-120,122
+CHANGELOG.md
+  s_e3335146bd3549::t_6428cf7eea2126 26,29
+arabic/references/project-mode.md
+  s_6fe008e60e0c3b::t_686eafd491790c 1-107
+arabic/references/project-context-scanner.md
+  s_e3335146bd3549::t_37de5b0ac8103d 1-133
+arabic/references/book-writing.md
+  s_e3335146bd3549::t_37de5b0ac8103d 1-125
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "c3e4e6059f567f97fd595b6ada6ed44341b85eb5",
+  "prompts": {},
+  "sessions": {
+    "s_6fe008e60e0c3b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5f81b423-82fe-45f6-9c97-cca51a82eb87",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    },
+    "s_e3335146bd3549": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f187b-09dc-7e60-8b3c-3cbe926406d8",
+        "model": "gpt-5.4-mini"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
