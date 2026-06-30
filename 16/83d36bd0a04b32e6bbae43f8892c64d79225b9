@@ -1,0 +1,29 @@
+arabic/references/advisory-mode.md
+  s_43baa3459d9e83::t_0c8a0479a9455f 1-129
+arabic/SKILL.md
+  s_43baa3459d9e83::t_1511cd3e117abe 26-60
+  s_43baa3459d9e83::t_6855e2dd57a908 244-246
+arabic/references/INDEX.md
+  s_43baa3459d9e83::t_52bf6046dd19e1 17,21
+  s_43baa3459d9e83::t_77c3d381452e69 102,104-105,107
+docs/analysis/plan-audit-2026.md
+  s_43baa3459d9e83::t_91f04f2ed4f3cc 212
+CHANGELOG.md
+  s_43baa3459d9e83::t_62ea22934230f1 21-22
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "1683d36bd0a04b32e6bbae43f8892c64d79225b9",
+  "prompts": {},
+  "sessions": {
+    "s_43baa3459d9e83": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "407f5859-bc41-48e2-b0ae-88957d23495b",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
