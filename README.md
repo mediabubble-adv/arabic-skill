@@ -22,7 +22,7 @@ user asks -> guide -> clarify -> recommend -> write -> review
 
 ## What It Does
 
-| Capability | Current / planned role |
+| Capability | Current role |
 |------------|------------------------|
 | Arabic content creation | Captions, ads, landing pages, blogs, scripts, sales copy, books, UI microcopy, and professional documents |
 | Dialect routing | Masri-first, pan-Arab capable, with 11 dialect modules |
@@ -74,7 +74,7 @@ Audit this Arabic landing page. It sounds translated and too formal.
 Scan this project and explain what it does in human Arabic for non-technical users.
 ```
 
-The planned command surface makes the same workflows faster:
+The command surface makes the same workflows faster:
 
 ```text
 /arabic guide
@@ -106,7 +106,7 @@ Full spec: [Command Surface](./docs/planning/command-surface.md).
 
 ## Project-Aware Arabic Content
 
-A core target is making the skill useful inside real repositories and product folders. The planned workspace scanner should inspect files such as `README.md`, docs, routes, package metadata, examples, and product copy, then produce Arabic content that explains the project in clear human language.
+A core capability is making the skill useful inside real repositories and product folders. The workspace scanner rules inspect files such as `README.md`, docs, routes, package metadata, examples, and product copy, then produce Arabic content that explains the project in clear human language.
 
 Expected outputs include:
 
@@ -116,7 +116,7 @@ Expected outputs include:
 - Arabic README sections, changelogs, release notes, and help pages
 - Dialect-aware explanations for tools, apps, APIs, and SaaS products
 
-This behavior is planned through `/arabic auto`, Project Mode, Dev-Tech domain support, and a runtime project-context scanner spec.
+This behavior is routed through `/arabic auto`, Project Mode, Dev-Tech domain support, and the runtime project-context scanner.
 
 ## Repository Structure
 
@@ -142,13 +142,13 @@ Runtime install folder is `arabic/`. The GitHub repo can stay `mediabubble-adv/a
 
 | Area | Status |
 |------|--------|
-| Runtime baseline | 37-file `arabic/` pack exists |
+| Runtime baseline | `arabic/` pack released at `v1.0.0` |
 | Canonical references | 38 packs preserved in `reference/` |
-| Planning docs | Active, with Claude audit prompt for deeper plan rewrite |
-| `/arabic` command system | Planned, not fully implemented |
-| Research layer | Planned, not scaffolded as runtime yet |
+| Planning docs | Active, with roadmap and release governance for future phases |
+| `/arabic` command system | Runtime router and Cursor adapter shipped |
+| Research layer | Specified for structured research collection and future runtime expansion |
 | Website | Deferred to `v1.1.0` as a dogfood test project |
-| Public release | Wait for PRD §12, Phases 1-5, and golden tests |
+| Public release | `v1.0.0` tagged and released after runtime validation |
 
 ## Documentation
 

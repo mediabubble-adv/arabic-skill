@@ -74,13 +74,13 @@
 | `book` | Author | Book Engine | E | Triggers plan book when large |
 | `chapter` | Author | Book Engine | E | Continuity-aware chapter copy |
 | `outline` | Author | Book Engine | E | Premise + structure |
-| `ui` | Indie Dev | UI Microcopy Engine | A | Strings and empty states |
-| `readme` | Indie Dev / SaaS | Dev-Tech Content | B | Project scan + README shape |
-| `tutorial` | Indie Dev / SaaS | Dev-Tech Content | B/C | Project scan + step-by-step teaching |
-| `explain` | Indie Dev / SaaS | Dev-Tech Content | B | Project scan + Arabic explanation |
-| `contract` | Professional Document | Professional Doc Mode | F | Contracts |
-| `skill` | Professional Document | Professional Doc Mode | F | Skill writing |
-| `rules` | Professional Document | Professional Doc Mode | F | Agent / subagent rules |
+| `ui` | Indie Dev | UI/UX Microcopy Engine | A | Strings and empty states |
+| `readme` | Indie Dev / SaaS | Website Content Engine | B | Load `domains/dev-tech.md` + project scan; README structure |
+| `tutorial` | Indie Dev / SaaS | Website Content Engine / Video Script Engine | B/C | Load `domains/dev-tech.md` + project scan; step-by-step teaching |
+| `explain` | Indie Dev / SaaS | Website Content Engine | B | Load `domains/dev-tech.md` + project scan; Arabic explanation |
+| `contract` | Professional Document | Professional Documents | F | Contracts |
+| `skill` | Professional Document | Professional Documents | F | Skill writing |
+| `rules` | Professional Document | Professional Documents | F | Agent / subagent rules |
 
 ### 2.3 Plan commands
 
