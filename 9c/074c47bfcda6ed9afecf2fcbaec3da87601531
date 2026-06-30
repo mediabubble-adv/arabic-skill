@@ -1,0 +1,137 @@
+arabic/conversations/coaching-consulting.md
+  s_81fbb7f795b424::t_423606c26139e0 1-260
+arabic/conversations/community-management.md
+  s_81fbb7f795b424::t_702c8ab0589b4d 1-314
+arabic/conversations/customer-service.md
+  s_81fbb7f795b424::t_6daa59cd84b8c1 1-282
+arabic/conversations/interview-podcast.md
+  s_81fbb7f795b424::t_274aa4af7a91d7 1-250
+arabic/conversations/negotiation.md
+  s_81fbb7f795b424::t_cca67efcdcd4d6 1-267
+arabic/conversations/sales-conversation.md
+  s_81fbb7f795b424::t_e17b42940e8b92 1-223
+arabic/dialects/iraqi.md
+  s_81fbb7f795b424::t_6a0403fe411577 1-236
+arabic/dialects/khaliji.md
+  s_81fbb7f795b424::t_532798fb96f1a1 1-254
+arabic/dialects/ksa.md
+  s_81fbb7f795b424::t_9b9b3bb4d0ddf4 1-250
+arabic/dialects/levantine.md
+  s_81fbb7f795b424::t_fa35bb2867e9c3 1-255
+arabic/dialects/libyan.md
+  s_81fbb7f795b424::t_5358bf3145c42b 1-123
+arabic/dialects/maghrebi.md
+  s_81fbb7f795b424::t_7ce444f168207e 1-270
+arabic/dialects/masri.md
+  s_81fbb7f795b424::t_da78975b802f4c 1-236
+arabic/dialects/msa.md
+  s_81fbb7f795b424::t_cd82a097543eb6 1-196
+arabic/dialects/sudanese.md
+  s_81fbb7f795b424::t_51d4f2025e06e0 1-130
+arabic/dialects/white-dialect.md
+  s_81fbb7f795b424::t_ba33aab29683b4 1-203
+arabic/dialects/yemeni.md
+  s_81fbb7f795b424::t_a46d1033863f62 1-189
+arabic/domains/beauty-fashion.md
+  s_81fbb7f795b424::t_64596fbdd063e2 1-232
+arabic/domains/ecommerce-retail.md
+  s_81fbb7f795b424::t_d1635ff78b3a2c 1-243
+arabic/domains/education.md
+  s_81fbb7f795b424::t_3d55e321e7e1d6 1-219
+arabic/domains/finance-banking.md
+  s_81fbb7f795b424::t_bc05866355f0c8 1-233
+arabic/domains/fitness-wellness.md
+  s_81fbb7f795b424::t_3cc1764ee600e1 1-236
+arabic/domains/food-beverage.md
+  s_81fbb7f795b424::t_e713d72bf75541 1-233
+arabic/domains/government-ngo.md
+  s_81fbb7f795b424::t_28a75217ccd25d 1-245
+arabic/domains/healthcare.md
+  s_81fbb7f795b424::t_82665b8023b13a 1-218
+arabic/domains/hospitality-tourism.md
+  s_81fbb7f795b424::t_2a4a9603852e58 1-211
+arabic/domains/legal.md
+  s_81fbb7f795b424::t_2e0e09f6154a78 1-212
+arabic/domains/real-estate.md
+  s_81fbb7f795b424::t_9fb3e6c3403d54 1-200
+arabic/domains/tech-saas.md
+  s_81fbb7f795b424::t_98ba4645d29b5d 1-196
+arabic/professional-docs/agent-rules.md
+  s_81fbb7f795b424::t_08f76571c3521b 1-327
+arabic/professional-docs/compliance-language.md
+  s_81fbb7f795b424::t_1a94dba7f8006d 1-235
+arabic/professional-docs/contracts.md
+  s_81fbb7f795b424::t_19d60e52749ab0 1-275
+arabic/references/engines.md
+  s_81fbb7f795b424::t_c612655e7bde30 1-555
+arabic/references/examples.md
+  s_81fbb7f795b424::t_b2278fd5f44d83 1-352
+arabic/references/humanization-protocol.md
+  s_81fbb7f795b424::t_1ed0987d98bcff 1-249
+arabic/references/intake-protocols.md
+  s_81fbb7f795b424::t_d035dbd624ffb9 1-150
+arabic/references/output-templates.md
+  s_81fbb7f795b424::t_b8b4a1204a4c05 1-459
+arabic/references/taboos.md
+  s_81fbb7f795b424::t_ad8e4492a27f2b 1-149
+arabic/references/trends-and-hooks.md
+  s_81fbb7f795b424::t_4dde2ee35b3fcc 1-221
+docs/supported/aider/README.md
+  s_81fbb7f795b424::t_4a2cf536b2ad98 1-38
+docs/supported/amp/README.md
+  s_81fbb7f795b424::t_dc2da2526256a2 1-39
+docs/supported/antigravity/README.md
+  s_81fbb7f795b424::t_f7a0524e574f3f 1-41
+docs/supported/cline/README.md
+  s_81fbb7f795b424::t_fccb1b9b813425 1-38
+docs/supported/continue/README.md
+  s_81fbb7f795b424::t_077b9928f83aeb 1-37
+docs/supported/copilot/README.md
+  s_81fbb7f795b424::t_7d880de154f53b 1-40
+docs/supported/gemini/README.md
+  s_81fbb7f795b424::t_2278a0beaacc0d 1-39
+docs/supported/hermes-agent/README.md
+  s_81fbb7f795b424::t_9eb074fdee7e33 1-42
+docs/supported/jetbrains-junie/README.md
+  s_81fbb7f795b424::t_bb6d91e6466d36 1-38
+docs/supported/kilo-code/README.md
+  s_81fbb7f795b424::t_bf185586e7e53d 1-39
+docs/supported/kiro/README.md
+  s_81fbb7f795b424::t_1a26e5c0f05ed6 1-39
+docs/supported/openclaw/README.md
+  s_81fbb7f795b424::t_97c8fbad6beb8e 1-42
+docs/supported/opencode/README.md
+  s_81fbb7f795b424::t_3614cd7aac5b4d 1-39
+docs/supported/openhands/README.md
+  s_81fbb7f795b424::t_1c9a35d5444977 1-39
+docs/supported/qwen/README.md
+  s_81fbb7f795b424::t_320d1760f90ad0 1-39
+docs/supported/replit/README.md
+  s_81fbb7f795b424::t_5edf0f7778ef4b 1-38
+docs/supported/sourcegraph-cody/README.md
+  s_81fbb7f795b424::t_bd3fc3822d3619 1-37
+docs/supported/support-matrix.md
+  s_81fbb7f795b424::t_0cea5d1f60c8da 1-43
+docs/supported/vs-code/README.md
+  s_81fbb7f795b424::t_6b09f58c0e8d73 1-38
+docs/supported/windsurf/README.md
+  s_81fbb7f795b424::t_22f9bd35524891 1-44
+docs/supported/zed/README.md
+  s_81fbb7f795b424::t_7b240ca6a3f849 1-38
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "9c074c47bfcda6ed9afecf2fcbaec3da87601531",
+  "prompts": {},
+  "sessions": {
+    "s_81fbb7f795b424": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "8b40ce14-5ed7-49f0-88e4-79f6758d88e2",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
