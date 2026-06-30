@@ -51,10 +51,12 @@ research/
 │   └── seasonal/
 ├── snapshots/                   # Point-in-time captures (optional, dated)
 │   └── YYYY-MM/
-├── prompts/                     # Reusable research prompts for Claude / agents
+├── prompts/                     # Reusable research prompts for Claude / agents (5 canonical)
+│   ├── reference-gap-scan.md
 │   ├── platform-ads-research.md
-│   ├── dialect-slang-audit.md
-│   └── competitor-landing-pages.md
+│   ├── dialect-freshness-audit.md
+│   ├── competitor-landing-teardown.md
+│   └── humanization-pattern-mining.md
 └── distillation-queue.md        # Pending items → target runtime file
 ```
 
@@ -149,6 +151,16 @@ Run monthly (or before each minor release):
 
 ## 7. Claude / Agent Research Prompts (templates)
 
+**Canonical prompt library** — five files in `research/prompts/`, each with dated frontmatter:
+
+| File | Purpose | Primary output |
+|------|---------|----------------|
+| `reference-gap-scan.md` | Compare a `reference/` pack vs its runtime target; list missing/outdated/safe-to-distill | `distillation-queue.md` items |
+| `platform-ads-research.md` | Official ad-format/policy research per platform | `knowledge-base/platforms/{platform}.md` |
+| `dialect-freshness-audit.md` | Slang/register drift audit for a dialect | `dialects/{dialect}.md` patch list |
+| `competitor-landing-teardown.md` | Teardown of competitor landing/ad copy patterns | `knowledge-base/marketing-psychology/competitor-{name}.md` |
+| `humanization-pattern-mining.md` | Mine real native copy for anti-AI texture patterns | `humanization-protocol.md` additions |
+
 ### 7.1 Reference vs runtime gap scan
 
 ```markdown
@@ -170,6 +182,97 @@ Propose distill targets in ads-service-matrix.md. No live API claims.
 ```markdown
 Using web search + reference/arabic-{dialect}/, audit arabic/dialects/{dialect}.md for:
 slang drift, register levels, false friends, taboo updates. Cite tier A/B sources only.
+```
+
+### 7.4 Competitor landing teardown
+
+```markdown
+Given {competitor URL or pasted copy}, teardown: hook, value prop, proof, CTA, objection handling,
+register, and dialect. Extract reusable PATTERNS (not copy) for Arabic market.
+Cite source URL + access date in sources.yaml. Output to
+research/knowledge-base/marketing-psychology/competitor-{name}.md. Trust tier B unless official.
+```
+
+### 7.5 Humanization pattern mining
+
+```markdown
+From {real native Arabic samples / Tier A-B sources}, mine texture patterns: fillers, rhythm,
+self-correction, idiom use, scene-based emotion. List anti-AI rules with before/after examples.
+Propose ≤30-line additions to humanization-protocol.md. Flag anything Tier C for human review.
+```
+
+---
+
+## 7a. Knowledge-base file template
+
+Every `research/knowledge-base/**/*.md` starts with this frontmatter:
+
+```yaml
+---
+topic: meta-reels-specs            # short slug
+last_reviewed: 2026-06-30          # YYYY-MM-DD
+trust_tier: A                      # A | B | C
+sources:                           # ids referencing sources.yaml
+  - meta-business-reels-2026
+runtime_targets:                   # files this knowledge distills into
+  - arabic/references/ads-service-matrix.md
+status: collected                  # collected | curated | distilled | deferred
+---
+```
+
+## 7b. `sources/sources.yaml` schema
+
+```yaml
+sources:
+  - id: meta-business-reels-2026   # stable key referenced by KB files
+    title: "Meta Reels ad specs"
+    url: https://www.facebook.com/business/help/...
+    publisher: Meta
+    accessed: 2026-06-30
+    trust_tier: A                  # A official | B established | C anecdotal
+    topics: [platforms, ads]
+    runtime_eligible: true         # may inform runtime rules directly (Tier A/B)
+```
+
+## 7c. `index.json` schema
+
+```json
+{
+  "topics": [
+    {
+      "file": "knowledge-base/platforms/meta.md",
+      "topic": "meta-reels-specs",
+      "last_reviewed": "2026-06-30",
+      "trust_tier": "A",
+      "runtime_targets": ["arabic/references/ads-service-matrix.md"],
+      "status": "distilled"
+    }
+  ]
+}
+```
+
+## 7d. Required web-research behavior
+
+- **Official sources first.** For platform specs and policy-sensitive topics, collect from official docs before drawing conclusions — Meta Business, Google Ads Help, TikTok, Snapchat, LinkedIn, YouTube help centers.
+- **Always record** source URL, access date, trust tier, and `runtime_eligible` in `sources.yaml`.
+- **Offline / no web access:** mark every unverified source-dependent item `needs_live_verification` and do **not** promote it to a runtime rule.
+- **No live-data claims** in generated content — research informs preloaded runtime knowledge only (PRD non-goal).
+- **Tier gating:** Tier A/B may inform runtime directly; **Tier C requires a human-review flag** before entering `dialects/` or any runtime file.
+
+## 7e. How `reference/` + internet research combine
+
+```mermaid
+flowchart TD
+    Q[Research need] --> K{Covered by reference/?}
+    K -- yes --> G[reference-gap-scan.md] --> D[distillation-queue.md]
+    K -- partial --> W{Web access?}
+    K -- no --> W
+    W -- yes --> O[Official docs first → sources.yaml] --> C[knowledge-base/*.md + trust tier]
+    W -- no --> N[Mark needs_live_verification] --> C
+    C --> T{Trust tier}
+    T -- A/B --> D
+    T -- C --> H[Human-review flag] --> D
+    D --> R[Distill ≤50 lines → runtime PR + golden fixture]
 ```
 
 ---
@@ -207,6 +310,20 @@ See [Command Surface](./command-surface.md).
 - [ ] Golden tests cover at least one research-sourced ads and one seasonal example
 
 ---
+
+## 10a. Git workflow
+
+Phase IDs (R0–R4) are cross-cutting tracks in the [canonical phase map](./implementation-plan.md#0-canonical-phase-map--golden-tests-source-of-truth).
+
+- **Branch:** `feat/research-r0-scaffold` (then `feat/research-r1-distill`, etc.)
+- **Commits:** separate the scaffold (`feat(research): R0 — knowledge layer scaffold`) from distillation PRs that touch runtime
+- **PR checklist:**
+  - [ ] `research/` files have valid frontmatter (`topic`, `last_reviewed`, `trust_tier`, `sources[]`, `runtime_targets[]`)
+  - [ ] Every new KB doc has a `sources.yaml` entry with access date + trust tier
+  - [ ] No runtime file cites research without a paired distillation PR
+  - [ ] `index.json` updated
+  - [ ] Distillation queue ≤ 20 open items
+- **Default:** `research/` lives **in-repo** (versioned); only large `snapshots/` may be gitignored.
 
 ## 11. Open Questions for Claude Audit
 
