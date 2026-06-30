@@ -1,0 +1,15 @@
+---
+globs:
+  - "content/**"
+  - ".arabic/**"
+  - "**/*arabic*"
+---
+
+# Arabic Skill Routing Rule
+
+When the user types `/arabic` or asks for Arabic content, load `arabic/SKILL.md` and `arabic/references/command-router.md`.
+
+- Route command-style requests through the root `/arabic` router.
+- Prefer safe repo evidence for project-aware explanations and tutorials.
+- Keep filenames, flags, and command syntax unchanged.
+- If the task references a project voice file, check `voice.md` or `.arabic/voice.md` before writing.

@@ -2,7 +2,7 @@
 
 ## Token Load Strategy
 Max 6 files per task. Always start with SKILL.md + 1 dialect file + 1–2 task-relevant references.
-Never load all 54 files. Load strictly on demand.
+Never load all 55 files. Load strictly on demand.
 
 ---
 
@@ -15,7 +15,7 @@ Never load all 54 files. Load strictly on demand.
 
 ---
 
-## References — Load by Task (16 files)
+## References — Load by Task (17 files)
 
 | File | Load when |
 |---|---|
@@ -25,6 +25,7 @@ Never load all 54 files. Load strictly on demand.
 | `references/intake-protocols.md` | Before asking intake questions (every new task) |
 | `references/engines.md` | Before generating content (every task) |
 | `references/output-templates.md` | After engine is selected (every task) |
+| `references/command-router.md` | `/arabic` routing, workspace persistence, and Cursor adapter behavior |
 | `references/taboos.md` | Before final delivery (every task) |
 | `references/humanization-protocol.md` | After content is drafted (every task) |
 | `references/trends-and-hooks.md` | When hooks, viral angles, or trends are needed |
@@ -115,8 +116,9 @@ Never load all 54 files. Load strictly on demand.
 | P3 (coach & memory) | prompt-engineering.md + voice.md (brand voice persistence) | ✅ Complete |
 | P4 (Masri commercial) | ads-service-matrix.md + ads-media.md + seo-aeo-masri.md + seasonal-calendar.md + masri.md expansion | ✅ Complete |
 | P5 (project mode & dev-tech) | project-mode.md + project-context-scanner.md + book-writing.md + domains/dev-tech.md | ✅ Complete |
+| C1–C3 (command surface) | command-router.md + Cursor adapter + `.arabic/` scaffold | ✅ Complete |
 
-**Total planned files:** 54
-**Total built:** 54 — v0.1.0 dev baseline (v1.0.0 when plan ships)
+**Total planned files:** 55
+**Total built:** 55 — v1.0.0 public release (v1.1.0 remains for website + distribution)
 
-Breakdown: SKILL.md (1) + voice.md (1) + references/ (17, incl. this INDEX) + dialects/ (11) + domains/ (14) + conversations/ (6) + professional-docs/ (4) = 54.
+Breakdown: SKILL.md (1) + voice.md (1) + references/ (18, incl. this INDEX) + dialects/ (11) + domains/ (14) + conversations/ (6) + professional-docs/ (4) = 55.

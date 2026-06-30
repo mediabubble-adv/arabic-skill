@@ -1,7 +1,7 @@
 ---
 name: arabic
 display_name: Awesome Arabic Skill
-version: "0.1.0"
+version: "1.0.0"
 description: |
   Awesome Arabic Skill — the apex Arabic content agency for the entire Arab world (by MediaBubble).
   11+ dialects: website copy, blog posts, video scripts, social captions, taglines, brand voice
@@ -186,6 +186,8 @@ No clear industry → skip this module.
 | 🤖 Skill / Agent / Rules | Professional Doc Mode (Module 5) |
 
 **Hybrid rule:** When two engines apply simultaneously, read the Hybrid Routing Table in `references/engines.md` for synthesis instructions.
+
+For `/arabic` command routing, load `references/command-router.md`. It is the single runtime map for verbs, flags, workspace persistence, and Cursor adapter behavior; do not duplicate that table elsewhere.
 
 ---
 
