@@ -1,0 +1,25 @@
+arabic/SKILL.md
+  s_e3335146bd3549::t_866487299e580b 61-63
+arabic/domains/dev-tech.md
+  s_e3335146bd3549::t_866487299e580b 113
+arabic/references/output-templates.md
+  s_e3335146bd3549::t_866487299e580b 460-529
+arabic/references/book-writing.md
+  s_e3335146bd3549::t_866487299e580b 49-50,109
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "06bc2b5c64391c9ecb843f351dbdeebc9e90805e",
+  "prompts": {},
+  "sessions": {
+    "s_e3335146bd3549": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f187b-09dc-7e60-8b3c-3cbe926406d8",
+        "model": "gpt-5.4-mini"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
