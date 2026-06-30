@@ -10,6 +10,7 @@ This repo can publish the runtime skill pack as an npm package so users can inst
 | Bin | `arabic-skill` |
 | Runtime folder | `arabic/` |
 | Minimum Node | 18 |
+| Registry | `https://registry.npmjs.org/` |
 
 The package name assumes the `@mediabubble-adv` npm scope exists and the maintainer has publish rights. If the scope is unavailable, update `package.json` before first publish.
 
@@ -42,8 +43,8 @@ node bin/arabic-skill.js install --target cursor --dry-run
 ## Publish
 
 ```bash
-npm login
-npm publish --access public
+npm login --registry=https://registry.npmjs.org/
+npm publish --access public --registry=https://registry.npmjs.org/
 ```
 
 After publish, verify:
