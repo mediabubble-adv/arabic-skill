@@ -1,0 +1,33 @@
+docs/engineering/versioning-and-releases.md
+  s_e3335146bd3549::t_1e9d1d2e36448c 23,132-133,143
+README.md
+  s_e3335146bd3549::t_1e9d1d2e36448c 48-64,87
+docs/README.md
+  s_e3335146bd3549::t_1e9d1d2e36448c 73
+package.json
+  s_e3335146bd3549::t_7c4eff58ec2486 1-35
+docs/engineering/npm-publishing.md
+  s_e3335146bd3549::t_1e9d1d2e36448c 1-60
+bin/arabic-skill.js
+  s_e3335146bd3549::t_7c4eff58ec2486 1-143
+CHANGELOG.md
+  s_e3335146bd3549::t_1e9d1d2e36448c 12-14
+scripts/validate-skill.sh
+  s_e3335146bd3549::t_cba002205d671e 74-84
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.5",
+  "base_commit_sha": "26efb042a4982f21f390059cf16ee568b4bab9ca",
+  "prompts": {},
+  "sessions": {
+    "s_e3335146bd3549": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f187b-09dc-7e60-8b3c-3cbe926406d8",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
