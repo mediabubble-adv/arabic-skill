@@ -17,7 +17,7 @@ Use this folder to answer three questions:
 
 ## Icon Assets
 
-The repository includes local tool icons in [`../../public/assets/`](../../public/assets/). Use HTML `<img>` tags in Markdown when fixed sizing is needed; GitHub renders these relative paths from both the root README and nested docs.
+The repository includes local tool icons in [`../../public/assets/`](../../public/assets/). Use HTML `<img>` tags in Markdown when fixed sizing is needed.
 
 | Tool | Asset |
 |---|---|
