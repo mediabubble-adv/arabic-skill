@@ -110,7 +110,7 @@ Include:
 ### Tone Guidance
 
 - Masri for approachable product explanations
-- White Dialect for neutral neutral-neutral consumer help
+- White Dialect for neutral consumer help
 - MSA for formal docs, cross-market docs, or public technical explainers
 
 ### Terminology Guidance
@@ -141,4 +141,3 @@ If the user asks for copy about a real repo or product:
 5. review for false claims, secret leakage, and tone drift
 
 If the user asks for install instructions, do not invent steps. Base them on visible README, package, or docs evidence only.
-

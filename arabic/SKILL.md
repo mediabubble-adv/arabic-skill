@@ -58,8 +58,9 @@ and contradictions still pause the flow** (see Core Directive 1).
 
 > Prompt Coach is fully specified in `references/prompt-engineering.md`. Campaign projects are
 > specified by the Campaign Bundle Builder in `references/ads-service-matrix.md` §3. Project Mode's
-> general (website / book) reference arrives in a later phase; until then run it from
-> `references/advisory-mode.md` + `references/intake-protocols.md` + `references/engines.md`.
+> general (website / book) workflow is specified in `references/project-mode.md`; use it for staged
+> website, campaign, editorial, and book work, with `references/project-context-scanner.md` for
+> evidence-grounded repo explanations.
 
 ### Brand Voice Memory
 

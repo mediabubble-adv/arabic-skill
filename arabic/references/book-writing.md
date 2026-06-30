@@ -46,6 +46,8 @@ Write one sentence that states:
 - the transformation
 - the reason the book matters now
 
+If the book is about a real product, repository, or technical system, run `references/project-context-scanner.md` before writing the premise so the framing stays grounded in evidence.
+
 ### Outline
 
 The outline must be MECE:
@@ -104,7 +106,7 @@ Check the manuscript for:
 - tone drift between chapters
 - unsupported claims or invented detail
 
-If the book uses project evidence, apply `references/project-context-scanner.md` before writing any claims about a real product or repo.
+If the book uses project evidence, verify the source material again here so the chapter-level claims still match the evidence summary.
 
 ---
 
@@ -122,4 +124,3 @@ For a book project, deliver in this order:
 8. next-step recommendation
 
 If the user only wants planning, stop before drafting and keep the deliverable scoped to structure.
-
