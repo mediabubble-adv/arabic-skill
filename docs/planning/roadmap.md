@@ -38,23 +38,25 @@ user asks → guide → clarify → recommend → write → review
 | Milestone | Target | Theme | Tag |
 |-----------|--------|-------|-----|
 | **0.1.0** | Now | Dev baseline — architecture, docs, validation | `v0.1.0` (optional) |
-| **1.0.0** | Plan complete | **First public release** — Phases 1–5 + PRD §12 | **`v1.0.0`** |
+| **1.0.0** | Plan complete | **First public release** — Phases P1–P6 + PRD §12 | **`v1.0.0`** |
 | **1.1.0** | Post-v1 | Distribution — website, `npx skills add`, install UX | `v1.1.0` |
 | **2.0.0** | Future | Breaking changes, major routing restructure | `v2.0.0` |
 
 ### Work toward v1.0.0 (not separate public releases)
 
-Phases 1–5 below are **implementation milestones** merged to `main` until the v1.0.0 gate passes. They do not each require a public semver tag.
+> **Phase IDs are canonical in [implementation-plan.md §0](./implementation-plan.md#0-canonical-phase-map--golden-tests-source-of-truth).** Phases **P0–P6** below are **implementation milestones** merged to `main` until the v1.0.0 gate passes. They do not each require a public semver tag.
 
 | Phase | Theme | Key deliverables |
 |-------|-------|------------------|
-| **Phase 1** | Advisory operating model | `advisory-mode.md`, `SKILL.md` rewrite |
-| **Phase 2** | Quality engine | Humanization v2, Audit Mode |
-| **Phase 3** | Coach and memory | `prompt-engineering.md`, `voice.md` |
-| **Phase 4** | Masri commercial depth | Ads matrix, SEO/AEO, seasonal calendar |
-| **Phase 5** | Project Mode | Website/campaign/book workflows + project-aware Arabic explanations |
-| **Phase R** | Research intelligence | `research/` layer, internet + AI + reference distillation |
-| **Phase C** | Command surface | `/arabic` tree, `command-router.md`, workspace `.arabic/` auto |
+| **P0** | Architecture lock | Truthful inventory, phase map, G1–G18 table, CI fixes |
+| **P1** | Advisory operating model | `advisory-mode.md`, `SKILL.md` rewrite |
+| **P2** | Quality engine | Humanization v2, Audit Mode |
+| **P3** | Coach and memory | `prompt-engineering.md`, **`voice.md`** (persistence folded here) |
+| **P4** | Masri commercial depth | Ads matrix, SEO/AEO, seasonal calendar |
+| **P5** | Project Mode & Dev-Tech | Website/campaign/book workflows + project-aware Arabic explanations |
+| **P6** | Runtime integration & validation | Wire routing, INDEX sync, run G1–G12 |
+| **R0–R4** | Research intelligence (cross-cutting) | `research/` layer, internet + AI + reference distillation |
+| **C0–C5** | Command surface (cross-cutting) | `/arabic` tree, `command-router.md`, workspace `.arabic/` auto |
 
 Semver rules: see [Versioning and Releases](../engineering/versioning-and-releases.md).  
 Skill quality bar: see [Skill Craft Research](../analysis/skill-craft-and-release-research.md).  
@@ -63,7 +65,7 @@ Commands: see [Command Surface](./command-surface.md).
 
 ---
 
-## Phase 1 — Behavioral Core (→ v1.0.0)
+## P1 — Behavioral Core (→ v1.0.0)
 
 **Goal:** Change product feel from write-first to advisory-first.
 
@@ -89,7 +91,7 @@ Commands: see [Command Surface](./command-surface.md).
 
 ---
 
-## Phase 2 — Quality Engine (→ v1.0.0)
+## P2 — Quality Engine (→ v1.0.0)
 
 **Goal:** Material output quality jump.
 
@@ -111,7 +113,7 @@ Commands: see [Command Surface](./command-surface.md).
 
 ---
 
-## Phase 3 — Coach and Memory (→ v1.0.0)
+## P3 — Coach and Memory (→ v1.0.0)
 
 **Goal:** Retention — users come back because the skill remembers.
 
@@ -130,7 +132,7 @@ Commands: see [Command Surface](./command-surface.md).
 
 ---
 
-## Phase 4 — Masri Commercial Depth (→ v1.0.0)
+## P4 — Masri Commercial Depth (→ v1.0.0)
 
 **Goal:** Win Egyptian marketers and agencies.
 
@@ -151,7 +153,7 @@ Commands: see [Command Surface](./command-surface.md).
 
 ---
 
-## Phase 5 — Project Mode (→ v1.0.0)
+## P5 — Project Mode & Dev-Tech (→ v1.0.0)
 
 **Goal:** Large deliverables without one-shot failure.
 
@@ -173,7 +175,7 @@ Commands: see [Command Surface](./command-surface.md).
 
 ---
 
-## Phase 6 — Distribution (v1.1.0)
+## P7 — Distribution (v1.1.0)
 
 **Goal:** Most-installed Arabic skill — install friction near zero.
 
@@ -181,11 +183,11 @@ Commands: see [Command Surface](./command-surface.md).
 
 | Item | Action |
 |------|--------|
-| `website/` | **Post-v1 test project** — install site (impeccable.style-style) |
+| `website/` | **Post-v1 test project** — install site (impeccable.style-style); spec: [website-design-system.md](./website-design-system.md) |
 | `docs/supported/cursor/` | Full adapter + `/arabic` command tree |
 | `docs/supported/claude/` | Skill packaging guide |
 | `scripts/install.js` | `npx arabic install` (future) |
-| Golden test suite | 13+ acceptance scenarios in `tests/golden/` |
+| Golden test suite | G13–G18 (website) in `tests/golden/`; G1–G12 already gate v1.0.0 |
 | GitHub Releases | Automated from tags |
 
 ### Tool Priority
@@ -203,7 +205,7 @@ Every PR must pass:
 
 - `scripts/validate-skill.sh` — referenced runtime files exist
 - `scripts/validate-docs.sh` — no broken internal links
-- `scripts/validate-frontmatter.sh` — SKILL.md schema
+- `scripts/validate-frontmatter.sh` — SKILL.md schema *(planned, not yet built — see [ci-pipeline.md](../engineering/ci-pipeline.md))*
 
 Release tags trigger:
 
@@ -221,7 +223,7 @@ See [CI Pipeline](../engineering/ci-pipeline.md).
 | Audit Mode available | Every delivery |
 | Runtime file integrity | 0 broken references in CI |
 | Tool install docs | 22 tools documented, 4 first-class adapters |
-| Golden test pass rate | 13/13 before **v1.0.0** tag |
+| Golden test pass rate | **G1–G12** pass before **v1.0.0** tag (G13–G18 gate v1.1.0) — see [implementation-plan §0.3](./implementation-plan.md#03-golden-test-master-table-g1g18) |
 
 ---
 

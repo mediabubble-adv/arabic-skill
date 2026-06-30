@@ -19,7 +19,7 @@ arabic/SKILL.md → version field in YAML frontmatter (must match VERSION)
 | Phase | Version range | Meaning |
 |-------|---------------|---------|
 | **Development** | `0.1.x` | Architecture, docs, validation — **not** the public product launch |
-| **First public release** | **`1.0.0`** | All [PRD success criteria](../product/prd.md#12-success-criteria) met + [implementation plan](../planning/implementation-plan.md) Phases 1–5 complete |
+| **First public release** | **`1.0.0`** | All [PRD success criteria](../product/prd.md#12-success-criteria) met + [implementation plan](../planning/implementation-plan.md) Phases **P1–P6** complete |
 | **Distribution** | `1.1.0` | Website, `npx skills add`, enhanced install UX |
 | **Breaking changes** | `2.0.0` | Removed modes, restructured routing, incompatible `voice.md` |
 
@@ -44,8 +44,8 @@ During `0.x`, increments are **development markers** only. Optional `v0.1.0` tag
 Ship **v1.0.0** only when **all** of the following are true:
 
 1. PRD §12 success criteria (11 items) — verified
-2. Implementation plan Phases 1–5 — delivered in runtime
-3. Golden acceptance tests — 12/12 pass
+2. Implementation plan Phases **P1–P6** — delivered in runtime
+3. Golden tests **G1–G12 pass** (G13–G18 gate v1.1.0) — see [implementation-plan §0.3](../planning/implementation-plan.md#03-golden-test-master-table-g1g18)
 4. `scripts/validate-skill.sh` — passes with no blocking errors
 5. Install instructions in README — tested on at least Cursor + Claude paths
 

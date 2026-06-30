@@ -2,6 +2,8 @@
 
 **Skill:** Awesome Arabic Skill (`arabic`)
 
+> **`/arabic` command reference:** [commands.md](./commands.md) — copy-paste examples per verb + flags.
+
 ## Current Fit
 
 `Strong`

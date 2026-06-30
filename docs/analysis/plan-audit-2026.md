@@ -3,10 +3,20 @@
 
 > **Method:** Read on disk only. Phase 0 discovery covered `arabic/` runtime (42 `.md` files), all `docs/` (product, planning, analysis, engineering, supported), `reference/` (38 packs, sampled deeply), `scripts/`, `.github/`, root metadata. Validation scripts were executed. This report was written **before any rewrite**; the rewrite phases (D–H) remain paused pending maintainer decisions (§12).
 
-> **Post-audit remediation (2026-06-30, same session):** four safe, decision-independent fixes were applied immediately after this audit was written — they do not pre-empt any §12 decision. Items marked ✅ FIXED below reflect that follow-up. The contested items (phase numbering, G1–G18 definition, SKILL.md advisory rewrite, creating planned runtime files) were intentionally **left untouched**.
+> **Post-audit remediation (2026-06-30, same session).**
+>
+> **A — Immediate safe fixes (decision-independent):**
 > 1. ✅ **`scripts/validate-skill.sh` regex** — `(?:…)` → `(…)`; the reference-integrity scan now runs (verified: catches an injected missing ref; real repo still exits 0). *(P0-3)*
 > 2. ✅ **`arabic/references/INDEX.md`** — `taboos.md` added to build status; totals corrected 37 → 42; build-status rows now self-consistently sum to 42. *(P0-4)*
-> 3. ✅ **`docs/engineering/versioning-and-releases.md`** — v1.0.0 gate "PRD §12 (10 items)" → "(11 items)". *(P3-3, partial — PRD G1–G18 traceability column still pending the golden-test decision)*
+> 3. ✅ **`versioning-and-releases.md`** + **`skill-craft-and-release-research.md`** — PRD criteria count "10" → "11". *(P3-3, partial — PRD §12 G1–G18 traceability column still pending)*
+>
+> **B — Post-decision reconciliation (after maintainer answered §12 Q1/Q2/Q3):**
+> 4. ✅ **Unified phase scheme P0–P7** authored in `implementation-plan.md §0` (single source of truth) with an old→new crosswalk; `roadmap.md`, `versioning-and-releases.md`, `ci-pipeline.md`, `skill-craft-and-release-research.md`, `CHANGELOG.md` reconciled. *(P0-1)*
+> 5. ✅ **G1–G18 golden-test master table** authored in `implementation-plan.md §0.3`; gate split **G1–G12 → v1.0.0, G13–G18 → v1.1.0**; conflicting counts removed across docs. *(P0-2)*
+> 6. ✅ **`voice.md` placed in P3** (Coach & Memory), resolving the roadmap-vs-impl-plan sequencing conflict.
+> 7. ✅ **Git initialized** — baseline commit on `main`; this reconciliation lives on branch `docs/plan-unify-scheme`.
+>
+> Still intentionally **untouched** (separate, larger work): the SKILL.md advisory rewrite and creation of the 13 planned runtime files. The §1 risks and §4.3 conflicts below describe the **as-found** state; the items above are now resolved.
 
 ---
 
@@ -14,7 +24,7 @@
 
 - **Overall plan quality: 8/10** — the documentation set is unusually complete, internally cross-linked, and honest about its own non-goals. It loses points for phase-numbering conflicts between `roadmap.md` and `implementation-plan.md`, an undefined golden-test set (G1–G18 referenced but never specified), and a stale inventory count.
 - **Runtime readiness: 3/10** — the shipped `arabic/SKILL.md` still implements the **old write-first model** (Zero-Guessing intake + 7 tools + 7 modules). None of the advisory-first architecture the docs describe — Advisory/Pro/Project/Audit/Prompt-Coach modes, `/arabic` commands, `command-router.md`, `project-context-scanner.md`, `voice.md` — exists in runtime. The plan is written; the product is not yet built.
-- **Claude execution readiness: needs changes (not blocked).** A fresh session can execute most of the plan, but will hit three ambiguities that force guessing: (a) which phase numbering is authoritative, (b) what G1–G18 actually are, (c) whether golden tests gate v1.0.0 or v1.5.0. Fix these and readiness is green.
+- **Claude execution readiness: ✅ ready (as of remediation).** The three ambiguities that would have forced guessing — (a) phase numbering, (b) the G1–G18 set, (c) golden-test timing — are now resolved (see remediation note). All documentation-side P0/P2/P3 recommendations are closed. The only substantial work left is **P1-1: the runtime build** (advisory `SKILL.md` + the 13 planned runtime files), which is implementation, not planning.
 - **Top 3 risks (ranked):**
   1. **Docs/behavior illusion.** Every planning doc reads as if advisory-first is the product. It is not shipped. A contributor could "complete" docs and believe v1.0.0 is near while runtime is essentially the 0.1.0 baseline.
   2. **Phase-numbering collision.** "Phase 3" means *Coach & Memory* in `roadmap.md` but *Capability Expansion* in `implementation-plan.md`. Per-phase branch names and PRs built on this will mis-route work.
@@ -195,20 +205,20 @@ Bash's `[[ =~ ]]` uses POSIX ERE, which does **not** support the PCRE non-captur
 
 | ID | Recommendation | Effort | Impact | Target phase |
 |----|----------------|--------|--------|--------------|
-| P0-1 | Adopt **one canonical phase numbering**; make `implementation-plan.md` the source and have roadmap/versioning/changelog reference it | M | High | Phase 0 |
-| P0-2 | Author the full **G1–G18 golden-test master table** in `implementation-plan.md`; delete the conflicting partial lists | M | High | Phase 0/8 |
+| P0-1 | ✅ **FIXED** — unified scheme P0–P7 in `implementation-plan.md §0`; all docs reconciled | M | High | P0 |
+| P0-2 | ✅ **FIXED** — G1–G18 master table in `implementation-plan.md §0.3`; conflicting lists removed | M | High | P0 |
 | P0-3 | ✅ **FIXED** — `validate-skill.sh` regex repaired; reference-integrity scan now runs | S | High | Phase 0 (chore) |
 | P0-4 | ✅ **FIXED** — `INDEX.md` corrected (37→42, `taboos.md` added to build status) | S | High | Phase 0 |
-| P1-1 | Rewrite `SKILL.md` to advisory-first 5-mode model + create `advisory-mode.md` | L | High | Phase 1 |
-| P1-2 | Resolve golden-test **timing** (v1.0.0 gate vs ci-pipeline v1.5.0) and add `validate-frontmatter.sh` | S | Med | Phase 1 |
-| P1-3 | Reconcile `voice.md` phase (Coach vs Persistence) | S | Med | Phase 1/3 |
-| P2-1 | Create `command-router.md` + `project-context-scanner.md` specs; add flag-reference + error-handling + mermaid to `command-surface.md`; create `cursor/commands.md` | L | High | C1 |
-| P2-2 | Upgrade `research-intelligence-plan.md`: 5 named prompts, KB template, sources.yaml schema, web-research behavior, decision-tree mermaid | M | Med | R0 |
-| P2-3 | Add per-pack line budgets + do-not-copy lists to `reference-distillation.md` | M | Med | Phase 2 |
-| P3-1 | Create `release-playbook.md`; embed per-phase git playbook in implementation plan | M | Med | Phase 6 |
-| P3-2 | Broaden CODEOWNERS to `arabic/references/`, `docs/planning/`, `research/` | S | Low | chore |
-| P3-3 | ⚠️ **PARTIAL** — versioning-doc "10 items" → 11 fixed; PRD §12 G1–G18 traceability column still pending golden-test decision | S | Med | Phase 2 |
-| P3-4 | Spec website (`website-design-system.md`, G13–G18) for v1.1.0 — plan only | M | Low | Phase 9 |
+| P1-1 | ✅ **FIXED** — `SKILL.md` rewritten to advisory-first 5-mode model; `advisory-mode.md` created; G1/G7/G12 satisfied by construction (no auto-runner yet). Later P2–P5 runtime files remain future phases | L | High | P1 |
+| P1-2 | ✅ **FIXED** — golden-test timing reconciled (G1–G12 gate v1.0.0); `validate-frontmatter.sh` documented as a planned v1.1.0 gate (consistent across roadmap + ci-pipeline) | S | Med | P1 |
+| P1-3 | ✅ **FIXED** — `voice.md` placed in P3 (Coach & Memory) across all docs | S | Med | P3 |
+| P2-1 | ✅ **FIXED (spec)** — flag-reference, error-handling, mermaid, routing-pipeline proof added to `command-surface.md`; `cursor/commands.md` created. Runtime `command-router.md`/`project-context-scanner.md` remain in the build phase (P1-1/C1) | L | High | C1 |
+| P2-2 | ✅ **FIXED** — research plan upgraded: 5 named prompts, KB/sources.yaml/index.json schemas, web-research behavior, decision-tree mermaid, git workflow | M | Med | R0 |
+| P2-3 | ✅ **FIXED** — per-pack line budgets + do-not-copy table added to `reference-distillation.md` | M | Med | P2 |
+| P3-1 | ✅ **FIXED** — `release-playbook.md` created; per-phase git playbook added to implementation-plan §15 | M | Med | P6 |
+| P3-2 | ✅ **FIXED** — CODEOWNERS now covers `arabic/references/`, `docs/planning/`, `research/` | S | Low | chore |
+| P3-3 | ✅ **FIXED** — count "10"→11 corrected; PRD §12 G1–G18 traceability table added | S | Med | P2 |
+| P3-4 | ✅ **FIXED** — `website-design-system.md` created (tokens, AR+EN type, motion, components, G13–G18); linked from roadmap P7 + docs index | M | Low | P7 |
 
 ---
 

@@ -39,6 +39,22 @@
 
 ---
 
+## 2a. Flag Reference
+
+Flags are global unless noted; `--` long form is canonical.
+
+| Flag | Value | Default | Applies to | Behavior |
+|------|-------|---------|------------|----------|
+| `--dialect` | `masri`, `khaliji`, `levantine`, … | inferred / ask | all write/plan | Locks dialect file; overrides inference |
+| `--platform` | `meta`, `google`, `tiktok`, `snap`, `linkedin`, `instagram`, … | inferred | write | Selects platform rules from ads matrix |
+| `--brief` | path to `.yaml`/`.md` | — | write/plan | Loads structured brief → Pro Mode, compresses intake |
+| `--file` | path | — | audit/coach | Reads input from a workspace file instead of paste |
+| `--out` | path | stdout / `.arabic/` | write/plan/audit | Writes deliverable to a repo path |
+| `--yes` | (boolean) | false | auto/plan | Skips the one-line confirmation; runs inferred action |
+| `--count` | integer | engine default | write captions/ads | Number of variants to produce |
+
+Unknown flags → warn and ignore (do not fail the command); list valid flags for that verb.
+
 ## 3. Write Subcommands (content creation)
 
 Format: `/arabic write <type> [--dialect masri] [--platform meta] [--brief path]`
@@ -162,6 +178,22 @@ The highest-leverage command. **Infers intent from workspace context** and runs 
     ├─► Confirm: one-line "I'll run X because Y" (skip if --yes)
     ├─► Execute: load routers per SKILL.md checklist
     └─► Persist: write outputs to .arabic/ or user path; update project plan
+```
+
+```mermaid
+flowchart TD
+    A["/arabic auto [hint]"] --> S[Scan workspace: files, README, config, .arabic/, git]
+    S --> C{Classify intent}
+    C -->|vague| ADV[advisory / guide]
+    C -->|brief present| WR[write Pro Mode]
+    C -->|Arabic draft| AU[audit]
+    C -->|multi-piece| PL[plan]
+    C -->|explain project| SC[scan evidence → write explain]
+    ADV & WR & AU & PL & SC --> CF{--yes?}
+    CF -->|no| ONE["confirm: 'I'll run X because Y'"]
+    CF -->|yes| EX
+    ONE --> EX[Execute via SKILL.md router pipeline]
+    EX --> P[Persist to .arabic/ or --out; update plan]
 ```
 
 ### 7.3 Project context scanner
@@ -324,7 +356,9 @@ Single routing source duplicated nowhere else. Sections:
 
 ---
 
-## 13. Golden Tests (add to implementation plan)
+## 13. Golden Tests
+
+Command-surface tests are **G7–G12** in the canonical [implementation-plan §0.3 master table](./implementation-plan.md#03-golden-test-master-table-g1g18) (C-track, gate v1.0.0). Summary:
 
 | # | Test |
 |---|------|
@@ -334,6 +368,47 @@ Single routing source duplicated nowhere else. Sections:
 | G10 | `/arabic plan website` → multi-page plan file |
 | G11 | `/arabic auto explain` in a project → scans evidence, explains project in Arabic, avoids secrets |
 | G12 | `/arabic write caption --dialect masri` → Template A, dialect locked |
+
+## 13a. Routing pipeline (no orphan commands)
+
+Every subcommand resolves through the SKILL.md pipeline — no command bypasses it:
+
+```
+dialect → domain → workspace → engine → template → taboo → humanization → review
+```
+
+| Verb | dialect | domain | workspace | engine | template | review |
+|------|---------|--------|-----------|--------|----------|--------|
+| `write <type>` | lock/ask | if industry | from type (§3) | from type (§3) | A–F (§3) | ✅ |
+| `plan <project>` | lock/ask | if industry | project (§4) | per stage | per deliverable | ✅ per stage |
+| `audit` | detect | detect | n/a | arabic-qa distill | scored report | ✅ (is the review) |
+| `coach` | detect | n/a | n/a | prompt-engineering | coach deliverable | ✅ |
+| `auto` | infer | infer | infer | routes to verb above | inherited | ✅ |
+
+`command-router.md` (§11) is the single runtime table enforcing this; `SKILL.md` links to it rather than duplicating.
+
+## 13b. Error handling
+
+| Condition | Behavior |
+|-----------|----------|
+| Unknown subcommand | Suggest nearest match (`did you mean write caption?`); never guess-execute |
+| Unknown flag | Warn + ignore; list valid flags for the verb |
+| Missing required brief field | Ask only the missing field (max 2), per Zero-Guessing safety rule |
+| `--file` path not found | Report path; do not fabricate content |
+| Thin project evidence (`auto`/`explain`) | Say evidence is thin; ask one focused question before writing public claims |
+| Dialect not resolvable | Ask "which country is the primary audience?" — never default to MSA for commercial copy |
+
+## 13c. Git workflow
+
+Command surface ships on the **C-track** of the [canonical phase map](./implementation-plan.md#0-canonical-phase-map--golden-tests-source-of-truth).
+
+- **Branch:** `feat/command-surface-c1` (then `c2`, `c3`, …)
+- **PR checklist:**
+  - [ ] Every §3 row exists in `command-router.md`
+  - [ ] `SKILL.md` links to `command-router.md` (no duplicated tables)
+  - [ ] `project-context-scanner.md` exclusions enforced (`.env*`, lockfiles, build output)
+  - [ ] G7–G12 run and pass
+  - [ ] `cursor/commands.md` examples match the verb table
 
 ---
 

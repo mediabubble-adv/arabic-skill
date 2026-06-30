@@ -88,6 +88,25 @@ These are specialist domains outside the core content agency mission.
 
 ---
 
+## Per-Pack Budgets and Do-Not-Copy
+
+Distilled output is **rewritten, not pasted**. Each runtime target has a max line budget; deep cuts stay in `reference/`. Phase IDs reference [implementation-plan §0](./implementation-plan.md#0-canonical-phase-map--golden-tests-source-of-truth).
+
+| reference/ pack | Runtime target | Phase | Max lines | Do not copy |
+|-----------------|----------------|-------|-----------|-------------|
+| `arabic-qa` | Audit Mode + `humanization-protocol.md` | P2 | ≤120 | full error catalog, brand-lexicon tables |
+| `arabic-content-strategist` | `advisory-mode.md` + `project-mode.md` | P1/P5 | ≤150 | full KPI framework, competitive-landscape prose |
+| `arabic-creator` | Pro Mode brief schema (`intake-protocols.md`) | P1 | ≤100 | full CTA library, brief-template bodies |
+| `arabic-seo-optimizer` | `seo-aeo-masri.md` | P4 | ≤150 | technical-SEO deep cuts, analytics tables |
+| `arabic-masri` (1060 lines) | `dialects/masri.md` expansion | P4 | ≤200 | full vocabulary bank — link to reference for deep cuts |
+| per-dialect packs | matching `dialects/*.md` | P6 | ≤150 each | exhaustive vocab lists; keep top registers + slang only |
+| `arabic-project-manager` | `project-mode.md` stages | P5 | ≤100 | full RACI / governance prose |
+| `arabic-agent-orchestration` | `SKILL.md` Module 6 | P6 | ≤60 | full orchestration theory |
+| Islamic/secular observances | `seasonal-calendar.md` | P4 | ≤120 | religious scholarship beyond date + tone |
+| `arabic-cultural-advisor` | `taboos.md` + seasonal hooks | P4 | ≤80 | geopolitical deep cuts |
+
+**Hard rule:** if a distilled section would exceed its budget, link to the `reference/` pack instead of inlining. Religious-scholarship, calligraphy, art, lexicography, and `watan-al-arabi` packs are **canonical-only** (see "What NOT to Distill").
+
 ## Sync and Validation
 
 - Run `scripts/validate-skill.sh` after each distillation phase

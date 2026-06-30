@@ -15,6 +15,11 @@ Working toward **v1.0.0** — first public release when [PRD success criteria](.
 - Expanded Claude plan audit prompt (governance, golden tests G1–G18, git/PR playbook)
 - Reworked master README with product status, `/arabic` command model, project-aware Arabic content goals, and cover artwork
 - Added project-context scanner planning so the skill can explain real projects and tools in Arabic from repo evidence
+- Added plan audit (`docs/analysis/plan-audit-2026.md`)
+- **Unified phase numbering (P0–P7)** + **G1–G18 golden-test master table** as single source of truth in `implementation-plan.md §0`; reconciled `roadmap.md`, `versioning-and-releases.md`, `ci-pipeline.md` (golden tests G1–G12 gate v1.0.0, G13–G18 gate v1.1.0); `voice.md` placed in P3 (Coach & Memory)
+- Fixed `scripts/validate-skill.sh` reference-integrity scan (was a silent no-op); corrected `arabic/references/INDEX.md` inventory (37 → 42); corrected PRD criteria count (10 → 11) in versioning + release-checklist docs
+- Upgraded research-intelligence-plan (5 canonical prompts, KB/sources/index schemas, web-research behavior, decision-tree mermaid) and command-surface (flag reference, auto-flow mermaid, routing-pipeline proof, error handling); added `docs/supported/cursor/commands.md`, `docs/engineering/release-playbook.md`, `docs/planning/website-design-system.md`
+- **P1 Advisory Core (runtime):** rewrote `arabic/SKILL.md` to advisory-first operating model (guide → clarify → recommend → write → review) with a 5-mode router; added `arabic/references/advisory-mode.md`; INDEX 42 → 43. VERSION stays `0.1.0`.
 
 ### Planned for v1.0.0
 - Advisory operating model (`advisory-mode.md`, SKILL.md rewrite)
@@ -23,7 +28,7 @@ Working toward **v1.0.0** — first public release when [PRD success criteria](.
 - Ads matrix + Masri SEO/AEO domains
 - Project Mode (website, campaign, book workflows)
 - Project-aware Arabic explanations and tutorials from scanned repo docs/files
-- Golden acceptance tests (13+ scenarios)
+- Golden tests G1–G12 (G13–G18 at v1.1.0)
 - Install website (post-v1 test project)
 
 ## [0.1.0] - 2026-06-29
