@@ -1,0 +1,21 @@
+package.json
+  s_e3335146bd3549::t_404b7a6492996d 30-31
+docs/engineering/npm-publishing.md
+  s_e3335146bd3549::t_404b7a6492996d 13,46-47
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.5",
+  "base_commit_sha": "a4b9d0b049485b37d15ec646db834284a1d60385",
+  "prompts": {},
+  "sessions": {
+    "s_e3335146bd3549": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f187b-09dc-7e60-8b3c-3cbe926406d8",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
