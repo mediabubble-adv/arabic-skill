@@ -1,0 +1,39 @@
+arabic/references/seasonal-calendar.md
+  s_6fe008e60e0c3b::t_ae887130405d78 1-99
+arabic/SKILL.md
+  s_6fe008e60e0c3b::t_ff4aec50b57eda 59-62
+  s_6fe008e60e0c3b::t_849d17d4acc18f 49
+  s_6fe008e60e0c3b::t_e1848cc454a80a 147
+arabic/references/seo-aeo-masri.md
+  s_6fe008e60e0c3b::t_d6bfaf09213ed9 1-109
+arabic/references/ads-service-matrix.md
+  s_6fe008e60e0c3b::t_d3b12af91e5c00 81
+  s_6fe008e60e0c3b::t_368ed26caffa67 1-80,82-117
+arabic/dialects/masri.md
+  s_6fe008e60e0c3b::t_02b86ee86d076a 237-327
+CHANGELOG.md
+  s_6fe008e60e0c3b::t_0343c2e8df0ef6 25
+arabic/domains/ads-media.md
+  s_6fe008e60e0c3b::t_04089ff49d8fa3 1-153
+arabic/references/INDEX.md
+  s_6fe008e60e0c3b::t_23ab5ef7d24d5c 56,60
+  s_6fe008e60e0c3b::t_bca2e60bcb9d7f 112,114-115,117
+  s_6fe008e60e0c3b::t_06236ad4ef2e53 5
+  s_6fe008e60e0c3b::t_b88acf2aa2700e 18,32-34
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "4833825448130c2fa6bd53f28c8476240d03ab2b",
+  "prompts": {},
+  "sessions": {
+    "s_6fe008e60e0c3b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5f81b423-82fe-45f6-9c97-cca51a82eb87",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
