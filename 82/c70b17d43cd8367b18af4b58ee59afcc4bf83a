@@ -1,0 +1,21 @@
+arabic/references/engines.md
+  s_e3335146bd3549::t_3a354b4a35467c 556-650
+arabic/references/examples.md
+  s_e3335146bd3549::t_3a354b4a35467c 353-489
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "82c70b17d43cd8367b18af4b58ee59afcc4bf83a",
+  "prompts": {},
+  "sessions": {
+    "s_e3335146bd3549": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f187b-09dc-7e60-8b3c-3cbe926406d8",
+        "model": "gpt-5.4-mini"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
