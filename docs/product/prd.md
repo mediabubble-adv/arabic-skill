@@ -375,6 +375,24 @@ The advisory-first milestone is complete only if:
 10. Indexes and file maps match the real repo
 11. All outputs pass final review rules
 
+### Traceability to golden tests
+
+Each criterion maps to golden tests in [implementation-plan §0.3](../planning/implementation-plan.md#03-golden-test-master-table-g1g18). G1–G12 gate **v1.0.0**; G13–G18 gate **v1.1.0**.
+
+| # | Criterion | Phase | Golden test(s) |
+|---|-----------|-------|----------------|
+| 1 | Advisor before writer | P1 / C1 | G1, G2, G7, G8 |
+| 2 | Stronger humanization | P2 | covered by P2 fixtures + review in every test |
+| 3 | Prompt Coach end-to-end | P3 | G3 |
+| 4 | Brand voice save/reuse | P3 | P3 acceptance (voice save → reuse without re-intake) |
+| 5 | Project Mode (web/campaign/book) | P5 / C3 | G4, G6, G10 |
+| 6 | Ads beyond Meta/Google | P4 | G5 |
+| 7 | Dev-tech terminology strategy | P5 | G11 (project explain) + P5 dev-tech fixtures |
+| 8 | Project-aware, no private data | P5 / C4 | G11 |
+| 9 | Preloaded trends, no fake recency | P4 | P4 seasonal-calendar fixture (no live-data claim) |
+| 10 | Indexes/file maps match repo | P0 / P6 | `validate-skill.sh` + G16 (website QA) |
+| 11 | All outputs pass final review | P1 / P2 | G9 + review step asserted in every test |
+
 ## 13. Non-Goals
 
 The current plan does not require:

@@ -214,10 +214,10 @@ Bash's `[[ =~ ]]` uses POSIX ERE, which does **not** support the PCRE non-captur
 | P1-3 | Reconcile `voice.md` phase (Coach vs Persistence) | S | Med | Phase 1/3 |
 | P2-1 | Create `command-router.md` + `project-context-scanner.md` specs; add flag-reference + error-handling + mermaid to `command-surface.md`; create `cursor/commands.md` | L | High | C1 |
 | P2-2 | Upgrade `research-intelligence-plan.md`: 5 named prompts, KB template, sources.yaml schema, web-research behavior, decision-tree mermaid | M | Med | R0 |
-| P2-3 | Add per-pack line budgets + do-not-copy lists to `reference-distillation.md` | M | Med | Phase 2 |
-| P3-1 | Create `release-playbook.md`; embed per-phase git playbook in implementation plan | M | Med | Phase 6 |
+| P2-3 | ✅ **FIXED** — per-pack line budgets + do-not-copy table added to `reference-distillation.md` | M | Med | P2 |
+| P3-1 | ✅ **FIXED** — `release-playbook.md` created; per-phase git playbook added to implementation-plan §15 | M | Med | P6 |
 | P3-2 | Broaden CODEOWNERS to `arabic/references/`, `docs/planning/`, `research/` | S | Low | chore |
-| P3-3 | ⚠️ **PARTIAL** — versioning-doc "10 items" → 11 fixed; PRD §12 G1–G18 traceability column still pending golden-test decision | S | Med | Phase 2 |
+| P3-3 | ✅ **FIXED** — count "10"→11 corrected; PRD §12 G1–G18 traceability table added | S | Med | P2 |
 | P3-4 | Spec website (`website-design-system.md`, G13–G18) for v1.1.0 — plan only | M | Low | Phase 9 |
 
 ---

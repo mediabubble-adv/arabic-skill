@@ -68,6 +68,7 @@ Versioning, CI, branching, and collaboration.
 | [Branching Strategy](./engineering/branching-strategy.md) | Branch types and release flow |
 | [Collaboration Rules](./engineering/collaboration-rules.md) | PR requirements and ownership |
 | [CI Pipeline](./engineering/ci-pipeline.md) | Automated validation and deploy |
+| [Release Playbook](./engineering/release-playbook.md) | Step-by-step release procedure (v1.0.0 / v1.1.0) |
 
 ### Supported Tools
 

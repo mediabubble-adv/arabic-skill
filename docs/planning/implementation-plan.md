@@ -626,3 +626,34 @@ These specs extend this plan — integrate their phases when recreating the impl
 | [command-surface.md](./command-surface.md) | `/arabic` subcommands, `.arabic/` workspace auto, `command-router.md`, golden tests G7–G12 |
 
 **v1.0.0 targets:** `arabic/references/command-router.md`, `arabic/references/project-context-scanner.md`, research R0 scaffold, Cursor command adapter doc.
+
+## 15. Git delivery per phase
+
+Every phase ships on its own branch and merges to `main` via PR. See [branching-strategy.md](../engineering/branching-strategy.md), [collaboration-rules.md](../engineering/collaboration-rules.md), and the [release-playbook.md](../engineering/release-playbook.md).
+
+**Per-phase template:**
+
+```markdown
+- Branch:   feat/<phase-id>-<short-name>     e.g. feat/p1-advisory-core
+- Commits:  conventional, atomic — keep docs and runtime in separate commits
+- PR title: feat(skill): <phase-id> — <short description>
+- PR body:  phase checklist, golden tests run (IDs), screenshots if UI
+- Merge:    squash to main after CI green + CODEOWNERS review
+- CHANGELOG: add user-visible changes under [Unreleased]
+- Tag:      none per phase — tags happen only on release branches (see release-playbook)
+```
+
+**Suggested branches + golden tests per phase:**
+
+| Phase | Branch | PR title example | Golden tests to run |
+|-------|--------|------------------|---------------------|
+| P0 | `chore/p0-architecture-lock` | `chore(skill): P0 — truthful inventory + CI fixes` | — |
+| P1 | `feat/p1-advisory-core` | `feat(skill): P1 — advisory operating model` | G1, G2, G12 |
+| P2 | `feat/p2-quality-engine` | `feat(skill): P2 — humanization v2 + audit mode` | G9 |
+| P3 | `feat/p3-coach-memory` | `feat(skill): P3 — prompt coach + voice.md` | G3 |
+| P4 | `feat/p4-masri-commercial` | `feat(skill): P4 — ads matrix + Masri SEO/AEO` | G5 |
+| P5 | `feat/p5-project-mode` | `feat(skill): P5 — project mode + dev-tech + scanner` | G4, G6, G11 |
+| P6 | `feat/p6-integration` | `feat(skill): P6 — runtime integration + validation` | G1–G12 |
+| R0 | `feat/research-r0-scaffold` | `feat(research): R0 — knowledge layer scaffold` | research fixtures |
+| C1 | `feat/command-surface-c1` | `feat(skill): C1 — command-router + Cursor adapter` | G7, G8, G10 |
+| P7 | `feat/website-v1.1.0` | `feat(website): marketing site v1.1.0` | G13–G18 |
