@@ -1,0 +1,30 @@
+CHANGELOG.md
+  s_43baa3459d9e83::t_fc7460f8631287 24
+arabic/SKILL.md
+  s_43baa3459d9e83::t_5d890fec5eab3a 50
+  s_43baa3459d9e83::t_bd0d1fc4887a6d 58-66
+arabic/voice.md
+  s_43baa3459d9e83::t_8477c4ecaa6eca 1-79
+arabic/references/INDEX.md
+  s_43baa3459d9e83::t_04db087a924a56 14
+  s_43baa3459d9e83::t_8fd2cddc44c035 18,24
+  s_43baa3459d9e83::t_67bbd7b0de182c 107,109-110,112
+arabic/references/prompt-engineering.md
+  s_43baa3459d9e83::t_78b78c14cbded6 1-80
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "f4679614cf9e35ad3f5b43e64ea3ece732a78ccf",
+  "prompts": {},
+  "sessions": {
+    "s_43baa3459d9e83": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "407f5859-bc41-48e2-b0ae-88957d23495b",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
