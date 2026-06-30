@@ -24,7 +24,7 @@
 
 - **Overall plan quality: 8/10** — the documentation set is unusually complete, internally cross-linked, and honest about its own non-goals. It loses points for phase-numbering conflicts between `roadmap.md` and `implementation-plan.md`, an undefined golden-test set (G1–G18 referenced but never specified), and a stale inventory count.
 - **Runtime readiness: 3/10** — the shipped `arabic/SKILL.md` still implements the **old write-first model** (Zero-Guessing intake + 7 tools + 7 modules). None of the advisory-first architecture the docs describe — Advisory/Pro/Project/Audit/Prompt-Coach modes, `/arabic` commands, `command-router.md`, `project-context-scanner.md`, `voice.md` — exists in runtime. The plan is written; the product is not yet built.
-- **Claude execution readiness: needs changes (not blocked).** A fresh session can execute most of the plan, but will hit three ambiguities that force guessing: (a) which phase numbering is authoritative, (b) what G1–G18 actually are, (c) whether golden tests gate v1.0.0 or v1.5.0. Fix these and readiness is green.
+- **Claude execution readiness: ✅ ready (as of remediation).** The three ambiguities that would have forced guessing — (a) phase numbering, (b) the G1–G18 set, (c) golden-test timing — are now resolved (see remediation note). All documentation-side P0/P2/P3 recommendations are closed. The only substantial work left is **P1-1: the runtime build** (advisory `SKILL.md` + the 13 planned runtime files), which is implementation, not planning.
 - **Top 3 risks (ranked):**
   1. **Docs/behavior illusion.** Every planning doc reads as if advisory-first is the product. It is not shipped. A contributor could "complete" docs and believe v1.0.0 is near while runtime is essentially the 0.1.0 baseline.
   2. **Phase-numbering collision.** "Phase 3" means *Coach & Memory* in `roadmap.md` but *Capability Expansion* in `implementation-plan.md`. Per-phase branch names and PRs built on this will mis-route work.
@@ -210,8 +210,8 @@ Bash's `[[ =~ ]]` uses POSIX ERE, which does **not** support the PCRE non-captur
 | P0-3 | ✅ **FIXED** — `validate-skill.sh` regex repaired; reference-integrity scan now runs | S | High | Phase 0 (chore) |
 | P0-4 | ✅ **FIXED** — `INDEX.md` corrected (37→42, `taboos.md` added to build status) | S | High | Phase 0 |
 | P1-1 | Rewrite `SKILL.md` to advisory-first 5-mode model + create `advisory-mode.md` | L | High | Phase 1 |
-| P1-2 | Resolve golden-test **timing** (v1.0.0 gate vs ci-pipeline v1.5.0) and add `validate-frontmatter.sh` | S | Med | Phase 1 |
-| P1-3 | Reconcile `voice.md` phase (Coach vs Persistence) | S | Med | Phase 1/3 |
+| P1-2 | ✅ **FIXED** — golden-test timing reconciled (G1–G12 gate v1.0.0); `validate-frontmatter.sh` documented as a planned v1.1.0 gate (consistent across roadmap + ci-pipeline) | S | Med | P1 |
+| P1-3 | ✅ **FIXED** — `voice.md` placed in P3 (Coach & Memory) across all docs | S | Med | P3 |
 | P2-1 | ✅ **FIXED (spec)** — flag-reference, error-handling, mermaid, routing-pipeline proof added to `command-surface.md`; `cursor/commands.md` created. Runtime `command-router.md`/`project-context-scanner.md` remain in the build phase (P1-1/C1) | L | High | C1 |
 | P2-2 | ✅ **FIXED** — research plan upgraded: 5 named prompts, KB/sources.yaml/index.json schemas, web-research behavior, decision-tree mermaid, git workflow | M | Med | R0 |
 | P2-3 | ✅ **FIXED** — per-pack line budgets + do-not-copy table added to `reference-distillation.md` | M | Med | P2 |
