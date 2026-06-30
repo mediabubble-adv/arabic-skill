@@ -1,0 +1,55 @@
+docs/planning/roadmap.md
+  s_43baa3459d9e83::t_7bc3b278c4dbda 178
+  s_43baa3459d9e83::t_117df19e15839b 226
+  s_43baa3459d9e83::t_81e3ad2c682229 47,51-59
+  s_43baa3459d9e83::t_51209b07cd7314 156
+  s_43baa3459d9e83::t_b762a298298aba 135
+  s_43baa3459d9e83::t_b424ecafce4745 94
+  s_43baa3459d9e83::t_89b227eed75efe 116
+  s_43baa3459d9e83::t_f68d037415576f 68
+  s_43baa3459d9e83::t_fe4c3fa0e69cc3 190
+  s_43baa3459d9e83::t_2c8b1c6cb8daa6 41
+  s_43baa3459d9e83::t_7dfd81305c97c1 208
+docs/analysis/skill-craft-and-release-research.md
+  s_43baa3459d9e83::t_786e499a3082c9 232-233
+  s_43baa3459d9e83::t_6ab0db3563193a 213
+docs/planning/implementation-plan.md
+  s_43baa3459d9e83::t_b90af20e61bd0d 475
+  s_43baa3459d9e83::t_31fdd914a95619 352
+  s_43baa3459d9e83::t_4c8ccef9de056c 550-551
+  s_43baa3459d9e83::t_dddd9494da54db 157
+  s_43baa3459d9e83::t_7e4464eb19b770 224
+  s_43baa3459d9e83::t_7d63cf78c9eb33 399
+  s_43baa3459d9e83::t_d848ff4f7cd14f 532
+  s_43baa3459d9e83::t_a7629ecc7b5bb2 87
+  s_43baa3459d9e83::t_04d0cd968c1711 111
+  s_43baa3459d9e83::t_d98df5aea427a8 509
+  s_43baa3459d9e83::t_7c917da4e36251 3-67
+docs/engineering/ci-pipeline.md
+  s_43baa3459d9e83::t_d0bcb6b506aea8 60-62
+CHANGELOG.md
+  s_43baa3459d9e83::t_f014681293b56f 18-20
+  s_43baa3459d9e83::t_b7fe9002eed256 29
+docs/analysis/plan-audit-2026.md
+  s_43baa3459d9e83::t_77a161cc82dbb9 6-8,11-19
+  s_43baa3459d9e83::t_b7210765ef78e7 208-209
+docs/engineering/versioning-and-releases.md
+  s_43baa3459d9e83::t_1dc8821c1e9e21 47-48
+  s_43baa3459d9e83::t_042e2ad9a9b76f 22
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "19e184a16dfc0f1828ddbe454a777d89532aeba1",
+  "prompts": {},
+  "sessions": {
+    "s_43baa3459d9e83": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "407f5859-bc41-48e2-b0ae-88957d23495b",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
