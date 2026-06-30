@@ -1,0 +1,31 @@
+docs/planning/reference-distillation.md
+  s_43baa3459d9e83::t_3fccd4103c3075 91-109
+docs/product/prd.md
+  s_43baa3459d9e83::t_4b0b55dc457815 378-395
+docs/engineering/release-playbook.md
+  s_43baa3459d9e83::t_8563187501e435 1-100
+docs/planning/implementation-plan.md
+  s_43baa3459d9e83::t_c39ae4a703c3c3 629-659
+docs/README.md
+  s_43baa3459d9e83::t_f9517f3223624f 71
+docs/analysis/plan-audit-2026.md
+  s_43baa3459d9e83::t_2c3a4af84adafb 217
+  s_43baa3459d9e83::t_9395a83ecc1ebf 218
+  s_43baa3459d9e83::t_f341d803770655 220
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "c0ad3094f38b3b8fd4b0e5c9b42a0775aa988a27",
+  "prompts": {},
+  "sessions": {
+    "s_43baa3459d9e83": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "407f5859-bc41-48e2-b0ae-88957d23495b",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
