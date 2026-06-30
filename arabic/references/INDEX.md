@@ -2,7 +2,7 @@
 
 ## Token Load Strategy
 Max 6 files per task. Always start with SKILL.md + 1 dialect file + 1–2 task-relevant references.
-Never load all 50 files. Load strictly on demand.
+Never load all 54 files. Load strictly on demand.
 
 ---
 
@@ -15,7 +15,7 @@ Never load all 50 files. Load strictly on demand.
 
 ---
 
-## References — Load by Task (13 files)
+## References — Load by Task (16 files)
 
 | File | Load when |
 |---|---|
@@ -30,6 +30,9 @@ Never load all 50 files. Load strictly on demand.
 | `references/trends-and-hooks.md` | When hooks, viral angles, or trends are needed |
 | `references/examples.md` | When checking output quality against good/bad comparisons |
 | `references/ads-service-matrix.md` | Paid-ad tasks, `/arabic plan campaign`, multi-channel ad briefs |
+| `references/project-mode.md` | Large deliverables, staged execution, website/campaign/book work |
+| `references/project-context-scanner.md` | Real repo explanations, install/use guides, evidence-grounded copy |
+| `references/book-writing.md` | Book projects, premise-to-continuity workflows |
 | `references/seo-aeo-masri.md` | SEO/AEO or website-copy tasks targeting Egypt |
 | `references/seasonal-calendar.md` | Campaign planning or any time-sensitive / seasonal brief |
 
@@ -53,7 +56,7 @@ Never load all 50 files. Load strictly on demand.
 
 ---
 
-## Domains — Load ONLY if Industry Applies (13 files, load 0 or 1)
+## Domains — Load ONLY if Industry Applies (14 files, load 0 or 1)
 
 | File | Industry |
 |---|---|
@@ -70,6 +73,7 @@ Never load all 50 files. Load strictly on demand.
 | `domains/beauty-fashion.md` | Beauty & fashion |
 | `domains/fitness-wellness.md` | Fitness & wellness |
 | `domains/government-ngo.md` | Government & NGO |
+| `domains/dev-tech.md` | Developer-facing product docs and technical Arabic copy |
 
 ---
 
@@ -110,8 +114,9 @@ Never load all 50 files. Load strictly on demand.
 | P2 (quality engine) | audit-mode.md + humanization-protocol.md v2 (anti-translationese, channel layers) | ✅ Complete |
 | P3 (coach & memory) | prompt-engineering.md + voice.md (brand voice persistence) | ✅ Complete |
 | P4 (Masri commercial) | ads-service-matrix.md + ads-media.md + seo-aeo-masri.md + seasonal-calendar.md + masri.md expansion | ✅ Complete |
+| P5 (project mode & dev-tech) | project-mode.md + project-context-scanner.md + book-writing.md + domains/dev-tech.md | ✅ Complete |
 
-**Total planned files:** 50
-**Total built:** 50 — v0.1.0 dev baseline (v1.0.0 when plan ships)
+**Total planned files:** 54
+**Total built:** 54 — v0.1.0 dev baseline (v1.0.0 when plan ships)
 
-Breakdown: SKILL.md (1) + voice.md (1) + references/ (14, incl. this INDEX) + dialects/ (11) + domains/ (13) + conversations/ (6) + professional-docs/ (4) = 50.
+Breakdown: SKILL.md (1) + voice.md (1) + references/ (17, incl. this INDEX) + dialects/ (11) + domains/ (14) + conversations/ (6) + professional-docs/ (4) = 54.
