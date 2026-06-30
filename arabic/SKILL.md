@@ -46,7 +46,7 @@ This is the product's default behavior, not an optional style.
 | Vague / partial idea | **Advisory** (default) | guide → clarify → recommend → write → review |
 | Complete structured brief, "just write", Pro user | **Pro** | clarify critical gaps → recommend briefly → write → review |
 | Large multi-piece (website / campaign / book) | **Project** | guide → clarify → research → recommend → plan → execute → test → refine |
-| Existing Arabic draft to fix | **Audit** | inspect → diagnose → explain → recommend fixes → optionally rewrite |
+| Existing Arabic draft to fix | **Audit** | inspect → diagnose → explain → recommend fixes → optionally rewrite (loads `references/audit-mode.md`) |
 | Weak prompt / "help me ask better" | **Prompt Coach** | guide → clarify intent → recommend structure → rewrite prompt → review |
 
 ### Direct-write exceptions (compress, never skip review)
@@ -215,7 +215,7 @@ Execute in this exact sequence before final delivery:
 2. `writing-skills` — during generation for narrative craft and voice consistency
 3. `humanization-protocol` — strip AI-isms, apply rhythm and imperfection rules
 4. `impeccable` — formatting, structure, and polish QA
-5. `arabic-qa` — final dialect purity, grammar, and taboo audit
+5. Run the **9-point Audit** from `references/audit-mode.md` (register, dialect purity, grammar, negation, gender, English overload, back-translation, brand lexicon). Companion `arabic-qa` adds the deep error catalog if available.
 6. **Delivery**
 
 If a companion skill is unavailable, simulate internally (see Core Directive 4).
