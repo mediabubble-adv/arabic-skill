@@ -350,3 +350,140 @@ Every "bad" example is real AI-pattern output. Every "good" example is what nati
 | FAQ answers start with "Great question" | Yes | Delete; answer directly |
 | Every paragraph has 3 sentences | Often | Vary: 1 sentence / 4 sentences / 2 sentences |
 | Ends with a moral or lesson | Often | End with a question or an open loop |
+
+---
+
+## 8. Project Mode / Repo Explanation Examples
+
+### Example 8A — Repo Explanation
+
+**Context:** User asks for an Arabic explanation of a real repo called `Atlas Notes`
+
+❌ **BAD (invented facts):**
+```
+Atlas Notes منصة شاملة لإدارة المعرفة والتعاون بين الفرق.
+تتميز بذكاء اصطناعي متقدم وتكاملات لا نهائية وتجربة فريدة للمستخدمين.
+```
+
+✅ **GOOD (evidence-grounded):**
+```
+من الملفات الظاهرة في الريبو، Atlas Notes يبدو تطبيق ملاحظات مبني على [stack].
+
+اللي نقدر نقوله بثقة:
+- فيه README يشرح الاستخدام
+- فيه سكريبتات تشغيل/بناء
+- فيه صفحات أو routes واضحة
+
+اللي ما نقدرش نؤكده من غير مراجعة أعمق:
+- هل فيه مزامنة سحابية
+- هل فيه تعاون لحظي
+- هل فيه ميزات AI فعلية
+
+لو تحب، أقدر أحول ده لشرح عربي بسيط للمستخدم أو README مختصر للمشروع.
+```
+
+**Why this works:** It separates confirmed facts from inference and avoids marketing language that the repo does not support.
+
+### Example 8B — Website Project Plan
+
+**Context:** User asks for a plan for a 6-page website
+
+❌ **BAD (one-shot drafting):**
+```
+الرئيسية:
+نقدم أفضل خدمة...
+عنّا:
+...
+```
+
+✅ **GOOD (Project Mode plan):**
+```
+المقترح الأفضل: نبدأ بالرئيسية + صفحة الخدمة الأساسية + FAQ.
+
+الترتيب:
+1) الرئيسية
+2) صفحة الخدمة
+3) صفحة الثقة (من نحن / لماذا نحن)
+4) الأسئلة الشائعة
+5) صفحة التواصل
+6) مقالات SEO لاحقاً
+
+السبب: ده يقلل التشتت ويحافظ على رسالة واحدة في كل الصفحة.
+```
+
+---
+
+## 9. Developer Docs / README Examples
+
+### Example 9A — README Opening
+
+❌ **BAD:**
+```
+We leverage cutting-edge technology to deliver a seamless experience.
+```
+
+✅ **GOOD:**
+```
+Atlas Notes يساعدك تنظم ملاحظاتك وتطلع عليها بسرعة.
+
+البرنامج بسيط:
+1. اكتب ملاحظتك
+2. صنّفها
+3. ارجع لها وقت ما تحتاج
+```
+
+### Example 9B — Install Tutorial
+
+❌ **BAD:**
+```
+لتثبيت المشروع، قم باتباع التعليمات اللازمة وفقاً للمتطلبات الحالية.
+```
+
+✅ **GOOD:**
+```
+للتشغيل المحلي:
+1. `npm install`
+2. `npm run dev`
+3. افتح `http://localhost:3000`
+
+لو ظهر خطأ في البناء، راجع `package.json` وملف السكريبتات أولاً.
+```
+
+---
+
+## 10. Book Workflow Examples
+
+### Example 10A — Premise and Outline
+
+**Context:** Non-fiction book about Arabic prompting
+
+❌ **BAD:**
+```
+الكتاب سيتناول موضوعات متعددة في عالم الذكاء الاصطناعي والكتابة باللغة العربية.
+```
+
+✅ **GOOD:**
+```
+Premise: الكتاب يعلّم المستخدم كيف يحوّل prompts العربية الضعيفة إلى brief واضح ينتج محتوى أفضل.
+
+Outline:
+1) المشكلة
+2) قواعد الصياغة
+3) أمثلة قبل/بعد
+4) قوالب عملية
+5) مراجعة وتحسين
+```
+
+### Example 10B — Continuity Check
+
+❌ **BAD:**
+```
+Chapter 2 uses a different brand name and a different promise than Chapter 1.
+```
+
+✅ **GOOD:**
+```
+الاسم ثابت في كل الفصول.
+المصطلح الأساسي للمفهوم نفسه لا يتغير.
+أي claim جديد يتراجع من خلال ledger قبل اعتماد الفصل.
+```
