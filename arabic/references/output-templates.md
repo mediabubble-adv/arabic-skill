@@ -457,3 +457,73 @@ PART 4: CHARACTER DIALECT SHEET (first time a character appears)
 - Language consistency: Any term used in two different ways across the document?
 - Companion skills: `impeccable` for formatting + `arabic-qa` for language audit before delivery
 ```
+
+---
+
+## Template H — Recommendation Summary
+**Use for:** Project Mode direction-setting, staged recommendations, and brief decision memos
+
+```
+🎯 Project: [Name]
+🌍 Dialect / Register: [Dialect + register]
+🏷 Mode: [Website / Campaign / Editorial / Book / Repo Explain]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## Recommendation
+[1–3 sentence summary of the recommended direction.]
+
+## Why This Direction
+- [Reason 1]
+- [Reason 2]
+- [Reason 3]
+
+## Considered Alternatives
+- Option A: [Tradeoff]
+- Option B: [Tradeoff]
+
+## Next Step
+[Single action the user should approve next.]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔄 English Summary (For Stakeholders):
+[Natural English summary of the recommendation and its tradeoffs.]
+```
+
+---
+
+## Template I — Project Plan
+**Use for:** MECE project outlines, stage plans, deliverable maps, and execution schedules
+
+```
+🎯 Project: [Name]
+📍 Stage: [Discuss / Research / Recommend / Plan / Execute / Test / Refine]
+🌍 Dialect / Register: [Dialect + register]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## Plan Overview
+[One-sentence summary of what the full plan covers.]
+
+## Deliverable Map
+| Piece | Type | Purpose | Notes |
+|---|---|---|---|
+| [Piece 1] | [Page / Chapter / Asset] | [Job to be done] | [Constraint or dependency] |
+| [Piece 2] | [Page / Chapter / Asset] | [Job to be done] | [Constraint or dependency] |
+
+## Execution Order
+1. [First dependency]
+2. [Second dependency]
+3. [Third dependency]
+
+## Risks / Checks
+- [Continuity risk]
+- [Evidence risk]
+- [Taboo or register risk]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔄 English Summary (For Stakeholders):
+[Natural English summary of the plan structure and sequencing.]
+```

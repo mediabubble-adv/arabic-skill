@@ -23,14 +23,10 @@ Working toward **v1.0.0** — first public release when [PRD success criteria](.
 - **P2 Quality Engine (runtime):** added `arabic/references/audit-mode.md` (9-point QA pipeline distilled from `reference/arabic-qa`, scoring + report format, dialect-general); Humanization v2 — new Anti-Translationese and Channel Humanization layers in `humanization-protocol.md` + back-translation/channel-fit self-tests; wired Audit Mode into SKILL.md orchestration; INDEX 43 → 44.
 - **P3 Coach & Memory (runtime):** added `arabic/references/prompt-engineering.md` (Prompt Coach — weak-prompt diagnosis, prompt anatomy, repair workflow, beginner/standard/pro tiers, bad→good examples) and `arabic/voice.md` (brand-voice persistence schema + save/load/show protocol); wired Prompt Coach + voice loading into SKILL.md; INDEX 44 → 46.
 - **P4 Masri Commercial Depth (runtime):** added `arabic/references/ads-service-matrix.md` (8-platform paid-media specs + Campaign Bundle Builder for `/arabic plan campaign`), `arabic/domains/ads-media.md` (Egyptian paid-media psychology, funnel copy, retargeting discipline), `arabic/references/seo-aeo-masri.md` (MSA/Masri query split, title/meta formulas, AEO answer blocks, schema patterns), `arabic/references/seasonal-calendar.md` (Ramadan/Eid/national/seasonal timing with no-fake-recency guardrail); expanded `dialects/masri.md` with ad jargon (§11), dev/tech slang (§12), and an L4 professional layer (§13); wired Campaign mode + ads-media domain into SKILL.md; INDEX 46 → 50. Targets golden test **G5** (campaign bundle). VERSION stays `0.1.0`.
+- **P5 Project Mode & Dev-Tech (spec/runtime docs):** added `arabic/references/project-mode.md` (seven-stage workflow for websites, campaigns, editorial systems, and books), `arabic/references/project-context-scanner.md` (safe repo evidence rules and grounded Arabic output format), `arabic/references/book-writing.md` (premise → outline → chapter continuity workflow), and `arabic/domains/dev-tech.md` (README, API docs, tutorials, and developer-facing Arabic copy rules); wired these into the runtime index. INDEX 50 → 54. VERSION stays `0.1.0` (SKILL router/runtime activation remains in the next integration gate).
 
 ### Planned for v1.0.0
-- Advisory operating model (`advisory-mode.md`, SKILL.md rewrite)
-- Humanization v2 + Audit Mode (from `reference/arabic-qa`)
-- Prompt Coach + `voice.md` persistence
-- Ads matrix + Masri SEO/AEO domains
-- Project Mode (website, campaign, book workflows)
-- Project-aware Arabic explanations and tutorials from scanned repo docs/files
+- Runtime integration / validation to close the remaining P6 gate
 - Golden tests G1–G12 (G13–G18 at v1.1.0)
 - Install website (post-v1 test project)
 
