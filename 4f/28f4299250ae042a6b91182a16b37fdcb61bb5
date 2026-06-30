@@ -1,0 +1,22 @@
+docs/supported/README.md
+  s_e3335146bd3549::t_dec68b26242675 18-36
+README.md
+  s_e3335146bd3549::t_dec68b26242675 19-29,72-89
+  s_e3335146bd3549::t_091f8f3bc1d56d 90
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.5",
+  "base_commit_sha": "4f28f4299250ae042a6b91182a16b37fdcb61bb5",
+  "prompts": {},
+  "sessions": {
+    "s_e3335146bd3549": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f187b-09dc-7e60-8b3c-3cbe926406d8",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
