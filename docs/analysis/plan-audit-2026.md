@@ -216,7 +216,7 @@ Bash's `[[ =~ ]]` uses POSIX ERE, which does **not** support the PCRE non-captur
 | P2-2 | Upgrade `research-intelligence-plan.md`: 5 named prompts, KB template, sources.yaml schema, web-research behavior, decision-tree mermaid | M | Med | R0 |
 | P2-3 | ✅ **FIXED** — per-pack line budgets + do-not-copy table added to `reference-distillation.md` | M | Med | P2 |
 | P3-1 | ✅ **FIXED** — `release-playbook.md` created; per-phase git playbook added to implementation-plan §15 | M | Med | P6 |
-| P3-2 | Broaden CODEOWNERS to `arabic/references/`, `docs/planning/`, `research/` | S | Low | chore |
+| P3-2 | ✅ **FIXED** — CODEOWNERS now covers `arabic/references/`, `docs/planning/`, `research/` | S | Low | chore |
 | P3-3 | ✅ **FIXED** — count "10"→11 corrected; PRD §12 G1–G18 traceability table added | S | Med | P2 |
 | P3-4 | Spec website (`website-design-system.md`, G13–G18) for v1.1.0 — plan only | M | Low | Phase 9 |
 
