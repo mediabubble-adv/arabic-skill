@@ -229,9 +229,48 @@ When the answer is too obvious to state, ask it back instead:
 
 ---
 
-## ✅ Section 6: Self-Test
+## 🔁 Section 6: Anti-Translationese Layer
 
-Run all 3 before delivering:
+The deepest AI tell: Arabic that is English wearing an Arabic costume. Detect and rewrite.
+
+### Detect
+- **English-first sentence logic:** subject→verb→object marketing order, "Discover how X can transform your Y" structures, lead-with-the-verb CTAs ("اكتشف"، "حوّل"، "أطلق العنان").
+- **Adjective stacking:** "حل مبتكر وفعّال وسهل الاستخدام" — English piles adjectives; Arabic prefers one strong image.
+- **Abstract corporate framing:** "نحو مستقبل أفضل"، "نعيد تعريف…" — translated from English deck-speak.
+- **Direct-lift rhetorical structures:** "ليس فقط… بل أيضاً" (not only… but also), "تخيّل لو…" (imagine if…), "ماذا لو أخبرتك أن…" (what if I told you…).
+
+### The Back-Translation Test (decisive)
+Translate the line literally to English:
+- Reads as **natural English marketing** → **translationese ✗ → rewrite**
+- Reads **awkward in English** but meaning lands → **native Arabic ✓**
+
+| ❌ Translationese | ✅ Native |
+|---|---|
+| "اكتشف كيف يمكن لمنتجنا أن يحوّل عملك" | "منتجنا هيغير شغلك — وهنوريك إزاي" |
+| "نحن نؤمن بأن الجودة تأتي أولاً" | "الجودة عندنا مش كلام — جرب وانت تحكم" |
+| "ليس فقط سريع، بل أيضاً موثوق" | "سريع، وكمان ما بيخذلكش" |
+
+Rewrite from the **Arabic idea**, not the Arabic words of an English sentence.
+
+## 📡 Section 7: Channel Humanization Layer
+
+Humanization rules shift by channel. Apply the channel column on top of Sections 1–6.
+
+| Channel | Rhythm | Length | Markers | Avoid |
+|---------|--------|--------|---------|-------|
+| **Captions / social** | punchy, fragments OK | 1–3 short lines | hook in first 5 words, 1 emoji max if brand allows | filler openers (نقدم لكم), numbered lists |
+| **Video / scripts** | spoken cadence, breaths | read-aloud timed | direct address, false starts, beats | written-only connectors (وتجدر الإشارة) |
+| **Landing pages** | scannable, varied | short paras + 1 long | concrete proof, scene-based emotion | hollow praise, adjective stacks |
+| **WhatsApp** | conversational, 1 idea/msg | very short | name use, 1 question, soft CTA | corporate hedges, formal salutations |
+| **LinkedIn** | professional-warm | medium | specific numbers, 1 lived detail | slang, internet-casual, hype |
+| **Tutorials** | calm, sequential | step-sized | imperative voice, "هتعمل…", checkpoints | motivational fluff, abstract intros |
+| **Dev docs** | precise, neutral | tight | code stays English, explanation in target register | marketing tone, emotion words |
+
+**Rule:** code, commands, and identifiers stay English even in dialect prose; only the *explanation* takes the dialect/register.
+
+## ✅ Section 8: Self-Test
+
+Run all before delivering:
 
 **Test 1 — The Read Aloud Test:**
 Read the content aloud in the target dialect. If you stumble on any word or phrase, that's MSA bleed or AI vocabulary. Rewrite that sentence.
@@ -247,3 +286,9 @@ Count sentence lengths in words for any 5 consecutive sentences. If the variatio
 
 **Test 5 — The Emotion Audit:**
 Highlight every emotion word in the text (سعادة, فرح, خوف, راحة, etc.). Each one must be earned by a scene, image, or situation. If it's floating without context, delete it and show the scene instead.
+
+**Test 6 — The Back-Translation Test:**
+Translate the strongest line literally to English. If it reads as natural English marketing copy, it's translationese — rewrite from the Arabic idea (Section 6).
+
+**Test 7 — The Channel Fit Test:**
+Check the output against its channel row in Section 7. Wrong rhythm/length/markers for the channel = rewrite to fit (e.g., a LinkedIn-length paragraph dropped into a WhatsApp message).

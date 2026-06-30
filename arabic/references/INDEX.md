@@ -14,11 +14,12 @@ Never load all 38 files. Load strictly on demand.
 
 ---
 
-## References — Load by Task (8 files)
+## References — Load by Task (9 files)
 
 | File | Load when |
 |---|---|
 | `references/advisory-mode.md` | Start of any task that is not a complete brief (default operating model) |
+| `references/audit-mode.md` | Audit Mode / `/arabic audit`, and as the final 9-point QA review |
 | `references/intake-protocols.md` | Before asking intake questions (every new task) |
 | `references/engines.md` | Before generating content (every task) |
 | `references/output-templates.md` | After engine is selected (every task) |
@@ -100,8 +101,9 @@ Never load all 38 files. Load strictly on demand.
 | Phase 4 | 12 domain files (`domains/`) | ✅ Complete |
 | Phase 5 | 6 conversation files + 4 professional-docs files | ✅ Complete |
 | P1 (advisory core) | advisory-mode.md + SKILL.md advisory rewrite | ✅ Complete |
+| P2 (quality engine) | audit-mode.md + humanization-protocol.md v2 (anti-translationese, channel layers) | ✅ Complete |
 
-**Total planned files:** 43
-**Total built:** 43 — v0.1.0 dev baseline (v1.0.0 when plan ships)
+**Total planned files:** 44
+**Total built:** 44 — v0.1.0 dev baseline (v1.0.0 when plan ships)
 
-Breakdown: SKILL.md (1) + references/ (9, incl. this INDEX) + dialects/ (11) + domains/ (12) + conversations/ (6) + professional-docs/ (4) = 43.
+Breakdown: SKILL.md (1) + references/ (10, incl. this INDEX) + dialects/ (11) + domains/ (12) + conversations/ (6) + professional-docs/ (4) = 44.

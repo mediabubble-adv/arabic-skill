@@ -20,6 +20,7 @@ Working toward **v1.0.0** — first public release when [PRD success criteria](.
 - Fixed `scripts/validate-skill.sh` reference-integrity scan (was a silent no-op); corrected `arabic/references/INDEX.md` inventory (37 → 42); corrected PRD criteria count (10 → 11) in versioning + release-checklist docs
 - Upgraded research-intelligence-plan (5 canonical prompts, KB/sources/index schemas, web-research behavior, decision-tree mermaid) and command-surface (flag reference, auto-flow mermaid, routing-pipeline proof, error handling); added `docs/supported/cursor/commands.md`, `docs/engineering/release-playbook.md`, `docs/planning/website-design-system.md`
 - **P1 Advisory Core (runtime):** rewrote `arabic/SKILL.md` to advisory-first operating model (guide → clarify → recommend → write → review) with a 5-mode router; added `arabic/references/advisory-mode.md`; INDEX 42 → 43. VERSION stays `0.1.0`.
+- **P2 Quality Engine (runtime):** added `arabic/references/audit-mode.md` (9-point QA pipeline distilled from `reference/arabic-qa`, scoring + report format, dialect-general); Humanization v2 — new Anti-Translationese and Channel Humanization layers in `humanization-protocol.md` + back-translation/channel-fit self-tests; wired Audit Mode into SKILL.md orchestration; INDEX 43 → 44.
 
 ### Planned for v1.0.0
 - Advisory operating model (`advisory-mode.md`, SKILL.md rewrite)
