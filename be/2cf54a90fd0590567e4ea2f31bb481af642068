@@ -1,0 +1,23 @@
+docs/supported/gemini/README.md
+  s_d8099284babf6b::t_3d3f4534b549ec 23-35
+docs/supported/copilot/README.md
+  s_d8099284babf6b::t_546403716ee5d7 23-35
+docs/supported/vs-code/README.md
+  s_d8099284babf6b::t_de32f9426a7201 23-35
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.8",
+  "base_commit_sha": "be2cf54a90fd0590567e4ea2f31bb481af642068",
+  "prompts": {},
+  "sessions": {
+    "s_d8099284babf6b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a5b1bf89-264b-4c43-8b1e-bf52538bd9d5",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
