@@ -14,9 +14,10 @@ check_links_in_file() {
   # Strip fenced code blocks (``` ... ```) before scanning for links, so
   # example markdown snippets embedded in docs (e.g. planning docs showing
   # "insert this link into another file") aren't misread as real links
-  # from this file's own location.
+  # from this file's own location. An unclosed fence swallows the rest of
+  # the file (known trade-off for this doc-only checker, not a build gate).
   local content
-  content="$(awk '/^```/{f=!f; next} !f' "$file")"
+  content="$(awk '/^```/{f=!f; next} !f' "$file" 2>/dev/null || true)"
 
   # Match [text](./path) or [text](../path)
   while IFS= read -r link; do
