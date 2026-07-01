@@ -36,6 +36,13 @@ uploaded knowledge, but:
 | Local docs loading | Partial | Knowledge/file upload, subject to size limits |
 | Persistence via `voice.md` | Limited | Requires manual re-upload per session/project |
 
+## Recommended Packaging
+
+- `SKILL.md` body as Custom GPT / Project system instructions
+- reference/dialect packs as uploaded Knowledge files (trim to fit upload limits)
+- prompt-conventional command routing — no native command surface
+- re-paste or re-upload `voice.md` at the start of each session/project until persistence improves
+
 ## Fixes for First-Class Support
 
 - None available without a ChatGPT-side mechanism (Actions/plugins) — out of scope until ChatGPT exposes a skills-equivalent API
