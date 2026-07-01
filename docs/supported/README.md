@@ -38,6 +38,8 @@ The repository includes local tool icons in [`../../public/assets/`](../../publi
 
 - [Claude](./claude/README.md)
 - [Cursor](./cursor/README.md)
+- [Codex](./codex/README.md)
+- [ChatGPT](./chatgpt/README.md)
 - [Antigravity](./antigravity/README.md)
 - [Aider](./aider/README.md)
 - [Amp](./amp/README.md)
