@@ -11,6 +11,13 @@ check_links_in_file() {
   local dir
   dir="$(dirname "$file")"
 
+  # Strip fenced code blocks (``` ... ```) before scanning for links, so
+  # example markdown snippets embedded in docs (e.g. planning docs showing
+  # "insert this link into another file") aren't misread as real links
+  # from this file's own location.
+  local content
+  content="$(awk '/^```/{f=!f; next} !f' "$file")"
+
   # Match [text](./path) or [text](../path)
   while IFS= read -r link; do
     [[ -z "$link" ]] && continue
@@ -30,7 +37,7 @@ check_links_in_file() {
       echo "ERROR: Broken link in $file → $link (resolved: $target)"
       ERRORS=$((ERRORS + 1))
     fi
-  done < <(grep -oE '\]\([^)]+\)' "$file" 2>/dev/null | sed 's/^](//;s/)$//' || true)
+  done < <(echo "$content" | grep -oE '\]\([^)]+\)' | sed 's/^](//;s/)$//' || true)
 }
 
 while IFS= read -r -d '' md_file; do
