@@ -1,0 +1,24 @@
+docs/supported/codex/README.md
+  s_d8099284babf6b::t_4a30203eaa921d 42-48
+  s_d8099284babf6b::t_51ac6f571134b6 7
+docs/supported/chatgpt/README.md
+  s_d8099284babf6b::t_9c37eb86698add 39-45
+docs/supported/support-matrix.md
+  s_d8099284babf6b::t_13b79d861c00ca 7-8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.8",
+  "base_commit_sha": "8a22396c78a3bad4566259f313d081836bd6fcbf",
+  "prompts": {},
+  "sessions": {
+    "s_d8099284babf6b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a5b1bf89-264b-4c43-8b1e-bf52538bd9d5",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
