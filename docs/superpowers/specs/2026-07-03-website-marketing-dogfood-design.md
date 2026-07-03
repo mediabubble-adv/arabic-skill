@@ -47,7 +47,7 @@ Ship an Arabic-first RTL marketing site whose **primary job is install conversio
 | Solo dev (Cursor/Claude/Codex) | README, `/`, `/commands` | `/install` → **أنا مطور** | G14 copied |
 | Marketer/founder (skill-new) | Social, `/examples`, `/tutorials` | `/install` → **أول مرة** → G14 | G14 copied |
 | Technical evaluator | `/commands`, `/docs` | Tool tabs + GitHub | G14 or docs → install |
-| Skeptic | `/examples`, `/about` | Proof → `/install` | Copy after trust |
+| Skeptic | `/examples`, `../../about.md` | Proof → `/install` | Copy after trust |
 
 ---
 
@@ -63,7 +63,7 @@ Ship an Arabic-first RTL marketing site whose **primary job is install conversio
 | `/commands` | Verb table + copy buttons → install |
 | `/tutorials` | 3 walkthroughs → G14 at end |
 | `/examples` | Before/after toggles → install |
-| `/about` | Full dogfood dossier |
+| `../../about.md` | Full dogfood dossier |
 | `/docs` | GitHub hub + install card |
 
 Every route links to `/install` (above fold, sticky band, or end CTA).
@@ -137,7 +137,7 @@ Every route links to `/install` (above fold, sticky band, or end CTA).
 اتبنى بـ /arabic · [إزاي اتبنى؟ → ../../about.md] · [GitHub] · [الوثائق → /docs]
 ```
 
-**`/about` sections**
+**`../../about.md` sections**
 
 | Section | Source |
 |---------|--------|
@@ -149,7 +149,7 @@ Every route links to `/install` (above fold, sticky band, or end CTA).
 | Architecture | `arabic/` runtime, 38 reference packs, 24 tools |
 | MediaBubble | one paragraph, no hard-sell |
 
-Audit snapshot **frozen at build time** — `/about` does not drift post-deploy.
+Audit snapshot **frozen at build time** — `../../about.md` does not drift post-deploy.
 
 **Cross-links:** install trust strip; examples card tags; tutorials dogfood link.
 
@@ -190,7 +190,7 @@ Audit snapshot **frozen at build time** — `/about` does not drift post-deploy.
 
 5. /arabic audit rtl --dir website/
 
-6. npm run build → deploy → freeze audit into /about
+6. npm run build → deploy → freeze audit into ../../about.md
 ```
 
 Design source: [stitch-DESIGN.md](../../planning/stitch-DESIGN.md) → [website-design-system.md](../../planning/website-design-system.md).
@@ -242,7 +242,7 @@ Design source: [stitch-DESIGN.md](../../planning/stitch-DESIGN.md) → [website-
 | Install CTA clicks | ثبّت المهارة events | Baseline |
 | Copy events | G14 + guide copy | ≥1 on `/install` visit (qualitative) |
 | Funnel | `/` → `/install` → copy | By path (مطور vs مبتدئ) |
-| Proof | `/about`, `/examples` engagement | Qualitative |
+| Proof | `../../about.md`, `/examples` engagement | Qualitative |
 | Quality | G16 audit | Hard block pre-ship |
 
 Event hooks ready (PostHog or Vercel Analytics); dashboards post-launch.
@@ -256,7 +256,7 @@ Event hooks ready (PostHog or Vercel Analytics); dashboards post-launch.
 | G13 | 8 routes render | No 404 in dev/export |
 | G14 | Install matches README | Byte-match root README Install |
 | G15 | 3+ mobile interactives | Copy, tabs, FAQ, toggles, sticky |
-| G16 | Masri audit pass | `/arabic audit` before ship; snapshot on `/about` |
+| G16 | Masri audit pass | `/arabic audit` before ship; snapshot on ../../about.md |
 | G17 | Build passes | `npm run build` in `website/` |
 | G18 | Preview URL | `website/README.md` + release playbook |
 
