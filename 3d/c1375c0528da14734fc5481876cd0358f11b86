@@ -1,0 +1,23 @@
+public/assets/cline-color.svg
+  s_6d62d2f518bcbb::t_384be8289575ae 1-5
+docs/supported/README.md
+  s_6d62d2f518bcbb::t_3248ec667b52c5 35-36
+.gitignore
+  s_6d62d2f518bcbb::t_d5d22eb2a69adb 8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.9",
+  "base_commit_sha": "3dc1375c0528da14734fc5481876cd0358f11b86",
+  "prompts": {},
+  "sessions": {
+    "s_6d62d2f518bcbb": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "6e65d2bd-0dc8-465d-b936-d40e68042a64",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
