@@ -73,7 +73,7 @@ The main gap is **implementation drift**: excellent plans and deep reference mat
 - Implementation plan with correct sequencing (behavior first)
 - System architecture with clean 3-layer model
 - Context hierarchy with conflict resolution rules
-- Integration model for 22 tools
+- Integration model for **24** tools (expanded from 22 in v1.1.0 P7)
 
 ### Improvements Needed
 
