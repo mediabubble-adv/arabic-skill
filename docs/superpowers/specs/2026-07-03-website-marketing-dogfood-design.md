@@ -95,7 +95,7 @@ Every route links to `/install` (above fold, sticky band, or end CTA).
 1. Canonical G14 block from README + copy button + toast (**تم النسخ**)
 2. Tool tabs: Cursor · Claude · Codex · … (top 6 + “كل الأدوات” → `/docs`)
 3. First command teaser: `/arabic guide` + copy
-4. Trust strip: «الصفحة دي اتكتبت بـ `/arabic` — [شوف إزاي](/about)»
+4. Trust strip: «الصفحة دي اتكتبت بـ `/arabic` — شوف إزاي → `/about`»
 
 **Path B — أول مرة أسمع عن المهارات**
 
