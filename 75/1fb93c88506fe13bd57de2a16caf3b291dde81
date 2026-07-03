@@ -1,0 +1,26 @@
+CHANGELOG.md
+  s_6d62d2f518bcbb::t_3b60aed4ce575c 14-23
+docs/README.md
+  s_6d62d2f518bcbb::t_b9419bc99c0604 77
+docs/analysis/strategic-assessment.md
+  s_6d62d2f518bcbb::t_65c196ad15e59c 76
+docs/planning/roadmap.md
+  s_6d62d2f518bcbb::t_6b27d992fcc2b4 225
+  s_6d62d2f518bcbb::t_05a2576a641b2d 198
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.9",
+  "base_commit_sha": "751fb93c88506fe13bd57de2a16caf3b291dde81",
+  "prompts": {},
+  "sessions": {
+    "s_6d62d2f518bcbb": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "6e65d2bd-0dc8-465d-b936-d40e68042a64",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
