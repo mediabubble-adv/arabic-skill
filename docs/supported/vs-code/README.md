@@ -31,7 +31,7 @@ VS Code by itself is an editor, not a complete skill runtime. Support depends on
 
 ## Persistence
 
-`.arabic/voice.md` and `.arabic/projects/{slug}/plan.md` — repo-local files, work identically across all three tools since none has a native memory API this skill can hook into.
+`.arabic/voice.md` and `.arabic/projects/{slug}/plan.md` — repo-local files, work identically across all Partial-tier tools since none has a native memory API this skill can hook into.
 
 ## Recommended Packaging
 
