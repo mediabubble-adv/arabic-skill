@@ -13,7 +13,7 @@
 |---|---|---|
 | **plan** | `/arabic plan …`, Project Mode | 8 |
 | **write** | `/arabic write …`, Pro Mode generation | 7 |
-| **audit** | `/arabic audit …` (incl. `rtl`, `--dir`) | 5 |
+| **audit** | `/arabic audit …` (incl. `rtl`, `--dir`) | 6 |
 | **rtl** | `/arabic audit rtl` | 6 |
 
 Always load: `SKILL.md` (already active), target `dialects/{dialect}.md`, and `voice.md` when present.
