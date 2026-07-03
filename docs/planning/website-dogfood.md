@@ -47,6 +47,17 @@ Fixtures (when implemented): `tests/golden/g13-g18-website.md` — manual checkl
 **Global SEO:** `lang="ar"` `dir="rtl"`; canonical per route; Open Graph Masri title + description; `robots` allow index on marketing routes.  
 **AEO:** FAQ blocks on `/install` and `/features`; command tables as structured prose on `/commands`; no fake stats.
 
+### 3.1 Dogfood transparency (choice D)
+
+| Surface | Content source | Spec |
+|---------|----------------|------|
+| Global footer | [`website/content/footer.md`](../../website/content/footer.md) | `اتبنى بـ /arabic` · `/about` · GitHub · `/docs` |
+| `/about` | [`website/content/about.md`](../../website/content/about.md) | Command trail + G16 frozen snapshot (2026-07-04) |
+| `/install` | trust strip in copy | «الصفحة دي اتكتبت بـ `/arabic`» → `/about` |
+| `/examples` · `/tutorials` | cross-link | مسار البناء → `/about` |
+
+Home (`/`) shows footer only — no case-study hero. See [design spec §4.5](../superpowers/specs/2026-07-03-website-marketing-dogfood-design.md) and [website-design-system.md §10](./website-design-system.md#10-global-footer-dogfood-transparency--choice-d).
+
 ---
 
 ## 4. Stack + repo layout
@@ -67,6 +78,8 @@ website/                    # created on Execute — not in repo until plan appr
 │   └── docs/
 ├── components/             # design-system components §7
 ├── content/                # Masri copy (from stitch prompts / /arabic write)
+│   ├── *.md                # 8 route pages
+│   └── footer.md           # global SiteFooter SSOT
 ├── public/
 ├── package.json
 └── README.md               # G18 preview URL lives here

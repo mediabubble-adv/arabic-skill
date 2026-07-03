@@ -30,7 +30,8 @@ Verify: `cd website && npm run build && npm run start` then curl each path, or `
 ## G16 — Masri audit pass
 
 - [ ] `/arabic audit --file website/content/` completed; snapshot in `.arabic/audits/website-*.md`
-- [ ] `/about` shows frozen audit summary
+- [ ] `/about` shows frozen audit summary (overall, per-page, legacy, AI-likelihood, date)
+- [ ] Global footer matches `website/content/footer.md` (choice D transparency)
 
 ## G17 — Build passes
 
