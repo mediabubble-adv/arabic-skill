@@ -1,0 +1,27 @@
+docs/planning/stitch-generation-runbook.md
+  s_f7abada6929585::t_94a8eed4966ee5 1-241
+docs/planning/stitch-website-prompts-masri.md
+  s_f7abada6929585::t_957f91ee909f16 6-8
+  s_f7abada6929585::t_2dac184dd553b3 1-4,9-383
+  s_f7abada6929585::t_04c9f545563f62 5
+docs/planning/stitch-DESIGN-prompt.md
+  s_f7abada6929585::t_998a0614c2458e 1-158
+docs/planning/stitch-DESIGN.md
+  s_f7abada6929585::t_8194621119b059 1-343
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.9",
+  "base_commit_sha": "504bfbe642aa01f4c34bd0aebe6520857b4e77d6",
+  "prompts": {},
+  "sessions": {
+    "s_f7abada6929585": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "123f59c4-e5ea-44f6-b5fa-dedbbe198bfa",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
