@@ -38,8 +38,9 @@ User (maintainer) must reply **`approve plan`** or **`وافق على الخطة
 
 **Step 2: Create feature branch**
 
+From repository root:
+
 ```bash
-cd /Users/Dorgham/Documents/Work/Devleopment/Arabic-Skill
 git checkout main && git pull origin main
 git checkout -b feat/website-v1.1.0
 ```
@@ -243,10 +244,7 @@ fi
 
 # Extract bash blocks under ## Install until next ## heading
 readme_block=$(awk '/^## Install/{flag=1;next}/^## /{if(flag) exit}flag' "$README" \
-  | sed -n '/^```bash$/,/^```$/{/^```/d;p}')
-
-primary=$(grep -E "export const PRIMARY_INSTALL" "$INSTALL_TS" | sed "s/.*= '\(.*\)';/\1/")
-targets_section=$(sed -n '/export const INSTALL_TARGETS/,/];/p' "$INSTALL_TS")
+  | sed -n '/^```bash$/,/^```$/{ /^```/d; p; }')
 
 fail=0
 while IFS= read -r line; do
@@ -315,8 +313,9 @@ git commit -m "chore(website): add G14 README install parity validator"
 
 **Step 1: Scaffold (non-interactive)**
 
+From repository root:
+
 ```bash
-cd /Users/Dorgham/Documents/Work/Devleopment/Arabic-Skill
 npx create-next-app@latest website \
   --typescript \
   --tailwind \
@@ -375,7 +374,7 @@ export const siteMeta = {
 } as const;
 ```
 
-(Fill all 8 routes from [website-dogfood.md §3](../planning/website-dogfood.md).)
+(Fill all 8 routes from [website-dogfood.md §3](./website-dogfood.md).)
 
 **Step 5: RTL root layout**
 
@@ -420,7 +419,7 @@ export default function RootLayout({
 
 **Step 6: Design tokens in globals.css**
 
-Add CSS variables from [website-design-system.md §3–§6](../planning/website-design-system.md):
+Add CSS variables from [website-design-system.md §3–§6](./website-design-system.md):
 
 ```css
 :root {
@@ -432,8 +431,6 @@ Add CSS variables from [website-design-system.md §3–§6](../planning/website-
   --brand: #1fb28a;
   --brand-strong: #0e8c6b;
   --accent: #e7c873;
-  --font-arabic: var(--font-arabic);
-  --font-mono: var(--font-mono);
 }
 
 body {
@@ -534,7 +531,7 @@ export function SiteFooter() {
 
 **Step 3: Implement remaining components**
 
-Follow [website-design-system.md §7](../planning/website-design-system.md) behavior specs. Each interactive component uses `"use client"` where needed.
+Follow [website-design-system.md §7](./website-design-system.md) behavior specs. Each interactive component uses `"use client"` where needed.
 
 **Step 4: Commit**
 
@@ -739,7 +736,7 @@ gh pr create --title "feat(website): marketing site v1.1.0 (G13–G18)" --body "
 
 - [ ] `docs/planning/website-dogfood.md` — status EXECUTE complete; **مش مجرد ترجمة** in §3 meta
 - [ ] `docs/planning/stitch-website-prompts-masri.md` — ledger + hero lines
-- [ ] `docs/README.md` — link to `docs/plans/2026-07-03-website-marketing-dogfood.md`
+- [ ] `docs/README.md` — link to `docs/planning/2026-07-03-website-marketing-dogfood.md`
 - [ ] `docs/planning/website-design-system.md` — footer + install fork cross-refs
 
 ---
@@ -757,6 +754,6 @@ gh pr create --title "feat(website): marketing site v1.1.0 (G13–G18)" --body "
 ## Related
 
 - [Design spec](../superpowers/specs/2026-07-03-website-marketing-dogfood-design.md)
-- [Website dogfood plan](../planning/website-dogfood.md)
-- [Stitch runbook](../planning/stitch-generation-runbook.md)
+- [Website dogfood plan](./website-dogfood.md)
+- [Stitch runbook](./stitch-generation-runbook.md)
 - [Release playbook](../engineering/release-playbook.md)
