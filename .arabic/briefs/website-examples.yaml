@@ -1,0 +1,11 @@
+route: /examples
+dialect: masri
+audience: mixed
+primary_cta: ثبّت وجرّب على مشروعك
+sections:
+  - before_after_cards: 3-5
+  - filters: سوشيال، إعلانات، موقع، فيديو، واجهة
+  - tag: اتولد بـ /arabic write
+positioning: مش مجرد ترجمة
+seo_title: أمثلة — قبل وبعد التأنيس
+seo_description: شوف الفرق بين نص مترجم جامد ونص مصري طبيعي.

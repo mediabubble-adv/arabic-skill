@@ -34,7 +34,7 @@ Viewport: Desktop 1440px wide. dir="rtl" lang="ar". Natural Egyptian Arabic (Mas
 ### 2. Hero — asymmetric RTL split (Option B)
 - Copy zone (~55%, start/right):
   - Headline: شريكك المصري لكتابة المحتوى جوه أدوات الذكاء الاصطناعي
-  - Subhead (Muted Zinc): بيقرأ السياق، يوضّح الفكرة، يوصي بالاتجاه، يكتب، ويراجع — قبل ما يسلّم. مش ترجمة.
+  - Subhead (Muted Zinc): بيقرأ السياق، يوضّح الفكرة، يوصي بالاتجاه، يكتب، ويراجع — قبل ما يسلّم. مش مجرد ترجمة.
   - ONE CTA: «ثبّت المهارة»
   - Dialect pills: مصري · خليجي · شامي — preview text below: «اكتب ١٢ كابشن إنستغرام لإطلاق أبليكيشن رياضة في القاهرة»
 - Art zone (~45%, opposite): abstract deconstructed Arabic glyphs ع · ر · ب · ي — Warm Paper on Void Canvas, teal strokes, gold diacritic dots. NO photos. NO overlap with copy.
@@ -92,7 +92,7 @@ Same HOME page as previous screen. Reflow for Mobile 390px.
 ```markdown
 Design FEATURES page. DESIGN.md. RTL Masri. Desktop 1440px.
 
-- Hero: title «المهارة دي بتعمل إيه؟» + intro «مش ترجمة ولا لصق من ChatGPT. شريك محتوى عربي بيفهم السياق وبيعرف يكتب بصوت طبيعي.»
+- Hero: title «المهارة دي بتعمل إيه؟» + intro «مش مجرد ترجمة ولا لصق من ChatGPT. شريك محتوى عربي بيفهم السياق وبيعرف يكتب بصوت طبيعي.»
 - Asymmetric bento (8 cells, zig-zag): كتابة المحتوى · اللهجات · التأنيس · وعي المشروع · البحث · الأوامر · مشاريع كبيرة · SEO و AEO — use Masri copy from stitch-website-prompts-masri.md §4.2
 - Section «شكل العربي على الموقع»: RTL typography specimen IBM Plex Arabic, mixed AR/EN line
 - Dialect preview tabs: مصري / خليجي / شامي sample paragraphs
@@ -151,7 +151,7 @@ Design COMMANDS page. DESIGN.md. RTL Masri. Desktop 1440px.
 ```markdown
 Design TUTORIALS page. DESIGN.md. RTL Masri. Desktop 1440px.
 
-- Title: اتعلّم بالعربي · Subhead: دروس من شغل المهارة نفسها — مش ترجمة من إنجليزي
+- Title: اتعلّم بالعربي · Subhead: دروس من شغل المهارة نفسها — مش مجرد ترجمة من إنجليزي
 - Filter pills: الكل · مصري · خليجي · شامي · فصحى
 - 5 vertical lesson cards (not equal grid) — titles from §4.5, meta ~١٠ دقايق, level pills
 - Expanded walkthrough: 4 steps guide→write→audit + side panel Masri sample output
@@ -189,7 +189,7 @@ Design EXAMPLES page. DESIGN.md. RTL Masri. Desktop 1440px.
 Design ABOUT page. DESIGN.md. RTL Masri. Desktop 1440px. Minimal motion.
 
 - Title: ليه مهارة العربية الرائعة؟
-- Mission: وكالة محتوى عربي جوه الـ IDE بتاعك. بيستشير قبل ما يكتب. مش ترجمة.
+- Mission: وكالة محتوى عربي جوه الـ IDE بتاعك. بيستشير قبل ما يكتب. مش مجرد ترجمة.
 - Yes/No offset columns: نعم (لهجات، تدقيق…) vs لا (ترجمة حرفية…)
 - Architecture diagram: arabic/ · reference/ · docs/ · CLI
 - Timeline: 1.0.0 اتنشر → 1.1.0 موقع + توزيع (جاري)

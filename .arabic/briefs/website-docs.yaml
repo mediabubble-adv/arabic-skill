@@ -1,0 +1,11 @@
+route: /docs
+dialect: masri
+audience: technical
+primary_cta: ثبّت المهارة
+sections:
+  - install_card: first
+  - hub_cards: README, CHANGELOG, 24 tools, contributing
+  - github_banner: النسخة الكاملة على GitHub
+positioning: مش مجرد ترجمة
+seo_title: الوثائق والمصادر
+seo_description: README، CHANGELOG، ٢٤ أداة، مساهمة — النسخة الكاملة على GitHub.

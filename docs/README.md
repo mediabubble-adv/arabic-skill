@@ -59,6 +59,7 @@ How and when to build.
 | [Reference Distillation](./planning/reference-distillation.md) | How to absorb `reference/` into runtime |
 | [Website Design System](./planning/website-design-system.md) | v1.1.0 site tokens, typography (AR+EN), motion |
 | [Website Dogfood Plan](./planning/website-dogfood.md) | G13–G18 sitemap, SEO/AEO, Stitch → Next.js execution |
+| [Website implementation plan](./planning/2026-07-03-website-marketing-dogfood.md) | Step-by-step: Stitch → copy → Next.js → G13–G18 |
 | [Stitch DESIGN](./planning/stitch-DESIGN.md) | Stitch design system (8 screens) |
 | [Stitch Masri prompts](./planning/stitch-website-prompts-masri.md) | Per-page Arabic copy + Stitch prompts |
 | [Stitch runbook](./planning/stitch-generation-runbook.md) | Stitch generation order + checklist |

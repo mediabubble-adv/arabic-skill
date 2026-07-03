@@ -1,0 +1,16 @@
+route: /
+dialect: masri
+audience: mixed
+primary_cta: ثبّت المهارة
+sections:
+  - hero:
+      headline: شريكك المصري لكتابة المحتوى جوه أدوات الذكاء الاصطناعي
+      subhead: بيقرأ السياق، يوضّح الفكرة، يوصي بالاتجاه، يكتب، ويراجع — قبل ما يسلّم.
+      secondary_cta: شوف أمثلة
+  - mode_flow: استشارة → توضيح → توصية → كتابة → مراجعة
+  - bento_tiles: 4
+  - proof_widget: before_after_mini
+  - sticky_install_bar: mobile
+positioning: مش مجرد ترجمة
+seo_title: مهارة العربية الرائعة — شريكك المصري لكتابة المحتوى
+seo_description: ثبّت المهارة في Cursor وClaude وCodex. استشارة → توضيح → توصية → كتابة → مراجعة. مش مجرد ترجمة.

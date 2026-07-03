@@ -1,6 +1,6 @@
 # Website Dogfood Plan — G13–G18 (v1.1.0 / P7)
 
-> **Status:** PLAN — awaiting approval (`approve plan` / `وافق على الخطة`) before `website/` scaffold or Stitch export execution.  
+> **Status:** EXECUTE — plan approved 2026-07-04; Phase B copy in progress; `website/` scaffold after Tasks 0–2.  
 > **Product:** Awesome Arabic Skill (`arabic`) · **Register:** مصري أولاً for all page chrome  
 > **Branch target:** `feat/website-v1.1.0`  
 > **Gate:** G13–G18 must pass before `v1.1.0` tag
@@ -35,7 +35,7 @@ Fixtures (when implemented): `tests/golden/g13-g18-website.md` — manual checkl
 
 | Route | Purpose | SEO title (Masri) | Meta description (Masri) | AEO intent |
 |-------|---------|-------------------|--------------------------|------------|
-| `/` | Positioning + flow + CTA | مهارة العربية الرائعة — شريكك المصري لكتابة المحتوى | ثبّت المهارة في Cursor وClaude وCodex. استشارة → توضيح → توصية → كتابة → مراجعة. مش ترجمة. | What is Awesome Arabic Skill? |
+| `/` | Positioning + flow + CTA | مهارة العربية الرائعة — شريكك المصري لكتابة المحتوى | ثبّت المهارة في Cursor وClaude وCodex. استشارة → توضيح → توصية → كتابة → مراجعة. مش مجرد ترجمة. | What is Awesome Arabic Skill? |
 | `/features` | Capability bento | مميزات مهارة العربية — لهجات، تأنيس، مشروع، تدقيق | ١١+ لهجة، وعي المشروع، `/arabic audit`، خطط لمواقع وحملات وكتب. | What can the skill do? |
 | `/install` | Install paths (G14) | ثبّت المهارة — npx وCursor وClaude وCodex | سطر واحد من التيرمنال. ٢٤ أداة مدعومة. أوامر التثبيت من README. | How to install arabic skill? |
 | `/commands` | `/arabic` reference | أوامر `/arabic` — دليل سريع | guide، write، audit، plan، coach، voice، auto — مع أمثلة جاهزة للنسخ. | arabic skill commands list |
@@ -46,6 +46,17 @@ Fixtures (when implemented): `tests/golden/g13-g18-website.md` — manual checkl
 
 **Global SEO:** `lang="ar"` `dir="rtl"`; canonical per route; Open Graph Masri title + description; `robots` allow index on marketing routes.  
 **AEO:** FAQ blocks on `/install` and `/features`; command tables as structured prose on `/commands`; no fake stats.
+
+### 3.1 Dogfood transparency (choice D)
+
+| Surface | Content source | Spec |
+|---------|----------------|------|
+| Global footer | [`website/content/footer.md`](../../website/content/footer.md) | `اتبنى بـ /arabic` · `/about` · GitHub · `/docs` |
+| `/about` | [`website/content/about.md`](../../website/content/about.md) | Command trail + G16 frozen snapshot (2026-07-04) |
+| `/install` | trust strip in copy | «الصفحة دي اتكتبت بـ `/arabic`» → `/about` |
+| `/examples` · `/tutorials` | cross-link | مسار البناء → `/about` |
+
+Home (`/`) shows footer only — no case-study hero. See [design spec §4.5](../superpowers/specs/2026-07-03-website-marketing-dogfood-design.md) and [website-design-system.md §10](./website-design-system.md#10-global-footer-dogfood-transparency--choice-d).
 
 ---
 
@@ -67,6 +78,8 @@ website/                    # created on Execute — not in repo until plan appr
 │   └── docs/
 ├── components/             # design-system components §7
 ├── content/                # Masri copy (from stitch prompts / /arabic write)
+│   ├── *.md                # 8 route pages
+│   └── footer.md           # global SiteFooter SSOT
 ├── public/
 ├── package.json
 └── README.md               # G18 preview URL lives here

@@ -121,6 +121,33 @@ All motion gated behind `@media (prefers-reduced-motion: reduce)` → fall back 
 Scan repo → discuss audience → sitemap → per-page Arabic brief → /arabic writes copy → apply design system → React build → QA (G16) → deploy (G18)
 ```
 
-## 10. Related
+---
+
+## 10. Global footer (dogfood transparency — choice D)
+
+Every route renders `SiteFooter` with Masri copy from [`website/content/footer.md`](../../website/content/footer.md).
+
+| Fragment | Link / element |
+|----------|----------------|
+| Lead | `اتبنى بـ` + `<code dir="ltr">/arabic</code>` |
+| About | `إزاي اتبنى؟` → `/about` |
+| GitHub | `https://github.com/mediabubble-adv/arabic-skill` |
+| Docs | `الوثائق` → `/docs` |
+
+**Cross-links (spec §4.5):**
+
+| Route | Dogfood touchpoint |
+|-------|-------------------|
+| `/` | Footer only — no case-study hero |
+| `/install` | Trust strip → `/about` (§4.3) |
+| `/examples` | Card tag → `/about` |
+| `/tutorials` | Closing link → `/about` |
+| `/about` | Full command trail + G16 frozen snapshot |
+
+**Install familiarity fork:** `/install` splits **أنا مطور** vs **أول مرة** — see [website-dogfood.md §3.1](./website-dogfood.md#31-dogfood-transparency-choice-d) and [design spec §4.3](../superpowers/specs/2026-07-03-website-marketing-dogfood-design.md).
+
+---
+
+## 11. Related
 
 - [Roadmap P7](./roadmap.md) · [Implementation Plan §0](./implementation-plan.md#0-canonical-phase-map--golden-tests-source-of-truth) · [Command Surface](./command-surface.md)

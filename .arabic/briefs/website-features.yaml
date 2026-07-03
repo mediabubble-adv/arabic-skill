@@ -1,0 +1,12 @@
+route: /features
+dialect: masri
+audience: mixed
+primary_cta: ثبّت المهارة
+sections:
+  - intro: capability overview
+  - bento: كتابة، لهجات، تأنيس، مشروع، تدقيق، مشاريع كبيرة
+  - audit_preview: static scorecard mock
+  - mid_cta: جرّب على مشروعك
+positioning: مش مجرد ترجمة
+seo_title: مميزات مهارة العربية — لهجات، تأنيس، مشروع، تدقيق
+seo_description: ١١+ لهجة، وعي المشروع، /arabic audit، خطط لمواقع وحملات وكتب.
