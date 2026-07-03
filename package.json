@@ -23,7 +23,7 @@
     "VERSION"
   ],
   "scripts": {
-    "validate": "bash scripts/validate-skill.sh && bash scripts/validate-docs.sh",
+    "validate": "bash scripts/validate-skill.sh && bash scripts/validate-docs.sh && bash scripts/validate-supported.sh",
     "pack:check": "npm pack --dry-run"
   },
   "publishConfig": {

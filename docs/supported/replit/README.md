@@ -20,6 +20,19 @@ Replit Agent is strong for building apps and staged agent workflows, but its cen
 | Local docs loading | Partial | Depends on project import and skill setup |
 | Persistence via `voice.md` | Strong | File-based persistence is feasible |
 
+## v1.1 Command Map
+
+| Task | Native command | Prompt fallback |
+|---|---|---|
+| Plan | none | "arabic plan &lt;project&gt;" per [project-mode.md](../../../arabic/references/project-mode.md) |
+| Audit | none | "arabic audit" per [audit-mode.md](../../../arabic/references/audit-mode.md) |
+| Audit RTL | none | "arabic audit rtl" |
+| Audit (capped scan) | none | "arabic audit --dir &lt;path&gt;" |
+
+## Persistence
+
+`.arabic/voice.md` and `.arabic/projects/{slug}/plan.md` — repo-local files, work identically across all three tools since none has a native memory API this skill can hook into.
+
 ## Recommended Packaging
 
 - adapter focused on app/site workflows

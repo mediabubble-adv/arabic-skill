@@ -10,6 +10,14 @@
 
 ## Install
 
+### Preferred (npx)
+
+```bash
+npx @mediabubble-adv/arabic-skill install --target cursor
+```
+
+### Manual Fallback
+
 ```bash
 git clone https://github.com/mediabubble-adv/arabic-skill.git
 cd arabic-skill

@@ -20,6 +20,19 @@ Kiro appears likely to fit a structured workflow model well, especially if it su
 | Local docs loading | Strong | If repo-aware, this should map well |
 | Persistence via `voice.md` | Partial | File-based persistence should work |
 
+## v1.1 Command Map
+
+| Task | Native command | Prompt fallback |
+|---|---|---|
+| Plan | none | "arabic plan &lt;project&gt;" per [project-mode.md](../../../arabic/references/project-mode.md) |
+| Audit | none | "arabic audit" per [audit-mode.md](../../../arabic/references/audit-mode.md) |
+| Audit RTL | none | "arabic audit rtl" |
+| Audit (capped scan) | none | "arabic audit --dir &lt;path&gt;" |
+
+## Persistence
+
+`.arabic/voice.md` and `.arabic/projects/{slug}/plan.md` — repo-local files, work identically across all three tools since none has a native memory API this skill can hook into.
+
 ## Recommended Packaging
 
 - project steering docs

@@ -20,6 +20,19 @@ Junie is a JetBrains-integrated coding agent, but the `arabic` system is repo-do
 | Local docs loading | Strong | JetBrains projects can keep strong repo docs nearby |
 | Persistence via `voice.md` | Strong | File-based persistence is portable |
 
+## v1.1 Command Map
+
+| Task | Native command | Prompt fallback |
+|---|---|---|
+| Plan | none | "arabic plan &lt;project&gt;" per [project-mode.md](../../../arabic/references/project-mode.md) |
+| Audit | none | "arabic audit" per [audit-mode.md](../../../arabic/references/audit-mode.md) |
+| Audit RTL | none | "arabic audit rtl" |
+| Audit (capped scan) | none | "arabic audit --dir &lt;path&gt;" |
+
+## Persistence
+
+`.arabic/voice.md` and `.arabic/projects/{slug}/plan.md` — repo-local files, work identically across all three tools since none has a native memory API this skill can hook into.
+
 ## Recommended Packaging
 
 - JetBrains-focused instruction wrapper
