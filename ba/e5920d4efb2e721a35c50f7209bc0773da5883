@@ -1,0 +1,26 @@
+scripts/validate-website-install.sh
+  s_661616a5e5ea96::t_fb6b8d314c94d0 14
+  s_661616a5e5ea96::t_56eccc05124164 1-13,15-30
+docs/planning/2026-07-03-website-marketing-dogfood.md
+  s_661616a5e5ea96::t_c7f382bd127f33 377,422,534,757-758
+  s_661616a5e5ea96::t_4225d2de2631d5 739
+  s_661616a5e5ea96::t_948bbb75cde73f 41-42,247,316-317
+docs/README.md
+  s_661616a5e5ea96::t_d59ddd38bc2b48 62
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "bae5920d4efb2e721a35c50f7209bc0773da5883",
+  "prompts": {},
+  "sessions": {
+    "s_661616a5e5ea96": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "560709cc-8726-44a2-b56f-7e8dfbd33aa0",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
