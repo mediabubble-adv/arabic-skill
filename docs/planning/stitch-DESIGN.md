@@ -310,7 +310,7 @@ Inter, system-ui as primary display, generic serif (Times New Roman, Georgia, Ga
 **Content & assets**
 - No broken Unsplash links — use `picsum.photos` or inline SVG only
 - No presenting the product as a «translation tool»
-- No inventing features not in the repo (38 reference packs, 22 supported tools, `/arabic` command tree are real)
+- No inventing features not in the repo (38 reference packs, 24 supported tools, `/arabic` command tree are real)
 
 **Technical**
 - No `height: 100vh` for full-screen sections

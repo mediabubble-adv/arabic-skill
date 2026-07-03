@@ -106,11 +106,11 @@ All motion gated behind `@media (prefers-reduced-motion: reduce)` → fall back 
 
 ## 8. Routes (min) → golden tests
 
-`/` · `/features` · `/install` · `/docs` (or GitHub link) · `/examples` · `/about` · `/commands` (optional) · `/tutorials` (Arabic-first).
+`/` · `/features` · `/install` · `/commands` · `/tutorials` · `/examples` · `/about` · `/docs` (8 routes — see [website-dogfood.md](./website-dogfood.md)).
 
 | Test | Gate |
 |------|------|
-| G13 routes render (6+) · G14 install copy matches README · G15 3+ interactive components on mobile | v1.1.0 |
+| G13 routes render (8) · G14 install copy matches README · G15 3+ interactive components on mobile | v1.1.0 |
 | G16 Masri + MSA blocks pass audit · G17 `npm run build` · G18 deploy preview URL | v1.1.0 |
 
 ---
