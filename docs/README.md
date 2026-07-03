@@ -74,7 +74,7 @@ Versioning, CI, branching, and collaboration.
 
 ### Supported Tools
 
-Multi-tool portability — 22 AI coding surfaces.
+Multi-tool portability — **24** AI coding surfaces documented in `docs/supported/`.
 
 | Document | Description |
 |----------|-------------|
