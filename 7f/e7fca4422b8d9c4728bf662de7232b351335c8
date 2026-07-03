@@ -1,0 +1,66 @@
+.arabic/briefs/website-install.yaml
+  s_94f58d4a0daa62::t_5291c393a801c5 1-19
+website/content/home.md
+  s_94f58d4a0daa62::t_be37346d302185 1-30
+.arabic/briefs/website-docs.yaml
+  s_94f58d4a0daa62::t_5f0d66b708f4d8 1-11
+.arabic/projects/awesome-arabic-website/plan.md
+  s_94f58d4a0daa62::t_cc215b44fe19d7 1-88
+website/content/commands.md
+  s_94f58d4a0daa62::t_a371a98552ac77 1-30
+.arabic/briefs/website-home.yaml
+  s_94f58d4a0daa62::t_1a5bc67d7e8321 1-16
+website/content/features.md
+  s_94f58d4a0daa62::t_1b58ad76b1f67c 1-39
+website/content/about.md
+  s_94f58d4a0daa62::t_3c98a63b0079fa 1-2,4-60
+  s_94f58d4a0daa62::t_a382571c763129 3
+website/content/tutorials.md
+  s_94f58d4a0daa62::t_1f4b473cb75baa 1-40
+website/content/install.md
+  s_94f58d4a0daa62::t_ba44565ef16e6f 1-62
+docs/planning/stitch-generation-runbook.md
+  s_94f58d4a0daa62::t_bf82b50e4d89c9 37
+  s_94f58d4a0daa62::t_1d8b8f100d5c6f 154
+  s_94f58d4a0daa62::t_1ca1ad77671b17 192
+  s_94f58d4a0daa62::t_d8db46363a4d8e 95
+website/content/examples.md
+  s_94f58d4a0daa62::t_ffa23de9ad658d 13
+  s_94f58d4a0daa62::t_a4bebec5827284 1-12,14-30
+.arabic/audits/website-2026-07-04.md
+  s_94f58d4a0daa62::t_8ac9ef253c5ef8 1-105
+.arabic/briefs/website-commands.yaml
+  s_94f58d4a0daa62::t_2182c2bc7703d2 1-11
+.arabic/briefs/website-features.yaml
+  s_94f58d4a0daa62::t_e3a3df03a49756 1-12
+website/content/docs.md
+  s_94f58d4a0daa62::t_fd5969cd1bce78 1-31
+.arabic/briefs/website-about.yaml
+  s_94f58d4a0daa62::t_5be1c5a69916e8 1-15
+docs/planning/stitch-website-prompts-masri.md
+  s_94f58d4a0daa62::t_f8c37345197723 22
+  s_94f58d4a0daa62::t_b72a8c5323a3b2 266
+  s_94f58d4a0daa62::t_bbfce86c5f58a0 318
+  s_94f58d4a0daa62::t_02c551e6c9290d 140
+  s_94f58d4a0daa62::t_da93bafb5f7e41 168
+.arabic/briefs/website-tutorials.yaml
+  s_94f58d4a0daa62::t_c6636f5f3a84c3 1-16
+.arabic/briefs/website-examples.yaml
+  s_94f58d4a0daa62::t_eef5ce9f610c4a 1-11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "7fe7fca4422b8d9c4728bf662de7232b351335c8",
+  "prompts": {},
+  "sessions": {
+    "s_94f58d4a0daa62": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "9616ec4b-924b-41fc-b2cc-f9fffcb40fd1",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
