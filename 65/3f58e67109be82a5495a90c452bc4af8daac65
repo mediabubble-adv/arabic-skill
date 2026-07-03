@@ -1,0 +1,45 @@
+CHANGELOG.md
+  s_6d62d2f518bcbb::t_91bbc33f1d7d1c 14-17
+arabic/references/audit-mode.md
+  s_6d62d2f518bcbb::t_54b6a4a0e91346 75-103
+  s_6d62d2f518bcbb::t_5d8a3c30b4ce64 9-23
+arabic/SKILL.md
+  s_6d62d2f518bcbb::t_37b08918092fd2 53
+  s_6d62d2f518bcbb::t_7b0f32977fe1aa 42-43
+arabic/references/rtl-audit.md
+  s_6d62d2f518bcbb::t_0b92900d42bee9 1-88
+arabic/references/project-mode.md
+  s_6d62d2f518bcbb::t_e4b007532680c0 85-97
+  s_6d62d2f518bcbb::t_5b276f27004f97 3
+arabic/references/INDEX.md
+  s_6d62d2f518bcbb::t_9b38880bca3cf8 4-5
+  s_6d62d2f518bcbb::t_829f641a1cfeec 18,22,25,122,124-125,127
+arabic/references/load-discipline.md
+  s_6d62d2f518bcbb::t_80fc8e07b666d4 1-110
+docs/planning/command-surface.md
+  s_6d62d2f518bcbb::t_54c1e0ef35c8d6 133,135-137
+  s_6d62d2f518bcbb::t_ae159cc90bec15 122
+arabic/references/command-router.md
+  s_6d62d2f518bcbb::t_2f8d1c30cd47bf 99-101
+  s_6d62d2f518bcbb::t_4f9e5fd9d480f5 119-120
+  s_6d62d2f518bcbb::t_0812a36a5c8020 142
+  s_6d62d2f518bcbb::t_21a4625467574c 92
+docs/supported/cursor/commands.md
+  s_6d62d2f518bcbb::t_668d1bca57ed64 37-38,48
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.9",
+  "base_commit_sha": "653f58e67109be82a5495a90c452bc4af8daac65",
+  "prompts": {},
+  "sessions": {
+    "s_6d62d2f518bcbb": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "6e65d2bd-0dc8-465d-b936-d40e68042a64",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
