@@ -56,7 +56,7 @@ The detailed phase sections below retain their original prose; each heading is t
 | G10 | Command plan | C3 | #5 | `/arabic plan website` | Writes `.arabic/projects/` |
 | G11 | Command auto + project scan | C4 / P5 | #8 | `/arabic auto explain` | Infers verb, uses repo evidence, avoids secrets |
 | G12 | Dialect lock | P1 | #2 | `/arabic write caption --dialect masri` | No MSA bleed |
-| G13 | Website routes | P7 | — | — | 6+ routes render |
+| G13 | Website routes | P7 | — | — | 8 routes render |
 | G14 | Website install copy | P7 | — | — | Matches README |
 | G15 | Website mobile UX | P7 | — | — | 3+ interactive components |
 | G16 | Website Arabic QA | P7 | #10 | — | Audit pass |

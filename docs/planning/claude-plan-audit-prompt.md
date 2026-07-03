@@ -534,7 +534,7 @@ Add to `implementation-plan.md` and reference from PRD:
 | G10 | Command plan | C3 | #5 | `/arabic plan website` | `.arabic/projects/` |
 | G11 | Command auto + project scan | C4 | #1/#7 | `/arabic auto explain` | Infers correct verb, uses repo evidence, avoids secrets |
 | G12 | Dialect lock | 1 | #2 | `/arabic write caption --dialect masri` | No MSA bleed |
-| G13 | Website routes | 9 | — | — | 6+ routes render |
+| G13 | Website routes | 9 | — | — | 8 routes render |
 | G14 | Website install copy | 9 | — | — | Matches README |
 | G15 | Website mobile UX | 9 | — | — | 3+ components |
 | G16 | Website Arabic QA | 9 | #10 | — | Audit pass |

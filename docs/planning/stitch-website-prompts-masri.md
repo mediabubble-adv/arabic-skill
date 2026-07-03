@@ -5,7 +5,8 @@
 > **Stitch DESIGN.md prompt:** [stitch-DESIGN-prompt.md](./stitch-DESIGN-prompt.md) (hero: abstract Arabic typography)  
 > **Generated DESIGN.md:** [stitch-DESIGN.md](./stitch-DESIGN.md)  
 > **Stitch runbook (copy-paste steps):** [stitch-generation-runbook.md](./stitch-generation-runbook.md)  
-> **Workflow:** Paste `stitch-DESIGN.md` in Stitch → follow runbook §1–8 → `/arabic audit` on output
+> **Workflow:** Paste `stitch-DESIGN.md` in Stitch → follow runbook §1–8 → `/arabic audit` on output  
+> **Master plan (G13–G18):** [website-dogfood.md](./website-dogfood.md)
 
 ---
 
@@ -184,7 +185,7 @@ Design Features page. RTL. Masri UI copy. Dark editorial. Asymmetric bento, typo
 **Stitch prompt:**
 
 ```markdown
-Design Install page. RTL Masri copy. Copy-to-clipboard install block (LTR). Tabbed paths: npx, Cursor, Claude, Codex, manual, all. Post-install checklist. 22-tool grid. Troubleshooting accordion. Sticky copy button on mobile.
+Design Install page. RTL Masri copy. Copy-to-clipboard install block (LTR). Tabbed paths: npx, Cursor, Claude, Codex, manual, all. Post-install checklist. 24-tool grid. Troubleshooting accordion. Sticky copy button on mobile.
 ```
 
 **Arabic copy:**
@@ -338,7 +339,7 @@ Design Docs hub. 2-column asymmetric doc cards linking to install, commands, sup
 | Title | الوثائق والمصادر |
 | Card: بدء سريع | دليل البدء → /install |
 | Card: أوامر | الأوامر الكاملة → /commands |
-| Card: أدوات | ٢٢ أداة مدعومة |
+| Card: أدوات | ٢٤ أداة مدعومة |
 | Card: GitHub | README على GitHub |
 | Card: إصدارات | CHANGELOG · 1.0.0 |
 | Card: مساهمة | ساهم في المشروع |
@@ -373,11 +374,14 @@ Deliver desktop 1440px and mobile 390px per screen. Use Arabic copy from stitch-
 | G14 | Install strings match README |
 | G15 | Interactive components listed per page |
 | G16 | Masri copy intended for audit pass via `/arabic audit` |
+| G17 | `website/` `npm run build` passes |
+| G18 | Deploy preview URL documented in `website/README.md` |
 
 ---
 
 ## 7. Related
 
+- [website-dogfood.md](./website-dogfood.md) — G13–G18 master plan (sitemap, SEO, execution)
 - [website-design-system.md](./website-design-system.md)
 - [command-surface.md](./command-surface.md)
 - [implementation-plan.md](./implementation-plan.md) — P7 / G13–G18

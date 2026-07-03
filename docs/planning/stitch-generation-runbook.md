@@ -117,7 +117,7 @@ Design INSTALL page. DESIGN.md. RTL Masri. Desktop 1440px.
 - Primary install block (LTR mono, Elevated Slate): npx @mediabubble-adv/arabic-skill install --target cursor — copy button, toast «تم النسخ»
 - Tabs: سريع (npx) · Cursor · Claude · Codex · يدوي · الكل
 - Post-install checklist (3 steps Masri)
-- 22-tool logo grid
+- 24-tool logo grid
 - Accordion troubleshooting: مش ظاهرة · تحديث --force · clone كامل؟
 - FAQ 2 items from §4.3
 ```
@@ -209,7 +209,7 @@ Design DOCS hub page. DESIGN.md. RTL Masri. Desktop 1440px.
 
 - Title: الوثائق والمصادر
 - Search mock: «ابحث في الوثائق…»
-- 6 asymmetric doc cards: بدء سريع · أوامر · ٢٢ أداة · GitHub README · CHANGELOG · مساهمة
+- 6 asymmetric doc cards: بدء سريع · أوامر · ٢٤ أداة · GitHub README · CHANGELOG · مساهمة
 - Tool logo quick grid
 - Banner: النسخة الكاملة على GitHub — outline button
 ```
@@ -231,7 +231,7 @@ Design DOCS hub page. DESIGN.md. RTL Masri. Desktop 1440px.
 | 7 | About | ☐ | ☐ | Architecture diagram |
 | 8 | Docs | ☐ | ☐ | GitHub banner |
 
-**QA:** Run `/arabic audit` on any Arabic text Stitch changed. Verify 3+ interactive components on mobile (G15).
+**QA:** Run `/arabic audit` on any Arabic text Stitch changed. Verify 3+ interactive components on mobile (G15). After Next.js port: `npm run build` (G17), document preview URL (G18).
 
 ---
 
