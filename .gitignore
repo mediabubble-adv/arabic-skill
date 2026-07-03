@@ -5,6 +5,7 @@
 node_modules/
 .kilocode/
 public/assets/*.zip
+public/assets/cline-brand-assets/
 !.cursor/
 .cursor/*
 !.cursor/commands/
