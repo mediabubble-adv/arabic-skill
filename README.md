@@ -60,7 +60,7 @@ npx @mediabubble-adv/arabic-skill install --target all
 npx @mediabubble-adv/arabic-skill install --dir ~/.cursor/skills --force
 ```
 
-See [Cursor support](./docs/supported/cursor/README.md), [Claude support](./docs/supported/claude/README.md), or the [supported tools index](./docs/supported/README.md). The repo currently documents 22 AI coding surfaces. Website and `npx skills add` registry distribution remain deferred to `v1.1.0`.
+See [Cursor support](./docs/supported/cursor/README.md), [Claude support](./docs/supported/claude/README.md), or the [supported tools index](./docs/supported/README.md). The repo documents **24** AI coding surfaces (profiles below). Website and `npx skills add` registry distribution remain deferred to `v1.1.0`.
 
 ## Supported Tool Assets
 
@@ -80,6 +80,37 @@ The repository includes local logo assets under [`public/assets/`](./public/asse
   <img src="./public/assets/openhands-color.svg" alt="OpenHands" width="24" height="24">
   <img src="./public/assets/zed.svg" alt="Zed" width="24" height="24">
 </p>
+
+### Tool profiles (24)
+
+| Tool | Fit | Install | Profile |
+|------|-----|---------|---------|
+| Aider | Strong | manual | [Profile](./docs/supported/aider/README.md) |
+| Amp | Strong | manual | [Profile](./docs/supported/amp/README.md) |
+| Antigravity | Partial | manual | [Profile](./docs/supported/antigravity/README.md) |
+| ChatGPT | Partial | manual | [Profile](./docs/supported/chatgpt/README.md) |
+| Claude | Strong | `npx --target claude` | [Profile](./docs/supported/claude/README.md) |
+| Cline | Strong | manual | [Profile](./docs/supported/cline/README.md) |
+| Codex | Partial | `npx --target codex` | [Profile](./docs/supported/codex/README.md) |
+| Continue | Partial | manual | [Profile](./docs/supported/continue/README.md) |
+| Copilot | Partial | manual | [Profile](./docs/supported/copilot/README.md) |
+| Cursor | Strong | `npx --target cursor` | [Profile](./docs/supported/cursor/README.md) |
+| Gemini | Partial | manual | [Profile](./docs/supported/gemini/README.md) |
+| Hermes Agent | Partial | manual | [Profile](./docs/supported/hermes-agent/README.md) |
+| JetBrains Junie | Partial | manual | [Profile](./docs/supported/jetbrains-junie/README.md) |
+| Kilo Code | Partial | manual | [Profile](./docs/supported/kilo-code/README.md) |
+| Kiro | Partial | manual | [Profile](./docs/supported/kiro/README.md) |
+| OpenClaw | Partial | manual | [Profile](./docs/supported/openclaw/README.md) |
+| OpenCode | Partial | manual | [Profile](./docs/supported/opencode/README.md) |
+| OpenHands | Strong | manual | [Profile](./docs/supported/openhands/README.md) |
+| Qwen | Limited | manual | [Profile](./docs/supported/qwen/README.md) |
+| Replit Agent | Partial | manual | [Profile](./docs/supported/replit/README.md) |
+| Sourcegraph Cody | Partial | manual | [Profile](./docs/supported/sourcegraph-cody/README.md) |
+| VS Code | Partial | manual | [Profile](./docs/supported/vs-code/README.md) |
+| Windsurf | Strong | manual | [Profile](./docs/supported/windsurf/README.md) |
+| Zed | Strong | manual | [Profile](./docs/supported/zed/README.md) |
+
+Fit tiers and packaging notes: [Support Matrix](./docs/supported/support-matrix.md). Tools without an `npx` preset use manual copy paths documented in each profile (or `npx … install --dir <skills-path>`).
 
 ## Usage Examples
 
@@ -192,6 +223,7 @@ Runtime install folder is `arabic/`. The GitHub repo can stay `mediabubble-adv/a
 ```bash
 ./scripts/validate-skill.sh
 ./scripts/validate-docs.sh
+./scripts/validate-supported.sh
 ```
 
 ## Release Policy

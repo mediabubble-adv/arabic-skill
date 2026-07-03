@@ -6,21 +6,21 @@
 | Cursor | Strong | repo rules + docs + command conventions | Strong | Partial/Simulated | Strong | Low |
 | Codex | Partial | skills-folder + docs | Partial | Unknown | Strong | Medium |
 | ChatGPT | Partial | Custom GPT / Project instructions + knowledge upload | Limited | Limited | Limited | High |
-| Antigravity | Unknown | adapter docs + prompt wrapper | Unknown | Unknown | Partial | High |
+| Antigravity | Partial | `.agents/skills/` + global skills + docs | Partial | Partial | Strong | Medium |
 | Aider | Strong | CLI wrapper + repo docs + command conventions | Strong | Simulated | Strong | Low |
 | Amp | Strong | CLI + plugins + custom agents adapter | Strong | Strong | Strong | Medium |
 | Cline | Strong | rules + CLI/IDE docs + command tree | Strong | Strong | Strong | Low |
 | Continue | Partial | local config + prompt docs + repo context | Partial | Limited | Partial | Medium |
-| Hermes Agent | Unknown | adapter docs + repo references + workflow wrapper | Partial | Partial | Partial | High |
+| Hermes Agent | Partial | `~/.hermes/skills/` + in-repo skills + docs | Partial | Partial | Strong | Medium |
 | Kiro | Partial | steering/spec/workflow docs + prompt wrapper | Partial | Partial | Partial | Medium |
 | JetBrains Junie | Partial | IDE-specific instructions + project docs | Partial | Limited | Partial | Medium |
-| OpenClaw | Unknown | prompt wrapper + repo docs + staged workflows | Partial | Unknown | Partial | High |
+| OpenClaw | Partial | workspace `skills/` + `openclaw skills` + docs | Partial | Partial | Strong | Medium |
 | OpenHands | Strong | agent platform adapter + workflow docs | Strong | Strong | Strong | Medium |
 | Replit Agent | Partial | skills/docs + staged project workflows | Partial | Partial | Strong | Medium |
 | Sourcegraph Cody | Partial | repo context + instruction wrapper | Partial | Limited | Partial | Medium |
 | Windsurf | Strong | rules + docs + command conventions | Strong | Partial/Simulated | Strong | Low |
 | VS Code | Partial | docs + prompt files + extension-specific instructions | Partial | Limited | Partial | Medium |
-| OpenCode | Unknown | prompt wrapper + local docs | Partial | Unknown | Partial | High |
+| OpenCode | Partial | `.opencode/skills/` + native `skill` tool + docs | Partial | Partial | Strong | Medium |
 | Kilo Code | Partial | local rules/docs + adapter conventions | Partial | Partial | Partial | Medium |
 | Gemini | Partial | system instructions + prompt files + project docs | Partial | Limited | Partial | Medium |
 | Qwen | Limited | system prompt/API wrapper + docs | Partial | Limited | Partial | High |
