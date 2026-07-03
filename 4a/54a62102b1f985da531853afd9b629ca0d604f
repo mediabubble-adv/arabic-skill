@@ -1,0 +1,41 @@
+docs/planning/claude-plan-audit-prompt.md
+  s_6d62d2f518bcbb::t_7950c94f3e6505 537
+docs/planning/stitch-DESIGN.md
+  s_6d62d2f518bcbb::t_1da081135fe74c 313
+docs/planning/implementation-plan.md
+  s_6d62d2f518bcbb::t_fc192765610868 59
+docs/planning/stitch-generation-runbook.md
+  s_6d62d2f518bcbb::t_0a823c167fa76d 212,234
+  s_6d62d2f518bcbb::t_80be0ece82f14e 120
+docs/planning/website-design-system.md
+  s_6d62d2f518bcbb::t_a8ee4ccdaf93eb 109
+  s_6d62d2f518bcbb::t_c4d81017a2f364 113
+docs/README.md
+  s_6d62d2f518bcbb::t_73f490509540c3 61-64
+docs/planning/website-dogfood.md
+  s_6d62d2f518bcbb::t_386b648e898906 1-135
+docs/superpowers/specs/2026-07-03-website-marketing-dogfood-design.md
+  s_6d62d2f518bcbb::t_1e6132522d0906 1-295
+docs/planning/stitch-website-prompts-masri.md
+  s_6d62d2f518bcbb::t_9a8b34c60ecce0 8-9
+  s_6d62d2f518bcbb::t_355e6b437271d6 188
+  s_6d62d2f518bcbb::t_bb0ce0828992ab 342
+  s_6d62d2f518bcbb::t_dcd829440880b9 384
+  s_6d62d2f518bcbb::t_f77b7caaeb544a 377-378
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "4a54a62102b1f985da531853afd9b629ca0d604f",
+  "prompts": {},
+  "sessions": {
+    "s_6d62d2f518bcbb": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "6e65d2bd-0dc8-465d-b936-d40e68042a64",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
