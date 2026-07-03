@@ -1,0 +1,73 @@
+docs/supported/antigravity/README.md
+  s_6d62d2f518bcbb::t_3bf07bcb239541 3-4,7-20,22,24-35,41-47,49,51-62,64-79,81-84,88-90
+docs/supported/hermes-agent/README.md
+  s_6d62d2f518bcbb::t_e992c9bb5ce512 3-4,7-18,20,22-32,38-44,46,48-59,61-76,78-81,85-87
+scripts/validate-supported.sh
+  s_6d62d2f518bcbb::t_a73a0cf2de157f 1-27
+AGENTS.md
+  s_0dc0090ae77312::t_25716e6acf62c2 13
+  s_0dc0090ae77312::t_cad3adb554afa4 26-29
+  s_b9ac3d99f88e73::t_0a20126b90c533 6-12,22,24-25
+  s_b9ac3d99f88e73::t_866fea1679c42e 21
+package.json
+  s_6d62d2f518bcbb::t_28fc9a4359f454 26
+docs/supported/opencode/README.md
+  s_6d62d2f518bcbb::t_2e5eb3ea042fe0 3-4,7-18,20,22-33,39-45,47,49-60,62-77,79-82,86-88
+README.md
+  s_6d62d2f518bcbb::t_3b6e271f5959de 84-114
+  s_6d62d2f518bcbb::t_f67541caa65a0d 63
+  s_6d62d2f518bcbb::t_9fc2d16120027f 226
+docs/supported/support-matrix.md
+  s_6d62d2f518bcbb::t_5ec62c3a4107b4 23
+  s_6d62d2f518bcbb::t_af7a2ac065ed49 14
+  s_6d62d2f518bcbb::t_1d80c22a8f90b9 17
+  s_6d62d2f518bcbb::t_b9a7faf7c4db5c 9
+docs/supported/openclaw/README.md
+  s_6d62d2f518bcbb::t_38522c7673c208 3-4,7-35,37,39,45-51,53-64,66,68-83,85-88,92-94
+.github/workflows/validate.yml
+  s_6d62d2f518bcbb::t_cce154cf14922a 24-26
+docs/supported/claude/README.md
+  s_d8099284babf6b::t_0af8e53fb60c9d 11-18
+docs/supported/cursor/README.md
+  s_d8099284babf6b::t_d64dc76b004c6a 13-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.9",
+  "base_commit_sha": "2dd257e429241efce6f46e82816740efc774fc7d",
+  "prompts": {},
+  "sessions": {
+    "s_0dc0090ae77312": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "7c054746-f6d0-4b3b-a8aa-52aefb46b40d",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    },
+    "s_6d62d2f518bcbb": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "6e65d2bd-0dc8-465d-b936-d40e68042a64",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    },
+    "s_b9ac3d99f88e73": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "9afcfae4-7794-47b3-9c98-63cc9b3259ae",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    },
+    "s_d8099284babf6b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a5b1bf89-264b-4c43-8b1e-bf52538bd9d5",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
