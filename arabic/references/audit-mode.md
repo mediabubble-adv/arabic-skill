@@ -6,6 +6,21 @@ examples to the **target dialect** locked for the piece.
 
 > Audit Mode never rewrites silently — it **scores, explains, then offers fixes**.
 > Flow: inspect → diagnose → explain → recommend fixes → optionally rewrite.
+>
+> **Load discipline:** Use `references/load-discipline.md` audit class. Legacy-register and
+> AI-likelihood scoring (§ below) apply to **`/arabic audit` deliveries only** — not every write.
+
+---
+
+## Command variants
+
+| Command | Loads | Behavior |
+|---|---|---|
+| `/arabic audit` | This file | 9-point QA on pasted text or `--file` |
+| `/arabic audit rtl` | `rtl-audit.md` + this file | Tier-1 RTL/UI source audit + Arabic string QA |
+| `/arabic audit --dir <path>` | `project-context-scanner.md` + this file | Capped scan (40 files) of Arabic copy in tree |
+
+RTL specifics: `references/rtl-audit.md`. Directory cap rules: same file + scanner safe exclusions.
 
 ---
 
@@ -56,6 +71,35 @@ Per-check scoring: **0/2** if many violations (≥3, or any gender switch / tran
 ```
 
 Always end with the **single highest-impact fix** first, and offer: *"Want me to apply these and re-audit?"*
+
+## Legacy register + AI-likelihood (audit-only)
+
+Run these **only** on `/arabic audit` (and `audit rtl` when Arabic strings are in scope) — **not** on standard write deliveries.
+
+### Legacy register scan
+
+Flag copy that reads like pre-2020 formal Arabic marketing or MSA holdover in a dialect-locked piece:
+
+| Signal | Example | Action |
+|---|---|---|
+| Stiff MSA connectors | "علاوة على ذلك"، "فضلاً" in Masri ad copy | Suggest dialect-native bridge |
+| Archaic CTAs | "لا تتردد في"، "يسعدنا أن" | Rewrite to current native CTA |
+| Bureaucratic openings | "نود أن نلفت انتباهكم" | Replace with direct hook |
+
+Rate: **clean / minor legacy / heavy legacy** (one line).
+
+### AI-likelihood scan
+
+Flag patterns associated with LLM-generated Arabic (orthogonal to the 9-point score):
+
+| Signal | Example |
+|---|---|
+| Symmetric list rhythm | Every bullet same length and structure |
+| Hedge stacking | "من المهم أن نذكر" + "في سياق" + "بشكل عام" |
+| Empty intensifiers | "بشكل فريد"، "رحلة استثنائية" without proof |
+| Translationese calques | "اكتشف كيف يمكنك"، "في قلب هذا" |
+
+Rate: **low / medium / high** AI-likelihood. Do not block publish on this alone — pair with 9-point score.
 
 ## Related
 - `humanization-protocol.md` — apply before auditing generated copy (anti-translationese, channel rules)

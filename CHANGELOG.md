@@ -11,6 +11,10 @@ Working toward **v1.1.0** — website + distribution layer.
 
 ### Added
 - npm package scaffold for `@mediabubble-adv/arabic-skill`, including the `arabic-skill` bin and `npx @mediabubble-adv/arabic-skill install` workflow.
+- P8 runtime: `load-discipline.md` (task-class load sets), `rtl-audit.md` (tier-1 RTL/UI source audit).
+- `/arabic plan series` — YouTube/podcast season planning with narrative bible gate.
+- `/arabic audit rtl` and capped `/arabic audit --dir` (40-file limit).
+- Legacy-register and AI-likelihood scoring on `/arabic audit` deliveries only.
 
 ## [1.0.0] - 2026-06-30
 

@@ -89,13 +89,16 @@
 | `/arabic plan campaign` | Campaign bundle | Discuss -> Research -> Recommend -> Plan -> Execute -> Test -> Refine | `.arabic/projects/{slug}/plan.md` + outputs |
 | `/arabic plan website` | Multi-page site | Sitemap -> per-page brief -> copy -> QA | `.arabic/projects/{slug}/plan.md` + outputs |
 | `/arabic plan book` | Long-form editorial | Premise -> outline -> chapters -> continuity QA | `.arabic/projects/{slug}/plan.md` + outputs |
+| `/arabic plan series` | YouTube / podcast season | Narrative bible -> episode table -> pilot -> episodes | `.arabic/projects/{slug}/plan.md` + outputs |
 | `/arabic plan brand` | Voice system | Audit -> pillars -> vocabulary -> examples | `.arabic/projects/{slug}/plan.md` + outputs |
 
 ### 2.4 Audit, coach, research, voice, and automation
 
 | Command | Behavior | Notes |
 |---|---|---|
-| `/arabic audit` | Run the 9-point QA pipeline on pasted Arabic text | Also accepts `--file` |
+| `/arabic audit` | Run the 9-point QA pipeline on pasted Arabic text | Also accepts `--file`; legacy + AI-likelihood scoring (audit-only) |
+| `/arabic audit rtl` | Tier-1 RTL/UI source audit | Also accepts `--file` or capped `--dir` — loads `rtl-audit.md` |
+| `/arabic audit --dir <path>` | Audit Arabic copy in up to 40 files under path | Safe-scan rules from `project-context-scanner.md` |
 | `/arabic coach` | Repair a weak prompt and explain the upgrade | Also accepts `--file` |
 | `/arabic research <topic>` | Use the research-intelligence workflow | Distillation and KB work |
 | `/arabic voice save` | Save a brand voice to `.arabic/voice.md` or project `voice.md` | Prompts the user for missing axes |
@@ -113,7 +116,8 @@
 | `--dialect` | write / plan | Locks dialect inference |
 | `--platform` | write | Selects platform-specific rules |
 | `--brief` | write / plan | Loads a structured brief and compresses intake |
-| `--file` | audit / coach | Reads from a workspace file |
+| `--file` | audit / coach / audit rtl | Reads from a workspace file |
+| `--dir` | audit / audit rtl | Capped directory scan (max 40 files) |
 | `--out` | write / plan / audit | Writes output to a path |
 | `--yes` | auto / plan | Skips confirmation and runs the inferred action |
 | `--count` | write captions / ads | Controls variant count |
@@ -135,6 +139,7 @@ Unknown flags should warn and be ignored. Never guess-execute a command that has
 | CI / validation failure in this repo | Suggest `audit` and check `SKILL.md` routing |
 | Empty multi-page website request | `plan website` |
 | Rich campaign request | `plan campaign` |
+| Multi-episode YouTube / podcast season | `plan series` |
 
 ### Safe scan inputs for `auto`
 

@@ -34,6 +34,8 @@ Invoke the skill in chat or through Cursor slash commands; the examples below re
 /arabic audit
 > [paste Arabic text]
 /arabic audit --file content/landing.ar.md
+/arabic audit rtl --dir src/components
+/arabic audit --dir content/
 
 # Prompt coach
 /arabic coach
@@ -43,6 +45,7 @@ Invoke the skill in chat or through Cursor slash commands; the examples below re
 /arabic plan campaign --dialect masri
 /arabic plan website --brief .arabic/briefs/site.yaml
 /arabic plan book --dialect masri
+/arabic plan series --dialect masri
 
 # Workspace automation
 /arabic auto
