@@ -1,0 +1,22 @@
+tests/golden/g13-g18-website.md
+  s_94f58d4a0daa62::t_d5e89c83298c94 1-42
+docs/planning/website-dogfood.md
+  s_94f58d4a0daa62::t_35c9c705c3adcd 38
+  s_94f58d4a0daa62::t_5870667d40e2ba 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "7518eac020311159292a197e3170fac92b1b63f8",
+  "prompts": {},
+  "sessions": {
+    "s_94f58d4a0daa62": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "9616ec4b-924b-41fc-b2cc-f9fffcb40fd1",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
