@@ -1,0 +1,23 @@
+AGENTS.md
+  s_e2098d5f1ea4f2::t_6197fc25d9b98d 8
+  s_e2098d5f1ea4f2::t_789ed455605b1f 13
+  s_e2098d5f1ea4f2::t_4b40f17a9ccd96 29
+  s_e2098d5f1ea4f2::t_761401dd9fa31c 14
+  s_e2098d5f1ea4f2::t_c0c29920e78fad 25
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "89d6a15720af2b69f06904d2aba1205a65b1db64",
+  "prompts": {},
+  "sessions": {
+    "s_e2098d5f1ea4f2": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "6657e8a5-3e7c-4cb9-b1e3-47bdfbe9ed04",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
