@@ -1,0 +1,31 @@
+docs/superpowers/specs/2026-07-03-website-marketing-dogfood-design.md
+  s_661616a5e5ea96::t_62dc2aaaede43b 98
+AGENTS.md
+  s_3f3bee3cf24360::t_f66184480646f2 8
+  s_3f3bee3cf24360::t_ec5cfa4313d233 13
+  s_3f3bee3cf24360::t_145482dd74b73d 29
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "c303ab503d3ce64a3952252e4b40423fc7f951ec",
+  "prompts": {},
+  "sessions": {
+    "s_3f3bee3cf24360": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "78242fbe-83fc-494c-84e8-4b0c22c6f9be",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    },
+    "s_661616a5e5ea96": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "560709cc-8726-44a2-b56f-7e8dfbd33aa0",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
