@@ -12,7 +12,7 @@
 | Class | Trigger | Max files (incl. SKILL + dialect) |
 |---|---|---|
 | **plan** | `/arabic plan …`, Project Mode | 8 |
-| **write** | `/arabic write …`, Pro Mode generation | 7 |
+| **write** | `/arabic write …`, Pro Mode generation | 9 |
 | **audit** | `/arabic audit …` (incl. `rtl`, `--dir`) | 6 |
 | **rtl** | `/arabic audit rtl` | 6 |
 
