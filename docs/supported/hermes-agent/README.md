@@ -20,8 +20,7 @@ cp -r arabic ~/.hermes/skills/arabic
 ### In-repo (team-shared)
 
 ```bash
-mkdir -p skills/arabic
-cp -r arabic skills/arabic
+mkdir -p skills && cp -r arabic skills/arabic
 # commit skills/arabic/SKILL.md + references when your Hermes setup scans in-repo skills
 ```
 
