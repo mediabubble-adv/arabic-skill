@@ -144,7 +144,7 @@ Every route renders `SiteFooter` with Masri copy from [`website/content/footer.m
 | `/tutorials` | Closing link → `/about` |
 | `/about` | Full command trail + G16 frozen snapshot |
 
-**Install familiarity fork:** `/install` splits **أنا مطور** vs **أول مرة** — see [website-dogfood.md §4.3](./website-dogfood.md) and [design spec §4.3](../superpowers/specs/2026-07-03-website-marketing-dogfood-design.md).
+**Install familiarity fork:** `/install` splits **أنا مطور** vs **أول مرة** — see [website-dogfood.md §3.1](./website-dogfood.md#31-dogfood-transparency-choice-d) and [design spec §4.3](../superpowers/specs/2026-07-03-website-marketing-dogfood-design.md).
 
 ---
 
