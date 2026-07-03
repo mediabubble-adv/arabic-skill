@@ -1,0 +1,19 @@
+route: /install
+dialect: masri
+audience: mixed
+primary_cta: ثبّت المهارة
+sections:
+  - familiarity_fork:
+      dev_label: أنا مطور
+      beginner_label: أول مرة أسمع عن المهارات
+  - g14_block: from README Install section
+  - tool_tabs: top 6 + link to /docs
+  - faq:
+      - هل المهارة مجانية؟
+      - لازم Cursor بس؟
+      - إيه الفرق عن ChatGPT؟
+      - محتاج GitHub؟
+  - trust_strip: الصفحة دي اتكتبت بـ /arabic
+positioning: مش مجرد ترجمة
+seo_title: ثبّت المهارة — npx وCursor وClaude وCodex
+seo_description: سطر واحد من التيرمنال. ٢٤ أداة مدعومة. أوامر التثبيت من README.

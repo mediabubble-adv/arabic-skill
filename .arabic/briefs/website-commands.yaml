@@ -1,0 +1,11 @@
+route: /commands
+dialect: masri
+audience: technical
+primary_cta: ابدأ بـ /arabic guide
+sections:
+  - command_table: guide, write, audit, plan, auto, research, coach, voice
+  - mode_router: Advisory, Pro, Project, Audit, Coach
+  - copy_ready_examples: 6 cards
+positioning: مش مجرد ترجمة
+seo_title: أوامر /arabic — دليل سريع
+seo_description: guide، write، audit، plan، coach، voice، auto — مع أمثلة جاهزة للنسخ.

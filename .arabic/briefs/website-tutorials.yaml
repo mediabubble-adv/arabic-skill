@@ -1,0 +1,16 @@
+route: /tutorials
+dialect: masri
+audience: mixed
+primary_cta: ثبّت المهارة
+sections:
+  - lessons:
+      - title: ثبّت المهارة في ٣ دقايق
+        outcome: G14 + /arabic guide
+      - title: اكتب أول بوست مصري
+        outcome: brief → write
+      - title: راجع نصك قبل ما تنشر
+        outcome: /arabic audit
+  - walkthrough: guide → write → audit
+positioning: مش مجرد ترجمة
+seo_title: دروس عربية — ابدأ من هنا
+seo_description: شرح المشروع، التثبيت، وأول أوامر بالمصري الطبيعي.

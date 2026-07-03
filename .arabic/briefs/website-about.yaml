@@ -1,0 +1,15 @@
+route: /about
+dialect: masri
+audience: skeptics
+primary_cta: ثبّت المهارة
+sections:
+  - mission: includes مش مجرد ترجمة
+  - timeline: plan → write → audit → ship
+  - command_trail: actual /arabic commands
+  - audit_summary: G16 snapshot frozen
+  - repo_links: website-dogfood.md, stitch prompts, SKILL.md
+  - architecture: arabic/ runtime, reference/, 24 tools
+  - mediabubble: one paragraph
+positioning: مش مجرد ترجمة
+seo_title: عن المهارة — MediaBubble
+seo_description: arabic/ runtime، ٣٨ حزمة مرجعية، فلسفة المستشار قبل الكاتب.
