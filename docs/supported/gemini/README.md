@@ -31,7 +31,7 @@ Gemini can support the portable parts of the skill well, but the full advisory-a
 
 ## Persistence
 
-`.arabic/voice.md` and `.arabic/projects/{slug}/plan.md` — repo-local files, work identically across all three tools since none has a native memory API this skill can hook into.
+`.arabic/voice.md` and `.arabic/projects/{slug}/plan.md` — repo-local files, work identically across tools without a native memory API this skill can hook into.
 
 ## Recommended Packaging
 
