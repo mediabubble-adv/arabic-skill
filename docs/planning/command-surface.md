@@ -119,6 +119,7 @@ Format: `/arabic plan <project> [--dialect] [--brief]`
 | `campaign` | Ramadan / launch / always-on | Discuss → Research → Recommend → Plan → Execute → Test → Refine |
 | `website` | Multi-page site copy | Sitemap → per-page brief → copy → QA |
 | `book` | Long-form editorial | Premise → outline → chapters → continuity QA |
+| `series` | YouTube / podcast season | Narrative bible → episode table → pilot → episodes (plan-first gate) |
 | `brand` | Full voice system | Audit → pillars → vocabulary → examples |
 
 **Output:** Writes plan to `.arabic/projects/{slug}/plan.md` and deliverables to `.arabic/projects/{slug}/output/`.
@@ -129,8 +130,11 @@ Format: `/arabic plan <project> [--dialect] [--brief]`
 
 | Command | Behavior |
 |---------|----------|
-| `/arabic audit` | Paste or file → 9-point QA pipeline (from `arabic-qa` distill) |
+| `/arabic audit` | Paste or file → 9-point QA pipeline + legacy/AI-likelihood scoring (audit-only) |
 | `/arabic audit --file content.md` | Audit file in workspace |
+| `/arabic audit rtl` | Tier-1 RTL/UI source audit + Arabic string QA |
+| `/arabic audit rtl --dir src/components` | Capped directory RTL audit (max 40 files) |
+| `/arabic audit --dir content/` | Capped directory Arabic copy audit (max 40 files) |
 | `/arabic coach` | Weak prompt → upgraded variants + explanation |
 | `/arabic coach --file prompt.txt` | Batch prompt repair |
 | `/arabic research meta-ads` | Run [research-intelligence-plan](./research-intelligence-plan.md) template |

@@ -1,6 +1,6 @@
 # 🏗 Project Mode — Staged Execution for Large Deliverables
 
-**Load when:** The task is multi-piece or long-form — a website, a campaign bundle, an editorial/content system, or a book. Triggered by the **Project** row in the SKILL.md Mode Router, or `/arabic plan website` / `/arabic plan campaign` / `/arabic book`.
+**Load when:** The task is multi-piece or long-form — a website, a campaign bundle, an editorial/content system, a book, or a **series** (YouTube/podcast). Triggered by the **Project** row in the SKILL.md Mode Router, or `/arabic plan website` / `/arabic plan campaign` / `/arabic plan series` / `/arabic book`.
 **Pair with:** `references/advisory-mode.md` (operating posture), `references/intake-protocols.md` (clarify), `references/engines.md` (write), `references/output-templates.md` (deliverable shapes), and the project type's specialist file (below).
 
 > **Why staged:** Large Arabic deliverables fail when written in one shot — dialect drifts, structure loses MECE discipline, and continuity breaks. Project Mode trades one big generation for seven small, reviewable steps. **Never one-shot a website, campaign, or book.**
@@ -81,6 +81,19 @@
 ### 📚 Book / long-form (`/arabic book`)
 - Run `references/book-writing.md` as stages 3–6 (premise → outline → chapter blueprint → continuity QA).
 - **Execute order:** premise + promise → full outline → chapter-by-chapter, carrying the voice/continuity ledger.
+
+### 📺 Series (`/arabic plan series`)
+- **Use for:** YouTube series, podcast seasons, multi-episode educational arcs — not single videos (use `write youtube` / `write video`).
+- **Hard gate:** No episode scripts until the user approves the series plan (`approve plan` / `وافق على الخطة`).
+- **Plan must include (narrative bible):**
+  - **Characters / hosts** — who speaks, persona, register
+  - **Locations / settings** — recurring visual or thematic anchors
+  - **Key beats** — arc across the season (hook → tension → payoff)
+  - **Opening** — how episode 1 earns the next click
+  - **Ending** — series finale promise and CTA
+- **Research:** audience platform norms, episode length, publishing cadence.
+- **Execute order:** bible → episode outline table → pilot episode brief → episode-by-episode (each gated).
+- **Continuity:** series lexicon, recurring hooks, forbidden drift in host voice.
 
 ---
 

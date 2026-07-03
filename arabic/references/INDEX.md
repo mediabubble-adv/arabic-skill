@@ -1,8 +1,8 @@
 # 📂 Awesome Arabic Skill — Master File Index
 
 ## Token Load Strategy
-Max 6 files per task. Always start with SKILL.md + 1 dialect file + 1–2 task-relevant references.
-Never load all 55 files. Load strictly on demand.
+Max 6 files per task by default — use `references/load-discipline.md` task-class sets (plan / write / audit / rtl).
+Never load all files. Load strictly on demand per task class.
 
 ---
 
@@ -15,12 +15,14 @@ Never load all 55 files. Load strictly on demand.
 
 ---
 
-## References — Load by Task (17 files)
+## References — Load by Task (19 files)
 
 | File | Load when |
 |---|---|
+| `references/load-discipline.md` | Any `/arabic` command — pick plan/write/audit/rtl load set first |
 | `references/advisory-mode.md` | Start of any task that is not a complete brief (default operating model) |
 | `references/audit-mode.md` | Audit Mode / `/arabic audit`, and as the final 9-point QA review |
+| `references/rtl-audit.md` | `/arabic audit rtl` — tier-1 RTL/UI source checks |
 | `references/prompt-engineering.md` | Prompt Coach Mode / `/arabic coach`, or any weak-prompt arrival |
 | `references/intake-protocols.md` | Before asking intake questions (every new task) |
 | `references/engines.md` | Before generating content (every task) |
@@ -117,8 +119,9 @@ Never load all 55 files. Load strictly on demand.
 | P4 (Masri commercial) | ads-service-matrix.md + ads-media.md + seo-aeo-masri.md + seasonal-calendar.md + masri.md expansion | ✅ Complete |
 | P5 (project mode & dev-tech) | project-mode.md + project-context-scanner.md + book-writing.md + domains/dev-tech.md | ✅ Complete |
 | C1–C3 (command surface) | command-router.md + Cursor adapter + `.arabic/` scaffold | ✅ Complete |
+| P8 (v1.1 runtime) | load-discipline.md + rtl-audit.md + audit/plan/command extensions | ✅ Complete |
 
-**Total planned files:** 55
-**Total built:** 55 — v1.0.0 public release (v1.1.0 remains for website + distribution)
+**Total planned files:** 57
+**Total built:** 57 — v1.0.0 public release; v1.1.0 runtime extensions in progress
 
-Breakdown: SKILL.md (1) + voice.md (1) + references/ (18, incl. this INDEX) + dialects/ (11) + domains/ (14) + conversations/ (6) + professional-docs/ (4) = 55.
+Breakdown: SKILL.md (1) + voice.md (1) + references/ (20, incl. this INDEX) + dialects/ (11) + domains/ (14) + conversations/ (6) + professional-docs/ (4) = 57.

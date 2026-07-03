@@ -11,16 +11,10 @@ Working toward **v1.1.0** — website + distribution layer.
 
 ### Added
 - npm package scaffold for `@mediabubble-adv/arabic-skill`, including the `arabic-skill` bin and `npx @mediabubble-adv/arabic-skill install` workflow.
-- Codex and ChatGPT support profiles (`docs/supported/codex/`, `docs/supported/chatgpt/`).
-- v1.1 command map + persistence sections across all Partial-tier tool profiles.
-- `scripts/validate-supported.sh` — enforces `docs/supported/` folder count vs `support-matrix.md` row parity.
-- Root README profile table linking all **24** tool install profiles.
-
-### Changed
-- Promoted Antigravity, Hermes Agent, OpenClaw, and OpenCode from Unknown to Partial with dated validation checklists (P7-D).
-- `validate-docs.sh` ignores links inside fenced code blocks.
-- npx install sections on Claude and Cursor support profiles.
-- `AGENTS.md` refreshed with P7 distribution facts (24 profiles, `main` branch, install presets).
+- P8 runtime: `load-discipline.md` (task-class load sets), `rtl-audit.md` (tier-1 RTL/UI source audit).
+- `/arabic plan series` — YouTube/podcast season planning with narrative bible gate.
+- `/arabic audit rtl` and capped `/arabic audit --dir` (40-file limit).
+- Legacy-register and AI-likelihood scoring on `/arabic audit` deliveries only.
 
 ## [1.0.0] - 2026-06-30
 
