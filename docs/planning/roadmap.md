@@ -195,7 +195,7 @@ Commands: see [Command Surface](./command-surface.md).
 1. Cursor, Claude, Windsurf, Aider (Strong)
 2. Cline, Amp, OpenHands, Zed (Strong/Medium)
 3. Gemini, Copilot, VS Code (Partial wrappers)
-4. Validate: Antigravity, Hermes, OpenClaw, OpenCode
+4. ~~Validate: Antigravity, Hermes, OpenClaw, OpenCode~~ **Done (PR #39)** — all four promoted to Partial
 
 ---
 
@@ -222,7 +222,7 @@ See [CI Pipeline](../engineering/ci-pipeline.md).
 | Advisory flow on vague requests | 100% before first draft |
 | Audit Mode available | Every delivery |
 | Runtime file integrity | 0 broken references in CI |
-| Tool install docs | 22 tools documented, 4 first-class adapters |
+| Tool install docs | **24** tools documented; **0** Unknown-tier; npx presets for Cursor, Claude, Codex |
 | Golden test pass rate | **G1–G12** pass before **v1.0.0** tag (G13–G18 gate v1.1.0) — see [implementation-plan §0.3](./implementation-plan.md#03-golden-test-master-table-g1g18) |
 
 ---
