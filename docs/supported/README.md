@@ -32,6 +32,8 @@ The repository includes local tool icons in [`../../public/assets/`](../../publi
 | GitHub Copilot | <img src="../../public/assets/copilot.svg" alt="GitHub Copilot" width="20" height="20"> `public/assets/copilot.svg` |
 | Replit Agent | <img src="../../public/assets/replit-color.svg" alt="Replit Agent" width="20" height="20"> `public/assets/replit-color.svg` |
 | OpenHands | <img src="../../public/assets/openhands-color.svg" alt="OpenHands" width="20" height="20"> `public/assets/openhands-color.svg` |
+| Antigravity | <img src="../../public/assets/antigravity-color.svg" alt="Antigravity" width="20" height="20"> `public/assets/antigravity-color.svg` |
+| Cline | <img src="../../public/assets/cline-color.svg" alt="Cline" width="20" height="20"> `public/assets/cline-color.svg` |
 | Zed | <img src="../../public/assets/zed.svg" alt="Zed" width="20" height="20"> `public/assets/zed.svg` |
 
 ## Tool Folders
