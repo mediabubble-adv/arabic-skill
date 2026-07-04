@@ -8,10 +8,13 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Planned
-- Research R4 — `scripts/validate-research.sh` stale-source checker
 - First-run onboarding flow
 
 ### Added
+- Research R4 — `scripts/validate-research.sh` stale-source tiers (90/180d) + distillation queue cap; wired into `npm run validate`
+- Golden test `tests/golden/r4-validate-research.md`
+
+### Added (R3)
 - Research R3 — `/arabic research` command wiring (`research-mode.md`, distill, status) + monthly cron doc
 - Golden test `tests/golden/r3-research-command.md`
 

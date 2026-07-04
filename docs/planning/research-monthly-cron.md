@@ -41,7 +41,7 @@ Scheduled maintenance for the `research/` intelligence layer. Run **once per mon
 | 91–180 days | Re-verify URL before distill; update `accessed` |
 | > 180 days | Mark KB `needs_live_verification`; do not distill until refreshed |
 
-R4 will automate this in `scripts/validate-research.sh`.
+Automated in `scripts/validate-research.sh` (also run via `npm run validate`).
 
 ---
 
