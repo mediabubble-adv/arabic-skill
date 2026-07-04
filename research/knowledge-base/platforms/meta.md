@@ -56,8 +56,8 @@ Full creative specs: [Meta Ads Guide](https://www.facebook.com/business/ads-guid
 
 | Gap | Queue |
 |-----|-------|
-| Placement-specific headline (27 FB vs 40 IG) | RQ-007 open |
-| Reels ~72-char overlay limit called out explicitly | RQ-007 open |
+| Placement-specific headline (27 FB vs 40 IG) | **Distilled RQ-007** |
+| Reels ~72-char overlay limit called out explicitly | **Distilled RQ-007** |
 | Carousel intro-card Reels exclusion | deferred — niche |
 
 ## Distill candidates

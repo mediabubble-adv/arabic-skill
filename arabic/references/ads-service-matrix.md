@@ -26,7 +26,15 @@
 
 ### Meta — Facebook & Instagram
 - **Formats:** Feed image/video, Reels, Stories, Carousel, Collection, click-to-WhatsApp.
-- **Limits (official recommended):** Primary text **125** chars; headline **40**; description **25–30**. Reels/Stories overlay ~**72** chars practical. FB Feed headline often truncates at **~27** on mobile.
+- **Limits (placement-aware):**
+
+  | Placement | Primary text (visible) | Headline | Description |
+  |-----------|------------------------|----------|-------------|
+  | FB / IG Feed | **125** (~125 before "عرض المزيد") | **27–40** (FB mobile often **~27**) | **25–30** (often hidden on mobile) |
+  | Stories / Reels overlay | **~72** practical | N/A | N/A |
+
+  **Production rule:** Write for the *shortest* placement in the ad set — front-load hook + offer in the first line.
+- **Arabic / RTL:** Arabic glyphs render wider than Latin — treat headline budget as **~20–25 Latin-equivalent chars** for safe display.
 - **Hook logic:** The first line *is* the ad. Lead with tension, a number, or a direct address — never the brand name.
 - **CTA behavior:** One CTA per ad. In Egypt, click-to-WhatsApp out-converts on-platform forms for SMEs.
 - **Egyptian audience:** Facebook still dominates 30–50 demo; Reels reach Gen Z. COD + WhatsApp = trust. Comments are a sales channel — write to invite them.
@@ -50,6 +58,7 @@
 
 ### Google Display / Demand Gen
 - **Formats:** Responsive display (short headline 30, long headline 90, description 90), Demand Gen visual carousels.
+- **Limits:** Responsive display / Demand Gen may serve **without description text** — long headline (**90**) must stand alone; short headline (**30**) = the single benefit only. Display path fields (**15** chars each) live under Google Search RSA limits above.
 - **Hook logic:** Image carries the message; text confirms it. Short headline = the single benefit.
 - **CTA behavior:** Soft for cold audiences ("اكتشف المجموعة"), hard for retargeting ("كمّل الطلب").
 - **Egyptian audience:** Strong for retargeting cart abandoners — pair with COD reassurance.
