@@ -1,8 +1,20 @@
 {
   "name": "@mediabubble-adv/arabic-skill",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Awesome Arabic Skill runtime pack and npx installer.",
   "license": "MIT",
+  "author": "MediaBubble",
+  "keywords": [
+    "arabic",
+    "cursor",
+    "claude",
+    "codex",
+    "skills",
+    "ai",
+    "content",
+    "masri",
+    "rtl"
+  ],
   "homepage": "https://github.com/mediabubble-adv/arabic-skill#readme",
   "repository": {
     "type": "git",
@@ -23,9 +35,11 @@
     "VERSION"
   ],
   "scripts": {
-    "validate": "bash scripts/validate-skill.sh && bash scripts/validate-docs.sh && bash scripts/validate-supported.sh && bash scripts/validate-website-install.sh",
+    "validate": "bash scripts/validate-skill.sh && bash scripts/validate-docs.sh && bash scripts/validate-supported.sh && bash scripts/validate-website-install.sh && bash scripts/validate-npm-pack.sh",
     "validate:website-install": "bash scripts/validate-website-install.sh",
-    "pack:check": "npm pack --dry-run"
+    "validate:npm-pack": "bash scripts/validate-npm-pack.sh",
+    "pack:check": "npm pack --dry-run",
+    "prepublishOnly": "npm run validate && npm run pack:check"
   },
   "publishConfig": {
     "access": "public",

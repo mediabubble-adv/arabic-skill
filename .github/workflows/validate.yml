@@ -24,6 +24,9 @@ jobs:
       - name: Validate supported tool coverage
         run: ./scripts/validate-supported.sh
 
+      - name: Validate npm pack contents
+        run: bash scripts/validate-npm-pack.sh
+
       - name: Check version sync
         run: |
           ROOT_VERSION=$(tr -d '[:space:]' < VERSION)
