@@ -1,0 +1,31 @@
+AGENTS.md
+  s_e104131cb32d09::t_68ea2423657d5f 6
+  s_e104131cb32d09::t_d3b78e750ece80 24-25
+  s_e104131cb32d09::t_7b8e0840b5d6b9 29
+CHANGELOG.md
+  s_667765b9a901fe::t_d9ce950008f85b 10-16,19,23-31,35-36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "e93576047a10702762d5b499ed5b5f4f1d2cba10",
+  "prompts": {},
+  "sessions": {
+    "s_667765b9a901fe": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "fa174e6d-030e-412e-b623-fbddeafe9355",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    },
+    "s_e104131cb32d09": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "1043d5ba-e95d-4061-987c-7469cf9ab389",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
