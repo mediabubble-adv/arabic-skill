@@ -1,0 +1,30 @@
+AGENTS.md
+  s_5f2136f78f5a2a::t_c722ecd8d8d786 6
+  s_5f2136f78f5a2a::t_690b28e0702071 29
+docs/engineering/npm-publishing.md
+  s_e76f61e9cc7c58::t_e0225eb06900e9 44
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "304cd065d9fc0e84a81b1b452531d3792d523973",
+  "prompts": {},
+  "sessions": {
+    "s_5f2136f78f5a2a": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "83f081f1-df19-46f3-864d-903dfff28609",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    },
+    "s_e76f61e9cc7c58": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "8f56a9bb-4809-41fd-b746-9b77151a6b01",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
