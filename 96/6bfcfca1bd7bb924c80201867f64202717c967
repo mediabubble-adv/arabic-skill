@@ -1,0 +1,35 @@
+research/index.json
+  s_461f57b5773c46::t_c1f381262cbde0 4-14
+tests/golden/r1-audit-platform-register.md
+  s_461f57b5773c46::t_c8de84f8e72076 1-48
+research/sources/sources.yaml
+  s_461f57b5773c46::t_48d6b593a5b07f 15-23
+research/knowledge-base/humanization/arabic-qa-gap-scan-2026-07-04.md
+  s_461f57b5773c46::t_23d0117000a79a 1-71
+research/distillation-queue.md
+  s_461f57b5773c46::t_efb7f5ec51b43d 32-35,41,50
+arabic/references/audit-mode.md
+  s_461f57b5773c46::t_7cdaee8988ae6e 35-53
+  s_461f57b5773c46::t_2e7623b6da3b7f 20
+CHANGELOG.md
+  s_461f57b5773c46::t_1815f8fad245cb 11,17-19
+docs/planning/roadmap.md
+  s_461f57b5773c46::t_ea424da53e246a 62
+  s_461f57b5773c46::t_00b0c71e58f357 4-6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "966bfcfca1bd7bb924c80201867f64202717c967",
+  "prompts": {},
+  "sessions": {
+    "s_461f57b5773c46": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "7dd0ab62-8099-4d3b-9012-a6d967f092d9",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
