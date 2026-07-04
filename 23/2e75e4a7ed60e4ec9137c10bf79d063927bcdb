@@ -1,0 +1,63 @@
+docs/planning/roadmap.md
+  s_461f57b5773c46::t_5e2f04f02f17ce 45-46
+  s_461f57b5773c46::t_39d7dad5d4f874 4-5
+  s_461f57b5773c46::t_0e7803b1b88e66 6
+  s_461f57b5773c46::t_dbf2da5df4185b 196-197
+website/content/install.md
+  s_461f57b5773c46::t_99c66d202720d9 13-18
+package.json
+  s_461f57b5773c46::t_15e0f3024de02e 32-33,40-42
+  s_461f57b5773c46::t_84acc0c163d6fb 3
+CHANGELOG.md
+  s_461f57b5773c46::t_173a96addedaa2 13-29
+VERSION
+  s_461f57b5773c46::t_1d1660c20eb8dc 1
+docs/supported/cursor/README.md
+  s_461f57b5773c46::t_0aa5362cb13faa 13-15,21-36,43-44
+bin/arabic-skill.js
+  s_461f57b5773c46::t_a1d11ef1dc031b 17-29,39-40,45-52,67-71,100,104-105,107-108,111-112,114,117,119-130,133-156,168-171,193-199
+  s_461f57b5773c46::t_699c5cee8e532c 200
+README.md
+  s_461f57b5773c46::t_5af0955e81ccfc 17
+  s_461f57b5773c46::t_121ba3bc5f5ac5 48-50,56-66,75
+scripts/validate-cursor-install.sh
+  s_461f57b5773c46::t_0feb2ab060ffc9 1-24
+scripts/validate-skills-registry.sh
+  s_461f57b5773c46::t_35ec6f3544617c 1-30
+scripts/validate-npm-pack.sh
+  s_461f57b5773c46::t_dcc33a2526aa37 19-20
+arabic/SKILL.md
+  s_461f57b5773c46::t_3fa117890eede4 4
+docs/engineering/versioning-and-releases.md
+  s_461f57b5773c46::t_5b5ac3abd98bc0 24-25
+  s_461f57b5773c46::t_88cbf35ed961eb 135-136
+  s_461f57b5773c46::t_500fcb15270a12 70
+  s_461f57b5773c46::t_cbe35da5d87251 28
+  s_461f57b5773c46::t_52165606eda3df 8
+AGENTS.md
+  s_461f57b5773c46::t_bd7f861de9c49b 24
+  s_461f57b5773c46::t_6bc41309b1ed31 6
+.github/workflows/validate.yml
+  s_461f57b5773c46::t_0f93b6672531bc 30-32
+website/lib/install-commands.ts
+  s_461f57b5773c46::t_62c2e58fa5bc8e 5-7,13,28-31
+  s_461f57b5773c46::t_8a208063ed166c 32
+docs/engineering/npm-publishing.md
+  s_461f57b5773c46::t_6827a39d148ccb 90-91
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "232e75e4a7ed60e4ec9137c10bf79d063927bcdb",
+  "prompts": {},
+  "sessions": {
+    "s_461f57b5773c46": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "7dd0ab62-8099-4d3b-9012-a6d967f092d9",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
