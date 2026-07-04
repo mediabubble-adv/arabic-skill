@@ -1,0 +1,81 @@
+arabic/templates/.arabic/README.md
+  s_e22df37b935413::t_c869b9041a4ca7 1-13
+tests/golden/onboarding-first-run.md
+  s_e22df37b935413::t_84d871bc3c62ae 1-38
+arabic/templates/.arabic/config.yaml
+  s_e22df37b935413::t_3ae8d8871940c8 1-5
+arabic/references/INDEX.md
+  s_e22df37b935413::t_4c7bbd842a4013 4
+  s_e22df37b935413::t_72c101ffcbaa8b 18
+  s_e22df37b935413::t_709ff25f1389a7 42
+arabic/SKILL.md
+  s_e22df37b935413::t_97234547bbf780 56
+  s_e22df37b935413::t_150c643fac6a9f 4
+  s_e22df37b935413::t_338d26210ed918 42
+arabic/references/load-discipline.md
+  s_e22df37b935413::t_66e243d2dff2a8 104-117
+  s_e22df37b935413::t_5b66564fd5c120 19
+arabic/references/command-router.md
+  s_e22df37b935413::t_7b188ef02ce3b7 183
+  s_e22df37b935413::t_5dd955b661de6a 110
+CHANGELOG.md
+  s_e22df37b935413::t_4678f75b151d17 10-12,17-19
+  s_e22df37b935413::t_22f1240516a5a6 15-16,20-21
+docs/planning/roadmap.md
+  s_e22df37b935413::t_389c12557b1f9c 6
+  s_e22df37b935413::t_f394b4dc8da836 46
+  s_e22df37b935413::t_5fdc997acedf49 4
+.cursor/commands/arabic.md
+  s_e22df37b935413::t_1e0d995cd7de1c 29
+  s_e22df37b935413::t_28efa59e3bad30 7-8
+  s_e22df37b935413::t_09444b0dee1e8a 15
+VERSION
+  s_e22df37b935413::t_e860241be5ed7d 1
+website/content/install.md
+  s_e22df37b935413::t_0a9f1fa63929cf 30-31,35-37
+package.json
+  s_e22df37b935413::t_00508c46bd3a42 44,47
+  s_e22df37b935413::t_524d53304123be 3
+arabic/templates/.arabic/briefs/example.yaml
+  s_e22df37b935413::t_485d79dd76c3ea 1-11
+README.md
+  s_e22df37b935413::t_f9f4ffe0d7414a 79-88
+AGENTS.md
+  s_626dadb4011076::t_a9ca3424bc51ce 9
+  s_626dadb4011076::t_ee6dfafb4d112f 23-24
+  s_626dadb4011076::t_5782e5e1d88413 6-7
+bin/arabic-skill.js
+  s_e22df37b935413::t_c75b7b76415255 175-185
+  s_e22df37b935413::t_2c04a79cea34dc 215-218
+scripts/validate-onboarding.sh
+  s_e22df37b935413::t_f3b18233df3cba 1-26,28-36
+  s_e22df37b935413::t_e3b1b0351367a1 27
+scripts/validate-research.sh
+  s_e22df37b935413::t_3a5eb37ab85df8 102
+arabic/references/onboarding-mode.md
+  s_e22df37b935413::t_501074055f070f 1-101
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "c73c66afd44e014fec9b1b335a38aba8f9eb9ef0",
+  "prompts": {},
+  "sessions": {
+    "s_626dadb4011076": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "8e8b57f9-790c-4382-ba52-cce3f799721b",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    },
+    "s_e22df37b935413": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "997ffe26-6e5f-4828-bfbb-c1e3cd07cd76",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
