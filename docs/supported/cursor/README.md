@@ -10,10 +10,28 @@
 
 ## Install
 
-### Preferred (npx)
+### Preferred (npx — full integration)
+
+Copies runtime skill, `/arabic` command, and routing rule to your Cursor user directory:
 
 ```bash
 npx @mediabubble-adv/arabic-skill install --target cursor
+```
+
+Installs:
+
+| Path | Role |
+|------|------|
+| `~/.cursor/skills/arabic/` | Runtime skill pack |
+| `~/.cursor/commands/arabic.md` | `/arabic` slash command |
+| `~/.cursor/rules/arabic.mdc` | Auto-load on Arabic tasks |
+
+### skills.sh registry
+
+Skill pack only (no command/rule files):
+
+```bash
+npx skills add mediabubble-adv/arabic-skill -a cursor -g -y
 ```
 
 ### Manual Fallback
@@ -22,6 +40,8 @@ npx @mediabubble-adv/arabic-skill install --target cursor
 git clone https://github.com/mediabubble-adv/arabic-skill.git
 cd arabic-skill
 cp -r arabic ~/.cursor/skills/arabic
+cp .cursor/commands/arabic.md ~/.cursor/commands/
+cp .cursor/rules/arabic.mdc ~/.cursor/rules/
 ```
 
 ## Why It Fits Well

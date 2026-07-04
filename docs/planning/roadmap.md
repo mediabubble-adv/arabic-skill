@@ -1,9 +1,9 @@
 # Product Roadmap — `arabic`
 
 > Status: Active  
-> Product version: **1.1.1** (current — see root `VERSION`)  
-> **v1.0.0** shipped 2026-06-30 · **v1.1.0** website + P8 runtime · **v1.1.1** npm distribution patch  
-> Next train: **v1.2.0** — `npx skills add`, full Cursor install, research R4  
+> Product version: **1.2.0** (current — see root `VERSION`)  
+> **v1.0.0** shipped 2026-06-30 · **v1.1.0** website + P8 runtime · **v1.1.1** npm distribution · **v1.2.0** full Cursor + skills.sh  
+> Next train: **v1.2.0** — research R4, onboarding (distribution follow-ups shipped in **1.2.0**)  
 > Positioning: **Masri-first Awesome Arabic Skill — pan-Arab capable**
 
 ---
@@ -42,7 +42,8 @@ user asks → guide → clarify → recommend → write → review
 | **1.0.0** | ✅ Shipped | **First public release** — Phases P1–P6 + PRD §12 | `v1.0.0` |
 | **1.1.0** | ✅ Shipped | Website (G13–G18), P8 runtime, npx installer scaffold | `v1.1.0` |
 | **1.1.1** | ✅ Shipped | npm publish CI, pack gates, `@mediabubble-adv/arabic-skill` on registry | `v1.1.1` |
-| **1.2.0** | Next | `npx skills add`, full Cursor install, research R4, onboarding | — |
+| **1.2.0** | ✅ Shipped | Full Cursor npx install, skills.sh registry docs + validation | `v1.2.0` |
+| **1.2.1+** | Next | Research R4, onboarding | — |
 | **2.0.0** | Future | Breaking changes, major routing restructure | `v2.0.0` |
 
 ### Shipped phase map (reference)
@@ -192,8 +193,8 @@ Commands: see [Command Surface](./command-surface.md).
 | `bin/arabic-skill.js` + npm | ✅ Shipped v1.1.1 — `npx @mediabubble-adv/arabic-skill install` on [npm](https://www.npmjs.com/package/@mediabubble-adv/arabic-skill) |
 | Golden test suite | ✅ Manual G13–G18 checklist in `tests/golden/`; automated runner → v1.2.0 |
 | GitHub Releases | ✅ Shipped — tag push triggers `release.yml`; npm publish on tag via `npm-publish.yml` |
-| `npx skills add` registry | → **v1.2.0** — skills.sh discovery path |
-| Full Cursor npx install | → **v1.2.0** — copy `.cursor/rules` + `.cursor/commands`, not only `arabic/` runtime |
+| `npx skills add` registry | ✅ Shipped v1.2.0 — `npx skills add mediabubble-adv/arabic-skill`; skills.sh telemetry listing |
+| Full Cursor npx install | ✅ Shipped v1.2.0 — copies `~/.cursor/commands/arabic.md` + `~/.cursor/rules/arabic.mdc` |
 
 ### Tool Priority
 

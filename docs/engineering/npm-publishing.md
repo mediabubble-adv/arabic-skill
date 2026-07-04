@@ -87,4 +87,5 @@ npm publish --access public --registry=https://registry.npmjs.org/
 
 - npm `version` must match root `VERSION` and `arabic/SKILL.md`.
 - Do not publish local state files, `.env*`, `.arabic/`, editor caches, or generated archives (`files` in `package.json` is the allowlist).
-- `npx skills add mediabubble-adv/arabic-skill` remains a separate registry/discovery path from this npm package.
+- **`npx @mediabubble-adv/arabic-skill install --target cursor`** — full integration (skill + `.cursor/commands` + `.cursor/rules`) from the npm tarball.
+- **`npx skills add mediabubble-adv/arabic-skill`** — skills.sh registry path (skill pack only; listing via install telemetry). Validate with `npm run validate:skills-registry`.

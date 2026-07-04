@@ -10,6 +10,12 @@
 npx @mediabubble-adv/arabic-skill install --target cursor
 ```
 
+**skills.sh (المهارة بس — من غير command/rule):**
+
+```bash
+npx skills add mediabubble-adv/arabic-skill -a cursor -g -y
+```
+
 **أهداف تانية:**
 
 ```bash

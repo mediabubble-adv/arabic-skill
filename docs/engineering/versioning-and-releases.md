@@ -5,7 +5,7 @@
 The canonical product version lives in the repository root:
 
 ```text
-VERSION          → 1.1.1 (current)
+VERSION          → 1.2.0 (current)
 CHANGELOG.md     → human-readable history
 arabic/SKILL.md → version field in YAML frontmatter (must match VERSION)
 ```
@@ -21,10 +21,11 @@ arabic/SKILL.md → version field in YAML frontmatter (must match VERSION)
 | **Development** | `0.1.x` | Architecture, docs, validation — **not** the public product launch |
 | **First public release** | **`1.0.0`** | All [PRD success criteria](../product/prd.md#12-success-criteria) met + [implementation plan](../planning/implementation-plan.md) Phases **P1–P6** complete |
 | **Distribution** | `1.1.x` | Website, npm `npx` installer, P8 runtime extensions |
-| **Distribution follow-ups** | `1.2.0` | `npx skills add`, full Cursor install, research R4, onboarding |
+| **Distribution follow-ups** | `1.2.0` | Full Cursor npx install, skills.sh registry — ✅ shipped |
+| **Research + onboarding** | `1.2.x` | Research R4, first-run onboarding |
 | **Breaking changes** | `2.0.0` | Removed modes, restructured routing, incompatible `voice.md` |
 
-**Current state:** **`1.1.1`** on `main` — npm distribution patch shipped 2026-07-04.
+**Current state:** **`1.2.0`** on `main` — full Cursor npx install + skills.sh registry shipped 2026-07-04.
 
 ---
 
@@ -66,7 +67,7 @@ Examples:
 - **`v1.0.0`** — **first public release** (plan complete) ✅
 - `v1.1.0` — website + P8 runtime + npx installer scaffold ✅
 - `v1.1.1` — npm publish CI and pack gates ✅
-- `v1.2.0` — distribution follow-ups + research R4 (next)
+- `v1.2.0` — full Cursor npx install + skills.sh registry ✅
 - `v2.0.0` — breaking changes
 
 **Never** use plan-version labels (v4, v5.2) in tags or docs. Product semver only.
@@ -131,8 +132,8 @@ Working toward v1.2.0
 | GitHub Releases (zip) | ✅ v1.0.0+ | Tag push → `release.yml` |
 | `npx @mediabubble-adv/arabic-skill install` | ✅ v1.1.1 | Copies `arabic/` runtime; Cursor/Claude/Codex presets |
 | Install website | ✅ v1.1.0 | https://arabic-skill.vercel.app |
-| `npx skills add mediabubble-adv/arabic-skill` | → v1.2.0 | skills.sh registry / discovery |
-| Full Cursor npx install | → v1.2.0 | Also copy `.cursor/rules` + `.cursor/commands` |
+| `npx skills add mediabubble-adv/arabic-skill` | ✅ v1.2.0 | skills.sh registry; skill pack only |
+| Full Cursor npx install | ✅ v1.2.0 | Skill + `~/.cursor/commands/arabic.md` + `~/.cursor/rules/arabic.mdc` |
 
 See [npm Publishing](./npm-publishing.md) for maintainer publish steps.
 

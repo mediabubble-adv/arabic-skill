@@ -10,8 +10,23 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 Working toward **v1.2.0** (research R4, onboarding).
 
 ### Planned
-- `npx skills add` registry distribution
-- Full Cursor install path (rules + commands, not only `arabic/` runtime copy)
+- Research R4 — `scripts/validate-research.sh` stale-source checker
+- First-run onboarding flow
+
+## [1.2.0] - 2026-07-04
+
+**Distribution follow-ups.** Full Cursor npx install and skills.sh registry path.
+
+### Added
+- `bin/arabic-skill.js` — Cursor target now copies `~/.cursor/commands/arabic.md` and `~/.cursor/rules/arabic.mdc` alongside `~/.cursor/skills/arabic/`
+- `scripts/validate-cursor-install.sh` — dry-run gate for full Cursor integration paths
+- `scripts/validate-skills-registry.sh` — verifies `npx skills add mediabubble-adv/arabic-skill --list` discovers skill `arabic`
+- npm tarball includes `.cursor/commands/arabic.md` and `.cursor/rules/arabic.mdc`
+- README + website — `npx skills add mediabubble-adv/arabic-skill` documented as skills.sh registry install
+
+### Changed
+- `VERSION`, `arabic/SKILL.md`, and `package.json` now report `1.2.0`
+- `docs/supported/cursor/README.md` — documents full vs skills.sh install paths
 
 ## [1.1.1] - 2026-07-04
 

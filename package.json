@@ -1,6 +1,6 @@
 {
   "name": "@mediabubble-adv/arabic-skill",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Awesome Arabic Skill runtime pack and npx installer.",
   "license": "MIT",
   "author": "MediaBubble",
@@ -29,13 +29,17 @@
   "files": [
     "arabic",
     "bin",
+    ".cursor/commands/arabic.md",
+    ".cursor/rules/arabic.mdc",
     "CHANGELOG.md",
     "LICENSE",
     "README.md",
     "VERSION"
   ],
   "scripts": {
-    "validate": "bash scripts/validate-skill.sh && bash scripts/validate-docs.sh && bash scripts/validate-supported.sh && bash scripts/validate-website-install.sh && bash scripts/validate-npm-pack.sh",
+    "validate": "bash scripts/validate-skill.sh && bash scripts/validate-docs.sh && bash scripts/validate-supported.sh && bash scripts/validate-website-install.sh && bash scripts/validate-npm-pack.sh && bash scripts/validate-cursor-install.sh",
+    "validate:cursor-install": "bash scripts/validate-cursor-install.sh",
+    "validate:skills-registry": "bash scripts/validate-skills-registry.sh",
     "validate:website-install": "bash scripts/validate-website-install.sh",
     "validate:npm-pack": "bash scripts/validate-npm-pack.sh",
     "pack:check": "npm pack --dry-run",

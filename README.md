@@ -14,7 +14,7 @@
 
 **Awesome Arabic Skill** (`arabic`) is a MediaBubble skill for Arabic content creation, strategy, research distillation, and review. It is designed to behave like a senior Arabic content partner inside AI coding tools: it reads context, clarifies intent, recommends a direction, writes, humanizes, and audits before delivery.
 
-It is **not** a translation shortcut. Current version is `1.1.1` (npm distribution patch; website + P8 runtime shipped in `1.1.0`).
+It is **not** a translation shortcut. Current version is `1.2.0` (full Cursor npx install + skills.sh registry; website + P8 runtime shipped in `1.1.0`).
 
 <p align="center">
   <img src="./public/assets/claude-color.svg" alt="Claude" width="26" height="26">
@@ -45,13 +45,25 @@ user asks -> guide -> clarify -> recommend -> write -> review
 
 ## Install
 
-Install with `npx`:
+### Full Cursor integration (recommended)
+
+Copies the runtime skill, `/arabic` slash command, and routing rule:
 
 ```bash
 npx @mediabubble-adv/arabic-skill install --target cursor
 ```
 
-Available targets:
+### skills.sh registry
+
+Install the skill via the open agent skills CLI (skill pack only; use npm install above for full Cursor integration):
+
+```bash
+npx skills add mediabubble-adv/arabic-skill -a cursor -g -y
+```
+
+Browse: [skills.sh](https://skills.sh) · Listing is driven by install telemetry from `npx skills add`.
+
+### Other targets
 
 ```bash
 npx @mediabubble-adv/arabic-skill install --target claude
@@ -60,7 +72,7 @@ npx @mediabubble-adv/arabic-skill install --target all
 npx @mediabubble-adv/arabic-skill install --dir ~/.cursor/skills --force
 ```
 
-See [Cursor support](./docs/supported/cursor/README.md), [Claude support](./docs/supported/claude/README.md), or the [supported tools index](./docs/supported/README.md). The repo documents **24** AI coding surfaces (profiles below). The **install website** shipped at `v1.1.0` — https://arabic-skill.vercel.app. `npx @mediabubble-adv/arabic-skill install` is the supported installer; `npx skills add` registry distribution remains a follow-up.
+See [Cursor support](./docs/supported/cursor/README.md), [Claude support](./docs/supported/claude/README.md), or the [supported tools index](./docs/supported/README.md). The repo documents **24** AI coding surfaces (profiles below). Install website: https://arabic-skill.vercel.app
 
 ## Supported Tool Assets
 
