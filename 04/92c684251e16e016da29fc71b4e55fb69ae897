@@ -1,0 +1,40 @@
+research/knowledge-base/platforms/tiktok.md
+  s_461f57b5773c46::t_15f421252c3b39 1-77
+arabic/references/ads-service-matrix.md
+  s_461f57b5773c46::t_a2ae07fae5e9c9 65-67
+  s_461f57b5773c46::t_d9b64f235bd73d 44
+  s_461f57b5773c46::t_47d5a443c8fbd4 29
+research/distillation-queue.md
+  s_461f57b5773c46::t_6268d2afb9fca2 20-21,37,44,53
+tests/golden/r2-platform-kb.md
+  s_461f57b5773c46::t_d5975d5077118f 1-32
+docs/planning/roadmap.md
+  s_461f57b5773c46::t_a896231d066cf2 62
+  s_461f57b5773c46::t_28bc43c7d35bde 6
+research/knowledge-base/platforms/meta.md
+  s_461f57b5773c46::t_cb114ab148c368 1-66
+research/knowledge-base/platforms/google.md
+  s_461f57b5773c46::t_f8c13e62c2eed9 1-59
+research/index.json
+  s_461f57b5773c46::t_6912571f0c8149 13-39
+CHANGELOG.md
+  s_461f57b5773c46::t_9f360571f57667 16-20
+research/sources/sources.yaml
+  s_461f57b5773c46::t_aedac1e433e775 24-79
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "0492c684251e16e016da29fc71b4e55fb69ae897",
+  "prompts": {},
+  "sessions": {
+    "s_461f57b5773c46": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "7dd0ab62-8099-4d3b-9012-a6d967f092d9",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
