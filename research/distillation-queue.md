@@ -17,8 +17,7 @@ Spec: [research-intelligence-plan.md](../docs/planning/research-intelligence-pla
 
 | ID | Source kind | Finding | Runtime target(s) | Trust | Added | Notes |
 |----|-------------|---------|-------------------|-------|-------|-------|
-| RQ-007 | platform | Meta placement-specific limits (Reels 72, FB headline 27) | `ads-service-matrix.md` § Meta | A | 2026-07-04 | sources: meta-text-best-practices-2026 |
-| RQ-008 | platform | Google Demand Gen long-headline standalone rule | `ads-service-matrix.md` § Display | A | 2026-07-04 | sources: google-rsa-specs-2026 |
+| — | — | — | — | — | — | — |
 
 ## In progress
 
@@ -42,6 +41,8 @@ Spec: [research-intelligence-plan.md](../docs/planning/research-intelligence-pla
 |----|----------------|-----|-----------|
 | RQ-001 | `arabic/references/audit-mode.md` — platform register targets | feat/research-r1-distill | 2026-07-04 |
 | RQ-006 | `arabic/references/ads-service-matrix.md` — TikTok RTL safe zones, Spark caption rules, official limits | feat/research-r2-platforms | 2026-07-04 |
+| RQ-007 | `arabic/references/ads-service-matrix.md` — Meta placement table (Reels ~72, FB headline ~27) | feat/research-rq007-rq008-distill | 2026-07-05 |
+| RQ-008 | `arabic/references/ads-service-matrix.md` — Demand Gen long-headline standalone rule | feat/research-rq007-rq008-distill | 2026-07-05 |
 
 ---
 

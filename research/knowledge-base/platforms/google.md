@@ -49,8 +49,8 @@ Responsive display may show **without** description text — long headline must 
 
 | Gap | Queue |
 |-----|-------|
-| Display path fields (15 chars) not in matrix | RQ-008 open |
-| Demand Gen long-headline standalone rule | RQ-008 open |
+| Display path fields (15 chars) not in matrix | **Closed** — in Google Search §2 |
+| Demand Gen long-headline standalone rule | **Distilled RQ-008** |
 | RSA pinning guidance | deferred — advisory only |
 
 ## Distill candidates

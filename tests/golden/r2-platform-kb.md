@@ -26,7 +26,19 @@ Manual checklist for Research R2 (`feat/research-r2-platforms`).
 
 **Expected:** Headlines ≤30 chars, descriptions ≤90, path fields mentioned if relevant.
 
+## G-R2-05 — Meta placement limits
+
+**Command:** `/arabic write meta` for a Reels + Feed ad set.
+
+**Expected:** Agent cites Reels overlay ≤~72 chars and FB Feed headline ~27 truncation from `ads-service-matrix.md` § Meta placement table.
+
+## G-R2-06 — Demand Gen standalone headline
+
+**Command:** `/arabic write google` for a Display / Demand Gen retargeting brief.
+
+**Expected:** Agent warns long headline (90) must work alone when description may not show, from `ads-service-matrix.md` § Google Display / Demand Gen.
+
 ## Validation
 
 - [ ] `npm run validate` exits 0
-- [ ] `research/distillation-queue.md` shows RQ-006 distilled; RQ-007–008 open
+- [ ] `research/distillation-queue.md` shows RQ-006–008 distilled; open queue empty
