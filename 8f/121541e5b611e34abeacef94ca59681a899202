@@ -1,0 +1,54 @@
+CHANGELOG.md
+  s_461f57b5773c46::t_cc207adb168eb9 15-18
+research/README.md
+  s_461f57b5773c46::t_15d64323cb861d 55,59
+  s_461f57b5773c46::t_695c4dad4d57a2 73-75
+  s_461f57b5773c46::t_e5f510ed5ea488 60
+tests/golden/r3-research-command.md
+  s_461f57b5773c46::t_28cdf380dde600 1-46
+.cursor/commands/arabic.md
+  s_461f57b5773c46::t_7c8265445a088e 12
+  s_461f57b5773c46::t_0123d0f94c00ea 32-34
+arabic/references/research-mode.md
+  s_461f57b5773c46::t_43f7be746fb0e0 1-155
+docs/planning/command-surface.md
+  s_461f57b5773c46::t_a48e5870d59d53 141-142
+docs/planning/roadmap.md
+  s_461f57b5773c46::t_c873509926b4a6 6
+  s_461f57b5773c46::t_6fa6fb8fe02b91 62
+docs/planning/research-monthly-cron.md
+  s_461f57b5773c46::t_32cc09c56906fe 1-73
+arabic/references/INDEX.md
+  s_461f57b5773c46::t_8b852cd1751eca 41
+  s_461f57b5773c46::t_bfe78018051606 124,126-127,129
+  s_461f57b5773c46::t_55f55a26b3975d 18,22
+  s_461f57b5773c46::t_89f19ee29ba57a 4
+arabic/references/command-router.md
+  s_461f57b5773c46::t_cf01f74f3d23f1 136-137
+  s_461f57b5773c46::t_cd24e6cb48aed3 103-105
+arabic/SKILL.md
+  s_461f57b5773c46::t_40f107e4210afd 42
+  s_461f57b5773c46::t_95cb390417b237 55
+arabic/references/load-discipline.md
+  s_461f57b5773c46::t_80fa37a0c7700d 18
+  s_461f57b5773c46::t_e0135d4edf2248 87-102
+  s_461f57b5773c46::t_a2ff1cdf4a853e 121
+docs/planning/research-intelligence-plan.md
+  s_461f57b5773c46::t_f71d0a6e4f8a38 288
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "8f121541e5b611e34abeacef94ca59681a899202",
+  "prompts": {},
+  "sessions": {
+    "s_461f57b5773c46": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "7dd0ab62-8099-4d3b-9012-a6d967f092d9",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
