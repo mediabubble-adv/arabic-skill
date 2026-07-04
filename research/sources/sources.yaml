@@ -15,7 +15,7 @@
 sources:
   - id: reference-arabic-qa-v1
     title: "reference/arabic-qa canonical pack"
-    url: https://github.com/mediabubble-adv/arabic-skill/tree/main/reference/arabic-qa
+    url: https://github.com/mediabubble-adv/arabic-skill/tree/966bfcf/reference/arabic-qa
     publisher: MediaBubble (internal)
     accessed: 2026-07-04
     trust_tier: A

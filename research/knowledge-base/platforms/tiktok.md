@@ -7,7 +7,7 @@ sources:
   - tiktok-topview-specs-2026
 runtime_targets:
   - arabic/references/ads-service-matrix.md
-status: curated
+status: distilled
 ---
 
 # TikTok — in-feed & Spark ad specs
@@ -48,7 +48,7 @@ Source: [TopView ad specifications](https://ads.tiktok.com/help/article/tiktok-r
 | **Spark (Pull)** | Organic post caption, up to 4 lines + emojis | Boost authorized organic video |
 | **Non-Spark** | Set in Ads Manager, 100 chars max | Upload net-new creative |
 
-Spark: ~30% higher completion when native-feeling (third-party benchmarks — treat as directional).
+Spark creative should feel native (organic post energy); completion lift claims are **not** Tier A — do not quote third-party benchmarks in runtime rules.
 
 ## Arabic / RTL safe zones
 
@@ -72,6 +72,6 @@ Overlay stack (profile, CTA, caption) sits on the **bottom** — place hooks and
 | Gap | Status |
 |-----|--------|
 | RTL safe-zone template requirement | **Distilled RQ-006** → `ads-service-matrix.md` |
-| 4-line caption display limit | RQ-006 |
-| Spark caption immutability | RQ-006 |
-| Non-Spark caption ban on @/#/links | RQ-006 |
+| 4-line caption display limit | **Distilled RQ-006** |
+| Spark caption immutability | **Distilled RQ-006** |
+| Non-Spark caption ban on @/#/links | **Distilled RQ-006** |

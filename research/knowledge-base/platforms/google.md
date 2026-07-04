@@ -34,7 +34,7 @@ Source: [About responsive search ads](https://support.google.com/google-ads/answ
 |-------|-------|
 | Short headline | 30 |
 | Long headline | 90 |
-| Description | 90 (short desc 60 on some formats) |
+| Description | 90 |
 
 Responsive display may show **without** description text — long headline must stand alone.
 

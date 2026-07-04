@@ -43,7 +43,7 @@ user asks → guide → clarify → recommend → write → review
 | **1.1.0** | ✅ Shipped | Website (G13–G18), P8 runtime, npx installer scaffold | `v1.1.0` |
 | **1.1.1** | ✅ Shipped | npm publish CI, pack gates, `@mediabubble-adv/arabic-skill` on registry | `v1.1.1` |
 | **1.2.0** | ✅ Shipped | Full Cursor npx install, skills.sh registry docs + validation | `v1.2.0` |
-| **1.2.1+** | Next | Research R1, onboarding | — |
+| **1.2.1+** | Next | onboarding, Research R4 | — |
 | **2.0.0** | Future | Breaking changes, major routing restructure | `v2.0.0` |
 
 ### Shipped phase map (reference)

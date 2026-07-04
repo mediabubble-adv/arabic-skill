@@ -20,6 +20,7 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 - Golden test `tests/golden/r2-platform-kb.md`
 
 ### Added (R1)
+- Research R0 scaffold — `research/` README, `index.json`, `sources/sources.yaml`, `distillation-queue.md`, knowledge-base tree, 5 prompt templates, `validate-research-scaffold.sh`
 - Research R1 — `arabic-qa` gap scan + platform register targets in `audit-mode.md` (`--platform` audit scoring)
 - `research/knowledge-base/humanization/arabic-qa-gap-scan-2026-07-04.md` — gap scan artifact
 - Golden test `tests/golden/r1-audit-platform-register.md`
