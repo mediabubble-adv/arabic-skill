@@ -8,8 +8,13 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Planned
+- Research R1 — first reference distillation from Phase A–B
+- Research R3 — `/arabic research` command wiring
 - Research R4 — `scripts/validate-research.sh` stale-source checker
 - First-run onboarding flow
+
+### Added
+- `research/` R0 scaffold — README, `index.json`, `sources/sources.yaml`, `distillation-queue.md`, knowledge-base tree, 5 prompt templates, `validate-research-scaffold.sh`
 
 ## [1.2.1] - 2026-07-04
 

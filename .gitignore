@@ -3,6 +3,8 @@
 .idea/
 .vscode/
 node_modules/
+research/snapshots/**
+!research/snapshots/README.md
 .kilocode/
 public/assets/*.zip
 public/assets/cline-brand-assets/

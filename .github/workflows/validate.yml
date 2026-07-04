@@ -30,6 +30,9 @@ jobs:
       - name: Validate Cursor full install dry-run
         run: bash scripts/validate-cursor-install.sh
 
+      - name: Validate research R0 scaffold
+        run: bash scripts/validate-research-scaffold.sh
+
       - name: Check version sync
         run: |
           ROOT_VERSION=$(tr -d '[:space:]' < VERSION)

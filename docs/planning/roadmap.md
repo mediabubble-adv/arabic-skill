@@ -3,7 +3,7 @@
 > Status: Active  
 > Product version: **1.2.0** (current — see root `VERSION`)  
 > **v1.0.0** shipped 2026-06-30 · **v1.1.0** website + P8 runtime · **v1.1.1** npm distribution · **v1.2.0** full Cursor + skills.sh  
-> Next train: **v1.2.0** — research R4, onboarding (distribution follow-ups shipped in **1.2.0**)  
+> Next train: **1.2.x** — Research R1 distillation, onboarding (**R0 scaffold shipped**)  
 > Positioning: **Masri-first Awesome Arabic Skill — pan-Arab capable**
 
 ---
@@ -43,7 +43,7 @@ user asks → guide → clarify → recommend → write → review
 | **1.1.0** | ✅ Shipped | Website (G13–G18), P8 runtime, npx installer scaffold | `v1.1.0` |
 | **1.1.1** | ✅ Shipped | npm publish CI, pack gates, `@mediabubble-adv/arabic-skill` on registry | `v1.1.1` |
 | **1.2.0** | ✅ Shipped | Full Cursor npx install, skills.sh registry docs + validation | `v1.2.0` |
-| **1.2.1+** | Next | Research R4, onboarding | — |
+| **1.2.1+** | Next | Research R1, onboarding | — |
 | **2.0.0** | Future | Breaking changes, major routing restructure | `v2.0.0` |
 
 ### Shipped phase map (reference)
@@ -59,7 +59,7 @@ user asks → guide → clarify → recommend → write → review
 | **P4** | Masri commercial depth | Ads matrix, SEO/AEO, seasonal calendar |
 | **P5** | Project Mode & Dev-Tech | Website/campaign/book workflows + project-aware Arabic explanations |
 | **P6** | Runtime integration & validation | Wire routing, INDEX sync, run G1–G12 |
-| **R0–R4** | Research intelligence (cross-cutting) | `research/` layer, internet + AI + reference distillation |
+| **R0–R4** | Research intelligence (cross-cutting) | **R0 ✅** scaffold in `research/`; R1–R4 distillation + `/arabic research` + validation |
 | **C0–C5** | Command surface (cross-cutting) | `/arabic` tree, `command-router.md`, workspace `.arabic/` auto |
 
 Semver rules: see [Versioning and Releases](../engineering/versioning-and-releases.md).  

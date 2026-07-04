@@ -1,0 +1,15 @@
+# Citation registry for research/knowledge-base/
+# Schema: docs/planning/research-intelligence-plan.md §7b
+#
+# Example entry (remove comment markers when adding a real source):
+#
+#   - id: meta-business-reels-2026
+#     title: "Meta Reels ad specs"
+#     url: https://www.facebook.com/business/help/...
+#     publisher: Meta
+#     accessed: 2026-07-04
+#     trust_tier: A
+#     topics: [platforms, ads]
+#     runtime_eligible: true
+
+sources: []
