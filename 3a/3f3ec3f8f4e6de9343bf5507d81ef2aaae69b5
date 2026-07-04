@@ -1,0 +1,20 @@
+README.md
+  s_e76f61e9cc7c58::t_80965ce2ce4201 8,10
+  s_e76f61e9cc7c58::t_6ead0ba7d1a7b2 205
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "3a3f3ec3f8f4e6de9343bf5507d81ef2aaae69b5",
+  "prompts": {},
+  "sessions": {
+    "s_e76f61e9cc7c58": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "8f56a9bb-4809-41fd-b746-9b77151a6b01",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
