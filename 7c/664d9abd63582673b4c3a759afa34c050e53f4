@@ -1,0 +1,40 @@
+arabic/SKILL.md
+  s_667765b9a901fe::t_3a618285b8994e 4
+package.json
+  s_667765b9a901fe::t_54e416b0b8786e 3
+website/app/docs/page.tsx
+  s_667765b9a901fe::t_78b0fc31f5f563 73
+README.md
+  s_667765b9a901fe::t_8498b2fc86f2a8 199,204-205
+  s_667765b9a901fe::t_6e8107d8f4ca67 17
+  s_667765b9a901fe::t_fe37d6bda024ad 8
+  s_667765b9a901fe::t_226de44b52e2e7 232-233
+website/content/docs.md
+  s_667765b9a901fe::t_03327005719cbc 22
+VERSION
+  s_667765b9a901fe::t_b5f755002b5b19 1
+AGENTS.md
+  s_667765b9a901fe::t_ec7e3b106c541c 24
+arabic/references/INDEX.md
+  s_667765b9a901fe::t_f9ee7e305120a6 125
+CHANGELOG.md
+  s_667765b9a901fe::t_5203a01e965a81 10-12,15,23-24
+  s_667765b9a901fe::t_6fa1770d578bf1 71-72
+  s_667765b9a901fe::t_d6ffb8f9770fc3 25
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "7c664d9abd63582673b4c3a759afa34c050e53f4",
+  "prompts": {},
+  "sessions": {
+    "s_667765b9a901fe": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "fa174e6d-030e-412e-b623-fbddeafe9355",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
