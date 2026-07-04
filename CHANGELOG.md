@@ -7,21 +7,33 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+Working toward **v1.1.1** (distribution follow-up) and **v1.2.0** (research R4, onboarding).
+
+### Planned
+- `npx skills add` registry distribution
+- npm publish for `@mediabubble-adv/arabic-skill`
+- Full Cursor install path (rules + commands, not only `arabic/` runtime copy)
+
 ## [1.1.0] - 2026-07-04
 
-**Website + distribution release.** P7 marketing site (G13–G18), npx installer package, and P8 runtime extensions ship together.
+**Website + distribution release.** P7 marketing site (G13–G18), npx installer package, P7 supported-tool docs expansion, and P8 runtime extensions ship together.
 
 ### Added
 - `website/` — Arabic-first marketing site (G13–G18): RTL Next.js App Router, 8 routes, install funnel, dogfood `/about`, G15 interactives; live at https://arabic-skill.vercel.app
-- `scripts/validate-website-install.sh` — G14 README install parity (wired into `npm run validate`).
-- npm package scaffold for `@mediabubble-adv/arabic-skill`, including the `arabic-skill` bin and `npx @mediabubble-adv/arabic-skill install` workflow.
-- P8 runtime: `load-discipline.md` (task-class load sets), `rtl-audit.md` (tier-1 RTL/UI source audit).
-- `/arabic plan series` — YouTube/podcast season planning with narrative bible gate.
-- `/arabic audit rtl` and capped `/arabic audit --dir` (40-file limit).
-- Legacy-register and AI-likelihood scoring on `/arabic audit` deliveries only.
+- `website/content/` — Masri route copy (8 pages + `footer.md`) with G16 audit snapshot in `.arabic/audits/`
+- `tests/golden/g13-g18-website.md` — manual website acceptance checklist (G13–G18)
+- `scripts/validate-website-install.sh` — G14 README install parity (wired into `npm run validate`)
+- npm package scaffold for `@mediabubble-adv/arabic-skill`, including the `arabic-skill` bin and `npx @mediabubble-adv/arabic-skill install` workflow
+- P8 runtime: `load-discipline.md` (task-class load sets), `rtl-audit.md` (tier-1 RTL/UI source audit)
+- `/arabic plan series` — YouTube/podcast season planning with narrative bible gate
+- `/arabic audit rtl` and capped `/arabic audit --dir` (40-file limit)
+- Legacy-register and AI-likelihood scoring on `/arabic audit` deliveries only
+- `docs/supported/` — P7 expansion: Codex profile, ChatGPT profile, v1.1 command maps for Partial tools, Unknown-tier validation (24 tools documented)
 
 ### Changed
 - `VERSION`, `arabic/SKILL.md`, and `package.json` now report `1.1.0`
+- README — install website shipped, release policy, and Development Status aligned with `v1.1.0`
+- `arabic/references/INDEX.md` — build status reflects `v1.1.0` public release
 
 ## [1.0.0] - 2026-06-30
 
