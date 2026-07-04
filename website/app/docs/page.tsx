@@ -70,7 +70,7 @@ export default function DocsPage() {
               >
                 CHANGELOG
               </a>{" "}
-              — 1.0.0
+              — 1.1.0
             </li>
             <li>
               <a

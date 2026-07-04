@@ -19,7 +19,7 @@
 ## GitHub
 
 - [README](https://github.com/mediabubble-adv/arabic-skill/blob/main/README.md)
-- [CHANGELOG](https://github.com/mediabubble-adv/arabic-skill/blob/main/CHANGELOG.md) — 1.0.0
+- [CHANGELOG](https://github.com/mediabubble-adv/arabic-skill/blob/main/CHANGELOG.md) — 1.1.0
 - [مساهمة](https://github.com/mediabubble-adv/arabic-skill/blob/main/CONTRIBUTING.md)
 
 ## تثبيت (G14)

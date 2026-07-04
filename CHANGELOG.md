@@ -7,16 +7,21 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
-Working toward **v1.1.0** — website + distribution layer.
+## [1.1.0] - 2026-07-04
+
+**Website + distribution release.** P7 marketing site (G13–G18), npx installer package, and P8 runtime extensions ship together.
 
 ### Added
-- `website/` — Arabic-first marketing site (G13–G18): RTL Next.js App Router, 8 routes, install funnel, dogfood `/about`, G15 interactives.
+- `website/` — Arabic-first marketing site (G13–G18): RTL Next.js App Router, 8 routes, install funnel, dogfood `/about`, G15 interactives; live at https://arabic-skill.vercel.app
 - `scripts/validate-website-install.sh` — G14 README install parity (wired into `npm run validate`).
 - npm package scaffold for `@mediabubble-adv/arabic-skill`, including the `arabic-skill` bin and `npx @mediabubble-adv/arabic-skill install` workflow.
 - P8 runtime: `load-discipline.md` (task-class load sets), `rtl-audit.md` (tier-1 RTL/UI source audit).
 - `/arabic plan series` — YouTube/podcast season planning with narrative bible gate.
 - `/arabic audit rtl` and capped `/arabic audit --dir` (40-file limit).
 - Legacy-register and AI-likelihood scoring on `/arabic audit` deliveries only.
+
+### Changed
+- `VERSION`, `arabic/SKILL.md`, and `package.json` now report `1.1.0`
 
 ## [1.0.0] - 2026-06-30
 
@@ -63,6 +68,7 @@ Working toward **v1.1.0** — website + distribution layer.
 - Renamed runtime folder `arabic-content/` → `arabic/`
 - Version policy: **0.x = development**, **1.0.0 = plan complete + first public release**
 
-[Unreleased]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/mediabubble-adv/arabic-skill/releases/tag/v1.0.0
 [0.1.0]: https://github.com/mediabubble-adv/arabic-skill/releases/tag/v0.1.0

@@ -122,6 +122,6 @@ Never load all files. Load strictly on demand per task class.
 | P8 (v1.1 runtime) | load-discipline.md + rtl-audit.md + audit/plan/command extensions | ✅ Complete |
 
 **Total planned files:** 57
-**Total built:** 57 — v1.0.0 public release; v1.1.0 runtime extensions in progress
+**Total built:** 57 — v1.1.0 public release (website + P8 runtime extensions)
 
 Breakdown: SKILL.md (1) + voice.md (1) + references/ (20, incl. this INDEX) + dialects/ (11) + domains/ (14) + conversations/ (6) + professional-docs/ (4) = 57.
