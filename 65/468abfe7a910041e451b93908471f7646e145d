@@ -1,0 +1,52 @@
+scripts/validate-research-scaffold.sh
+  s_461f57b5773c46::t_a15bd106763d47 51,53-55,57-75
+  s_461f57b5773c46::t_9e2f131f43d878 50,52,56
+tests/golden/r1-audit-platform-register.md
+  s_461f57b5773c46::t_8918e7a0ef5d9a 46-70
+  s_461f57b5773c46::t_d770957ea71825 34,36,41-44
+  s_461f57b5773c46::t_3f311724d7194b 45
+arabic/references/audit-mode.md
+  s_461f57b5773c46::t_48999090292452 52-53
+  s_461f57b5773c46::t_ba2e60a460c767 38-40
+  s_461f57b5773c46::t_d8d2fc0e4050e1 51,55,57-67,70
+  s_461f57b5773c46::t_d5e09aa88d044e 56,68
+  s_461f57b5773c46::t_8914254e0f7f0a 76
+  s_461f57b5773c46::t_49ec7a3b7e749d 69
+AGENTS.md
+  s_03013c781aea2e::t_8f163a7c08422d 23
+  s_03013c781aea2e::t_5e09ecbae14381 10
+  s_03013c781aea2e::t_bcc8b31ac9a11e 19
+  s_03013c781aea2e::t_df3f9fcbec6434 6
+arabic/references/research-mode.md
+  s_461f57b5773c46::t_dd5e719c65fe88 115,118
+  s_461f57b5773c46::t_0e5c45382983f1 46
+research/index.json
+  s_461f57b5773c46::t_0dc2a77f98edb0 7
+  s_461f57b5773c46::t_08e57f9578fca3 25
+  s_461f57b5773c46::t_47fb37ee8c2fa7 16
+  s_461f57b5773c46::t_e0b93b4dc53001 34
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "65468abfe7a910041e451b93908471f7646e145d",
+  "prompts": {},
+  "sessions": {
+    "s_03013c781aea2e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "9c646641-08b6-44f8-a428-330663195c4a",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    },
+    "s_461f57b5773c46": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "7dd0ab62-8099-4d3b-9012-a6d967f092d9",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
