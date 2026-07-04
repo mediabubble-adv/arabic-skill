@@ -4,15 +4,15 @@ Use the Awesome Arabic Skill as the root router for Arabic content tasks.
 
 ## Routing rules
 
-- Bare `/arabic` and `/arabic guide` use Advisory Mode.
-- `/arabic write ...` routes through `arabic/references/command-router.md`.
+- Bare `/arabic` and `/arabic guide` use Advisory Mode (first install → load `onboarding-mode.md` Path A).
+- `/arabic init` creates `.arabic/` from `arabic/templates/.arabic/` — load `onboarding-mode.md`.
 - `/arabic plan ...` routes through Project Mode and writes plans under `.arabic/projects/` when the workflow calls for persistence.
 - `/arabic audit ...` reviews existing Arabic copy.
 - `/arabic coach ...` repairs weak prompts.
 - `/arabic research ...` runs the research-intelligence workflow — load `arabic/references/research-mode.md`.
 - `/arabic voice ...` loads or saves brand voice memory.
 - `/arabic auto ...` scans the workspace and infers the right command.
-- `/arabic init` creates the `.arabic/` scaffold.
+- `/arabic write ...` routes through `arabic/references/command-router.md`.
 
 ## Before you answer
 
@@ -26,6 +26,7 @@ Use the Awesome Arabic Skill as the root router for Arabic content tasks.
 
 ```text
 /arabic
+/arabic init
 /arabic write caption --dialect masri --platform instagram --count 12
 /arabic plan website --brief .arabic/briefs/site.yaml
 /arabic audit --file content/landing.ar.md

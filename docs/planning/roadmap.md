@@ -1,9 +1,9 @@
 # Product Roadmap — `arabic`
 
 > Status: Active  
-> Product version: **1.2.1** (current — see root `VERSION`)  
+> Product version: **1.2.2** (current — see root `VERSION`)  
 > **v1.0.0** shipped 2026-06-30 · **v1.1.0** website + P8 runtime · **v1.1.1** npm distribution · **v1.2.0** full Cursor + skills.sh · **v1.2.1** install fix  
-> Next train: **1.2.x** — onboarding (**R0–R4 ✅**)  
+> Next train: **1.2.x** — polish & patch (**R0–R4 ✅**, onboarding ✅)  
 > Positioning: **Masri-first Awesome Arabic Skill — pan-Arab capable**
 
 ---
@@ -43,7 +43,7 @@ user asks → guide → clarify → recommend → write → review
 | **1.1.0** | ✅ Shipped | Website (G13–G18), P8 runtime, npx installer scaffold | `v1.1.0` |
 | **1.1.1** | ✅ Shipped | npm publish CI, pack gates, `@mediabubble-adv/arabic-skill` on registry | `v1.1.1` |
 | **1.2.0** | ✅ Shipped | Full Cursor npx install, skills.sh registry docs + validation | `v1.2.0` |
-| **1.2.1+** | Next | onboarding | — |
+| **1.2.1+** | Next | polish, patch | — |
 | **2.0.0** | Future | Breaking changes, major routing restructure | `v2.0.0` |
 
 ### Shipped phase map (reference)

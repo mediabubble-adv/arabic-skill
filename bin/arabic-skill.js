@@ -172,6 +172,17 @@ function shouldInstallCursorIntegration(options) {
   return !options.dir && (options.target === "cursor" || options.target === "all");
 }
 
+function printNextSteps() {
+  console.log(`
+Next steps:
+  1. Open your project in your editor
+  2. /arabic guide     — advisory first run (no repo files needed)
+  3. /arabic init      — scaffold .arabic/ in a client repo
+
+Install docs: https://arabic-skill.vercel.app/install
+`);
+}
+
 function main() {
   try {
     const options = parseArgs(process.argv.slice(2));
@@ -200,6 +211,10 @@ function main() {
       console.log(
         "Skill only (--dir). For full Cursor integration (command + rule), run: npx @mediabubble-adv/arabic-skill install --target cursor"
       );
+    }
+
+    if (!options.dryRun) {
+      printNextSteps();
     }
   } catch (error) {
     console.error(`Error: ${error.message}`);

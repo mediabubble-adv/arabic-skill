@@ -27,11 +27,14 @@ npx @mediabubble-adv/arabic-skill@latest install --dir ~/.cursor/skills --force
 
 **أول أمر بعد التثبيت:** `/arabic guide`
 
+**في مشروع عميل:** `/arabic init` — ينشئ `.arabic/` للبرّيفات والخطط
+
 ### بعد التثبيت
 
 1. افتح المشروع اللي شغال عليه
-2. اكتب `/arabic guide` وابدأ
-3. لو عندك براند ثابت: `/arabic voice save`
+2. اكتب `/arabic guide` وابدأ (من غير ملفات في الريبو)
+3. لو مشروع عميل: `/arabic init` ثم `/arabic write … --brief .arabic/briefs/example.yaml`
+4. لو عندك براند ثابت: `/arabic voice save`
 
 ## أول مرة أسمع عن المهارات
 

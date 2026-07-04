@@ -16,6 +16,7 @@
 | **audit** | `/arabic audit …` (incl. `rtl`, `--dir`) | 6 |
 | **rtl** | `/arabic audit rtl` | 6 |
 | **research** | `/arabic research …` | 6 |
+| **onboarding** | `/arabic init`, first-run / bare `/arabic` without `.arabic/` | 4 |
 
 Always load: `SKILL.md` (already active), target `dialects/{dialect}.md`, and `voice.md` when present.
 
@@ -100,7 +101,20 @@ Load in order:
 
 ---
 
-## 7. Engine and template slices
+## 7. Onboarding class (`onboarding`)
+
+Load in order:
+
+1. `references/onboarding-mode.md` — Path A (tool) vs Path B (project scaffold)
+2. `references/command-router.md` — **§6 `.arabic/` scaffold only**
+3. `references/advisory-mode.md` — only for Path A `/arabic guide`
+4. `arabic/templates/.arabic/` — read template files when executing `/arabic init` (copy into workspace)
+
+**Do not load:** engines, audit pipeline, or research layer during onboarding.
+
+---
+
+## 8. Engine and template slices
 
 When `engines.md` or `output-templates.md` is needed, load **only the matching section** — do not pull the full file into context if the agent can read by heading.
 

@@ -1,0 +1,5 @@
+# .arabic/config.yaml — workspace defaults (briefs/plans may override)
+dialect: masri
+market: egypt
+brand_name: ""
+register: L2-L3
