@@ -3,7 +3,7 @@
 > Status: Active  
 > Product version: **1.2.1** (current — see root `VERSION`)  
 > **v1.0.0** shipped 2026-06-30 · **v1.1.0** website + P8 runtime · **v1.1.1** npm distribution · **v1.2.0** full Cursor + skills.sh · **v1.2.1** install fix  
-> Next train: **1.2.x** — onboarding, Research R2 (**R0 ✅** scaffold · **R1** platform-register distill in flight)  
+> Next train: **1.2.x** — onboarding, Research R2 (**R0 ✅** scaffold · **R1 ✅** platform-register distill)
 > Positioning: **Masri-first Awesome Arabic Skill — pan-Arab capable**
 
 ---
