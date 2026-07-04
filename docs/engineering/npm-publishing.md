@@ -41,7 +41,7 @@ node bin/arabic-skill.js --help
 node bin/arabic-skill.js install --target cursor --dry-run
 ```
 
-`npm run validate` includes `validate-npm-pack.sh` (tarball contains `bin/`, `arabic/SKILL.md`, `VERSION`).
+`npm run validate` includes `validate-npm-pack.sh` (tarball contains `bin/arabic-skill.js`, `arabic/SKILL.md`, `VERSION`, `README.md`, `LICENSE`).
 
 ## CI Publish
 
