@@ -62,7 +62,7 @@
 
 ### TikTok
 - **Formats:** In-feed video (9:16), Spark Ads (boost organic), TopView.
-- **Limits:** Caption **100 chars** max (4 visible lines); practical **30–40** for safe zone. Video 9:16 min 540×960; **9–15s** recommended.
+- **Limits:** Keep captions within **~100 chars** to reduce “See more” truncation (ad-type limits vary; Spark Pull supports up to **150** in TikTok specs); practical **30–40** for safe zone. Video 9:16 min 540×960; **9–15s** recommended.
 - **Arabic / RTL:** Use TikTok's **Arabic Version RTL** safe-zone templates (not LTR) — download from [In-Feed specs](https://ads.tiktok.com/help/article/video-ads-specifications). Long captions shrink the overlay safe area.
 - **Spark vs Non-Spark:** Spark caption is pulled from the organic post and **cannot be edited** in Ads Manager — fix copy before authorization. Non-Spark: no @, hashtags, or links in caption field.
 - **Hook logic:** First 2 seconds, native and un-ad-like. A face + a claim beats a logo.
