@@ -21,7 +21,7 @@
 - Install: `npx @mediabubble-adv/arabic-skill install --target cursor` (or manually clone the repo and copy).
 - `npx install` copies only `arabic/` to the skills directory—not repo `.cursor/rules` or `.cursor/commands`; full Cursor integration requires clone or manual copy.
 - `reference/` holds 38 canonical specialist skills; runtime `arabic/` is the distilled product—do not delete `reference/` casually.
-- Current product version is `1.1.0` tagged `v1.1.0` on `main` (PR #49) in root `VERSION`, `CHANGELOG.md`, `package.json`, and `arabic/SKILL.md`.
+- Current product version is `1.1.1` on branch `feat/distribution-v1.1.1` (npm publish CI); `1.1.0` tagged on `main`.
 - P8 runtime shipped in **1.1.0** on `main`: `plan series`, `audit rtl`, `audit --dir` (40-file cap), `load-discipline.md` + `rtl-audit.md`; legacy + AI-likelihood scoring on `/arabic audit` only—not every write.
 - Default git branch is `main` (not `master`).
 - `docs/supported/` documents **24** tool profiles; `scripts/validate-supported.sh` enforces README index and `support-matrix.md` row parity (in `npm run validate` and CI).

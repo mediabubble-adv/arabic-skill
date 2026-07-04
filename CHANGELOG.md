@@ -7,12 +7,28 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
-Working toward **v1.1.1** (distribution follow-up) and **v1.2.0** (research R4, onboarding).
+Working toward **v1.2.0** (research R4, onboarding).
 
 ### Planned
 - `npx skills add` registry distribution
-- npm publish for `@mediabubble-adv/arabic-skill`
 - Full Cursor install path (rules + commands, not only `arabic/` runtime copy)
+
+## [1.1.1] - 2026-07-04
+
+**Distribution patch.** Publishes `@mediabubble-adv/arabic-skill` to npm with CI gates so `npx install` works without cloning the repo.
+
+### Added
+- `.github/workflows/npm-publish.yml` — publish on `v*.*.*` tag or manual dispatch (`NPM_TOKEN` required)
+- `scripts/validate-npm-pack.sh` — tarball must include `bin/`, `arabic/SKILL.md`, `VERSION`
+- `prepublishOnly` — runs full `validate` + `pack:check` before publish
+- npm package `keywords` and `author` metadata
+
+### Fixed
+- `website/` — `postcss` override to `^8.5.16` (GHSA advisory; Next 16.2.10 pin)
+
+### Changed
+- `VERSION`, `arabic/SKILL.md`, and `package.json` now report `1.1.1`
+- npm registry: `1.0.0` → `1.1.1` (includes all `1.1.0` product changes)
 
 ## [1.1.0] - 2026-07-04
 
@@ -80,7 +96,8 @@ Working toward **v1.1.1** (distribution follow-up) and **v1.2.0** (research R4, 
 - Renamed runtime folder `arabic-content/` → `arabic/`
 - Version policy: **0.x = development**, **1.0.0 = plan complete + first public release**
 
-[Unreleased]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.1.1...HEAD
+[1.1.1]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/mediabubble-adv/arabic-skill/releases/tag/v1.0.0
 [0.1.0]: https://github.com/mediabubble-adv/arabic-skill/releases/tag/v0.1.0

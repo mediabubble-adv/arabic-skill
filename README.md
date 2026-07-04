@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/mediabubble-adv/arabic-skill/releases"><img src="https://img.shields.io/badge/version-1.1.0-blue" alt="version"></a>
+  <a href="https://github.com/mediabubble-adv/arabic-skill/releases"><img src="https://img.shields.io/badge/version-1.1.1-blue" alt="version"></a>
   <a href="./docs/README.md"><img src="https://img.shields.io/badge/docs-index-green" alt="docs"></a>
   <a href="./docs/supported/README.md"><img src="https://img.shields.io/badge/install-supported_tools-purple" alt="install"></a>
   <img src="https://img.shields.io/badge/runtime-arabic-blue" alt="runtime folder">
@@ -14,7 +14,7 @@
 
 **Awesome Arabic Skill** (`arabic`) is a MediaBubble skill for Arabic content creation, strategy, research distillation, and review. It is designed to behave like a senior Arabic content partner inside AI coding tools: it reads context, clarifies intent, recommends a direction, writes, humanizes, and audits before delivery.
 
-It is **not** a translation shortcut. Current version is `1.1.0` (website + distribution + P8 runtime).
+It is **not** a translation shortcut. Current version is `1.1.1` (npm distribution patch; website + P8 runtime shipped in `1.1.0`).
 
 <p align="center">
   <img src="./public/assets/claude-color.svg" alt="Claude" width="26" height="26">
@@ -230,7 +230,8 @@ Runtime install folder is `arabic/`. The GitHub repo can stay `mediabubble-adv/a
 
 - `0.1.x` means development.
 - `v1.0.0` was the first public release.
-- `v1.1.0` is the current release (website, distribution, P8 runtime).
+- `v1.1.1` is the current release (npm publish + distribution CI).
+- `v1.1.0` shipped the website, P8 runtime, and npx installer scaffold.
 - Future release tags should only be created after the documented gates pass.
 
 See [Versioning and Releases](./docs/engineering/versioning-and-releases.md).
