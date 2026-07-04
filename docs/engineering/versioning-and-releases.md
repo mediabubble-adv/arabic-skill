@@ -5,7 +5,7 @@
 The canonical product version lives in the repository root:
 
 ```text
-VERSION          → 1.0.0 (first public release)
+VERSION          → 1.1.1 (current)
 CHANGELOG.md     → human-readable history
 arabic/SKILL.md → version field in YAML frontmatter (must match VERSION)
 ```
@@ -20,10 +20,11 @@ arabic/SKILL.md → version field in YAML frontmatter (must match VERSION)
 |-------|---------------|---------|
 | **Development** | `0.1.x` | Architecture, docs, validation — **not** the public product launch |
 | **First public release** | **`1.0.0`** | All [PRD success criteria](../product/prd.md#12-success-criteria) met + [implementation plan](../planning/implementation-plan.md) Phases **P1–P6** complete |
-| **Distribution** | `1.1.0` | Website, npm `npx` installer, `npx skills add`, enhanced install UX |
+| **Distribution** | `1.1.x` | Website, npm `npx` installer, P8 runtime extensions |
+| **Distribution follow-ups** | `1.2.0` | `npx skills add`, full Cursor install, research R4, onboarding |
 | **Breaking changes** | `2.0.0` | Removed modes, restructured routing, incompatible `voice.md` |
 
-**Important:** `v1.0.0` is the first public release. Current state is **`1.0.0`**.
+**Current state:** **`1.1.1`** on `main` — npm distribution patch shipped 2026-07-04.
 
 ---
 
@@ -32,8 +33,8 @@ arabic/SKILL.md → version field in YAML frontmatter (must match VERSION)
 | Bump | When | Example |
 |------|------|---------|
 | **MAJOR** | Breaking skill behavior, removed modes, restructured routing | 2.0.0 |
-| **MINOR** | New modes, engines, domains, non-breaking features | 1.1.0 |
-| **PATCH** | Fixes, typo, taboo update, example additions | 1.0.1 |
+| **MINOR** | New modes, engines, domains, non-breaking features | 1.2.0 |
+| **PATCH** | Fixes, typo, taboo update, example additions, distribution patches | 1.1.1 |
 
 During `0.x`, increments are **development markers** only. Optional `v0.1.0` tag for contributors; no "production" announcement.
 
@@ -49,6 +50,8 @@ Ship **v1.0.0** only when **all** of the following are true:
 4. `scripts/validate-skill.sh` — passes with no blocking errors
 5. Install instructions in README — tested on at least Cursor + Claude paths
 
+**Status:** ✅ Gate passed — `v1.0.0` tagged 2026-06-30.
+
 See [Skill Craft Research](../analysis/skill-craft-and-release-research.md) for quality bar rationale.
 
 ---
@@ -59,9 +62,11 @@ Format: `v{MAJOR}.{MINOR}.{PATCH}`
 
 Examples:
 
-- `v0.1.0` — development baseline (optional)
-- **`v1.0.0`** — **first public release** (plan complete)
-- `v1.1.0` — distribution layer (website, skills.sh)
+- `v0.1.0` — development baseline
+- **`v1.0.0`** — **first public release** (plan complete) ✅
+- `v1.1.0` — website + P8 runtime + npx installer scaffold ✅
+- `v1.1.1` — npm publish CI and pack gates ✅
+- `v1.2.0` — distribution follow-ups + research R4 (next)
 - `v2.0.0` — breaking changes
 
 **Never** use plan-version labels (v4, v5.2) in tags or docs. Product semver only.
@@ -79,15 +84,15 @@ Examples:
 
 ### Public release (v1.0.0+)
 
-1. Confirm v1.0.0 gate checklist (above)
-2. Update `VERSION` and `CHANGELOG.md` (move `[Unreleased]` → `[1.0.0]`)
+1. Confirm release gate checklist for the target version
+2. Update `VERSION` and `CHANGELOG.md` (move `[Unreleased]` → `[x.y.z]`)
 3. Update `arabic/SKILL.md` frontmatter `version`
 4. Update `arabic/references/INDEX.md` build status if file count changed
-5. Open PR to `main` — CI must pass
+5. Open PR to `main` — CI must pass (`npm run validate`)
 6. Merge PR
-7. Create annotated tag: `git tag -a v1.0.0 -m "v1.0.0: first public release"`
-8. Push tag: `git push origin v1.0.0`
-9. GitHub Actions `release.yml` creates GitHub Release
+7. Create annotated tag: `git tag -a v1.1.1 -m "v1.1.1: distribution patch"`
+8. Push tag: `git push origin v1.1.1`
+9. GitHub Actions `release.yml` creates GitHub Release; `npm-publish.yml` publishes to npm (requires `NPM_TOKEN`)
 
 ---
 
@@ -98,17 +103,12 @@ Follow [Keep a Changelog](https://keepachangelog.com/):
 ```markdown
 ## [Unreleased]
 
+Working toward v1.2.0
+
+## [1.1.1] - 2026-07-04
+
 ### Added
-- Work in progress toward v1.0.0
-
-## [1.0.0] - 2026-XX-XX
-
-### Added
-- Advisory Mode in SKILL.md
-- references/advisory-mode.md
-
-### Changed
-- Default flow: guide before write
+- npm publish CI and pack validation gates
 ```
 
 ---
@@ -125,13 +125,16 @@ Follow [Keep a Changelog](https://keepachangelog.com/):
 
 ## Distribution Channels
 
-| Channel | Available from |
-|---------|----------------|
-| Git clone + manual copy | Now |
-| GitHub Releases (zip) | v1.0.0+ |
-| `npx @mediabubble-adv/arabic-skill install` | v1.1.0 distribution work (package scaffold present) |
-| `npx skills add mediabubble-adv/arabic-skill` | v1.1.0 registry/discovery work (planned) |
-| Install website | v1.1.0 (post-v1 test project) |
+| Channel | Status | Notes |
+|---------|--------|-------|
+| Git clone + manual copy | ✅ Available | Full Cursor integration (rules + commands) |
+| GitHub Releases (zip) | ✅ v1.0.0+ | Tag push → `release.yml` |
+| `npx @mediabubble-adv/arabic-skill install` | ✅ v1.1.1 | Copies `arabic/` runtime; Cursor/Claude/Codex presets |
+| Install website | ✅ v1.1.0 | https://arabic-skill.vercel.app |
+| `npx skills add mediabubble-adv/arabic-skill` | → v1.2.0 | skills.sh registry / discovery |
+| Full Cursor npx install | → v1.2.0 | Also copy `.cursor/rules` + `.cursor/commands` |
+
+See [npm Publishing](./npm-publishing.md) for maintainer publish steps.
 
 ---
 

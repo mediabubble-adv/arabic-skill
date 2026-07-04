@@ -1,8 +1,9 @@
 # Product Roadmap — `arabic`
 
 > Status: Active  
-> Product version: **0.1.0** (development — see root `VERSION`)  
-> **v1.0.0** = first public release when plan + PRD criteria complete  
+> Product version: **1.1.1** (current — see root `VERSION`)  
+> **v1.0.0** shipped 2026-06-30 · **v1.1.0** website + P8 runtime · **v1.1.1** npm distribution patch  
+> Next train: **v1.2.0** — `npx skills add`, full Cursor install, research R4  
 > Positioning: **Masri-first Awesome Arabic Skill — pan-Arab capable**
 
 ---
@@ -35,16 +36,18 @@ user asks → guide → clarify → recommend → write → review
 
 ## Release Train
 
-| Milestone | Target | Theme | Tag |
+| Milestone | Status | Theme | Tag |
 |-----------|--------|-------|-----|
-| **0.1.0** | Now | Dev baseline — architecture, docs, validation | `v0.1.0` (optional) |
-| **1.0.0** | Plan complete | **First public release** — Phases P1–P6 + PRD §12 | **`v1.0.0`** |
-| **1.1.0** | Post-v1 | Distribution — website, `npx skills add`, install UX | `v1.1.0` |
+| **0.1.0** | ✅ Shipped | Dev baseline — architecture, docs, validation | `v0.1.0` |
+| **1.0.0** | ✅ Shipped | **First public release** — Phases P1–P6 + PRD §12 | `v1.0.0` |
+| **1.1.0** | ✅ Shipped | Website (G13–G18), P8 runtime, npx installer scaffold | `v1.1.0` |
+| **1.1.1** | ✅ Shipped | npm publish CI, pack gates, `@mediabubble-adv/arabic-skill` on registry | `v1.1.1` |
+| **1.2.0** | Next | `npx skills add`, full Cursor install, research R4, onboarding | — |
 | **2.0.0** | Future | Breaking changes, major routing restructure | `v2.0.0` |
 
-### Work toward v1.0.0 (not separate public releases)
+### Shipped phase map (reference)
 
-> **Phase IDs are canonical in [implementation-plan.md §0](./implementation-plan.md#0-canonical-phase-map--golden-tests-source-of-truth).** Phases **P0–P6** below are **implementation milestones** merged to `main` until the v1.0.0 gate passes. They do not each require a public semver tag.
+> **Phase IDs are canonical in [implementation-plan.md §0](./implementation-plan.md#0-canonical-phase-map--golden-tests-source-of-truth).** Phases **P0–P6** gate **v1.0.0**; **P7** + **P8** gate **v1.1.x**; distribution follow-ups move to **v1.2.0**.
 
 | Phase | Theme | Key deliverables |
 |-------|-------|------------------|
@@ -175,20 +178,22 @@ Commands: see [Command Surface](./command-surface.md).
 
 ---
 
-## P7 — Distribution (v1.1.0)
+## P7 — Distribution (v1.1.0 + v1.1.1)
 
 **Goal:** Most-installed Arabic skill — install friction near zero.
 
 ### Deliverables
 
-| Item | Action |
+| Item | Status |
 |------|--------|
-| `website/` | **Post-v1 test project** — install site (impeccable.style-style); spec: [website-design-system.md](./website-design-system.md) |
-| `docs/supported/cursor/` | Full adapter + `/arabic` command tree |
-| `docs/supported/claude/` | Skill packaging guide |
-| `scripts/install.js` | `npx arabic install` (future) |
-| Golden test suite | G13–G18 (website) in `tests/golden/`; G1–G12 already gate v1.0.0 |
-| GitHub Releases | Automated from tags |
+| `website/` | ✅ Shipped v1.1.0 — live at https://arabic-skill.vercel.app; spec: [website-design-system.md](./website-design-system.md) |
+| `docs/supported/cursor/` | ✅ Shipped — full adapter + `/arabic` command tree |
+| `docs/supported/claude/` | ✅ Shipped — skill packaging guide |
+| `bin/arabic-skill.js` + npm | ✅ Shipped v1.1.1 — `npx @mediabubble-adv/arabic-skill install` on [npm](https://www.npmjs.com/package/@mediabubble-adv/arabic-skill) |
+| Golden test suite | ✅ Manual G13–G18 checklist in `tests/golden/`; automated runner → v1.2.0 |
+| GitHub Releases | ✅ Shipped — tag push triggers `release.yml`; npm publish on tag via `npm-publish.yml` |
+| `npx skills add` registry | → **v1.2.0** — skills.sh discovery path |
+| Full Cursor npx install | → **v1.2.0** — copy `.cursor/rules` + `.cursor/commands`, not only `arabic/` runtime |
 
 ### Tool Priority
 
@@ -223,7 +228,7 @@ See [CI Pipeline](../engineering/ci-pipeline.md).
 | Audit Mode available | Every delivery |
 | Runtime file integrity | 0 broken references in CI |
 | Tool install docs | **24** tools documented; **0** Unknown-tier; npx presets for Cursor, Claude, Codex |
-| Golden test pass rate | **G1–G12** pass before **v1.0.0** tag (G13–G18 gate v1.1.0) — see [implementation-plan §0.3](./implementation-plan.md#03-golden-test-master-table-g1g18) |
+| Golden test pass rate | **G1–G12** ✅ gated v1.0.0; **G13–G18** ✅ manual checklist shipped v1.1.0 — see [implementation-plan §0.3](./implementation-plan.md#03-golden-test-master-table-g1g18) |
 
 ---
 
