@@ -1,0 +1,29 @@
+research/knowledge-base/platforms/google.md
+  s_e22df37b935413::t_ca5491522580c6 52-53
+research/distillation-queue.md
+  s_e22df37b935413::t_844ddfdd59be66 44-45
+  s_e22df37b935413::t_9446c25c489649 20
+arabic/references/ads-service-matrix.md
+  s_e22df37b935413::t_2ac65bc841f2de 61
+  s_e22df37b935413::t_0bcf418a32108a 29-37
+tests/golden/r2-platform-kb.md
+  s_e22df37b935413::t_d8829f9a294115 29-40,44
+research/knowledge-base/platforms/meta.md
+  s_e22df37b935413::t_7d207e6244bc40 59-60
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "0a4e1376aff084b9d11e13a4e724cb6c6027c881",
+  "prompts": {},
+  "sessions": {
+    "s_e22df37b935413": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "997ffe26-6e5f-4828-bfbb-c1e3cd07cd76",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
