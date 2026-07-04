@@ -17,6 +17,7 @@ examples to the **target dialect** locked for the piece.
 | Command | Loads | Behavior |
 |---|---|---|
 | `/arabic audit` | This file | 9-point QA on pasted text or `--file` |
+| `/arabic audit --platform <name>` | This file + § Platform register targets | Score check #1 against channel L-level |
 | `/arabic audit rtl` | `rtl-audit.md` + this file | Tier-1 RTL/UI source audit + Arabic string QA |
 | `/arabic audit --dir <path>` | `project-context-scanner.md` + this file | Capped scan (40 files) of Arabic copy in tree |
 
@@ -30,6 +31,25 @@ RTL specifics: `references/rtl-audit.md`. Directory cap rules: same file + scann
 2. **Register consistency** — right formality level for platform + audience
 3. **Cultural fitness** — taboos, humor boundaries, religious expression (`taboos.md`)
 4. **Brand compliance** — approved lexicon, voice constraints, forbidden words (`voice.md` if present)
+
+## Platform register targets (`--platform`)
+
+When `--platform` is set (or the copy is clearly for one channel), score **check #1** against this table.
+**±1** of target still passes; **≥2** levels off = fail register scan. Distilled from `reference/arabic-qa`.
+
+| Platform | Target register | Audit notes |
+|----------|-----------------|-------------|
+| `facebook` | L2–L3 | Broad age mix — avoid L1 slang |
+| `instagram` | L2 | Stories/polls may dip to L1 |
+| `linkedin` | L3–L4 | Masri expert tone — not stiff MSA |
+| `tiktok` | L1–L2 | Friend-talking energy; imperfect = authentic |
+| `email` | L3 | No L1; single clear CTA |
+| `whatsapp` | L2–L3 | Intimate — one topic per message |
+| `landing` | L3 | Hero may mix MSA; CTA L2–L3 |
+| `blog` | Mixed | MSA H1 + L3 body + L2 FAQ |
+| `google` / `meta` ads | Platform write rules first | Fall back to ad-platform register from write engine |
+
+Report **target** and **detected** register in the QA header (e.g. `Target: L1–L2 (tiktok) · Detected: L3–L4`).
 
 ## The 9 checks (score each 0/1/2 → max 18)
 
