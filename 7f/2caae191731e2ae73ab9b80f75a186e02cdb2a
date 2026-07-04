@@ -1,0 +1,21 @@
+README.md
+  s_667765b9a901fe::t_a9f59cac71dfcf 63
+  s_667765b9a901fe::t_2527df07271c59 67
+  s_667765b9a901fe::t_a3ab46b7de1c22 44
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "7f2caae191731e2ae73ab9b80f75a186e02cdb2a",
+  "prompts": {},
+  "sessions": {
+    "s_667765b9a901fe": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "fa174e6d-030e-412e-b623-fbddeafe9355",
+        "model": "default"
+      },
+      "human_author": null
+    }
+  }
+}
