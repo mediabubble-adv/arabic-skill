@@ -26,7 +26,7 @@
 
 ### Meta — Facebook & Instagram
 - **Formats:** Feed image/video, Reels, Stories, Carousel, Collection, click-to-WhatsApp.
-- **Limits (practical):** Primary text ~125 chars before "…see more" / "عرض المزيد"; headline ~40 chars; link description ~30.
+- **Limits (official recommended):** Primary text **125** chars; headline **40**; description **25–30**. Reels/Stories overlay ~**72** chars practical. FB Feed headline often truncates at **~27** on mobile.
 - **Hook logic:** The first line *is* the ad. Lead with tension, a number, or a direct address — never the brand name.
 - **CTA behavior:** One CTA per ad. In Egypt, click-to-WhatsApp out-converts on-platform forms for SMEs.
 - **Egyptian audience:** Facebook still dominates 30–50 demo; Reels reach Gen Z. COD + WhatsApp = trust. Comments are a sales channel — write to invite them.
@@ -41,7 +41,7 @@
 ```
 
 ### Google Search
-- **Formats:** Responsive Search Ads — up to 15 headlines (30 chars each), 4 descriptions (90 chars each).
+- **Formats:** Responsive Search Ads — up to **15** headlines (**30** chars each), **4** descriptions (**90** chars each), display path **15** chars each.
 - **Limits:** Arabic counts per character; keep headlines ≤30 incl. spaces. Pin the offer headline to position 1.
 - **Hook logic:** Match the query intent literally. If they searched "شحن تكييف القاهرة", Headline 1 = "شحن تكييف في القاهرة".
 - **CTA behavior:** Action + reassurance: "احجز دلوقتي — زيارة في نفس اليوم".
@@ -62,7 +62,9 @@
 
 ### TikTok
 - **Formats:** In-feed video (9:16), Spark Ads (boost organic), TopView.
-- **Limits:** Caption ~100 chars practical; the video is the ad, caption is secondary.
+- **Limits:** Caption **100 chars** max (4 visible lines); practical **30–40** for safe zone. Video 9:16 min 540×960; **9–15s** recommended.
+- **Arabic / RTL:** Use TikTok's **Arabic Version RTL** safe-zone templates (not LTR) — download from [In-Feed specs](https://ads.tiktok.com/help/article/video-ads-specifications). Long captions shrink the overlay safe area.
+- **Spark vs Non-Spark:** Spark caption is pulled from the organic post and **cannot be edited** in Ads Manager — fix copy before authorization. Non-Spark: no @, hashtags, or links in caption field.
 - **Hook logic:** First 2 seconds, native and un-ad-like. A face + a claim beats a logo.
 - **CTA behavior:** Casual and verbal: "اطلب من اللينك اللي في البايو".
 - **Egyptian audience:** L1–L2 Masri, fast cuts, trending sounds, self-aware humor. Polished = scrolled past.

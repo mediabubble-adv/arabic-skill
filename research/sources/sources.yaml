@@ -21,3 +21,59 @@ sources:
     trust_tier: A
     topics: [humanization, audit]
     runtime_eligible: true
+  - id: meta-text-best-practices-2026
+    title: "Creative best practices for text in ads"
+    url: https://www.facebook.com/business/help/223409425500940
+    publisher: Meta
+    accessed: 2026-07-04
+    trust_tier: A
+    topics: [platforms, ads, meta]
+    runtime_eligible: true
+  - id: meta-lead-ads-specs-2026
+    title: "Design specifications for Lead Ads with Instant Form"
+    url: https://www.facebook.com/business/help/908491205873167
+    publisher: Meta
+    accessed: 2026-07-04
+    trust_tier: A
+    topics: [platforms, ads, meta]
+    runtime_eligible: true
+  - id: meta-ads-guide-2026
+    title: "Meta Ads Guide — format specs"
+    url: https://www.facebook.com/business/ads-guide/update
+    publisher: Meta
+    accessed: 2026-07-04
+    trust_tier: A
+    topics: [platforms, ads, meta]
+    runtime_eligible: true
+  - id: google-rsa-specs-2026
+    title: "About responsive search ads"
+    url: https://support.google.com/google-ads/answer/7684791
+    publisher: Google
+    accessed: 2026-07-04
+    trust_tier: A
+    topics: [platforms, ads, google]
+    runtime_eligible: true
+  - id: google-search-campaign-specs-2026
+    title: "Search campaigns specs and format requirements"
+    url: https://support.google.com/google-ads/answer/17092074
+    publisher: Google
+    accessed: 2026-07-04
+    trust_tier: A
+    topics: [platforms, ads, google]
+    runtime_eligible: true
+  - id: tiktok-infeed-specs-2026
+    title: "TikTok Auction In-Feed Ads"
+    url: https://ads.tiktok.com/help/article/video-ads-specifications
+    publisher: TikTok
+    accessed: 2026-07-04
+    trust_tier: A
+    topics: [platforms, ads, tiktok]
+    runtime_eligible: true
+  - id: tiktok-topview-specs-2026
+    title: "TopView ad specifications"
+    url: https://ads.tiktok.com/help/article/tiktok-reservation-topview
+    publisher: TikTok
+    accessed: 2026-07-04
+    trust_tier: A
+    topics: [platforms, ads, tiktok]
+    runtime_eligible: true
