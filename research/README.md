@@ -61,8 +61,9 @@ Monthly cadence: [docs/planning/research-monthly-cron.md](../docs/planning/resea
 ## Validation
 
 ```bash
-bash scripts/validate-research-scaffold.sh   # R0 — required files exist
-# scripts/validate-research.sh             # R4 — stale-source checker (planned)
+bash scripts/validate-research-scaffold.sh   # R0 — scaffold + KB/index sync
+bash scripts/validate-research.sh            # R4 — stale sources + queue cap
+npm run validate:research                    # R4 only
 ```
 
 ## Phase status
@@ -73,4 +74,4 @@ bash scripts/validate-research-scaffold.sh   # R0 — required files exist
 | **R1** | First reference distillation | ✅ |
 | **R2** | Platform KB (Meta, Google, TikTok) | ✅ |
 | **R3** | `/arabic research` wiring | ✅ |
-| **R4** | `validate-research.sh` | Planned |
+| **R4** | `validate-research.sh` | ✅ |
