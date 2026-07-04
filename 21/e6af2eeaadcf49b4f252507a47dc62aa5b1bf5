@@ -1,0 +1,38 @@
+AGENTS.md
+  s_8ada17b37e54c1::t_fd8a54bf25d7c2 29
+  s_8ada17b37e54c1::t_4af96fb06978ae 8
+docs/planning/website-dogfood.md
+  s_667765b9a901fe::t_05a4373d1aaad3 3
+tests/golden/g13-g18-website.md
+  s_667765b9a901fe::t_69505270f7cdf7 38
+  s_667765b9a901fe::t_0fdcaf10ce3a39 32-34
+  s_667765b9a901fe::t_52a1df5427e532 20
+  s_667765b9a901fe::t_b467f1a6aa0cde 24-28
+  s_667765b9a901fe::t_82a9b8738f01da 7-14
+website/.gitignore
+  s_667765b9a901fe::t_ff74ebe2004e13 39-42
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "21e6af2eeaadcf49b4f252507a47dc62aa5b1bf5",
+  "prompts": {},
+  "sessions": {
+    "s_667765b9a901fe": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "fa174e6d-030e-412e-b623-fbddeafe9355",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    },
+    "s_8ada17b37e54c1": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "a49643dd-1331-4609-a4ac-947137410152",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
