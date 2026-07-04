@@ -1,0 +1,19 @@
+website/package.json
+  s_667765b9a901fe::t_6bc91cb067afcd 27-29
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "e4516f734e782f9d2dcdff79b486b7080bce9e07",
+  "prompts": {},
+  "sessions": {
+    "s_667765b9a901fe": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "fa174e6d-030e-412e-b623-fbddeafe9355",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
