@@ -15,6 +15,7 @@
 | **write** | `/arabic write …`, Pro Mode generation | 9 |
 | **audit** | `/arabic audit …` (incl. `rtl`, `--dir`) | 6 |
 | **rtl** | `/arabic audit rtl` | 6 |
+| **research** | `/arabic research …` | 6 |
 
 Always load: `SKILL.md` (already active), target `dialects/{dialect}.md`, and `voice.md` when present.
 
@@ -48,6 +49,7 @@ Load in order:
 5. `references/project-context-scanner.md` — only for `explain`, `tutorial`, `readme`, or repo-aware copy
 6. `references/humanization-protocol.md` — **after draft**, before delivery
 7. `references/taboos.md` — before final delivery
+8. `references/ads-service-matrix.md` — **one platform § only** for `write meta|google|tiktok|snap|linkedin|youtube|ad|ads`
 
 **Do not load:** `audit-mode.md`, `project-mode.md`, or unrelated engines/templates.
 
@@ -83,7 +85,22 @@ Extends audit class for UI/code surfaces:
 
 ---
 
-## 6. Engine and template slices
+## 6. Research class (`research`)
+
+Load in order:
+
+1. `references/research-mode.md` — command workflow (collect / distill / status)
+2. `research/prompts/{matching}.md` — one prompt template for the topic class
+3. `research/distillation-queue.md` — for `distill` or when queueing findings
+4. `research/index.json` — for `status` or post-run index update
+5. `research/sources/sources.yaml` — when citing or checking stale sources
+6. Target runtime file slice — e.g. `references/ads-service-matrix.md` § one platform — only when planning distill
+
+**Do not load:** full `engines.md`, `project-mode.md`, or unrelated dialect/domain files unless the topic requires them.
+
+---
+
+## 7. Engine and template slices
 
 When `engines.md` or `output-templates.md` is needed, load **only the matching section** — do not pull the full file into context if the agent can read by heading.
 
@@ -102,7 +119,7 @@ Full routing table: `references/command-router.md`.
 
 ---
 
-## 7. Violations to avoid
+## 8. Violations to avoid
 
 - Loading all 55 files "to be safe"
 - Running legacy + AI-likelihood scoring on every write (audit-only)

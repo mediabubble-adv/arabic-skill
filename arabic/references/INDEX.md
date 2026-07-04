@@ -1,7 +1,7 @@
 # 📂 Awesome Arabic Skill — Master File Index
 
 ## Token Load Strategy
-Max 6 files per task by default — use `references/load-discipline.md` task-class sets (plan / write / audit / rtl).
+Max 6 files per task by default — use `references/load-discipline.md` task-class sets (plan / write / audit / rtl / research).
 Never load all files. Load strictly on demand per task class.
 
 ---
@@ -15,11 +15,11 @@ Never load all files. Load strictly on demand per task class.
 
 ---
 
-## References — Load by Task (19 files)
+## References — Load by Task (20 files)
 
 | File | Load when |
 |---|---|
-| `references/load-discipline.md` | Any `/arabic` command — pick plan/write/audit/rtl load set first |
+| `references/load-discipline.md` | Any `/arabic` command — pick plan/write/audit/rtl/research load set first |
 | `references/advisory-mode.md` | Start of any task that is not a complete brief (default operating model) |
 | `references/audit-mode.md` | Audit Mode / `/arabic audit`, and as the final 9-point QA review |
 | `references/rtl-audit.md` | `/arabic audit rtl` — tier-1 RTL/UI source checks |
@@ -38,6 +38,7 @@ Never load all files. Load strictly on demand per task class.
 | `references/book-writing.md` | Book projects, premise-to-continuity workflows |
 | `references/seo-aeo-masri.md` | SEO/AEO or website-copy tasks targeting Egypt |
 | `references/seasonal-calendar.md` | Campaign planning or any time-sensitive / seasonal brief |
+| `references/research-mode.md` | `/arabic research`, `/arabic research distill`, `/arabic research status` |
 
 ---
 
@@ -120,8 +121,9 @@ Never load all files. Load strictly on demand per task class.
 | P5 (project mode & dev-tech) | project-mode.md + project-context-scanner.md + book-writing.md + domains/dev-tech.md | ✅ Complete |
 | C1–C3 (command surface) | command-router.md + Cursor adapter + `.arabic/` scaffold | ✅ Complete |
 | P8 (v1.1 runtime) | load-discipline.md + rtl-audit.md + audit/plan/command extensions | ✅ Complete |
+| R3 (research command) | research-mode.md + monthly cron doc | ✅ Complete |
 
-**Total planned files:** 57
-**Total built:** 57 — v1.1.0 public release (website + P8 runtime extensions)
+**Total planned files:** 58
+**Total built:** 58 — v1.2.1 + research command wiring
 
-Breakdown: SKILL.md (1) + voice.md (1) + references/ (20, incl. this INDEX) + dialects/ (11) + domains/ (14) + conversations/ (6) + professional-docs/ (4) = 57.
+Breakdown: SKILL.md (1) + voice.md (1) + references/ (21, incl. this INDEX) + dialects/ (11) + domains/ (14) + conversations/ (6) + professional-docs/ (4) = 58.

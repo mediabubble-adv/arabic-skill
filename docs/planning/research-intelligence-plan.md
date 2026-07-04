@@ -285,7 +285,7 @@ flowchart TD
 | `/arabic research distill` | Processes `distillation-queue.md` into runtime PR plan |
 | `/arabic research status` | Shows index.json + stale sources |
 
-See [Command Surface](./command-surface.md).
+See [Command Surface](./command-surface.md). Monthly maintenance: [research-monthly-cron.md](./research-monthly-cron.md).
 
 ---
 

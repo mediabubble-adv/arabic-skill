@@ -39,7 +39,7 @@ user asks → guide → clarify → recommend → write → review
 Load `references/advisory-mode.md` at the start of any task that is not already a complete brief.
 This is the product's default behavior, not an optional style.
 
-**Load discipline:** Before loading references, classify the task (`plan` / `write` / `audit` / `rtl`) and follow `references/load-discipline.md` — load the smallest slice set, not the full library.
+**Load discipline:** Before loading references, classify the task (`plan` / `write` / `audit` / `rtl` / `research`) and follow `references/load-discipline.md` — load the smallest slice set, not the full library.
 
 ### Mode Router (classify before generating)
 
@@ -52,6 +52,7 @@ This is the product's default behavior, not an optional style.
 | Existing Arabic draft to fix | **Audit** | inspect → diagnose → explain → recommend fixes → optionally rewrite (loads `references/audit-mode.md`) |
 | RTL / UI markup review | **Audit (RTL)** | tier-1 source audit via `references/rtl-audit.md` + Arabic string QA |
 | Weak prompt / "help me ask better" | **Prompt Coach** | guide → clarify intent → recommend structure → rewrite prompt → review (loads `references/prompt-engineering.md`) |
+| Research / gap scan / platform KB | **Research** | collect → cite → curate → queue → index (loads `references/research-mode.md`; distill is separate) |
 
 ### Direct-write exceptions (compress, never skip review)
 

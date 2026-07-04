@@ -52,9 +52,11 @@ Tier **C** must carry a human-review flag before entering `arabic/dialects/` or 
 
 | Command | Role |
 |---------|------|
-| `/arabic research <topic>` | Structured research run → `knowledge-base/` |
+| `/arabic research <topic>` | Structured research run → `knowledge-base/` (loads `references/research-mode.md`) |
 | `/arabic research distill` | Process `distillation-queue.md` into PR plan |
 | `/arabic research status` | Show `index.json` + stale sources |
+
+Monthly cadence: [docs/planning/research-monthly-cron.md](../docs/planning/research-monthly-cron.md)
 
 ## Validation
 
@@ -68,7 +70,7 @@ bash scripts/validate-research-scaffold.sh   # R0 — required files exist
 | Phase | Deliverable | Status |
 |-------|-------------|--------|
 | **R0** | Scaffold (this tree) | ✅ |
-| **R1** | First reference distillation | Planned |
-| **R2** | Platform KB (Meta, Google, TikTok) | Planned |
-| **R3** | `/arabic research` wiring | Planned |
+| **R1** | First reference distillation | ✅ |
+| **R2** | Platform KB (Meta, Google, TikTok) | ✅ |
+| **R3** | `/arabic research` wiring | ✅ |
 | **R4** | `validate-research.sh` | Planned |

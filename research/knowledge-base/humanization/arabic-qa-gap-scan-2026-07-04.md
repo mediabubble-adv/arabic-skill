@@ -6,6 +6,7 @@ sources:
   - reference-arabic-qa-v1
 runtime_targets:
   - arabic/references/audit-mode.md
+  - arabic/references/humanization-protocol.md
 status: distilled
 ---
 

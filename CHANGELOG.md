@@ -8,16 +8,19 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Planned
-- Research R3 — `/arabic research` command wiring
 - Research R4 — `scripts/validate-research.sh` stale-source checker
 - First-run onboarding flow
 
 ### Added
-- Research R2 — platform KB for Meta, Google, TikTok (`research/knowledge-base/platforms/`) with Tier A sources
+- Research R3 — `/arabic research` command wiring (`research-mode.md`, distill, status) + monthly cron doc
+- Golden test `tests/golden/r3-research-command.md`
+
+### Added (R2)
 - TikTok Arabic RTL safe zones + Spark caption rules distilled into `ads-service-matrix.md` (RQ-006)
 - Golden test `tests/golden/r2-platform-kb.md`
 
 ### Added (R1)
+- Research R0 scaffold — `research/` README, `index.json`, `sources/sources.yaml`, `distillation-queue.md`, knowledge-base tree, 5 prompt templates, `validate-research-scaffold.sh`
 - Research R1 — `arabic-qa` gap scan + platform register targets in `audit-mode.md` (`--platform` audit scoring)
 - `research/knowledge-base/humanization/arabic-qa-gap-scan-2026-07-04.md` — gap scan artifact
 - Golden test `tests/golden/r1-audit-platform-register.md`
