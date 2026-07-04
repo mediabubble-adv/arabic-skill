@@ -1,0 +1,37 @@
+CHANGELOG.md
+  s_e22df37b935413::t_ac0ad25dc6099b 14-17
+AGENTS.md
+  s_e22df37b935413::t_910de6bf7bee6c 23
+  s_e22df37b935413::t_e69c29ff3565e6 6
+docs/planning/roadmap.md
+  s_e22df37b935413::t_5ef170f0a50b7d 62
+  s_e22df37b935413::t_efb9e6fc3265fa 46
+  s_e22df37b935413::t_f132371130960b 6
+research/README.md
+  s_e22df37b935413::t_402a498bc4c86b 64-66
+  s_e22df37b935413::t_4aa11a2bcc0feb 77
+docs/planning/research-monthly-cron.md
+  s_e22df37b935413::t_088a6d038c7fc0 44
+scripts/validate-research.sh
+  s_e22df37b935413::t_292a86ae051e19 1-135
+tests/golden/r4-validate-research.md
+  s_e22df37b935413::t_8571ba1c5b9cde 1-46
+package.json
+  s_e22df37b935413::t_c32a033ebeff06 44,46
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "c4201d42f8648ed2a9076a8b0adeae9c1cf2c7e7",
+  "prompts": {},
+  "sessions": {
+    "s_e22df37b935413": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "997ffe26-6e5f-4828-bfbb-c1e3cd07cd76",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
