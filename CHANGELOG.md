@@ -10,6 +10,8 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 Working toward **v1.1.0** — website + distribution layer.
 
 ### Added
+- `website/` — Arabic-first marketing site (G13–G18): RTL Next.js App Router, 8 routes, install funnel, dogfood `/about`, G15 interactives.
+- `scripts/validate-website-install.sh` — G14 README install parity (wired into `npm run validate`).
 - npm package scaffold for `@mediabubble-adv/arabic-skill`, including the `arabic-skill` bin and `npx @mediabubble-adv/arabic-skill install` workflow.
 - P8 runtime: `load-discipline.md` (task-class load sets), `rtl-audit.md` (tier-1 RTL/UI source audit).
 - `/arabic plan series` — YouTube/podcast season planning with narrative bible gate.

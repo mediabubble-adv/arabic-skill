@@ -1,0 +1,91 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { PageShell } from "@/components/page-shell";
+import { InstallCta } from "@/components/install-cta";
+import { siteMeta } from "@/lib/site-meta";
+
+export const metadata: Metadata = {
+  title: siteMeta["/tutorials"].title,
+  description: siteMeta["/tutorials"].description,
+};
+
+const lessons = [
+  {
+    title: "ثبّت المهارة في ٣ دقايق",
+    outcome: "أمر التثبيت من README اتنسخ + /arabic guide شغال.",
+    steps: [
+      "افتح التيرمنال في مشروعك",
+      "انسخ: npx @mediabubble-adv/arabic-skill install --target cursor",
+      "اكتب /arabic guide في Cursor",
+    ],
+    meta: "~٣ دقايق · مبتدئ",
+  },
+  {
+    title: "اكتب أول بوست مصري",
+    outcome: "منشور سوشيال مصري من برّيف بسيط.",
+    steps: [
+      "اكتب الفكرة بشكل جزئي — مش لازم برّيف كامل",
+      "/arabic guide هيوضّح ويسأل",
+      "/arabic write يولّد المحتوى",
+      "/arabic audit يراجع قبل التسليم",
+    ],
+    meta: "~١٠ دقايق · مبتدئ",
+  },
+  {
+    title: "راجع نصك قبل ما تنشر",
+    outcome: "تقرير تدقيق + قائمة إصلاحات.",
+    steps: [
+      "حط النص في ملف .md",
+      "/arabic audit --file path/to/file.md",
+      "طبّق أهم إصلاح — واطلب إعادة تدقيق لو محتاج",
+    ],
+    meta: "~٥ دقايق · متوسط",
+  },
+];
+
+export default function TutorialsPage() {
+  return (
+    <PageShell>
+      <header className="max-w-3xl mb-10">
+        <h1 className="text-3xl md:text-4xl font-bold text-[var(--fg)] mb-3">
+          اتعلّم بالعربي
+        </h1>
+        <p className="text-[var(--fg-muted)]">
+          دروس من شغل المهارة نفسها —{" "}
+          <strong className="text-[var(--fg)]">مش مجرد ترجمة</strong> من
+          إنجليزي.
+        </p>
+      </header>
+      <div className="space-y-6 mb-10">
+        {lessons.map((lesson, i) => (
+          <article key={lesson.title} className="card">
+            <p className="text-sm text-[var(--brand)] mb-1">
+              الدرس {i + 1}
+            </p>
+            <h2 className="text-xl font-semibold text-[var(--fg)] mb-2">
+              {lesson.title}
+            </h2>
+            <p className="text-sm text-[var(--fg-muted)] mb-3">
+              <strong className="text-[var(--fg)]">النتيجة:</strong>{" "}
+              {lesson.outcome}
+            </p>
+            <ol className="list-decimal list-inside text-sm text-[var(--fg-muted)] space-y-1 mb-3">
+              {lesson.steps.map((step) => (
+                <li key={step}>{step}</li>
+              ))}
+            </ol>
+            <p className="text-xs text-[var(--fg-muted)]">{lesson.meta}</p>
+          </article>
+        ))}
+      </div>
+      <p className="text-[var(--fg-muted)] mb-8">
+        الموقع كله اتكتب بـ <code dir="ltr">/arabic</code> —{" "}
+        <Link href="/about" className="text-[var(--brand)]">
+          شوف إزاي اتبنى
+        </Link>
+        .
+      </p>
+      <InstallCta />
+    </PageShell>
+  );
+}

@@ -1,6 +1,6 @@
 # Website Dogfood Plan — G13–G18 (v1.1.0 / P7)
 
-> **Status:** EXECUTE — plan approved 2026-07-04; Phase B copy in progress; `website/` scaffold after Tasks 0–2.  
+> **Status:** EXECUTE — plan approved 2026-07-04; Phase C–F Next.js scaffold + 8 routes shipped on `feat/website-v1.1.0`; Vercel deploy pending.  
 > **Product:** Awesome Arabic Skill (`arabic`) · **Register:** مصري أولاً for all page chrome  
 > **Branch target:** `feat/website-v1.1.0`  
 > **Gate:** G13–G18 must pass before `v1.1.0` tag
