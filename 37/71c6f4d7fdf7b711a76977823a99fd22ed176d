@@ -1,0 +1,45 @@
+CHANGELOG.md
+  s_461f57b5773c46::t_da9220d5c2e441 14-26
+bin/arabic-skill.js
+  s_461f57b5773c46::t_8d31c9837cee26 34-36
+  s_461f57b5773c46::t_412c821b796219 56-59
+website/content/install.md
+  s_461f57b5773c46::t_a43d4aa105baed 10
+  s_461f57b5773c46::t_edaf25e9224b6c 22-25
+arabic/SKILL.md
+  s_461f57b5773c46::t_64e5921348bc7b 4
+website/lib/install-commands.ts
+  s_461f57b5773c46::t_ed29d29320417f 3,9-12
+docs/supported/cursor/README.md
+  s_461f57b5773c46::t_e7dc0bcf4a15b6 18
+  s_461f57b5773c46::t_c4b5c3ada9ee1b 21-22
+VERSION
+  s_461f57b5773c46::t_aabd756d2266ac 1
+package.json
+  s_461f57b5773c46::t_862730db24fb6c 3
+  s_461f57b5773c46::t_9f0e696449638c 40-43
+README.md
+  s_461f57b5773c46::t_edf1d78523823c 56
+  s_461f57b5773c46::t_49da4fa7dffc90 71-74
+  s_461f57b5773c46::t_9780649bceb69a 53
+  s_461f57b5773c46::t_10e6f1b369031c 57
+docs/engineering/npm-publishing.md
+  s_461f57b5773c46::t_c63968e6ce598f 20-23,29,32
+  s_461f57b5773c46::t_270fb92def3cee 33
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "3771c6f4d7fdf7b711a76977823a99fd22ed176d",
+  "prompts": {},
+  "sessions": {
+    "s_461f57b5773c46": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "7dd0ab62-8099-4d3b-9012-a6d967f092d9",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
