@@ -100,7 +100,9 @@
 | `/arabic audit rtl` | Tier-1 RTL/UI source audit | Also accepts `--file` or capped `--dir` — loads `rtl-audit.md` |
 | `/arabic audit --dir <path>` | Audit Arabic copy in up to 40 files under path | Safe-scan rules from `project-context-scanner.md` |
 | `/arabic coach` | Repair a weak prompt and explain the upgrade | Also accepts `--file` |
-| `/arabic research <topic>` | Use the research-intelligence workflow | Distillation and KB work |
+| `/arabic research <topic>` | Structured research run → `research/knowledge-base/` | Loads `research-mode.md` + matching `research/prompts/` |
+| `/arabic research distill` | Distill plan from `distillation-queue.md` | ≤50 lines/runtime file; user approves PR |
+| `/arabic research status` | `index.json` + queue + stale sources (90d) | Monthly cron: `docs/planning/research-monthly-cron.md` |
 | `/arabic voice save` | Save a brand voice to `.arabic/voice.md` or project `voice.md` | Prompts the user for missing axes |
 | `/arabic voice load` | Load voice into the next write or plan task | Inject before engine selection |
 | `/arabic voice show` | Show the current voice summary | Read-only |
@@ -131,6 +133,8 @@ Unknown flags should warn and be ignored. Never guess-execute a command that has
 | Signal | Inferred action |
 |---|---|
 | Selection contains Arabic text | `audit` |
+| User asks to run research, gap scan, or platform specs collection | `research` |
+| `research/distillation-queue.md` has open items and user says distill | `research distill` |
 | `brief.md` or `*.brief.yaml` exists | `write` in Pro Mode |
 | Open file lives under `content/`, `copy/`, or `marketing/` | `write` matching the file type |
 | `.arabic/projects/*/plan.md` is incomplete | Resume `plan` |

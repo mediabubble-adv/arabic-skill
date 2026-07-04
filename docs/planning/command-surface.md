@@ -138,7 +138,8 @@ Format: `/arabic plan <project> [--dialect] [--brief]`
 | `/arabic coach` | Weak prompt → upgraded variants + explanation |
 | `/arabic coach --file prompt.txt` | Batch prompt repair |
 | `/arabic research meta-ads` | Run [research-intelligence-plan](./research-intelligence-plan.md) template |
-| `/arabic research distill` | Process distillation queue |
+| `/arabic research distill` | Process distillation queue → distill PR plan |
+| `/arabic research status` | `index.json` + queue + stale sources report |
 
 ---
 
