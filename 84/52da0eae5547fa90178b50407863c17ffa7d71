@@ -1,0 +1,35 @@
+research/knowledge-base/humanization/arabic-qa-gap-scan-2026-07-04.md
+  s_e22df37b935413::t_01601cf2581e8f 9
+arabic/references/ads-service-matrix.md
+  s_e22df37b935413::t_6027f8b23d4d0c 66
+arabic/references/research-mode.md
+  s_e22df37b935413::t_3f363bc067a5c6 126,128
+arabic/references/load-discipline.md
+  s_e22df37b935413::t_5f4c14dc0aad8e 52
+tests/golden/r3-research-command.md
+  s_e22df37b935413::t_d35247a5c98187 37
+research/sources/sources.yaml
+  s_e22df37b935413::t_c6179ba7df5955 66
+research/index.json
+  s_e22df37b935413::t_9d7a1756b29ee4 11
+  s_e22df37b935413::t_8d65e8c7d64ab2 39
+research/knowledge-base/platforms/tiktok.md
+  s_e22df37b935413::t_b548b4fa6c23af 10
+  s_e22df37b935413::t_b554732fb4c136 29
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "8452da0eae5547fa90178b50407863c17ffa7d71",
+  "prompts": {},
+  "sessions": {
+    "s_e22df37b935413": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "997ffe26-6e5f-4828-bfbb-c1e3cd07cd76",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
