@@ -41,7 +41,7 @@ user asks -> guide -> clarify -> recommend -> write -> review
 | Project awareness | `/arabic auto` scans project files so the skill can explain a product, tool, or codebase in natural Arabic |
 | Research intelligence | Combines internet research, official sources, and `reference/` packs before distilling updates into runtime files |
 | Command system | `/arabic` with subcommands for guide, write, audit, coach, plan, research, voice, auto, and help |
-| Website dogfooding | v1.1.0 will test the skill by creating an Arabic-first multi-page install and tutorial website |
+| Website dogfooding | Shipped at `v1.1.0` — [install site](https://arabic-skill.vercel.app) (8 Masri routes, dogfood `/about`) |
 
 ## Install
 
@@ -60,11 +60,11 @@ npx @mediabubble-adv/arabic-skill install --target all
 npx @mediabubble-adv/arabic-skill install --dir ~/.cursor/skills --force
 ```
 
-See [Cursor support](./docs/supported/cursor/README.md), [Claude support](./docs/supported/claude/README.md), or the [supported tools index](./docs/supported/README.md). The repo documents **24** AI coding surfaces (profiles below). Website and `npx skills add` registry distribution remain deferred to `v1.1.0`.
+See [Cursor support](./docs/supported/cursor/README.md), [Claude support](./docs/supported/claude/README.md), or the [supported tools index](./docs/supported/README.md). The repo documents **24** AI coding surfaces (profiles below). The **install website** shipped at `v1.1.0` — https://arabic-skill.vercel.app. `npx @mediabubble-adv/arabic-skill install` is the supported installer; `npx skills add` registry distribution remains a follow-up.
 
 ## Supported Tool Assets
 
-The repository includes local logo assets under [`public/assets/`](./public/assets/) for README, docs, and the future install website. GitHub renders these relative paths directly in Markdown, so docs can use either Markdown images or HTML `<img>` tags when fixed icon sizing is needed.
+The repository includes local logo assets under [`public/assets/`](./public/assets/) for README, docs, and the install website. GitHub renders these relative paths directly in Markdown, so docs can use either Markdown images or HTML `<img>` tags when fixed icon sizing is needed.
 
 <p>
   <img src="./public/assets/claude-color.svg" alt="Claude" width="24" height="24">
