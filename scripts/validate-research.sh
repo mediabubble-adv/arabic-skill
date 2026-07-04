@@ -94,8 +94,11 @@ for entry in sources:
         continue
 
     age = (today - accessed).days
-    if age <= STALE_WARN_DAYS:
-        fresh += 1
+    if age < 0:
+        fail(
+            f"FAIL: source {sid} accessed date {accessed_raw} is in the future"
+        )
+    elif age <= STALE_WARN_DAYS:
     elif age <= STALE_FAIL_DAYS:
         stale_warn += 1
         warn(
