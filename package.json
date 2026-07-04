@@ -1,6 +1,6 @@
 {
   "name": "@mediabubble-adv/arabic-skill",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Awesome Arabic Skill runtime pack and npx installer.",
   "license": "MIT",
   "author": "MediaBubble",
@@ -37,6 +37,10 @@
     "VERSION"
   ],
   "scripts": {
+    "install:cursor": "node bin/arabic-skill.js install --target cursor",
+    "install:claude": "node bin/arabic-skill.js install --target claude",
+    "install:codex": "node bin/arabic-skill.js install --target codex",
+    "install:all": "node bin/arabic-skill.js install --target all",
     "validate": "bash scripts/validate-skill.sh && bash scripts/validate-docs.sh && bash scripts/validate-supported.sh && bash scripts/validate-website-install.sh && bash scripts/validate-npm-pack.sh && bash scripts/validate-cursor-install.sh",
     "validate:cursor-install": "bash scripts/validate-cursor-install.sh",
     "validate:skills-registry": "bash scripts/validate-skills-registry.sh",

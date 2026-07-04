@@ -50,8 +50,10 @@ user asks -> guide -> clarify -> recommend -> write -> review
 Copies the runtime skill, `/arabic` slash command, and routing rule:
 
 ```bash
-npx @mediabubble-adv/arabic-skill install --target cursor
+npx @mediabubble-adv/arabic-skill@latest install --target cursor
 ```
+
+From a **git clone** of this repo, `npx` without `@latest` resolves the local package and fails (`command not found: arabic-skill`). Use `@latest` above, or `npm run install:cursor`, or `node bin/arabic-skill.js install --target cursor`.
 
 ### skills.sh registry
 
@@ -66,10 +68,10 @@ Browse: [skills.sh](https://skills.sh) · Listing is driven by install telemetry
 ### Other targets
 
 ```bash
-npx @mediabubble-adv/arabic-skill install --target claude
-npx @mediabubble-adv/arabic-skill install --target codex
-npx @mediabubble-adv/arabic-skill install --target all
-npx @mediabubble-adv/arabic-skill install --dir ~/.cursor/skills --force
+npx @mediabubble-adv/arabic-skill@latest install --target claude
+npx @mediabubble-adv/arabic-skill@latest install --target codex
+npx @mediabubble-adv/arabic-skill@latest install --target all
+npx @mediabubble-adv/arabic-skill@latest install --dir ~/.cursor/skills --force
 ```
 
 See [Cursor support](./docs/supported/cursor/README.md), [Claude support](./docs/supported/claude/README.md), or the [supported tools index](./docs/supported/README.md). The repo documents **24** AI coding surfaces (profiles below). Install website: https://arabic-skill.vercel.app

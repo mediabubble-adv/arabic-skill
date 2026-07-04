@@ -15,8 +15,10 @@
 Copies runtime skill, `/arabic` command, and routing rule to your Cursor user directory:
 
 ```bash
-npx @mediabubble-adv/arabic-skill install --target cursor
+npx @mediabubble-adv/arabic-skill@latest install --target cursor
 ```
+
+From a **git clone**, `npx` without `@latest` resolves the local package and fails. Use `@latest` above, or `npm run install:cursor`, or `node bin/arabic-skill.js install --target cursor`.
 
 Installs:
 

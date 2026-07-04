@@ -11,6 +11,19 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 - Research R4 — `scripts/validate-research.sh` stale-source checker
 - First-run onboarding flow
 
+## [1.2.1] - 2026-07-04
+
+**Install fix.** `npx` from a git clone no longer fails when docs use `@latest`.
+
+### Fixed
+- Document and recommend `npx @mediabubble-adv/arabic-skill@latest install` — avoids local package resolution (`command not found: arabic-skill`) inside the cloned repo
+
+### Added
+- `npm run install:cursor|claude|codex|all` scripts for in-repo installs via `node bin/arabic-skill.js`
+
+### Changed
+- README, website install copy, and npm-publishing docs — `@latest` on all npx install commands; git-clone caveat documented
+
 ## [1.2.0] - 2026-07-04
 
 **Distribution follow-ups.** Full Cursor npx install and skills.sh registry path.

@@ -31,7 +31,9 @@ function usage() {
   return `Awesome Arabic Skill installer
 
 Usage:
-  npx @mediabubble-adv/arabic-skill install [options]
+  npx @mediabubble-adv/arabic-skill@latest install [options]
+  npm run install:cursor   (from a git clone — npx alone fails inside this repo)
+  node bin/arabic-skill.js install [options]
   npx @mediabubble-adv/arabic-skill --help
 
 Options:
@@ -51,9 +53,10 @@ skills.sh registry (skill only, all agents):
   npx skills add mediabubble-adv/arabic-skill -a cursor -g -y
 
 Examples:
-  npx @mediabubble-adv/arabic-skill install --target cursor
-  npx @mediabubble-adv/arabic-skill install --target claude --force
-  npx @mediabubble-adv/arabic-skill install --dir ~/.cursor/skills
+  npx @mediabubble-adv/arabic-skill@latest install --target cursor
+  npm run install:cursor -- --force
+  npx @mediabubble-adv/arabic-skill@latest install --target claude --force
+  npx @mediabubble-adv/arabic-skill@latest install --dir ~/.cursor/skills
 `;
 }
 

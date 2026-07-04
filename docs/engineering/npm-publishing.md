@@ -17,17 +17,19 @@ The `@mediabubble-adv` npm scope must exist and the maintainer (or CI) must have
 ## User Commands
 
 ```bash
-npx @mediabubble-adv/arabic-skill install --target cursor
-npx @mediabubble-adv/arabic-skill install --target claude
-npx @mediabubble-adv/arabic-skill install --target codex
-npx @mediabubble-adv/arabic-skill install --target all
+npx @mediabubble-adv/arabic-skill@latest install --target cursor
+npx @mediabubble-adv/arabic-skill@latest install --target claude
+npx @mediabubble-adv/arabic-skill@latest install --target codex
+npx @mediabubble-adv/arabic-skill@latest install --target all
 ```
 
 Custom target:
 
 ```bash
-npx @mediabubble-adv/arabic-skill install --dir ~/.cursor/skills --force
+npx @mediabubble-adv/arabic-skill@latest install --dir ~/.cursor/skills --force
 ```
+
+**Git clone caveat:** inside this repository, `npx @mediabubble-adv/arabic-skill install` (without `@latest`) resolves the local `package.json` and fails with `command not found: arabic-skill`. Use `@latest`, or `npm run install:cursor`, or `node bin/arabic-skill.js install …`.
 
 ## Local Checks
 

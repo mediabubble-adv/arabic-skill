@@ -7,7 +7,7 @@
 ### التثبيت السريع (G14)
 
 ```bash
-npx @mediabubble-adv/arabic-skill install --target cursor
+npx @mediabubble-adv/arabic-skill@latest install --target cursor
 ```
 
 **skills.sh (المهارة بس — من غير command/rule):**
@@ -19,10 +19,10 @@ npx skills add mediabubble-adv/arabic-skill -a cursor -g -y
 **أهداف تانية:**
 
 ```bash
-npx @mediabubble-adv/arabic-skill install --target claude
-npx @mediabubble-adv/arabic-skill install --target codex
-npx @mediabubble-adv/arabic-skill install --target all
-npx @mediabubble-adv/arabic-skill install --dir ~/.cursor/skills --force
+npx @mediabubble-adv/arabic-skill@latest install --target claude
+npx @mediabubble-adv/arabic-skill@latest install --target codex
+npx @mediabubble-adv/arabic-skill@latest install --target all
+npx @mediabubble-adv/arabic-skill@latest install --dir ~/.cursor/skills --force
 ```
 
 **أول أمر بعد التثبيت:** `/arabic guide`
