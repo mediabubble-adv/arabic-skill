@@ -36,6 +36,10 @@ yarn-error.log*
 # vercel
 .vercel
 
+# create-next-app auto-generated agent stubs (not part of product)
+/AGENTS.md
+/CLAUDE.md
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
