@@ -1,0 +1,43 @@
+README.md
+  s_667765b9a901fe::t_7b055352193bf5 233-234
+  s_667765b9a901fe::t_564547bc953c63 8
+  s_667765b9a901fe::t_1878c78b56d429 17
+arabic/SKILL.md
+  s_667765b9a901fe::t_22325332d1fe62 4
+CHANGELOG.md
+  s_667765b9a901fe::t_c9df1540485f36 10,16-31
+  s_667765b9a901fe::t_020e1c39e71789 99-100
+  s_667765b9a901fe::t_953f69a9f3bb64 32
+scripts/validate-npm-pack.sh
+  s_667765b9a901fe::t_fef20d96c34f8a 1-13,15-16,22-26,28-36
+  s_667765b9a901fe::t_655df940de4df1 14,17-21,27
+.github/workflows/npm-publish.yml
+  s_667765b9a901fe::t_0e452285f8c154 1-44
+package.json
+  s_667765b9a901fe::t_f2ab6092c6f25f 38,40-42
+  s_667765b9a901fe::t_a02ce346fc9665 3,6-17
+VERSION
+  s_667765b9a901fe::t_26938a555035fb 1
+AGENTS.md
+  s_667765b9a901fe::t_3661c6596c6f73 24
+.github/workflows/validate.yml
+  s_667765b9a901fe::t_cbccc69db2189d 27-29
+docs/engineering/npm-publishing.md
+  s_667765b9a901fe::t_f29e229ab4bae5 3,15,39,44-61,64-66,69,72-73,77-85,89
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "f702215fa0664460c93dadd7a3b2b17ae078a23b",
+  "prompts": {},
+  "sessions": {
+    "s_667765b9a901fe": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "fa174e6d-030e-412e-b623-fbddeafe9355",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
