@@ -1,0 +1,54 @@
+research/README.md
+  s_461f57b5773c46::t_292b840ff769c2 1-74
+CHANGELOG.md
+  s_461f57b5773c46::t_64f692663879f2 11-12,16-17
+  s_461f57b5773c46::t_828499dd35ebc2 18
+research/knowledge-base/README.md
+  s_461f57b5773c46::t_4a5aab8f1678aa 1-16
+.gitignore
+  s_461f57b5773c46::t_b9360bd70a7213 6-7
+.github/workflows/validate.yml
+  s_461f57b5773c46::t_a61df196407c85 33-35
+docs/planning/roadmap.md
+  s_461f57b5773c46::t_cc28d150e00286 46
+  s_461f57b5773c46::t_d120a1a771ad33 62
+  s_461f57b5773c46::t_df5b922129b238 6
+research/distillation-queue.md
+  s_461f57b5773c46::t_d603a42ff0bc08 1-50
+research/sources/sources.yaml
+  s_461f57b5773c46::t_057e1e58a10bfa 1-15
+scripts/validate-research-scaffold.sh
+  s_461f57b5773c46::t_c119d0ab5a7910 1-59
+package.json
+  s_461f57b5773c46::t_48fecf241c8a5a 44-45
+research/prompts/reference-gap-scan.md
+  s_461f57b5773c46::t_cd81b043b40718 1-42
+research/index.json
+  s_461f57b5773c46::t_34e03d23e0a183 1-5
+research/snapshots/README.md
+  s_461f57b5773c46::t_def72aab57279b 1-5
+research/prompts/competitor-landing-teardown.md
+  s_461f57b5773c46::t_80fd0ca5ca997b 1-39
+research/prompts/dialect-freshness-audit.md
+  s_461f57b5773c46::t_3a486f576c4e89 1-38
+research/prompts/humanization-pattern-mining.md
+  s_461f57b5773c46::t_75e53d13dbc7b5 1-38
+research/prompts/platform-ads-research.md
+  s_461f57b5773c46::t_b5fcf817e58c1a 1-35
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "08bc0d0b55d9483bdebcaa138c783a69c12d4789",
+  "prompts": {},
+  "sessions": {
+    "s_461f57b5773c46": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "7dd0ab62-8099-4d3b-9012-a6d967f092d9",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
