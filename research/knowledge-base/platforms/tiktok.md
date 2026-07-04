@@ -7,7 +7,7 @@ sources:
   - tiktok-topview-specs-2026
 runtime_targets:
   - arabic/references/ads-service-matrix.md
-status: distilled
+status: curated
 ---
 
 # TikTok — in-feed & Spark ad specs
@@ -26,7 +26,7 @@ status: distilled
 | Max file size | 500 MB |
 | Min bitrate | 516 kbps (in-feed) |
 
-Source: [TikTok Auction In-Feed Ads](https://ads.tiktok.com/help/article/video-ads-specifications)
+Source: [TikTok Auction In-Feed Ads](https://ads.tiktok.com/help/article/tiktok-auction-in-feed-ads)
 
 ## Caption & account text
 

@@ -63,7 +63,7 @@ sources:
     runtime_eligible: true
   - id: tiktok-infeed-specs-2026
     title: "TikTok Auction In-Feed Ads"
-    url: https://ads.tiktok.com/help/article/video-ads-specifications
+    url: https://ads.tiktok.com/help/article/tiktok-auction-in-feed-ads
     publisher: TikTok
     accessed: 2026-07-04
     trust_tier: A

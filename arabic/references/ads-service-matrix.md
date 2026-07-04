@@ -63,7 +63,7 @@
 ### TikTok
 - **Formats:** In-feed video (9:16), Spark Ads (boost organic), TopView.
 - **Limits:** Non-Spark caption up to **100 chars** in Ads Manager (~**4 visible lines** before "See more"); practical **30–40** for overlay safe zone. Video 9:16 min 540×960; **9–15s** recommended. Spark: caption from organic post — **not editable** in Ads Manager.
-- **Arabic / RTL:** Use TikTok's **Arabic Version RTL** safe-zone templates (not LTR) — download from [In-Feed specs](https://ads.tiktok.com/help/article/video-ads-specifications). Long captions shrink the overlay safe area.
+- **Arabic / RTL:** Use TikTok's **Arabic Version RTL** safe-zone templates (not LTR) — download from [Auction In-Feed Ads](https://ads.tiktok.com/help/article/tiktok-auction-in-feed-ads). Long captions shrink the overlay safe area.
 - **Spark vs Non-Spark:** Spark caption is pulled from the organic post and **cannot be edited** in Ads Manager — fix copy before authorization. Non-Spark: no @, hashtags, or links in caption field.
 - **Hook logic:** First 2 seconds, native and un-ad-like. A face + a claim beats a logo.
 - **CTA behavior:** Casual and verbal: "اطلب من اللينك اللي في البايو".

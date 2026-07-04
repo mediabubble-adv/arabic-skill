@@ -49,6 +49,7 @@ Load in order:
 5. `references/project-context-scanner.md` — only for `explain`, `tutorial`, `readme`, or repo-aware copy
 6. `references/humanization-protocol.md` — **after draft**, before delivery
 7. `references/taboos.md` — before final delivery
+8. `references/ads-service-matrix.md` — **one platform § only** for `write meta|google|tiktok|snap|linkedin|youtube|ad|ads`
 
 **Do not load:** `audit-mode.md`, `project-mode.md`, or unrelated engines/templates.
 

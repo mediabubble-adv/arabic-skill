@@ -8,7 +8,7 @@
       "topic": "arabic-qa-gap-scan",
       "last_reviewed": "2026-07-04",
       "trust_tier": "A",
-      "runtime_targets": ["arabic/references/audit-mode.md"],
+      "runtime_targets": ["arabic/references/audit-mode.md", "arabic/references/humanization-protocol.md"],
       "status": "distilled"
     },
     {
@@ -36,7 +36,7 @@
       "last_reviewed": "2026-07-04",
       "trust_tier": "A",
       "runtime_targets": ["arabic/references/ads-service-matrix.md"],
-      "status": "distilled"
+      "status": "curated"
     }
   ]
 }

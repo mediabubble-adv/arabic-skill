@@ -34,7 +34,7 @@ Manual checklist for Research R3 (`feat/research-r3-command`).
 **Expected:**
 - Loads `research-mode.md` + `research/prompts/reference-gap-scan.md`
 - Proposes KB path + queue row format
-- Cites `sources.yaml` registration step
+- Cites `research/sources/sources.yaml` registration step
 
 ## G-R3-05 — Monthly cron doc
 

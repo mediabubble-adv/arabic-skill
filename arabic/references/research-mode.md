@@ -123,8 +123,9 @@ Read and summarize:
 
 ```markdown
 ## Research status — YYYY-MM-DD
-**KB topics:** N (collected: X, curated: Y, distilled: Z)
+**KB topics:** N (collected: X, curated: Y, distilled: Z, deferred: W)
 **Queue:** open A · in-progress B · deferred C
+**Orphans:** N — {list paths or NONE}
 **Stale sources:** {list or CLEAN}
 **Next suggested:** {1–3 topics from queue or monthly cron}
 ```
