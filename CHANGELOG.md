@@ -7,8 +7,6 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
-Working toward **v1.2.0** (research R4, onboarding).
-
 ### Planned
 - Research R4 — `scripts/validate-research.sh` stale-source checker
 - First-run onboarding flow
