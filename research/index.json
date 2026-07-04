@@ -4,7 +4,7 @@
   "topics": [
     {
       "id": "arabic-qa-gap-scan-2026-07-04",
-      "path": "research/knowledge-base/humanization/arabic-qa-gap-scan-2026-07-04.md",
+      "file": "knowledge-base/humanization/arabic-qa-gap-scan-2026-07-04.md",
       "topic": "arabic-qa-gap-scan",
       "last_reviewed": "2026-07-04",
       "trust_tier": "A",
@@ -13,7 +13,7 @@
     },
     {
       "id": "meta-ads-specs",
-      "path": "research/knowledge-base/platforms/meta.md",
+      "file": "knowledge-base/platforms/meta.md",
       "topic": "meta-ads-specs",
       "last_reviewed": "2026-07-04",
       "trust_tier": "A",
@@ -22,7 +22,7 @@
     },
     {
       "id": "google-ads-specs",
-      "path": "research/knowledge-base/platforms/google.md",
+      "file": "knowledge-base/platforms/google.md",
       "topic": "google-ads-specs",
       "last_reviewed": "2026-07-04",
       "trust_tier": "A",
@@ -31,7 +31,7 @@
     },
     {
       "id": "tiktok-ads-specs",
-      "path": "research/knowledge-base/platforms/tiktok.md",
+      "file": "knowledge-base/platforms/tiktok.md",
       "topic": "tiktok-ads-specs",
       "last_reviewed": "2026-07-04",
       "trust_tier": "A",

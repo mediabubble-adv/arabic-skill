@@ -47,6 +47,32 @@ if ! python3 -c "import json; json.load(open('$ROOT/research/index.json'))" 2>/d
   fail=1
 fi
 
+if ! ROOT="$ROOT" python3 <<'PY' 2>/dev/null; then
+import json
+import os
+import sys
+from pathlib import Path
+
+root = Path(os.environ["ROOT"])
+index = json.loads((root / "research/index.json").read_text())
+topics = index.get("topics", [])
+for i, topic in enumerate(topics):
+    if "path" in topic:
+        print(f"FAIL: research/index.json topics[{i}] uses deprecated 'path'; use 'file' (§7c)")
+        sys.exit(1)
+    rel = topic.get("file")
+    if not rel:
+        print(f"FAIL: research/index.json topics[{i}] missing 'file'")
+        sys.exit(1)
+    kb = root / "research" / rel
+    if not kb.is_file():
+        print(f"FAIL: research/index.json topics[{i}].file not found: research/{rel}")
+        sys.exit(1)
+PY
+  echo "FAIL: research/index.json schema check failed"
+  fail=1
+fi
+
 if ! grep -q '^sources:' "$ROOT/research/sources/sources.yaml"; then
   echo "FAIL: research/sources/sources.yaml missing top-level sources key"
   fail=1

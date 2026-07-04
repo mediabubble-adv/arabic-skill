@@ -43,7 +43,7 @@ Load the matching prompt file and follow it exactly.
 3. **CITE** — Add stable IDs to `research/sources/sources.yaml` (`accessed`, `trust_tier`, `runtime_eligible`)
 4. **CURATE** — Write KB file with frontmatter (§7a in research-intelligence-plan)
 5. **QUEUE** — Append actionable gaps to `research/distillation-queue.md` (max 20 open rows)
-6. **INDEX** — Register in `research/index.json`
+6. **INDEX** — Register in `research/index.json` with `file` (path relative to `research/`, per §7c)
 7. **REPORT** — Summarize findings, sources, queue IDs, and suggested next distill
 
 ### 1.3 KB frontmatter (required)
@@ -112,10 +112,10 @@ Read and summarize:
 
 | Source | Report |
 |---|---|
-| `research/index.json` | Topic count by `status`; list `last_reviewed` |
+| `research/index.json` | Topic count by `status`; list `last_reviewed`; resolve KB paths via `file` |
 | `research/sources/sources.yaml` | Flag `accessed` older than **90 days** as stale |
 | `research/distillation-queue.md` | Open / in-progress / deferred counts |
-| `research/knowledge-base/` | Orphan files not in `index.json` |
+| `research/knowledge-base/` | Orphan files not listed in `index.json` `topics[].file` |
 
 **Stale rule:** `accessed` date > 90 days ago → `⚠️ stale — re-verify before runtime distill`
 

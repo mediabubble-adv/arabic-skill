@@ -35,7 +35,9 @@ RTL specifics: `references/rtl-audit.md`. Directory cap rules: same file + scann
 ## Platform register targets (`--platform`)
 
 When `--platform` is set (or the copy is clearly for one channel), score **check #1** against this table.
-**±1** of target still passes; **≥2** levels off = fail register scan. Distilled from `reference/arabic-qa`.
+For **L-level and L-range targets**, **±1** still passes; **≥2** levels off = fail register scan for that section.
+**`Mixed` targets** (`blog`) use **per-section scoring** — see § Mixed register scoring below; do not apply one global ±1 band to the whole piece.
+Organic/social channels distilled from `reference/arabic-qa`; **`meta` / `google`** registers align with `references/ads-service-matrix.md` §1.
 
 | Platform | Target register | Audit notes |
 |----------|-----------------|-------------|
@@ -46,16 +48,32 @@ When `--platform` is set (or the copy is clearly for one channel), score **check
 | `email` | L3 | No L1; single clear CTA |
 | `whatsapp` | L2–L3 | Intimate — one topic per message |
 | `landing` | L3 | Hero may mix MSA; CTA L2–L3 |
-| `blog` | Mixed | MSA H1 + L3 body + L2 FAQ |
-| `google` / `meta` ads | Platform write rules first | Fall back to ad-platform register from write engine |
+| `blog` | Mixed | Per-section targets — § Mixed register scoring |
+| `meta` | L2–L3 | Paid Meta (FB/IG/Reels); same band as organic Meta placements |
+| `google` | L3–L4 | Search/RSA default; Display or Demand Gen → use **L2–L3** instead |
 
-Report **target** and **detected** register in the QA header (e.g. `Target: L1–L2 (tiktok) · Detected: L3–L4`).
+**Mixed register scoring (`blog`):** Split the piece by structural role before scoring check #1. Intentional register shifts between roles are **expected**, not drift.
+
+| Section | Target register | Pass rule |
+|---------|-----------------|-----------|
+| H1 / title / meta title | **L4–L5 (MSA)** | MSA OK by design; fail only if L1–L2 slang or clearly wrong for SEO title |
+| H2 / subheads | **L3** | ±1 of L3 |
+| Body paragraphs | **L3** | ±1 of L3 |
+| FAQ / People Also Ask blocks | **L2** | ±1 of L2 |
+
+**Check #1 aggregate for `blog`:** **2/2** when every section passes its row; **1/2** when one section is ±2 off or one role is ambiguous; **0/2** when multiple sections fail or body is uniformly wrong register (e.g. L5 MSA body under Masri-first brief). Do **not** penalize an MSA H1 when body is L3.
+
+**Header example:** `Target: Mixed — MSA H1 · L3 body · L2 FAQ (blog) · Detected: H1 L5 · body L3 · FAQ L2`
+
+**Fallback:** If `--platform` is absent from this table, infer register from copy or load `references/ads-service-matrix.md` for the matching ad channel. If no L-level applies, skip check #1 scoring and note in the header: *Register target: unspecified — internal consistency only*.
+
+Report **target** and **detected** register in the QA header (e.g. `Target: L1–L2 (tiktok) · Detected: L3–L4`, or the Mixed blog form above).
 
 ## The 9 checks (score each 0/1/2 → max 18)
 
 | # | Check | Looks for | 2/2 when |
 |---|-------|-----------|----------|
-| 1 | **Register scan** | Every sentence within ±1 of target level (L1 street → L5 MSA) | all sentences in range |
+| 1 | **Register scan** | Every sentence within ±1 of target level (L1 street → L5 MSA); **`blog`:** per-section Mixed scoring (§ Platform register targets) | all sentences in range, or all blog sections pass role targets |
 | 2 | **Sound-shift / lexical choice** | MSA word choices revealing MSA thinking (يريد vs عاوز, سيفعل vs حيعمل) | zero MSA-holdover words |
 | 3 | **Verb conjugation** | dialect patterns (Masri: بـ habitual, حـ future, عاوز, في) not MSA (سـ, أريد, هناك) | zero MSA-conjugated verbs |
 | 4 | **Negation pattern** | verb → ما…ش (ماعملتش); non-verb → مش (مش عاوز); not mixed | zero negation errors |
