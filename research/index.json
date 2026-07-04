@@ -10,6 +10,33 @@
       "trust_tier": "A",
       "runtime_targets": ["arabic/references/audit-mode.md"],
       "status": "distilled"
+    },
+    {
+      "id": "meta-ads-specs",
+      "path": "research/knowledge-base/platforms/meta.md",
+      "topic": "meta-ads-specs",
+      "last_reviewed": "2026-07-04",
+      "trust_tier": "A",
+      "runtime_targets": ["arabic/references/ads-service-matrix.md"],
+      "status": "curated"
+    },
+    {
+      "id": "google-ads-specs",
+      "path": "research/knowledge-base/platforms/google.md",
+      "topic": "google-ads-specs",
+      "last_reviewed": "2026-07-04",
+      "trust_tier": "A",
+      "runtime_targets": ["arabic/references/ads-service-matrix.md"],
+      "status": "curated"
+    },
+    {
+      "id": "tiktok-ads-specs",
+      "path": "research/knowledge-base/platforms/tiktok.md",
+      "topic": "tiktok-ads-specs",
+      "last_reviewed": "2026-07-04",
+      "trust_tier": "A",
+      "runtime_targets": ["arabic/references/ads-service-matrix.md"],
+      "status": "distilled"
     }
   ]
 }
