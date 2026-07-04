@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/mediabubble-adv/arabic-skill/releases"><img src="https://img.shields.io/badge/version-1.0.0-blue" alt="version"></a>
+  <a href="https://github.com/mediabubble-adv/arabic-skill/releases"><img src="https://img.shields.io/badge/version-1.1.0-blue" alt="version"></a>
   <a href="./docs/README.md"><img src="https://img.shields.io/badge/docs-index-green" alt="docs"></a>
   <a href="./docs/supported/README.md"><img src="https://img.shields.io/badge/install-supported_tools-purple" alt="install"></a>
   <img src="https://img.shields.io/badge/runtime-arabic-blue" alt="runtime folder">
@@ -14,7 +14,7 @@
 
 **Awesome Arabic Skill** (`arabic`) is a MediaBubble skill for Arabic content creation, strategy, research distillation, and review. It is designed to behave like a senior Arabic content partner inside AI coding tools: it reads context, clarifies intent, recommends a direction, writes, humanizes, and audits before delivery.
 
-It is **not** a translation shortcut. Current version is `1.0.0`, the first public release.
+It is **not** a translation shortcut. Current version is `1.1.0` (website + distribution + P8 runtime).
 
 <p align="center">
   <img src="./public/assets/claude-color.svg" alt="Claude" width="26" height="26">
@@ -41,7 +41,7 @@ user asks -> guide -> clarify -> recommend -> write -> review
 | Project awareness | `/arabic auto` scans project files so the skill can explain a product, tool, or codebase in natural Arabic |
 | Research intelligence | Combines internet research, official sources, and `reference/` packs before distilling updates into runtime files |
 | Command system | `/arabic` with subcommands for guide, write, audit, coach, plan, research, voice, auto, and help |
-| Website dogfooding | v1.1.0 will test the skill by creating an Arabic-first multi-page install and tutorial website |
+| Website dogfooding | Shipped at `v1.1.0` — [install site](https://arabic-skill.vercel.app) (8 Masri routes, dogfood `/about`) |
 
 ## Install
 
@@ -60,11 +60,11 @@ npx @mediabubble-adv/arabic-skill install --target all
 npx @mediabubble-adv/arabic-skill install --dir ~/.cursor/skills --force
 ```
 
-See [Cursor support](./docs/supported/cursor/README.md), [Claude support](./docs/supported/claude/README.md), or the [supported tools index](./docs/supported/README.md). The repo documents **24** AI coding surfaces (profiles below). Website and `npx skills add` registry distribution remain deferred to `v1.1.0`.
+See [Cursor support](./docs/supported/cursor/README.md), [Claude support](./docs/supported/claude/README.md), or the [supported tools index](./docs/supported/README.md). The repo documents **24** AI coding surfaces (profiles below). The **install website** shipped at `v1.1.0` — https://arabic-skill.vercel.app. `npx @mediabubble-adv/arabic-skill install` is the supported installer; `npx skills add` registry distribution remains a follow-up.
 
 ## Supported Tool Assets
 
-The repository includes local logo assets under [`public/assets/`](./public/assets/) for README, docs, and the future install website. GitHub renders these relative paths directly in Markdown, so docs can use either Markdown images or HTML `<img>` tags when fixed icon sizing is needed.
+The repository includes local logo assets under [`public/assets/`](./public/assets/) for README, docs, and the install website. GitHub renders these relative paths directly in Markdown, so docs can use either Markdown images or HTML `<img>` tags when fixed icon sizing is needed.
 
 <p>
   <img src="./public/assets/claude-color.svg" alt="Claude" width="24" height="24">
@@ -196,13 +196,13 @@ Runtime install folder is `arabic/`. The GitHub repo can stay `mediabubble-adv/a
 
 | Area | Status |
 |------|--------|
-| Runtime baseline | `arabic/` pack released at `v1.0.0` |
+| Runtime baseline | `arabic/` pack at `v1.1.0` |
 | Canonical references | 38 packs preserved in `reference/` |
 | Planning docs | Active, with roadmap and release governance for future phases |
 | `/arabic` command system | Runtime router and Cursor adapter shipped |
 | Research layer | Specified for structured research collection and future runtime expansion |
-| Website | Deferred to `v1.1.0` as a dogfood test project |
-| Public release | `v1.0.0` tagged and released after runtime validation |
+| Website | Shipped at `v1.1.0` — https://arabic-skill.vercel.app |
+| Public release | `v1.1.0` current; `v1.0.0` first public release |
 
 ## Documentation
 
@@ -229,8 +229,8 @@ Runtime install folder is `arabic/`. The GitHub repo can stay `mediabubble-adv/a
 ## Release Policy
 
 - `0.1.x` means development.
-- `v1.0.0` is the first public release and the current tagged release.
-- `v1.1.0` is for the Arabic-first tutorial website and distribution layer.
+- `v1.0.0` was the first public release.
+- `v1.1.0` is the current release (website, distribution, P8 runtime).
 - Future release tags should only be created after the documented gates pass.
 
 See [Versioning and Releases](./docs/engineering/versioning-and-releases.md).
