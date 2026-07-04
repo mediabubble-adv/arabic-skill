@@ -1,0 +1,105 @@
+website/package.json
+  s_bb1919fa36e9d0::t_37d0767027a41f 14-16
+  s_bb1919fa36e9d0::t_d07e805d0d6844 1-13,17-28
+website/components/mode-flow.tsx
+  s_bb1919fa36e9d0::t_af87a4193ee2f4 1-39
+website/app/install/page.tsx
+  s_bb1919fa36e9d0::t_ff252a2b293ba5 1-25
+website/.gitignore
+  s_bb1919fa36e9d0::t_d07e805d0d6844 1-41
+website/app/commands/page.tsx
+  s_bb1919fa36e9d0::t_068233f242b931 1-22
+website/public/window.svg
+  s_bb1919fa36e9d0::t_d07e805d0d6844 1
+website/app/features/page.tsx
+  s_bb1919fa36e9d0::t_b8e35e0e41478e 1-70
+website/app/tutorials/page.tsx
+  s_bb1919fa36e9d0::t_22a882bb023076 1-91
+website/components/copy-block.tsx
+  s_bb1919fa36e9d0::t_348d539f5e6718 1-31
+website/lib/content.ts
+  s_bb1919fa36e9d0::t_78f5e9239eb747 1-7
+website/app/docs/page.tsx
+  s_bb1919fa36e9d0::t_a2fdeeb31e4334 1-100
+website/next.config.ts
+  s_bb1919fa36e9d0::t_d07e805d0d6844 1-7
+website/components/site-footer.tsx
+  s_bb1919fa36e9d0::t_320d7e7f190dbc 1-27
+website/README.md
+  s_bb1919fa36e9d0::t_8f6af912d6421f 1-29
+docs/planning/website-dogfood.md
+  s_bb1919fa36e9d0::t_a53914e6b38196 3
+CHANGELOG.md
+  s_bb1919fa36e9d0::t_a85e42b3bdb266 13-14
+website/components/before-after-card.tsx
+  s_bb1919fa36e9d0::t_c5c6bca90da17c 1-50
+website/components/tool-tabs.tsx
+  s_bb1919fa36e9d0::t_0aca7d015b8044 1-7,11-40
+  s_bb1919fa36e9d0::t_6176b0730eea8c 8-10
+website/components/site-header.tsx
+  s_bb1919fa36e9d0::t_3bffc10ff0abfc 1-31
+website/components/install-cta.tsx
+  s_bb1919fa36e9d0::t_28a19eb1ab95b6 1-19
+website/app/examples/page.tsx
+  s_bb1919fa36e9d0::t_2428cf079b030c 1-69
+website/public/next.svg
+  s_bb1919fa36e9d0::t_d07e805d0d6844 1
+website/lib/site-meta.ts
+  s_bb1919fa36e9d0::t_1c2da875ac0438 1-65
+package.json
+  s_bb1919fa36e9d0::t_f797a94405040b 26-27
+website/components/install-page-client.tsx
+  s_bb1919fa36e9d0::t_9a8e7db2d41dea 1-150
+website/app/page.tsx
+  s_bb1919fa36e9d0::t_d07e805d0d6844 9,35,58,91,104-105
+  s_bb1919fa36e9d0::t_70c2de70502788 1-8,10-34,36-57,59-90,92-103
+website/app/about/page.tsx
+  s_bb1919fa36e9d0::t_c127f2ddbdb950 1-159
+website/components/sticky-install-bar.tsx
+  s_bb1919fa36e9d0::t_2a156dd795936f 1-32
+website/components/page-shell.tsx
+  s_bb1919fa36e9d0::t_28c79f893fa285 1-12
+website/components/markdown-content.tsx
+  s_bb1919fa36e9d0::t_289b1d728986bd 1-36
+website/app/globals.css
+  s_bb1919fa36e9d0::t_8620331980ad65 4-19,23-33,38-158,160-194
+  s_bb1919fa36e9d0::t_3b0904575ce238 159
+  s_bb1919fa36e9d0::t_d07e805d0d6844 1-3,20-22,34-37,195
+website/postcss.config.mjs
+  s_bb1919fa36e9d0::t_d07e805d0d6844 1-7
+website/tsconfig.json
+  s_bb1919fa36e9d0::t_d07e805d0d6844 1-34
+website/components/faq-accordion.tsx
+  s_bb1919fa36e9d0::t_53e4339edbbd8c 1-40
+website/public/file.svg
+  s_bb1919fa36e9d0::t_d07e805d0d6844 1
+website/public/globe.svg
+  s_bb1919fa36e9d0::t_d07e805d0d6844 1
+website/public/vercel.svg
+  s_bb1919fa36e9d0::t_d07e805d0d6844 1
+website/eslint.config.mjs
+  s_bb1919fa36e9d0::t_d07e805d0d6844 1-18
+website/lib/install-commands.ts
+  s_bb1919fa36e9d0::t_9e880bb8796224 1-24
+website/app/layout.tsx
+  s_bb1919fa36e9d0::t_d07e805d0d6844 1,3-4,10-11,13,16-18,22-25,27,32-34
+  s_bb1919fa36e9d0::t_6dbe178b8a2337 2,5-9,12,14-15,19-21,26,28-31
+website/package-lock.json
+  s_bb1919fa36e9d0::t_509e0ebcf43b08 1-8282
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "e92c891917254d8a332c255c3e72e231a7c2fc52",
+  "prompts": {},
+  "sessions": {
+    "s_bb1919fa36e9d0": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "eb762221-284e-480e-9b84-b2457eef1a01",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
