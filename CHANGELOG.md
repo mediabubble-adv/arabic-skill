@@ -8,13 +8,15 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Planned
-- Research R1 — first reference distillation from Phase A–B
+- Research R2 — platform KB (Meta, Google, TikTok)
 - Research R3 — `/arabic research` command wiring
 - Research R4 — `scripts/validate-research.sh` stale-source checker
 - First-run onboarding flow
 
 ### Added
-- `research/` R0 scaffold — README, `index.json`, `sources/sources.yaml`, `distillation-queue.md`, knowledge-base tree, 5 prompt templates, `validate-research-scaffold.sh`
+- Research R1 — `arabic-qa` gap scan + platform register targets in `audit-mode.md` (`--platform` audit scoring)
+- `research/knowledge-base/humanization/arabic-qa-gap-scan-2026-07-04.md` — gap scan artifact
+- Golden test `tests/golden/r1-audit-platform-register.md`
 
 ## [1.2.1] - 2026-07-04
 

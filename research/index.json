@@ -1,5 +1,15 @@
 {
   "version": 1,
   "updated": "2026-07-04",
-  "topics": []
+  "topics": [
+    {
+      "id": "arabic-qa-gap-scan-2026-07-04",
+      "path": "research/knowledge-base/humanization/arabic-qa-gap-scan-2026-07-04.md",
+      "topic": "arabic-qa-gap-scan",
+      "last_reviewed": "2026-07-04",
+      "trust_tier": "A",
+      "runtime_targets": ["arabic/references/audit-mode.md"],
+      "status": "distilled"
+    }
+  ]
 }

@@ -1,9 +1,9 @@
 # Product Roadmap — `arabic`
 
 > Status: Active  
-> Product version: **1.2.0** (current — see root `VERSION`)  
-> **v1.0.0** shipped 2026-06-30 · **v1.1.0** website + P8 runtime · **v1.1.1** npm distribution · **v1.2.0** full Cursor + skills.sh  
-> Next train: **1.2.x** — Research R1 distillation, onboarding (**R0 scaffold shipped**)  
+> Product version: **1.2.1** (current — see root `VERSION`)  
+> **v1.0.0** shipped 2026-06-30 · **v1.1.0** website + P8 runtime · **v1.1.1** npm distribution · **v1.2.0** full Cursor + skills.sh · **v1.2.1** install fix  
+> Next train: **1.2.x** — onboarding, Research R2 (**R0 ✅** scaffold · **R1 ✅** platform-register distill)
 > Positioning: **Masri-first Awesome Arabic Skill — pan-Arab capable**
 
 ---
@@ -59,7 +59,7 @@ user asks → guide → clarify → recommend → write → review
 | **P4** | Masri commercial depth | Ads matrix, SEO/AEO, seasonal calendar |
 | **P5** | Project Mode & Dev-Tech | Website/campaign/book workflows + project-aware Arabic explanations |
 | **P6** | Runtime integration & validation | Wire routing, INDEX sync, run G1–G12 |
-| **R0–R4** | Research intelligence (cross-cutting) | **R0 ✅** scaffold in `research/`; R1–R4 distillation + `/arabic research` + validation |
+| **R0–R4** | Research intelligence (cross-cutting) | **R0 ✅** scaffold; **R1** `arabic-qa` platform-register distill → `audit-mode.md`; R2–R4 platform KB + `/arabic research` + validation |
 | **C0–C5** | Command surface (cross-cutting) | `/arabic` tree, `command-router.md`, workspace `.arabic/` auto |
 
 Semver rules: see [Versioning and Releases](../engineering/versioning-and-releases.md).  
