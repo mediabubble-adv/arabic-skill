@@ -5,9 +5,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/mediabubble-adv/arabic-skill/releases"><img src="https://img.shields.io/badge/version-1.1.1-blue" alt="version"></a>
+  <a href="https://www.npmjs.com/package/@mediabubble-adv/arabic-skill"><img src="https://img.shields.io/npm/v/@mediabubble-adv/arabic-skill?label=version" alt="npm version"></a>
   <a href="./docs/README.md"><img src="https://img.shields.io/badge/docs-index-green" alt="docs"></a>
-  <a href="./docs/supported/README.md"><img src="https://img.shields.io/badge/install-supported_tools-purple" alt="install"></a>
+  <a href="https://arabic-skill.vercel.app/install"><img src="https://img.shields.io/badge/install-npx-purple" alt="install"></a>
   <img src="https://img.shields.io/badge/runtime-arabic-blue" alt="runtime folder">
   <img src="https://img.shields.io/badge/reference-38_packs-lightgrey" alt="reference packs">
 </p>
@@ -202,7 +202,7 @@ Runtime install folder is `arabic/`. The GitHub repo can stay `mediabubble-adv/a
 | `/arabic` command system | Runtime router and Cursor adapter shipped |
 | Research layer | Specified for structured research collection and future runtime expansion |
 | Website | Shipped at `v1.1.0` — https://arabic-skill.vercel.app |
-| Public release | `v1.1.0` current; `v1.0.0` first public release |
+| Public release | `v1.1.1` current (npm); `v1.1.0` website + P8 runtime; `v1.0.0` first public release |
 
 ## Documentation
 
