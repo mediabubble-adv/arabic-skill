@@ -1,0 +1,28 @@
+docs/planning/website-dogfood.md
+  s_667765b9a901fe::t_e2a35a531b85e3 3
+tests/golden/g13-g18-website.md
+  s_667765b9a901fe::t_98a68140f2f99b 42-43
+AGENTS.md
+  s_667765b9a901fe::t_60daf341792985 29
+website/README.md
+  s_667765b9a901fe::t_02a83e4e063f7b 7
+docs/engineering/release-playbook.md
+  s_667765b9a901fe::t_dccf60b7017fb0 63-64
+  s_667765b9a901fe::t_564dec0d4c6f92 5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "4f1ab83dfc47528f07bf2c3ba2c3d2ecc55e893b",
+  "prompts": {},
+  "sessions": {
+    "s_667765b9a901fe": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "fa174e6d-030e-412e-b623-fbddeafe9355",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
