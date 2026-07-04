@@ -1,0 +1,24 @@
+docs/engineering/versioning-and-releases.md
+  s_461f57b5773c46::t_b185954a8ec0e2 8,23-24,27,36-37,53-54,65-69,87-88,91,93-95,106,108,111,128-137
+docs/planning/roadmap.md
+  s_461f57b5773c46::t_15b24ce240eb28 4-6
+  s_461f57b5773c46::t_80658210f911ee 181,187,189-196
+  s_461f57b5773c46::t_c5480ab1b745bc 231
+  s_461f57b5773c46::t_b1236860cfa1e6 39,41-45,48,50
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "167e1d87cc7e0f7a0b261831ab79c45c381c9a6a",
+  "prompts": {},
+  "sessions": {
+    "s_461f57b5773c46": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "7dd0ab62-8099-4d3b-9012-a6d967f092d9",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
