@@ -4,7 +4,7 @@ Arabic-first install and tutorial site (v1.1.0 dogfood).
 
 ## Preview
 
-- **Production preview:** https://arabic-skill.vercel.app _(update after first Vercel deploy)_
+- **Production preview:** https://arabic-skill.vercel.app
 - **Local:** `npm run dev` → http://localhost:3000
 
 ## Golden tests

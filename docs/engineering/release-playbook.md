@@ -2,7 +2,7 @@
 
 > Step-by-step release procedure for **Awesome Arabic Skill** (`arabic`). Complements [versioning-and-releases.md](./versioning-and-releases.md) (policy) and [branching-strategy.md](./branching-strategy.md) (branches). This doc is the **operational checklist**.
 
-**Status:** Active · **Owner:** Maintainer · **Last updated:** 2026-06-30
+**Status:** Active · **Owner:** Maintainer · **Last updated:** 2026-07-04
 **Applies to:** v1.0.0 (first public release) and v1.1.0 (website + distribution)
 
 ---
@@ -59,6 +59,8 @@ git push origin main && git push origin v1.0.0
 ---
 
 ## 2. v1.1.0 — website + distribution
+
+**Website preview (G18):** https://arabic-skill.vercel.app — all 8 routes live; documented in `website/README.md`.
 
 Same shape as §1 with these differences:
 

@@ -1,6 +1,6 @@
 # Website Dogfood Plan — G13–G18 (v1.1.0 / P7)
 
-> **Status:** EXECUTE — PR #46 merged to `main`; G13–G17 green locally; **G18 Vercel deploy** remains before `v1.1.0` tag.  
+> **Status:** DONE — PR #46 merged; **G13–G18** green; live at https://arabic-skill.vercel.app · `v1.1.0` tag pending release branch.  
 > **Product:** Awesome Arabic Skill (`arabic`) · **Register:** مصري أولاً for all page chrome  
 > **Branch target:** `feat/website-v1.1.0`  
 > **Gate:** G13–G18 must pass before `v1.1.0` tag

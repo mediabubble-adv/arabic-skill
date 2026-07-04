@@ -39,5 +39,5 @@ Verify: `cd website && npm run build && npm run start` then curl each path, or `
 
 ## G18 — Deploy preview documented
 
-- [ ] `website/README.md` contains live preview URL
-- [ ] `docs/engineering/release-playbook.md` §1.1.0 gate checked
+- [x] `website/README.md` contains live preview URL
+- [x] `docs/engineering/release-playbook.md` §1.1.0 gate checked
