@@ -18,6 +18,9 @@ jobs:
       - name: Validate skill references
         run: ./scripts/validate-skill.sh
 
+      - name: Validate SKILL.md frontmatter
+        run: bash scripts/validate-frontmatter.sh
+
       - name: Validate documentation links
         run: ./scripts/validate-docs.sh
 

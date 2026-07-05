@@ -11,6 +11,7 @@ PR / push to main
 ┌──────────────────┐
 │  validate.yml    │
 │  - skill refs    │
+│  - frontmatter   │
 │  - doc links     │
 │  - version sync  │
 └──────────────────┘
@@ -31,6 +32,7 @@ PR / push to main
 | Job | Script | Fails when |
 |-----|--------|------------|
 | skill-integrity | `scripts/validate-skill.sh` | SKILL.md references missing files |
+| frontmatter | `scripts/validate-frontmatter.sh` | SKILL.md YAML schema invalid |
 | docs-links | `scripts/validate-docs.sh` | Broken relative markdown links |
 | version-sync | inline check | VERSION ≠ SKILL.md version |
 
@@ -48,6 +50,7 @@ Before opening a PR:
 
 ```bash
 ./scripts/validate-skill.sh
+./scripts/validate-frontmatter.sh
 ./scripts/validate-docs.sh
 ```
 
@@ -59,7 +62,6 @@ Before opening a PR:
 |------|-------|---------|
 | Golden prompt tests (G1–G12) | **v1.0.0 gate** | Skill acceptance scenarios — see [implementation-plan §0.3](../planning/implementation-plan.md#03-golden-test-master-table-g1g18) |
 | Golden prompt tests (G13–G18) | v1.1.0 | Website acceptance scenarios |
-| Frontmatter lint (`validate-frontmatter.sh`) | v1.1.0 | SKILL.md YAML schema |
 | Reference sync check | v1.2.0 | Distillation drift detection |
 | `npx arabic detect` | v2.0.0 | AI-ism scanner for output |
 | Install website + Pages deploy | Post-v1 test | Public install site at `website/` |

@@ -60,7 +60,7 @@ Rotate monthly — do not run all every cycle:
 
 | Step | Artifact |
 |------|----------|
-| Status run | stdout summary (optional log in `.arabic/research/`) |
+| Status run | stdout summary (optional log in `research/logs/`) |
 | Collect | `research/knowledge-base/**/*.md` + `sources.yaml` |
 | Distill | Runtime PR + `tests/golden/r*-*.md` + queue row → distilled |
 

@@ -7,6 +7,15 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+- `scripts/validate-frontmatter.sh` — SKILL.md YAML schema gate (`name`, `display_name`, `version`, `description`); wired into `npm run validate` and CI
+- Golden test `tests/golden/validate-frontmatter.md`
+- First research monthly cron log (`research/logs/2026-07-monthly-cron.md`) — W1–W4 July 2026 run
+
+### Changed
+- `research/distillation-queue.md` — queued RQ-010, RQ-011, RQ-013 from reference-gap scan; deferred RQ-012 (overlaps RQ-002)
+- Platform source URLs spot-checked (Meta, Google, TikTok) — all 200 OK
+
 ## [1.2.3] - 2026-07-05
 
 **Onboarding polish** — doc/UI alignment missed at v1.2.2 tag.
