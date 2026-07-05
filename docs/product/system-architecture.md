@@ -132,8 +132,10 @@ docs/ (intent) -> reference/ (canonical) + research/ (collected)
 | `validate-onboarding.sh` | Onboarding templates + references |
 | `validate-golden.sh` | Golden fixture structure, path refs, G13 route smoke |
 | `validate-behavioral-golden.sh` | G1–G12 routing contracts (manifest + markers) |
+| `validate-golden-scenarios.sh` | G1–G12 scenario manifest schema + command parity |
+| `run-golden-harness.py` | Opt-in LLM runner (`npm run golden:harness`) |
 
-Golden tests in `tests/golden/` combine **manual** LLM scenarios (G1–G12 interactive), **automated** structural (`validate-golden.sh`), **routing contracts** (`validate-behavioral-golden.sh`), and **Playwright** UX/content gates (`validate-website-playwright.sh`).
+Golden tests in `tests/golden/` combine **automated** structural (`validate-golden.sh`), **routing contracts** (`validate-behavioral-golden.sh`), **scenario manifest** (`validate-golden-scenarios.sh`), **Playwright** UX/content gates (`validate-website-playwright.sh`), and **opt-in LLM runs** (`golden:harness` — not in default CI).
 
 ## 8. Key Design Constraints
 
@@ -143,9 +145,9 @@ Golden tests in `tests/golden/` combine **manual** LLM scenarios (G1–G12 inter
 - project-level behavior is staged (Project Mode), not improvised
 - distillation queue never exceeds 20 open items
 
-## 9. Planned Extensions (1.2.6+)
+## 9. Planned Extensions (1.2.7+)
 
-- LLM agent harness for interactive G1–G12 scenario runs in CI
+- Tune G1–G12 `pass_signals` from maintainer harness runs; optional nightly workflow
 - trend snapshot storage conventions under `research/snapshots/`
 
 ## 10. Architectural Summary

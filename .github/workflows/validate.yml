@@ -45,6 +45,9 @@ jobs:
       - name: Validate G1–G12 behavioral routing contracts
         run: bash scripts/validate-behavioral-golden.sh
 
+      - name: Validate G1–G12 golden scenarios
+        run: bash scripts/validate-golden-scenarios.sh
+
       - name: Check version sync
         run: |
           ROOT_VERSION=$(tr -d '[:space:]' < VERSION)

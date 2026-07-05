@@ -86,12 +86,13 @@ Use for:
 
 Use for:
 
-- manual acceptance checklists (G13–G18, research R*, distill RQ*)
+- golden fixtures and checklists (G1–G18, research R*, distill RQ*)
+- G1–G12 scenario manifest (`scenarios/g1-g12-scenarios.json`) + opt-in LLM harness
 - behavior fixtures referenced in PR bodies
 
 Do not use for:
 
-- automated test runners (structural golden gate shipped; Playwright UX runner planned)
+- CI LLM API runs (use `npm run golden:harness` locally with `OPENAI_API_KEY`)
 
 ## 4. File Classification Model
 

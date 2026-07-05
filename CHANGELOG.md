@@ -7,6 +7,21 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.2.6] - 2026-07-05
+
+**LLM agent harness** — G1–G12 scenario manifest, schema gate, opt-in runner.
+
+### Added
+- `tests/golden/scenarios/g1-g12-scenarios.json` — G1–G12 interactive scenario manifest with `pass_signals`
+- `scripts/validate-golden-scenarios.sh` — scenario schema + manifest command parity gate (CI)
+- `scripts/run-golden-harness.py` + `scripts/run-golden-harness.sh` — opt-in LLM runner (`npm run golden:harness`)
+- Golden test `tests/golden/g1-g12-agent-harness.md`
+- G9 audit fixture `tests/golden/scenarios/fixtures/g9-audit-sample.txt`
+
+### Changed
+- `npm run validate` and CI — include `validate-golden-scenarios.sh`
+- Docs: README, roadmap, CI pipeline, system architecture, versioning, docs index
+
 ## [1.2.5] - 2026-07-05
 
 **Validation stack** — golden fixture gate, Playwright G15–G16, G1–G12 routing contracts.
@@ -199,7 +214,8 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 - Renamed runtime folder `arabic-content/` → `arabic/`
 - Version policy: **0.x = development**, **1.0.0 = plan complete + first public release**
 
-[Unreleased]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.5...HEAD
+[Unreleased]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.6...HEAD
+[1.2.6]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.5...v1.2.6
 [1.2.5]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.4...v1.2.5
 [1.2.4]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.3...v1.2.4
 [1.2.3]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.2...v1.2.3
