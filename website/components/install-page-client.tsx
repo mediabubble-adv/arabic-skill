@@ -5,7 +5,7 @@ import Link from "next/link";
 import { CopyBlock } from "@/components/copy-block";
 import { ToolTabs } from "@/components/tool-tabs";
 import { FaqAccordion } from "@/components/faq-accordion";
-import { FIRST_COMMAND, PRIMARY_INSTALL } from "@/lib/install-commands";
+import { FIRST_COMMAND, INIT_BRIEF_EXAMPLE, PRIMARY_INSTALL } from "@/lib/install-commands";
 
 const FAQ = [
   {
@@ -86,7 +86,11 @@ function InstallPageClient() {
             <ol className="list-decimal list-inside text-[var(--fg-muted)] space-y-1">
               <li>افتح المشروع اللي شغال عليه</li>
               <li>
-                اكتب <code dir="ltr">{FIRST_COMMAND}</code> وابدأ
+                اكتب <code dir="ltr">{FIRST_COMMAND}</code> وابدأ (من غير ملفات في الريبو)
+              </li>
+              <li>
+                لو مشروع عميل: <code dir="ltr">/arabic init</code> ثم{" "}
+                <code dir="ltr">{INIT_BRIEF_EXAMPLE}</code>
               </li>
               <li>لو عندك براند ثابت: /arabic voice save</li>
             </ol>

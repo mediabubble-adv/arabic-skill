@@ -133,7 +133,7 @@ Full routing table: `references/command-router.md`.
 
 ---
 
-## 8. Violations to avoid
+## 9. Violations to avoid
 
 - Loading all 55 files "to be safe"
 - Running legacy + AI-likelihood scoring on every write (audit-only)

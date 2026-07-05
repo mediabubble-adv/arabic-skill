@@ -147,7 +147,10 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 - Renamed runtime folder `arabic-content/` → `arabic/`
 - Version policy: **0.x = development**, **1.0.0 = plan complete + first public release**
 
-[Unreleased]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.1.1...HEAD
+[Unreleased]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.2...HEAD
+[1.2.2]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.1...v1.2.2
+[1.2.1]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.0...v1.2.1
+[1.2.0]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.1.1...v1.2.0
 [1.1.1]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/mediabubble-adv/arabic-skill/releases/tag/v1.0.0
