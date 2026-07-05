@@ -1,0 +1,20 @@
+research/distillation-queue.md
+  s_e22df37b935413::t_c386e9e25c8c50 26
+  s_e22df37b935413::t_c31fe536681c59 49
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "51b633672201e8983cbe4f1b9e7edefe526d3934",
+  "prompts": {},
+  "sessions": {
+    "s_e22df37b935413": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "997ffe26-6e5f-4828-bfbb-c1e3cd07cd76",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
