@@ -1,0 +1,27 @@
+tests/golden/reference-sync-gate.md
+  s_e22df37b935413::t_d44c9edd3f53e4 18-19,22-25
+  s_e22df37b935413::t_120ba45b6d3beb 26
+CHANGELOG.md
+  s_e22df37b935413::t_3cab2b857a04f1 11
+scripts/reference-distillation-map.json
+  s_e22df37b935413::t_f955eaa1f1dee8 71
+scripts/validate-reference-sync.sh
+  s_e22df37b935413::t_5d6544c96ce155 105-108
+  s_e22df37b935413::t_8ca871d6bd2cb8 155,163-174,190,195,200,205,210,215
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "9f73a5cc8034a27297780523c11cabefecabe21f",
+  "prompts": {},
+  "sessions": {
+    "s_e22df37b935413": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "997ffe26-6e5f-4828-bfbb-c1e3cd07cd76",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
