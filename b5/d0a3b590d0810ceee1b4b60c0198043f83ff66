@@ -1,0 +1,23 @@
+tests/golden/rq010-masri-platform-specs.md
+  s_e22df37b935413::t_56d95410d2fc2e 13,19,23
+arabic/dialects/masri.md
+  s_e22df37b935413::t_abb26dd736c093 136,144
+CHANGELOG.md
+  s_e22df37b935413::t_8bc7881f811651 11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "b5d0a3b590d0810ceee1b4b60c0198043f83ff66",
+  "prompts": {},
+  "sessions": {
+    "s_e22df37b935413": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "997ffe26-6e5f-4828-bfbb-c1e3cd07cd76",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
