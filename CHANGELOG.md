@@ -7,6 +7,17 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.2.3] - 2026-07-05
+
+**Onboarding polish** — doc/UI alignment missed at v1.2.2 tag.
+
+### Fixed
+- `.arabic/` template README brief path uses `.arabic/briefs/example.yaml`
+- `command-router.md` init scaffold matches template-backed init (no premature `voice.md` / `last-run.json`)
+- `load-discipline.md` duplicate §8 renumbered to §9
+- Install page client post-install steps synced with `website/content/install.md` (`/arabic init` + brief example)
+- Keep a Changelog compare links for 1.2.x releases
+
 ## [1.2.2] - 2026-07-05
 
 **First-run onboarding.** Path A (`/arabic guide`) and Path B (`/arabic init`) with scaffold templates and CI gate.
@@ -147,7 +158,8 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 - Renamed runtime folder `arabic-content/` → `arabic/`
 - Version policy: **0.x = development**, **1.0.0 = plan complete + first public release**
 
-[Unreleased]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.2...HEAD
+[Unreleased]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.3...HEAD
+[1.2.3]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.2...v1.2.3
 [1.2.2]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.1...v1.2.2
 [1.2.1]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.1.1...v1.2.0

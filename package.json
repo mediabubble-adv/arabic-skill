@@ -1,6 +1,6 @@
 {
   "name": "@mediabubble-adv/arabic-skill",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Awesome Arabic Skill runtime pack and npx installer.",
   "license": "MIT",
   "author": "MediaBubble",
