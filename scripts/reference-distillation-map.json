@@ -68,8 +68,7 @@
     }
   ],
   "dialect_auto": {
-    "max_lines": 150,
-    "skip_reference": ["arabic-dialectal-variations", "arabic-masri"]
+    "max_lines": 150
   },
   "canonical_only": [
     "arabic-tafsir",

@@ -102,7 +102,10 @@ for pack in ref_packs:
 
 unmapped = [p for p in ref_packs if p not in mapped_refs and p not in canonical_only]
 for pack in unmapped:
-    warn(f"WARN: reference/{pack}/ has no distillation map entry (add mapping or canonical_only)")
+    fail(
+        f"FAIL: reference/{pack}/ has no distillation map entry "
+        f"(add mapping or canonical_only)"
+    )
 
 for pack in canonical_only:
     if not (reference / pack).is_dir():
@@ -149,13 +152,25 @@ orphans = sorted(on_disk - indexed_paths)
 for path in orphans:
     fail(f"FAIL: runtime file not listed in INDEX.md: arabic/{path}")
 
-# parse Total built / breakdown
+# parse Total built / breakdown (required — missing counts are gate failures)
 total_match = re.search(r"\*\*Total built:\*\*\s*(\d+)", index_text)
 refs_match = re.search(r"references/\s*\((\d+)", index_text)
 dialect_match = re.search(r"dialects/\s*\((\d+)", index_text)
 domain_match = re.search(r"domains/\s*\((\d+)", index_text)
 conv_match = re.search(r"conversations/\s*\((\d+)", index_text)
 prof_match = re.search(r"professional-docs/\s*\((\d+)", index_text)
+
+required_index_counts = {
+    "Total built": total_match,
+    "references/": refs_match,
+    "dialects/": dialect_match,
+    "domains/": domain_match,
+    "conversations/": conv_match,
+    "professional-docs/": prof_match,
+}
+for label, match in required_index_counts.items():
+    if not match:
+        fail(f"FAIL: INDEX.md missing or malformed {label} count in Build Status breakdown")
 
 actual_refs = len(list((arabic / "references").glob("*.md")))
 actual_dialects = len(list((arabic / "dialects").glob("*.md")))
@@ -172,32 +187,32 @@ actual_total = (
     + actual_prof
 )
 
-if refs_match and int(refs_match.group(1)) != actual_refs:
+if int(refs_match.group(1)) != actual_refs:
     fail(
         f"FAIL: INDEX.md references count ({refs_match.group(1)}) != "
         f"on-disk ({actual_refs})"
     )
-if dialect_match and int(dialect_match.group(1)) != actual_dialects:
+if int(dialect_match.group(1)) != actual_dialects:
     fail(
         f"FAIL: INDEX.md dialects count ({dialect_match.group(1)}) != "
         f"on-disk ({actual_dialects})"
     )
-if domain_match and int(domain_match.group(1)) != actual_domains:
+if int(domain_match.group(1)) != actual_domains:
     fail(
         f"FAIL: INDEX.md domains count ({domain_match.group(1)}) != "
         f"on-disk ({actual_domains})"
     )
-if conv_match and int(conv_match.group(1)) != actual_conv:
+if int(conv_match.group(1)) != actual_conv:
     fail(
         f"FAIL: INDEX.md conversations count ({conv_match.group(1)}) != "
         f"on-disk ({actual_conv})"
     )
-if prof_match and int(prof_match.group(1)) != actual_prof:
+if int(prof_match.group(1)) != actual_prof:
     fail(
         f"FAIL: INDEX.md professional-docs count ({prof_match.group(1)}) != "
         f"on-disk ({actual_prof})"
     )
-if total_match and int(total_match.group(1)) != actual_total:
+if int(total_match.group(1)) != actual_total:
     fail(
         f"FAIL: INDEX.md Total built ({total_match.group(1)}) != "
         f"computed ({actual_total})"

@@ -15,8 +15,14 @@ Manual checklist for `scripts/validate-reference-sync.sh` (1.2.x CI gate).
 
 ## G-REF-SYNC-02 — Distillation map
 
-- [ ] `scripts/reference-distillation-map.json` lists every non–canonical-only `reference/arabic-*` pack (explicit mapping, dialect auto-pair, or `canonical_only`)
+- [ ] `scripts/reference-distillation-map.json` lists every `reference/arabic-*` pack (explicit mapping, dialect auto-pair, or `canonical_only`)
+- [ ] Unmapped packs fail the gate (not warn-only)
 - [ ] Each mapped runtime target path exists on disk
+
+## G-REF-SYNC-02b — INDEX Build Status counts
+
+- [ ] `INDEX.md` Build Status includes parseable **Total built** and per-folder breakdown counts
+- [ ] Missing or malformed count text fails the gate
 
 ## G-REF-SYNC-03 — Queue exclusivity
 
