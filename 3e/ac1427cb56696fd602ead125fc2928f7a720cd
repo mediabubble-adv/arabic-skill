@@ -1,0 +1,27 @@
+tests/golden/rq013-seo-spelling-variants.md
+  s_e22df37b935413::t_f8a8e67bada820 11-12
+  s_e22df37b935413::t_f2bbee2f6648d3 1,10,13,23,25,27
+CHANGELOG.md
+  s_e22df37b935413::t_51b6d0b3e90067 13
+research/distillation-queue.md
+  s_e22df37b935413::t_567d1962c64101 26
+arabic/references/seo-aeo-masri.md
+  s_e22df37b935413::t_2c02f5395869af 30,32,34-47,49,51,53-55,58
+  s_e22df37b935413::t_9a3461e55d8689 59
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "3eac1427cb56696fd602ead125fc2928f7a720cd",
+  "prompts": {},
+  "sessions": {
+    "s_e22df37b935413": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "997ffe26-6e5f-4828-bfbb-c1e3cd07cd76",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
