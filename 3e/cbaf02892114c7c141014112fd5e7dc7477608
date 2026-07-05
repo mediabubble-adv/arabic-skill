@@ -1,0 +1,37 @@
+tests/golden/validate-golden-runner.md
+  s_bb5489bfef9fba::t_431aa6e9e55191 19
+tests/golden/g1-g12-routing.md
+  s_bb5489bfef9fba::t_1e7761f37f1569 29
+.github/workflows/validate.yml
+  s_bb5489bfef9fba::t_34478020cf1ca4 69-72
+CHANGELOG.md
+  s_bb5489bfef9fba::t_0704f415692abb 202-203
+  s_bb5489bfef9fba::t_02ce72ecdeacf1 23-24,27-30
+docs/planning/roadmap.md
+  s_bb5489bfef9fba::t_21c9cd577f6dd2 4-6
+  s_bb5489bfef9fba::t_329a396bf56eea 50-51
+scripts/validate-website-playwright.sh
+  s_bb5489bfef9fba::t_bee6c71b624aee 14-17,28
+scripts/validate-behavioral-golden.sh
+  s_bb5489bfef9fba::t_3c322edda3b302 32-44,58
+website/e2e/g15-mobile-ux.spec.ts
+  s_bb5489bfef9fba::t_77e27ffae96010 59-61
+scripts/validate-golden.sh
+  s_bb5489bfef9fba::t_b3ddd44b2e101a 119-123
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "3ecbaf02892114c7c141014112fd5e7dc7477608",
+  "prompts": {},
+  "sessions": {
+    "s_bb5489bfef9fba": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "11bba942-631b-47bf-bd78-307e29de087e",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
