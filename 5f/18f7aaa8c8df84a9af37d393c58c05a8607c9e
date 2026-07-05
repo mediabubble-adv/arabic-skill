@@ -1,0 +1,49 @@
+arabic/references/persuasion-arab-psychology.md
+  s_0197dde7fadf2a::t_07df8cb6a6e154 1-257
+arabic/SKILL.md
+  s_0197dde7fadf2a::t_49df123e554932 264-265
+  s_0197dde7fadf2a::t_2145039aa2a238 275
+arabic/references/advisory-mode.md
+  s_0197dde7fadf2a::t_6c2d5b41852a09 59-62,65-69
+arabic/references/load-discipline.md
+  s_0197dde7fadf2a::t_d2eb87e92a09ae 64
+  s_0197dde7fadf2a::t_5474471be610d2 48-54
+arabic/references/INDEX.md
+  s_0197dde7fadf2a::t_e6ee9b64786f49 18,24,30
+arabic/references/engines.md
+  s_0197dde7fadf2a::t_ca28d08530c1f4 5-13
+tests/golden/p1-persuasion-routing.md
+  s_0197dde7fadf2a::t_00bf1a076d9653 1-93
+arabic/voice.md
+  s_0197dde7fadf2a::t_bba137f47b0298 19-21
+arabic/references/audit-mode.md
+  s_0197dde7fadf2a::t_698eabb2f45bc2 89,93-96
+  s_0197dde7fadf2a::t_826d0696c84590 85,87
+  s_0197dde7fadf2a::t_28496073476a31 1
+  s_0197dde7fadf2a::t_eccbc60c2fed04 19
+arabic/references/intake-protocols.md
+  s_0197dde7fadf2a::t_900958d10f2c66 10-11
+  s_0197dde7fadf2a::t_fe113e9f7c50ae 54-55
+  s_0197dde7fadf2a::t_a4ae4bb7fae703 77-78
+  s_0197dde7fadf2a::t_0de4525b21f0b9 42-43
+docs/planning/2026-07-05-audit-remediation-plan.md
+  s_0197dde7fadf2a::t_ef978cd40dfbd1 1-248
+package-lock.json
+  s_0197dde7fadf2a::t_6edb82a77a8560 1-19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "5f18f7aaa8c8df84a9af37d393c58c05a8607c9e",
+  "prompts": {},
+  "sessions": {
+    "s_0197dde7fadf2a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "76c5c404-8942-4fc7-9c88-40e1874404e1",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
