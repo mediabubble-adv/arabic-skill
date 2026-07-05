@@ -1,4 +1,4 @@
-# Golden Test RQ-013 — Masri SEO spelling variants distill
+# Golden Test RQ-013 — Masri SEO long-tail forms distill
 
 Manual checklist for reference-gap distill `feat/research-rq013-distill`.
 
@@ -7,9 +7,10 @@ Manual checklist for reference-gap distill `feat/research-rq013-distill`.
 
 ## G-RQ013-01 — Runtime slice present
 
-- [ ] `arabic/references/seo-aeo-masri.md` §2 includes Masri spelling variants table
-- [ ] Table covers إزاي/ازاي, عايز/عاوز, كويس, فين, إمتى/امتى
-- [ ] Guidance: cover both MSA and Masri in H2/FAQ (not title-only)
+- [ ] `arabic/references/seo-aeo-masri.md` §2 includes orthographic variants + Masri equivalents tables
+- [ ] Orthographic table covers إزاي/ازاي, إمتى/امتى, إيه/ايه
+- [ ] Equivalents table covers فين, عايز/عاوز, كويس, حلو (not نضيف for جميل)
+- [ ] Guidance distinguishes spelling variants vs word-choice equivalents
 
 ## G-RQ013-02 — Write task behavior
 
@@ -19,11 +20,11 @@ Manual checklist for reference-gap distill `feat/research-rq013-distill`.
 
 **Command:** `/arabic aeo` for the same topic.
 
-**Expected:** AEO answers include spelling-variant coverage — not MSA-only FAQ phrasing.
+**Expected:** AEO answers include Masri equivalent coverage — not MSA-only FAQ phrasing.
 
-## G-RQ013-03 — Queue closed
+## G-RQ013-03 — Queue state
 
-- [ ] `research/distillation-queue.md` — RQ-013 moved to **Distilled (recent)**; Open queue empty
+- [ ] `research/distillation-queue.md` — RQ-013 in **In progress** until PR merges; then **Distilled (recent)** only
 
 ## Validation
 
