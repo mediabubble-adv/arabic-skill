@@ -1,0 +1,44 @@
+docs/engineering/versioning-and-releases.md
+  s_bb5489bfef9fba::t_19e0ad10dcb915 30
+  s_bb5489bfef9fba::t_5006091b58dd47 141
+  s_bb5489bfef9fba::t_43265012a96456 8
+  s_bb5489bfef9fba::t_3412509fa2ac0a 78
+  s_bb5489bfef9fba::t_0e843b790233b2 27
+arabic/SKILL.md
+  s_bb5489bfef9fba::t_c9165528632f1e 4
+README.md
+  s_bb5489bfef9fba::t_66fca117acfb02 215,220-222
+  s_bb5489bfef9fba::t_892edd6395d016 279
+  s_bb5489bfef9fba::t_9a28641a54f7af 4-11,17-18,21-34,38-39,69,83-85,89-116,148-149,154-167,212-214,216-219,223-225,229-244,272-273,277-278,288-289,294
+  s_bb5489bfef9fba::t_b6134b33e344c7 3
+VERSION
+  s_bb5489bfef9fba::t_e44cfdad4fd785 1
+docs/planning/roadmap.md
+  s_bb5489bfef9fba::t_ba4fdc72ccf0f1 52-53
+  s_bb5489bfef9fba::t_ac3e371b25b2ee 4-6
+AGENTS.md
+  s_bb5489bfef9fba::t_6242208a468bd8 6
+package.json
+  s_bb5489bfef9fba::t_71ae477b6f39d6 3
+docs/engineering/ci-pipeline.md
+  s_bb5489bfef9fba::t_79546c12835f7d 116-117
+CHANGELOG.md
+  s_bb5489bfef9fba::t_0b0c949def4bf3 10-13,24
+  s_bb5489bfef9fba::t_dc8f8c84b81732 233-234
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "d2c111bacf54a1bbf0febf24c5455c3d59977525",
+  "prompts": {},
+  "sessions": {
+    "s_bb5489bfef9fba": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "11bba942-631b-47bf-bd78-307e29de087e",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
