@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "description": "Interactive G1–G12 golden scenarios for the agent harness (LLM run is opt-in)",
   "scenarios": [
     {
@@ -8,8 +8,7 @@
       "command": "/arabic guide",
       "user_prompt": "عايز بوست لإنستجرام لكافيه في المعادي",
       "pass_signals": {
-        "must_match_any": ["؟", "لهجة", "نوع", "قبل", "وضّح", "توضيح", "اسأل", "توصية"],
-        "must_not_match": ["يسرنا أن نقدم", "نحن سعداء", "اكتشف كيف يمكن"],
+        "presets": ["advisory_clarify", "no_msa_corporate"],
         "min_length": 60
       }
     },
@@ -19,8 +18,8 @@
       "command": "/arabic write meta",
       "user_prompt": "اكتب إعلان ميتا لأبليكيشن توصيل طعام في القاهرة. الجمهور: شباب 18-30. الهدف: تحميلات. اللهجة: مصري. Primary text ≤125 حرف. CTA: حمّل دلوقتي.",
       "pass_signals": {
-        "must_match_any": ["مراجعة", "review", "تحميل", "حمّل", "مصر"],
-        "must_not_match": [],
+        "presets": ["masri_output"],
+        "must_match_any": ["مراجعة", "review", "تحميل", "حمّل", "ميتا"],
         "min_length": 80
       }
     },
@@ -30,8 +29,7 @@
       "command": "/arabic coach",
       "user_prompt": "اكتب حاجة حلوة عن المنتج بتاعنا",
       "pass_signals": {
-        "must_match_any": ["ضعيف", "أقوى", "وضّح", "لهجة", "هدف", "prompt", "برومبت"],
-        "must_not_match": [],
+        "must_match_any": ["ضعيف", "أقوى", "وضّح", "لهجة", "هدف", "prompt", "برومبت", "أوضح"],
         "min_length": 100
       }
     },
@@ -41,8 +39,7 @@
       "command": "/arabic plan website",
       "user_prompt": "عايز أعمل موقع تسويقي لمهارة عربية — ٥ صفحات، مصري، install-first",
       "pass_signals": {
-        "must_match_any": ["خطة", "plan", "sitemap", "صفحة", "مرحلة", "موافق"],
-        "must_not_match": [],
+        "presets": ["plan_approval_gate", "plan_workspace"],
         "min_length": 150
       }
     },
@@ -52,8 +49,8 @@
       "command": "/arabic plan campaign",
       "user_prompt": "حملة إطلاق أبليكيشن رياضة في مصر — ميتا + تيك توك + واتساب، مصري",
       "pass_signals": {
+        "presets": ["plan_approval_gate"],
         "must_match_any": ["قناة", "ميتا", "تيك", "واتساب", "حملة", "مرحلة"],
-        "must_not_match": [],
         "min_length": 150
       }
     },
@@ -63,8 +60,8 @@
       "command": "/arabic plan book",
       "user_prompt": "رواية شبابية مصري عن مطعم عائلي في الإسكندرية — ١٢ فصل",
       "pass_signals": {
+        "presets": ["plan_approval_gate"],
         "must_match_any": ["فصل", "outline", "ملخص", "شخصيات", "خطة", "premise"],
-        "must_not_match": [],
         "min_length": 150
       }
     },
@@ -74,8 +71,7 @@
       "command": "/arabic",
       "user_prompt": "محتاج مساعدة في محتوى عربي",
       "pass_signals": {
-        "must_match_any": ["؟", "وضّح", "نوع", "لهجة", "قبل", "guide"],
-        "must_not_match": ["يسرنا أن نقدم"],
+        "presets": ["advisory_clarify", "no_msa_corporate"],
         "min_length": 60
       }
     },
@@ -85,8 +81,8 @@
       "command": "/arabic write caption",
       "user_prompt": "كابشن إنستجرام لجيم مصري. المنتج: اشتراك شهري. اللهجة: مصري. الجمهور: شباب القاهرة. CTA: جرّب مجاناً.",
       "pass_signals": {
-        "must_match_any": ["مصر", "جيم", "اشتراك", "جرّب"],
-        "must_not_match": ["يسرنا أن نقدم", "اكتشف كيف يمكن"],
+        "presets": ["masri_output", "no_msa_corporate"],
+        "must_match_any": ["جيم", "اشتراك", "جرّب"],
         "min_length": 40
       }
     },
@@ -97,8 +93,7 @@
       "input_file": "tests/golden/scenarios/fixtures/g9-audit-sample.txt",
       "user_prompt": "راجع النص المرفق",
       "pass_signals": {
-        "must_match_any": ["/", "نقطة", "درجة", "score", "تدقيق", "audit", "Check"],
-        "must_not_match": [],
+        "presets": ["audit_scored"],
         "min_length": 80
       }
     },
@@ -108,8 +103,7 @@
       "command": "/arabic plan website",
       "user_prompt": "موقع ٣ صفحات لشركة ناشئة SaaS — هوم، تسعير، تواصل. مصري.",
       "pass_signals": {
-        "must_match_any": [".arabic/projects", "خطة", "plan", "صفحة"],
-        "must_not_match": [],
+        "presets": ["plan_workspace", "plan_approval_gate"],
         "min_length": 120
       }
     },
@@ -119,8 +113,7 @@
       "command": "/arabic auto explain",
       "user_prompt": "اشرح المشروع ده بعربي بسيط لصاحب مشروع مش تقني",
       "pass_signals": {
-        "must_match_any": ["README", "SKILL", "arabic/", "مهارة", "مشروع"],
-        "must_not_match": [".env", "API_KEY", "secret", "password"],
+        "presets": ["project_evidence"],
         "min_length": 100
       }
     },
@@ -130,8 +123,8 @@
       "command": "/arabic write caption --dialect masri",
       "user_prompt": "كابشن لإطلاق منتج قهوة مختصة في الزمالك. مصري. CTA: جرّب النهارده.",
       "pass_signals": {
-        "must_match_any": ["قهوة", "زمالك", "جرّب"],
-        "must_not_match": ["يسرنا أن نقدم", "اكتشف", "نحن سعداء", "يمكنكم"],
+        "presets": ["masri_output", "no_msa_corporate"],
+        "must_match_any": ["قهوة", "زمالك", "جرّب", "النهارده"],
         "min_length": 30
       }
     }

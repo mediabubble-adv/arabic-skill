@@ -1,9 +1,9 @@
 # Product Roadmap — `arabic`
 
 > Status: Active  
-> Product version: **1.2.6** (current — see root `VERSION`)  
-> **v1.0.0** shipped 2026-06-30 · **v1.1.0** website + P8 runtime · **v1.1.1** npm distribution · **v1.2.0** full Cursor + skills.sh · **v1.2.1** install fix · **v1.2.4** research cron + CI gates · **v1.2.5** validation stack · **v1.2.6** agent harness (current)
-> Next train: **1.2.7+** — harness signal tuning, optional maintainer nightly workflow  
+> Product version: **1.2.7** (current — see root `VERSION`)  
+> **v1.0.0** shipped 2026-06-30 · **v1.1.0** website + P8 runtime · **v1.1.1** npm distribution · **v1.2.0** full Cursor + skills.sh · **v1.2.1** install fix · **v1.2.4** research cron + CI gates · **v1.2.5** validation stack · **v1.2.6** agent harness · **v1.2.7** harness tuning (current)
+> Next train: **1.2.8+** — tune presets from nightly report artifacts  
 > Positioning: **Masri-first Awesome Arabic Skill — pan-Arab capable**
 
 ---
@@ -49,7 +49,8 @@ user asks → guide → clarify → recommend → write → review
 | **1.2.4** | ✅ Shipped | `validate-frontmatter`, research monthly cron | `v1.2.4` |
 | **1.2.5** | ✅ Shipped | Golden + Playwright + G1–G12 routing contracts | `v1.2.5` |
 | **1.2.6** | ✅ Shipped | LLM agent harness — scenario schema + opt-in runner | `v1.2.6` |
-| **1.2.7+** | Next | Harness signal tuning, optional nightly workflow | — |
+| **1.2.7** | ✅ Shipped | Signal presets, harness `--report`, nightly workflow | `v1.2.7` |
+| **1.2.8+** | Next | Tune presets from nightly report artifacts | — |
 | **2.0.0** | Future | Breaking changes, major routing restructure | `v2.0.0` |
 
 ### Shipped phase map (reference)

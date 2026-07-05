@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "description": "Reusable pass_signal bundles for G1–G12 harness tuning",
+  "presets": {
+    "advisory_clarify": {
+      "must_match_any": ["؟", "لهجة", "نوع", "قبل", "وضّح", "توضيح", "اسأل", "توصية", "guide"]
+    },
+    "no_msa_corporate": {
+      "must_not_match": ["يسرنا أن نقدم", "نحن سعداء", "اكتشف كيف يمكن", "يمكنكم", "يسعدنا"]
+    },
+    "plan_approval_gate": {
+      "must_match_any": ["موافق", "approve", "قبل التنفيذ", "وافق على الخطة"]
+    },
+    "audit_scored": {
+      "regex_match_any": ["\\d+\\s*/\\s*\\d+", "درجة", "score", "نقطة", "تدقيق", "audit"]
+    },
+    "project_evidence": {
+      "must_match_any": ["README", "SKILL", "arabic/", "مهارة", "مشروع"],
+      "must_not_match": [".env", "API_KEY", "secret", "password"]
+    },
+    "masri_output": {
+      "must_match_any": ["مصر", "مصري", "دلوقتي", "النهارده", "جرّب", "عايز", "حاجة"],
+      "must_not_match": ["يسرنا أن نقدم", "اكتشف", "نحن سعداء"]
+    },
+    "plan_workspace": {
+      "must_match_any": [".arabic/projects", "خطة", "plan", "صفحة", "sitemap"]
+    }
+  }
+}

@@ -145,9 +145,9 @@ Golden tests in `tests/golden/` combine **automated** structural (`validate-gold
 - project-level behavior is staged (Project Mode), not improvised
 - distillation queue never exceeds 20 open items
 
-## 9. Planned Extensions (1.2.7+)
+## 9. Planned Extensions (1.2.8+)
 
-- Tune G1–G12 `pass_signals` from maintainer harness runs; optional nightly workflow
+- Tune presets from nightly harness report artifacts
 - trend snapshot storage conventions under `research/snapshots/`
 
 ## 10. Architectural Summary

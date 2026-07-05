@@ -5,7 +5,7 @@
 The canonical product version lives in the repository root:
 
 ```text
-VERSION          → 1.2.6 (current)
+VERSION          → 1.2.7 (current)
 CHANGELOG.md     → human-readable history
 arabic/SKILL.md → version field in YAML frontmatter (must match VERSION)
 package.json    → npm package version (must match VERSION)
@@ -24,10 +24,10 @@ package.json    → npm package version (must match VERSION)
 | **Distribution** | `1.1.x` | Website, npm `npx` installer, P8 runtime extensions |
 | **Distribution follow-ups** | `1.2.0`–`1.2.1` | Full Cursor npx install, skills.sh registry, git-clone fix — ✅ shipped |
 | **Research + onboarding + CI** | `1.2.2`–`1.2.4` | Onboarding, research R4 cron, `validate-frontmatter.sh` — ✅ shipped |
-| **Validation + harness** | `1.2.5`–`1.2.6` | Golden gates, Playwright G15–G16, routing contracts, scenario manifest + opt-in harness — ✅ **`1.2.6` current** |
+| **Validation + harness** | `1.2.5`–`1.2.7` | Golden gates, Playwright, routing contracts, scenario manifest, presets + nightly — ✅ **`1.2.7` current** |
 | **Breaking changes** | `2.0.0` | Removed modes, restructured routing, incompatible `voice.md` |
 
-**Current state:** **`1.2.6`** on `main` (tag `v1.2.6`) — G1–G12 scenario manifest, opt-in `golden:harness`, full validation stack.
+**Current state:** **`1.2.7`** on `main` (tag `v1.2.7`) — signal presets, harness reports, nightly workflow.
 
 ---
 
@@ -75,7 +75,7 @@ Examples:
 - `v1.2.3` — onboarding post-review polish ✅
 - **`v1.2.4`** — validate-frontmatter + first research cron ✅
 - **`v1.2.5`** — golden + Playwright + G1–G12 routing contracts ✅
-- **`v1.2.6`** — G1–G12 scenario manifest + opt-in LLM harness ✅
+- **`v1.2.7`** — signal presets, harness `--report`, nightly workflow ✅
 - `v2.0.0` — breaking changes
 
 **Never** use plan-version labels (v4, v5.2) in tags or docs. Product semver only.
@@ -138,7 +138,7 @@ Working toward v1.2.0
 |---------|--------|-------|
 | Git clone + manual copy | ✅ Available | Full Cursor integration (rules + commands) |
 | GitHub Releases (zip) | ✅ v1.0.0+ | Tag push → `release.yml` |
-| `npx @mediabubble-adv/arabic-skill install` | ✅ **1.2.6** | Copies runtime; Cursor/Claude/Codex presets |
+| `npx @mediabubble-adv/arabic-skill install` | ✅ **1.2.7** | Copies runtime; Cursor/Claude/Codex presets |
 | Install website | ✅ v1.1.0 | https://arabic-skill.vercel.app |
 | `npx skills add mediabubble-adv/arabic-skill` | ✅ v1.2.0+ | skills.sh registry; skill pack only |
 | Full Cursor npx install | ✅ v1.2.0+ | Skill + `~/.cursor/commands/arabic.md` + `~/.cursor/rules/arabic.mdc` |

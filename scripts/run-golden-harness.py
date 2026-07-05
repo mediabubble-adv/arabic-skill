@@ -5,15 +5,20 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import sys
 import urllib.error
 import urllib.request
+from datetime import datetime, timezone
 from pathlib import Path
+from typing import Any
 
 ROOT = Path(__file__).resolve().parent.parent
 SCENARIOS_PATH = ROOT / "tests" / "golden" / "scenarios" / "g1-g12-scenarios.json"
+PRESETS_PATH = ROOT / "tests" / "golden" / "scenarios" / "signal-presets.json"
 MANIFEST_PATH = ROOT / "tests" / "golden" / "g1-g12-manifest.json"
 SKILL_PATH = ROOT / "arabic" / "SKILL.md"
+REPORT_PREVIEW_CHARS = 600
 
 
 def load_json(path: Path) -> dict:
@@ -26,6 +31,75 @@ def load_scenarios() -> list[dict]:
 
 def load_manifest() -> dict[str, dict]:
     return {t["id"]: t for t in load_json(MANIFEST_PATH).get("tests") or []}
+
+
+def load_presets() -> dict[str, dict]:
+    data = load_json(PRESETS_PATH)
+    return data.get("presets") or {}
+
+
+def merge_signal_lists(base: list[str], extra: list[str]) -> list[str]:
+    seen: set[str] = set()
+    merged: list[str] = []
+    for item in base + extra:
+        if item not in seen:
+            seen.add(item)
+            merged.append(item)
+    return merged
+
+
+def resolve_pass_signals(raw: dict, presets: dict[str, dict]) -> dict:
+    resolved: dict[str, Any] = {
+        "must_match_any": [],
+        "must_not_match": [],
+        "regex_match_any": [],
+    }
+    min_lengths: list[int] = []
+    max_lengths: list[int] = []
+
+    preset_names = raw.get("presets") or []
+    if not isinstance(preset_names, list):
+        raise ValueError("presets must be an array")
+
+    for name in preset_names:
+        preset = presets.get(name)
+        if not preset:
+            raise ValueError(f"unknown preset: {name!r}")
+        resolved["must_match_any"] = merge_signal_lists(
+            resolved["must_match_any"], preset.get("must_match_any") or []
+        )
+        resolved["must_not_match"] = merge_signal_lists(
+            resolved["must_not_match"], preset.get("must_not_match") or []
+        )
+        resolved["regex_match_any"] = merge_signal_lists(
+            resolved["regex_match_any"], preset.get("regex_match_any") or []
+        )
+        if isinstance(preset.get("min_length"), int):
+            min_lengths.append(preset["min_length"])
+        if isinstance(preset.get("max_length"), int):
+            max_lengths.append(preset["max_length"])
+
+    resolved["must_match_any"] = merge_signal_lists(
+        resolved["must_match_any"], raw.get("must_match_any") or []
+    )
+    resolved["must_not_match"] = merge_signal_lists(
+        resolved["must_not_match"], raw.get("must_not_match") or []
+    )
+    resolved["regex_match_any"] = merge_signal_lists(
+        resolved["regex_match_any"], raw.get("regex_match_any") or []
+    )
+
+    if isinstance(raw.get("min_length"), int):
+        min_lengths.append(raw["min_length"])
+    if isinstance(raw.get("max_length"), int):
+        max_lengths.append(raw["max_length"])
+
+    if min_lengths:
+        resolved["min_length"] = max(min_lengths)
+    if max_lengths:
+        resolved["max_length"] = min(max_lengths)
+
+    return resolved
 
 
 def build_system_prompt(manifest_row: dict) -> str:
@@ -48,20 +122,41 @@ def build_user_message(scenario: dict) -> str:
     return body
 
 
-def check_signals(response: str, signals: dict) -> list[str]:
+def check_signals(response: str, signals: dict) -> tuple[list[str], dict[str, Any]]:
     failures: list[str] = []
+    diagnostics: dict[str, Any] = {
+        "matched_any": [],
+        "matched_regex": [],
+        "forbidden_hits": [],
+        "length": len(response or ""),
+    }
     text = response or ""
 
     for pattern in signals.get("must_match_any") or []:
-        if pattern not in text:
-            continue
-        break
+        if pattern in text:
+            diagnostics["matched_any"].append(pattern)
+            break
     else:
         if signals.get("must_match_any"):
             failures.append(f"must_match_any: none of {signals['must_match_any']!r}")
 
+    for pattern in signals.get("regex_match_any") or []:
+        try:
+            if re.search(pattern, text, flags=re.IGNORECASE | re.MULTILINE):
+                diagnostics["matched_regex"].append(pattern)
+                break
+        except re.error as exc:
+            failures.append(f"regex_match_any: invalid pattern {pattern!r}: {exc}")
+            break
+    else:
+        if signals.get("regex_match_any") and not any(
+            f.startswith("regex_match_any: invalid") for f in failures
+        ):
+            failures.append(f"regex_match_any: none of {signals['regex_match_any']!r}")
+
     for pattern in signals.get("must_not_match") or []:
         if pattern in text:
+            diagnostics["forbidden_hits"].append(pattern)
             failures.append(f"must_not_match: found {pattern!r}")
 
     min_len = signals.get("min_length")
@@ -72,7 +167,7 @@ def check_signals(response: str, signals: dict) -> list[str]:
     if isinstance(max_len, int) and len(text) > max_len:
         failures.append(f"max_length: {len(text)} > {max_len}")
 
-    return failures
+    return failures, diagnostics
 
 
 def call_openai(system: str, user: str) -> str:
@@ -112,17 +207,28 @@ def call_openai(system: str, user: str) -> str:
         raise RuntimeError(f"Unexpected LLM response shape: {data!r}") from exc
 
 
+def write_report(path: Path, payload: dict) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
 def cmd_list() -> int:
     manifest = load_manifest()
+    presets = load_presets()
     for scenario in load_scenarios():
         sid = scenario["id"]
+        preset_names = (scenario.get("pass_signals") or {}).get("presets") or []
         print(f"{sid}\t{scenario.get('command')}\t{scenario.get('name')}")
         print(f"  files: {len(manifest.get(sid, {}).get('required_files') or [])}")
+        if preset_names:
+            print(f"  presets: {', '.join(preset_names)}")
+    print(f"\nAvailable presets ({len(presets)}): {', '.join(sorted(presets))}")
     return 0
 
 
-def cmd_run(scenario_id: str | None, dry_run: bool) -> int:
+def cmd_run(scenario_id: str | None, dry_run: bool, report_path: Path | None) -> int:
     manifest = load_manifest()
+    presets = load_presets()
     scenarios = load_scenarios()
     if scenario_id:
         scenarios = [s for s in scenarios if s.get("id") == scenario_id]
@@ -132,8 +238,21 @@ def cmd_run(scenario_id: str | None, dry_run: bool) -> int:
 
     if dry_run:
         for scenario in scenarios:
+            raw = scenario.get("pass_signals") or {}
+            preset_names = raw.get("presets") or []
             print(f"DRY RUN {scenario['id']}: would run {scenario.get('command')}")
+            if preset_names:
+                print(f"  presets: {', '.join(preset_names)}")
         return 0
+
+    model = os.environ.get("GOLDEN_HARNESS_MODEL", "gpt-4o-mini")
+    report: dict[str, Any] = {
+        "version": 1,
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "model": model,
+        "summary": {"passed": 0, "failed": 0, "total": len(scenarios)},
+        "results": [],
+    }
 
     failures = 0
     for scenario in scenarios:
@@ -141,21 +260,54 @@ def cmd_run(scenario_id: str | None, dry_run: bool) -> int:
         row = manifest[sid]
         system = build_system_prompt(row)
         user = build_user_message(scenario)
+        raw_signals = scenario.get("pass_signals") or {}
+        try:
+            resolved_signals = resolve_pass_signals(raw_signals, presets)
+        except ValueError as exc:
+            print(f"FAIL {sid}: {exc}", file=sys.stderr)
+            return 1
+
         print(f"==> Running {sid} ({scenario.get('command')})...")
+        result: dict[str, Any] = {
+            "id": sid,
+            "command": scenario.get("command"),
+            "presets": raw_signals.get("presets") or [],
+            "passed": False,
+            "failures": [],
+            "diagnostics": {},
+            "response_preview": "",
+        }
         try:
             response = call_openai(system, user)
         except RuntimeError as exc:
             print(f"FAIL {sid}: {exc}", file=sys.stderr)
+            result["failures"] = [str(exc)]
+            report["results"].append(result)
+            report["summary"]["failed"] += 1
+            if report_path:
+                write_report(report_path, report)
             return 1
 
-        signal_failures = check_signals(response, scenario.get("pass_signals") or {})
+        signal_failures, diagnostics = check_signals(response, resolved_signals)
+        result["diagnostics"] = diagnostics
+        result["response_preview"] = response[:REPORT_PREVIEW_CHARS]
+        result["failures"] = signal_failures
+        result["passed"] = not signal_failures
+        report["results"].append(result)
+
         if signal_failures:
             failures += 1
+            report["summary"]["failed"] += 1
             print(f"FAIL {sid}:", file=sys.stderr)
             for item in signal_failures:
                 print(f"  - {item}", file=sys.stderr)
         else:
+            report["summary"]["passed"] += 1
             print(f"OK {sid}")
+
+    if report_path:
+        write_report(report_path, report)
+        print(f"Report written: {report_path}")
 
     if failures:
         print(f"FAIL: {failures} scenario(s) failed signal checks", file=sys.stderr)
@@ -170,12 +322,27 @@ def main() -> int:
     parser.add_argument("--run", action="store_true", help="Run scenarios against LLM (requires API key)")
     parser.add_argument("--dry-run", action="store_true", help="With --run, print plan only")
     parser.add_argument("--id", dest="scenario_id", help="Run a single scenario id (e.g. G1)")
+    parser.add_argument(
+        "--report",
+        dest="report_path",
+        help="Write JSON report (default: tests/golden/reports/harness-<timestamp>.json when set to auto)",
+    )
     args = parser.parse_args()
+
+    report_path: Path | None = None
+    if args.report_path:
+        if args.report_path == "auto":
+            stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+            report_path = ROOT / "tests" / "golden" / "reports" / f"harness-{stamp}.json"
+        else:
+            report_path = Path(args.report_path)
+            if not report_path.is_absolute():
+                report_path = ROOT / report_path
 
     if args.list:
         return cmd_list()
     if args.run:
-        return cmd_run(args.scenario_id, args.dry_run)
+        return cmd_run(args.scenario_id, args.dry_run, report_path)
 
     parser.print_help()
     return 0

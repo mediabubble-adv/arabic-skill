@@ -7,6 +7,22 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.2.7] - 2026-07-05
+
+**Harness tuning** — signal presets, JSON reports, nightly workflow.
+
+### Added
+- `tests/golden/scenarios/signal-presets.json` — reusable `pass_signals` bundles for harness tuning
+- Harness `regex_match_any` signal checks and `--report` / `--report auto` JSON output
+- `.github/workflows/golden-harness-nightly.yml` — weekly maintainer LLM run (secret-gated)
+- `tests/golden/reports/.gitkeep` — report output directory (JSON gitignored)
+
+### Changed
+- G1–G12 scenarios refactored to use signal presets; G9 uses scored-audit regex
+- `validate-golden-scenarios.sh` validates presets + regex patterns
+- Golden fixture `g1-g12-agent-harness.md` — AH-05/06 sections
+- Docs: README, roadmap, CI pipeline, system architecture, AGENTS.md
+
 ## [1.2.6] - 2026-07-05
 
 **LLM agent harness** — G1–G12 scenario manifest, schema gate, opt-in runner.
@@ -214,7 +230,8 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 - Renamed runtime folder `arabic-content/` → `arabic/`
 - Version policy: **0.x = development**, **1.0.0 = plan complete + first public release**
 
-[Unreleased]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.6...HEAD
+[Unreleased]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.7...HEAD
+[1.2.7]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.6...v1.2.7
 [1.2.6]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.5...v1.2.6
 [1.2.5]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.4...v1.2.5
 [1.2.4]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.3...v1.2.4
