@@ -1,0 +1,51 @@
+tests/golden/reference-sync-gate.md
+  s_e22df37b935413::t_9eab6c75c989ef 1-33
+docs/planning/roadmap.md
+  s_e22df37b935413::t_04a5638ec6d685 50
+  s_e22df37b935413::t_9b61a506706cad 6
+README.md
+  s_e22df37b935413::t_1d0935a85b082b 237
+  s_e22df37b935413::t_532bd770a70912 269
+docs/planning/reference-distillation.md
+  s_e22df37b935413::t_a6cbabdda97e47 113
+package.json
+  s_e22df37b935413::t_3d261371d5d033 44
+  s_e22df37b935413::t_3c0311eefa1c1b 49
+docs/product/system-architecture.md
+  s_e22df37b935413::t_1ee9e4e6207aa6 131
+docs/engineering/ci-pipeline.md
+  s_e22df37b935413::t_6e57a59c51ea03 87-88
+  s_e22df37b935413::t_4723961dfdbd64 74
+CHANGELOG.md
+  s_e22df37b935413::t_a47f90c7844cba 16-17
+  s_e22df37b935413::t_93e2196b70d377 13
+scripts/reference-distillation-map.json
+  s_e22df37b935413::t_3ee67be097052a 93-94
+  s_e22df37b935413::t_feeeed15d89728 1-92,95-96
+scripts/validate-reference-sync.sh
+  s_e22df37b935413::t_e48d2556e8f421 48
+  s_e22df37b935413::t_9b4947565c909f 12
+  s_e22df37b935413::t_540963dff2c618 1-6,8-11,13-16,18-27,29-47,49-288
+  s_e22df37b935413::t_62993efa842a2e 7
+  s_e22df37b935413::t_eda1b893513878 17,28
+.github/workflows/validate.yml
+  s_e22df37b935413::t_46d5d20ba539a9 39-41
+arabic/references/INDEX.md
+  s_e22df37b935413::t_0ecd3fe27e9cd3 127-128,130
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "f64f652bbeb33fa52aa57bc18785ad645b478e90",
+  "prompts": {},
+  "sessions": {
+    "s_e22df37b935413": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "997ffe26-6e5f-4828-bfbb-c1e3cd07cd76",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
