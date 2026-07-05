@@ -349,6 +349,18 @@ L4 is **professional Masri**, not MSA. It keeps light dialect markers for warmth
 | احنا الأحسن بجد | احنا بنقدّم نتايج بنقدر نثبتها |
 | كلّمنا واحنا نظبطك | تواصل معانا ونرجعلك بخطة واضحة |
 
+### Business address titles (L4)
+
+| Title | Gender | When to use |
+|-------|--------|-------------|
+| **حضرتك** | m/f | Default polite "you" — safe in email, proposals, meetings |
+| **أستاذ / أستاذة** | m/f | Professionals, clients, colleagues — most common business opener |
+| **باشا** | m | Warm honorific — Egyptian business tone; avoid with Gulf clients |
+| **دكتور** | m/f | PhDs, physicians, university professors |
+| **مهندس** | m/f | Engineers — common professional title in Egypt |
+
+**When unsure:** **حضرتك** or **أستاذ/أستاذة + name** — more respectful than too casual.
+
 **Sample (L4 LinkedIn, B2B):**
 ```
 بعد ما اشتغلنا مع أكتر من 40 شركة في السوق المصري،
