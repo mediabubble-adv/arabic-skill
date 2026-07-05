@@ -269,6 +269,7 @@ Read `references/output-templates.md` for full template bodies.
 - [ ] Workspace identified → intake questions applied (70/30 rule from `references/intake-protocols.md`)
 - [ ] Engine selected → engine rules read from `references/engines.md`
 - [ ] Output template selected (A–F) → `references/output-templates.md`
+- [ ] Storytelling framework loaded (if commercial + narrative task) → `references/storytelling.md`
 - [ ] Taboo scan completed → `references/taboos.md`
 - [ ] Humanization applied → `references/humanization-protocol.md`
 - [ ] QA sequence executed before delivery
