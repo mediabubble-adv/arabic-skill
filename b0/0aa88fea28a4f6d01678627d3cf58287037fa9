@@ -1,0 +1,48 @@
+tests/golden/scenarios/signal-presets.json
+  s_bb5489bfef9fba::t_0fe6cff9a259d5 1-5,7-29
+  s_bb5489bfef9fba::t_91466ff62c115b 6
+scripts/run-golden-harness.py
+  s_bb5489bfef9fba::t_b8e1c7717f7f8e 8,12,14,18,21,36-104,125,127-132,136-138,143-156,159,170,210-214,217,220,223-225,229,231,241-242,244-245,248-256,263-269,271-279,284-288,291-297,300,305,308-311,325-329,332-341,345
+scripts/validate-golden-scenarios.sh
+  s_bb5489bfef9fba::t_f476922fab4ecf 2,8,11,21,27,34-38,61-63,92,97-101,106-146,152-155
+CHANGELOG.md
+  s_bb5489bfef9fba::t_349e83ded88f99 10-20
+tests/golden/scenarios/g1-g12-scenarios.json
+  s_bb5489bfef9fba::t_5b8fc03dfbd8dd 2,11,21-22,32,42,52,63,74,84-85,96,106,116,126-127
+.gitignore
+  s_bb5489bfef9fba::t_084ad203fd5e65 17
+docs/engineering/ci-pipeline.md
+  s_bb5489bfef9fba::t_06dc8a199ba434 99,102
+  s_bb5489bfef9fba::t_631468a176f7e6 116-117
+  s_bb5489bfef9fba::t_a15e1e9f1967a0 103
+README.md
+  s_bb5489bfef9fba::t_590310299988ec 237
+  s_bb5489bfef9fba::t_8f5f02595c38f7 277
+docs/product/system-architecture.md
+  s_bb5489bfef9fba::t_e852ab5bddc357 148,150
+AGENTS.md
+  s_bb5489bfef9fba::t_abcd5ce6df4927 6
+.github/workflows/golden-harness-nightly.yml
+  s_bb5489bfef9fba::t_66f067f648560e 1-41
+tests/golden/g1-g12-agent-harness.md
+  s_bb5489bfef9fba::t_823dd60a65b4f3 1,5-9,12-14,36,45-51,55,57,59-67
+docs/planning/roadmap.md
+  s_bb5489bfef9fba::t_503cb9fc308775 6
+  s_bb5489bfef9fba::t_eab246f05f08aa 52
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "b00aa88fea28a4f6d01678627d3cf58287037fa9",
+  "prompts": {},
+  "sessions": {
+    "s_bb5489bfef9fba": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "11bba942-631b-47bf-bd78-307e29de087e",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
