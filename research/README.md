@@ -63,7 +63,9 @@ Monthly cadence: [docs/planning/research-monthly-cron.md](../docs/planning/resea
 ```bash
 bash scripts/validate-research-scaffold.sh   # R0 — scaffold + KB/index sync
 bash scripts/validate-research.sh            # R4 — stale sources + queue cap
+bash scripts/validate-frontmatter.sh         # SKILL.md YAML schema
 npm run validate:research                    # R4 only
+npm run validate:frontmatter                 # frontmatter only
 ```
 
 ## Phase status

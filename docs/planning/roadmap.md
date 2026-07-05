@@ -210,8 +210,8 @@ Commands: see [Command Surface](./command-surface.md).
 Every PR must pass:
 
 - `scripts/validate-skill.sh` — referenced runtime files exist
+- `scripts/validate-frontmatter.sh` — SKILL.md YAML schema (`name`, `display_name`, `version`, `description`)
 - `scripts/validate-docs.sh` — no broken internal links
-- `scripts/validate-frontmatter.sh` — SKILL.md schema *(planned, not yet built — see [ci-pipeline.md](../engineering/ci-pipeline.md))*
 
 Release tags trigger:
 

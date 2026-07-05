@@ -17,7 +17,9 @@ Spec: [research-intelligence-plan.md](../docs/planning/research-intelligence-pla
 
 | ID | Source kind | Finding | Runtime target(s) | Trust | Added | Notes |
 |----|-------------|---------|-------------------|-------|-------|-------|
-| — | — | — | — | — | — | — |
+| RQ-010 | reference-gap | Egypt platform caption limits + posting windows + hashtag counts | `dialects/masri.md` §5 | A | 2026-07-05 | ref: `arabic-masri/reference/platform-specs.md` |
+| RQ-011 | reference-gap | L4 business address titles (حضرتك/أستاذ/باشا/مهندس) | `dialects/masri.md` §13 | A | 2026-07-05 | ref: `arabic-masri/SKILL.md` Business Communication |
+| RQ-013 | reference-gap | Masri spelling variants table for long-tail SEO | `references/seo-aeo-masri.md` §2 | A | 2026-07-05 | ref: `arabic-seo-optimizer/reference/keyword-research.md` |
 
 ## In progress
 
@@ -34,6 +36,7 @@ Spec: [research-intelligence-plan.md](../docs/planning/research-intelligence-pla
 | RQ-004 | Egypt cultural-red-lines supplement — partial overlap with `taboos.md` | Next taboos distill |
 | RQ-005 | Default brand lexicon table — client-specific; runtime uses `voice.md` | Only if product ships defaults |
 | RQ-009 | Meta carousel intro-card Reels exclusion | niche format |
+| RQ-012 | Masri grammar error quick-check — overlaps RQ-002 full error-catalog | v1.3 if audit miss rate high |
 
 ## Distilled (recent)
 
