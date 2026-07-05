@@ -1,0 +1,41 @@
+name: Golden harness (nightly)
+
+on:
+  schedule:
+    - cron: "0 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  harness:
+    if: ${{ secrets.OPENAI_API_KEY != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run G1–G12 golden harness
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GOLDEN_HARNESS_MODEL: ${{ vars.GOLDEN_HARNESS_MODEL }}
+        run: |
+          mkdir -p tests/golden/reports
+          STAMP=$(date -u +%Y%m%d)
+          npm run golden:harness -- --run --report "tests/golden/reports/nightly-${STAMP}.json"
+
+      - name: Upload harness report
+        uses: actions/upload-artifact@v4
+        with:
+          name: golden-harness-report
+          path: tests/golden/reports/nightly-*.json
+          if-no-files-found: error
+
+  harness-skipped:
+    if: ${{ secrets.OPENAI_API_KEY == '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Skip notice
+        run: |
+          echo "OPENAI_API_KEY secret not configured — nightly harness skipped."
+          echo "Add repository secret OPENAI_API_KEY to enable weekly G1–G12 LLM runs."

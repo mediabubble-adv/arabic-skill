@@ -7,6 +7,17 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+- `tests/golden/scenarios/signal-presets.json` — reusable `pass_signals` bundles for harness tuning
+- Harness `regex_match_any` signal checks and `--report` / `--report auto` JSON output
+- `.github/workflows/golden-harness-nightly.yml` — weekly maintainer LLM run (secret-gated)
+- `tests/golden/reports/.gitkeep` — report output directory (JSON gitignored)
+
+### Changed
+- G1–G12 scenarios refactored to use signal presets; G9 uses scored-audit regex
+- `validate-golden-scenarios.sh` validates presets + regex patterns
+- Golden fixture `g1-g12-agent-harness.md` — AH-05/06 sections
+
 ## [1.2.6] - 2026-07-05
 
 **LLM agent harness** — G1–G12 scenario manifest, schema gate, opt-in runner.

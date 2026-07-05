@@ -234,7 +234,7 @@ Runtime install folder is `arabic/`. The GitHub repo can stay `mediabubble-adv/a
 | Website | **v1.1.0 ✅** — https://arabic-skill.vercel.app (G13–G18) |
 | npm distribution | **`@mediabubble-adv/arabic-skill@1.2.6`** — npx install + publish CI |
 | Golden tests | Structural + routing + scenario gates in CI; Playwright G15–G16; opt-in `golden:harness` for LLM runs |
-| Next train | **1.2.7+** — harness signal tuning, optional maintainer nightly workflow |
+| Next train | **1.2.7** — signal presets, harness reports, nightly workflow (in progress) |
 
 ## Documentation
 
@@ -274,6 +274,7 @@ Individual gates:
 ./scripts/validate-website-playwright.sh
 npm run golden:harness -- --list
 npm run golden:harness -- --run --dry-run
+npm run golden:harness -- --run --report auto
 ```
 
 ## Release Policy

@@ -96,7 +96,10 @@ Research and onboarding gates are included in `npm run validate` locally; CI run
 npm run golden:harness -- --list
 npm run golden:harness -- --run --dry-run
 OPENAI_API_KEY=... npm run golden:harness -- --run --id G1
+npm run golden:harness -- --run --report auto
 ```
+
+**Nightly (maintainer):** `.github/workflows/golden-harness-nightly.yml` runs weekly when `OPENAI_API_KEY` repo secret is set; uploads JSON report artifact.
 
 ---
 
@@ -110,6 +113,8 @@ OPENAI_API_KEY=... npm run golden:harness -- --run --id G1
 | G1–G12 routing contracts | **1.2.5 ✅** | `validate-behavioral-golden.sh` — manifest + markers |
 | G1–G12 scenario manifest | **1.2.6 ✅** | `validate-golden-scenarios.sh` — schema + command parity |
 | Opt-in LLM harness | **1.2.6 ✅** | `npm run golden:harness` — local/maintainer runs only |
+| Signal presets + reports | **1.2.7** | `signal-presets.json`, `--report`, regex signals |
+| Nightly harness workflow | **1.2.7** | `golden-harness-nightly.yml` (secret-gated) |
 | Reference sync check | **1.2.x ✅** | `validate-reference-sync.sh` — INDEX, distillation map, queue exclusivity |
 | Golden prompt tests (G1–G12 interactive) | **v1.0.0 gate** | Skill acceptance scenarios — see [implementation-plan §0.3](../planning/implementation-plan.md#03-golden-test-master-table-g1g18) |
 | `npx arabic detect` | v2.0.0 | AI-ism scanner for output |
