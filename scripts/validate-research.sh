@@ -99,6 +99,7 @@ for entry in sources:
             f"FAIL: source {sid} accessed date {accessed_raw} is in the future"
         )
     elif age <= STALE_WARN_DAYS:
+        fresh += 1
     elif age <= STALE_FAIL_DAYS:
         stale_warn += 1
         warn(

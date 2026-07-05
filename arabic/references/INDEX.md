@@ -1,7 +1,7 @@
 # 📂 Awesome Arabic Skill — Master File Index
 
 ## Token Load Strategy
-Max 6 files per task by default — use `references/load-discipline.md` task-class sets (plan / write / audit / rtl / research).
+Max 6 files per task by default — use `references/load-discipline.md` task-class sets (plan / write / audit / rtl / research / onboarding).
 Never load all files. Load strictly on demand per task class.
 
 ---
@@ -15,7 +15,7 @@ Never load all files. Load strictly on demand per task class.
 
 ---
 
-## References — Load by Task (20 files)
+## References — Load by Task (21 files)
 
 | File | Load when |
 |---|---|
@@ -39,6 +39,7 @@ Never load all files. Load strictly on demand per task class.
 | `references/seo-aeo-masri.md` | SEO/AEO or website-copy tasks targeting Egypt |
 | `references/seasonal-calendar.md` | Campaign planning or any time-sensitive / seasonal brief |
 | `references/research-mode.md` | `/arabic research`, `/arabic research distill`, `/arabic research status` |
+| `references/onboarding-mode.md` | `/arabic init`, first-run install, bare `/arabic` without `.arabic/` |
 
 ---
 

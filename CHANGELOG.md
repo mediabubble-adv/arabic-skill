@@ -7,10 +7,18 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
-### Planned
-- First-run onboarding flow
+## [1.2.2] - 2026-07-05
+
+**First-run onboarding.** Path A (`/arabic guide`) and Path B (`/arabic init`) with scaffold templates and CI gate.
 
 ### Added
+- First-run onboarding — `onboarding-mode.md`, `.arabic/` templates, `/arabic init` load discipline, post-install CLI steps, `validate-onboarding.sh`
+- Golden test `tests/golden/onboarding-first-run.md`
+
+### Fixed
+- `scripts/validate-research.sh` — restore missing `fresh += 1` branch (IndentationError on CI)
+
+### Added (R4)
 - Research R4 — `scripts/validate-research.sh` stale-source tiers (90/180d) + distillation queue cap; wired into `npm run validate`
 - Golden test `tests/golden/r4-validate-research.md`
 

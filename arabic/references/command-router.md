@@ -107,7 +107,7 @@
 | `/arabic voice load` | Load voice into the next write or plan task | Inject before engine selection |
 | `/arabic voice show` | Show the current voice summary | Read-only |
 | `/arabic auto` | Infer intent from workspace and route to the right command | Uses safe repo scanning |
-| `/arabic init` | Create the `.arabic/` scaffold | First-use setup |
+| `/arabic init` | Create the `.arabic/` scaffold | First-use setup — loads `onboarding-mode.md`; templates in `arabic/templates/.arabic/` |
 
 ---
 
@@ -180,7 +180,7 @@ Unknown flags should warn and be ignored. Never guess-execute a command that has
 
 ## 6. `.arabic/` Scaffold
 
-Created by `/arabic init` or the first `auto` run when the workspace needs persistence.
+Created by `/arabic init` or the first `auto` run when the workspace needs persistence. **Init copies from** `arabic/templates/.arabic/` in the skill pack — see `references/onboarding-mode.md` §3.
 
 ```text
 .arabic/

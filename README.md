@@ -76,6 +76,16 @@ npx @mediabubble-adv/arabic-skill@latest install --dir ~/.cursor/skills --force
 
 See [Cursor support](./docs/supported/cursor/README.md), [Claude support](./docs/supported/claude/README.md), or the [supported tools index](./docs/supported/README.md). The repo documents **24** AI coding surfaces (profiles below). Install website: https://arabic-skill.vercel.app
 
+### After install
+
+```text
+/arabic guide                              ← first run (advisory, no repo setup)
+/arabic init                               ← scaffold .arabic/ in a client project
+/arabic write caption --dialect masri --count 3
+```
+
+In a client repo, run `/arabic init` before `--brief` or `plan` workflows. Templates ship in `arabic/templates/.arabic/`.
+
 ## Supported Tool Assets
 
 The repository includes local logo assets under [`public/assets/`](./public/assets/) for README, docs, and the install website. GitHub renders these relative paths directly in Markdown, so docs can use either Markdown images or HTML `<img>` tags when fixed icon sizing is needed.
