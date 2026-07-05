@@ -1,7 +1,7 @@
 ---
 name: arabic
 display_name: Awesome Arabic Skill
-version: "1.2.3"
+version: "1.2.4"
 description: |
   Awesome Arabic Skill — the apex Arabic content agency for the entire Arab world (by MediaBubble).
   11+ dialects: website copy, blog posts, video scripts, social captions, taglines, brand voice

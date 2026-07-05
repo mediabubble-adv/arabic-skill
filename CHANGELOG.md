@@ -7,14 +7,21 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.2.4] - 2026-07-05
+
+**CI polish + first research cron.**
+
 ### Added
-- `scripts/validate-frontmatter.sh` — SKILL.md YAML schema gate (`name`, `display_name`, `version`, `description`); wired into `npm run validate` and CI
+- `scripts/validate-frontmatter.sh` — SKILL.md YAML schema gate; wired into `npm run validate` and CI
 - Golden test `tests/golden/validate-frontmatter.md`
-- First research monthly cron log (`research/logs/2026-07-monthly-cron.md`) — W1–W4 July 2026 run
+- First research monthly cron log (`research/logs/2026-07-monthly-cron.md`)
 
 ### Changed
-- `research/distillation-queue.md` — queued RQ-010, RQ-011, RQ-013 from reference-gap scan; deferred RQ-012 (overlaps RQ-002)
-- Platform source URLs spot-checked (Meta, Google, TikTok) — all 200 OK
+- `research/distillation-queue.md` — queued RQ-010, RQ-011, RQ-013 from reference-gap scan; deferred RQ-012
+
+### Fixed
+- Frontmatter validator exits cleanly when required keys are missing (no raw `KeyError`)
+- `ci-pipeline.md` diagram and local validation docs include frontmatter gate
 
 ## [1.2.3] - 2026-07-05
 
@@ -167,7 +174,8 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 - Renamed runtime folder `arabic-content/` → `arabic/`
 - Version policy: **0.x = development**, **1.0.0 = plan complete + first public release**
 
-[Unreleased]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.3...HEAD
+[Unreleased]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.4...HEAD
+[1.2.4]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.3...v1.2.4
 [1.2.3]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.2...v1.2.3
 [1.2.2]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.1...v1.2.2
 [1.2.1]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.0...v1.2.1
