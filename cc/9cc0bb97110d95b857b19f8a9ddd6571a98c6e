@@ -1,0 +1,29 @@
+arabic/dialects/ksa.md
+  s_0197dde7fadf2a::t_3bd534eb8ad39b 9,12-23,26-77
+arabic/dialects/masri.md
+  s_0197dde7fadf2a::t_e4138be92fd814 206,209-220,223-234,237-248,251-302
+arabic/dialects/levantine.md
+  s_0197dde7fadf2a::t_83108cc65f7244 9-116
+tests/golden/p2-city-dialects.md
+  s_0197dde7fadf2a::t_c234e599caf562 1-111
+arabic/dialects/khaliji.md
+  s_0197dde7fadf2a::t_1f73891db22a6d 9-93
+research/distillation-queue.md
+  s_0197dde7fadf2a::t_fe0dad2ef7eb9e 20-30
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "cc9cc0bb97110d95b857b19f8a9ddd6571a98c6e",
+  "prompts": {},
+  "sessions": {
+    "s_0197dde7fadf2a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "76c5c404-8942-4fc7-9c88-40e1874404e1",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
