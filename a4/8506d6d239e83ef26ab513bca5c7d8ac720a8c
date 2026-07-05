@@ -1,0 +1,27 @@
+arabic/references/seo-aeo-gulf.md
+  s_0197dde7fadf2a::t_4d4b6331f385fb 1-139
+arabic/references/INDEX.md
+  s_0197dde7fadf2a::t_c2396fb64d80cf 18
+  s_0197dde7fadf2a::t_25823d69c349ce 40
+  s_0197dde7fadf2a::t_d1b885e4a5bc16 123
+arabic/references/seo-aeo-masri.md
+  s_0197dde7fadf2a::t_15d09861b82c39 3-4
+tests/golden/p4-gulf-seo-aeo.md
+  s_0197dde7fadf2a::t_6105993c62e3b6 1-106
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "a48506d6d239e83ef26ab513bca5c7d8ac720a8c",
+  "prompts": {},
+  "sessions": {
+    "s_0197dde7fadf2a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "76c5c404-8942-4fc7-9c88-40e1874404e1",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
