@@ -6,7 +6,7 @@
 
 ### 0.1 Unified phase map
 
-Linear product phases **P0–P6** ship **v1.0.0**. Two cross-cutting tracks (**R**, **C**) run in parallel. **P7** ships **v1.1.0**.
+Linear product phases **P0–P6** ship **v1.0.0**. Cross-cutting tracks **R** (research), **C** (commands), and **V** (validation & harness) run in parallel. **P7** ships **v1.1.0**. **V1–V4** ship **v1.2.5–v1.2.7**.
 
 | Phase | Theme | Release | Key deliverables | Golden tests |
 |-------|-------|---------|------------------|--------------|
@@ -17,9 +17,13 @@ Linear product phases **P0–P6** ship **v1.0.0**. Two cross-cutting tracks (**R
 | **P4** | Masri Commercial Depth | v1.0.0 | `ads-service-matrix.md`, `domains/ads-media.md`, `seo-aeo-masri.md`, `seasonal-calendar.md`, masri expansion | G5 |
 | **P5** | Project Mode & Dev-Tech | v1.0.0 | `project-mode.md`, `book-writing.md`, `domains/dev-tech.md`, `project-context-scanner.md` | G4, G6, G11 |
 | **P6** | Runtime Integration & Validation | v1.0.0 **gate** | Wire routing, `INDEX.md` sync, examples QA, run G1–G12 | G1–G12 suite |
-| **R0–R4** | Research Intelligence (cross-cutting) | R0 v1.0.0-prep → R4 v1.2.0 | `research/` scaffold, distillation, `/arabic research` | research fixtures |
+| **R0–R4** | Research Intelligence (cross-cutting) | R0 v1.0.0-prep → R4 v1.2.4 | `research/` scaffold, distillation, `/arabic research`, monthly cron | research fixtures |
 | **C0–C5** | Command Surface (cross-cutting) | C0 plan → C5 v1.1.0 | `command-router.md`, `/arabic`, `.arabic/`, scanner wiring | G7, G8, G10 |
 | **P7** | Website & Distribution | v1.1.0 | `website/`, design system, `npx` install, releases | G13–G18 |
+| **V1** | Golden fixture gate | v1.2.5 | `validate-golden.sh`, fixture structure, G13 route smoke | structural fixtures |
+| **V2** | Website UX automation | v1.2.5 | `validate-website-playwright.sh`, G15–G16 specs | G15, G16 |
+| **V3** | G1–G12 routing + scenarios | v1.2.5–v1.2.6 | `validate-behavioral-golden.sh`, `validate-golden-scenarios.sh`, `golden:harness` | G1–G12 manifest |
+| **V4** | Harness tuning | v1.2.7 | `signal-presets.json`, `--report`, `golden-harness-nightly.yml` | opt-in / nightly LLM |
 
 ### 0.2 Crosswalk (old numbering → unified)
 
@@ -37,6 +41,7 @@ The detailed phase sections below retain their original prose; each heading is t
 | — | Phase R | **R0–R4** |
 | — | Phase C | **C0–C5** |
 | — | Phase 6 Distribution | **P7** |
+| — | Validation & harness (roadmap P9) | **V1–V4** |
 
 ### 0.3 Golden Test Master Table (G1–G18)
 
