@@ -23,7 +23,7 @@ Spec: [research-intelligence-plan.md](../docs/planning/research-intelligence-pla
 
 | ID | Branch | Owner | Notes |
 |----|--------|-------|-------|
-| RQ-013 | feat/research-rq013-distill | — | Masri SEO long-tail forms → `seo-aeo-masri.md` §2 |
+| — | — | — | — |
 
 ## Deferred
 
@@ -46,6 +46,7 @@ Spec: [research-intelligence-plan.md](../docs/planning/research-intelligence-pla
 | RQ-008 | `arabic/references/ads-service-matrix.md` — Demand Gen long-headline standalone rule | feat/research-rq007-rq008-distill | 2026-07-05 |
 | RQ-010 | `arabic/dialects/masri.md` — Egypt platform caption limits, hashtag counts, posting windows | feat/research-rq010-distill | 2026-07-05 |
 | RQ-011 | `arabic/dialects/masri.md` — L4 business address titles (حضرتك/أستاذ/باشا/مهندس) | feat/research-rq011-distill | 2026-07-05 |
+| RQ-013 | `arabic/references/seo-aeo-masri.md` — MSA vs Masri long-tail forms (orthographic + equivalents) | feat/research-rq013-distill | 2026-07-05 |
 
 ---
 

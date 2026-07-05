@@ -1,5 +1,7 @@
 # System Architecture: `arabic`
 
+> **Current product version:** see root `VERSION` · Research **R0–R4 ✅** · Onboarding **1.2.2+** · Website **G13–G18 ✅**
+
 ## 1. Purpose
 
 This document defines the design architecture of the Awesome Arabic Skill.
@@ -11,246 +13,146 @@ This document explains how the system should be structured so that behavior, con
 
 Build an advisory-first Arabic content system where:
 
+- `docs/` holds planning and product intent
 - `reference/` holds canonical knowledge
+- `research/` holds collected intelligence and distillation queue
 - `arabic/` holds the runtime skill pack
-- `docs/` holds planning, architecture, and implementation intent
 
-The runtime skill should stay thin enough to operate reliably, while the deeper context and specialist material stay organized outside the runtime layer.
+The runtime skill should stay thin enough to operate reliably, while deeper context and specialist material stay organized outside the runtime layer.
 
 ## 3. Top-Level System Layers
 
 ### Layer A — Planning Layer
 
-Location:
+Location: `docs/`
 
-- `docs/`
-
-Purpose:
-
-- PRD
-- implementation plan
-- operating model
-- architecture docs
-- design and structure docs
-
-This layer explains the system to humans building it.
+Purpose: PRD, implementation plan, operating model, architecture docs, engineering governance.
 
 ### Layer B — Canonical Knowledge Layer
 
-Location:
+Location: `reference/`
 
-- `reference/`
-
-Purpose:
-
-- specialist skill packs
-- long-lived research material
-- contextual reference sets
-- historical decisions
-- future trend snapshots and source notes
+Purpose: specialist skill packs, long-lived research material, contextual reference sets.
 
 This layer is the source of truth for deep knowledge.
 
-### Layer C — Runtime Skill Layer
+### Layer C — Collected Intelligence Layer
 
-Location:
-
-- `arabic/
+Location: `research/`
 
 Purpose:
 
-- live skill behavior
-- routing
-- runtime references
-- active dialect/domain packs
-- templates
-- mode execution
+- citation registry (`sources/sources.yaml`)
+- curated knowledge-base findings
+- distillation queue (max 20 open items)
+- monthly cron logs (`research/logs/`)
 
-This is the layer actually consumed during skill execution.
+Flow: collect → cite → curate → distill (≤50 lines/runtime PR) → golden test. Never write directly into `arabic/SKILL.md` from research.
+
+### Layer D — Runtime Skill Layer
+
+Location: `arabic/`
+
+Purpose:
+
+- live skill behavior and routing
+- runtime references, dialect/domain packs, templates
+- onboarding scaffold (`templates/.arabic/`)
+
+This is the layer consumed during skill execution.
+
+### Layer E — Distribution & Validation
+
+Locations: `bin/`, `website/`, `scripts/`, `.github/workflows/`, `tests/golden/`
+
+Purpose:
+
+- npx installer (`bin/arabic-skill.js`)
+- marketing site (G14 install parity with README)
+- CI gates (`npm run validate`)
+- manual golden acceptance checklists
 
 ## 4. Core Runtime Model
 
-The runtime skill should execute this behavior:
+The runtime skill executes:
 
 `user asks -> skill guides -> skill clarifies -> skill recommends -> skill writes -> skill reviews`
 
-That means the runtime layer needs six functional subsystems:
+Runtime subsystems:
 
-1. request classification
-2. guidance and clarification
-3. recommendation
-4. generation
-5. review
-6. continuity and persistence
+1. request classification (`SKILL.md`, `command-router.md`, `load-discipline.md`)
+2. guidance and clarification (`advisory-mode.md`, `intake-protocols.md`, `onboarding-mode.md`)
+3. recommendation (`engines.md`, domain/dialect packs)
+4. generation (`output-templates.md`, `voice.md` when present)
+5. review (`humanization-protocol.md`, `audit-mode.md`, `taboos.md`)
+6. continuity (`.arabic/` workspace, `voice.md`, project-mode workflows)
 
-## 5. Runtime Subsystems
+## 5. Mode Routing Architecture
 
-### A. Request Classification
+| Mode | Best for |
+|------|----------|
+| **Advisory** | Vague or partially formed requests |
+| **Pro** | Structured briefs, expert users |
+| **Project** | Websites, campaigns, books |
+| **Audit** | Draft review, RTL/UI checks |
+| **Prompt Coach** | Arabic prompt improvement |
+| **Research** | Gap scan, platform KB, distillation planning |
+| **Onboarding** | First install, `/arabic init` |
 
-Files primarily involved:
+## 6. Knowledge Flow
 
-- `arabic/SKILL.md`
-- `arabic/references/intake-protocols.md`
+```text
+docs/ (intent) -> reference/ (canonical) + research/ (collected)
+                        |
+                        v
+                 distill -> PR -> arabic/ (runtime) -> output
+```
 
-Responsibilities:
+- Planning intent starts in `docs/`
+- Deep knowledge lives in `reference/`
+- Fresh external/platform knowledge lands in `research/` first
+- Runtime behavior is implemented in `arabic/` only through distillation PRs
 
-- classify user intent
-- detect user clarity level
-- detect mode
-- detect project complexity
-- detect whether saved voice context should be loaded
+## 7. Validation Architecture
 
-### B. Guidance and Clarification
+`npm run validate` runs (in order):
 
-Files primarily involved:
+| Script | Gate |
+|--------|------|
+| `validate-skill.sh` | Runtime file references + version sync |
+| `validate-frontmatter.sh` | `SKILL.md` YAML schema |
+| `validate-docs.sh` | Internal markdown links |
+| `validate-supported.sh` | 24 tool profile parity |
+| `validate-website-install.sh` | G14 README ↔ `/install` |
+| `validate-npm-pack.sh` | npm pack contents |
+| `validate-cursor-install.sh` | Full Cursor dry-run |
+| `validate-research-scaffold.sh` | R0 KB/index frontmatter |
+| `validate-research.sh` | R4 stale sources + queue cap |
+| `validate-onboarding.sh` | Onboarding templates + references |
 
-- `arabic/references/advisory-mode.md`
-- `arabic/references/intake-protocols.md`
-
-Responsibilities:
-
-- ask strategic questions
-- offer structured choices
-- reduce ambiguity
-- handle beginner vs advanced users differently
-
-### C. Recommendation
-
-Files primarily involved:
-
-- `arabic/references/engines.md`
-- domain and dialect packs
-
-Responsibilities:
-
-- choose the best path
-- explain channel or format tradeoffs
-- recommend engine and structure before writing
-
-### D. Generation
-
-Files primarily involved:
-
-- `arabic/references/engines.md`
-- `arabic/references/output-templates.md`
-- domain packs
-- dialect packs
-- `voice.md` if available
-
-Responsibilities:
-
-- load the right writing rules
-- generate in the chosen structure
-- maintain consistency with voice and context
-
-### E. Review
-
-Files primarily involved:
-
-- `arabic/references/humanization-protocol.md`
-- `arabic/references/taboos.md`
-- dialect pack
-
-Responsibilities:
-
-- dialect purity
-- anti-AI cleanup
-- taboo scan
-- output-format compliance
-- project consistency check
-
-### F. Continuity and Persistence
-
-Files primarily involved:
-
-- `arabic/voice.md`
-- project-mode workflows
-
-Responsibilities:
-
-- persist brand voice
-- carry context across repeated tasks
-- keep multi-piece outputs coherent
-
-## 6. Mode Routing Architecture
-
-### Advisory Mode
-
-Best for:
-
-- vague or partially formed requests
-- strategic content exploration
-
-### Pro Mode
-
-Best for:
-
-- structured briefs
-- repeated execution
-- expert users
-
-### Project Mode
-
-Best for:
-
-- websites
-- campaign bundles
-- editorial systems
-- books
-
-### Audit Mode
-
-Best for:
-
-- draft review
-- quality diagnosis
-- rewrite guidance
-
-### Prompt Coach Mode
-
-Best for:
-
-- users who need help briefing in Arabic
-- prompt improvement and education
-
-## 7. Knowledge Flow
-
-The intended knowledge flow is:
-
-`docs -> reference -> arabic runtime -> final output`
-
-Meaning:
-
-- planning intent starts in `docs/`
-- deep knowledge lives in `reference/`
-- runtime behavior is implemented in `arabic/
-
-This prevents the runtime skill from becoming the only place where product intent and execution logic exist.
+Golden tests in `tests/golden/` are **manual** acceptance checklists until an automated runner ships.
 
 ## 8. Key Design Constraints
 
-- runtime files should stay load-efficient
-- canonical reference knowledge should not be duplicated unnecessarily
-- new capability should be added through mode/engine structure, not random prompt growth
-- examples should support execution, not replace architecture
-- project-level behavior should be staged, not improvised
+- runtime files stay load-efficient (`load-discipline.md` task classes)
+- canonical reference knowledge is not duplicated unnecessarily
+- new capability goes through mode/engine structure, not prompt sprawl
+- project-level behavior is staged (Project Mode), not improvised
+- distillation queue never exceeds 20 open items
 
-## 9. Recommended Future Supporting Assets
+## 9. Planned Extensions (1.2.x+)
 
-The architecture would benefit from future additions such as:
-
-- reference sync rules
-- validation scripts for missing references
-- golden test cases per mode
-- trend snapshot storage conventions
-- reusable brand voice templates
+- reference sync / distillation drift detection (`validate-reference-sync.sh` — planned)
+- automated golden test runner (G1–G12 in CI — planned)
+- trend snapshot storage conventions under `research/snapshots/`
 
 ## 10. Architectural Summary
 
-This system should be treated as three connected layers:
+| Layer | Role |
+|-------|------|
+| `docs/` | explains what to build |
+| `reference/` | stores what the system knows at depth |
+| `research/` | collects and queues what to distill next |
+| `arabic/` | defines how the system behaves at runtime |
 
-- `docs/` explains what to build
-- `reference/` stores what the system knows
-- `arabic/` defines how the system behaves
-
-If that separation is respected, the skill can grow without turning into one oversized prompt pack.
+That separation is the main defense against drift.

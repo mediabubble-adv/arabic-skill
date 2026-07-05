@@ -48,6 +48,19 @@ Do not use for:
 
 - final runtime routing instructions unless they are being mirrored intentionally
 
+### `research/`
+
+Use for:
+
+- citation registry and knowledge-base findings
+- distillation queue and monthly cron logs
+- reusable research prompts
+
+Do not use for:
+
+- runtime routing rules (distill into `arabic/` via PR)
+- raw planning discussion
+
 ### `arabic/`
 
 Use for:
@@ -55,13 +68,30 @@ Use for:
 - active runtime behavior
 - runtime reference docs
 - active dialect and domain packs
-- templates
-- voice persistence
+- templates (onboarding scaffold under `templates/.arabic/`)
 
 Do not use for:
 
 - long historical planning discussion
-- raw research dumps
+- raw research dumps (use `research/` first)
+
+### `website/`
+
+Use for:
+
+- marketing install site (G13–G18)
+- Masri page copy SSOT in `website/content/`
+
+### `tests/golden/`
+
+Use for:
+
+- manual acceptance checklists (G13–G18, research R*, distill RQ*)
+- behavior fixtures referenced in PR bodies
+
+Do not use for:
+
+- automated test runners (until golden runner ships)
 
 ## 4. File Classification Model
 
@@ -110,9 +140,17 @@ These hold industry- and use-case-specific execution rules.
 
 Examples:
 
-- `voice.md`
+- `voice.md` (project-local or `.arabic/voice.md`)
+- `.arabic/config.yaml`, `.arabic/briefs/` (onboarding scaffold)
 
-These hold reusable, task-specific or brand-specific context.
+### F. Research Files
+
+Examples:
+
+- `research/sources/sources.yaml`
+- `research/knowledge-base/**/*.md`
+- `research/distillation-queue.md`
+- `research/index.json`
 
 ## 5. Recommended Runtime Structure by Responsibility
 
@@ -141,6 +179,16 @@ These hold reusable, task-specific or brand-specific context.
 ### Prompt Core
 
 - `references/prompt-engineering.md`
+
+### Research Core
+
+- `references/research-mode.md`
+- `research/` tree (see [Research Intelligence Plan](../planning/research-intelligence-plan.md))
+
+### Onboarding Core
+
+- `references/onboarding-mode.md`
+- `templates/.arabic/`
 
 ### Ads Core
 

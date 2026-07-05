@@ -2,7 +2,7 @@
 
 > How to collect, store, and use **internet research**, **AI-assisted research**, and the existing **`reference/`** library to continuously improve the `arabic` runtime skill.
 
-**Status:** Planning (v1.0.0 research layer → v1.1.0 automation)  
+**Status:** **Shipped** — R0–R4 on `main`; monthly cron in [research-monthly-cron.md](./research-monthly-cron.md); logs in `research/logs/`
 **Owner:** Product + content engineering  
 **Related:** [Reference Distillation](./reference-distillation.md) · [Command Surface](./command-surface.md)
 
@@ -296,8 +296,8 @@ See [Command Surface](./command-surface.md). Monthly maintenance: [research-mont
 | **R0** | v1.0.0 prep | `research/README.md`, `sources.yaml`, `distillation-queue.md`, 3 prompt templates |
 | **R1** | v1.0.0 | First distillation from reference Phase A–B complete |
 | **R2** | v1.0.0 | `knowledge-base/platforms/` for Meta, Google, TikTok |
-| **R3** | v1.1.0 | Monthly research cron doc + `/arabic research` command wired |
-| **R4** | v1.2.0 | Automated stale-source checker in `scripts/validate-research.sh` |
+| **R3** | v1.1.0 | Monthly research cron doc + `/arabic research` command wired | ✅ |
+| **R4** | v1.2.0 | Automated stale-source checker in `scripts/validate-research.sh` | ✅ |
 
 ---
 
