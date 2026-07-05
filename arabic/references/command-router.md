@@ -186,12 +186,11 @@ Created by `/arabic init` or the first `auto` run when the workspace needs persi
 .arabic/
 ├── config.yaml
 ├── briefs/
-├── projects/
-│   └── {slug}/
-│       ├── plan.md
-│       └── output/
-├── voice.md
-└── last-run.json
+│   └── example.yaml     ← from template on init
+├── projects/            ← empty; plan mode writes here
+└── README.md            ← optional team one-liner
 ```
 
-`voice.md` is created on first `/arabic voice save` for a project or workspace. If a project-specific voice file already exists, `voice load` should prefer it over the root voice memory.
+**Not created on init** (deferred): `voice.md` → first `/arabic voice save`; `last-run.json` → first `/arabic auto`; `audits/` → first audit snapshot. First `auto` run may create `last-run.json` when persistence is needed.
+
+If a project-specific voice file already exists, `voice load` should prefer it over the root voice memory.

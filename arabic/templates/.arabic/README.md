@@ -10,4 +10,4 @@ Local state for Awesome Arabic Skill — safe to commit or gitignore per team po
 | `voice.md` | Created by `/arabic voice save` |
 | `audits/` | Optional audit snapshots |
 
-First commands: `/arabic guide` · `/arabic write caption --brief briefs/example.yaml`
+First commands: `/arabic guide` · `/arabic write caption --brief .arabic/briefs/example.yaml`

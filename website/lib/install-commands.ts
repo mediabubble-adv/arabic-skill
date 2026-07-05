@@ -15,6 +15,10 @@ export const INSTALL_TARGETS = [
 
 export const FIRST_COMMAND = "/arabic guide";
 
+/** Example brief path after `/arabic init` — matches arabic/templates/.arabic/ */
+export const INIT_BRIEF_EXAMPLE =
+  "/arabic write caption --brief .arabic/briefs/example.yaml";
+
 export const INSTALL_TABS = [
   { id: "cursor", label: "Cursor", command: PRIMARY_INSTALL },
   { id: "claude", label: "Claude", command: INSTALL_TARGETS[0] },
