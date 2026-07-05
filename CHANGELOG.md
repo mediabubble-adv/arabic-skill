@@ -9,6 +9,7 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ### Changed
 - `scripts/validate-reference-sync.sh` — unmapped reference packs and missing INDEX counts now fail the gate (review hardening)
+- `arabic/dialects/masri.md` §5 — Egypt platform caption limits, hashtag counts, posting windows (RQ-010 distill from `reference/arabic-masri`)
 - `arabic/dialects/masri.md` §13 — L4 business address titles (RQ-011 distill from `reference/arabic-masri`)
 - `arabic/references/INDEX.md` — file count sync (59 total, 22 references incl. INDEX)
 
