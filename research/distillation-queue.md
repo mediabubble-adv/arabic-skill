@@ -17,13 +17,13 @@ Spec: [research-intelligence-plan.md](../docs/planning/research-intelligence-pla
 
 | ID | Source kind | Finding | Runtime target(s) | Trust | Added | Notes |
 |----|-------------|---------|-------------------|-------|-------|-------|
-| RQ-013 | reference-gap | Masri spelling variants table for long-tail SEO | `references/seo-aeo-masri.md` §2 | A | 2026-07-05 | ref: `arabic-seo-optimizer/reference/keyword-research.md` |
+| — | — | — | — | — | — | — |
 
 ## In progress
 
 | ID | Branch | Owner | Notes |
 |----|--------|-------|-------|
-| — | — | — | — |
+| RQ-013 | feat/research-rq013-distill | — | Masri SEO long-tail forms → `seo-aeo-masri.md` §2 |
 
 ## Deferred
 

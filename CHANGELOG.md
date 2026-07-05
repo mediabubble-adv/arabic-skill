@@ -10,10 +10,12 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 ### Changed
 - `arabic/dialects/masri.md` §5 — Egypt platform caption limits, hashtag counts, posting windows (RQ-010 distill from `reference/arabic-masri`)
 - `arabic/dialects/masri.md` §13 — L4 business address titles (RQ-011 distill from `reference/arabic-masri`)
+- `arabic/references/seo-aeo-masri.md` §2 — MSA vs Masri long-tail forms: orthographic variants + equivalents (RQ-013)
 
 ### Added
 - Golden test `tests/golden/rq010-masri-platform-specs.md`
 - Golden test `tests/golden/rq011-masri-l4-address.md`
+- Golden test `tests/golden/rq013-seo-spelling-variants.md`
 
 ## [1.2.4] - 2026-07-05
 
