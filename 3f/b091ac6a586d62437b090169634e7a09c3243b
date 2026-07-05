@@ -1,0 +1,44 @@
+CHANGELOG.md
+  s_e22df37b935413::t_a3f1b9822fda0d 10-18
+docs/planning/research-monthly-cron.md
+  s_e22df37b935413::t_3f27a39cac9752 63
+scripts/validate-frontmatter.sh
+  s_e22df37b935413::t_f050ba9788738b 1-113
+research/logs/README.md
+  s_e22df37b935413::t_243e3a2fc239ac 1-9
+.github/workflows/validate.yml
+  s_e22df37b935413::t_80ebb1a266a7ef 21-23
+research/logs/2026-07-monthly-cron.md
+  s_e22df37b935413::t_335cc4d852f81d 1-76
+docs/planning/roadmap.md
+  s_e22df37b935413::t_5514c8bf6b09d4 213
+research/index.json
+  s_e22df37b935413::t_dc69116eba3491 3
+tests/golden/validate-frontmatter.md
+  s_e22df37b935413::t_b1932a2d2cbb55 1-34
+research/distillation-queue.md
+  s_e22df37b935413::t_f231f626f235c9 20-22
+  s_e22df37b935413::t_aaaeca094a9ff2 39
+package.json
+  s_e22df37b935413::t_8a5140413e6777 44-45
+docs/engineering/ci-pipeline.md
+  s_e22df37b935413::t_53a4b7de5829e0 34
+research/README.md
+  s_e22df37b935413::t_9b98c71ad37703 66,68
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "3fb091ac6a586d62437b090169634e7a09c3243b",
+  "prompts": {},
+  "sessions": {
+    "s_e22df37b935413": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "997ffe26-6e5f-4828-bfbb-c1e3cd07cd76",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
