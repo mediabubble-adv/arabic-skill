@@ -133,7 +133,7 @@ Single `مش` negates nouns/adjectives: "مش كويس" = not good.
 
 ### Caption length (Egypt — commercial defaults)
 
-Arabic copy runs ~35% longer than English — target the **Optimal** band, not Max.
+**English → Arabic:** copy translated or adapted from English typically needs ~35% more characters for the same message — target the **Optimal** band, not Max. **Native Arabic short-form:** the same idea often fits in fewer characters than English (especially on X — see Notes column).
 
 | Platform | Optimal (chars) | Max | Notes |
 |----------|-----------------|-----|-------|
@@ -141,7 +141,7 @@ Arabic copy runs ~35% longer than English — target the **Optimal** band, not M
 | Instagram | 50–150 | 2,200 | Long copy hides behind "more" |
 | TikTok | 20–50 | 300 | Short; voiceover carries message |
 | LinkedIn | 100–300 | 3,000 | L3–L4 register |
-| X | 40–100 | 280 | Fewer Arabic chars, same meaning |
+| X | 40–100 | 280 | Native Arabic often shorter than English equivalent |
 | WhatsApp | 30–100 | 1,024 | Personal, direct |
 
 ### Hashtag counts

@@ -8,7 +8,7 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Changed
-- `dialects/masri.md` §5 — Egypt platform caption limits, hashtag counts, posting windows (RQ-010 distill from `reference/arabic-masri`)
+- `arabic/dialects/masri.md` §5 — Egypt platform caption limits, hashtag counts, posting windows (RQ-010 distill from `reference/arabic-masri`)
 
 ### Added
 - Golden test `tests/golden/rq010-masri-platform-specs.md`
