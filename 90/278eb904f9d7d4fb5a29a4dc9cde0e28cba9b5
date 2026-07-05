@@ -1,0 +1,119 @@
+website/.gitignore
+  s_bb5489bfef9fba::t_9a8e4e5908ec02 15-17
+tests/golden/g1-g12-manifest.json
+  s_bb5489bfef9fba::t_a575c481938ffc 1-15,19-29,31-39,41-49,51-60,62-68,71,73-81,83-91,93-101,103-111,113-122,124-131,133,135-137
+  s_bb5489bfef9fba::t_27f4c697683506 16-18,30,50,61,72,82,92,112,123,132,134
+  s_bb5489bfef9fba::t_567cf38df4025f 69-70
+  s_bb5489bfef9fba::t_896d728202d2e3 40
+  s_bb5489bfef9fba::t_a7896a03e67840 102
+website/package.json
+  s_bb5489bfef9fba::t_73b24f502ae01e 9-12
+  s_bb5489bfef9fba::t_776ce67af7a88f 22
+scripts/validate-behavioral-golden.sh
+  s_bb5489bfef9fba::t_62df2d3b85d2c8 1-31,33-46,49-57,60,69-89
+  s_bb5489bfef9fba::t_b3c13e820df670 32,47-48,58-59,61-68
+docs/planning/roadmap.md
+  s_bb5489bfef9fba::t_e4b6d7d1abe255 6
+  s_bb5489bfef9fba::t_474f1508551cc0 199
+  s_bb5489bfef9fba::t_7645c8a9f94565 50-51
+tests/golden/validate-golden-runner.md
+  s_bb5489bfef9fba::t_96ed42171d3aa7 26-28
+  s_bb5489bfef9fba::t_180bcafa673390 18,21-22
+  s_bb5489bfef9fba::t_940726d33d1f4a 32
+  s_bb5489bfef9fba::t_d38b5224db6731 1-17,19-20,23-25,29-31,33-37
+website/README.md
+  s_bb5489bfef9fba::t_4466cc5cbd06bd 14-21
+VERSION
+  s_bb5489bfef9fba::t_857308ff59f6d2 1
+arabic/SKILL.md
+  s_bb5489bfef9fba::t_7ce2defc37d88a 4
+docs/engineering/ci-pipeline.md
+  s_bb5489bfef9fba::t_3b4cb42d8c2db5 76
+  s_bb5489bfef9fba::t_ec2f0a38be42cd 77
+  s_bb5489bfef9fba::t_0c12d0be918ba4 89
+  s_bb5489bfef9fba::t_c0e5b683412e78 90
+  s_bb5489bfef9fba::t_a82f15e49b96a0 80
+tests/golden/g13-g18-website.md
+  s_bb5489bfef9fba::t_d91082b770c0e6 3
+  s_bb5489bfef9fba::t_faf649f19b5a13 24,33
+  s_bb5489bfef9fba::t_aa236d8b1eb7f8 46-50
+website/playwright.config.ts
+  s_bb5489bfef9fba::t_2a7be61f8c1c83 1-30
+docs/product/content-structure.md
+  s_bb5489bfef9fba::t_0929f90078e5e7 94
+tests/golden/g15-g16-playwright.md
+  s_bb5489bfef9fba::t_00f8870c22f446 5
+  s_bb5489bfef9fba::t_6da07d9c941b16 1-4,6-18,20-28,30-37
+  s_bb5489bfef9fba::t_ed2972f0ca8ba3 19
+  s_bb5489bfef9fba::t_25b125fb744823 29
+website/e2e/g15-mobile-ux.spec.ts
+  s_bb5489bfef9fba::t_c461eddb207859 1-66
+tests/golden/g1-g12-routing.md
+  s_bb5489bfef9fba::t_b28642b8087e79 1-38
+.github/workflows/validate.yml
+  s_bb5489bfef9fba::t_9df92bcbe889b1 57-70
+  s_bb5489bfef9fba::t_9301b91bfaebb2 42-44
+  s_bb5489bfef9fba::t_a08e59f3ef5e9b 45-47
+AGENTS.md
+  s_ff4dbe66b2d5a0::t_06ac2ecd9ecaf0 23
+  s_bb5489bfef9fba::t_d857f65aacc845 29
+  s_bb5489bfef9fba::t_f4b429a3ade02a 6
+scripts/validate-website-playwright.sh
+  s_bb5489bfef9fba::t_8185e9f3e0136f 1-34
+package.json
+  s_bb5489bfef9fba::t_850b3d8b95e5cd 52
+  s_bb5489bfef9fba::t_73fa1a6c4098a6 50
+  s_bb5489bfef9fba::t_8bbf90278270e8 51
+  s_bb5489bfef9fba::t_09d136e83427a1 3
+  s_bb5489bfef9fba::t_62431cb16ab8a1 44
+README.md
+  s_bb5489bfef9fba::t_97413ff71cbf7c 260
+  s_bb5489bfef9fba::t_4da571bc9aa32c 281
+  s_bb5489bfef9fba::t_0ae296a65751cf 272
+  s_bb5489bfef9fba::t_54f4125b4174f4 271
+  s_bb5489bfef9fba::t_5fd258921ea1f8 273
+  s_bb5489bfef9fba::t_cc465a640691e6 237
+  s_bb5489bfef9fba::t_34ae664b170522 17
+  s_bb5489bfef9fba::t_4f9d822bcea974 230
+  s_bb5489bfef9fba::t_41506e7f6cdee1 235
+CHANGELOG.md
+  s_bb5489bfef9fba::t_7977911bbdd11e 10-12,17-27
+  s_bb5489bfef9fba::t_57dc87885156ee 15-16
+docs/product/system-architecture.md
+  s_bb5489bfef9fba::t_a0dd0c3f90c106 133
+  s_bb5489bfef9fba::t_2723420e3a4be0 146,148
+  s_bb5489bfef9fba::t_a42ec4f6633e86 134,136
+website/e2e/g16-content.spec.ts
+  s_bb5489bfef9fba::t_eb0a411294ec4c 1-53
+scripts/validate-golden.sh
+  s_bb5489bfef9fba::t_5df2ded7f87761 32
+  s_bb5489bfef9fba::t_5c23c9de7f4566 1-31,33-35,39-74,77-175
+  s_bb5489bfef9fba::t_f4b3e1a5a4ffa3 36-38
+  s_bb5489bfef9fba::t_b893614b685720 75-76
+website/package-lock.json
+  s_bb5489bfef9fba::t_1de64223af2505 18,1312-1327,3988-4001,6739-6770
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "90278eb904f9d7d4fb5a29a4dc9cde0e28cba9b5",
+  "prompts": {},
+  "sessions": {
+    "s_bb5489bfef9fba": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "11bba942-631b-47bf-bd78-307e29de087e",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    },
+    "s_ff4dbe66b2d5a0": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "ef58c64e-0181-429b-8aae-cfaf2247d02d",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
