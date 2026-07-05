@@ -17,7 +17,6 @@ Spec: [research-intelligence-plan.md](../docs/planning/research-intelligence-pla
 
 | ID | Source kind | Finding | Runtime target(s) | Trust | Added | Notes |
 |----|-------------|---------|-------------------|-------|-------|-------|
-| RQ-010 | reference-gap | Egypt platform caption limits + posting windows + hashtag counts | `dialects/masri.md` §5 | A | 2026-07-05 | ref: `arabic-masri/reference/platform-specs.md` |
 | RQ-011 | reference-gap | L4 business address titles (حضرتك/أستاذ/باشا/مهندس) | `dialects/masri.md` §13 | A | 2026-07-05 | ref: `arabic-masri/SKILL.md` Business Communication |
 | RQ-013 | reference-gap | Masri spelling variants table for long-tail SEO | `references/seo-aeo-masri.md` §2 | A | 2026-07-05 | ref: `arabic-seo-optimizer/reference/keyword-research.md` |
 
@@ -46,6 +45,7 @@ Spec: [research-intelligence-plan.md](../docs/planning/research-intelligence-pla
 | RQ-006 | `arabic/references/ads-service-matrix.md` — TikTok RTL safe zones, Spark caption rules, official limits | feat/research-r2-platforms | 2026-07-04 |
 | RQ-007 | `arabic/references/ads-service-matrix.md` — Meta placement table (Reels ~72, FB headline ~27) | feat/research-rq007-rq008-distill | 2026-07-05 |
 | RQ-008 | `arabic/references/ads-service-matrix.md` — Demand Gen long-headline standalone rule | feat/research-rq007-rq008-distill | 2026-07-05 |
+| RQ-010 | `arabic/dialects/masri.md` — Egypt platform caption limits, hashtag counts, posting windows | feat/research-rq010-distill | 2026-07-05 |
 
 ---
 

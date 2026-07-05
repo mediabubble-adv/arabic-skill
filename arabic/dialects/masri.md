@@ -131,6 +131,38 @@ Single `مش` negates nouns/adjectives: "مش كويس" = not good.
 | LinkedIn | 25–45, B2B | L4 | Insight + proof |
 | Snapchat | 15–25 | L2, playful | Story-based |
 
+### Caption length (Egypt — commercial defaults)
+
+**English → Arabic:** copy translated or adapted from English typically needs ~35% more characters for the same message — target the **Optimal** band, not Max. **Native Arabic short-form:** the same idea often fits in fewer characters than English (especially on X — see Notes column).
+
+| Platform | Optimal (chars) | Max | Notes |
+|----------|-----------------|-----|-------|
+| Facebook | 80–250 | 5,000 | Front-load hook; longer posts OK |
+| Instagram | 50–150 | 2,200 | Long copy hides behind "more" |
+| TikTok | 20–50 | 300 | Short; voiceover carries message |
+| LinkedIn | 100–300 | 3,000 | L3–L4 register |
+| X | 40–100 | 280 | Native Arabic often shorter than English equivalent |
+| WhatsApp | 30–100 | 1,024 | Personal, direct |
+
+### Hashtag counts
+
+| Platform | Count | Mix / placement |
+|----------|-------|-----------------|
+| Instagram | 5–10 | Arabic + English; end of caption or first comment |
+| Facebook | 2–3 | Arabic only; end of post |
+| LinkedIn | 3–5 | Arabic + English; end of post |
+| TikTok | 3–5 | Trending Arabic + English; in caption |
+
+### Posting windows (Egypt local, UTC+2/+3)
+
+| Platform | Primary | Secondary |
+|----------|---------|-----------|
+| Facebook | 1–4 PM | 8–10 PM |
+| Instagram | 12–2 PM | 7–9 PM |
+| LinkedIn | 8–10 AM | 12–2 PM |
+| TikTok | 6–8 PM | 12–2 PM |
+| WhatsApp | 10 AM–12 PM | 5–7 PM |
+
 ---
 
 ## 6. Brand Voice Guide
