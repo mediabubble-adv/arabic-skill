@@ -1,0 +1,32 @@
+arabic/references/load-discipline.md
+  s_0197dde7fadf2a::t_cc200f9fb3e71a 49-55
+  s_0197dde7fadf2a::t_c537b8fe21b8a4 34-37
+arabic/references/engines.md
+  s_0197dde7fadf2a::t_7f5d9facee8e64 131-132
+  s_0197dde7fadf2a::t_018d4afd3af91b 156-157
+arabic/references/storytelling.md
+  s_0197dde7fadf2a::t_2cb7385f7707c6 1-279
+tests/golden/p3-storytelling.md
+  s_0197dde7fadf2a::t_7b13176ff2a827 1-126
+arabic/SKILL.md
+  s_0197dde7fadf2a::t_ba73cd70daab7d 272
+arabic/references/INDEX.md
+  s_0197dde7fadf2a::t_0cb08f85eb6627 18,24
+  s_0197dde7fadf2a::t_eb63684d5e97d1 30-31
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "ea3f549a0e40211fda8a0b357ccdf724dbf7e1f0",
+  "prompts": {},
+  "sessions": {
+    "s_0197dde7fadf2a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "76c5c404-8942-4fc7-9c88-40e1874404e1",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
