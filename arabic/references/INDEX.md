@@ -15,18 +15,19 @@ Never load all files. Load strictly on demand per task class.
 
 ---
 
-## References — Load by Task (21 files)
+## References — Load by Task (22 files)
 
 | File | Load when |
 |---|---|
 | `references/load-discipline.md` | Any `/arabic` command — pick plan/write/audit/rtl/research load set first |
 | `references/advisory-mode.md` | Start of any task that is not a complete brief (default operating model) |
-| `references/audit-mode.md` | Audit Mode / `/arabic audit`, and as the final 9-point QA review |
+| `references/audit-mode.md` | Audit Mode / `/arabic audit`, and as the final 10-point QA review |
 | `references/rtl-audit.md` | `/arabic audit rtl` — tier-1 RTL/UI source checks |
 | `references/prompt-engineering.md` | Prompt Coach Mode / `/arabic coach`, or any weak-prompt arrival |
 | `references/intake-protocols.md` | Before asking intake questions (every new task) |
 | `references/engines.md` | Before generating content (every task) |
 | `references/output-templates.md` | After engine is selected (every task) |
+| `references/persuasion-arab-psychology.md` | Commercial/persuasive tasks (ads, sales, campaigns) — archetype + lever activation |
 | `references/command-router.md` | `/arabic` routing, workspace persistence, and Cursor adapter behavior |
 | `references/taboos.md` | Before final delivery (every task) |
 | `references/humanization-protocol.md` | After content is drafted (every task) |

@@ -2,6 +2,15 @@
 
 Apply the matching engine before generating any content. Engines can be combined.
 
+## Persuasion Overlay (Commercial Tasks)
+
+For any commercial task (ads, sales, campaigns, brand voice, funnels), **label each output section with its target archetype + lead lever** per `persuasion-arab-psychology.md`. This ensures consistent psychological activation:
+- **Awareness stage** → usually Ambitious Achiever + FOMO or Nostalgia
+- **Consideration** → Faithful Steward + Barakah/Thiqa, or Family Guardian + Thiqa
+- **Decision/CTA** → Generous Host + Reciprocity, or Faithful Steward + Halal assurance
+
+All commercial engines below integrate this layer; it is not optional.
+
 ---
 
 ## ⚡ Hybrid Engine Routing Table

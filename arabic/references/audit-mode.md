@@ -1,4 +1,4 @@
-# Audit Mode — 9-Point QA Pipeline
+# Audit Mode — 10-Point QA Pipeline
 
 Distilled from `reference/arabic-qa`. Load when the task is **reviewing** existing Arabic copy
 (`/arabic audit`, Audit Mode) or as the final review pass before delivery. Generalize the Masri
@@ -16,7 +16,7 @@ examples to the **target dialect** locked for the piece.
 
 | Command | Loads | Behavior |
 |---|---|---|
-| `/arabic audit` | This file | 9-point QA on pasted text or `--file` |
+| `/arabic audit` | This file | 10-point QA on pasted text or `--file` |
 | `/arabic audit --platform <name>` | This file + § Platform register targets | Score check #1 against channel L-level |
 | `/arabic audit rtl` | `rtl-audit.md` + this file | Tier-1 RTL/UI source audit + Arabic string QA |
 | `/arabic audit --dir <path>` | `project-context-scanner.md` + this file | Capped scan (40 files) of Arabic copy in tree |
@@ -82,17 +82,18 @@ Report **target** and **detected** register in the QA header (e.g. `Target: L1�
 | 7 | **English overload** | ≤2 loanwords/sentence, zero full English clauses | clean |
 | 8 | **Back-translation gut check** | literal back-translation that reads as natural English marketing = translationese | reads awkward in English, meaning intact = native |
 | 9 | **Brand lexicon compliance** | forbidden words present / approved words missing / register-disallowed vocab | fully compliant |
+| 10 | **Persuasion-lever consistency** (commercial tasks) | Copy activates the declared archetype + lead lever (per `persuasion-arab-psychology.md`); no contradictory levers; no archetype undermine | aligned with archetype + lever matrix |
 
-Per-check scoring: **0/2** if many violations (≥3, or any gender switch / translationese), **1/2** if 1–2, **2/2** if clean. (Full per-check thresholds + error catalog: `reference/arabic-qa`.)
+Per-check scoring: **0/2** if many violations (≥3, or any gender switch / translationese), **1/2** if 1–2, **2/2** if clean. (Full per-check thresholds + error catalog: `reference/arabic-qa`.) Check #10 applies only to commercial/persuasive tasks (ads, sales copy, brand voice); editorial/blog tasks skip it.
 
-## Scoring matrix (max 18)
+## Scoring matrix (max 20)
 
 | Score | Rating | Action |
 |-------|--------|--------|
-| 16–18 | ✅ PASS | Publish |
-| 13–15 | ⚠️ CONDITIONAL | Approve with noted exceptions |
-| 9–12 | 🔄 REVISE | Required fixes before re-audit |
-| < 9 | 🚫 BLOCKED | Full rewrite |
+| 18–20 | ✅ PASS | Publish |
+| 14–17 | ⚠️ CONDITIONAL | Approve with noted exceptions |
+| 10–13 | 🔄 REVISE | Required fixes before re-audit |
+| < 10 | 🚫 BLOCKED | Full rewrite |
 
 ## Output format
 
