@@ -124,7 +124,7 @@ Never load all files. Load strictly on demand per task class.
 | P8 (v1.1 runtime) | load-discipline.md + rtl-audit.md + audit/plan/command extensions | ✅ Complete |
 | R3 (research command) | research-mode.md + monthly cron doc | ✅ Complete |
 
-**Total planned files:** 58
-**Total built:** 58 — v1.2.1 + research command wiring
+**Total planned files:** 59
+**Total built:** 59 — v1.2.1 + research command wiring
 
-Breakdown: SKILL.md (1) + voice.md (1) + references/ (21, incl. this INDEX) + dialects/ (11) + domains/ (14) + conversations/ (6) + professional-docs/ (4) = 58.
+Breakdown: SKILL.md (1) + voice.md (1) + references/ (22, incl. this INDEX) + dialects/ (11) + domains/ (14) + conversations/ (6) + professional-docs/ (4) = 59.

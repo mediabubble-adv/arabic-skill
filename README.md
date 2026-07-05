@@ -234,7 +234,7 @@ Runtime install folder is `arabic/`. The GitHub repo can stay `mediabubble-adv/a
 | Website | **v1.1.0 ✅** — https://arabic-skill.vercel.app (G13–G18) |
 | npm distribution | **`@mediabubble-adv/arabic-skill@1.2.4`** — npx install + publish CI |
 | Golden tests | Manual checklists in `tests/golden/` (G13–G18 + research/distill fixtures) |
-| Next train | **1.2.x** polish — reference sync check, automated golden runner (planned) |
+| Next train | **1.2.x** polish — automated golden runner (planned) |
 
 ## Documentation
 
@@ -266,6 +266,7 @@ Individual gates:
 ./scripts/validate-frontmatter.sh
 ./scripts/validate-docs.sh
 ./scripts/validate-research.sh
+./scripts/validate-reference-sync.sh
 ./scripts/validate-onboarding.sh
 ```
 

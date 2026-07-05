@@ -110,6 +110,7 @@ Distilled output is **rewritten, not pasted**. Each runtime target has a max lin
 ## Sync and Validation
 
 - Run `scripts/validate-skill.sh` after each distillation phase
+- Run `scripts/validate-reference-sync.sh` — INDEX parity, distillation map (`scripts/reference-distillation-map.json`), queue exclusivity
 - Update `arabic/references/INDEX.md` counts
 - Log distillation decisions in `CHANGELOG.md`
 

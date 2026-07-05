@@ -71,6 +71,7 @@ Or individual gates:
 ./scripts/validate-frontmatter.sh
 ./scripts/validate-docs.sh
 ./scripts/validate-research.sh
+./scripts/validate-reference-sync.sh
 ./scripts/validate-onboarding.sh
 ```
 
@@ -82,9 +83,9 @@ Research and onboarding gates are included in `npm run validate` locally; CI run
 
 | Gate | Phase | Purpose |
 |------|-------|---------|
-| Golden prompt tests (G1–G12) | **v1.0.0 gate** | Skill acceptance scenarios — see [implementation-plan §0.3](../planning/implementation-plan.md#03-golden-test-master-table-g1g18) |
 | Golden prompt tests (G13–G18) | v1.1.0 | Website acceptance scenarios |
-| Reference sync check | v1.2.0 | Distillation drift detection |
+| Reference sync check | **1.2.x ✅** | `validate-reference-sync.sh` — INDEX, distillation map, queue exclusivity |
+| Golden prompt tests (G1–G12) | **v1.0.0 gate** | Skill acceptance scenarios — see [implementation-plan §0.3](../planning/implementation-plan.md#03-golden-test-master-table-g1g18) |
 | `npx arabic detect` | v2.0.0 | AI-ism scanner for output |
 | Install website + Pages deploy | Post-v1 test | Public install site at `website/` |
 
