@@ -17,7 +17,17 @@ Spec: [research-intelligence-plan.md](../docs/planning/research-intelligence-pla
 
 | ID | Source kind | Finding | Runtime target(s) | Trust | Added | Notes |
 |----|-------------|---------|-------------------|-------|-------|-------|
-| — | — | — | — | — | — | — |
+| P2-001 | dialect-freshness | Canal cities (Suez/Ismailia/Port Said) markers — shipping/trade jargon specificity | masri.md §8 | B | 2026-07-05 | Verify English loanword prevalence; native speaker audit |
+| P2-002 | dialect-freshness | Sharkia (northeastern Egypt) — phonetic hybrid (Delta+Saeid); lexical boundaries | masri.md §8 | B | 2026-07-05 | Rural/agricultural marker verification |
+| P2-003 | dialect-freshness | Sinai peninsula — phoneme preservation, Bedouin tribal identity, conflict sensitivity | masri.md §8 | C | 2026-07-05 | ⚠ Political/social context; validate with native diaspora |
+| P2-004 | dialect-freshness | Tripoli (North Lebanon) — port/merchant vocabulary; coastal cosmopolitanism | levantine.md §1 | B | 2026-07-05 | Verify historical trade jargon; distinguish from Beirut |
+| P2-005 | dialect-freshness | Bekaa Valley — agricultural jargon specifics; irrigation/harvest terminology | levantine.md §1 | B | 2026-07-05 | Rural Lebanese dialect markers; phonetic drift from Beirut |
+| P2-006 | dialect-freshness | Mountain/Metn (Lebanon) — geographic markers (جبل, ثلج, غابة, ينبوع); tribal heritage language | levantine.md §1 | B | 2026-07-05 | Verify forest/mountain vocabulary; tradition-centered register |
+| P2-007 | dialect-freshness | Eastern Province (KSA) — tech/petroleum jargon (برترول, الصناعة); expat/multicultural influence | ksa.md §1 | B | 2026-07-05 | Verify English code-switching prevalence; oil-sector terminology |
+| P2-008 | dialect-freshness | Southern Aseeri (KSA) — mountain accent phoneme preservation; proximity to classical Arabic | ksa.md §1 | B | 2026-07-05 | Phonetic audit; heritage/craftsmanship vocabulary |
+| P2-009 | dialect-freshness | Abu Dhabi vs Dubai distinction — formality gradient; government vs. business register | khaliji.md §1 | B | 2026-07-05 | Verify code-switching reduction in official/governmental contexts |
+| P2-010 | dialect-freshness | Bahrain — Persian loanwords (some communities); Sunni/Shia vocab mix | khaliji.md §1 | B | 2026-07-05 | Validate community-specific loanwords; historical context |
+| P2-011 | dialect-freshness | Qatar — formal register features; diplomatic/official language patterns | khaliji.md §1 | B | 2026-07-05 | Verify reserve/formality distinction from UAE; government speech patterns |
 
 ## In progress
 

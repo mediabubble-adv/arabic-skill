@@ -203,19 +203,103 @@ Add to every output — pick 1–2:
 
 ---
 
-## 8. Sub-regional Nuance
+## 8. Sub-Regional City Blocks
 
 ### القاهرة (Cairo)
-Most commercial content defaults to Cairene Masri. Fast-paced, irony-aware, sophisticated.
+**Register:** Fast, irony-aware, prestige standard · **When to use:** Pan-Egypt commercial, default Masri
+**Markers:**
+- ج → g (gasri vs qasri for coffee)
+- ق → ء hamza (ألبي vs قلبي — heart)
+- Casual fillers: طب, بقى, يعني (rapid-fire)
+- إيه = what / إيه ده = what's this (direct)
+- فين = where (not وين like Gulf)
+
+**Sample:** "فين البنت اللي تشتري حاجة بسعر معقول ولا بتنازل عن الجودة؟ تمام قدام."
+**Avoid:** Gulf fillers (والله, بصراحة); southern slowness; MSA formality
+
+---
 
 ### الإسكندرية (Alexandria)
-Slightly softer pronunciation. More Mediterranean feel. References the sea, informality, relaxed pace.
+**Register:** Softer, Mediterranean warmth · **When to use:** Coastal audience, leisure brands
+**Markers:**
+- Softer ج (closer to zh sound, intermediate between Cairene/Levantine)
+- Long vowels preserved slightly more (ساحل not سحل — shore)
+- بحري = nautical/coastal reference natural
+- يا ست, يا عم (friendlier address)
+- عفكرة = by the way (Alexandria filler)
+
+**Sample:** "الجو بدري تاني، روح الشاطي والشمس ما زالت حلوة."
+**Avoid:** Desert/agricultural markers; heavy Upper Egypt accent; formal register
+
+---
 
 ### الصعيد (Upper Egypt — Saeid)
-Distinct accent (hard ج, distinct vowels). Tap into family values, tradition, hospitality. Brands that use authentic Saidi markers earn trust from this segment. Don't mock.
+**Register:** Traditional, family-centered · **When to use:** Rural/conservative audiences, heritage brands
+**Markers:**
+- ج hard (not hamzated ق like Cairo; closer to classical)
+- يا عم predominant (very warm)
+- وين = where (shared with Gulf, distinct)
+- بيت, عيلة, تقاليد appear naturally
+- نفسي = I want (emphatic future desire)
+
+**Sample:** "الحاجات اللي شاف أبويا يستخدمها، أنا بستخدمها ليّ ولأولادي."
+**Avoid:** Cairo's rapid-fire jokes; Levantine sophistication; mockery of tradition
+
+---
 
 ### دلتا (Delta)
-Close to Cairene but slightly slower. Agricultural roots. Family-business register.
+**Register:** Moderate, agrarian warmth · **When to use:** Family businesses, food/agriculture sectors
+**Markers:**
+- Between Cairo and Saeid (slightly slower, slightly more conservative)
+- أرضنا, محصول, فلّاح appear in context
+- يا أستاذ (respectful address)
+- زي القديم = like the old days (nostalgia marker)
+- عم + verb = continuous (عم بشتغل = working now)
+
+**Sample:** "الزيت بتوعنا من شجرنا، ما في حد بيقدر يغيّب عليك الجودة."
+**Avoid:** Speed/irony of Cairo; dramatic emotion; disconnect from land
+
+---
+
+### السويس و الإسماعيلية و بور سعيد (Canal Cities)
+**Register:** Cosmopolitan, port/commerce · **When to use:** Tech, import/export, international brands
+**Markers:**
+- ⚠ verify: More English loanwords (shipping, trade jargon)
+- Mix of Cairo + Mediterranean influences
+- بحري (maritime natural reference)
+- التجارة, الشحن appear in business contexts
+- تواصل = contact (strong commercial register)
+
+**Sample:** "الـ quality control بتاعتنا بتضمن إن كل طرد توصل تمام."
+**Avoid:** Extreme formality; rural/agricultural framing
+
+---
+
+### الشرقية (Sharkia)
+**Register:** Agricultural, northeastern · **When to use:** Rural campaigns, farm products, family-focused
+**Markers:**
+- ⚠ verify: Close to Delta + Saeid hybrid
+- زراعة, محصول naturally in context
+- أرض, قرية (village/rural identity)
+- بيت, عيلة (family strong)
+- والله الحمد (gratitude/blessing natural)
+
+**Sample:** "كل قرية عندها سرّها في الزراعة، ودنا نحكي عن سرّ الشرقية."
+**Avoid:** Urban sophistication; rapid modern register; disconnect from agriculture
+
+---
+
+### سيناء (Sinai)
+**Register:** Distinct, isolated · **When to use:** ⚠ verify regional outreach; use with caution
+**Markers:**
+- ⚠ verify: Pronunciation closer to Gulf/classical on some phonemes
+- صحرا, رمل, بدو naturally embedded
+- جبل, واد (mountain/valley geography)
+- قبيلة (tribal identity strong, ⚠ verify context sensitivity)
+- والنبي (oath, religious register)
+
+**Sample:** "⚠ verify with native speaker: بدو سيناء ما بيسمعوا وعود كتير — ما بيشتروا إلا لو جربوا."
+**Avoid:** Mockery of Bedouin identity; outsider framing; conflict references
 
 ---
 
