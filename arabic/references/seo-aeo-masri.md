@@ -27,6 +27,22 @@ Map every target keyword on this split before writing:
 | Local | MSA + place | "صيانة تكييف القاهرة" | Title, NAP, schema |
 | English/Franco | Latin / English | "best AC Egypt" | Secondary keywords, tags |
 
+### Masri spelling variants (long-tail coverage)
+
+Egyptian search uses inconsistent spelling — cover **both** MSA and Masri forms in H2/FAQ blocks, not only the title/H1.
+
+| MSA / standard | Masri variants | SEO use |
+|---|---|---|
+| ماذا | إيه، ايه | Include both in body; Masri in FAQ |
+| أين | فين | Long-tail headings |
+| كيف | إزاي، ازاي | FAQ + HowTo schema |
+| أريد | عايز، عاوز | Conversational queries |
+| متى | إمتى، امتى | Long-tail |
+| جيد | كويس | High-volume Masri term — target explicitly |
+| جميل | نضيف | Masri colloquial — target explicitly |
+| قريب | قرّب | Local + voice ("قريب مني") |
+| أيضاً | كمان | Conversational FAQ phrasing |
+
 **Rule:** Write **titles/meta in MSA-leaning Arabic** (matches typed search), but **answer in Masri** inside FAQ/AEO blocks (matches voice + feels human). This dual-register approach captures both surfaces.
 
 ---

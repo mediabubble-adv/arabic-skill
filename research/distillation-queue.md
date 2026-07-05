@@ -17,7 +17,7 @@ Spec: [research-intelligence-plan.md](../docs/planning/research-intelligence-pla
 
 | ID | Source kind | Finding | Runtime target(s) | Trust | Added | Notes |
 |----|-------------|---------|-------------------|-------|-------|-------|
-| RQ-013 | reference-gap | Masri spelling variants table for long-tail SEO | `references/seo-aeo-masri.md` §2 | A | 2026-07-05 | ref: `arabic-seo-optimizer/reference/keyword-research.md` |
+| — | — | — | — | — | — | — |
 
 ## In progress
 
@@ -46,6 +46,7 @@ Spec: [research-intelligence-plan.md](../docs/planning/research-intelligence-pla
 | RQ-008 | `arabic/references/ads-service-matrix.md` — Demand Gen long-headline standalone rule | feat/research-rq007-rq008-distill | 2026-07-05 |
 | RQ-010 | `arabic/dialects/masri.md` — Egypt platform caption limits, hashtag counts, posting windows | feat/research-rq010-distill | 2026-07-05 |
 | RQ-011 | `arabic/dialects/masri.md` — L4 business address titles (حضرتك/أستاذ/باشا/مهندس) | feat/research-rq011-distill | 2026-07-05 |
+| RQ-013 | `arabic/references/seo-aeo-masri.md` — Masri spelling variants for long-tail SEO | feat/research-rq013-distill | 2026-07-05 |
 
 ---
 
