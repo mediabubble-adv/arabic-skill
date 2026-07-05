@@ -1,0 +1,28 @@
+package.json
+  s_0197dde7fadf2a::t_79544e7b9e8a3d 44
+  s_0197dde7fadf2a::t_0db4a8c62e05fb 56
+scripts/validate-cursor-sync.sh
+  s_0197dde7fadf2a::t_42e442d513a9ec 1-22
+arabic/references/INDEX.md
+  s_0197dde7fadf2a::t_5b9288d74eac6f 48-62
+.github/workflows/validate.yml
+  s_0197dde7fadf2a::t_b57889f99d5da0 36-38
+arabic/SKILL.md
+  s_0197dde7fadf2a::t_860b01a89224bf 127-139,144
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "3b0f3257cfc926e865d04492f21e70a9e2453532",
+  "prompts": {},
+  "sessions": {
+    "s_0197dde7fadf2a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "76c5c404-8942-4fc7-9c88-40e1874404e1",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
