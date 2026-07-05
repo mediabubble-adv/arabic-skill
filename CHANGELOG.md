@@ -7,22 +7,30 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
-### Changed
-- `scripts/validate-reference-sync.sh` — unmapped reference packs and missing INDEX counts now fail the gate (review hardening)
-- `arabic/dialects/masri.md` §5 — Egypt platform caption limits, hashtag counts, posting windows (RQ-010 distill from `reference/arabic-masri`)
-- `arabic/dialects/masri.md` §13 — L4 business address titles (RQ-011 distill from `reference/arabic-masri`)
-- `arabic/references/INDEX.md` — file count sync (59 total, 22 references incl. INDEX)
+## [1.2.5] - 2026-07-05
+
+**Validation stack** — golden fixture gate, Playwright G15–G16, G1–G12 routing contracts.
 
 ### Added
-- `scripts/validate-reference-sync.sh` + `scripts/reference-distillation-map.json` — INDEX parity, distillation map, queue exclusivity
-- Golden test `tests/golden/reference-sync-gate.md`
-- Golden test `tests/golden/rq010-masri-platform-specs.md`
-- Golden test `tests/golden/rq011-masri-l4-address.md`
-- Golden test `tests/golden/rq013-seo-spelling-variants.md`
+- `scripts/validate-golden.sh` — structural golden fixture gate (paths, ids, G13 route smoke)
+- Golden test `tests/golden/validate-golden-runner.md`
+- `scripts/validate-website-playwright.sh` — G15–G16 Playwright runner (mobile UX + frozen audit/footer smoke)
+- `website/e2e/g15-mobile-ux.spec.ts`, `website/e2e/g16-content.spec.ts`, `website/playwright.config.ts`
+- Golden test `tests/golden/g15-g16-playwright.md`
+- CI job `website-e2e` in `.github/workflows/validate.yml`
+- `scripts/validate-behavioral-golden.sh` + `tests/golden/g1-g12-manifest.json` — G1–G12 routing contract gate
+- Golden test `tests/golden/g1-g12-routing.md`
+- `scripts/validate-reference-sync.sh` + `scripts/reference-distillation-map.json` — INDEX parity, distillation map, queue exclusivity (PR #63)
+- Golden tests `reference-sync-gate.md`, `rq010-masri-platform-specs.md`, `rq011-masri-l4-address.md`, `rq013-seo-spelling-variants.md`
 
-### Changed (docs)
-- README, PRD, system architecture, content structure, context hierarchy — synced to **v1.2.4** (research, onboarding, validation, repo layout)
-- Engineering docs: versioning, CI pipeline; planning: roadmap, research plan status, website design system shipped note
+### Changed
+- `scripts/validate-reference-sync.sh` — unmapped reference packs and missing INDEX counts now fail the gate
+- `arabic/dialects/masri.md` §5 — Egypt platform caption limits, hashtag counts, posting windows (RQ-010)
+- `arabic/dialects/masri.md` §13 — L4 business address titles (RQ-011)
+- `arabic/references/INDEX.md` — file count sync (59 total, 22 references incl. INDEX)
+- `tests/golden/g13-g18-website.md` — notes automated G15–G16 coverage
+- `npm run validate` — includes `validate-golden.sh` and `validate-behavioral-golden.sh`
+- Docs: README, roadmap, system architecture, CI pipeline, AGENTS.md
 
 ## [1.2.4] - 2026-07-05
 
@@ -191,7 +199,8 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 - Renamed runtime folder `arabic-content/` → `arabic/`
 - Version policy: **0.x = development**, **1.0.0 = plan complete + first public release**
 
-[Unreleased]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.4...HEAD
+[Unreleased]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.5...HEAD
+[1.2.5]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.4...v1.2.5
 [1.2.4]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.3...v1.2.4
 [1.2.3]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.2...v1.2.3
 [1.2.2]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.1...v1.2.2

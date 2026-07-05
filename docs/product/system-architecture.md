@@ -130,8 +130,10 @@ docs/ (intent) -> reference/ (canonical) + research/ (collected)
 | `validate-research.sh` | R4 stale sources + queue cap |
 | `validate-reference-sync.sh` | INDEX parity, distillation map, queue exclusivity |
 | `validate-onboarding.sh` | Onboarding templates + references |
+| `validate-golden.sh` | Golden fixture structure, path refs, G13 route smoke |
+| `validate-behavioral-golden.sh` | G1–G12 routing contracts (manifest + markers) |
 
-Golden tests in `tests/golden/` are **manual** acceptance checklists until an automated runner ships.
+Golden tests in `tests/golden/` combine **manual** LLM scenarios (G1–G12 interactive), **automated** structural (`validate-golden.sh`), **routing contracts** (`validate-behavioral-golden.sh`), and **Playwright** UX/content gates (`validate-website-playwright.sh`).
 
 ## 8. Key Design Constraints
 
@@ -141,9 +143,9 @@ Golden tests in `tests/golden/` are **manual** acceptance checklists until an au
 - project-level behavior is staged (Project Mode), not improvised
 - distillation queue never exceeds 20 open items
 
-## 9. Planned Extensions (1.2.x+)
+## 9. Planned Extensions (1.2.6+)
 
-- automated golden test runner (G1–G12 in CI — planned)
+- LLM agent harness for interactive G1–G12 scenario runs in CI
 - trend snapshot storage conventions under `research/snapshots/`
 
 ## 10. Architectural Summary

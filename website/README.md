@@ -11,6 +11,14 @@ Arabic-first install and tutorial site (v1.1.0 dogfood).
 
 See [tests/golden/g13-g18-website.md](../tests/golden/g13-g18-website.md).
 
+**Playwright (G15–G16):**
+
+```bash
+npm run test:e2e          # from website/ (requires prior build + start, or use root script)
+# or from repo root:
+npm run validate:website-playwright
+```
+
 ## Install copy (G14)
 
 Source of truth: [../README.md](../README.md) — enforced by `scripts/validate-website-install.sh`.

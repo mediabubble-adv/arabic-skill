@@ -73,9 +73,11 @@ Or individual gates:
 ./scripts/validate-research.sh
 ./scripts/validate-reference-sync.sh
 ./scripts/validate-onboarding.sh
+./scripts/validate-golden.sh
+./scripts/validate-website-playwright.sh
 ```
 
-Research and onboarding gates are included in `npm run validate` locally; CI runs the subset listed in `.github/workflows/validate.yml`.
+Research and onboarding gates are included in `npm run validate` locally; CI runs the subset listed in `.github/workflows/validate.yml` plus the `website-e2e` job for G15–G16 Playwright tests.
 
 ---
 
@@ -84,6 +86,8 @@ Research and onboarding gates are included in `npm run validate` locally; CI run
 | Gate | Phase | Purpose |
 |------|-------|---------|
 | Golden prompt tests (G13–G18) | v1.1.0 | Website acceptance scenarios |
+| Golden fixture gate | **1.2.x ✅** | `validate-golden.sh` — structure, path refs, G13 route smoke |
+| Website Playwright (G15–G16) | **1.2.x ✅** | `validate-website-playwright.sh` — mobile UX + audit/footer smoke |
 | Reference sync check | **1.2.x ✅** | `validate-reference-sync.sh` — INDEX, distillation map, queue exclusivity |
 | Golden prompt tests (G1–G12) | **v1.0.0 gate** | Skill acceptance scenarios — see [implementation-plan §0.3](../planning/implementation-plan.md#03-golden-test-master-table-g1g18) |
 | `npx arabic detect` | v2.0.0 | AI-ism scanner for output |

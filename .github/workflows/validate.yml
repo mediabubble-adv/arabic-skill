@@ -39,6 +39,12 @@ jobs:
       - name: Validate reference sync
         run: bash scripts/validate-reference-sync.sh
 
+      - name: Validate golden fixtures
+        run: bash scripts/validate-golden.sh
+
+      - name: Validate G1–G12 behavioral routing contracts
+        run: bash scripts/validate-behavioral-golden.sh
+
       - name: Check version sync
         run: |
           ROOT_VERSION=$(tr -d '[:space:]' < VERSION)
@@ -48,3 +54,21 @@ jobs:
             exit 1
           fi
           echo "Version OK: $ROOT_VERSION"
+
+  website-e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: website/package-lock.json
+
+      - name: Install website dependencies
+        working-directory: website
+        run: npm ci
+
+      - name: Run G15–G16 Playwright golden tests
+        run: bash scripts/validate-website-playwright.sh
