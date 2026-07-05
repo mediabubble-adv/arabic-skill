@@ -1,0 +1,74 @@
+docs/planning/website-design-system.md
+  s_e22df37b935413::t_fec81f89b3775b 3
+README.md
+  s_e22df37b935413::t_25d0b3f657881c 42-44
+  s_e22df37b935413::t_360722e11b0910 257-263,266,268-269,274-278
+  s_e22df37b935413::t_b67566a95ed4a7 230,232-237
+  s_e22df37b935413::t_10ff337a78f12b 211-213,216-219
+  s_e22df37b935413::t_d47aeb66c79c43 180
+  s_e22df37b935413::t_48627be1afcbdd 249
+  s_e22df37b935413::t_7c227b7f290529 17
+  s_e22df37b935413::t_f8cb3868994a19 256
+docs/product/content-structure.md
+  s_e22df37b935413::t_3a89dab031cfbc 51-63
+  s_e22df37b935413::t_9df19a692ccd9c 71,76-94
+  s_e22df37b935413::t_b1e3dfaa42914f 143-146,148-153
+  s_e22df37b935413::t_f231cb5bffb4fe 183-192
+docs/planning/roadmap.md
+  s_e22df37b935413::t_c45b676455d217 5-6
+  s_e22df37b935413::t_072a85d1905843 198
+  s_e22df37b935413::t_b51ea106d86836 46-50
+docs/engineering/versioning-and-releases.md
+  s_e22df37b935413::t_272022736b2109 8,11
+  s_e22df37b935413::t_62c8d5f54a7780 25-26,29
+  s_e22df37b935413::t_30e326e979fd08 72-75
+  s_e22df37b935413::t_8174dade23bbbd 138,140-141
+CHANGELOG.md
+  s_e22df37b935413::t_0fba03588c8afd 20-23
+docs/product/prd.md
+  s_e22df37b935413::t_b4a1874ff66a79 3
+  s_e22df37b935413::t_bdf758a3b7e78b 395,398-407
+  s_e22df37b935413::t_46e8f6385dd5e6 4
+  s_e22df37b935413::t_b18759d7b26927 408
+docs/README.md
+  s_e22df37b935413::t_9a76ff79512b2a 79
+  s_e22df37b935413::t_4f8b310e13772f 60
+  s_e22df37b935413::t_5c052e3d31ba3a 17
+  s_e22df37b935413::t_8bc29706f57935 18
+  s_e22df37b935413::t_d96dc32665ce31 95-109
+docs/product/context-and-sources.md
+  s_e22df37b935413::t_bf3c2b43fa87fd 179-181
+  s_e22df37b935413::t_a13e72f0326e9f 4
+  s_e22df37b935413::t_e61e157c88696f 145-152
+  s_e22df37b935413::t_44cff6d3ca5348 48-62,67
+  s_e22df37b935413::t_edb8dbcde26c7b 3
+docs/product/system-architecture.md
+  s_e22df37b935413::t_86e35a66337dbb 4,16,18,21,27,29,33,35,39,41,45-48,50,52,54,56,58-60,62,64,66,68,70-73,75,77,79,81-133,137-141,143,145-147,151-156,158
+  s_e22df37b935413::t_eb8c954c74be39 3
+docs/planning/research-intelligence-plan.md
+  s_e22df37b935413::t_18d74c5704aca8 299-300
+  s_e22df37b935413::t_a0f367f3029c70 5
+docs/engineering/ci-pipeline.md
+  s_e22df37b935413::t_2f55c7e9de5f1b 16-18,26-31
+  s_e22df37b935413::t_adcf084210729f 46-49
+  s_e22df37b935413::t_1907a9cd1587ae 64-68,73-74,77
+  s_e22df37b935413::t_9027eca0f0af77 93,95
+  s_e22df37b935413::t_ac3bd7c1c98684 63
+  s_e22df37b935413::t_7b045ad9907ba2 78
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "44576d68c376bffe51be6acefe4b032cfaaa86b3",
+  "prompts": {},
+  "sessions": {
+    "s_e22df37b935413": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "997ffe26-6e5f-4828-bfbb-c1e3cd07cd76",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
