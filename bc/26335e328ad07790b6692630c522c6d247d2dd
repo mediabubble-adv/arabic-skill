@@ -1,0 +1,154 @@
+.cursor/skills/arabic/references/onboarding-mode.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-101
+.github/workflows/validate.yml
+  s_0197dde7fadf2a::t_b57889f99d5da0 36-38
+.cursor/skills/arabic/dialects/masri.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-371
+.cursor/skills/arabic/references/humanization-protocol.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-294
+.gitignore
+  s_0197dde7fadf2a::t_7a1dab0ea1385a 15,18-19
+.cursor/skills/arabic/references/engines.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-630
+.cursor/skills/arabic/references/prompt-engineering.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-80
+.cursor/skills/arabic/dialects/yemeni.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-189
+.cursor/skills/arabic/professional-docs/agent-rules.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-327
+.cursor/skills/arabic/domains/healthcare.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-218
+.cursor/skills/arabic/references/load-discipline.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-141
+.cursor/skills/arabic/templates/.arabic/briefs/example.yaml
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-11
+.cursor/skills/arabic/domains/real-estate.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-200
+scripts/validate-cursor-sync.sh
+  s_0197dde7fadf2a::t_42e442d513a9ec 1-22
+.cursor/skills/arabic/references/seo-aeo-masri.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-139
+.cursor/skills/arabic/references/trends-and-hooks.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-221
+.cursor/skills/arabic/references/seasonal-calendar.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-99
+.cursor/skills/arabic/conversations/interview-podcast.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-250
+.cursor/skills/arabic/professional-docs/contracts.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-275
+.cursor/skills/arabic/references/advisory-mode.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-129
+.cursor/skills/arabic/references/intake-protocols.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-150
+.cursor/skills/arabic/templates/.arabic/config.yaml
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-5
+.cursor/skills/arabic/domains/tech-saas.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-196
+.cursor/skills/arabic/references/examples.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-489
+.cursor/skills/arabic/conversations/negotiation.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-267
+.cursor/skills/arabic/dialects/khaliji.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-254
+.cursor/skills/arabic/dialects/libyan.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-123
+.cursor/skills/arabic/references/project-context-scanner.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-133
+.cursor/skills/arabic/dialects/maghrebi.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-270
+package.json
+  s_0197dde7fadf2a::t_0db4a8c62e05fb 56
+  s_0197dde7fadf2a::t_79544e7b9e8a3d 44
+.cursor/skills/arabic/domains/food-beverage.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-233
+.cursor/skills/arabic/voice.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-79
+.cursor/skills/arabic/conversations/sales-conversation.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-223
+.cursor/skills/arabic/domains/ecommerce-retail.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-243
+.cursor/skills/arabic/domains/dev-tech.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-143
+.cursor/skills/arabic/references/rtl-audit.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-88
+.cursor/skills/arabic/domains/hospitality-tourism.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-211
+.cursor/skills/arabic/domains/fitness-wellness.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-236
+.cursor/skills/arabic/domains/beauty-fashion.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-232
+.cursor/skills/arabic/professional-docs/compliance-language.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-235
+.cursor/skills/arabic/domains/legal.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-212
+.cursor/skills/arabic/dialects/white-dialect.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-203
+.cursor/skills/arabic/domains/finance-banking.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-233
+.cursor/skills/arabic/references/command-router.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-196
+.cursor/skills/arabic/references/book-writing.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-126
+.cursor/skills/arabic/dialects/sudanese.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-130
+.cursor/skills/arabic/references/research-mode.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-156
+.cursor/skills/arabic/dialects/ksa.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-250
+.cursor/skills/arabic/conversations/coaching-consulting.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-260
+.cursor/skills/arabic/references/project-mode.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-120
+.cursor/skills/arabic/conversations/community-management.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-314
+.cursor/skills/arabic/references/ads-service-matrix.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-128
+.cursor/skills/arabic/references/output-templates.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-529
+.cursor/skills/arabic/professional-docs/skill-writing.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-282
+.cursor/skills/arabic/domains/government-ngo.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-245
+.cursor/skills/arabic/dialects/levantine.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-255
+.cursor/skills/arabic/conversations/customer-service.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-282
+.cursor/skills/arabic/domains/ads-media.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-153
+arabic/SKILL.md
+  s_0197dde7fadf2a::t_860b01a89224bf 127-139,144
+.cursor/skills/arabic/references/taboos.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-149
+arabic/references/INDEX.md
+  s_0197dde7fadf2a::t_5b9288d74eac6f 48-62
+.cursor/skills/arabic/dialects/msa.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-196
+.cursor/skills/arabic/dialects/iraqi.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-236
+.cursor/skills/arabic/domains/education.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-219
+.cursor/skills/arabic/references/audit-mode.md
+  s_0197dde7fadf2a::t_20fba3fadec2ae 1-145
+.cursor/skills/arabic/SKILL.md
+  s_0197dde7fadf2a::t_f488d9444bf343 1-295
+.cursor/skills/arabic/references/INDEX.md
+  s_0197dde7fadf2a::t_4ed8ae1aff5d29 1-132
+.cursor/skills/arabic/templates/.arabic/README.md
+  s_0197dde7fadf2a::t_b5a9c33ca06f66 1-13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "bc26335e328ad07790b6692630c522c6d247d2dd",
+  "prompts": {},
+  "sessions": {
+    "s_0197dde7fadf2a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "76c5c404-8942-4fc7-9c88-40e1874404e1",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
