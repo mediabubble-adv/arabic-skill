@@ -25,7 +25,7 @@ Manual checklist for onboarding (`feat/onboarding-first-run`).
 
 **Command:** `/arabic init` in an empty client repo.
 
-**Expected:** Creates `.arabic/` from templates; `config.yaml` + `briefs/example.yaml` + `projects/`; suggests `/arabic write … --brief .arabic/briefs/example.yaml`.
+**Expected:** Creates `.arabic/` from templates; `config.yaml` + `briefs/example.yaml` + `projects/` + `README.md`; suggests `/arabic write … --brief .arabic/briefs/example.yaml`.
 
 ## G-ONB-05 — Installer post-message
 
