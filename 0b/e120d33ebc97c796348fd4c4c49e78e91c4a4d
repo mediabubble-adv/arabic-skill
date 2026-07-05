@@ -1,0 +1,28 @@
+package.json
+  s_e22df37b935413::t_6b0ca43749d8e3 3
+VERSION
+  s_e22df37b935413::t_566612d6e0b316 1
+arabic/SKILL.md
+  s_e22df37b935413::t_5ad1ec6e7eb856 4
+CHANGELOG.md
+  s_e22df37b935413::t_b5cb1620b917c3 10-20
+  s_e22df37b935413::t_9cc6ad9c5a604c 161-162
+docs/planning/roadmap.md
+  s_e22df37b935413::t_2f318959c4b72d 4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "0be120d33ebc97c796348fd4c4c49e78e91c4a4d",
+  "prompts": {},
+  "sessions": {
+    "s_e22df37b935413": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "997ffe26-6e5f-4828-bfbb-c1e3cd07cd76",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
