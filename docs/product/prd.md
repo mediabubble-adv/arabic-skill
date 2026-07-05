@@ -1,5 +1,7 @@
 # PRD: Awesome Arabic Skill
 
+> **Shipped baseline:** `v1.0.0` (advisory runtime + G1–G12) · `v1.1.x` (website G13–G18, npm, P8) · **`v1.2.4`** (research R0–R4, onboarding, CI gates). See root `VERSION` and `CHANGELOG.md`.
+
 ## 1. Product Vision
 
 Build a Masri-first Arabic content skill that acts as:
@@ -390,8 +392,19 @@ Each criterion maps to golden tests in [implementation-plan §0.3](../planning/i
 | 7 | Dev-tech terminology strategy | P5 | G11 (project explain) + P5 dev-tech fixtures |
 | 8 | Project-aware, no private data | P5 / C4 | G11 |
 | 9 | Preloaded trends, no fake recency | P4 | P4 seasonal-calendar fixture (no live-data claim) |
-| 10 | Indexes/file maps match repo | P0 / P6 | `validate-skill.sh` + G16 (website QA) |
+| 10 | Indexes/file maps match repo | P0 / P6 / R4 | `validate-skill.sh`, `validate-research-scaffold.sh`, G16 (website QA) |
 | 11 | All outputs pass final review | P1 / P2 | G9 + review step asserted in every test |
+
+### Post–v1.0.0 capabilities (shipped in 1.1.x–1.2.x)
+
+| Capability | Version | Evidence |
+|------------|---------|----------|
+| Marketing website (G13–G18) | 1.1.0 | `website/`, https://arabic-skill.vercel.app |
+| npm `npx` install + publish CI | 1.1.1+ | `bin/arabic-skill.js`, `npm-publish.yml` |
+| Full Cursor install + skills.sh | 1.2.0 | `validate-cursor-install.sh`, skills registry docs |
+| Research layer R0–R4 | 1.2.0–1.2.4 | `research/`, `/arabic research`, `validate-research.sh` |
+| First-run onboarding | 1.2.2+ | `onboarding-mode.md`, `/arabic init`, `validate-onboarding.sh` |
+| SKILL.md frontmatter CI gate | 1.2.4 | `validate-frontmatter.sh` |
 
 ## 13. Non-Goals
 

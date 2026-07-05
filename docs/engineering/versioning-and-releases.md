@@ -5,9 +5,10 @@
 The canonical product version lives in the repository root:
 
 ```text
-VERSION          → 1.2.0 (current)
+VERSION          → 1.2.4 (current)
 CHANGELOG.md     → human-readable history
 arabic/SKILL.md → version field in YAML frontmatter (must match VERSION)
+package.json    → npm package version (must match VERSION)
 ```
 
 **Rule:** `SKILL.md` `version` must equal root `VERSION` on every tagged release. CI enforces this.
@@ -21,11 +22,11 @@ arabic/SKILL.md → version field in YAML frontmatter (must match VERSION)
 | **Development** | `0.1.x` | Architecture, docs, validation — **not** the public product launch |
 | **First public release** | **`1.0.0`** | All [PRD success criteria](../product/prd.md#12-success-criteria) met + [implementation plan](../planning/implementation-plan.md) Phases **P1–P6** complete |
 | **Distribution** | `1.1.x` | Website, npm `npx` installer, P8 runtime extensions |
-| **Distribution follow-ups** | `1.2.0` | Full Cursor npx install, skills.sh registry — ✅ shipped |
-| **Research + onboarding** | `1.2.x` | Research R4, first-run onboarding |
+| **Distribution follow-ups** | `1.2.0`–`1.2.1` | Full Cursor npx install, skills.sh registry, git-clone fix — ✅ shipped |
+| **Research + onboarding + CI** | `1.2.2`–`1.2.4` | Onboarding, research R4 cron, `validate-frontmatter.sh` — ✅ **`1.2.4` current** |
 | **Breaking changes** | `2.0.0` | Removed modes, restructured routing, incompatible `voice.md` |
 
-**Current state:** **`1.2.0`** on `main` — full Cursor npx install + skills.sh registry shipped 2026-07-04.
+**Current state:** **`1.2.4`** on `main` (tag `v1.2.4`) — research monthly cron, frontmatter CI gate, onboarding, full Cursor install.
 
 ---
 
@@ -68,6 +69,10 @@ Examples:
 - `v1.1.0` — website + P8 runtime + npx installer scaffold ✅
 - `v1.1.1` — npm publish CI and pack gates ✅
 - `v1.2.0` — full Cursor npx install + skills.sh registry ✅
+- `v1.2.1` — git-clone npx `@latest` fix ✅
+- `v1.2.2` — first-run onboarding (`/arabic init`) ✅
+- `v1.2.3` — onboarding post-review polish ✅
+- **`v1.2.4`** — validate-frontmatter + first research cron ✅
 - `v2.0.0` — breaking changes
 
 **Never** use plan-version labels (v4, v5.2) in tags or docs. Product semver only.
@@ -130,10 +135,10 @@ Working toward v1.2.0
 |---------|--------|-------|
 | Git clone + manual copy | ✅ Available | Full Cursor integration (rules + commands) |
 | GitHub Releases (zip) | ✅ v1.0.0+ | Tag push → `release.yml` |
-| `npx @mediabubble-adv/arabic-skill install` | ✅ v1.1.1 | Copies `arabic/` runtime; Cursor/Claude/Codex presets |
+| `npx @mediabubble-adv/arabic-skill install` | ✅ **1.2.4** | Copies runtime; Cursor/Claude/Codex presets |
 | Install website | ✅ v1.1.0 | https://arabic-skill.vercel.app |
-| `npx skills add mediabubble-adv/arabic-skill` | ✅ v1.2.0 | skills.sh registry; skill pack only |
-| Full Cursor npx install | ✅ v1.2.0 | Skill + `~/.cursor/commands/arabic.md` + `~/.cursor/rules/arabic.mdc` |
+| `npx skills add mediabubble-adv/arabic-skill` | ✅ v1.2.0+ | skills.sh registry; skill pack only |
+| Full Cursor npx install | ✅ v1.2.0+ | Skill + `~/.cursor/commands/arabic.md` + `~/.cursor/rules/arabic.mdc` |
 
 See [npm Publishing](./npm-publishing.md) for maintainer publish steps.
 

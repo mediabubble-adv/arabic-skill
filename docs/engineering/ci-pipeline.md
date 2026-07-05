@@ -13,6 +13,9 @@ PR / push to main
 │  - skill refs    │
 │  - frontmatter   │
 │  - doc links     │
+│  - supported     │
+│  - npm pack      │
+│  - cursor install│
 │  - version sync  │
 └──────────────────┘
        │
@@ -20,6 +23,12 @@ PR / push to main
 ┌──────────────────┐
 │  release.yml     │
 │  - GitHub Release│
+└──────────────────┘
+       │
+       ▼ (tag v*.*.*)
+┌──────────────────┐
+│ npm-publish.yml  │
+│  - npm registry  │
 └──────────────────┘
 ```
 
@@ -34,7 +43,10 @@ PR / push to main
 | skill-integrity | `scripts/validate-skill.sh` | SKILL.md references missing files |
 | frontmatter | `scripts/validate-frontmatter.sh` | SKILL.md YAML schema invalid |
 | docs-links | `scripts/validate-docs.sh` | Broken relative markdown links |
-| version-sync | inline check | VERSION ≠ SKILL.md version |
+| supported-tools | `scripts/validate-supported.sh` | Tool profile / matrix drift |
+| npm-pack | `scripts/validate-npm-pack.sh` | Pack missing required files |
+| cursor-install | `scripts/validate-cursor-install.sh` | Full Cursor install dry-run fails |
+| version-sync | inline check | VERSION ≠ SKILL.md ≠ package.json |
 
 ### `release.yml` (on tag `v*.*.*`)
 
@@ -49,10 +61,20 @@ PR / push to main
 Before opening a PR:
 
 ```bash
+npm run validate
+```
+
+Or individual gates:
+
+```bash
 ./scripts/validate-skill.sh
 ./scripts/validate-frontmatter.sh
 ./scripts/validate-docs.sh
+./scripts/validate-research.sh
+./scripts/validate-onboarding.sh
 ```
+
+Research and onboarding gates are included in `npm run validate` locally; CI runs the subset listed in `.github/workflows/validate.yml`.
 
 ---
 
@@ -68,9 +90,9 @@ Before opening a PR:
 
 ---
 
-## GitHub Pages (deferred)
+## GitHub Pages / website deploy
 
-The `website/` folder is intentionally empty for now. Building and deploying the install site is planned as the **first test project** after the skill baseline ships. When ready, restore `website/` and re-enable the Pages job in `release.yml`.
+The marketing site lives in `website/` and deploys to Vercel (https://arabic-skill.vercel.app). G14 install copy is enforced by `scripts/validate-website-install.sh` against root `README.md`.
 
 ---
 

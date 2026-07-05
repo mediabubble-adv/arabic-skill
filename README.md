@@ -14,7 +14,7 @@
 
 **Awesome Arabic Skill** (`arabic`) is a MediaBubble skill for Arabic content creation, strategy, research distillation, and review. It is designed to behave like a senior Arabic content partner inside AI coding tools: it reads context, clarifies intent, recommends a direction, writes, humanizes, and audits before delivery.
 
-It is **not** a translation shortcut. Current version is `1.2.0` (full Cursor npx install + skills.sh registry; website + P8 runtime shipped in `1.1.0`).
+It is **not** a translation shortcut. Current version is **`1.2.4`** (research cron + CI gates; onboarding + full Cursor install in `1.2.x`; website + P8 runtime in `1.1.0`).
 
 <p align="center">
   <img src="./public/assets/claude-color.svg" alt="Claude" width="26" height="26">
@@ -39,8 +39,9 @@ user asks -> guide -> clarify -> recommend -> write -> review
 | Dialect routing | Masri-first, pan-Arab capable, with 11 dialect modules |
 | Humanization | Removes translationese, AI phrasing, stiff rhythm, and wrong register |
 | Project awareness | `/arabic auto` scans project files so the skill can explain a product, tool, or codebase in natural Arabic |
-| Research intelligence | Combines internet research, official sources, and `reference/` packs before distilling updates into runtime files |
-| Command system | `/arabic` with subcommands for guide, write, audit, coach, plan, research, voice, auto, and help |
+| Research intelligence | `research/` layer + `/arabic research`; distills into runtime via PR + golden tests |
+| First-run onboarding | `/arabic guide` (Path A) and `/arabic init` (Path B) with `.arabic/` templates |
+| Command system | `/arabic` with subcommands for guide, write, audit, coach, plan, research, voice, auto, init, and help |
 | Website dogfooding | Shipped at `v1.1.0` — [install site](https://arabic-skill.vercel.app) (8 Masri routes, dogfood `/about`) |
 
 ## Install
@@ -176,6 +177,7 @@ The product direction is one root command, not dozens of independent skills:
 | `/arabic coach` | Arabic prompt improvement |
 | `/arabic plan <project>` | Websites, campaigns, books, and brand systems |
 | `/arabic research <topic>` | Structured research collection and distillation |
+| `/arabic init` | Scaffold `.arabic/` workspace in a client repo |
 | `/arabic voice` | Brand voice save, load, and show |
 | `/arabic auto` | Workspace-aware inference from project files |
 | `/arabic help` | Copy-ready usage reference |
@@ -206,10 +208,15 @@ arabic-skill/
 │   ├── domains/            # 12 industry packs
 │   ├── conversations/      # Sales, support, negotiation, coaching, podcast, community
 │   ├── professional-docs/  # Contracts, AI skills, agent rules, compliance language
-│   └── references/         # Engines, intake, templates, humanization, QA support
+│   ├── references/         # Engines, intake, templates, humanization, QA support
+│   └── templates/.arabic/  # Onboarding scaffold (config, briefs, README)
+├── research/               # Collected intelligence, citation registry, distillation queue
 ├── reference/              # 38 canonical specialist packs, kept as source material
 ├── docs/                   # Product, planning, analysis, engineering, supported tools
-├── scripts/                # Validation scripts
+├── website/                # Next.js marketing site (G13–G18, live on Vercel)
+├── tests/golden/           # Manual acceptance checklists (G13–G18, R*, RQ*, onboarding)
+├── scripts/                # Validation scripts (npm run validate)
+├── bin/arabic-skill.js     # npx installer CLI
 ├── VERSION                 # Current product version
 └── CHANGELOG.md
 ```
@@ -220,13 +227,14 @@ Runtime install folder is `arabic/`. The GitHub repo can stay `mediabubble-adv/a
 
 | Area | Status |
 |------|--------|
-| Runtime baseline | `arabic/` pack at `v1.1.0` |
+| Runtime pack | `arabic/` at **`v1.2.4`** — advisory-first router, load discipline, onboarding |
 | Canonical references | 38 packs preserved in `reference/` |
-| Planning docs | Active, with roadmap and release governance for future phases |
-| `/arabic` command system | Runtime router and Cursor adapter shipped |
-| Research layer | Specified for structured research collection and future runtime expansion |
-| Website | Shipped at `v1.1.0` — https://arabic-skill.vercel.app |
-| Public release | `v1.1.1` current (npm); `v1.1.0` website + P8 runtime; `v1.0.0` first public release |
+| Research layer | **R0–R4 ✅** — `research/`, `/arabic research`, `validate-research.sh`, monthly cron |
+| `/arabic` commands | Shipped — router, Cursor adapter, init, auto, research |
+| Website | **v1.1.0 ✅** — https://arabic-skill.vercel.app (G13–G18) |
+| npm distribution | **`@mediabubble-adv/arabic-skill@1.2.4`** — npx install + publish CI |
+| Golden tests | Manual checklists in `tests/golden/` (G13–G18 + research/distill fixtures) |
+| Next train | **1.2.x** polish — reference sync check, automated golden runner (planned) |
 
 ## Documentation
 
@@ -238,6 +246,7 @@ Runtime install folder is `arabic/`. The GitHub repo can stay `mediabubble-adv/a
 | [Implementation Plan](./docs/planning/implementation-plan.md) | File-by-file build plan |
 | [Claude Plan Audit Prompt](./docs/planning/claude-plan-audit-prompt.md) | Prompt for Claude to audit and rewrite the plan set |
 | [Research Intelligence Plan](./docs/planning/research-intelligence-plan.md) | Internet + AI + reference research workflow |
+| [Research Monthly Cron](./docs/planning/research-monthly-cron.md) | Scheduled research maintenance |
 | [Command Surface](./docs/planning/command-surface.md) | `/arabic` grammar and subcommands |
 | [Reference Distillation](./docs/planning/reference-distillation.md) | How `reference/` becomes runtime behavior |
 | [Supported Tools](./docs/supported/README.md) | Install profiles for AI tools |
@@ -245,18 +254,28 @@ Runtime install folder is `arabic/`. The GitHub repo can stay `mediabubble-adv/a
 ## Validation
 
 ```bash
+npm run validate
+```
+
+Runs skill reference integrity, frontmatter schema, docs links, supported-tool parity, website install copy (G14), npm pack contents, Cursor install dry-run, research scaffold + stale-source checks, and onboarding templates.
+
+Individual gates:
+
+```bash
 ./scripts/validate-skill.sh
+./scripts/validate-frontmatter.sh
 ./scripts/validate-docs.sh
-./scripts/validate-supported.sh
+./scripts/validate-research.sh
+./scripts/validate-onboarding.sh
 ```
 
 ## Release Policy
 
-- `0.1.x` means development.
-- `v1.0.0` was the first public release.
-- `v1.1.1` is the current release (npm publish + distribution CI).
-- `v1.1.0` shipped the website, P8 runtime, and npx installer scaffold.
-- Future release tags should only be created after the documented gates pass.
+- `0.1.x` — development baseline.
+- **`v1.0.0`** — first public release (P1–P6, G1–G12).
+- **`v1.1.x`** — website (G13–G18), npm publish, P8 runtime extensions.
+- **`v1.2.x`** — full Cursor npx install, skills.sh, research R0–R4, onboarding, CI polish (**current: `1.2.4`**).
+- Future tags only after documented gates pass.
 
 See [Versioning and Releases](./docs/engineering/versioning-and-releases.md).
 

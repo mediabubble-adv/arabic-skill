@@ -17,6 +17,10 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 - Golden test `tests/golden/rq011-masri-l4-address.md`
 - Golden test `tests/golden/rq013-seo-spelling-variants.md`
 
+### Changed (docs)
+- README, PRD, system architecture, content structure, context hierarchy — synced to **v1.2.4** (research, onboarding, validation, repo layout)
+- Engineering docs: versioning, CI pipeline; planning: roadmap, research plan status, website design system shipped note
+
 ## [1.2.4] - 2026-07-05
 
 **CI polish + first research cron.**

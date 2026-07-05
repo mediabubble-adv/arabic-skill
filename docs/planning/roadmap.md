@@ -2,8 +2,8 @@
 
 > Status: Active  
 > Product version: **1.2.4** (current — see root `VERSION`)  
-> **v1.0.0** shipped 2026-06-30 · **v1.1.0** website + P8 runtime · **v1.1.1** npm distribution · **v1.2.0** full Cursor + skills.sh · **v1.2.1** install fix  
-> Next train: **1.2.x** — polish & patch (**R0–R4 ✅**, onboarding ✅)  
+> **v1.0.0** shipped 2026-06-30 · **v1.1.0** website + P8 runtime · **v1.1.1** npm distribution · **v1.2.0** full Cursor + skills.sh · **v1.2.1** install fix · **v1.2.4** research cron + CI gates (current)
+> Next train: **1.2.x** polish — reference sync, automated golden runner  
 > Positioning: **Masri-first Awesome Arabic Skill — pan-Arab capable**
 
 ---
@@ -43,7 +43,11 @@ user asks → guide → clarify → recommend → write → review
 | **1.1.0** | ✅ Shipped | Website (G13–G18), P8 runtime, npx installer scaffold | `v1.1.0` |
 | **1.1.1** | ✅ Shipped | npm publish CI, pack gates, `@mediabubble-adv/arabic-skill` on registry | `v1.1.1` |
 | **1.2.0** | ✅ Shipped | Full Cursor npx install, skills.sh registry docs + validation | `v1.2.0` |
-| **1.2.1+** | Next | polish, patch | — |
+| **1.2.1** | ✅ Shipped | Git-clone npx `@latest` fix | `v1.2.1` |
+| **1.2.2** | ✅ Shipped | First-run onboarding (`/arabic init`, templates) | `v1.2.2` |
+| **1.2.3** | ✅ Shipped | Onboarding post-review polish | `v1.2.3` |
+| **1.2.4** | ✅ Shipped | `validate-frontmatter`, research monthly cron | `v1.2.4` |
+| **1.2.x+** | Next | Reference sync check, golden runner automation | — |
 | **2.0.0** | Future | Breaking changes, major routing restructure | `v2.0.0` |
 
 ### Shipped phase map (reference)
@@ -191,7 +195,7 @@ Commands: see [Command Surface](./command-surface.md).
 | `docs/supported/cursor/` | ✅ Shipped — full adapter + `/arabic` command tree |
 | `docs/supported/claude/` | ✅ Shipped — skill packaging guide |
 | `bin/arabic-skill.js` + npm | ✅ Shipped v1.1.1 — `npx @mediabubble-adv/arabic-skill install` on [npm](https://www.npmjs.com/package/@mediabubble-adv/arabic-skill) |
-| Golden test suite | ✅ Manual G13–G18 checklist in `tests/golden/`; automated runner → v1.2.0 |
+| Golden test suite | ✅ Manual checklists in `tests/golden/` (G13–G18, R*, RQ*, onboarding); automated runner → future 1.2.x |
 | GitHub Releases | ✅ Shipped — tag push triggers `release.yml`; npm publish on tag via `npm-publish.yml` |
 | `npx skills add` registry | ✅ Shipped v1.2.0 — `npx skills add mediabubble-adv/arabic-skill`; skills.sh telemetry listing |
 | Full Cursor npx install | ✅ Shipped v1.2.0 — copies `~/.cursor/commands/arabic.md` + `~/.cursor/rules/arabic.mdc` |

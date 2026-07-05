@@ -1,6 +1,6 @@
 # Website Design System (v1.1.0 / P7)
 
-> **Spec only — no `website/` code until v1.1.0 (P7).** Defines tokens, typography, color, spacing, and motion for the Arabic-first install/tutorial site. The site is a **dogfood project**: the skill generates the Arabic copy from the repo itself.
+> **Shipped** — live site at https://arabic-skill.vercel.app · tokens in `website/` · copy SSOT in `website/content/`
 
 **Status:** Planning · **Owner:** Maintainer · **Last updated:** 2026-06-30
 **Phase:** [P7 Website & Distribution](./implementation-plan.md#0-canonical-phase-map--golden-tests-source-of-truth) · **Tests:** G13–G18 · **Benchmark:** [impeccable.style](https://impeccable.style/)

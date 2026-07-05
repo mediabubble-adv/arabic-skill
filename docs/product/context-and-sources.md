@@ -1,5 +1,7 @@
 # Context and Sources of Truth: `arabic`
 
+> **Current version:** see root `VERSION`
+
 ## 1. Purpose
 
 This document defines the context model for the skill and the hierarchy of sources of truth.
@@ -43,11 +45,26 @@ Authority:
 
 These define what the system knows at depth.
 
+### Level 2b — Collected Intelligence
+
+Location:
+
+- `research/`
+
+Authority:
+
+- `sources/sources.yaml` (citations)
+- `knowledge-base/` curated findings
+- `distillation-queue.md` (pending runtime targets)
+- `index.json` topic registry
+
+These define what has been researched and is queued or distilled — not yet (or no longer) raw canonical depth.
+
 ### Level 3 — Runtime Execution
 
 Location:
 
-- `arabic/
+- `arabic/`
 
 Authority:
 
@@ -125,7 +142,14 @@ Examples:
 
 Lives in:
 
-- `arabic/voice.md`
+- `arabic/voice.md` or `.arabic/voice.md` (client project)
+
+### Researched / Platform Intelligence
+
+Lives in:
+
+- `research/knowledge-base/`
+- distilled into `arabic/references/` or `arabic/dialects/` via PR
 
 ### Deep Expert Knowledge
 
@@ -152,8 +176,9 @@ Lives in:
 When two files seem to disagree, resolve them in this order:
 
 1. `docs/` sets direction
-2. `arabic/` defines current runtime behavior
-3. `reference/` supplies deeper canonical knowledge
+2. `research/` holds collected findings pending distill
+3. `arabic/` defines current runtime behavior
+4. `reference/` supplies deeper canonical knowledge
 
 Practical interpretation:
 
