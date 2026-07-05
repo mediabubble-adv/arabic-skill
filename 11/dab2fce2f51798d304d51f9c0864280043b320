@@ -1,0 +1,32 @@
+arabic/references/command-router.md
+  s_e22df37b935413::t_e212bc0fb4336c 189-191,194-196
+arabic/templates/.arabic/README.md
+  s_e22df37b935413::t_d9d3cb1c7ae058 13
+CHANGELOG.md
+  s_e22df37b935413::t_feb46efee560ea 150-153
+arabic/references/load-discipline.md
+  s_e22df37b935413::t_1ff6524afafff2 136
+website/lib/install-commands.ts
+  s_e22df37b935413::t_26cd96b14e738d 18-21
+tests/golden/onboarding-first-run.md
+  s_e22df37b935413::t_ddef32804f8a0e 28
+website/components/install-page-client.tsx
+  s_e22df37b935413::t_695c90242f88e2 8
+  s_e22df37b935413::t_751e33ebabb7c6 89-93
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "11dab2fce2f51798d304d51f9c0864280043b320",
+  "prompts": {},
+  "sessions": {
+    "s_e22df37b935413": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "997ffe26-6e5f-4828-bfbb-c1e3cd07cd76",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
