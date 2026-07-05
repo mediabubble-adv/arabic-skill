@@ -1,0 +1,75 @@
+tests/golden/g1-g12-agent-harness.md
+  s_bb5489bfef9fba::t_209ce8552af500 1-52
+docs/product/content-structure.md
+  s_bb5489bfef9fba::t_a609733e430f17 89-90,95
+scripts/validate-golden-scenarios.sh
+  s_bb5489bfef9fba::t_48f050cfc7d8e1 1-109
+tests/golden/scenarios/fixtures/g9-audit-sample.txt
+  s_bb5489bfef9fba::t_27e5d8f22b019b 1
+README.md
+  s_bb5489bfef9fba::t_50f2d078376ab2 260,273-276
+  s_bb5489bfef9fba::t_e26b3612d0431f 17
+  s_bb5489bfef9fba::t_df8a186e978950 230,235-237
+  s_bb5489bfef9fba::t_95241ef7a44b08 217
+  s_bb5489bfef9fba::t_108d46a9a55a97 284
+.github/workflows/validate.yml
+  s_bb5489bfef9fba::t_f456fa32f94384 48-50
+docs/engineering/versioning-and-releases.md
+  s_bb5489bfef9fba::t_7dd0177b481180 8
+  s_bb5489bfef9fba::t_7b18f8e01272d7 30
+  s_bb5489bfef9fba::t_90f8bb4fa2aef2 77-78
+  s_bb5489bfef9fba::t_dffa775e4a9966 141
+  s_bb5489bfef9fba::t_c57b0794d35fe5 26-27
+scripts/run-golden-harness.sh
+  s_bb5489bfef9fba::t_ab6713e497dd67 1-7
+AGENTS.md
+  s_bb5489bfef9fba::t_52468b2d636eba 29
+  s_bb5489bfef9fba::t_0d63bbea9c2901 6
+docs/engineering/ci-pipeline.md
+  s_bb5489bfef9fba::t_30656664ad7b06 86-87,93-99
+  s_bb5489bfef9fba::t_c0b83af7ed2d82 110-112,114
+  s_bb5489bfef9fba::t_dc968e0b8ee87b 100
+  s_bb5489bfef9fba::t_e47dcc095aeeef 49-51,54-59
+scripts/run-golden-harness.py
+  s_bb5489bfef9fba::t_539694a0d48ace 1-185
+tests/golden/scenarios/g1-g12-scenarios.json
+  s_bb5489bfef9fba::t_792358b3217b6e 1-139
+docs/planning/roadmap.md
+  s_bb5489bfef9fba::t_59e1c0b531aaca 200
+  s_bb5489bfef9fba::t_9ef17d19700ebc 50-52
+  s_bb5489bfef9fba::t_21f7db6c1e9cc8 4-6
+VERSION
+  s_bb5489bfef9fba::t_0dad190d8b3be7 1
+package.json
+  s_bb5489bfef9fba::t_fe7674f95e9315 44
+  s_bb5489bfef9fba::t_ff302fd6ab04cb 53-54
+  s_bb5489bfef9fba::t_b20841df57018e 3
+CHANGELOG.md
+  s_bb5489bfef9fba::t_cdb1fc7179a4ec 217-218
+  s_bb5489bfef9fba::t_dd0310129c2cdd 10-13,23
+  s_bb5489bfef9fba::t_99a249093eb033 14-22,24
+arabic/SKILL.md
+  s_bb5489bfef9fba::t_ae0899f3c54f9e 4
+docs/product/system-architecture.md
+  s_bb5489bfef9fba::t_e25282a14ff6fb 135-136,138
+  s_bb5489bfef9fba::t_67ab1ecade995d 148,150
+docs/README.md
+  s_bb5489bfef9fba::t_3317dcbe19f0fa 18
+  s_bb5489bfef9fba::t_f86ad645745c85 104
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "3312c06ae6c9b0a66491e4a5942ea9200cc88ee5",
+  "prompts": {},
+  "sessions": {
+    "s_bb5489bfef9fba": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "11bba942-631b-47bf-bd78-307e29de087e",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
