@@ -36,6 +36,9 @@ jobs:
       - name: Validate research R0 scaffold
         run: bash scripts/validate-research-scaffold.sh
 
+      - name: Validate reference sync
+        run: bash scripts/validate-reference-sync.sh
+
       - name: Check version sync
         run: |
           ROOT_VERSION=$(tr -d '[:space:]' < VERSION)

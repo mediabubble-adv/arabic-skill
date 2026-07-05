@@ -128,6 +128,7 @@ docs/ (intent) -> reference/ (canonical) + research/ (collected)
 | `validate-cursor-install.sh` | Full Cursor dry-run |
 | `validate-research-scaffold.sh` | R0 KB/index frontmatter |
 | `validate-research.sh` | R4 stale sources + queue cap |
+| `validate-reference-sync.sh` | INDEX parity, distillation map, queue exclusivity |
 | `validate-onboarding.sh` | Onboarding templates + references |
 
 Golden tests in `tests/golden/` are **manual** acceptance checklists until an automated runner ships.
@@ -142,7 +143,6 @@ Golden tests in `tests/golden/` are **manual** acceptance checklists until an au
 
 ## 9. Planned Extensions (1.2.x+)
 
-- reference sync / distillation drift detection (`validate-reference-sync.sh` — planned)
 - automated golden test runner (G1–G12 in CI — planned)
 - trend snapshot storage conventions under `research/snapshots/`
 

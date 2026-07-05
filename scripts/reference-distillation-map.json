@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "comment": "SSOT for validate-reference-sync.sh — see docs/planning/reference-distillation.md",
+  "mappings": [
+    {
+      "reference": "arabic-qa",
+      "runtime": [
+        "arabic/references/audit-mode.md",
+        "arabic/references/humanization-protocol.md"
+      ],
+      "max_lines": 120
+    },
+    {
+      "reference": "arabic-content-strategist",
+      "runtime": [
+        "arabic/references/advisory-mode.md",
+        "arabic/references/project-mode.md"
+      ],
+      "max_lines": 150
+    },
+    {
+      "reference": "arabic-creator",
+      "runtime": ["arabic/references/intake-protocols.md"],
+      "max_lines": 100
+    },
+    {
+      "reference": "arabic-seo-optimizer",
+      "runtime": ["arabic/references/seo-aeo-masri.md"],
+      "max_lines": 150
+    },
+    {
+      "reference": "arabic-masri",
+      "runtime": ["arabic/dialects/masri.md"],
+      "max_lines": 200
+    },
+    {
+      "reference": "arabic-project-manager",
+      "runtime": ["arabic/references/project-mode.md"],
+      "max_lines": 100
+    },
+    {
+      "reference": "arabic-agent-orchestration",
+      "runtime": ["arabic/SKILL.md"],
+      "max_lines": 60
+    },
+    {
+      "reference": "arabic-islamic-observances",
+      "runtime": ["arabic/references/seasonal-calendar.md"],
+      "max_lines": 120
+    },
+    {
+      "reference": "arabic-secular-observances",
+      "runtime": ["arabic/references/seasonal-calendar.md"],
+      "max_lines": 120
+    },
+    {
+      "reference": "arabic-cultural-advisor",
+      "runtime": [
+        "arabic/references/taboos.md",
+        "arabic/references/seasonal-calendar.md"
+      ],
+      "max_lines": 80
+    },
+    {
+      "reference": "arabic-typography",
+      "runtime": [],
+      "max_lines": null
+    }
+  ],
+  "dialect_auto": {
+    "max_lines": 150
+  },
+  "canonical_only": [
+    "arabic-tafsir",
+    "arabic-quran-hifz",
+    "arabic-quran-qiraat",
+    "arabic-quran-tajwid",
+    "arabic-seerah",
+    "arabic-calligraphy",
+    "arabic-art",
+    "arabic-lexicography",
+    "arabic-watan-al-arabi",
+    "arabic-prophetic-narratives",
+    "arabic-islamic-scholar",
+    "arabic-islamic-history",
+    "arabic-christian-observances",
+    "arabic-content",
+    "arabic-application-engineer",
+    "arabic-design",
+    "arabic-designer",
+    "arabic-typographer",
+    "arabic-tashkeel",
+    "arabic-dialectal-variations"
+  ]
+}
