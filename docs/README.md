@@ -15,7 +15,7 @@ Planning, product, engineering, and tool-support documentation for **Awesome Ara
 | Use `/arabic` commands | [Command Surface](./planning/command-surface.md) |
 | Run research to improve the skill | [Research Intelligence Plan](./planning/research-intelligence-plan.md) |
 | Maintain research on a schedule | [Research Monthly Cron](./planning/research-monthly-cron.md) |
-| Run manual acceptance tests | `tests/golden/` checklists (G13–G18, R*, RQ*) |
+| Run acceptance / golden tests | `tests/golden/` fixtures; `npm run validate:golden-scenarios`; opt-in `npm run golden:harness` |
 | Execute file-by-file work | [Implementation Plan](./planning/implementation-plan.md) |
 | Understand skill behavior | [Operating Model](./product/operating-model.md) |
 | Install on my AI tool | [Supported Tools](./supported/README.md) |
@@ -101,7 +101,7 @@ arabic-skill/
 ├── reference/       # 38 canonical specialist packs
 ├── docs/            # ← you are here
 ├── website/         # Marketing site (G13–G18)
-├── tests/golden/    # Manual acceptance checklists
+├── tests/golden/    # Golden fixtures (G1–G18, R*, RQ*) + scenarios/
 ├── scripts/         # Validation gates
 └── bin/             # npx installer
 ```

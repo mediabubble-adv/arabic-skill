@@ -14,7 +14,7 @@
 
 **Awesome Arabic Skill** (`arabic`) is a MediaBubble skill for Arabic content creation, strategy, research distillation, and review. It is designed to behave like a senior Arabic content partner inside AI coding tools: it reads context, clarifies intent, recommends a direction, writes, humanizes, and audits before delivery.
 
-It is **not** a translation shortcut. Current version is **`1.2.5`** (golden + Playwright + behavioral validation gates; onboarding + full Cursor install in `1.2.x`; website + P8 runtime in `1.1.0`).
+It is **not** a translation shortcut. Current version is **`1.2.6`** (G1–G12 scenario manifest + opt-in LLM harness; validation stack in `1.2.5`; onboarding + full Cursor install in `1.2.x`; website + P8 runtime in `1.1.0`).
 
 <p align="center">
   <img src="./public/assets/claude-color.svg" alt="Claude" width="26" height="26">
@@ -214,7 +214,7 @@ arabic-skill/
 ├── reference/              # 38 canonical specialist packs, kept as source material
 ├── docs/                   # Product, planning, analysis, engineering, supported tools
 ├── website/                # Next.js marketing site (G13–G18, live on Vercel)
-├── tests/golden/           # Manual acceptance checklists (G13–G18, R*, RQ*, onboarding)
+├── tests/golden/           # Golden fixtures (G1–G18, R*, RQ*) + scenario manifest
 ├── scripts/                # Validation scripts (npm run validate)
 ├── bin/arabic-skill.js     # npx installer CLI
 ├── VERSION                 # Current product version
@@ -227,14 +227,14 @@ Runtime install folder is `arabic/`. The GitHub repo can stay `mediabubble-adv/a
 
 | Area | Status |
 |------|--------|
-| Runtime pack | `arabic/` at **`v1.2.5`** — advisory-first router, load discipline, onboarding |
+| Runtime pack | `arabic/` at **`v1.2.6`** — advisory-first router, load discipline, onboarding |
 | Canonical references | 38 packs preserved in `reference/` |
 | Research layer | **R0–R4 ✅** — `research/`, `/arabic research`, `validate-research.sh`, monthly cron |
 | `/arabic` commands | Shipped — router, Cursor adapter, init, auto, research |
 | Website | **v1.1.0 ✅** — https://arabic-skill.vercel.app (G13–G18) |
-| npm distribution | **`@mediabubble-adv/arabic-skill@1.2.5`** — npx install + publish CI |
-| Golden tests | Manual checklists in `tests/golden/` (G13–G18 + research/distill fixtures) |
-| Next train | **1.2.6+** — LLM agent harness (interactive G1–G12) |
+| npm distribution | **`@mediabubble-adv/arabic-skill@1.2.6`** — npx install + publish CI |
+| Golden tests | Structural + routing + scenario gates in CI; Playwright G15–G16; opt-in `golden:harness` for LLM runs |
+| Next train | **1.2.7+** — harness signal tuning, optional maintainer nightly workflow |
 
 ## Documentation
 
@@ -257,7 +257,7 @@ Runtime install folder is `arabic/`. The GitHub repo can stay `mediabubble-adv/a
 npm run validate
 ```
 
-Runs skill reference integrity, frontmatter schema, docs links, supported-tool parity, website install copy (G14), npm pack contents, Cursor install dry-run, research scaffold + stale-source checks, onboarding templates, golden fixture structure checks, and **G1–G12 routing contracts**. Website UX: `npm run validate:website-playwright` (CI `website-e2e`).
+Runs skill reference integrity, frontmatter schema, docs links, supported-tool parity, website install copy (G14), npm pack contents, Cursor install dry-run, research scaffold + stale-source checks, onboarding templates, golden fixture structure, **G1–G12 routing contracts**, and **G1–G12 scenario manifest** parity. Website UX: `npm run validate:website-playwright` (CI `website-e2e`). Opt-in LLM runs: `npm run golden:harness` (not in default CI).
 
 Individual gates:
 
@@ -269,8 +269,11 @@ Individual gates:
 ./scripts/validate-reference-sync.sh
 ./scripts/validate-onboarding.sh
 ./scripts/validate-golden.sh
-./scripts/validate-website-playwright.sh
 ./scripts/validate-behavioral-golden.sh
+./scripts/validate-golden-scenarios.sh
+./scripts/validate-website-playwright.sh
+npm run golden:harness -- --list
+npm run golden:harness -- --run --dry-run
 ```
 
 ## Release Policy
@@ -278,7 +281,7 @@ Individual gates:
 - `0.1.x` — development baseline.
 - **`v1.0.0`** — first public release (P1–P6, G1–G12).
 - **`v1.1.x`** — website (G13–G18), npm publish, P8 runtime extensions.
-- **`v1.2.x`** — full Cursor npx install, skills.sh, research R0–R4, onboarding, validation stack (**current: `1.2.5`**).
+- **`v1.2.x`** — full Cursor npx install, skills.sh, research R0–R4, onboarding, validation stack (**current: `1.2.6`**).
 - Future tags only after documented gates pass.
 
 See [Versioning and Releases](./docs/engineering/versioning-and-releases.md).
