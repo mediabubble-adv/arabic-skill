@@ -116,8 +116,11 @@ for fixture in fixtures:
 
     for golden_id in extract_ids(text):
         prior = all_ids.get(golden_id)
-        if prior and prior != str(rel):
-            fail(f"FAIL: duplicate golden id {golden_id} in {rel} and {prior}")
+        if prior is not None:
+            if prior == str(rel):
+                fail(f"FAIL: duplicate golden id {golden_id} within {rel}")
+            else:
+                fail(f"FAIL: duplicate golden id {golden_id} in {rel} and {prior}")
         all_ids[golden_id] = str(rel)
 
     for ref in sorted(extract_paths(text)):

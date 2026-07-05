@@ -66,5 +66,9 @@ jobs:
           cache: npm
           cache-dependency-path: website/package-lock.json
 
+      - name: Install website dependencies
+        working-directory: website
+        run: npm ci
+
       - name: Run G15–G16 Playwright golden tests
         run: bash scripts/validate-website-playwright.sh

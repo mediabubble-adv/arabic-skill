@@ -11,7 +11,10 @@ fi
 
 cd "$WEB"
 
-if [[ ! -d node_modules ]]; then
+if [[ "${CI:-}" == "1" ]]; then
+  echo "==> Installing website dependencies (npm ci)..."
+  npm ci
+elif [[ ! -d node_modules ]]; then
   echo "==> Installing website dependencies..."
   npm install
 fi
@@ -22,7 +25,7 @@ if [[ ! -d node_modules/@playwright/test ]]; then
 fi
 
 echo "==> Ensuring Playwright Chromium..."
-npx playwright install chromium
+npx playwright install chromium --with-deps
 
 echo "==> Building website (G17)..."
 npm run build

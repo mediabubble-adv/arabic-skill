@@ -26,7 +26,7 @@ Routing-contract gate for the behavioral golden harness. Full LLM scenario runs 
 | G9 | `/arabic audit` | audit-mode |
 | G10 | `/arabic plan website` | `.arabic/projects/` persistence |
 | G11 | `/arabic auto explain` | project-context-scanner + dev-tech |
-| G12 | `--dialect masri` | masri dialect + MSA purity rule |
+| G12 | `/arabic write caption --dialect masri` | masri dialect + MSA purity rule |
 
 ## BH-03 — Out of scope (manual / future LLM harness)
 

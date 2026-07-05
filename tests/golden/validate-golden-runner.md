@@ -16,6 +16,7 @@ Manual checklist for the automated golden fixture gate (`feat/golden-runner`).
 **Expected:**
 
 | Title | Each fixture under `tests/golden/` has `# Golden Test` or `# Golden Tests` heading |
+|-------|-------------------------------------------------------------------------------------|
 | Validation | Each fixture has `## Validation` section |
 | Checklist | Each fixture has at least one `- [ ]` or `- [x]` item |
 | Paths | Backtick repo paths resolve on disk |

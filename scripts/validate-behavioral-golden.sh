@@ -29,7 +29,19 @@ if len(tests) != 12:
 
 ids = [t.get("id") for t in tests]
 expected_ids = [f"G{i}" for i in range(1, 13)]
-if sorted(ids, key=lambda x: int(x[1:])) != expected_ids:
+
+def golden_num(gid: str | None) -> int | None:
+    if not gid or not isinstance(gid, str):
+        return None
+    if not gid.startswith("G") or not gid[1:].isdigit():
+        return None
+    return int(gid[1:])
+
+for gid in ids:
+    if golden_num(gid) is None:
+        errors.append(f"FAIL: malformed manifest id: {gid!r}")
+
+if sorted([g for g in ids if golden_num(g) is not None], key=golden_num) != expected_ids:
     errors.append(f"FAIL: manifest ids must be G1–G12 exactly, got {ids}")
 
 seen_commands: dict[str, str] = {}
@@ -43,6 +55,7 @@ for entry in tests:
     if prior and prior != gid:
         if command not in {"/arabic plan website"}:
             errors.append(f"FAIL: duplicate command {command!r} on {gid} and {prior}")
+    seen_commands[command] = gid
 
     required_files = entry.get("required_files") or []
     for rel in required_files:

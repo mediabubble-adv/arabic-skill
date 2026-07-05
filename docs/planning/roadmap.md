@@ -1,9 +1,9 @@
 # Product Roadmap — `arabic`
 
 > Status: Active  
-> Product version: **1.2.4** (current — see root `VERSION`)  
-> **v1.0.0** shipped 2026-06-30 · **v1.1.0** website + P8 runtime · **v1.1.1** npm distribution · **v1.2.0** full Cursor + skills.sh · **v1.2.1** install fix · **v1.2.4** research cron + CI gates (current)
-> Next train: **1.2.5** ship validation stack · then **LLM agent harness** (interactive G1–G12)  
+> Product version: **1.2.5** (current — see root `VERSION`)  
+> **v1.0.0** shipped 2026-06-30 · **v1.1.0** website + P8 runtime · **v1.1.1** npm distribution · **v1.2.0** full Cursor + skills.sh · **v1.2.1** install fix · **v1.2.4** research cron + CI gates · **v1.2.5** validation stack (current)
+> Next train: **1.2.6+** — LLM agent harness (interactive G1–G12)  
 > Positioning: **Masri-first Awesome Arabic Skill — pan-Arab capable**
 
 ---
@@ -47,8 +47,8 @@ user asks → guide → clarify → recommend → write → review
 | **1.2.2** | ✅ Shipped | First-run onboarding (`/arabic init`, templates) | `v1.2.2` |
 | **1.2.3** | ✅ Shipped | Onboarding post-review polish | `v1.2.3` |
 | **1.2.4** | ✅ Shipped | `validate-frontmatter`, research monthly cron | `v1.2.4` |
-| **1.2.5** | Next | Golden + Playwright + G1–G12 routing contracts | — |
-| **1.2.6+** | Future | LLM agent harness (interactive G1–G12) | — |
+| **1.2.5** | ✅ Shipped (this PR) | Golden + Playwright + G1–G12 routing contracts | `v1.2.5` |
+| **1.2.6+** | Next | LLM agent harness (interactive G1–G12) | — |
 | **2.0.0** | Future | Breaking changes, major routing restructure | `v2.0.0` |
 
 ### Shipped phase map (reference)

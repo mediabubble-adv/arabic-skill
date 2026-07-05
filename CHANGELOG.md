@@ -20,8 +20,14 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 - CI job `website-e2e` in `.github/workflows/validate.yml`
 - `scripts/validate-behavioral-golden.sh` + `tests/golden/g1-g12-manifest.json` — G1–G12 routing contract gate
 - Golden test `tests/golden/g1-g12-routing.md`
+- `scripts/validate-reference-sync.sh` + `scripts/reference-distillation-map.json` — INDEX parity, distillation map, queue exclusivity (PR #63)
+- Golden tests `reference-sync-gate.md`, `rq010-masri-platform-specs.md`, `rq011-masri-l4-address.md`, `rq013-seo-spelling-variants.md`
 
 ### Changed
+- `scripts/validate-reference-sync.sh` — unmapped reference packs and missing INDEX counts now fail the gate
+- `arabic/dialects/masri.md` §5 — Egypt platform caption limits, hashtag counts, posting windows (RQ-010)
+- `arabic/dialects/masri.md` §13 — L4 business address titles (RQ-011)
+- `arabic/references/INDEX.md` — file count sync (59 total, 22 references incl. INDEX)
 - `tests/golden/g13-g18-website.md` — notes automated G15–G16 coverage
 - `npm run validate` — includes `validate-golden.sh` and `validate-behavioral-golden.sh`
 - Docs: README, roadmap, system architecture, CI pipeline, AGENTS.md
@@ -193,7 +199,8 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 - Renamed runtime folder `arabic-content/` → `arabic/`
 - Version policy: **0.x = development**, **1.0.0 = plan complete + first public release**
 
-[Unreleased]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.4...HEAD
+[Unreleased]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.5...HEAD
+[1.2.5]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.4...v1.2.5
 [1.2.4]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.3...v1.2.4
 [1.2.3]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.2...v1.2.3
 [1.2.2]: https://github.com/mediabubble-adv/arabic-skill/compare/v1.2.1...v1.2.2

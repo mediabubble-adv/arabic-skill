@@ -56,7 +56,9 @@ test.describe("G15 — mobile interactive components (390px)", () => {
   }) => {
     await page.goto("/");
     await expect(page.getByText("ثبّت في دقيقة")).toHaveCount(0);
-    await page.evaluate(() => window.scrollTo(0, 400));
+    await page.evaluate(() =>
+      window.scrollTo(0, document.documentElement.scrollHeight),
+    );
     const stickyBar = page.locator(".fixed.bottom-0");
     await expect(stickyBar.getByText("ثبّت في دقيقة")).toBeVisible();
     await expect(
