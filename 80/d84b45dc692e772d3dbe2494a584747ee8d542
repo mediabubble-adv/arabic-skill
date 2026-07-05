@@ -1,0 +1,29 @@
+docs/planning/roadmap.md
+  s_bb5489bfef9fba::t_ecf780d1a01871 69,71-74
+  s_bb5489bfef9fba::t_ab93340f758e7d 251-269,271,273-274,276
+  s_bb5489bfef9fba::t_e26089baaf13c4 53
+  s_bb5489bfef9fba::t_2f4547ec46ca37 235
+  s_bb5489bfef9fba::t_6a20db2b51efd4 290
+  s_bb5489bfef9fba::t_8aa19d1b1341fb 5-6
+  s_bb5489bfef9fba::t_96e5ff7875dbf1 58
+  s_bb5489bfef9fba::t_5042579863059a 193-222
+docs/planning/implementation-plan.md
+  s_bb5489bfef9fba::t_0f019c634aab65 9,20,23-26
+  s_bb5489bfef9fba::t_f4ff4f8c8abe55 44
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "80d84b45dc692e772d3dbe2494a584747ee8d542",
+  "prompts": {},
+  "sessions": {
+    "s_bb5489bfef9fba": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "11bba942-631b-47bf-bd78-307e29de087e",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
