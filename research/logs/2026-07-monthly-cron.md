@@ -56,7 +56,7 @@ No open queue items at W1 start → **skipped**. Three items queued below for Au
 | **RQ-010** | Egypt platform caption limits + posting windows + hashtag counts | `dialects/masri.md` §5 | **Open** — distill next |
 | **RQ-011** | L4 business address titles (حضرتك/أستاذ/باشا/مهندس) | `dialects/masri.md` §13 | **Open** — distill next |
 | **RQ-012** | Masri grammar error quick-check | `dialects/masri.md` | **Deferred** — overlaps RQ-002 |
-| **RQ-013** | Masri spelling variants table for long-tail SEO | `seo-aeo-masri.md` §2 | **Open** — distill next |
+| **RQ-013** | Masri spelling variants table for long-tail SEO | `references/seo-aeo-masri.md` §2 | **Open** — distill next |
 
 ---
 

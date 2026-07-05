@@ -11,6 +11,7 @@ PR / push to main
 ┌──────────────────┐
 │  validate.yml    │
 │  - skill refs    │
+│  - frontmatter   │
 │  - doc links     │
 │  - version sync  │
 └──────────────────┘
@@ -49,6 +50,7 @@ Before opening a PR:
 
 ```bash
 ./scripts/validate-skill.sh
+./scripts/validate-frontmatter.sh
 ./scripts/validate-docs.sh
 ```
 

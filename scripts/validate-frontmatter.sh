@@ -6,6 +6,8 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
 if ! ROOT="$ROOT" python3 <<'PY'; then
+from __future__ import annotations
+
 import os
 import re
 import sys
@@ -72,6 +74,9 @@ required = ("name", "display_name", "version", "description")
 missing = [k for k in required if k not in fm or not str(fm[k]).strip()]
 if missing:
     fail(f"FAIL: arabic/SKILL.md missing required frontmatter keys: {', '.join(missing)}")
+    for e in errors:
+        print(e)
+    sys.exit(1)
 
 name = fm["name"]
 if name != expected_name:
