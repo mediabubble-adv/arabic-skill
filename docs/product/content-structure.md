@@ -91,7 +91,7 @@ Use for:
 
 Do not use for:
 
-- automated test runners (until golden runner ships)
+- automated test runners (structural golden gate shipped; Playwright UX runner planned)
 
 ## 4. File Classification Model
 

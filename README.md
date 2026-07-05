@@ -14,7 +14,7 @@
 
 **Awesome Arabic Skill** (`arabic`) is a MediaBubble skill for Arabic content creation, strategy, research distillation, and review. It is designed to behave like a senior Arabic content partner inside AI coding tools: it reads context, clarifies intent, recommends a direction, writes, humanizes, and audits before delivery.
 
-It is **not** a translation shortcut. Current version is **`1.2.4`** (research cron + CI gates; onboarding + full Cursor install in `1.2.x`; website + P8 runtime in `1.1.0`).
+It is **not** a translation shortcut. Current version is **`1.2.5`** (golden + Playwright + behavioral validation gates; onboarding + full Cursor install in `1.2.x`; website + P8 runtime in `1.1.0`).
 
 <p align="center">
   <img src="./public/assets/claude-color.svg" alt="Claude" width="26" height="26">
@@ -227,14 +227,14 @@ Runtime install folder is `arabic/`. The GitHub repo can stay `mediabubble-adv/a
 
 | Area | Status |
 |------|--------|
-| Runtime pack | `arabic/` at **`v1.2.4`** — advisory-first router, load discipline, onboarding |
+| Runtime pack | `arabic/` at **`v1.2.5`** — advisory-first router, load discipline, onboarding |
 | Canonical references | 38 packs preserved in `reference/` |
 | Research layer | **R0–R4 ✅** — `research/`, `/arabic research`, `validate-research.sh`, monthly cron |
 | `/arabic` commands | Shipped — router, Cursor adapter, init, auto, research |
 | Website | **v1.1.0 ✅** — https://arabic-skill.vercel.app (G13–G18) |
-| npm distribution | **`@mediabubble-adv/arabic-skill@1.2.4`** — npx install + publish CI |
+| npm distribution | **`@mediabubble-adv/arabic-skill@1.2.5`** — npx install + publish CI |
 | Golden tests | Manual checklists in `tests/golden/` (G13–G18 + research/distill fixtures) |
-| Next train | **1.2.x** polish — automated golden runner (planned) |
+| Next train | **1.2.6+** — LLM agent harness (interactive G1–G12) |
 
 ## Documentation
 
@@ -257,7 +257,7 @@ Runtime install folder is `arabic/`. The GitHub repo can stay `mediabubble-adv/a
 npm run validate
 ```
 
-Runs skill reference integrity, frontmatter schema, docs links, supported-tool parity, website install copy (G14), npm pack contents, Cursor install dry-run, research scaffold + stale-source checks, and onboarding templates.
+Runs skill reference integrity, frontmatter schema, docs links, supported-tool parity, website install copy (G14), npm pack contents, Cursor install dry-run, research scaffold + stale-source checks, onboarding templates, golden fixture structure checks, and **G1–G12 routing contracts**. Website UX: `npm run validate:website-playwright` (CI `website-e2e`).
 
 Individual gates:
 
@@ -268,6 +268,9 @@ Individual gates:
 ./scripts/validate-research.sh
 ./scripts/validate-reference-sync.sh
 ./scripts/validate-onboarding.sh
+./scripts/validate-golden.sh
+./scripts/validate-website-playwright.sh
+./scripts/validate-behavioral-golden.sh
 ```
 
 ## Release Policy
@@ -275,7 +278,7 @@ Individual gates:
 - `0.1.x` — development baseline.
 - **`v1.0.0`** — first public release (P1–P6, G1–G12).
 - **`v1.1.x`** — website (G13–G18), npm publish, P8 runtime extensions.
-- **`v1.2.x`** — full Cursor npx install, skills.sh, research R0–R4, onboarding, CI polish (**current: `1.2.4`**).
+- **`v1.2.x`** — full Cursor npx install, skills.sh, research R0–R4, onboarding, validation stack (**current: `1.2.5`**).
 - Future tags only after documented gates pass.
 
 See [Versioning and Releases](./docs/engineering/versioning-and-releases.md).

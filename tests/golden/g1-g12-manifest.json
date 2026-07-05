@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "description": "G1–G12 routing contract manifest — file + marker gates for behavioral golden harness (no LLM)",
+  "tests": [
+    {
+      "id": "G1",
+      "name": "Advisory caption flow",
+      "command": "/arabic guide",
+      "required_files": [
+        "arabic/SKILL.md",
+        "arabic/references/advisory-mode.md",
+        "arabic/references/intake-protocols.md",
+        "arabic/references/command-router.md"
+      ],
+      "markers": [
+        "advisory-mode.md",
+        "guide → clarify → recommend → write → review",
+        "/arabic guide"
+      ]
+    },
+    {
+      "id": "G2",
+      "name": "Pro Mode ad brief",
+      "command": "/arabic write meta",
+      "required_files": [
+        "arabic/references/command-router.md",
+        "arabic/references/ads-service-matrix.md",
+        "arabic/references/engines.md"
+      ],
+      "markers": ["`meta`", "Marketing Funnel Engine"]
+    },
+    {
+      "id": "G3",
+      "name": "Prompt Coach",
+      "command": "/arabic coach",
+      "required_files": [
+        "arabic/references/prompt-engineering.md",
+        "arabic/references/command-router.md"
+      ],
+      "markers": ["/arabic coach", "Prompt Coach Mode"]
+    },
+    {
+      "id": "G4",
+      "name": "Website project",
+      "command": "/arabic plan website",
+      "required_files": [
+        "arabic/references/project-mode.md",
+        "arabic/references/command-router.md"
+      ],
+      "markers": ["/arabic plan website", "project-mode.md"]
+    },
+    {
+      "id": "G5",
+      "name": "Campaign bundle",
+      "command": "/arabic plan campaign",
+      "required_files": [
+        "arabic/references/project-mode.md",
+        "arabic/references/ads-service-matrix.md",
+        "arabic/domains/ads-media.md"
+      ],
+      "markers": ["/arabic plan campaign", "ads-service-matrix.md"]
+    },
+    {
+      "id": "G6",
+      "name": "Book workflow",
+      "command": "/arabic plan book",
+      "required_files": [
+        "arabic/references/project-mode.md",
+        "arabic/references/book-writing.md",
+        "arabic/references/command-router.md"
+      ],
+      "markers": ["/arabic plan book", "book-writing.md"]
+    },
+    {
+      "id": "G7",
+      "name": "Command advisory",
+      "command": "/arabic",
+      "required_files": [
+        "arabic/references/command-router.md",
+        ".cursor/commands/arabic.md"
+      ],
+      "markers": ["Bare `/arabic`", "Advisory Mode"]
+    },
+    {
+      "id": "G8",
+      "name": "Command write pro",
+      "command": "/arabic write caption",
+      "required_files": [
+        "arabic/references/command-router.md",
+        "arabic/references/engines.md"
+      ],
+      "markers": ["`caption`", "Captions Engine"]
+    },
+    {
+      "id": "G9",
+      "name": "Command audit",
+      "command": "/arabic audit",
+      "required_files": [
+        "arabic/references/audit-mode.md",
+        "arabic/references/command-router.md"
+      ],
+      "markers": ["/arabic audit", "9-point QA"]
+    },
+    {
+      "id": "G10",
+      "name": "Command plan",
+      "command": "/arabic plan website",
+      "required_files": [
+        "arabic/references/project-mode.md",
+        "arabic/references/command-router.md"
+      ],
+      "markers": [".arabic/projects/", "plan.md"]
+    },
+    {
+      "id": "G11",
+      "name": "Command auto + project scan",
+      "command": "/arabic auto explain",
+      "required_files": [
+        "arabic/references/project-context-scanner.md",
+        "arabic/references/command-router.md",
+        "arabic/domains/dev-tech.md"
+      ],
+      "markers": ["/arabic auto", "project-context-scanner.md"]
+    },
+    {
+      "id": "G12",
+      "name": "Dialect lock",
+      "command": "/arabic write caption --dialect masri",
+      "required_files": [
+        "arabic/dialects/masri.md",
+        "arabic/SKILL.md",
+        "arabic/references/command-router.md"
+      ],
+      "markers": ["--dialect", "Never mix MSA into dialect", "masri.md"]
+    }
+  ]
+}
