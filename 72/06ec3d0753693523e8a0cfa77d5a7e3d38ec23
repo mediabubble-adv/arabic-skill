@@ -1,0 +1,27 @@
+arabic/references/audit-mode.md
+  s_0197dde7fadf2a::t_5f704b34b5316c 142-182,186
+package.json
+  s_0197dde7fadf2a::t_1b30b705c4d00a 44
+tests/golden/p8b-rtl-dialect-audit.md
+  s_0197dde7fadf2a::t_204eeeb604c78e 1-224
+scripts/validate-rtl.sh
+  s_0197dde7fadf2a::t_26ce0e6e71175c 1-81
+scripts/validate-dialect-bleed.sh
+  s_0197dde7fadf2a::t_9fbbf443913d41 1-119
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "7206ec3d0753693523e8a0cfa77d5a7e3d38ec23",
+  "prompts": {},
+  "sessions": {
+    "s_0197dde7fadf2a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "76c5c404-8942-4fc7-9c88-40e1874404e1",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
