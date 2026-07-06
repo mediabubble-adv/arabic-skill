@@ -1,0 +1,33 @@
+arabic/references/seo-aeo-ksa.md
+  s_0197dde7fadf2a::t_7971d6201eb161 3-4
+  s_0197dde7fadf2a::t_70bcb3de96897e 1-2
+  s_0197dde7fadf2a::t_bcfc11960959cf 5-7
+  s_0197dde7fadf2a::t_b8048bec85de04 8-141
+arabic/references/INDEX.md
+  s_0197dde7fadf2a::t_f805d22e71089d 131-132,134
+  s_0197dde7fadf2a::t_42cac8df52d9bb 125
+  s_0197dde7fadf2a::t_b8d3238a3f7540 41
+  s_0197dde7fadf2a::t_280e6d5ce734fd 18
+arabic/references/seo-aeo-gulf.md
+  s_0197dde7fadf2a::t_ffcc6785acfe1f 3-4
+tests/golden/p5-ksa-seo-aeo.md
+  s_0197dde7fadf2a::t_53891ba2872ef0 1-128
+arabic/references/seo-aeo-masri.md
+  s_0197dde7fadf2a::t_ba59cf15be606f 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "8a698f944a766361d475f112ad77c07020cf48cf",
+  "prompts": {},
+  "sessions": {
+    "s_0197dde7fadf2a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "76c5c404-8942-4fc7-9c88-40e1874404e1",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
