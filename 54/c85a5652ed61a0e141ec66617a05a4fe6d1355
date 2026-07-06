@@ -1,0 +1,25 @@
+scripts/snapshot-research-monthly.sh
+  s_0197dde7fadf2a::t_46deb04a451ed5 1-130
+.github/workflows/research-snapshot-monthly.yml
+  s_0197dde7fadf2a::t_0d1e14203a732a 1-37
+tests/golden/p8c-research-distillation.md
+  s_0197dde7fadf2a::t_c5e14a981c3e71 1-383
+research/distillation-lifecycle.md
+  s_0197dde7fadf2a::t_c6214474eed861 1-261
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "54c85a5652ed61a0e141ec66617a05a4fe6d1355",
+  "prompts": {},
+  "sessions": {
+    "s_0197dde7fadf2a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "76c5c404-8942-4fc7-9c88-40e1874404e1",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
