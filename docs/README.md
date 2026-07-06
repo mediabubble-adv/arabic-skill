@@ -10,6 +10,7 @@ Planning, product, engineering, and tool-support documentation for **Awesome Ara
 
 | I want to… | Read |
 |------------|------|
+| **Check overall project completion** | **[PROJECT_STATUS.md](./PROJECT_STATUS.md)** — Phase map, metrics, timeline (v1.2.9 complete) |
 | Understand the product vision | [PRD](./product/prd.md) |
 | See what to build next | [Roadmap](./planning/roadmap.md) |
 | Use `/arabic` commands | [Command Surface](./planning/command-surface.md) |

@@ -6,7 +6,7 @@
 
 **cAwesome Arabic Skill** (`arabic`) is a MediaBubble skill for Arabic content creation, strategy, research distillation, and review. It is designed to behave like a senior Arabic content partner inside AI coding tools: it reads context, clarifies intent, recommends a direction, writes, humanizes, and audits before delivery.
 
-It is **not** a translation shortcut. Current version is `1.2.7` (signal presets + harness reports + nightly workflow; G1–G12 scenario manifest in `1.2.6`; validation stack in `1.2.5`).
+It is **not** a translation shortcut. Current version is `1.2.9` (runtime hardening: load presets, RTL/dialect audit, research distillation). Previous: `1.2.8` (geographic trilogy + distribution); `1.2.7` (harness + reports); `1.2.6` (scenario manifest); `1.2.5` (validation stack).
 
 
 
@@ -22,10 +22,12 @@ user asks -> guide -> clarify -> recommend -> write -> review
 | Capability              | Current role                                                                                               |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------- |
 | Arabic content creation | Captions, ads, landing pages, blogs, scripts, sales copy, books, UI microcopy, and professional documents  |
-| Dialect routing         | Masri-first, pan-Arab capable, with 11 dialect modules                                                     |
+| Dialect routing         | Masri-first, pan-Arab capable, with 11 dialect modules + 4 regional SEO-AEO markets (Gulf, KSA, Levantine)  |
 | Humanization            | Removes translationese, AI phrasing, stiff rhythm, and wrong register                                      |
 | Project awareness       | `/arabic auto` scans project files so the skill can explain a product, tool, or codebase in natural Arabic |
-| Research intelligence   | `research/` layer + `/arabic research`; distills into runtime via PR + golden tests                        |
+| Research intelligence   | `research/` layer with 4-state lifecycle (collected → curated → distilled → deferred) + `/arabic research`  |
+| Load presets            | 11 named task bundles (plan, write, audit, seasonal, campaign, book, coach, init, audit-full, dialect-lock + 4 regional SEO-AEO) |
+| RTL & dialect audit     | Runtime validation for bidirectional text structure + MSA-bleed detection (v1.2.9)                         |
 | First-run onboarding    | `/arabic guide` (Path A) and `/arabic init` (Path B) with `.arabic/` templates                             |
 | Command system          | `/arabic` with subcommands for guide, write, audit, coach, plan, research, voice, auto, init, and help     |
 | Website dogfooding      | Shipped at `v1.1.0` — [install site](https://arabic-skill.vercel.app) (8 Masri routes, dogfood `/about`)   |
