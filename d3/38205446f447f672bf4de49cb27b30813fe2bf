@@ -1,0 +1,21 @@
+docs/planning/phase-8-runtime-hardening.md
+  s_0197dde7fadf2a::t_14ef1932611249 1-144
+docs/planning/implementation-plan.md
+  s_0197dde7fadf2a::t_b0c2ad3a1d7b0b 27-29
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "d338205446f447f672bf4de49cb27b30813fe2bf",
+  "prompts": {},
+  "sessions": {
+    "s_0197dde7fadf2a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "76c5c404-8942-4fc7-9c88-40e1874404e1",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
