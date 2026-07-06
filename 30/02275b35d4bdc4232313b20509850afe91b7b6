@@ -1,0 +1,39 @@
+scripts/validate-behavioral-golden.sh
+  s_0197dde7fadf2a::t_bcf77edd3c1e18 34
+  s_0197dde7fadf2a::t_e857585d5b501c 48
+  s_0197dde7fadf2a::t_7f1ffecb4527cf 19,23
+scripts/validate-golden.sh
+  s_0197dde7fadf2a::t_20d38b2181b73e 19,24-25
+  s_0197dde7fadf2a::t_9f36a130cdb96a 68
+tests/golden/p4-gulf-seo-aeo.md
+  s_0197dde7fadf2a::t_a607ba052bebb0 1
+  s_0197dde7fadf2a::t_ce7f76b9cff37a 3-10
+scripts/validate-golden-scenarios.sh
+  s_0197dde7fadf2a::t_a0aa306845a53a 24,30
+  s_0197dde7fadf2a::t_2bc96b494e7d6c 49
+scripts/validate-frontmatter.sh
+  s_0197dde7fadf2a::t_4999e02f6c192b 20
+  s_0197dde7fadf2a::t_2fcd36e36d9101 13
+  s_0197dde7fadf2a::t_ac20865f29d130 27
+  s_0197dde7fadf2a::t_5062243822e3f8 46
+scripts/validate-research-scaffold.sh
+  s_0197dde7fadf2a::t_1c7747b81422ad 75,80
+  s_0197dde7fadf2a::t_61242a5cd7d62e 100
+  s_0197dde7fadf2a::t_c7046eab1785c0 57
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "3002275b35d4bdc4232313b20509850afe91b7b6",
+  "prompts": {},
+  "sessions": {
+    "s_0197dde7fadf2a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "76c5c404-8942-4fc7-9c88-40e1874404e1",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
