@@ -1,0 +1,25 @@
+CHANGELOG.md
+  s_0197dde7fadf2a::t_66bc4abb14157e 10-33
+VERSION
+  s_0197dde7fadf2a::t_88a197f6e2ca5e 1
+package.json
+  s_0197dde7fadf2a::t_f1455f9dd881e4 3
+arabic/SKILL.md
+  s_0197dde7fadf2a::t_1de0b3873e326e 4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "0fb7acfb1cddfe76b4587f7f10568152b42cdbc7",
+  "prompts": {},
+  "sessions": {
+    "s_0197dde7fadf2a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "76c5c404-8942-4fc7-9c88-40e1874404e1",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
