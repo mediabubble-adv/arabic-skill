@@ -95,7 +95,7 @@ The repository includes local logo assets under `[public/assets/](./public/asset
 | ChatGPT          | Partial | manual                | [Profile](./docs/supported/chatgpt/README.md)          |
 | Claude           | Strong  | `npx --target claude` | [Profile](./docs/supported/claude/README.md)           |
 | Cline            | Strong  | manual                | [Profile](./docs/supported/cline/README.md)            |
-| Codex            | Partial | `npx --target codex`  | [Profile](./docs/supported/codex/README.md)            |
+| Codex            | Strong  | `npx --target codex`  | [Profile](./docs/supported/codex/README.md)            |
 | Continue         | Partial | manual                | [Profile](./docs/supported/continue/README.md)         |
 | Copilot          | Partial | manual                | [Profile](./docs/supported/copilot/README.md)          |
 | Cursor           | Strong  | `npx --target cursor` | [Profile](./docs/supported/cursor/README.md)           |
