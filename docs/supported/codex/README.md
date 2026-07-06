@@ -4,7 +4,7 @@
 
 ## Current Fit
 
-`Partial`
+`Strong`
 
 ## Install
 
@@ -38,13 +38,6 @@ runtime pack as Claude and Cursor — no adapter layer needed for core content g
 | Hooks / triggers | Unknown | Not yet validated |
 | Local docs loading | Strong | Skills-folder pattern loads all runtime Markdown |
 | Persistence via `voice.md` | Strong | Repo-local file works via skills folder |
-
-## Recommended Packaging
-
-- skills-folder install (`~/.codex/skills/arabic`)
-- master runtime in `SKILL.md`
-- supporting knowledge in markdown
-- prompt-conventional command routing until native `/arabic` support is confirmed
 
 ## What To Validate
 
