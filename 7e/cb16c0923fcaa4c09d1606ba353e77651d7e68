@@ -1,0 +1,21 @@
+docs/supported/support-matrix.md
+  s_0197dde7fadf2a::t_ace8c6f579287e 7
+docs/supported/codex/README.md
+  s_0197dde7fadf2a::t_ed7b0c1f5a1509 7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "7ecb16c0923fcaa4c09d1606ba353e77651d7e68",
+  "prompts": {},
+  "sessions": {
+    "s_0197dde7fadf2a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "76c5c404-8942-4fc7-9c88-40e1874404e1",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
