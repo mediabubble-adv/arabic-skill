@@ -1,0 +1,36 @@
+arabic/references/seo-aeo-gulf.md
+  s_0197dde7fadf2a::t_0a29ca59ec811d 3
+tests/golden/p6-levantine-seo-aeo.md
+  s_0197dde7fadf2a::t_12c77b5d05869f 1-25
+arabic/references/INDEX.md
+  s_0197dde7fadf2a::t_8e6536f12b0ada 133-134
+  s_0197dde7fadf2a::t_1e83e3934ef8ad 127
+  s_0197dde7fadf2a::t_9645f9fbfc08d9 136
+  s_0197dde7fadf2a::t_105f1d35ab5d7f 42
+  s_0197dde7fadf2a::t_cb4638e53a9d39 18
+arabic/references/seo-aeo-masri.md
+  s_0197dde7fadf2a::t_51a702d2058fc0 3
+arabic/references/seo-aeo-levantine.md
+  s_0197dde7fadf2a::t_e594476345991e 3
+  s_0197dde7fadf2a::t_d0a5ba805cb2e0 1-2
+  s_0197dde7fadf2a::t_80f113d90474a5 4-6
+  s_0197dde7fadf2a::t_eac4580d2eed8f 7-141
+arabic/references/seo-aeo-ksa.md
+  s_0197dde7fadf2a::t_d8e7c5c00f712a 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "ca74592ef8df5b4da607414f722b4fa6ffc7c9f2",
+  "prompts": {},
+  "sessions": {
+    "s_0197dde7fadf2a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "76c5c404-8942-4fc7-9c88-40e1874404e1",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
