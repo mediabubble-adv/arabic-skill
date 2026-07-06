@@ -54,6 +54,7 @@ import re
 import sys
 from datetime import datetime
 from pathlib import Path
+from typing import Union, Optional, Set
 
 root = Path(os.environ["ROOT"])
 research = root / "research"
@@ -71,12 +72,12 @@ def fail(msg: str) -> None:
     sys.exit(1)
 
 
-def parse_frontmatter(text: str) -> dict | None:
+def parse_frontmatter(text: str) -> Optional[dict]:
     match = re.match(r"^---\n(.*?)\n---", text, re.DOTALL)
     if not match:
         return None
     fm: dict = {}
-    current_list: str | None = None
+    current_list: Optional[str] = None
     for line in match.group(1).splitlines():
         if line.startswith("  - "):
             if current_list is None:
@@ -96,7 +97,7 @@ def parse_frontmatter(text: str) -> dict | None:
     return fm
 
 
-def load_source_ids() -> set[str]:
+def load_source_ids() -> Set[str]:
     text = (research / "sources/sources.yaml").read_text()
     return {m.group(1) for m in re.finditer(r"^\s*-\s+id:\s+(\S+)\s*$", text, re.MULTILINE)}
 

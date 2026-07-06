@@ -15,7 +15,7 @@ Never load all files. Load strictly on demand per task class.
 
 ---
 
-## References — Load by Task (21 files)
+## References — Load by Task (23 files)
 
 | File | Load when |
 |---|---|
@@ -37,6 +37,7 @@ Never load all files. Load strictly on demand per task class.
 | `references/project-context-scanner.md` | Real repo explanations, install/use guides, evidence-grounded copy |
 | `references/book-writing.md` | Book projects, premise-to-continuity workflows |
 | `references/seo-aeo-masri.md` | SEO/AEO or website-copy tasks targeting Egypt |
+| `references/seo-aeo-gulf.md` | SEO/AEO or website-copy tasks targeting the Gulf (UAE/Kuwait/Qatar/Bahrain/Oman) |
 | `references/seasonal-calendar.md` | Campaign planning or any time-sensitive / seasonal brief |
 | `references/research-mode.md` | `/arabic research`, `/arabic research distill`, `/arabic research status` |
 | `references/onboarding-mode.md` | `/arabic init`, first-run install, bare `/arabic` without `.arabic/` |
@@ -119,12 +120,13 @@ Never load all files. Load strictly on demand per task class.
 | P2 (quality engine) | audit-mode.md + humanization-protocol.md v2 (anti-translationese, channel layers) | ✅ Complete |
 | P3 (coach & memory) | prompt-engineering.md + voice.md (brand voice persistence) | ✅ Complete |
 | P4 (Masri commercial) | ads-service-matrix.md + ads-media.md + seo-aeo-masri.md + seasonal-calendar.md + masri.md expansion | ✅ Complete |
+| P4 (Gulf SEO/AEO) | seo-aeo-gulf.md (market-specific SEO/AEO for UAE/Kuwait/Qatar/Bahrain/Oman) | ✅ Complete |
 | P5 (project mode & dev-tech) | project-mode.md + project-context-scanner.md + book-writing.md + domains/dev-tech.md | ✅ Complete |
 | C1–C3 (command surface) | command-router.md + Cursor adapter + `.arabic/` scaffold | ✅ Complete |
 | P8 (v1.1 runtime) | load-discipline.md + rtl-audit.md + audit/plan/command extensions | ✅ Complete |
 | R3 (research command) | research-mode.md + monthly cron doc | ✅ Complete |
 
-**Total planned files:** 59
-**Total built:** 59 — v1.2.1 + research command wiring
+**Total planned files:** 60
+**Total built:** 60 — v1.2.1 + research command wiring + Gulf SEO/AEO
 
-Breakdown: SKILL.md (1) + voice.md (1) + references/ (22, incl. this INDEX) + dialects/ (11) + domains/ (14) + conversations/ (6) + professional-docs/ (4) = 59.
+Breakdown: SKILL.md (1) + voice.md (1) + references/ (23, incl. this INDEX) + dialects/ (11) + domains/ (14) + conversations/ (6) + professional-docs/ (4) = 60.

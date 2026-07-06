@@ -2,8 +2,8 @@
 
 > Status: Active  
 > Product version: **1.2.7** (current — see root `VERSION`)  
-> **v1.0.0** shipped 2026-06-30 · **v1.1.0** website + P8 runtime · **v1.1.1** npm distribution · **v1.2.0** full Cursor + skills.sh · **v1.2.1** install fix · **v1.2.4** research cron + CI gates · **v1.2.5** validation stack · **v1.2.6** agent harness · **v1.2.7** harness tuning (current)
-> Next train: **1.2.8+** — tune presets from nightly report artifacts  
+> **v1.0.0** shipped 2026-06-30 · **v1.1.0** website + P8 runtime · **v1.1.1** npm distribution · **v1.2.0** full Cursor + skills.sh · **v1.2.4** research cron + CI gates · **v1.2.5** validation stack · **v1.2.6** agent harness · **v1.2.7** harness tuning (current)  
+> Next train: **1.2.8** — preset tuning from nightly harness reports + `research/snapshots/` conventions  
 > Positioning: **Masri-first Awesome Arabic Skill — pan-Arab capable**
 
 ---
@@ -50,12 +50,12 @@ user asks → guide → clarify → recommend → write → review
 | **1.2.5** | ✅ Shipped | Golden + Playwright + G1–G12 routing contracts | `v1.2.5` |
 | **1.2.6** | ✅ Shipped | LLM agent harness — scenario schema + opt-in runner | `v1.2.6` |
 | **1.2.7** | ✅ Shipped | Signal presets, harness `--report`, nightly workflow | `v1.2.7` |
-| **1.2.8+** | Next | Tune presets from nightly report artifacts | — |
+| **1.2.8** | Next | Harness report review → preset tightening; `research/snapshots/` layout | — |
 | **2.0.0** | Future | Breaking changes, major routing restructure | `v2.0.0` |
 
 ### Shipped phase map (reference)
 
-> **Phase IDs are canonical in [implementation-plan.md §0](./implementation-plan.md#0-canonical-phase-map--golden-tests-source-of-truth).** Phases **P0–P6** gate **v1.0.0**; **P7** + **P8** gate **v1.1.x**; distribution follow-ups move to **v1.2.0**.
+> **Phase IDs are canonical in [implementation-plan.md §0](./implementation-plan.md#0-canonical-phase-map--golden-tests-source-of-truth).** Phases **P0–P6** gate **v1.0.0**; **P7** + **P8** gate **v1.1.x**; distribution follow-ups **v1.2.0+**; **V1–V4** gate **v1.2.5–v1.2.7** validation stack.
 
 | Phase | Theme | Key deliverables |
 |-------|-------|------------------|
@@ -66,8 +66,12 @@ user asks → guide → clarify → recommend → write → review
 | **P4** | Masri commercial depth | Ads matrix, SEO/AEO, seasonal calendar |
 | **P5** | Project Mode & Dev-Tech | Website/campaign/book workflows + project-aware Arabic explanations |
 | **P6** | Runtime integration & validation | Wire routing, INDEX sync, run G1–G12 |
-| **R0–R4** | Research intelligence (cross-cutting) | **R0–R4 ✅** scaffold through `validate-research.sh` |
+| **R0–R4** | Research intelligence (cross-cutting) | **R0–R4 ✅** scaffold through `validate-research.sh` + monthly cron |
 | **C0–C5** | Command surface (cross-cutting) | `/arabic` tree, `command-router.md`, workspace `.arabic/` auto |
+| **V1** | Golden fixture gate (1.2.5) | **V1 ✅** `validate-golden.sh`, fixture structure, G13 route smoke |
+| **V2** | Website UX automation (1.2.5) | **V2 ✅** Playwright G15–G16, CI `website-e2e` |
+| **V3** | G1–G12 routing + scenarios (1.2.5–1.2.6) | **V3 ✅** behavioral + scenario gates, opt-in `golden:harness` |
+| **V4** | Harness tuning (1.2.7) | **V4 ✅** `signal-presets.json`, `--report`, nightly workflow |
 
 Semver rules: see [Versioning and Releases](../engineering/versioning-and-releases.md).  
 Skill quality bar: see [Skill Craft Research](../analysis/skill-craft-and-release-research.md).  
@@ -186,6 +190,36 @@ Commands: see [Command Surface](./command-surface.md).
 
 ---
 
+## P9 — Validation & Harness (1.2.5 → 1.2.7) ✅
+
+**Goal:** Automated golden gates in CI; opt-in LLM harness for maintainers; no API cost on every PR.
+
+### Shipped stack
+
+| Release | Gate / artifact | CI |
+|---------|-----------------|-----|
+| **1.2.5** | `validate-golden.sh` — fixture structure, path refs, G13 route smoke | ✅ `validate` |
+| **1.2.5** | `validate-website-playwright.sh` — G15 mobile UX, G16 audit/footer | ✅ `website-e2e` |
+| **1.2.5** | `validate-behavioral-golden.sh` — G1–G12 routing manifest | ✅ `validate` |
+| **1.2.6** | `validate-golden-scenarios.sh` — scenario schema + command parity | ✅ `validate` |
+| **1.2.6** | `npm run golden:harness` — opt-in LLM runner (`OPENAI_API_KEY`) | — |
+| **1.2.7** | `signal-presets.json` — reusable `pass_signals` bundles | schema in `validate` |
+| **1.2.7** | Harness `--report` / `--report auto` → `tests/golden/reports/` | — |
+| **1.2.7** | `golden-harness-nightly.yml` — weekly + `workflow_dispatch` | secret-gated |
+
+### Out of scope (by design)
+
+- Full G1–G12 LLM runs on every PR (cost, flake, secrets)
+- Browser screenshot tier for RTL audit (deferred past v1.1)
+
+### Next (1.2.8)
+
+1. Review nightly harness JSON artifacts; tighten `signal-presets.json` from failure patterns
+2. Document `research/snapshots/` storage conventions (R-track follow-up)
+3. Optional: harness report summarizer script for maintainer triage
+
+---
+
 ## P7 — Distribution (v1.1.0 + v1.1.1)
 
 **Goal:** Most-installed Arabic skill — install friction near zero.
@@ -198,7 +232,7 @@ Commands: see [Command Surface](./command-surface.md).
 | `docs/supported/cursor/` | ✅ Shipped — full adapter + `/arabic` command tree |
 | `docs/supported/claude/` | ✅ Shipped — skill packaging guide |
 | `bin/arabic-skill.js` + npm | ✅ Shipped v1.1.1 — `npx @mediabubble-adv/arabic-skill install` on [npm](https://www.npmjs.com/package/@mediabubble-adv/arabic-skill) |
-| Golden test suite | ✅ Structural `validate-golden.sh` · **G15–G16 Playwright** · **G1–G12 routing** `validate-behavioral-golden.sh` · **G1–G12 scenarios** `validate-golden-scenarios.sh` + opt-in `golden:harness` |
+| Golden test suite | ✅ **V1–V4 shipped** — `validate-golden.sh` · G15–G16 Playwright · G1–G12 routing (`validate-behavioral-golden.sh`) · scenarios (`validate-golden-scenarios.sh`) · presets + opt-in `golden:harness` + nightly workflow |
 | GitHub Releases | ✅ Shipped — tag push triggers `release.yml`; npm publish on tag via `npm-publish.yml` |
 | `npx skills add` registry | ✅ Shipped v1.2.0 — `npx skills add mediabubble-adv/arabic-skill`; skills.sh telemetry listing |
 | Full Cursor npx install | ✅ Shipped v1.2.0 — copies `~/.cursor/commands/arabic.md` + `~/.cursor/rules/arabic.mdc` |
@@ -214,15 +248,32 @@ Commands: see [Command Surface](./command-surface.md).
 
 ## CI and Quality Gates
 
-Every PR must pass:
+Every PR must pass `npm run validate` (see [CI Pipeline](../engineering/ci-pipeline.md)):
 
-- `scripts/validate-skill.sh` — referenced runtime files exist
-- `scripts/validate-frontmatter.sh` — SKILL.md YAML schema (`name`, `display_name`, `version`, `description`)
-- `scripts/validate-docs.sh` — no broken internal links
+| Gate | Script |
+|------|--------|
+| Skill references | `validate-skill.sh` |
+| Frontmatter | `validate-frontmatter.sh` |
+| Docs links | `validate-docs.sh` |
+| Supported tools (24) | `validate-supported.sh` |
+| Website install copy (G14) | `validate-website-install.sh` |
+| npm pack | `validate-npm-pack.sh` |
+| Cursor install dry-run | `validate-cursor-install.sh` |
+| Research scaffold + R4 stale | `validate-research-scaffold.sh`, `validate-research.sh` |
+| Reference sync | `validate-reference-sync.sh` |
+| Onboarding | `validate-onboarding.sh` |
+| Golden fixtures | `validate-golden.sh` |
+| G1–G12 routing | `validate-behavioral-golden.sh` |
+| G1–G12 scenarios | `validate-golden-scenarios.sh` |
 
-Release tags trigger:
+Separate CI job **`website-e2e`**: `validate-website-playwright.sh` (G15–G16).
 
-- GitHub Release with changelog excerpt
+Maintainer-only (not on every PR):
+
+- `npm run golden:harness -- --run` — requires `OPENAI_API_KEY`
+- `golden-harness-nightly.yml` — weekly when repo secret set; uploads JSON report artifact
+
+Release tags trigger GitHub Release (`release.yml`) and npm publish (`npm-publish.yml`).
 
 See [CI Pipeline](../engineering/ci-pipeline.md).
 
@@ -236,7 +287,7 @@ See [CI Pipeline](../engineering/ci-pipeline.md).
 | Audit Mode available | Every delivery |
 | Runtime file integrity | 0 broken references in CI |
 | Tool install docs | **24** tools documented; **0** Unknown-tier; npx presets for Cursor, Claude, Codex |
-| Golden test pass rate | **G1–G12** ✅ gated v1.0.0; **G13–G18** ✅ manual checklist shipped v1.1.0 — see [implementation-plan §0.3](./implementation-plan.md#03-golden-test-master-table-g1g18) |
+| Golden test pass rate | **G1–G12** ✅ routing + scenario schema in CI (v1.2.5–1.2.7); **G13–G18** ✅ Playwright G15–G16 + manual checklist; LLM harness opt-in / nightly — see [implementation-plan §0.3](./implementation-plan.md#03-golden-test-master-table-g1g18) |
 
 ---
 
