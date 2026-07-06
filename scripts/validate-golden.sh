@@ -16,12 +16,13 @@ import os
 import re
 import sys
 from pathlib import Path
+from typing import Optional, List
 
 root = Path(os.environ["ROOT"])
 golden_dir = root / "tests" / "golden"
 
-errors: list[str] = []
-warnings: list[str] = []
+errors: List[str] = []
+warnings: List[str] = []
 
 TITLE_RE = re.compile(r"^#\s+Golden Tests?\s", re.MULTILINE)
 VALIDATION_RE = re.compile(r"^##\s+Validation\s*$", re.MULTILINE)
@@ -64,7 +65,7 @@ def route_page_path(route: str) -> Path:
     return root / "website" / "app" / slug / "page.tsx"
 
 
-def normalize_path(raw: str) -> str | None:
+def normalize_path(raw: str) -> Optional[str]:
     raw = raw.strip().rstrip(".,;:")
     if not raw or raw.startswith("http"):
         return None

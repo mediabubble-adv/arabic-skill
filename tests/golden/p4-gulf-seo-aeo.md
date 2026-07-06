@@ -1,6 +1,13 @@
-# Golden Test: Phase 4 — Gulf SEO/AEO Reference Integration
+# Golden Tests P4 — Gulf SEO/AEO Reference Integration
 
-**Test purpose:** Verify that `seo-aeo-gulf.md` is properly structured, mirrors `seo-aeo-masri.md`, and integrates into the skill routing.
+Phase 4 reference fixture for Gulf market SEO/AEO optimization (UAE, Kuwait, Qatar, Bahrain, Oman).
+
+## Validation
+
+- [x] `npm run validate` exits 0
+- [x] File structure mirrors Masri reference
+- [x] Cross-references verified
+- [x] Skill routing wired
 
 ---
 

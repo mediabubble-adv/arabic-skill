@@ -6,26 +6,25 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
 if ! ROOT="$ROOT" python3 <<'PY'; then
-from __future__ import annotations
-
 import os
 import re
 import sys
 from pathlib import Path
+from typing import Optional, List
 
 root = Path(os.environ["ROOT"])
 skill_path = root / "arabic/SKILL.md"
 expected_name = "arabic"
 semver = re.compile(r"^\d+\.\d+\.\d+$")
 
-errors: list[str] = []
+errors: List[str] = []
 
 
 def fail(msg: str) -> None:
     errors.append(msg)
 
 
-def parse_skill_frontmatter(text: str) -> dict | None:
+def parse_skill_frontmatter(text: str) -> Optional[dict]:
     match = re.match(r"^---\r?\n(.*?)\r?\n---", text, re.DOTALL)
     if not match:
         fail("FAIL: arabic/SKILL.md missing YAML frontmatter delimiters (---)")
@@ -44,7 +43,7 @@ def parse_skill_frontmatter(text: str) -> dict | None:
         key, val = kv.group(1), kv.group(2)
         if val in ("|", ">"):
             i += 1
-            parts: list[str] = []
+            parts: List[str] = []
             while i < len(lines) and (
                 lines[i].startswith("  ") or lines[i].strip() == ""
             ):
