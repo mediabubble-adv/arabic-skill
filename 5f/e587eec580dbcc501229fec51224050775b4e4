@@ -1,0 +1,31 @@
+arabic/references/load-discipline.md
+  s_0197dde7fadf2a::t_06c4763ac8fbf3 10-26
+arabic/references/INDEX.md
+  s_0197dde7fadf2a::t_7f360dcf532774 132,135-136,138
+  s_0197dde7fadf2a::t_e04cb8101e5a45 18,22
+arabic/SKILL.md
+  s_0197dde7fadf2a::t_1ebe33ef540805 42
+tests/golden/p8a-load-presets.md
+  s_0197dde7fadf2a::t_bd726daadaf87a 1-13
+  s_0197dde7fadf2a::t_d7be08f7c1bc1b 14-267
+arabic/references/load-presets.md
+  s_0197dde7fadf2a::t_16c01c527c563e 1-205
+scripts/load-preset.sh
+  s_0197dde7fadf2a::t_07a912db4968a1 1-133
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "5fe587eec580dbcc501229fec51224050775b4e4",
+  "prompts": {},
+  "sessions": {
+    "s_0197dde7fadf2a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "76c5c404-8942-4fc7-9c88-40e1874404e1",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
