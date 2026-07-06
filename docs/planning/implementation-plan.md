@@ -24,6 +24,9 @@ Linear product phases **P0–P6** ship **v1.0.0**. Cross-cutting tracks **R** (r
 | **V2** | Website UX automation | v1.2.5 | `validate-website-playwright.sh`, G15–G16 specs | G15, G16 |
 | **V3** | G1–G12 routing + scenarios | v1.2.5–v1.2.6 | `validate-behavioral-golden.sh`, `validate-golden-scenarios.sh`, `golden:harness` | G1–G12 manifest |
 | **V4** | Harness tuning | v1.2.7 | `signal-presets.json`, `--report`, `golden-harness-nightly.yml` | opt-in / nightly LLM |
+| **P8A** | Load-discipline bundling | v1.2.9 | Smart task-class load sets, seasonal/category presets, bundle optimization | bundling fixtures |
+| **P8B** | Audit RTL/dialect hardening | v1.2.9 | RTL detection, bidirectional-text validation, MSA bleed detection, dialect guardrails | RTL fixtures |
+| **P8C** | Research distillation pipeline | v1.2.9 | Knowledge-base curation, monthly snapshot automation, distillation-queue integration, topic lifecycle | research distillation fixtures |
 
 ### 0.2 Crosswalk (old numbering → unified)
 
