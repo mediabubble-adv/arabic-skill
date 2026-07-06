@@ -1,0 +1,27 @@
+api/v1/write.ts
+  s_0197dde7fadf2a::t_494aaf2b2f176d 1-81
+api/v1/plan.ts
+  s_0197dde7fadf2a::t_d8d01854b88817 1-77
+api/README.md
+  s_0197dde7fadf2a::t_d484c2e6375308 1-324
+api/v1/research.ts
+  s_0197dde7fadf2a::t_d67bdc5b360ed7 1-55
+api/v1/audit.ts
+  s_0197dde7fadf2a::t_1a8af9e7f4b17e 1-55
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "a3fd814a6a881c0ac505499345f575c8031c6252",
+  "prompts": {},
+  "sessions": {
+    "s_0197dde7fadf2a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "76c5c404-8942-4fc7-9c88-40e1874404e1",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
