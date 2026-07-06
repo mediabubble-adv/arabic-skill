@@ -1,0 +1,20 @@
+arabic/references/INDEX.md
+  s_0197dde7fadf2a::t_b07cb9b24b8ea4 129-130,132
+  s_0197dde7fadf2a::t_f1f253ad630157 18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "e1807e19fce9b9c02fb6f3d612b7431407ff5866",
+  "prompts": {},
+  "sessions": {
+    "s_0197dde7fadf2a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "76c5c404-8942-4fc7-9c88-40e1874404e1",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
