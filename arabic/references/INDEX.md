@@ -39,6 +39,7 @@ Never load all files. Load strictly on demand per task class.
 | `references/seo-aeo-masri.md` | SEO/AEO or website-copy tasks targeting Egypt |
 | `references/seo-aeo-gulf.md` | SEO/AEO or website-copy tasks targeting the Gulf (UAE/Kuwait/Qatar/Bahrain/Oman) |
 | `references/seo-aeo-ksa.md` | SEO/AEO or website-copy tasks targeting Saudi Arabia |
+| `references/seo-aeo-levantine.md` | SEO/AEO or website-copy tasks targeting Levantine (Syria/Lebanon/Jordan/Palestine) |
 | `references/seasonal-calendar.md` | Campaign planning or any time-sensitive / seasonal brief |
 | `references/research-mode.md` | `/arabic research`, `/arabic research distill`, `/arabic research status` |
 | `references/onboarding-mode.md` | `/arabic init`, first-run install, bare `/arabic` without `.arabic/` |

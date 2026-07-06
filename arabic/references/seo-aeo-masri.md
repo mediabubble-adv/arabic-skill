@@ -1,6 +1,6 @@
 # 🔍 SEO & AEO — Egyptian / Masri Search
 
-> **Regional references:** For the Gulf (UAE/Kuwait/Qatar/Bahrain/Oman), load `seo-aeo-gulf.md`. For Saudi Arabia, load `seo-aeo-ksa.md`.
+> **Regional references:** For the Gulf (UAE/Kuwait/Qatar/Bahrain/Oman), load `seo-aeo-gulf.md`. For Saudi Arabia, load `seo-aeo-ksa.md`. For Levantine (Syria/Lebanon/Jordan/Palestine), load `seo-aeo-levantine.md`.
 
 **Load when:** Blog, SEO, AEO, or website-copy task targeting Egypt, or `/arabic seo` / `/arabic aeo` for the Egyptian market.
 **Pair with:** `dialects/masri.md`, `references/engines.md` (SEO + AEO engines), `domains/` file if an industry applies.
