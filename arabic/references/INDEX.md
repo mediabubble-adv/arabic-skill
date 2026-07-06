@@ -15,7 +15,7 @@ Never load all files. Load strictly on demand per task class.
 
 ---
 
-## References — Load by Task (24 files)
+## References — Load by Task (25 files)
 
 | File | Load when |
 |---|---|
@@ -39,6 +39,7 @@ Never load all files. Load strictly on demand per task class.
 | `references/seo-aeo-masri.md` | SEO/AEO or website-copy tasks targeting Egypt |
 | `references/seo-aeo-gulf.md` | SEO/AEO or website-copy tasks targeting the Gulf (UAE/Kuwait/Qatar/Bahrain/Oman) |
 | `references/seo-aeo-ksa.md` | SEO/AEO or website-copy tasks targeting Saudi Arabia |
+| `references/seo-aeo-levantine.md` | SEO/AEO or website-copy tasks targeting Levantine (Syria/Lebanon/Jordan/Palestine) |
 | `references/seasonal-calendar.md` | Campaign planning or any time-sensitive / seasonal brief |
 | `references/research-mode.md` | `/arabic research`, `/arabic research distill`, `/arabic research status` |
 | `references/onboarding-mode.md` | `/arabic init`, first-run install, bare `/arabic` without `.arabic/` |
@@ -123,12 +124,13 @@ Never load all files. Load strictly on demand per task class.
 | P4 (Masri commercial) | ads-service-matrix.md + ads-media.md + seo-aeo-masri.md + seasonal-calendar.md + masri.md expansion | ✅ Complete |
 | P4 (Gulf SEO/AEO) | seo-aeo-gulf.md (market-specific SEO/AEO for UAE/Kuwait/Qatar/Bahrain/Oman) | ✅ Complete |
 | P5 (KSA SEO/AEO) | seo-aeo-ksa.md (market-specific SEO/AEO for Saudi Arabia) | ✅ Complete |
+| P6 (Levantine SEO/AEO) | seo-aeo-levantine.md (market-specific SEO/AEO for Syria/Lebanon/Jordan/Palestine) | ✅ Complete |
 | P5 (project mode & dev-tech) | project-mode.md + project-context-scanner.md + book-writing.md + domains/dev-tech.md | ✅ Complete |
 | C1–C3 (command surface) | command-router.md + Cursor adapter + `.arabic/` scaffold | ✅ Complete |
 | P8 (v1.1 runtime) | load-discipline.md + rtl-audit.md + audit/plan/command extensions | ✅ Complete |
 | R3 (research command) | research-mode.md + monthly cron doc | ✅ Complete |
 
-**Total planned files:** 61
-**Total built:** 61 — v1.2.1 + research command wiring + Gulf SEO/AEO + KSA SEO/AEO
+**Total planned files:** 62
+**Total built:** 62 — v1.2.1 + research command wiring + Gulf SEO/AEO + KSA SEO/AEO + Levantine SEO/AEO
 
-Breakdown: SKILL.md (1) + voice.md (1) + references/ (24, incl. this INDEX) + dialects/ (11) + domains/ (14) + conversations/ (6) + professional-docs/ (4) = 61.
+Breakdown: SKILL.md (1) + voice.md (1) + references/ (25, incl. this INDEX) + dialects/ (11) + domains/ (14) + conversations/ (6) + professional-docs/ (4) = 62.
