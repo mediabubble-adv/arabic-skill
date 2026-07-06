@@ -1,0 +1,24 @@
+docs/PROJECT_STATUS.md
+  s_0197dde7fadf2a::t_24734b7795266e 1-273
+README.md
+  s_0197dde7fadf2a::t_f2eb252b07cc69 25,28-30
+  s_0197dde7fadf2a::t_e14f24db7f8b32 9
+docs/README.md
+  s_0197dde7fadf2a::t_7cfd500337be18 13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "249fa14863adb5ae01960fc9448c51e44aa36cd6",
+  "prompts": {},
+  "sessions": {
+    "s_0197dde7fadf2a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "76c5c404-8942-4fc7-9c88-40e1874404e1",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
