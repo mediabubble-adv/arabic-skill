@@ -7,6 +7,30 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.2.8] - 2026-07-06
+
+**Geographic trilogy + distribution finalized** — P4–P7 phases complete (SEO-AEO regional variants, tool profiles, command maps, CI integration).
+
+### Added
+- `arabic/references/seo-aeo-gulf.md` — Gulf market (UAE/Kuwait/Qatar/Bahrain/Oman) SEO-AEO optimization reference (P4)
+- `arabic/references/seo-aeo-ksa.md` — Saudi Arabia market SEO-AEO optimization reference with regional customization (P5)
+- `arabic/references/seo-aeo-levantine.md` — Levantine market (Syria/Lebanon/Jordan/Palestine) SEO-AEO optimization reference with city-level focus (P6)
+- `docs/supported/codex/README.md` — Codex tool profile (upgraded to Strong fit) (P7A)
+- `docs/supported/chatgpt/README.md` — ChatGPT tool profile (Partial fit; Custom GPT / Projects patterns) (P7A)
+- `v1.1 Command Map` sections to all Partial-tier tools (Gemini, Copilot, VS Code, Kiro, Replit, Continue, Sourcegraph Cody, Kilo Code, JetBrains Junie) (P7B–P7C)
+- Validation notes (dated 2026-07-03) for 4 Unknown-tier tools: Antigravity, Hermes Agent, OpenClaw, OpenCode (P7D)
+- Golden test fixtures: `tests/golden/p4-gulf-seo-aeo.md`, `tests/golden/p5-ksa-seo-aeo.md`, `tests/golden/p6-levantine-seo-aeo.md`
+
+### Changed
+- Root `README.md` — updated Codex fit: Partial → Strong in tool profiles table (P7E)
+- `arabic/references/INDEX.md` — incremented reference count: 23→25 files; total: 60→62 files (P4–P6)
+- `docs/supported/support-matrix.md` — updated Codex row: Partial → Strong (P7A)
+- Cross-pointers added to all four regional SEO-AEO files (Masri, Gulf, KSA, Levantine) for navigation
+- All Partial-tier tool READMEs now include standardized `v1.1 Command Map` and `Persistence` sections (P7B–P7C)
+
+### Fixed
+- Python type hint compatibility across validation scripts (3.9-compatible: replaced dict|None with Optional[dict], etc.)
+
 ## [1.2.7] - 2026-07-05
 
 **Harness tuning** — signal presets, JSON reports, nightly workflow.
