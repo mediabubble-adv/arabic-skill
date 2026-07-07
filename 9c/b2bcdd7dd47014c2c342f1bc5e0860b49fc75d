@@ -1,0 +1,19 @@
+docs/planning/9b-infrastructure-monitoring-design.md
+  s_98eb88043f4ae8::t_c9c3ebafa7cad9 1-553
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "9cb2bcdd7dd47014c2c342f1bc5e0860b49fc75d",
+  "prompts": {},
+  "sessions": {
+    "s_98eb88043f4ae8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5c8757de-275e-4bd9-9a83-ac064708bec0",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
