@@ -1,0 +1,39 @@
+website/app/layout.tsx
+  s_673861cff7bff8::t_b110c08beec666 3
+  s_673861cff7bff8::t_12b647c4e10e1c 48
+  s_673861cff7bff8::t_8ab21989149c2b 49-51
+  s_673861cff7bff8::t_89c1206a2ac47e 25-41,46,52
+tests/golden/g15-g16-playwright.md
+  s_673861cff7bff8::t_24c37ce2389967 17
+website/app/components/NewsletterForm.tsx
+  s_673861cff7bff8::t_c0e98868692ccd 79-81
+  s_673861cff7bff8::t_048c7e9072553e 3-13,16,22-24
+  s_673861cff7bff8::t_1c7b132a8c7cc1 54-57,59-64
+  s_673861cff7bff8::t_cafa705682f1ba 25
+  s_673861cff7bff8::t_14d447767e006f 82
+  s_673861cff7bff8::t_87da0a2d012028 68,88-89,96,107-111,121,127,129
+website/components/inline-script.tsx
+  s_673861cff7bff8::t_cbbd4082dfd059 1-16
+website/e2e/g16-content.spec.ts
+  s_673861cff7bff8::t_a2596322ec485d 39
+website/e2e/g15-mobile-ux.spec.ts
+  s_673861cff7bff8::t_11813d3341b3ee 47-49
+  s_673861cff7bff8::t_8be7f1007eec29 51,67,72,74,76-78
+  s_673861cff7bff8::t_58359644641107 46,50,52-60
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "56656160ae72c3418ded5bb18b4b7651903a229c",
+  "prompts": {},
+  "sessions": {
+    "s_673861cff7bff8": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "c33fab7c-cc59-402e-ba0d-9aab4dcd27d9",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
