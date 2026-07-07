@@ -1,0 +1,49 @@
+docs/planning/roadmap.md
+  s_bb5489bfef9fba::t_ecf780d1a01871 69,71-74
+  s_bb5489bfef9fba::t_ab93340f758e7d 251-269,271,273-274,276
+  s_bb5489bfef9fba::t_e26089baaf13c4 53
+  s_bb5489bfef9fba::t_2f4547ec46ca37 235
+  s_bb5489bfef9fba::t_6a20db2b51efd4 290
+  s_bb5489bfef9fba::t_8aa19d1b1341fb 5-6
+  s_bb5489bfef9fba::t_96e5ff7875dbf1 58
+  s_bb5489bfef9fba::t_5042579863059a 193-222
+docs/planning/implementation-plan.md
+  s_bb5489bfef9fba::t_0f019c634aab65 9,20,23-26
+  s_bb5489bfef9fba::t_f4ff4f8c8abe55 47
+arabic/references/load-discipline.md
+  s_0197dde7fadf2a::t_cc200f9fb3e71a 66-72
+  s_0197dde7fadf2a::t_c537b8fe21b8a4 51-54
+arabic/references/engines.md
+  s_0197dde7fadf2a::t_7f5d9facee8e64 131-132
+  s_0197dde7fadf2a::t_018d4afd3af91b 156-157
+arabic/references/storytelling.md
+  s_0197dde7fadf2a::t_2cb7385f7707c6 1-279
+tests/golden/p3-storytelling.md
+  s_0197dde7fadf2a::t_7b13176ff2a827 1-126
+arabic/SKILL.md
+  s_0197dde7fadf2a::t_ba73cd70daab7d 272
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "eeefb97c59ca6f9075845cd0c411b6de1043c7aa",
+  "prompts": {},
+  "sessions": {
+    "s_0197dde7fadf2a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "76c5c404-8942-4fc7-9c88-40e1874404e1",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    },
+    "s_bb5489bfef9fba": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "11bba942-631b-47bf-bd78-307e29de087e",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
