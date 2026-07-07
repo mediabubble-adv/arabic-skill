@@ -1,12 +1,27 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+
+function NewsletterFormPlaceholder() {
+  return (
+    <div className="w-full max-w-md space-y-4" aria-hidden="true">
+      <div className="h-[4.5rem] rounded-md border border-[var(--border)] bg-[var(--bg)]" />
+      <div className="h-[4.5rem] rounded-md border border-[var(--border)] bg-[var(--bg)]" />
+      <div className="h-10 rounded-md bg-[var(--brand)]/20" />
+    </div>
+  );
+}
 
 export function NewsletterForm() {
+  const [mounted, setMounted] = useState(false);
   const [email, setEmail] = useState('');
   const [segment, setSegment] = useState<'developer' | 'creator' | 'enterprise'>('creator');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -36,12 +51,21 @@ export function NewsletterForm() {
     }
   };
 
+  if (!mounted) {
+    return <NewsletterFormPlaceholder />;
+  }
+
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-md">
+    <form
+      onSubmit={handleSubmit}
+      className="w-full max-w-md"
+      data-lpignore="true"
+      data-1p-ignore
+    >
       <div className="space-y-4">
         {/* Email Input */}
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="email" className="block text-sm font-medium text-[var(--fg)] mb-1">
             Email Address
           </label>
           <input
@@ -52,21 +76,24 @@ export function NewsletterForm() {
             placeholder="your@email.com"
             required
             disabled={status === 'loading'}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed"
+            autoComplete="email"
+            data-lpignore="true"
+            data-1p-ignore
+            className="w-full px-4 py-2 bg-[var(--bg)] border border-[var(--border)] rounded-md text-[var(--fg)] placeholder:text-[var(--fg-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand)] disabled:opacity-60 disabled:cursor-not-allowed"
           />
         </div>
 
         {/* Segment Selection */}
         <div>
-          <label htmlFor="segment" className="block text-sm font-medium text-gray-700 mb-1">
-            I'm a...
+          <label htmlFor="segment" className="block text-sm font-medium text-[var(--fg)] mb-1">
+            I&apos;m a...
           </label>
           <select
             id="segment"
             value={segment}
             onChange={(e) => setSegment(e.target.value as 'developer' | 'creator' | 'enterprise')}
             disabled={status === 'loading'}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed"
+            className="w-full px-4 py-2 bg-[var(--bg)] border border-[var(--border)] rounded-md text-[var(--fg)] focus:outline-none focus:ring-2 focus:ring-[var(--brand)] disabled:opacity-60 disabled:cursor-not-allowed"
           >
             <option value="creator">Content Creator / Marketer</option>
             <option value="developer">Developer</option>
@@ -77,11 +104,11 @@ export function NewsletterForm() {
         {/* Status Message */}
         {message && (
           <div
-            className={`text-sm p-3 rounded ${
-              status === 'success'
-                ? 'bg-green-100 text-green-800'
-                : 'bg-red-100 text-red-800'
-            }`}
+            className="text-sm p-3 rounded-md border"
+            style={{
+              borderColor: status === 'success' ? 'var(--ok)' : 'var(--danger)',
+              color: status === 'success' ? 'var(--ok)' : 'var(--danger)',
+            }}
           >
             {message}
           </div>
@@ -91,15 +118,15 @@ export function NewsletterForm() {
         <button
           type="submit"
           disabled={status === 'loading'}
-          className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition disabled:bg-blue-400 disabled:cursor-not-allowed"
+          className="btn-primary w-full disabled:opacity-60 disabled:cursor-not-allowed"
         >
           {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
         </button>
 
         {/* Privacy Notice */}
-        <p className="text-xs text-gray-500 text-center">
+        <p className="text-xs text-[var(--fg-muted)] text-center">
           We respect your privacy.{' '}
-          <a href="/privacy" className="text-blue-600 hover:underline">
+          <a href="/privacy" className="text-[var(--brand)] hover:underline">
             Privacy Policy
           </a>
         </p>
