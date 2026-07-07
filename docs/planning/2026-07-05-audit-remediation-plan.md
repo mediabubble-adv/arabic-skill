@@ -160,7 +160,7 @@ distillation queue has zero rows. Seed it:
 
 ---
 
-## Phase 6 — Expand `npx install` Target Presets (feat/p6-npx-targets)
+## Phase 6 — Expand `npx install` Target Presets (feat/p6a-registry → feat/p6b-wave1 → feat/p6c-wave2)
 
 Today `bin/arabic-skill.js` hardcodes 3 presets (`targetRoots`: cursor, claude, codex) while
 `docs/supported/` documents 24 tool profiles. Close the gap in two waves.
