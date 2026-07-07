@@ -82,7 +82,7 @@ Report **target** and **detected** register in the QA header (e.g. `Target: L1�
 | 7 | **English overload** | ≤2 loanwords/sentence, zero full English clauses | clean |
 | 8 | **Back-translation gut check** | literal back-translation that reads as natural English marketing = translationese | reads awkward in English, meaning intact = native |
 | 9 | **Brand lexicon compliance** | forbidden words present / approved words missing / register-disallowed vocab | fully compliant |
-| 10 | **Persuasion-lever consistency** (commercial tasks) | Copy activates the declared archetype + lead lever (per `persuasion-arab-psychology.md`); no contradictory levers; no archetype undermine | aligned with archetype + lever matrix |
+| 10 | **Persuasion-lever consistency** (commercial tasks) | Copy activates the declared archetype + lead lever (per `persuasion-arab-psychology.md`); no contradictory levers; no archetype undermining | aligned with archetype + lever matrix |
 
 Per-check scoring: **0/2** if many violations (≥3, or any gender switch / translationese), **1/2** if 1–2, **2/2** if clean. (Full per-check thresholds + error catalog: `reference/arabic-qa`.) Check #10 applies only to commercial/persuasive tasks (ads, sales copy, brand voice); editorial/blog tasks skip it.
 
