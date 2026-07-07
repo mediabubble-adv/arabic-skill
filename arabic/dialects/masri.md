@@ -208,7 +208,7 @@ Add to every output — pick 1–2:
 ### القاهرة (Cairo)
 **Register:** Fast, irony-aware, prestige standard · **When to use:** Pan-Egypt commercial, default Masri
 **Markers:**
-- ج → g (gasri vs qasri for coffee)
+- ج → g (gamiil vs jamiil — beautiful)
 - ق → ء hamza (ألبي vs قلبي — heart)
 - Casual fillers: طب, بقى, يعني (rapid-fire)
 - إيه = what / إيه ده = what's this (direct)
