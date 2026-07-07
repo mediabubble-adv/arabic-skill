@@ -1,0 +1,33 @@
+api/lib/skill-integration.ts
+  s_0197dde7fadf2a::t_526ac885ab1292 194
+  s_0197dde7fadf2a::t_f51ff33deb7176 8-9,12-13,28-29,32-38,40-49
+  s_0197dde7fadf2a::t_18ad69132d9cf4 104-107,110
+  s_0197dde7fadf2a::t_4db53f1c7801bb 66-68,71-79,82
+  s_0197dde7fadf2a::t_52742032f29645 164-170,173
+  s_0197dde7fadf2a::t_6727f6aef5faf0 1-7,10-11,14-27,30-31,39,50-65,69-70,80-81,83-103,108-109,111-132,137-138,140-163,171-172,174-193,195-223
+  s_0197dde7fadf2a::t_3ff0e5c8821167 133-136,139
+api/v1/research.ts
+  s_0197dde7fadf2a::t_aca32e8e8cfb55 2,25-26,28
+api/v1/audit.ts
+  s_0197dde7fadf2a::t_b90696fdd02183 2,32-33,35
+api/v1/plan.ts
+  s_0197dde7fadf2a::t_101007dea96eea 2,28-34,36
+api/v1/write.ts
+  s_0197dde7fadf2a::t_48b3cb6d2a2a04 2,47-48,50
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "148f17be842a617221722c39be67731314baaf93",
+  "prompts": {},
+  "sessions": {
+    "s_0197dde7fadf2a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "76c5c404-8942-4fc7-9c88-40e1874404e1",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
