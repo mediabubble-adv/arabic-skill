@@ -1,0 +1,77 @@
+website/app/terms/page.tsx
+  s_673861cff7bff8::t_4da7faf606f00c 1-39
+website/components/site-footer.tsx
+  s_673861cff7bff8::t_49cad02004d5d0 10,12,18,30,37,46,66,70,74
+website/app/privacy/page.tsx
+  s_673861cff7bff8::t_5fe50b22685d93 1-39
+website/lib/blog.ts
+  s_673861cff7bff8::t_13ca3e42692211 1-84
+docs/superpowers/specs/2026-07-07-website-full-redesign-design.md
+  s_673861cff7bff8::t_53061e2caa2fda 1-22,24-52
+  s_673861cff7bff8::t_019800d91c5478 23
+website/app/blog/page.tsx
+  s_673861cff7bff8::t_6b0197fe1d581e 1-6,9-10,13-18,21-23,25-34,36-48,50-66,68-82,84-88
+website/e2e/g15-mobile-ux.spec.ts
+  s_673861cff7bff8::t_e887062684bbaf 46-60,66-68,70-73,77-80,82-83
+website/components/sticky-install-bar.tsx
+  s_673861cff7bff8::t_0f8ddaa196845f 5-7,11-12,15-18,27-38,41-44,46-60,62-69
+docs/planning/website-redesign-comps/INDEX.md
+  s_673861cff7bff8::t_83c597599fb9ba 1-30
+website/components/before-after-card.tsx
+  s_673861cff7bff8::t_b4e3ba1f7c552f 4,10,15,17,24-57,60-61
+website/components/page-shell.tsx
+  s_673861cff7bff8::t_7e11f4842d6274 1,8-10,12-14
+website/components/pill-tabs.tsx
+  s_673861cff7bff8::t_0e460aea52677e 1-72
+website/app/robots.ts
+  s_673861cff7bff8::t_88b6c0fe559b6f 1-11
+website/app/newsletter/page.tsx
+  s_673861cff7bff8::t_ec4364bbeac4d2 1-5,8-9,14-25,27-29,32-41,43-47,49-52,58-63,65-67,69
+website/components/site-header.tsx
+  s_673861cff7bff8::t_7bcf53ca9d7dda 2-3,25-33,35-40
+website/components/stat-strip.tsx
+  s_673861cff7bff8::t_bc34086a561239 13
+  s_673861cff7bff8::t_df87728f2435a0 1-12,14-25
+website/components/mode-flow.tsx
+  s_673861cff7bff8::t_7cd4145eb063df 4,20-26
+website/components/inline-script.tsx
+  s_673861cff7bff8::t_19217034a7b894 1-11
+website/app/blog/posts/[slug]/page.tsx
+  s_673861cff7bff8::t_c6396a6b37edb4 1-50,52,56-58
+  s_673861cff7bff8::t_9d2e9073dbc970 51,53-55
+website/app/page.tsx
+  s_673861cff7bff8::t_42d100fa0d9545 8-9,11,22,27,32,37,41-51,55,59,62,66,69,77-80,83-85,92,94,102,106,108-111,119-135
+website/components/theme-toggle.tsx
+  s_673861cff7bff8::t_964caea957b207 1-40
+website/app/examples/page.tsx
+  s_673861cff7bff8::t_f9c7dfd0065761 51,57
+website/lib/site-meta.ts
+  s_673861cff7bff8::t_eca211e60ef060 9-13,58-75,88-90
+  s_673861cff7bff8::t_f61449fb6a5c01 91
+website/app/sitemap.ts
+  s_673861cff7bff8::t_ae8bb38ce6fd9b 1-38
+website/app/globals.css
+  s_673861cff7bff8::t_1a7fac8003ede5 3-4,16-39,62-69,75-131,262-267,292-332
+website/app/components/NewsletterForm.tsx
+  s_673861cff7bff8::t_00aa027ab31370 18,24,26,35-40,42-44,54-58,63-64,71,73-75,81-85,94,96,99-102
+website/app/layout.tsx
+  s_673861cff7bff8::t_05578586174b26 3,19-20,31-34
+website/e2e/g16-content.spec.ts
+  s_673861cff7bff8::t_8e69628c8268e9 39-41
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "0c07b3a216350f358f93be2b54ed94de2fbc9665",
+  "prompts": {},
+  "sessions": {
+    "s_673861cff7bff8": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "c33fab7c-cc59-402e-ba0d-9aab4dcd27d9",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
