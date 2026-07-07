@@ -1,0 +1,19 @@
+website/app/blog/page.tsx
+  s_0197dde7fadf2a::t_e8bf2d47379d14 1-187
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "b773262c2128d72a797a43e63ee74682e9e1f433",
+  "prompts": {},
+  "sessions": {
+    "s_0197dde7fadf2a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "76c5c404-8942-4fc7-9c88-40e1874404e1",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
