@@ -2,7 +2,7 @@
 
 > Status: Active  
 > Product version: **1.2.7** (current — see root `VERSION`)  
-> **v1.0.0** shipped 2026-06-30 · **v1.1.0** website + P8 runtime · **v1.1.1** npm distribution · **v1.2.0** full Cursor + skills.sh · **v1.2.4** research cron + CI gates · **v1.2.5** validation stack · **v1.2.6** agent harness · **v1.2.7** harness tuning (current)  
+> **v1.0.0** shipped 2026-06-30 · **v1.1.0** website + P8 runtime · **v1.1.1** npm distribution · **v1.2.0** full Cursor + skills.sh · **v1.2.1** install fix · **v1.2.2** first-run onboarding · **v1.2.3** onboarding polish · **v1.2.4** research cron + CI gates · **v1.2.5** validation stack · **v1.2.6** agent harness · **v1.2.7** harness tuning (current)
 > Next train: **1.2.8** — preset tuning from nightly harness reports + `research/snapshots/` conventions  
 > Positioning: **Masri-first Awesome Arabic Skill — pan-Arab capable**
 
