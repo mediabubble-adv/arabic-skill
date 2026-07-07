@@ -21,12 +21,13 @@ import os
 import re
 import sys
 from pathlib import Path
+from typing import Optional, List, Dict
 
 root = Path(os.environ["ROOT"])
 scenarios_path = root / "tests" / "golden" / "scenarios" / "g1-g12-scenarios.json"
 presets_path = root / "tests" / "golden" / "scenarios" / "signal-presets.json"
 manifest_path = root / "tests" / "golden" / "g1-g12-manifest.json"
-errors: list[str] = []
+errors: List[str] = []
 
 manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
 manifest_by_id = {t["id"]: t for t in manifest.get("tests") or []}
@@ -45,7 +46,7 @@ if len(scenarios) != 12:
 expected_ids = [f"G{i}" for i in range(1, 13)]
 ids = [s.get("id") for s in scenarios]
 
-def golden_num(gid: str | None) -> int | None:
+def golden_num(gid: Optional[str]) -> Optional[int]:
     if not gid or not isinstance(gid, str) or not gid.startswith("G"):
         return None
     tail = gid[1:]

@@ -6,7 +6,7 @@
 
 **cAwesome Arabic Skill** (`arabic`) is a MediaBubble skill for Arabic content creation, strategy, research distillation, and review. It is designed to behave like a senior Arabic content partner inside AI coding tools: it reads context, clarifies intent, recommends a direction, writes, humanizes, and audits before delivery.
 
-It is **not** a translation shortcut. Current version is `1.2.7` (signal presets + harness reports + nightly workflow; G1–G12 scenario manifest in `1.2.6`; validation stack in `1.2.5`).
+It is **not** a translation shortcut. Current version is `1.2.9` (runtime hardening: load presets, RTL/dialect audit, research distillation) — **now in Maintenance Mode** (Phase 9A complete). Previous: `1.2.8` (geographic trilogy + distribution); `1.2.7` (harness + reports); `1.2.6` (scenario manifest); `1.2.5` (validation stack).
 
 
 
@@ -22,10 +22,12 @@ user asks -> guide -> clarify -> recommend -> write -> review
 | Capability              | Current role                                                                                               |
 | ----------------------- | ---------------------------------------------------------------------------------------------------------- |
 | Arabic content creation | Captions, ads, landing pages, blogs, scripts, sales copy, books, UI microcopy, and professional documents  |
-| Dialect routing         | Masri-first, pan-Arab capable, with 11 dialect modules                                                     |
+| Dialect routing         | Masri-first, pan-Arab capable, with 11 dialect modules + 4 regional SEO-AEO markets (Gulf, KSA, Levantine)  |
 | Humanization            | Removes translationese, AI phrasing, stiff rhythm, and wrong register                                      |
 | Project awareness       | `/arabic auto` scans project files so the skill can explain a product, tool, or codebase in natural Arabic |
-| Research intelligence   | `research/` layer + `/arabic research`; distills into runtime via PR + golden tests                        |
+| Research intelligence   | `research/` layer with 4-state lifecycle (collected → curated → distilled → deferred) + `/arabic research`  |
+| Load presets            | 11 named task bundles (plan, write, audit, seasonal, campaign, book, coach, init, audit-full, dialect-lock + 4 regional SEO-AEO) |
+| RTL & dialect audit     | Runtime validation for bidirectional text structure + MSA-bleed detection (v1.2.9)                         |
 | First-run onboarding    | `/arabic guide` (Path A) and `/arabic init` (Path B) with `.arabic/` templates                             |
 | Command system          | `/arabic` with subcommands for guide, write, audit, coach, plan, research, voice, auto, init, and help     |
 | Website dogfooding      | Shipped at `v1.1.0` — [install site](https://arabic-skill.vercel.app) (8 Masri routes, dogfood `/about`)   |
@@ -95,7 +97,7 @@ The repository includes local logo assets under `[public/assets/](./public/asset
 | ChatGPT          | Partial | manual                | [Profile](./docs/supported/chatgpt/README.md)          |
 | Claude           | Strong  | `npx --target claude` | [Profile](./docs/supported/claude/README.md)           |
 | Cline            | Strong  | manual                | [Profile](./docs/supported/cline/README.md)            |
-| Codex            | Partial | `npx --target codex`  | [Profile](./docs/supported/codex/README.md)            |
+| Codex            | Strong  | `npx --target codex`  | [Profile](./docs/supported/codex/README.md)            |
 | Continue         | Partial | manual                | [Profile](./docs/supported/continue/README.md)         |
 | Copilot          | Partial | manual                | [Profile](./docs/supported/copilot/README.md)          |
 | Cursor           | Strong  | `npx --target cursor` | [Profile](./docs/supported/cursor/README.md)           |
@@ -209,39 +211,57 @@ Runtime install folder is `arabic/`. The GitHub repo can stay `mediabubble-adv/a
 
 ## Development Status
 
+**🛡️ Maintenance Mode Active** (as of 2026-07-07)
 
-| Area                 | Status                                                                                                |
-| -------------------- | ----------------------------------------------------------------------------------------------------- |
-| Runtime pack         | `arabic/` at `v1.2.7` — advisory-first router, load discipline, onboarding                            |
-| Canonical references | 38 packs preserved in `reference/`                                                                    |
-| Research layer       | **R0–R4 ✅** — `research/`, `/arabic research`, `validate-research.sh`, monthly cron                   |
-| `/arabic` commands   | Shipped — router, Cursor adapter, init, auto, research                                                |
-| Website              | **v1.1.0 ✅** — [https://arabic-skill.vercel.app](https://arabic-skill.vercel.app) (G13–G18)           |
-| npm distribution     | `@mediabubble-adv/arabic-skill@1.2.7` — npx install + publish CI                                      |
-| Golden tests         | Structural + routing + scenario gates in CI; Playwright G15–G16; `golden:harness` + nightly workflow |
-| Next train           | **1.2.8+** — tune presets from nightly report artifacts                                               |
+| Area                 | Status                                                                                                                  |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| Runtime pack         | `arabic/` at `v1.2.9` — runtime hardening (load presets, RTL/dialect audit, research distillation)                     |
+| Canonical references | 63 files in `arabic/references/` + `research/` knowledge base                                                            |
+| Research layer       | **R0–R4 ✅** — `research/`, `/arabic research`, 4-state lifecycle, monthly snapshot automation (cron-triggered)         |
+| RTL & Dialect Audit  | **P8B ✅** — `validate-rtl.sh`, `validate-dialect-bleed.sh`, MSA-bleed detection, runtime validation                    |
+| Load Presets         | **P8A ✅** — 11 named task bundles (plan, write, audit, seasonal, campaign, book, coach, init, audit-full, dialect-lock + 4 regional SEO-AEO) |
+| `/arabic` commands   | Shipped — router, Cursor adapter, init, auto, research, guide, write, audit, coach, plan, voice                        |
+| Website              | **v1.1.0 ✅** — [https://arabic-skill.vercel.app](https://arabic-skill.vercel.app) (8 Masri routes, Playwright tested) |
+| npm distribution     | `@mediabubble-adv/arabic-skill@1.2.9` — 24 tool profiles, npx install + publish CI                                     |
+| Golden tests         | **21 golden tests ✅** — G1–G12 (behavioral), G13–G18 (website), P8A–P8C (hardening)                                   |
+| Community            | Discord, GitHub Discussions, Substack newsletter, metrics dashboard (weekly/monthly/quarterly)                          |
+| Next phase           | **Phase 9B (optional)** — Advanced integrations (Slack, webhooks, custom templates) • OR sustain v1.2.9 + monitor metrics |
 
 
 
 
 ## Documentation
 
+**Maintenance Mode Resources:**
 
 | Doc                                                                         | Purpose                                             |
 | --------------------------------------------------------------------------- | --------------------------------------------------- |
+| [Maintenance Mode Plan](./docs/MAINTENANCE_MODE.md)                         | Weekly/monthly/quarterly cadence, support SLAs, metrics targets |
+| [Project Status](./docs/PROJECT_STATUS.md)                                  | Complete phase timeline (0–9A), repository structure, validation gates |
 | [Docs Index](./docs/README.md)                                              | Full documentation map                              |
-| [PRD](./docs/product/prd.md)                                                | Product vision and success criteria                 |
 | [Roadmap](./docs/planning/roadmap.md)                                       | Release train and phase sequence                    |
+| [Metrics Dashboard](./docs/metrics/)                                        | Weekly reports, marketplace tracker, GA4 analytics  |
+
+**Development Docs:**
+
+| Doc                                                                         | Purpose                                             |
+| --------------------------------------------------------------------------- | --------------------------------------------------- |
+| [PRD](./docs/product/prd.md)                                                | Product vision and success criteria                 |
 | [Implementation Plan](./docs/planning/implementation-plan.md)               | File-by-file build plan                             |
-| [Claude Plan Audit Prompt](./docs/planning/claude-plan-audit-prompt.md)     | Prompt for Claude to audit and rewrite the plan set |
-| [Research Intelligence Plan](./docs/planning/research-intelligence-plan.md) | Internet + AI + reference research workflow         |
-| [Research Monthly Cron](./docs/planning/research-monthly-cron.md)           | Scheduled research maintenance                      |
 | [Command Surface](./docs/planning/command-surface.md)                       | `/arabic` grammar and subcommands                   |
+| [Research Intelligence Plan](./docs/planning/research-intelligence-plan.md) | 4-state distillation lifecycle, monthly automation  |
 | [Reference Distillation](./docs/planning/reference-distillation.md)         | How `reference/` becomes runtime behavior           |
-| [Supported Tools](./docs/supported/README.md)                               | Install profiles for AI tools                       |
+| [Supported Tools](./docs/supported/README.md)                               | 24 tool profiles with install instructions          |
 
+## Community & Support
 
+Join the Awesome Arabic Skill community (Maintenance Mode):
 
+- **💬 [Discord Server](https://discord.gg/arabic-skill)** — Real-time chat, #help channel, feature voting, community updates
+- **💡 [GitHub Discussions](https://github.com/mediabubble-adv/arabic-skill/discussions)** — Questions, feature requests, ideas, announcements
+- **📧 [Substack Newsletter](https://arabic-skill.substack.com)** — Weekly/monthly release notes, metrics reports, user spotlights, tips
+- **🐛 [GitHub Issues](https://github.com/mediabubble-adv/arabic-skill/issues)** — Bug reports and feature requests (48-72h response time)
+- **📊 [Metrics Dashboard](./docs/metrics/)** — Weekly/monthly community metrics, marketplace trends, usage analytics
 
 ## Validation
 

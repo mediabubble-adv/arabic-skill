@@ -14,7 +14,7 @@ Automated UX and content smoke tests. Run via `npm run validate:website-playwrig
 | Tool tabs | `/install` | Claude/Codex tabs swap command in `pre` |
 | FAQ accordion | `/install` | First item toggles open/closed |
 | Before/after | `/examples` | `قبل` / `بعد` swap copy |
-| Sticky install bar | `/` | Appears after scroll >320px on mobile |
+| Sticky install bar | `/` | Appears after scroll >320px; shows install link + copy CTA |
 
 ## PW-16 — Frozen audit + footer SSOT
 

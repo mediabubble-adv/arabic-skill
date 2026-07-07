@@ -56,13 +56,17 @@ Before writing, state the recommended direction and **why**. This is what separa
 Recommendation summary (always show before writing):
 
 ```
-Dialect/register: <e.g. clean commercial Masri>
-Format/channel:   <e.g. Meta Reels + click-to-WhatsApp>
-Why:              <one line tied to the user's goal>
+Dialect/register:   <e.g. clean commercial Masri>
+Format/channel:     <e.g. Meta Reels + click-to-WhatsApp>
+Archetype/lever:    <e.g. Family Guardian + Thiqa (Trust)> [for commercial/persuasive tasks only]
+Why:                <one line tied to the user's goal>
 ```
 
-Example: "For this audience I recommend Meta Reels plus click-to-WhatsApp — consumer, price-sensitive,
-more likely to convert in chat than a long form."
+Example: "For this audience I recommend Meta Reels plus click-to-WhatsApp, targeting the Family Guardian
+with trust-building messaging — consumer, price-sensitive, more likely to convert in chat than a long form."
+
+Archetype/lever note: Include this line for any commercial task (ads, sales, campaigns, brand voice).
+Omit for editorial, blog, or informational content. See `persuasion-arab-psychology.md` for archetype + lever mappings.
 
 If the user disagrees, adjust the recommendation before writing — do not write the rejected direction.
 

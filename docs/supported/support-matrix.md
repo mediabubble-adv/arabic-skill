@@ -4,7 +4,7 @@
 |---|---|---|---|---|---|---|
 | Claude | Strong | system instructions + project docs + skill/rules pattern | Strong | Strong/Simulated | Strong | Low |
 | Cursor | Strong | repo rules + docs + command conventions | Strong | Partial/Simulated | Strong | Low |
-| Codex | Partial | skills-folder + docs | Partial | Unknown | Strong | Medium |
+| Codex | Strong | skills-folder + docs | Partial | Unknown | Strong | Medium |
 | ChatGPT | Partial | Custom GPT / Project instructions + knowledge upload | Limited | Limited | Limited | High |
 | Antigravity | Partial | `.agents/skills/` + global skills + docs | Partial | Partial | Strong | Medium |
 | Aider | Strong | CLI wrapper + repo docs + command conventions | Strong | Simulated | Strong | Low |

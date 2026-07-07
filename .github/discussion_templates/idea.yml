@@ -1,0 +1,62 @@
+title: "Feature Idea"
+labels: "idea"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We love feature ideas! Help us understand your request by providing context.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: "Problem"
+      description: "What problem are you facing?"
+      placeholder: "When auditing 50 pages of Arabic content, I have to copy/paste each page URL into the audit tool one by one."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: "Proposed Solution"
+      description: "How should we solve this?"
+      placeholder: |
+        Add a batch audit feature that accepts a CSV of URLs:
+        ```
+        /arabic audit --batch urls.csv
+        ```
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "Alternatives Considered"
+      description: "Any other approaches we could take?"
+      placeholder: "A web UI for uploading multiple URLs. Or a Cursor context menu with bulk selection."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: use_case
+    attributes:
+      label: "What's your use case?"
+      options:
+        - "Content creation"
+        - "Quality assurance / auditing"
+        - "Translation / localization"
+        - "API integration"
+        - "Developer tooling"
+        - "Other"
+      validations:
+        required: true
+
+  - type: checkboxes
+    id: check
+    attributes:
+      label: "Additional"
+      options:
+        - label: "This feature would help scale Arabic content faster"
+          required: false
+        - label: "I'd be willing to beta test this feature"
+          required: false
