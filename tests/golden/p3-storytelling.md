@@ -4,7 +4,7 @@ Behavioral contract for Phase 3 (Commercial Storytelling Reference) — narrativ
 
 ## P3-Contract-01 — File structure & content completeness
 
-### storytelling.md (327 lines) — all 4 sections present
+### storytelling.md (279 lines) — all 4 sections present
 
 - [ ] **§1 Arab Narrative Devices (5 patterns):**
   - [ ] Proverb-anchored opening (why + example structure)
