@@ -1,0 +1,39 @@
+website/app/components/NewsletterForm.tsx
+  s_0197dde7fadf2a::t_f58b418a012714 1-109
+.github/discussion_templates/question.yml
+  s_0197dde7fadf2a::t_d270db841c86cb 1-60
+docs/community/SUBSTACK_SETUP.md
+  s_0197dde7fadf2a::t_8d20099635267f 1-215
+website/components/site-footer.tsx
+  s_0197dde7fadf2a::t_9570d725441f18 2,6,8-95
+docs/community/DISCORD_SETUP.md
+  s_0197dde7fadf2a::t_df37df9b549966 1-115
+website/app/newsletter/page.tsx
+  s_0197dde7fadf2a::t_151eafacfe6fbb 1-216
+README.md
+  s_0197dde7fadf2a::t_c6f0cfd2649625 245,247,249-252
+docs/planning/9a4-community-feedback.md
+  s_0197dde7fadf2a::t_673ef5b23f6269 1-137
+docs/community/GITHUB_DISCUSSIONS_FAQ.md
+  s_0197dde7fadf2a::t_9e3809e000b8d3 1-224
+.github/discussion_templates/idea.yml
+  s_0197dde7fadf2a::t_faad2e58383342 1-62
+.github/discussion_templates/announcement.yml
+  s_0197dde7fadf2a::t_854ca005a1fe02 1-73
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "19ad9df1fd0a0e087531dc222b60da352318aeda",
+  "prompts": {},
+  "sessions": {
+    "s_0197dde7fadf2a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "76c5c404-8942-4fc7-9c88-40e1874404e1",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
