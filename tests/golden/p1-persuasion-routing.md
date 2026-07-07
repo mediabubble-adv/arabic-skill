@@ -83,7 +83,7 @@ Why:                <one line tied to the user's goal>
 ## Validation
 
 - [ ] `npm run validate` exits 0 (all references synced)
-- [ ] `npm run validate:cursor-sync` exits 0 (.cursor/skills/arabic/ matches root)
+- [ ] `npm run validate:cursor-install` exits 0 (.cursor/skills/arabic/ matches root)
 - [ ] Golden test markers found in persuasion-arab-psychology.md (all 6 archetypes + 8 levers)
 - [ ] Load discipline includes persuasion for write/plan commercial tasks
 - [ ] Audit-mode.md check #10 passes syntax validation
