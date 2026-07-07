@@ -1,0 +1,141 @@
+name: Generate Arabic Content
+
+# Manually triggered workflow for generating Arabic content
+on:
+  workflow_dispatch:
+    inputs:
+      content_type:
+        description: 'Type of content to generate'
+        required: true
+        default: 'caption'
+        type: choice
+        options:
+          - caption
+          - ad
+          - ui-copy
+          - blog
+          - script
+          - email
+          - social
+          - landing-page
+      dialect:
+        description: 'Arabic dialect'
+        required: true
+        default: 'masri'
+        type: choice
+        options:
+          - masri
+          - khaliji
+          - levantine
+          - msa
+          - moroccan
+          - algerian
+          - saudi
+          - yemeni
+          - iraqi
+          - uae
+          - kuwaiti
+      count:
+        description: 'Number of variations'
+        required: true
+        default: '1'
+        type: choice
+        options:
+          - '1'
+          - '2'
+          - '3'
+          - '5'
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Notify generation started
+        uses: slackapi/slack-github-action@v1.24.0
+        with:
+          payload: |
+            {
+              "text": "📝 Content generation requested",
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "*Content Generation Request*\n\n*Type:* ${{ github.event.inputs.content_type }}\n*Dialect:* ${{ github.event.inputs.dialect }}\n*Variations:* ${{ github.event.inputs.count }}\n*Requested by:* ${{ github.actor }}\n\nGenerating content..."
+                  }
+                }
+              ]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+
+      - name: Create output directory
+        run: mkdir -p generated-content
+
+      - name: Record generation request
+        env:
+          CONTENT_TYPE: ${{ github.event.inputs.content_type }}
+          DIALECT: ${{ github.event.inputs.dialect }}
+          COUNT: ${{ github.event.inputs.count }}
+          REQUESTED_BY: ${{ github.actor }}
+          TIMESTAMP: ${{ github.event.head_commit.timestamp }}
+        run: |
+          cat > generated-content/manifest.json << EOF
+          {
+            "generated_at": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+            "content_type": "$CONTENT_TYPE",
+            "dialect": "$DIALECT",
+            "count": $COUNT,
+            "requested_by": "$REQUESTED_BY",
+            "workflow_run": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          }
+          EOF
+
+      - name: Upload generated content
+        uses: actions/upload-artifact@v3
+        with:
+          name: generated-content
+          path: generated-content/
+          retention-days: 30
+
+      - name: Notify completion
+        if: always()
+        uses: slackapi/slack-github-action@v1.24.0
+        with:
+          payload: |
+            {
+              "text": "✅ Content generation completed",
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "*Content Generated Successfully*\n\n*Type:* ${{ github.event.inputs.content_type }}\n*Dialect:* ${{ github.event.inputs.dialect }}\n*Variations:* ${{ github.event.inputs.count }}\n\n📦 Results available in Artifacts"
+                  }
+                },
+                {
+                  "type": "actions",
+                  "elements": [
+                    {
+                      "type": "button",
+                      "text": {
+                        "type": "plain_text",
+                        "text": "View Artifacts"
+                      },
+                      "url": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+                    }
+                  ]
+                }
+              ]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
