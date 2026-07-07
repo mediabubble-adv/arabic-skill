@@ -1,14 +1,11 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
+import { writeArabicContent } from '../lib/skill-integration';
 
 /**
  * POST /api/v1/write
  * Generate Arabic content for specified type, dialect, and tone
  */
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-  // Rate limiting (10 requests/minute per IP)
-  const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress || 'unknown';
-  // TODO: Implement rate limiting with Redis or similar
-
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
@@ -47,30 +44,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       return res.status(400).json({ error: 'Brief must be 500 characters or less' });
     }
 
-    // TODO: Call local /arabic write command via child_process
-    // For now, return mock response
-    const mockContent = [
-      {
-        text: `Mock Arabic content for ${type} in ${dialect} dialect`,
-        dialect,
-        notes: 'Generated with mock API (not yet integrated with /arabic write)',
-      },
-    ];
+    // Call integrated skill function
+    const result = await writeArabicContent({ type, dialect, brief, count, tone });
 
-    // Repeat for requested count
-    const content = Array.from({ length: Math.min(count, 3) }, (_, i) => ({
-      ...mockContent[0],
-      text: `${mockContent[0].text} (variation ${i + 1})`,
-    }));
-
-    return res.status(200).json({
-      content,
-      metadata: {
-        word_count: content.reduce((sum, c) => sum + c.text.split(' ').length, 0),
-        character_count: content.reduce((sum, c) => sum + c.text.length, 0),
-        complexity_tier: 'intermediate',
-      },
-    });
+    return res.status(200).json(result);
   } catch (error) {
     console.error('Error in /v1/write:', error);
     return res.status(500).json({

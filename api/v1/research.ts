@@ -1,4 +1,5 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
+import { researchArabicTopic } from '../lib/skill-integration';
 
 /**
  * POST /api/v1/research
@@ -21,30 +22,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       return res.status(400).json({ error: 'max_results must be between 1 and 20' });
     }
 
-    // TODO: Call local /arabic research command via child_process
-    // TODO: Query research/index.json for existing topics
-    // For now, return mock response
-    const mockFindings = [
-      {
-        title: 'Egyptian Arabic trends in digital marketing',
-        summary: 'Research on how Egyptian (Masri) dialect is evolving in social media and advertising',
-        dialect_specific: 'Masri colloquialisms and slang in modern contexts',
-        citations: ['source 1', 'source 2'],
-      },
-      {
-        title: 'Gulf Arabic business communication',
-        summary: 'Formal business language in Gulf region content',
-        dialect_specific: 'Gulf (Khaliji) formal register patterns',
-        citations: ['source 3'],
-      },
-    ];
+    // Call integrated skill function
+    const result = await researchArabicTopic({ query, dialect, maxResults: max_results });
 
-    return res.status(200).json({
-      topic: query,
-      findings: mockFindings.slice(0, Math.min(max_results, mockFindings.length)),
-      lifecycle_state: 'distilled',
-      last_updated: new Date().toISOString(),
-    });
+    return res.status(200).json(result);
   } catch (error) {
     console.error('Error in /v1/research:', error);
     return res.status(500).json({

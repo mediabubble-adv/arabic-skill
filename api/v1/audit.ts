@@ -1,4 +1,5 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
+import { auditArabicContent } from '../lib/skill-integration';
 
 /**
  * POST /api/v1/audit
@@ -28,23 +29,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       });
     }
 
-    // TODO: Call local /arabic audit command via child_process
-    // For now, return mock response
-    const mockIssues = [
-      {
-        type: 'translationese',
-        severity: 'medium',
-        description: 'Contains AI-sounding phrases that break natural flow',
-        snippet: 'يرجى العلم',
-        suggestion: 'Use more conversational phrasing like: اعرف إن',
-      },
-    ];
+    // Call integrated skill function
+    const result = await auditArabicContent({ content, dialect, auditType: audit_type });
 
-    return res.status(200).json({
-      overall_score: 78,
-      issues: audit_type === 'full' ? mockIssues : mockIssues.filter(i => i.type === audit_type),
-      summary: 'Good Arabic quality with minor improvements suggested for naturalness',
-    });
+    return res.status(200).json(result);
   } catch (error) {
     console.error('Error in /v1/audit:', error);
     return res.status(500).json({
