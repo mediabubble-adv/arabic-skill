@@ -1,0 +1,33 @@
+api/webhooks/queue.ts
+  s_98eb88043f4ae8::t_e5f4a1b6acbec7 1-335
+app/api/webhooks/health/route.ts
+  s_98eb88043f4ae8::t_41ac511e868d3f 1-25
+app/api/webhooks/process/route.ts
+  s_98eb88043f4ae8::t_23040bded2d79d 1-46
+api/webhooks/handler.ts
+  s_98eb88043f4ae8::t_64b4fcc54411a8 1-223
+api/webhooks/management.ts
+  s_98eb88043f4ae8::t_1d350b7e656b3c 1-306
+migrations/002_webhooks_schema.sql
+  s_98eb88043f4ae8::t_9bbb4e285c2d77 1-102
+app/api/webhooks/receive/route.ts
+  s_98eb88043f4ae8::t_6fc3886ad5b3bd 1-29
+api/webhooks/types.ts
+  s_98eb88043f4ae8::t_60f39d8e6956fb 1-214
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "8e4c79d1b73fd3b3c6d58125976518a6ea372ae4",
+  "prompts": {},
+  "sessions": {
+    "s_98eb88043f4ae8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5c8757de-275e-4bd9-9a83-ac064708bec0",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
