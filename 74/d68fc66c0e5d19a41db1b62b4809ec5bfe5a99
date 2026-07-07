@@ -1,0 +1,25 @@
+docs/planning/9a5-marketing-metrics.md
+  s_0197dde7fadf2a::t_3ad5b0247b8be8 1-267
+docs/metrics/marketplace-tracker.md
+  s_0197dde7fadf2a::t_2d2f0eb60b8f16 1-154
+docs/metrics/weekly-report-template.md
+  s_0197dde7fadf2a::t_aea6803a0ba5cf 1-193
+docs/metrics/GA4_SETUP.md
+  s_0197dde7fadf2a::t_a11be07d10264e 1-298
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "74d68fc66c0e5d19a41db1b62b4809ec5bfe5a99",
+  "prompts": {},
+  "sessions": {
+    "s_0197dde7fadf2a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "76c5c404-8942-4fc7-9c88-40e1874404e1",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
