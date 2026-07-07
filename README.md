@@ -242,8 +242,14 @@ Runtime install folder is `arabic/`. The GitHub repo can stay `mediabubble-adv/a
 | [Reference Distillation](./docs/planning/reference-distillation.md)         | How `reference/` becomes runtime behavior           |
 | [Supported Tools](./docs/supported/README.md)                               | Install profiles for AI tools                       |
 
+## Community & Support
 
+Join the Awesome Arabic Skill community:
 
+- **💬 [Discord Server](https://discord.gg/[invite-code])** — Real-time chat, help, and feature voting
+- **💡 [GitHub Discussions](https://github.com/mediabubble-adv/arabic-skill/discussions)** — Questions, ideas, and announcements
+- **📧 [Newsletter](https://arabic-skill.vercel.app/newsletter)** — Monthly release notes, user spotlights, and tips
+- **🐛 [GitHub Issues](https://github.com/mediabubble-adv/arabic-skill/issues)** — Bug reports and feature requests
 
 ## Validation
 
