@@ -124,23 +124,24 @@ taboo scan yourself before outputting. Always note which disciplines were applie
 
 Load the matching file from `dialects/` before writing any content.
 
-| Dialect | File | Character |
-|---|---|---|
-| مصري / Masri | `dialects/masri.md` | Witty, sarcastic, emotionally intelligent, mass-appeal |
-| سعودي / KSA | `dialects/ksa.md` | Direct, dignified, bold — Riyadhi / Hejazi / Qassimi sub-registers |
-| خليجي / Khaliji | `dialects/khaliji.md` | Elegant, aspirational, warm — flag divergences per country |
-| شامي / Levantine | `dialects/levantine.md` | Poetic, heartfelt, resilient |
-| عراقي / Iraqi | `dialects/iraqi.md` | Passionate, deeply poetic, dark humor |
-| يمني / Yemeni | `dialects/yemeni.md` | Traditional, proverb-rich, honorable |
-| مغربي / Maghrebi | `dialects/maghrebi.md` | Darija / Tunisian / Algerian — vibrant, French-inflected |
-| سوداني / Sudanese | `dialects/sudanese.md` | Gentle, melodic, community-oriented |
-| ليبي / Libyan | `dialects/libyan.md` | Warm, dry humor, Bedouin-influenced |
-| فصحى / MSA | `dialects/msa.md` | Formal, authoritative, pan-Arab |
-| لهجة بيضاء / White Dialect | `dialects/white-dialect.md` | Stripped MSA, no strong regional markers |
+| Dialect | File | Character | Tier |
+|---|---|---|---|
+| مصري / Masri | `dialects/masri.md` | Witty, sarcastic, emotionally intelligent, mass-appeal | 1 — deep |
+| سعودي / KSA | `dialects/ksa.md` | Direct, dignified, bold — Riyadhi / Hejazi / Qassimi sub-registers | 1 — deep |
+| خليجي / Khaliji | `dialects/khaliji.md` | Elegant, aspirational, warm — flag divergences per country | 1 — deep |
+| شامي / Levantine | `dialects/levantine.md` | Poetic, heartfelt, resilient | 1 — deep |
+| عراقي / Iraqi | `dialects/iraqi.md` | Passionate, deeply poetic, dark humor | 2 — solid |
+| مغربي / Maghrebi | `dialects/maghrebi.md` | Darija / Tunisian / Algerian — vibrant, French-inflected | 2 — solid |
+| فصحى / MSA | `dialects/msa.md` | Formal, authoritative, pan-Arab | 2 — solid |
+| لهجة بيضاء / White Dialect | `dialects/white-dialect.md` | Stripped MSA, no strong regional markers | 2 — solid |
+| يمني / Yemeni | `dialects/yemeni.md` | Traditional, proverb-rich, honorable | 3 — baseline |
+| سوداني / Sudanese | `dialects/sudanese.md` | Gentle, melodic, community-oriented | 3 — baseline |
+| ليبي / Libyan | `dialects/libyan.md` | Warm, dry humor, Bedouin-influenced | 3 — baseline |
 
 **Auto-selection:** Country mentioned → auto-select primary dialect and state the assumption.
 **Pan-Arab brief:** No dialect stated → ask "Which country is the primary audience?" Do NOT default to MSA for commercial or emotional content.
 **Khaliji without country:** Ask "Is this pan-Gulf or a specific country (UAE / Kuwait / Qatar / Bahrain / Oman)?"
+**Confidence tier router:** Tier 3 dialect + high-stakes commercial task (paid campaign, brand launch, legal/financial copy) → disclose the tier to the user ("this dialect's coverage is baseline-depth — markers are directionally correct but less battle-tested than Tier 1") and offer the White Dialect (`dialects/white-dialect.md`) as a lower-risk fallback.
 
 ---
 

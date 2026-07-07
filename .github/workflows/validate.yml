@@ -33,6 +33,9 @@ jobs:
       - name: Validate Cursor full install dry-run
         run: bash scripts/validate-cursor-install.sh
 
+      - name: Validate Cursor skill mirror sync
+        run: bash scripts/validate-cursor-sync.sh
+
       - name: Validate research R0 scaffold
         run: bash scripts/validate-research-scaffold.sh
 

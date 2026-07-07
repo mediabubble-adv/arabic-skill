@@ -51,19 +51,21 @@ Never load all files. Load strictly on demand per task class.
 
 ## Dialects — Load ONLY the 1 Target Dialect (11 files)
 
-| File | Dialect | Region |
-|---|---|---|
-| `dialects/masri.md` | مصري — Egyptian | Egypt |
-| `dialects/ksa.md` | سعودي — Saudi | KSA (Riyadhi / Hejazi / Qassimi) |
-| `dialects/khaliji.md` | خليجي — Gulf | UAE / Kuwait / Qatar / Bahrain / Oman |
-| `dialects/levantine.md` | شامي — Levantine | Syria / Lebanon / Jordan / Palestine |
-| `dialects/iraqi.md` | عراقي — Iraqi | Iraq (Baghdad / Southern / Kurdish regions) |
-| `dialects/yemeni.md` | يمني — Yemeni | Yemen |
-| `dialects/maghrebi.md` | مغربي — Maghrebi | Morocco / Tunisia / Algeria |
-| `dialects/sudanese.md` | سوداني — Sudanese | Sudan |
-| `dialects/libyan.md` | ليبي — Libyan | Libya |
-| `dialects/msa.md` | فصحى — MSA | Pan-Arab formal |
-| `dialects/white-dialect.md` | لهجة بيضاء — White Dialect | Pan-Arab neutral |
+| File | Dialect | Region | Tier |
+|---|---|---|---|
+| `dialects/masri.md` | مصري — Egyptian | Egypt | 1 — deep |
+| `dialects/ksa.md` | سعودي — Saudi | KSA (Riyadhi / Hejazi / Qassimi) | 1 — deep |
+| `dialects/khaliji.md` | خليجي — Gulf | UAE / Kuwait / Qatar / Bahrain / Oman | 1 — deep |
+| `dialects/levantine.md` | شامي — Levantine | Syria / Lebanon / Jordan / Palestine | 1 — deep |
+| `dialects/iraqi.md` | عراقي — Iraqi | Iraq (Baghdad / Southern / Kurdish regions) | 2 — solid |
+| `dialects/maghrebi.md` | مغربي — Maghrebi | Morocco / Tunisia / Algeria | 2 — solid |
+| `dialects/msa.md` | فصحى — MSA | Pan-Arab formal | 2 — solid |
+| `dialects/white-dialect.md` | لهجة بيضاء — White Dialect | Pan-Arab neutral | 2 — solid |
+| `dialects/yemeni.md` | يمني — Yemeni | Yemen | 3 — baseline |
+| `dialects/sudanese.md` | سوداني — Sudanese | Sudan | 3 — baseline |
+| `dialects/libyan.md` | ليبي — Libyan | Libya | 3 — baseline |
+
+**Confidence tier router:** Tier 3 dialect + high-stakes commercial task → disclose the tier and offer `dialects/white-dialect.md` as a fallback. See `SKILL.md` Module 1.
 
 ---
 
