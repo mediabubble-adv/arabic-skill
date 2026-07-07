@@ -137,6 +137,8 @@ Address trust before addressing price. Always.
 
 Label every piece with: stage, psychological lever activated, and next step in the sequence.
 
+**For narrative-driven funnels:** Load `storytelling.md` — selects narrative device per archetype (Proverb, Hakawati, Nested, We-Arc, Honor-Restoration) and applies dialect-specific pacing (Masri punchline, Levantine lyrical, Gulf dignified).
+
 ---
 
 ## 💰 Sales Content Engine
@@ -159,6 +161,8 @@ Sales converts desire that marketing created. Different psychology, different st
 - Trust barrier is higher than in Western markets. The brand must demonstrate they understand the region before it can sell.
 - Community endorsement outperforms celebrity endorsement. "2500 عميل من السعودية" > a famous name.
 - WhatsApp CTA converts higher than email CTA in most Arab markets. Use it.
+
+**For narrative-driven sales copy:** Load `storytelling.md` — founder story, testimonial arc, honor-restoration before/after. Pairing archetype to narrative device elevates credibility and emotional resonance.
 
 **VSL (Video Sales Letter) Script:**
 - Hook (0–10 sec): Start with a painful or shocking truth, not a greeting.

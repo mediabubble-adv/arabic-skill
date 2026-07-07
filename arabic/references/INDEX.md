@@ -15,7 +15,7 @@ Never load all files. Load strictly on demand per task class.
 
 ---
 
-## References — Load by Task (22 files)
+## References — Load by Task (23 files)
 
 | File | Load when |
 |---|---|
@@ -29,6 +29,7 @@ Never load all files. Load strictly on demand per task class.
 | `references/engines.md` | Before generating content (every task) |
 | `references/output-templates.md` | After engine is selected (every task) |
 | `references/persuasion-arab-psychology.md` | Commercial/persuasive tasks (ads, sales, campaigns) — archetype + lever activation |
+| `references/storytelling.md` | Commercial narrative tasks (ads, sales, funnel, video, testimonial) — story arcs + archetype pairing |
 | `references/command-router.md` | `/arabic` routing, workspace persistence, and Cursor adapter behavior |
 | `references/taboos.md` | Before final delivery (every task) |
 | `references/humanization-protocol.md` | After content is drafted (every task) |
