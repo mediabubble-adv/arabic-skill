@@ -27,7 +27,7 @@ Spec: [research-intelligence-plan.md](../docs/planning/research-intelligence-pla
 | P2-008 | dialect-freshness | Southern Aseeri (KSA) — mountain accent phoneme preservation; proximity to classical Arabic | ksa.md §1 | B | 2026-07-05 | Phonetic audit; heritage/craftsmanship vocabulary |
 | P2-009 | dialect-freshness | Abu Dhabi vs Dubai distinction — formality gradient; government vs. business register | khaliji.md §1 | B | 2026-07-05 | Verify code-switching reduction in official/governmental contexts |
 | P2-010 | dialect-freshness | Bahrain — Persian loanwords (some communities); Sunni/Shia vocab mix | khaliji.md §1 | B | 2026-07-05 | Validate community-specific loanwords; historical context |
-| P2-011 | dialect-freshness | Qatar — formal register features; diplomatic/official language patterns | khaliji.md §1 | B | 2026-07-05 | Verify reserve/formality distinction from UAE; government speech patterns |
+| P2-011 | dialect-freshness | Qatar — formal register features; diplomatic/official language patterns | khaliji.md §1 | C | 2026-07-05 | Verify reserve/formality distinction from UAE; government speech patterns |
 
 ## In progress
 
