@@ -15,10 +15,11 @@ Never load all files. Load strictly on demand per task class.
 
 ---
 
-## References — Load by Task (21 files)
+## References — Load by Task (26 files)
 
 | File | Load when |
 |---|---|
+| `references/load-presets.md` | Named file bundles for fast task routing (seasonal, campaign, book, audit-full, dialect-lock, seo-aeo-*) |
 | `references/load-discipline.md` | Any `/arabic` command — pick plan/write/audit/rtl/research load set first |
 | `references/advisory-mode.md` | Start of any task that is not a complete brief (default operating model) |
 | `references/audit-mode.md` | Audit Mode / `/arabic audit`, and as the final 9-point QA review |
@@ -37,6 +38,9 @@ Never load all files. Load strictly on demand per task class.
 | `references/project-context-scanner.md` | Real repo explanations, install/use guides, evidence-grounded copy |
 | `references/book-writing.md` | Book projects, premise-to-continuity workflows |
 | `references/seo-aeo-masri.md` | SEO/AEO or website-copy tasks targeting Egypt |
+| `references/seo-aeo-gulf.md` | SEO/AEO or website-copy tasks targeting the Gulf (UAE/Kuwait/Qatar/Bahrain/Oman) |
+| `references/seo-aeo-ksa.md` | SEO/AEO or website-copy tasks targeting Saudi Arabia |
+| `references/seo-aeo-levantine.md` | SEO/AEO or website-copy tasks targeting Levantine (Syria/Lebanon/Jordan/Palestine) |
 | `references/seasonal-calendar.md` | Campaign planning or any time-sensitive / seasonal brief |
 | `references/research-mode.md` | `/arabic research`, `/arabic research distill`, `/arabic research status` |
 | `references/onboarding-mode.md` | `/arabic init`, first-run install, bare `/arabic` without `.arabic/` |
@@ -119,12 +123,16 @@ Never load all files. Load strictly on demand per task class.
 | P2 (quality engine) | audit-mode.md + humanization-protocol.md v2 (anti-translationese, channel layers) | ✅ Complete |
 | P3 (coach & memory) | prompt-engineering.md + voice.md (brand voice persistence) | ✅ Complete |
 | P4 (Masri commercial) | ads-service-matrix.md + ads-media.md + seo-aeo-masri.md + seasonal-calendar.md + masri.md expansion | ✅ Complete |
+| P4 (Gulf SEO/AEO) | seo-aeo-gulf.md (market-specific SEO/AEO for UAE/Kuwait/Qatar/Bahrain/Oman) | ✅ Complete |
+| P5 (KSA SEO/AEO) | seo-aeo-ksa.md (market-specific SEO/AEO for Saudi Arabia) | ✅ Complete |
+| P6 (Levantine SEO/AEO) | seo-aeo-levantine.md (market-specific SEO/AEO for Syria/Lebanon/Jordan/Palestine) | ✅ Complete |
 | P5 (project mode & dev-tech) | project-mode.md + project-context-scanner.md + book-writing.md + domains/dev-tech.md | ✅ Complete |
 | C1–C3 (command surface) | command-router.md + Cursor adapter + `.arabic/` scaffold | ✅ Complete |
 | P8 (v1.1 runtime) | load-discipline.md + rtl-audit.md + audit/plan/command extensions | ✅ Complete |
+| P8A (load presets) | load-presets.md + scripts/load-preset.sh (smart bundling, preset CLI tool) | ✅ Complete |
 | R3 (research command) | research-mode.md + monthly cron doc | ✅ Complete |
 
-**Total planned files:** 59
-**Total built:** 59 — v1.2.1 + research command wiring
+**Total planned files:** 63
+**Total built:** 63 — v1.2.8 + research command wiring + geographic trilogy (Gulf/KSA/Levantine SEO/AEO) + load presets (P8A)
 
-Breakdown: SKILL.md (1) + voice.md (1) + references/ (22, incl. this INDEX) + dialects/ (11) + domains/ (14) + conversations/ (6) + professional-docs/ (4) = 59.
+Breakdown: SKILL.md (1) + voice.md (1) + references/ (26, incl. this INDEX + load-presets.md) + dialects/ (11) + domains/ (14) + conversations/ (6) + professional-docs/ (4) = 63.

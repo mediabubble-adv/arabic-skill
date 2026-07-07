@@ -1,0 +1,37 @@
+name: Research Snapshot Monthly
+
+on:
+  schedule:
+    # Run on the 1st of each month at 00:00 UTC
+    - cron: '0 0 1 * *'
+  workflow_dispatch:  # Manual trigger for testing
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13'
+
+      - name: Run research snapshot
+        run: bash scripts/snapshot-research-monthly.sh
+
+      - name: Commit and push snapshot
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
+          # Check if there are changes
+          if [[ -n $(git status -s) ]]; then
+            SNAPSHOT_DATE=$(date -u +"%Y-%m-%d")
+            git add research/snapshots/
+            git commit -m "chore(research): monthly snapshot for $SNAPSHOT_DATE"
+            git push
+          else
+            echo "No changes to commit"
+          fi

@@ -16,10 +16,11 @@ import json
 import os
 import sys
 from pathlib import Path
+from typing import Optional, List, Dict
 
 root = Path(os.environ["ROOT"])
 manifest_path = root / "tests" / "golden" / "g1-g12-manifest.json"
-errors: list[str] = []
+errors: List[str] = []
 
 manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
 tests = manifest.get("tests") or []
@@ -30,7 +31,7 @@ if len(tests) != 12:
 ids = [t.get("id") for t in tests]
 expected_ids = [f"G{i}" for i in range(1, 13)]
 
-def golden_num(gid: str | None) -> int | None:
+def golden_num(gid: Optional[str]) -> Optional[int]:
     if not gid or not isinstance(gid, str):
         return None
     if not gid.startswith("G") or not gid[1:].isdigit():
@@ -44,7 +45,7 @@ for gid in ids:
 if sorted([g for g in ids if golden_num(g) is not None], key=golden_num) != expected_ids:
     errors.append(f"FAIL: manifest ids must be G1–G12 exactly, got {ids}")
 
-seen_commands: dict[str, str] = {}
+seen_commands: Dict[str, str] = {}
 for entry in tests:
     gid = entry.get("id", "?")
     command = entry.get("command", "")

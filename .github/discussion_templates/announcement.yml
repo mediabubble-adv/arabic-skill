@@ -1,0 +1,73 @@
+title: "Announcement"
+labels: "announcement"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for release notes, milestones, and important updates.
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: "Announcement Category"
+      options:
+        - "Release"
+        - "Bug Fix"
+        - "Breaking Change"
+        - "Roadmap Update"
+        - "Community Highlight"
+        - "Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: announcement
+    attributes:
+      label: "Announcement"
+      description: "What's new?"
+      placeholder: |
+        # v1.3.0 Released 🚀
+
+        ## New Features
+        - Batch audit mode (`--batch urls.csv`)
+        - 3 new dialects: Moroccan, Algerian, Tunisian
+
+        ## Bug Fixes
+        - Fixed RTL validation false positives on LRM markers
+
+        ## Breaking Changes
+        - Removed deprecated `--register-old` flag
+
+        ## Install
+        ```bash
+        npx skills update mediabubble-adv/arabic-skill
+        ```
+      validations:
+        required: true
+
+  - type: textarea
+    id: migration
+    attributes:
+      label: "Migration Guide (if breaking changes)"
+      description: "How should users update their workflows?"
+      placeholder: "Replace `--register-old` with `--register` in your scripts."
+      validations:
+        required: false
+
+  - type: textarea
+    id: thanks
+    attributes:
+      label: "Thanks & Credits"
+      description: "Shout out contributors, community members, etc."
+      placeholder: "Thanks to @contributor for implementing batch audit, and @community_member for the Moroccan dialect refinements!"
+      validations:
+        required: false
+
+  - type: textarea
+    id: next
+    attributes:
+      label: "What's Next?"
+      description: "Teaser for upcoming work"
+      placeholder: "Working on Phase 9A-5: Metrics dashboard. Expect early access in 2 weeks!"
+      validations:
+        required: false
