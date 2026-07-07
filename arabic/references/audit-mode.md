@@ -140,7 +140,49 @@ Flag patterns associated with LLM-generated Arabic (orthogonal to the 9-point sc
 
 Rate: **low / medium / high** AI-likelihood. Do not block publish on this alone — pair with 9-point score.
 
+---
+
+## 10. RTL & Bidirectional Text Audit (Tier 1)
+
+When the copy is HTML/UI/code markup, check bidirectional text structure:
+
+| Issue | Signal | Fix |
+|-------|--------|-----|
+| **Orphaned RLE** | RLE (U+202A) without matching PDF (U+202C) | Close with PDF |
+| **Unbalanced nesting** | RLE count ≠ PDF count | Match pairs |
+| **Missing LRM** | Arabic word followed directly by Latin (e.g., "كويس123") | Insert LRM (U+200F) between them |
+| **Broken fallback** | No bidirectional marks in critical UI strings | Add RLE/PDF or LRM as appropriate |
+
+**Run:** `scripts/validate-rtl.sh <file>` for automated tier-1 checks (RLE/PDF balance, LRM detection).
+
+**Score:** 0–10 RTL balance score; pair with grammar/register scores for overall audit.
+
+---
+
+## 11. Dialect Purity Audit
+
+Prevent MSA bleed and cross-dialect mixing:
+
+| Issue | Signal | Fix |
+|-------|--------|-----|
+| **MSA bleed** | Formal words like "بموجب", "نظراً لـ", "يتعين" in colloquial sections | Replace with dialect form or restructure |
+| **Cross-dialect mixing** | Khaliji "زين" in Masri section or vice versa | Lock to one dialect per section |
+| **Register drift** | Mix of L1 slang + L4 formality without intent | Align register to section role |
+
+**Run:** `scripts/validate-dialect-bleed.sh <file>` for automated dialect consistency checks (MSA markers, cross-dialect words).
+
+**Score:** 0–10 dialect consistency score; integrate into overall 9-point audit.
+
+**Pre-delivery checklist:**
+- [ ] Dialect locked (Masri / Khaliji / Levantine / KSA / MSA / other)
+- [ ] No MSA formal words in dialect sections
+- [ ] No cross-dialect vocabulary mixing
+- [ ] Register consistent with platform / audience
+
+---
+
 ## Related
 - `humanization-protocol.md` — apply before auditing generated copy (anti-translationese, channel rules)
 - `taboos.md` — cultural red-lines for the cultural-fitness dimension
+- `rtl-audit.md` — source-based RTL/UI checks (tier 1 for `/arabic audit rtl`)
 - Deep cuts (error catalog, brand lexicon, platform registers): `reference/arabic-qa/`

@@ -6,6 +6,18 @@ Planning, product, engineering, and tool-support documentation for **Awesome Ara
 
 ---
 
+## 🛡️ Maintenance Mode (Phase 9A Complete)
+
+**Current Status:** v1.2.9 — Runtime hardening, RTL/dialect audit, research distillation (active as of 2026-07-07)
+
+| I need to… | Read |
+|------------|------|
+| **Understand the maintenance plan** | **[Maintenance Mode Plan](./MAINTENANCE_MODE.md)** — Weekly/monthly/quarterly cadence, SLAs, metrics targets |
+| Track project metrics | [Metrics Dashboard](./metrics/README.md) — Weekly reports, marketplace tracker, GA4 analytics |
+| Check overall project completion | [PROJECT_STATUS.md](./PROJECT_STATUS.md) — Phase map (0–9A), metrics, validation gates |
+
+---
+
 ## Quick Start
 
 | I want to… | Read |
@@ -24,6 +36,15 @@ Planning, product, engineering, and tool-support documentation for **Awesome Ara
 ---
 
 ## Categories
+
+### Maintenance
+
+Active operational documentation for Phase 9A maintenance mode.
+
+| Document | Description |
+|----------|-------------|
+| [Maintenance Mode Plan](./MAINTENANCE_MODE.md) | Weekly/monthly/quarterly cadence, support SLAs, metrics targets |
+| [Metrics & Analytics](./metrics/README.md) | Dashboard, weekly reports, marketplace tracker, GA4 setup |
 
 ### Analysis
 

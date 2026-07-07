@@ -1,6 +1,6 @@
 {
   "name": "@mediabubble-adv/arabic-skill",
-  "version": "1.2.7",
+  "version": "1.2.9",
   "description": "Awesome Arabic Skill runtime pack and npx installer.",
   "license": "MIT",
   "author": "MediaBubble",
@@ -41,7 +41,7 @@
     "install:claude": "node bin/arabic-skill.js install --target claude",
     "install:codex": "node bin/arabic-skill.js install --target codex",
     "install:all": "node bin/arabic-skill.js install --target all",
-    "validate": "bash scripts/validate-skill.sh && bash scripts/validate-frontmatter.sh && bash scripts/validate-docs.sh && bash scripts/validate-supported.sh && bash scripts/validate-website-install.sh && bash scripts/validate-npm-pack.sh && bash scripts/validate-cursor-install.sh && bash scripts/validate-research-scaffold.sh && bash scripts/validate-research.sh && bash scripts/validate-reference-sync.sh && bash scripts/validate-onboarding.sh && bash scripts/validate-golden.sh && bash scripts/validate-behavioral-golden.sh && bash scripts/validate-golden-scenarios.sh",
+    "validate": "bash scripts/validate-skill.sh && bash scripts/validate-frontmatter.sh && bash scripts/validate-docs.sh && bash scripts/validate-supported.sh && bash scripts/validate-website-install.sh && bash scripts/validate-npm-pack.sh && bash scripts/validate-cursor-install.sh && bash scripts/validate-research-scaffold.sh && bash scripts/validate-research.sh && bash scripts/validate-reference-sync.sh && bash scripts/validate-onboarding.sh && bash scripts/validate-golden.sh && bash scripts/validate-behavioral-golden.sh && bash scripts/validate-golden-scenarios.sh && bash scripts/validate-rtl.sh && bash scripts/validate-dialect-bleed.sh",
     "validate:frontmatter": "bash scripts/validate-frontmatter.sh",
     "validate:research-scaffold": "bash scripts/validate-research-scaffold.sh",
     "validate:research": "bash scripts/validate-research.sh",

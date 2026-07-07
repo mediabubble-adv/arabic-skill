@@ -36,7 +36,7 @@ test.describe("G16 — frozen audit snapshot and footer SSOT", () => {
       "href",
       "/about",
     );
-    await expect(footer.getByRole("link", { name: "GitHub" })).toHaveAttribute(
+    await expect(footer.getByRole("link", { name: "GitHub", exact: true })).toHaveAttribute(
       "href",
       "https://github.com/mediabubble-adv/arabic-skill",
     );

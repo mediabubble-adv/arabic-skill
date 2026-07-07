@@ -7,6 +7,56 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.2.9] - 2026-07-06
+
+**Runtime hardening** — P8A–P8C complete (load-preset bundling, RTL audit, research distillation).
+
+### Added
+- `arabic/references/load-presets.md` — named task-class bundles (plan, write, audit, seasonal, campaign, book, audit-full, dialect-lock, coach, init; 4 SEO-AEO regional variants) (P8A)
+- `scripts/load-preset.sh` — CLI tool to fetch and validate preset files (load-discipline compliant ≤6 files/task) (P8A)
+- `scripts/validate-rtl.sh` — RTL structure validation (RLE/PDF balance, orphaned markers, LRM gaps) (P8B)
+- `scripts/validate-dialect-bleed.sh` — dialect purity validation (MSA bleed detection, cross-dialect mixing) (P8B)
+- `research/distillation-lifecycle.md` — four-state machine (collected → curated → distilled → deferred) with transition rules and validation gates (P8C)
+- `scripts/snapshot-research-monthly.sh` — monthly state archive script with stale topic detection and backlog calculation (P8C)
+- `.github/workflows/research-snapshot-monthly.yml` — GitHub Actions cron trigger (1st of month, 00:00 UTC) (P8C)
+- Golden test fixtures: `tests/golden/p8a-load-presets.md`, `tests/golden/p8b-rtl-dialect-audit.md`, `tests/golden/p8c-research-distillation.md`
+
+### Changed
+- `arabic/references/audit-mode.md` — added §10 "RTL & Bidirectional Text Audit" + §11 "Dialect Purity Audit" with validation checklists (P8B)
+- `arabic/references/load-discipline.md` — added §0 "Presets (Quick Start)" with CLI examples before task classes (P8A)
+- `arabic/references/INDEX.md` — added load-presets.md to References table; incremented count: 25→26 refs, total: 62→63 files (P8A)
+- `package.json` — wired P8B scripts into `npm run validate` (validate-rtl.sh + validate-dialect-bleed.sh)
+
+### Validation
+- P8A: All 11 presets (core + specialized + regional) defined, ≤6 files per task, CLI functional
+- P8B: RTL detection (5+ issue types), dialect consistency checks, zero false positives on baseline
+- P8C: State machine complete (4 states, valid transitions), monthly snapshots generated, lifecycle validation gates
+- All 14+ golden gates pass (`npm run validate`)
+
+## [1.2.8] - 2026-07-06
+
+**Geographic trilogy + distribution finalized** — P4–P7 phases complete (SEO-AEO regional variants, tool profiles, command maps, CI integration).
+
+### Added
+- `arabic/references/seo-aeo-gulf.md` — Gulf market (UAE/Kuwait/Qatar/Bahrain/Oman) SEO-AEO optimization reference (P4)
+- `arabic/references/seo-aeo-ksa.md` — Saudi Arabia market SEO-AEO optimization reference with regional customization (P5)
+- `arabic/references/seo-aeo-levantine.md` — Levantine market (Syria/Lebanon/Jordan/Palestine) SEO-AEO optimization reference with city-level focus (P6)
+- `docs/supported/codex/README.md` — Codex tool profile (upgraded to Strong fit) (P7A)
+- `docs/supported/chatgpt/README.md` — ChatGPT tool profile (Partial fit; Custom GPT / Projects patterns) (P7A)
+- `v1.1 Command Map` sections to all Partial-tier tools (Gemini, Copilot, VS Code, Kiro, Replit, Continue, Sourcegraph Cody, Kilo Code, JetBrains Junie) (P7B–P7C)
+- Validation notes (dated 2026-07-03) for 4 Unknown-tier tools: Antigravity, Hermes Agent, OpenClaw, OpenCode (P7D)
+- Golden test fixtures: `tests/golden/p4-gulf-seo-aeo.md`, `tests/golden/p5-ksa-seo-aeo.md`, `tests/golden/p6-levantine-seo-aeo.md`
+
+### Changed
+- Root `README.md` — updated Codex fit: Partial → Strong in tool profiles table (P7E)
+- `arabic/references/INDEX.md` — incremented reference count: 23→25 files; total: 60→62 files (P4–P6)
+- `docs/supported/support-matrix.md` — updated Codex row: Partial → Strong (P7A)
+- Cross-pointers added to all four regional SEO-AEO files (Masri, Gulf, KSA, Levantine) for navigation
+- All Partial-tier tool READMEs now include standardized `v1.1 Command Map` and `Persistence` sections (P7B–P7C)
+
+### Fixed
+- Python type hint compatibility across validation scripts (3.9-compatible: replaced dict|None with Optional[dict], etc.)
+
 ## [1.2.7] - 2026-07-05
 
 **Harness tuning** — signal presets, JSON reports, nightly workflow.
