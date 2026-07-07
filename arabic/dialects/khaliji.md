@@ -6,38 +6,91 @@
 
 ---
 
-## 1. Country Variations
+## 1. Country & City Variations
 
-### إماراتي (Emirati — UAE)
-The commercial prestige dialect of the Gulf. Dubai especially is a global content hub.
-- Most cosmopolitan Gulf dialect
-- Heavy English mixing in business contexts
-- Young Emiratis (20–35) = highly digitally native
-- Abu Dhabi slightly more formal/traditional than Dubai
+### الإمارات (UAE)
 
-### كويتي (Kuwaiti)
-- Very warm and humorous dialect — Kuwaiti comedy is influential across the Gulf
-- Slightly different vocabulary from UAE
-- High income, high digital consumption
-- قاف sometimes pronounced as a glottal stop (like Masri) — unique among Gulf
+#### دبي (Dubai)
+**Register:** Global, cosmopolitan, business · **When to use:** Tech startups, international brands, young urban audience
+**Markers:**
+- Heavy English code-switching (natural, not lazy)
+- الإمارات, الخليج (pride in Gulf prestige)
+- بيزنس, البروموشن, الـ SME (business terminology)
+- يلّا (rapid energy, action-oriented)
+- الديجيتال, الـ app (tech natural)
 
-### قطري (Qatari)
-- More reserved than UAE/Kuwait
-- Post-2022 World Cup: expanded international exposure
-- Conservative tone expected in public content
-- Small native population; content often reaches expat majority too
+**Sample:** "الستارتأب بتاعنا بتوظّف الإماراتيين — وكل واحد بيجيب حاجة جديدة للتيم."
+**Avoid:** Formal/traditional framing; dismissal of English mixing; slowness
 
-### بحريني (Bahraini)
-- Warmest and most casual Gulf dialect
-- Sunni/Shia mix affects social vocabulary
-- Persian loanwords in some communities
-- Receptive to both Gulf and Levantine content styles
+---
 
-### عُماني (Omani)
-- The most distinct Gulf dialect — preserves classical features other dialects lost
-- Very polite, formal by default
-- Strong maritime and tribal heritage vocabulary
-- Tourism sector growing fast
+#### أبو ظبي (Abu Dhabi)
+**Register:** Formal, governmental, traditional · **When to use:** Government/official audiences, heritage/national brands
+**Markers:**
+- ⚠ verify: More formal than Dubai (less code-switching)
+- الدولة, الحكومة, الشرعية (national authority reference)
+- والله الحمد, بإذن الله (religious language more reserved)
+- الإمارة, الإمارات (national identity strong)
+- الديوان (formal administrative reference)
+
+**Sample:** "إمارة أبو ظبي بتستثمر في المستقبل — والحمد لله على التطوّر اللي بنشوفه."
+**Avoid:** Dubai-style code-switching excess; casual register; dismissal of formality
+
+---
+
+### الكويت (Kuwait)
+**Register:** Warm, humorous, high-spending · **When to use:** Lifestyle, entertainment, humor-friendly brands
+**Markers:**
+- قاف as glottal stop (unique: الألب = heart, like Masri/Levantine)
+- Humor, wit natural (Kuwaiti comedy prestige)
+- يا حبيبي, يا ودّي (very warm address)
+- التسوّق, الشراء (consumer culture natural reference)
+- والنبي (oath for emphasis, playful tone possible)
+
+**Sample:** "ود التسوّق بالكويت ما بينتهي — دايماً في حاجة جديدة تخليك بتشتري."
+**Avoid:** Serious/stern tone; disconnection from consumer energy; mockery of warmth
+
+---
+
+### قطر (Qatar)
+**Register:** Reserved, formal, diplomatic · **When to use:** Government/official partners, luxury/heritage brands
+**Markers:**
+- ⚠ verify: More formal than UAE/Kuwait
+- الدولة, الشرف, المكانة (dignity/prestige strong)
+- والله, بإذن الله (religious language formal, respectful)
+- الخليج, الإمارة (national identity reference)
+- المشروع, الاستثمار (formal business language)
+
+**Sample:** "قطر بتستثمر في الثقافة والرياضة — والحمد لله على التطوّر المحترم اللي عندنا."
+**Avoid:** Casual humor; code-switching excess; frivolous tone
+
+---
+
+### البحرين (Bahrain)
+**Register:** Warm, casual, open · **When to use:** Social/entertainment brands, community-focused campaigns
+**Markers:**
+- Warmest Gulf dialect (very casual acceptable)
+- يا حبيب (endearment very natural)
+- ⚠ verify: Persian loanwords possible in some communities
+- التسوّق, الجمعة (social gathering reference)
+- والله الحمد (gratitude warm, not formal)
+
+**Sample:** "البحرين صغيرة بس قلب الخليج — وفيها طعم عفكرة ما تحس فيها برا."
+**Avoid:** Extreme formality; disconnection from warmth/community; dismissal of cultural mix
+
+---
+
+### عُمان (Oman)
+**Register:** Polite, formal, classical · **When to use:** Heritage brands, luxury/tourism, conservative audiences
+**Markers:**
+- Most classical-influenced Gulf (phoneme preservation)
+- البحر, الميناء, التجارة (maritime heritage strong)
+- أستاذ, حضرتك (formal address very natural)
+- والله الحمد, الحمد لله (gratitude central, deeply respectful)
+- الموروث, التقاليد, الحرفة (heritage embedded)
+
+**Sample:** "عمّان ظلّت محافظة على تراثها — والبحر والطريق التجاري عندهم تاريخ."
+**Avoid:** Casual code-switching; dismissal of formality; disrespect to heritage
 
 ---
 

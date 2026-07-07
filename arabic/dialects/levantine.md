@@ -6,34 +6,114 @@
 
 ---
 
-## 1. Country Variations
+## 1. Country & City Variations
 
-### لبناني (Lebanese)
-The prestige Levantine variety. Dominant in Arab music, fashion, beauty, celebrity culture.
-- Most French loanwords (colonial legacy)
-- Most open to Western cultural references
-- Beirut urban accent is the prestige standard
-- Nightlife, fashion, food, entertainment industries centered here
-- Diaspora across 4 continents speaks Lebanese-influenced Levantine
+### لبنان (Lebanon) — City Blocks
 
-### سوري (Syrian)
-Large diaspora since 2011 (Turkey, Jordan, Lebanon, Europe, Gulf).
-- Damascene Syrian is considered the most elegant Levantine variety
-- Aleppo has distinct accent with more classical features
-- Content targeting Syrian diaspora: emotional connection to homeland matters deeply
-- In post-2011 content: political sensitivity around conflict references
+#### بيروت (Beirut)
+**Register:** Cosmopolitan, fashion/prestige · **When to use:** Fashion, beauty, lifestyle brands; young urban audience
+**Markers:**
+- French loanwords natural (piscine, salon, merci used)
+- Fashion industry vocabulary (موضة, ستايل, collage)
+- يلّا = let's go (rapid energy)
+- يا خيبة, يا للحسرة (theatrical emotion)
+- Soft zh for ج; ق as glottal stop
 
-### أردني (Jordanian)
-- Between Levantine and Gulf in some features (some influence from Najdi)
-- Bedouin vs urban Amman split (similar to KSA)
-- Amman educated class: very close to Lebanese in register
-- Tribal / southern Jordan: more traditional vocabulary
+**Sample:** "الستايل ما بيكون من الماركات الغالية بس — بيكون من ثقتك بحالك."
+**Avoid:** Rural/traditional framing; disconnection from fashion/modernity
 
-### فلسطيني (Palestinian)
-- Jerusalem/Ramallah dialect is closest to classical
-- Gaza: slightly different pronunciation patterns
-- Diaspora (Jordan, Lebanon, Chile, US) has wide spread
-- Deep emotional weight — content about identity and homeland resonates
+---
+
+#### طرابلس (Tripoli)
+**Register:** Northern coastal, mercantile · **When to use:** Commercial/trade audiences, heritage brands
+**Markers:**
+- ⚠ verify: Port/merchant vocabulary (تجارة, ميناء, سفينة)
+- More conservative than Beirut but cosmopolitan
+- يا غالي = endearment (warmth, older register)
+- بحري (maritime reference natural)
+- Traditional crafts (صناعة يدوية) embedded
+
+**Sample:** "ألف سنة بتاع الحرفة ما بتضيع بيوم — بنحافظ على الطريقة القديمة."
+**Avoid:** Western/fashion extreme; dismissal of tradition
+
+---
+
+#### الجنوب (South Lebanon)
+**Register:** Conservative, agricultural · **When to use:** Family brands, heritage, rural outreach
+**Markers:**
+- ⚠ verify: More religious language (إن شاء الله, بإذن الله natural)
+- قرية, فلّاح, أرض embedded contextually
+- يا ست, يا عم (respectful address)
+- والنبي (oath, conviction)
+- محصول, زراعة appear naturally
+
+**Sample:** "البيت بيكون غني بإذن الله لما نركّز على المحصول اللي بيعطي الخير."
+**Avoid:** Mocking tradition; Western framings; political references
+
+---
+
+#### البقاع (Bekaa Valley)
+**Register:** Agricultural, rural · **When to use:** Farm/food products, family businesses
+**Markers:**
+- ⚠ verify: Agricultural jargon (محصول, ري, حصاد)
+- قرى, ريف (village/rural identity)
+- يا أخ = brother (kinship address)
+- جبل, سهل (geography natural)
+- الأرض, الماء (land/water identity strong)
+
+**Sample:** "الماء من الينابيع بتوعنا بيخلّي الزراعة مختلفة — بتحس فيها الفرق."
+**Avoid:** Urban sophistication; dismissal of rural economy
+
+---
+
+#### الجبل (Mountain/Metn)
+**Register:** Traditional, village · **When to use:** Heritage, family legacy, mountain communities
+**Markers:**
+- ⚠ verify: Mountain/forest markers (جبل, ثلج, غابة, ينبوع)
+- تقاليد, أجداد, موروث appear naturally
+- بيت, عيلة central (family tied to land)
+- البرد, الهواء النقي (natural geographic reference)
+- المنتوج المحلي (local products proud reference)
+
+**Sample:** "جبالنا بتعطينا أفضل ما فيها — بنتعلّم من الأجداد ونوديها للأحفاد."
+**Avoid:** Outsider perspective; urban dismissal; rapid commercialism
+
+---
+
+### سوريا (Syria)
+
+#### دمشق (Damascus)
+**Register:** Lyrical, prestige · **When to use:** Sophisticated audience, heritage brands; diaspora emotional content
+**Markers:**
+- Softest Levantine (closest to classical, most lyrical)
+- شام, ياشام (homeland nostalgia natural)
+- يا غالي, يا حبيب (warm address, emotional)
+- الياسمين, دمشق (romantic/poetic reference)
+- والله الحمد (gratitude natural, religious)
+
+**Sample:** "الحب بدمشق غير — في الهوا، في الياسمين، في كل زاوية بتذكّرك بالبيت."
+**Avoid:** Political conflict references; disconnection from emotional heritage; oversimplification
+
+---
+
+### الأردن (Jordan)
+
+#### عمّان (Amman)
+**Register:** Urban-educated, modern · **When to use:** Young urban professionals, tech/business audiences
+**Markers:**
+- Between Levantine and Gulf; slight Najdi influence
+- Educated urban class uses soft forms (close to Lebanese)
+- يلّا (fast energy)
+- التكنولوجيا, المشروع (business naturally)
+- حي, عمّان (city-proud references)
+
+**Sample:** "عمّان ما بتنام — والشغل بتاعنا بقولك مين بيشتغل الحق هسع."
+**Avoid:** Rural/bedouin dismissal; disconnection from modern context
+
+---
+
+### فلسطين (Palestine)
+The prestige Palestinian variety (Jerusalem/Ramallah) is closest to classical Levantine; deep emotional resonance around identity and homeland.
 
 ---
 
