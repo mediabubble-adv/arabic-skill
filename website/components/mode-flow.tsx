@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { PillTabs } from "./pill-tabs";
 
 const STEPS = [
   { id: "guide", label: "استشارة", desc: "يفهم طلبك ويوضّح الفكرة" },
@@ -16,23 +17,13 @@ export function ModeFlow() {
 
   return (
     <div className="card">
-      <div className="flex flex-wrap gap-2 mb-4">
-        {STEPS.map((step, i) => (
-          <button
-            key={step.id}
-            type="button"
-            onClick={() => setActive(step.id)}
-            className={`rounded-full px-3 py-1.5 text-sm transition-colors ${
-              active === step.id
-                ? "bg-[var(--brand)] text-[var(--bg)]"
-                : "border border-[var(--border)] text-[var(--fg-muted)] hover:border-[var(--brand)]"
-            }`}
-          >
-            {i + 1}. {step.label}
-          </button>
-        ))}
-      </div>
-      <p className="text-[var(--fg)] font-medium">{current.label}</p>
+      <PillTabs
+        tabs={STEPS.map((s, i) => ({ id: s.id, label: `${i + 1}. ${s.label}` }))}
+        activeId={active}
+        onChange={setActive}
+        ariaLabel="مراحل المسار"
+      />
+      <p className="text-[var(--fg)] font-medium mt-4">{current.label}</p>
       <p className="text-[var(--fg-muted)] text-sm mt-1">{current.desc}</p>
     </div>
   );

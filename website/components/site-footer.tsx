@@ -6,31 +6,17 @@ export function SiteFooter() {
     <footer className="border-t border-[var(--border)] py-12 text-sm text-[var(--fg-muted)]">
       <div className="container-site">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          {/* Newsletter Signup */}
           <div>
-            <h3 className="font-semibold text-[var(--fg)] mb-4">
-              Stay Updated
-            </h3>
+            <h3 className="font-semibold text-[var(--fg)] mb-4">خليك متابع</h3>
             <p className="text-xs mb-4">
-              Monthly release notes, user spotlights, and Arabic content tips.
+              نشرة شهرية: إصدارات جديدة، أمثلة من المجتمع، ونصايح محتوى عربي.
             </p>
             <NewsletterForm />
           </div>
 
-          {/* Community Links */}
           <div>
-            <h3 className="font-semibold text-[var(--fg)] mb-4">
-              Community
-            </h3>
+            <h3 className="font-semibold text-[var(--fg)] mb-4">المجتمع</h3>
             <ul className="space-y-2">
-              <li>
-                <a
-                  href="https://discord.gg/[invite-code]"
-                  className="text-[var(--brand)] hover:underline"
-                >
-                  Discord Server
-                </a>
-              </li>
               <li>
                 <a
                   href="https://github.com/mediabubble-adv/arabic-skill/discussions"
@@ -41,17 +27,14 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link href="/newsletter" className="text-[var(--brand)] hover:underline">
-                  Newsletter Archive
+                  أرشيف النشرة
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Resources */}
           <div>
-            <h3 className="font-semibold text-[var(--fg)] mb-4">
-              Resources
-            </h3>
+            <h3 className="font-semibold text-[var(--fg)] mb-4">مصادر</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/docs" className="text-[var(--brand)] hover:underline">
@@ -60,7 +43,7 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link href="/blog" className="text-[var(--brand)] hover:underline">
-                  Blog
+                  المدونة
                 </Link>
               </li>
               <li>
@@ -80,16 +63,15 @@ export function SiteFooter() {
           </div>
         </div>
 
-        {/* Bottom Footer */}
-        <div className="border-t border-[var(--border)] pt-6 mt-6 text-xs">
+        <div className="border-t border-[var(--border)] pt-6 text-xs">
           <p>
             اتبنى بـ <code dir="ltr">/arabic</code> · © 2026 MediaBubble ·{" "}
             <Link href="/privacy" className="text-[var(--brand)] hover:underline">
-              Privacy
+              الخصوصية
             </Link>
             {" · "}
             <Link href="/terms" className="text-[var(--brand)] hover:underline">
-              Terms
+              الشروط
             </Link>
           </p>
         </div>

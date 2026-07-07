@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { navLinks } from "@/lib/site-meta";
+import { navLinks, secondaryNavLinks } from "@/lib/site-meta";
+import { ThemeToggle } from "./theme-toggle";
 
 export function SiteHeader() {
   return (
@@ -21,10 +22,22 @@ export function SiteHeader() {
               {link.label}
             </Link>
           ))}
+          {secondaryNavLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-[var(--fg-muted)] hover:text-[var(--brand)] transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
-        <Link href="/install" className="btn-primary text-sm shrink-0">
-          ثبّت المهارة
-        </Link>
+        <div className="flex items-center gap-2 shrink-0">
+          <ThemeToggle />
+          <Link href="/install" className="btn-primary text-sm">
+            ثبّت المهارة
+          </Link>
+        </div>
       </div>
     </header>
   );

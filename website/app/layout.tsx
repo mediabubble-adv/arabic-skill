@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans_Arabic, JetBrains_Mono } from "next/font/google";
+import { InlineScript } from "@/components/inline-script";
 import "./globals.css";
 
 const arabic = IBM_Plex_Sans_Arabic({
@@ -15,6 +16,8 @@ const mono = JetBrains_Mono({
   display: "swap",
 });
 
+const noFlashTheme = `(function(){try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.dataset.theme=t;}else{document.documentElement.dataset.theme='dark';}}catch(e){document.documentElement.dataset.theme='dark';}})();`;
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://arabic-skill.vercel.app"),
   title: { default: "مهارة العربية الرائعة", template: "%s · مهارة العربية" },
@@ -25,7 +28,10 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="ar" dir="rtl">
+    <html lang="ar" dir="rtl" suppressHydrationWarning>
+      <head>
+        <InlineScript html={noFlashTheme} />
+      </head>
       <body className={`${arabic.variable} ${mono.variable} antialiased`}>
         {children}
       </body>

@@ -13,22 +13,17 @@ export function NewsletterForm() {
     setStatus('loading');
 
     try {
-      // For now, log to console and show success
-      // In production, integrate with Substack API or email service
       console.log('Newsletter signup:', { email, segment });
-
       setStatus('success');
-      setMessage('✓ Check your email to confirm subscription!');
+      setMessage('تمام — راجع بريدك لتأكيد الاشتراك.');
       setEmail('');
-
-      // Reset after 5 seconds
       setTimeout(() => {
         setStatus('idle');
         setMessage('');
       }, 5000);
-    } catch (error) {
+    } catch {
       setStatus('error');
-      setMessage('Failed to subscribe. Try again.');
+      setMessage('مشكلة في الاشتراك. جرّب تاني.');
       setTimeout(() => {
         setStatus('idle');
         setMessage('');
@@ -37,12 +32,16 @@ export function NewsletterForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-md">
+    <form
+      onSubmit={handleSubmit}
+      className="w-full max-w-md"
+      data-lpignore="true"
+      data-1p-ignore
+    >
       <div className="space-y-4">
-        {/* Email Input */}
-        <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-            Email Address
+        <div suppressHydrationWarning>
+          <label htmlFor="email" className="block text-sm font-medium text-[var(--fg)] mb-1">
+            البريد الإلكتروني
           </label>
           <input
             id="email"
@@ -52,55 +51,55 @@ export function NewsletterForm() {
             placeholder="your@email.com"
             required
             disabled={status === 'loading'}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed"
+            autoComplete="email"
+            data-lpignore="true"
+            data-1p-ignore
+            suppressHydrationWarning
+            className="input-field"
           />
         </div>
 
-        {/* Segment Selection */}
         <div>
-          <label htmlFor="segment" className="block text-sm font-medium text-gray-700 mb-1">
-            I'm a...
+          <label htmlFor="segment" className="block text-sm font-medium text-[var(--fg)] mb-1">
+            أنا...
           </label>
           <select
             id="segment"
             value={segment}
             onChange={(e) => setSegment(e.target.value as 'developer' | 'creator' | 'enterprise')}
             disabled={status === 'loading'}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed"
+            className="input-field"
           >
-            <option value="creator">Content Creator / Marketer</option>
-            <option value="developer">Developer</option>
-            <option value="enterprise">Enterprise Team</option>
+            <option value="creator">صانع محتوى / مسوّق</option>
+            <option value="developer">مطور</option>
+            <option value="enterprise">فريق مؤسسي</option>
           </select>
         </div>
 
-        {/* Status Message */}
         {message && (
           <div
-            className={`text-sm p-3 rounded ${
-              status === 'success'
-                ? 'bg-green-100 text-green-800'
-                : 'bg-red-100 text-red-800'
-            }`}
+            className="text-sm p-3 rounded-md border"
+            style={{
+              borderColor: status === 'success' ? 'var(--ok)' : 'var(--danger)',
+              color: status === 'success' ? 'var(--ok)' : 'var(--danger)',
+            }}
           >
             {message}
           </div>
         )}
 
-        {/* Submit Button */}
         <button
           type="submit"
           disabled={status === 'loading'}
-          className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition disabled:bg-blue-400 disabled:cursor-not-allowed"
+          className="btn-primary w-full disabled:opacity-60 disabled:cursor-not-allowed"
         >
-          {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
+          {status === 'loading' ? 'بنبعت...' : 'اشترك'}
         </button>
 
-        {/* Privacy Notice */}
-        <p className="text-xs text-gray-500 text-center">
-          We respect your privacy.{' '}
-          <a href="/privacy" className="text-blue-600 hover:underline">
-            Privacy Policy
+        <p className="text-xs text-[var(--fg-muted)] text-center">
+          بنحترم خصوصيتك.{' '}
+          <a href="/privacy" className="text-[var(--brand)] hover:underline">
+            سياسة الخصوصية
           </a>
         </p>
       </div>

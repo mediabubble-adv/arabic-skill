@@ -48,12 +48,13 @@ export default function ExamplesPage() {
         </p>
       </header>
       <div className="space-y-6 mb-12">
-        {examples.map((ex) => (
+        {examples.map((ex, index) => (
           <div key={ex.label}>
             <BeforeAfterCard
               label={ex.label}
               before={ex.before}
               after={ex.after}
+              tablistTestId={index === 0 ? "before-after-tablist" : undefined}
             />
             {ex.command && (
               <p className="text-sm text-[var(--fg-muted)] mt-2" dir="ltr">

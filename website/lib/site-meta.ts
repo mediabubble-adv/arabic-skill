@@ -6,7 +6,11 @@ export type SiteRoute =
   | "/tutorials"
   | "/examples"
   | "/about"
-  | "/docs";
+  | "/docs"
+  | "/blog"
+  | "/newsletter"
+  | "/privacy"
+  | "/terms";
 
 export const siteMeta: Record<
   SiteRoute,
@@ -51,6 +55,24 @@ export const siteMeta: Record<
     description:
       "README، CHANGELOG، ٢٤ أداة، مساهمة — النسخة الكاملة على GitHub.",
   },
+  "/blog": {
+    title: "المدونة — محتوى عربي وتقني",
+    description:
+      "مقالات عن اللهجات، التأنيس، RTL، وحالات استخدام حقيقية لمهارة العربية.",
+  },
+  "/newsletter": {
+    title: "النشرة — خليك متابع",
+    description:
+      "نشرة شهرية: إصدارات جديدة، أمثلة من المجتمع، ونصايح محتوى عربي.",
+  },
+  "/privacy": {
+    title: "سياسة الخصوصية",
+    description: "كيف نتعامل مع بياناتك على موقع مهارة العربية.",
+  },
+  "/terms": {
+    title: "شروط الاستخدام",
+    description: "شروط استخدام موقع مهارة العربية ومشروع MediaBubble.",
+  },
 } as const;
 
 export const navLinks: { href: SiteRoute; label: string }[] = [
@@ -62,4 +84,8 @@ export const navLinks: { href: SiteRoute; label: string }[] = [
   { href: "/examples", label: "أمثلة" },
   { href: "/about", label: "عن المهارة" },
   { href: "/docs", label: "الوثائق" },
+];
+
+export const secondaryNavLinks: { href: SiteRoute; label: string }[] = [
+  { href: "/blog", label: "المدونة" },
 ];

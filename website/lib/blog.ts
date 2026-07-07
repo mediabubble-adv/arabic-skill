@@ -1,0 +1,84 @@
+import fs from "node:fs";
+import path from "node:path";
+
+const POSTS_DIR = path.join(process.cwd(), "app/blog/posts");
+
+export type BlogPostMeta = {
+  slug: string;
+  title: string;
+  titleAr?: string;
+  description: string;
+  author: string;
+  date: string;
+  readTime: string;
+  category: string;
+  tags: string[];
+};
+
+function parseFrontmatter(raw: string): Record<string, string | string[]> {
+  const match = raw.match(/^---\n([\s\S]*?)\n---/);
+  if (!match) return {};
+  const data: Record<string, string | string[]> = {};
+  for (const line of match[1].split("\n")) {
+    const kv = line.match(/^(\w+):\s*"?(.+?)"?\s*$/);
+    if (kv) data[kv[1]] = kv[2];
+    const arr = line.match(/^keywords:\s*\[(.*)\]/);
+    if (arr) {
+      data.keywords = arr[1]
+        .split(",")
+        .map((s) => s.trim().replace(/^"|"$/g, ""));
+    }
+  }
+  return data;
+}
+
+export function getAllPosts(): BlogPostMeta[] {
+  const files = fs
+    .readdirSync(POSTS_DIR)
+    .filter((f) => f.endsWith(".mdx") && !f.startsWith("_"));
+
+  return files
+    .map((file) => {
+      const slug = file.replace(/\.mdx$/, "");
+      const raw = fs.readFileSync(path.join(POSTS_DIR, file), "utf8");
+      const fm = parseFrontmatter(raw);
+      return {
+        slug,
+        title: String(fm.title ?? slug),
+        titleAr: fm.titleAr ? String(fm.titleAr) : undefined,
+        description: String(fm.description ?? ""),
+        author: String(fm.author ?? "MediaBubble"),
+        date: String(fm.date ?? ""),
+        readTime: String(fm.readTime ?? ""),
+        category: String(fm.category ?? "Guide"),
+        tags: Array.isArray(fm.keywords) ? fm.keywords : [],
+      };
+    })
+    .sort((a, b) => b.date.localeCompare(a.date));
+}
+
+export function getPostBySlug(slug: string): { meta: BlogPostMeta; body: string } | null {
+  const file = path.join(POSTS_DIR, `${slug}.mdx`);
+  if (!fs.existsSync(file)) return null;
+  const raw = fs.readFileSync(file, "utf8");
+  const body = raw.replace(/^---[\s\S]*?---\n/, "");
+  const fm = parseFrontmatter(raw);
+  return {
+    meta: {
+      slug,
+      title: String(fm.title ?? slug),
+      titleAr: fm.titleAr ? String(fm.titleAr) : undefined,
+      description: String(fm.description ?? ""),
+      author: String(fm.author ?? "MediaBubble"),
+      date: String(fm.date ?? ""),
+      readTime: String(fm.readTime ?? ""),
+      category: String(fm.category ?? "Guide"),
+      tags: Array.isArray(fm.keywords) ? fm.keywords : [],
+    },
+    body,
+  };
+}
+
+export function getAllPostSlugs(): string[] {
+  return getAllPosts().map((p) => p.slug);
+}
