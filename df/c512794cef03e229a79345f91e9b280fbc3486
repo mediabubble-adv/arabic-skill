@@ -1,0 +1,25 @@
+docs/planning/9b1-slack-bot-design.md
+  s_98eb88043f4ae8::t_d64a8dcfe59703 1-483
+docs/planning/9b4-enterprise-packaging-design.md
+  s_98eb88043f4ae8::t_df26dea2b2bacb 1-459
+docs/planning/9b3-custom-templates-design.md
+  s_98eb88043f4ae8::t_c7f64633ecff62 1-601
+docs/planning/9b2-webhooks-api-design.md
+  s_98eb88043f4ae8::t_77ef9a1d986437 1-565
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "dfc512794cef03e229a79345f91e9b280fbc3486",
+  "prompts": {},
+  "sessions": {
+    "s_98eb88043f4ae8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5c8757de-275e-4bd9-9a83-ac064708bec0",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
