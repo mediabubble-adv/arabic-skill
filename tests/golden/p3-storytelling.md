@@ -27,7 +27,7 @@ Behavioral contract for Phase 3 (Commercial Storytelling Reference) — narrativ
 
 - [ ] **§4 Integration Hooks:**
   - [ ] Content Planner hook (5-point story spine check)
-  - [ ] Archetype-to-narrative device pairing table (5 archetypes → best device + why)
+  - [ ] Archetype-to-narrative device pairing table (6 archetypes → best device + why)
   - [ ] Engines that load storytelling (Marketing Funnel, Sales, Video, Content Planner)
 
 ## P3-Contract-02 — Wiring verification (4 files edited)
