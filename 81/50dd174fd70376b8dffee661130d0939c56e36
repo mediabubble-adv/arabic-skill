@@ -1,0 +1,25 @@
+website/app/blog/posts/rtl-bidirectional-text-guide.mdx
+  s_0197dde7fadf2a::t_1643c54b45f201 1-301
+website/app/blog/posts/case-study-100-arabic-captions.mdx
+  s_0197dde7fadf2a::t_a52b15cd799836 1-181
+website/app/blog/posts/load-presets-task-bundling.mdx
+  s_0197dde7fadf2a::t_d9ff42a46f28b2 1-213
+website/app/blog/posts/masri-vs-msa-dialect-guide.mdx
+  s_0197dde7fadf2a::t_4618842e8a2fa3 1-276
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "8150dd174fd70376b8dffee661130d0939c56e36",
+  "prompts": {},
+  "sessions": {
+    "s_0197dde7fadf2a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "76c5c404-8942-4fc7-9c88-40e1874404e1",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
