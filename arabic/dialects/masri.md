@@ -270,7 +270,7 @@ Add to every output — pick 1–2:
 - التجارة, الشحن appear in business contexts
 - تواصل = contact (strong commercial register)
 
-**Sample:** "الـ quality control بتاعتنا بتضمن إن كل طرد توصل تمام."
+**Sample:** "الـ quality control بتاعتنا بتضمن إن كل طرد يوصل تمام."
 **Avoid:** Extreme formality; rural/agricultural framing
 
 ---
