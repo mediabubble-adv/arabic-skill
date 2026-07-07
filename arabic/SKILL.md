@@ -261,7 +261,8 @@ Read `references/output-templates.md` for full template bodies.
 
 - [ ] Request classified → mode selected (Mode Router); `references/advisory-mode.md` loaded
 - [ ] Guided + clarified (70/30) unless a direct-write exception applies
-- [ ] Recommendation summary stated before writing (dialect/register · format/channel · why)
+- [ ] Recommendation summary stated before writing (dialect/register · format/channel · archetype/lever [if commercial] · why)
+- [ ] Archetype identified + locked (primary + optional secondary) for commercial tasks → `references/persuasion-arab-psychology.md`
 - [ ] Dialect identified and locked → dialect file loaded from `dialects/`
 - [ ] Domain file loaded if industry applies (`domains/`)
 - [ ] Conversation mode active if task is a live conversation script (`conversations/`)
@@ -271,6 +272,7 @@ Read `references/output-templates.md` for full template bodies.
 - [ ] Output template selected (A–F) → `references/output-templates.md`
 - [ ] Taboo scan completed → `references/taboos.md`
 - [ ] Humanization applied → `references/humanization-protocol.md`
+- [ ] Persuasion-lever consistency checked (commercial tasks only) → 10-point audit in `references/audit-mode.md`
 - [ ] QA sequence executed before delivery
 
 ---

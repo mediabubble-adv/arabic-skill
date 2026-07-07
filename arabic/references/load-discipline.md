@@ -62,12 +62,13 @@ Load in order:
 
 1. `references/intake-protocols.md` — unless brief is complete (`--brief`)
 2. `references/engines.md` — **single engine section** for the subcommand
-3. `references/output-templates.md` — **one template (A–F)** for the subcommand
-4. `domains/{industry}.md` — only when industry applies
-5. `references/project-context-scanner.md` — only for `explain`, `tutorial`, `readme`, or repo-aware copy
-6. `references/humanization-protocol.md` — **after draft**, before delivery
-7. `references/taboos.md` — before final delivery
-8. `references/ads-service-matrix.md` — **one platform § only** for `write meta|google|tiktok|snap|linkedin|youtube|ad|ads`
+3. `references/persuasion-arab-psychology.md` — **only for commercial/persuasive tasks** (ads, sales, funnel, landing, captions with CTA)
+4. `references/output-templates.md` — **one template (A–F)** for the subcommand
+5. `domains/{industry}.md` — only when industry applies
+6. `references/project-context-scanner.md` — only for `explain`, `tutorial`, `readme`, or repo-aware copy
+7. `references/humanization-protocol.md` — **after draft**, before delivery
+8. `references/taboos.md` — before final delivery
+9. `references/ads-service-matrix.md` — **one platform § only** for `write meta|google|tiktok|snap|linkedin|youtube|ad|ads`
 
 **Do not load:** `audit-mode.md`, `project-mode.md`, or unrelated engines/templates.
 
@@ -77,7 +78,7 @@ Load in order:
 
 Load in order:
 
-1. `references/audit-mode.md` — 9-point QA + legacy/AI-likelihood scoring (**audit deliveries only**)
+1. `references/audit-mode.md` — 10-point QA + legacy/AI-likelihood scoring (**audit deliveries only**)
 2. `references/humanization-protocol.md` — only when offering rewrites
 3. `references/taboos.md` — cultural dimension cross-check
 4. `voice.md` — when brand lexicon applies

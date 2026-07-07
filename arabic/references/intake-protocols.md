@@ -7,6 +7,8 @@ Never ask more than 5 questions. Apply the 70/30 split:
 
 **Maximum questions per intake session:** 5 total (3 static + up to 2 dynamic)
 
+**Archetype confirmation note:** For commercial tasks (ads, sales, campaigns, brand voice), consider asking "Who is this buyer at heart?" using the archetypes from `references/persuasion-arab-psychology.md` (Family Guardian, Generous Host, Faithful Steward, Ambitious Achiever, Community Pillar, Heritage Keeper). This is a **dynamic slot question** — it counts toward the 1–2 dynamic questions, not on top.
+
 **Error Recovery — Contradiction Protocol:**
 If a user's answer contradicts their initial prompt, pause and say:
 "قبل ما نكمل — لاحظت إن [X] يتعارض مع [Y]. أيهما نتبع؟"
@@ -37,7 +39,8 @@ Skip questions covered by the existing brief.
 2. إيه اللي تؤمن بيه العلامة التجارية وما يؤمن بيه المنافسون؟
 3. 3 علامات تجارية من خارج صناعتك بتعجبك طريقة كلامها ليه؟
 
-**Dynamic rule:** اسأل عن موقفهم من العبارات الدينية أو الثقافية (بإذن الله، بفضل الله، الحمد لله) في محتواهم — يعني حاجة تخص سوقهم المحدد.
+**Dynamic rule:** اسأل عن موقفهم من العبارات الدينية أو الثقافية (بإذن الله، بفضل الله، الحمد لله) في محتواهم — يعني حاجة تخص سوقهم المحدد.  
+**Commercial dynamic option:** For brand voice guides, consider "أي من الأنماط الثقافية أقرب للعلامة التجارية؟" to anchor voice in an archetype (per `persuasion-arab-psychology.md`).
 
 ---
 
@@ -48,7 +51,8 @@ Skip questions covered by the existing brief.
 2. إيه الـMedia Mix؟ (تلفزيون / OOH / ديجيتال / سوشيال)
 3. الحملة بلهجة واحدة ولا بان-آراب مع لوكالايزيشن؟
 
-**Dynamic rule:** اسأل عن بطل القصة — هل هو البراند، المستهلك، ولا المنتج نفسه؟ (يتحدد حسب الكاتيجوري).
+**Dynamic rule:** اسأل عن بطل القصة — هل هو البراند، المستهلك، ولا المنتج نفسه؟ (يتحدد حسب الكاتيجوري).  
+**Commercial dynamic option:** For high-stakes campaigns, consider "من هو الشاري من قلبه — حامي العيلة، الكريم، الأمين، الطموح، عمود المجتمع، ولا حارس التراث؟" (Archetype question per `persuasion-arab-psychology.md`)
 
 ---
 
@@ -70,7 +74,8 @@ Skip questions covered by the existing brief.
 2. إيه الدليل الموجود؟ (كيس ستاديز / توصيات / أرقام / ضمان)
 3. الفورمات المطلوب؟ (صفحة مبيعات / VSL / سلسلة واتساب / إيميل / بروبوزل)
 
-**Dynamic rule:** اسأل عن قناة الإغلاق — واتساب ولا إيميل ولا تليفون؟ ده بيحدد نبرة وطول الـCTA.
+**Dynamic rule:** اسأل عن قناة الإغلاق — واتساب ولا إيميل ولا تليفون؟ ده بيحدد نبرة وطول الـCTA.  
+**Commercial dynamic option:** For high-value sales, consider "من هو الشاري الأساسي — بالنسبة لنفسيته واحتياجاته?" (Archetype per `persuasion-arab-psychology.md`).
 
 ---
 
