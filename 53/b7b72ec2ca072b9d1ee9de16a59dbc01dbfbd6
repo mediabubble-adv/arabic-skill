@@ -1,0 +1,49 @@
+api/slack/interactive.ts
+  s_98eb88043f4ae8::t_75ba4ad9d75647 1-160
+app/api/slack/commands/route.ts
+  s_98eb88043f4ae8::t_60fd1dab7aee3e 1-28
+app/api/slack/oauth/callback/route.ts
+  s_98eb88043f4ae8::t_656d38e3bf31b2 1-37
+app/api/slack/interactive/route.ts
+  s_98eb88043f4ae8::t_e5c8fd13534112 1-28
+slack-bot/manifest.json
+  s_98eb88043f4ae8::t_8ccdce1e445acb 1-65
+api/slack/events.ts
+  s_98eb88043f4ae8::t_c5d06dac71903b 1-251
+.env.slack.example
+  s_98eb88043f4ae8::t_0421afcb012611 1-70
+docs/guides/slack-commands.md
+  s_98eb88043f4ae8::t_ad1e33784541ec 1-371
+api/slack/oauth.ts
+  s_98eb88043f4ae8::t_84d4f5a681da17 1-298
+docs/planning/9b1-slack-app-review-planning.md
+  s_98eb88043f4ae8::t_5b5e303c42a810 1-483
+app/api/slack/oauth/start/route.ts
+  s_98eb88043f4ae8::t_cbc9a427943d9e 1-30
+api/slack/commands.ts
+  s_98eb88043f4ae8::t_e3c808155314bf 1-463
+app/api/slack/events/route.ts
+  s_98eb88043f4ae8::t_d9b072c795ca75 1-28
+api/slack/auth.ts
+  s_98eb88043f4ae8::t_cc22ed5978ebe1 1-306
+migrations/001_slack_bot_schema.sql
+  s_98eb88043f4ae8::t_5cf8821db6dd6e 1-89
+docs/guides/slack-bot-setup.md
+  s_98eb88043f4ae8::t_a00d8938af2581 1-359
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "53b7b72ec2ca072b9d1ee9de16a59dbc01dbfbd6",
+  "prompts": {},
+  "sessions": {
+    "s_98eb88043f4ae8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5c8757de-275e-4bd9-9a83-ac064708bec0",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
