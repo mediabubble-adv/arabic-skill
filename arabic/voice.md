@@ -16,6 +16,9 @@ brand: ""                  # brand / product name
 dialect: ""                # masri | khaliji | levantine | … (primary)
 register: ""               # L1–L5 default (e.g. L3 polite)
 market: ""                 # country/region (e.g. Egypt, KSA, pan-Gulf)
+archetype:                 # cultural identity (per persuasion-arab-psychology.md)
+  primary: ""              # Family Guardian | Generous Host | Faithful Steward | Ambitious Achiever | Community Pillar | Heritage Keeper
+  secondary: ""            # (optional)
 audience: ""               # who they speak to (segment, awareness stage)
 tone_axes:                 # 4 axes, 0–10 each
   formal_casual: 5         # 0 = street casual, 10 = formal

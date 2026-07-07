@@ -43,26 +43,38 @@ test.describe("G15 — mobile interactive components (390px)", () => {
 
   test("before/after toggle on /examples", async ({ page }) => {
     await page.goto("/examples");
-    const card = page.locator(".card").first();
-    await expect(card.getByText(/اكتشف تطبيقنا/)).toBeVisible();
-    await card.getByRole("button", { name: "بعد" }).click();
-    await expect(card.getByText(/عايز تلعب جيم/)).toBeVisible();
-    await card.getByRole("button", { name: "قبل" }).click();
-    await expect(card.getByText(/اكتشف تطبيقنا/)).toBeVisible();
+    const tablist = page.getByRole("tablist", { name: "قبل وبعد" }).first();
+    const mobileText = tablist.locator(
+      "xpath=ancestor::div[contains(@class,'md:hidden')]/p",
+    );
+
+    // Mobile defaults to "بعد" — lead with the good copy.
+    await expect(tablist.getByRole("tab", { name: "بعد" })).toHaveAttribute(
+      "aria-selected",
+      "true",
+    );
+    await expect(mobileText).toHaveText(/عايز تلعب جيم/);
+    await tablist.getByRole("tab", { name: "قبل" }).click();
+    await expect(mobileText).toHaveText(/اكتشف تطبيقنا/);
+    await tablist.getByRole("tab", { name: "بعد" }).click();
+    await expect(mobileText).toHaveText(/عايز تلعب جيم/);
   });
 
   test("sticky install bar on / appears after mobile scroll", async ({
     page,
   }) => {
     await page.goto("/");
-    await expect(page.getByText("ثبّت في دقيقة")).toHaveCount(0);
+    await expect(page.locator(".fixed.bottom-0")).toHaveCount(0);
     await page.evaluate(() =>
       window.scrollTo(0, document.documentElement.scrollHeight),
     );
     const stickyBar = page.locator(".fixed.bottom-0");
-    await expect(stickyBar.getByText("ثبّت في دقيقة")).toBeVisible();
+    await expect(stickyBar).toBeVisible();
     await expect(
-      stickyBar.getByRole("link", { name: "ثبّت المهارة" }),
+      stickyBar.getByRole("link", { name: "كل أوامر التثبيت" }),
     ).toHaveAttribute("href", "/install");
+    await expect(
+      stickyBar.getByRole("button", { name: "انسخ أمر التثبيت" }),
+    ).toBeVisible();
   });
 });

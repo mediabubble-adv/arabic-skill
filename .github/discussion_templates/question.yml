@@ -1,0 +1,60 @@
+title: "How do I...?"
+labels: "question"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for asking! Help us help you by providing as much detail as possible.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: "Your Question"
+      description: "What do you need help with?"
+      placeholder: "How do I use load presets to generate Masri captions?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: "Context"
+      description: "What are you trying to accomplish? Any code/config details?"
+      placeholder: |
+        I'm writing a Ramadan campaign with 50 product captions.
+        Currently using /arabic write with no preset — taking 3 min per caption.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: dialect
+    attributes:
+      label: "Dialect (if applicable)"
+      options:
+        - "MSA (Modern Standard Arabic)"
+        - "Masri (Egyptian)"
+        - "Khaliji (Gulf)"
+        - "Levantine"
+        - "Other"
+        - "Not applicable"
+
+  - type: textarea
+    id: what_tried
+    attributes:
+      label: "What have you tried?"
+      description: "Any solutions you've already attempted?"
+      placeholder: "Checked the docs for load presets, but couldn't find examples for seasonal campaigns."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: before_posting
+    attributes:
+      label: "Before posting"
+      options:
+        - label: "I checked the [install site docs](https://arabic-skill.vercel.app)"
+          required: false
+        - label: "I searched existing discussions"
+          required: false
+        - label: "I ran `npx skills update mediabubble-adv/arabic-skill` (latest version)"
+          required: false

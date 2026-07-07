@@ -7,6 +7,23 @@
 
 ---
 
+## 0. Presets (Quick Start)
+
+For faster task routing, use **named presets** instead of picking files manually.
+
+```bash
+# CLI tool
+scripts/load-preset.sh plan             # fetch "plan" preset
+scripts/load-preset.sh write            # fetch "write" preset
+scripts/load-preset.sh seo-aeo-gulf     # fetch region-specific preset
+```
+
+**See:** `references/load-presets.md` for full preset catalog (seasonal, campaign, book, audit-full, dialect-lock, etc.).
+
+Presets respect load-discipline limits (≤6 files per task). Use presets when a command maps exactly to a known workflow; use manual selection when combining multiple task classes.
+
+---
+
 ## 1. Task classes
 
 | Class | Trigger | Max files (incl. SKILL + dialect) |
@@ -62,7 +79,7 @@ Load in order:
 
 Load in order:
 
-1. `references/audit-mode.md` — 9-point QA + legacy/AI-likelihood scoring (**audit deliveries only**)
+1. `references/audit-mode.md` — 10-point QA + legacy/AI-likelihood scoring (**audit deliveries only**)
 2. `references/humanization-protocol.md` — only when offering rewrites
 3. `references/taboos.md` — cultural dimension cross-check
 4. `voice.md` — when brand lexicon applies
