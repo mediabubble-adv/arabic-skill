@@ -107,7 +107,7 @@ export function ModeFlow() {
         })}
       </ol>
 
-      <div className="mode-flow-detail card" role="region" aria-live="polite">
+      <div className="mode-flow-detail card" role="region" aria-live="polite" aria-label="تفاصيل الخطوة الحالية">
         <p className="text-xs text-[var(--brand)] font-medium mb-1">
           الخطوة {activeIndex + 1} من {STEPS.length}
         </p>
