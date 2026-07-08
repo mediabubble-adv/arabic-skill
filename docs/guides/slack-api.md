@@ -22,7 +22,7 @@ Slack POST callbacks (slash commands, Events API, and interactive payloads) veri
 Invalid signatures return `401`. Implementation: `api/slack/auth.ts` → `verifySlackRequest()`.
 
 OAuth routes (`/api/slack/oauth/start` and `/api/slack/oauth/callback`) do not use Slack request signing; they validate the `state` parameter via HMAC to prevent CSRF. See `api/slack/oauth-state.ts`.
-Invalid signatures return `401`. Implementation: `api/slack/auth.ts` → `verifySlackRequest()`.
+Invalid states return `400`. Implementation: `api/slack/oauth-state.ts` → `validateOAuthState()`.
 
 ## Endpoints
 
