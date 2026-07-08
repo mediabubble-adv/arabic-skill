@@ -14,7 +14,7 @@ Awesome Arabic Skill is now available as a Slack bot. This guide walks through:
 
 **Prerequisites:**
 - Admin access to a Slack workspace
-- Node.js 20+
+- Node.js 18+
 - Access to the Awesome Arabic Skill Vercel deployment
 
 ## Step 1: Create Slack App
