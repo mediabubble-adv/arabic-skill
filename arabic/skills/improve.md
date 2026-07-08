@@ -384,7 +384,7 @@ Wait for **Y** (or user already said `--yes` / «ابعت» / «اكتب») befo
 - …
 ```
 
-**Q8=C (side-by-side samples):** use the dry-run template but add a short side-by-side table under `### Sample openings` instead of three full openings when scope is narrow.
+**Q8=C (side-by-side samples):** use the dry-run template but add a short side-by-side table under `### Sample openings` instead of three full openings. For narrow scope, a compact table comparing old vs. new; for broad scope, a table comparing key sections or the opening paragraph.
 
 ---
 
