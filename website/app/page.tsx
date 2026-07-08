@@ -85,7 +85,7 @@ export default function HomePage() {
       <RevealSection className="section-gap tools-section" delay={80}>
         <SectionHeading
           title="أدوات مدعومة"
-          subtitle="٢٤ أداة: Cursor وClaude وCodex وغيرهم. سطر واحد للتثبيت."
+          subtitle="أدوات مدعومة: Cursor وClaude وCodex وغيرهم. تثبيت تلقائي للأدوات الأساسية، وإعداد يدوي لباقي الأدوات."
           className="section-heading--gap-md"
         />
         <ToolsMarquee />
