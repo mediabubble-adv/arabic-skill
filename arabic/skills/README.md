@@ -78,7 +78,7 @@ description: One-line description and triggers
 ---
 ```
 
-Register in `references/command-router.md`.
+Register in `../references/command-router.md`.
 
 ---
 
