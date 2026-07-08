@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const POSTS_DIR = path.join(process.cwd(), "app/blog/posts");
+const SAFE_SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 export type BlogPostMeta = {
   slug: string;
@@ -40,6 +41,7 @@ export function getAllPosts(): BlogPostMeta[] {
   return files
     .map((file) => {
       const slug = file.replace(/\.mdx$/, "");
+      if (!SAFE_SLUG_RE.test(slug)) return null;
       const raw = fs.readFileSync(path.join(POSTS_DIR, file), "utf8");
       const fm = parseFrontmatter(raw);
       return {
@@ -54,6 +56,7 @@ export function getAllPosts(): BlogPostMeta[] {
         tags: Array.isArray(fm.keywords) ? fm.keywords : [],
       };
     })
+    .filter((post): post is BlogPostMeta => post !== null)
     .sort((a, b) => b.date.localeCompare(a.date));
 }
 
