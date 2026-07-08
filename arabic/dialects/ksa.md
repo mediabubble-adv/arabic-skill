@@ -6,28 +6,75 @@
 
 ---
 
-## 1. Sub-Dialect Map
+## 1. Sub-Regional Blocks
 
 ### نجدي / ريّاضي (Najdi — Riyadh & Central)
-The prestige Saudi dialect. Most commercial content uses this as the baseline.
-- Hard ق preserved (not glottalized)
-- ك → ch before front vowels in some words (گ/ك variation in informal speech)
-- Conservative, tribal undertone, direct
+**Register:** Prestige, conservative, direct · **When to use:** Default for KSA commercial, corporate content
+**Markers:**
+- ق hard preserved (not glottalized like Egypt/Levant)
+- ك → ch before front vowels (كيس → chees, informal)
+- أبو, أم (endearment/respect markers)
+- والله, بإذن الله (oaths, natural conviction)
+- سمح, شرّف (honor/respect vocabulary)
+
+**Sample:** "الرجل اللي بيختار ما يختار إلا الأحسن — والحمد لله على الاختيار."
+**Avoid:** Levantine softness; Egyptian speed/irony; dismissal of religion/tradition
+
+---
 
 ### حجازي (Hejazi — Jeddah, Mecca, Medina)
-More cosmopolitan, historically the merchant coast.
-- Softer than Najdi
-- More foreign loanwords (Turkish, South Asian influence via hajj trade)
-- Less conservative in cultural register
-- Young Jeddawi audience: more receptive to bold/Western-influenced creative
+**Register:** Softer, cosmopolitan · **When to use:** Fashion, lifestyle, younger Jeddah audience; international brands
+**Markers:**
+- Softer than Najdi (ق closer to glottal stop)
+- French/Turkish loanwords natural (الحاج, الأسواق influence)
+- يا خيبة, يا لطيف (theatrical emotion acceptable)
+- البحر, السفر (maritime/cosmopolitan reference)
+- الضيف (hospitality natural, but warmer than Najdi)
 
-### قصيمي (Qassimi — Al-Qassim region)
-Strong tribal identity, deeply conservative. Agricultural and trading heritage.
-- Very traditional vocabulary
-- Highest formality expectations in commercial content
-- Religious language woven naturally into everyday speech
+**Sample:** "الحاج جاي من بره الدنيا، ومحتاج حاجة تخليه بيحس بالأمان والدفي."
+**Avoid:** Extreme tribal formality; rural/desert framing; dismissal of cosmopolitanism
 
-**For most commercial content:** Default to Najdi/Riyadhi. If Jeddah-specific, you can lean Hejazi.
+---
+
+### قصيمي (Qassimi — Al-Qassim Region)
+**Register:** Conservative, traditional, deeply religious · **When to use:** Rural/traditional audiences, heritage brands; formal B2B
+**Markers:**
+- Very hard consonants, slow pacing
+- الدين, الشريعة, الحلال appear naturally (not forced)
+- يا عم, يا أخي (kinship address very warm)
+- الأرض, الزراعة, التقاليد embedded
+- والنبي (strong oath for conviction)
+
+**Sample:** "الحاجة اللي بيعرفها أبويا وجدّي، أنا بثق فيها — والله على ما أقول شهيد."
+**Avoid:** Casual register; Western framing; mockery of religious language
+
+---
+
+### الشرقية (Eastern Province)
+**Register:** Cosmopolitan, tech/oil influence · **When to use:** Tech companies, oil/energy sectors, international business
+**Markers:**
+- ⚠ verify: Heavy English loanwords (tech, petroleum jargon)
+- Mix of Najdi + influence from port/expat communities
+- بترول, غاز, صناعة appear in context
+- التكنولوجيا, المشروع (business terminology)
+- بين الثقافات (multicultural reference natural)
+
+**Sample:** "المشروع بيحتاج ناس بتفهم الناحية التقنية والناحية التجارية — الشرقية مليانة بالكفاءات."
+**Avoid:** Extreme formality; rural framing; dismissal of tech/modernization
+
+---
+
+### الجنوب / عسير (Southern Aseeri)
+**Register:** Mountain culture, traditional · **When to use:** Heritage brands, food/agriculture, conservative audiences
+**Markers:**
+- ⚠ verify: Distinct mountain accent (phoneme preservation closer to classical)
+- جبل, سلسلة (mountain geography natural)
+- الحرفة اليدوية, المنتوج المحلي (craftsmanship pride)
+- الأجداد, الموروث (heritage central)
+- والله الحمد (gratitude natural and strong)
+
+**Sample:** "جبال عسير بتعطيك الأفضل — بنحافظ على الحرفة ونوديها نقية للأجيال الجايّة."
+**Avoid:** Dismissal of mountain culture; modernism pushed on tradition; disconnection from heritage
 
 ---
 

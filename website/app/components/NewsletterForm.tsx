@@ -1,12 +1,27 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+
+function NewsletterFormPlaceholder() {
+  return (
+    <div className="w-full max-w-md space-y-4" aria-hidden="true">
+      <div className="h-[4.5rem] rounded-md border border-[var(--border)] bg-[var(--bg)]" />
+      <div className="h-[4.5rem] rounded-md border border-[var(--border)] bg-[var(--bg)]" />
+      <div className="h-10 rounded-md bg-[var(--brand)]/20" />
+    </div>
+  );
+}
 
 export function NewsletterForm() {
+  const [mounted, setMounted] = useState(false);
   const [email, setEmail] = useState('');
   const [segment, setSegment] = useState<'developer' | 'creator' | 'enterprise'>('creator');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -30,6 +45,10 @@ export function NewsletterForm() {
       }, 5000);
     }
   };
+
+  if (!mounted) {
+    return <NewsletterFormPlaceholder />;
+  }
 
   return (
     <form

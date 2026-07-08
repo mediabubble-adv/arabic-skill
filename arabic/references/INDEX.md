@@ -15,19 +15,21 @@ Never load all files. Load strictly on demand per task class.
 
 ---
 
-## References — Load by Task (26 files)
+## References — Load by Task (23 files)
 
 | File | Load when |
 |---|---|
 | `references/load-presets.md` | Named file bundles for fast task routing (seasonal, campaign, book, audit-full, dialect-lock, seo-aeo-*) |
 | `references/load-discipline.md` | Any `/arabic` command — pick plan/write/audit/rtl/research load set first |
 | `references/advisory-mode.md` | Start of any task that is not a complete brief (default operating model) |
-| `references/audit-mode.md` | Audit Mode / `/arabic audit`, and as the final 9-point QA review |
+| `references/audit-mode.md` | Audit Mode / `/arabic audit`, and as the final 10-point QA review |
 | `references/rtl-audit.md` | `/arabic audit rtl` — tier-1 RTL/UI source checks |
 | `references/prompt-engineering.md` | Prompt Coach Mode / `/arabic coach`, or any weak-prompt arrival |
 | `references/intake-protocols.md` | Before asking intake questions (every new task) |
 | `references/engines.md` | Before generating content (every task) |
 | `references/output-templates.md` | After engine is selected (every task) |
+| `references/persuasion-arab-psychology.md` | Commercial/persuasive tasks (ads, sales, campaigns) — archetype + lever activation |
+| `references/storytelling.md` | Commercial narrative tasks (ads, sales, funnel, video, testimonial) — story arcs + archetype pairing |
 | `references/command-router.md` | `/arabic` routing, workspace persistence, and Cursor adapter behavior |
 | `references/taboos.md` | Before final delivery (every task) |
 | `references/humanization-protocol.md` | After content is drafted (every task) |
@@ -49,19 +51,21 @@ Never load all files. Load strictly on demand per task class.
 
 ## Dialects — Load ONLY the 1 Target Dialect (11 files)
 
-| File | Dialect | Region |
-|---|---|---|
-| `dialects/masri.md` | مصري — Egyptian | Egypt |
-| `dialects/ksa.md` | سعودي — Saudi | KSA (Riyadhi / Hejazi / Qassimi) |
-| `dialects/khaliji.md` | خليجي — Gulf | UAE / Kuwait / Qatar / Bahrain / Oman |
-| `dialects/levantine.md` | شامي — Levantine | Syria / Lebanon / Jordan / Palestine |
-| `dialects/iraqi.md` | عراقي — Iraqi | Iraq (Baghdad / Southern / Kurdish regions) |
-| `dialects/yemeni.md` | يمني — Yemeni | Yemen |
-| `dialects/maghrebi.md` | مغربي — Maghrebi | Morocco / Tunisia / Algeria |
-| `dialects/sudanese.md` | سوداني — Sudanese | Sudan |
-| `dialects/libyan.md` | ليبي — Libyan | Libya |
-| `dialects/msa.md` | فصحى — MSA | Pan-Arab formal |
-| `dialects/white-dialect.md` | لهجة بيضاء — White Dialect | Pan-Arab neutral |
+| File | Dialect | Region | Tier |
+|---|---|---|---|
+| `dialects/masri.md` | مصري — Egyptian | Egypt | 1 — deep |
+| `dialects/ksa.md` | سعودي — Saudi | KSA (Riyadhi / Hejazi / Qassimi) | 1 — deep |
+| `dialects/khaliji.md` | خليجي — Gulf | UAE / Kuwait / Qatar / Bahrain / Oman | 1 — deep |
+| `dialects/levantine.md` | شامي — Levantine | Syria / Lebanon / Jordan / Palestine | 1 — deep |
+| `dialects/iraqi.md` | عراقي — Iraqi | Iraq (Baghdad / Southern / Kurdish regions) | 2 — solid |
+| `dialects/maghrebi.md` | مغربي — Maghrebi | Morocco / Tunisia / Algeria | 2 — solid |
+| `dialects/msa.md` | فصحى — MSA | Pan-Arab formal | 2 — solid |
+| `dialects/white-dialect.md` | لهجة بيضاء — White Dialect | Pan-Arab neutral | 2 — solid |
+| `dialects/yemeni.md` | يمني — Yemeni | Yemen | 3 — baseline |
+| `dialects/sudanese.md` | سوداني — Sudanese | Sudan | 3 — baseline |
+| `dialects/libyan.md` | ليبي — Libyan | Libya | 3 — baseline |
+
+**Confidence tier router:** Tier 3 dialect + high-stakes commercial task → disclose the tier and offer `dialects/white-dialect.md` as a fallback. See `SKILL.md` Module 1.
 
 ---
 
