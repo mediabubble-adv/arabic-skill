@@ -8,7 +8,7 @@ const NewsletterForm = dynamic(
     ssr: false,
     loading: () => (
       <div
-        className="h-40 max-w-md animate-pulse rounded-md bg-[var(--bg-elevated)]"
+        className="h-40 max-w-md animate-pulse rounded-md bg-[var(--bg-elev)]"
         aria-hidden
       />
     ),
