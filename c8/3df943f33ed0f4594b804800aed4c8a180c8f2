@@ -1,0 +1,21 @@
+website/lib/blog.ts
+  s_673861cff7bff8::t_9df5480b89b388 18,40-53,62,65,72-73,75-79,83
+website/app/layout.tsx
+  s_673861cff7bff8::t_060762c8048036 19,53-54
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "c83df943f33ed0f4594b804800aed4c8a180c8f2",
+  "prompts": {},
+  "sessions": {
+    "s_673861cff7bff8": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "c33fab7c-cc59-402e-ba0d-9aab4dcd27d9",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
