@@ -66,9 +66,10 @@
 
 ### 🌐 Website (`/arabic plan website`)
 - **Research:** scan the real product/repo (`project-context-scanner.md`) — do not invent features.
-- **Plan:** sitemap as MECE outline (home, product/service, about, pricing, FAQ, contact, blog hubs).
-- **Execute order:** home → core offer pages → trust pages (about/FAQ) → blog/SEO (apply `seo-aeo-masri.md` for Egypt).
-- **Continuity:** one brand lexicon and register across all pages.
+- **Plan:** sitemap as MECE outline (home, product/service, about, pricing, FAQ, contact, blog hubs). Map pages to `references/website-ui-system.md` page types + section/block IDs.
+- **Language order:** load `references/bilingual-pipeline.md`. Default `--lang-order ar_en`; support `en_ar`. Persist `lang_order` + `languages` on the plan continuity ledger.
+- **Execute order:** home → core offer pages → trust pages (about/FAQ) → blog/SEO (apply `seo-aeo-masri.md` for Egypt). For each page, write the first locale fully, then the twin from the intent map (never literal translate).
+- **Continuity:** one brand lexicon and register across all pages **and** both locales (shared component IDs).
 
 ### 📣 Campaign bundle (`/arabic plan campaign`)
 - Run the **Campaign Bundle Builder** in `references/ads-service-matrix.md` §3 as stages 3–5.

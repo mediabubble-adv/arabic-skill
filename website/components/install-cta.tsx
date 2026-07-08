@@ -3,8 +3,8 @@ import { CopyBlock } from "@/components/copy-block";
 import { HERO_INSTALL_SNIPPET } from "@/lib/install-commands";
 
 export function InstallCta({
-  heading = "جاهز تجرّب؟",
-  sub = "سطر واحد من التيرمنال، وابدأ بـ /arabic guide",
+  heading = "جاهز للتثبيت؟",
+  sub = "أمر واحد من التيرمنال، ثم ابدأ بـ /arabic guide",
 }: {
   heading?: string;
   sub?: string;

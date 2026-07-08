@@ -22,6 +22,7 @@
 - `/arabic coach ...` -> prompt repair and upgrade
 - `/arabic research ...` -> research-intelligence workflow
 - `/arabic voice ...` -> load, save, or show brand voice memory
+- `/arabic brief ...` -> create or show `.arabic/briefs/*.yaml` from NL or guided Qs
 - `/arabic auto ...` -> infer intent from the workspace and route automatically
 - `/arabic init` -> create the `.arabic/` scaffold
 - `/arabic help ...` -> copy-ready usage help
@@ -96,9 +97,16 @@
 
 | Command | Behavior | Notes |
 |---|---|---|
-| `/arabic audit` | Run the 9-point QA pipeline on pasted Arabic text | Also accepts `--file`; legacy + AI-likelihood scoring (audit-only) |
+| `/arabic audit` | Run the 9-point QA pipeline; **always save** `.arabic/audits/{slug}-{date}.md` (unless `--dry-run`); end with improve/surgical/done picker | Also accepts `--file`; legacy + AI-likelihood scoring (audit-only) |
+| `/arabic audit website` | Website/UI surface audit: content QA + component map; RTL tier-1 when markup present | Loads `audit-mode.md` + `website-ui-system.md` (+ `rtl-audit.md` if markup); `--surface website` |
 | `/arabic audit rtl` | Tier-1 RTL/UI source audit | Also accepts `--file` or capped `--dir` — loads `rtl-audit.md` |
-| `/arabic audit --dir <path>` | Audit Arabic copy in up to 40 files under path | Safe-scan rules from `project-context-scanner.md` |
+| `/arabic audit --dir <path>` | Audit Arabic copy in up to 40 files under path | Safe-scan rules from `project-context-scanner.md`; still saves report + handoff |
+| `/arabic improve <target>` | Full rewrite via one-at-a-time A/B/C pickers; old copy = reference only; each answer locks a different branch | Loads `skills/improve.md`; wait per question; Branch Card before write; preserves locks/facts only |
+| `/arabic improve --from-audit <path>` | Full rewrite seeded by an audit report | Skips generic diagnosis; uses report locks/issues as constraints; still blank-page rewrite |
+| `/arabic brief` | Create `.arabic/briefs/*.yaml` from NL or guided A/B/C pickers | Loads `skills/brief.md`; preview → confirm → save; offers copy-ready `--brief` command |
+| `/arabic brief save` | Alias of `/arabic brief` (default save entry) | Same as `brief` |
+| `/arabic brief from <text\|file\|url>` | Parse human text / file / URL into a brief draft | `--file` supported; then preview → save |
+| `/arabic brief show [slug]` | List briefs or print one | Read-only |
 | `/arabic coach` | Repair a weak prompt and explain the upgrade | Also accepts `--file` |
 | `/arabic research <topic>` | Structured research run → `research/knowledge-base/` | Loads `research-mode.md` + matching `research/prompts/` |
 | `/arabic research distill` | Distill plan from `distillation-queue.md` | ≤50 lines/runtime file; user approves PR |
@@ -115,14 +123,23 @@
 
 | Flag | Applies to | Purpose |
 |---|---|---|
-| `--dialect` | write / plan | Locks dialect inference |
-| `--platform` | write | Selects platform-specific rules |
+| `--dialect` | write / plan / improve / brief | Locks dialect inference |
+| `--platform` | write / audit | Selects platform-specific rules |
 | `--brief` | write / plan | Loads a structured brief and compresses intake |
-| `--file` | audit / coach / audit rtl | Reads from a workspace file |
+| `--file` | audit / coach / audit rtl / improve / brief | Reads from a workspace file |
 | `--dir` | audit / audit rtl | Capped directory scan (max 40 files) |
-| `--out` | write / plan / audit | Writes output to a path |
-| `--yes` | auto / plan | Skips confirmation and runs the inferred action |
+| `--out` | write / plan / audit / improve / brief | Writes output to a path |
+| `--yes` | auto / plan / brief | Skips confirmation and runs the inferred action |
 | `--count` | write captions / ads | Controls variant count |
+| `--voice` | improve / brief | Load a specific voice.md (improve) or tone hint (brief) |
+| `--format` | improve | Output format: `annotated` (default), `side-by-side`, `bullet`, `rewrite` |
+| `--dry-run` | improve | Show recommendations without rewriting |
+| `--name` | brief | Force brief slug / filename (without `.yaml`) |
+| `--goal` | brief | Prefill brief goal (`caption`, `ad`, `page`, `website`, …) |
+| `--lang-order` | write / plan / improve / brief | `ar_en` (default) or `en_ar` — see `bilingual-pipeline.md` |
+| `--lang` | write / plan / improve / brief | `ar` \| `en` \| `ar,en` — single- or dual-locale scope |
+| `--from-audit` | improve | Seed rewrite from `.arabic/audits/*.md` (locks + issues; full rewrite still) |
+| `--surface` | audit | `website` = content QA + component map (+ RTL tier-1 when markup present) |
 
 Unknown flags should warn and be ignored. Never guess-execute a command that has an unrecognized subcommand.
 
@@ -141,6 +158,7 @@ Unknown flags should warn and be ignored. Never guess-execute a command that has
 | User asks to explain a repo or tool in Arabic | `write explain` after safe project scan |
 | User asks for install or use instructions | `write tutorial` after safe project scan |
 | CI / validation failure in this repo | Suggest `audit` and check `SKILL.md` routing |
+| User describes a job and asks to save a brief / “اعمل برّيف” | `brief` (NL or guided) |
 | Empty multi-page website request | `plan website` |
 | Rich campaign request | `plan campaign` |
 | Multi-episode YouTube / podcast season | `plan series` |
@@ -191,6 +209,6 @@ Created by `/arabic init` or the first `auto` run when the workspace needs persi
 └── README.md            ← optional team one-liner
 ```
 
-**Not created on init** (deferred): `voice.md` → first `/arabic voice save`; `last-run.json` → first `/arabic auto`; `audits/` → first audit snapshot. First `auto` run may create `last-run.json` when persistence is needed.
+**Not created on init** (deferred): `voice.md` → first `/arabic voice save`; `last-run.json` → first `/arabic auto`; `audits/` → first `/arabic audit` report (auto-created on audit). First `auto` run may create `last-run.json` when persistence is needed.
 
 If a project-specific voice file already exists, `voice load` should prefer it over the root voice memory.

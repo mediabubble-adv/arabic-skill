@@ -80,10 +80,12 @@ Briefs and plans may override `dialect` via `--dialect` or YAML fields.
 ## 4. Post-init next steps (copy-ready)
 
 ```text
-/arabic write caption --dialect masri --brief .arabic/briefs/example.yaml
-/arabic plan campaign --brief .arabic/briefs/my-campaign.yaml
+/arabic brief                         ← NL or guided → .arabic/briefs/*.yaml
+/arabic write caption --brief .arabic/briefs/example.yaml
+/arabic plan website --lang-order ar_en
+/arabic audit --file path/to/draft.md  ← saves .arabic/audits/… then offer improve
+/arabic improve --from-audit .arabic/audits/…md
 /arabic voice save
-/arabic audit --file path/to/draft.md
 ```
 
 ---

@@ -13,7 +13,7 @@ export default function InstallPage() {
   return (
     <PageShell>
       <PageHero title="ثبّت المهارة في دقيقة">
-        <p>سطر واحد من التيرمنال، والمهارة تشتغل في Cursor أو Claude أو Codex.</p>
+        <p>أمر واحد من التيرمنال — والمهارة تشتغل داخل Cursor أو Claude أو Codex.</p>
       </PageHero>
       <InstallPageClient />
     </PageShell>

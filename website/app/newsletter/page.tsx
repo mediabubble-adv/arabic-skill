@@ -14,10 +14,10 @@ export const metadata: Metadata = {
 export default function NewsletterPage() {
   return (
     <PageShell>
-      <PageHero title="خليك متابع">
-        <p>نشرة شهرية: إصدارات جديدة، أمثلة من المجتمع، ونصايح محتوى عربي.</p>
+      <PageHero title="تابع التحديثات">
+        <p>نشرة شهرية: إصدارات جديدة، أمثلة من المجتمع، ونصائح محتوى عربي.</p>
         <p className="text-sm mt-2">
-          إيميل واحد في الشهر. من غير سبام. إلغاء الاشتراك في أي وقت.
+          رسالة واحدة شهريًا. من غير سبام. وإلغاء الاشتراك في أي وقت.
         </p>
       </PageHero>
 
@@ -46,7 +46,7 @@ export default function NewsletterPage() {
             </p>
           </div>
           <div className="card">
-            <h3 className="font-semibold text-[var(--fg)] mb-2">نصايح عملية</h3>
+            <h3 className="font-semibold text-[var(--fg)] mb-2">نصائح عملية</h3>
             <p className="text-sm text-[var(--fg-muted)]">
               لهجات، presets، وتدقيق RTL.
             </p>

@@ -6,7 +6,7 @@ const STEPS = [
   {
     id: "guide",
     label: "استشارة",
-    desc: "يفهم طلبك ويوضّح الفكرة قبل ما يكتب حرف",
+    desc: "يفهم الطلب ويوضّح الفكرة قبل أي كتابة",
     icon: (
       <path
         strokeLinecap="round"
@@ -18,7 +18,7 @@ const STEPS = [
   {
     id: "clarify",
     label: "توضيح",
-    desc: "يسأل عن اللي ناقص: الجمهور، اللهجة، المنصة",
+    desc: "يسأل عما ينقص: الجمهور، اللهجة، المنصة",
     icon: (
       <path
         strokeLinecap="round"
@@ -30,7 +30,7 @@ const STEPS = [
   {
     id: "recommend",
     label: "توصية",
-    desc: "يقترح اتجاه وزاوية قبل ما يبدأ الكتابة",
+    desc: "يقترح اتجاهًا وزاوية قبل بدء الكتابة",
     icon: (
       <path
         strokeLinecap="round"

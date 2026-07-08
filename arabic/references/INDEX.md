@@ -15,15 +15,17 @@ Never load all files. Load strictly on demand per task class.
 
 ---
 
-## References — Load by Task (23 files)
+## References — Load by Task
 
 | File | Load when |
 |---|---|
-| `references/load-presets.md` | Named file bundles for fast task routing (seasonal, campaign, book, audit-full, dialect-lock, seo-aeo-*) |
+| `references/load-presets.md` | Named file bundles for fast task routing (seasonal, campaign, book, audit-full, dialect-lock, seo-aeo-*, website, ui, audit-website) |
 | `references/load-discipline.md` | Any `/arabic` command — pick plan/write/audit/rtl/research load set first |
 | `references/advisory-mode.md` | Start of any task that is not a complete brief (default operating model) |
 | `references/audit-mode.md` | Audit Mode / `/arabic audit`, and as the final 10-point QA review |
 | `references/rtl-audit.md` | `/arabic audit rtl` — tier-1 RTL/UI source checks |
+| `references/website-ui-system.md` | Website/UI plan, write landing|page|ui, `/arabic audit website` |
+| `references/bilingual-pipeline.md` | Dual-language `ar_en` / `en_ar` write, plan, brief, improve |
 | `references/prompt-engineering.md` | Prompt Coach Mode / `/arabic coach`, or any weak-prompt arrival |
 | `references/intake-protocols.md` | Before asking intake questions (every new task) |
 | `references/engines.md` | Before generating content (every task) |

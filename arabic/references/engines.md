@@ -33,6 +33,10 @@ When two engines apply simultaneously, use this table to decide synthesis order 
 
 Full page copy — not just headlines but the complete persuasive structure of each page.
 
+**Slice-load (do not invent ad hoc):**
+- Page/section/component naming + content slots → `references/website-ui-system.md`
+- Dual-language order and twin passes → `references/bilingual-pipeline.md` when `--lang-order` / bilingual brief is set
+
 ### Page Structures
 
 **Home Page:**
@@ -486,6 +490,8 @@ Split into two distinct tracks. Identify the track before outlining.
 
 ## 🖥 UI/UX Microcopy Engine
 
+**Slice-load:** component catalog, blocks, forms, popups, hero/cards → `references/website-ui-system.md` (component + microcopy-slot sections). Char limits below remain SSOT for length gates.
+
 **Character limits (Arabic):**
 - H1 (Hero Headline): 40–60 characters max
 - H2 (Section Header): 30–50 characters
@@ -496,12 +502,13 @@ Split into two distinct tracks. Identify the track before outlining.
 - Meta Title: 55–60 characters
 
 **Arabic UI rules:**
-- Arabic is 20–30% longer than English. Validate all char limits in the Arabic version, not the English.
+- Arabic is 20–30% longer than English. Validate all char limits in the Arabic version, not the English. For bilingual UI, run `references/bilingual-pipeline.md` after the first locale.
 - RTL reading: Users scan right-to-left. Lead with the most critical word — avoid starting with articles (ال) on primary CTAs.
 - Error messages: Be specific, not vague. "حدث خطأ" is useless. "الرقم المُدخل غير مكتمل — يجب أن يكون 11 رقمًا" is helpful.
 - Empty state copy: Should feel human, not like a system message. "لا توجد نتائج بعد — ابدأ بإضافة..." not "No results found."
 - Onboarding copy: Benefits-first, not instructions-first. "شوف كيف تكسب أكثر" not "يمكنك عرض تقاريرك هنا."
 - App Store (ASO): Title = keyword + brand. First line of description = single strongest benefit, no filler.
+- Name every string slot with a stable ID (`hero.cta`, `form.email.error`) so EN/AR twins and audits can map issues.
 
 ---
 

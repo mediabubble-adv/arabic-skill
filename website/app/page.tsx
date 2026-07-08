@@ -22,22 +22,22 @@ export const metadata: Metadata = {
 const bento = [
   {
     title: "محتوى",
-    desc: "منشورات، إعلانات، صفحات هبوط، مدونات، سكريبتات",
+    desc: "منشورات، إعلانات، صفحات هبوط، مقالات، سكريبتات",
     accent: false,
   },
   {
     title: "لهجات",
-    desc: "١١+ لهجة. مصري أولاً.",
+    desc: "أكثر من ١١ لهجة. مصري أولاً.",
     accent: false,
   },
   {
     title: "تأنيس",
-    desc: "بيشيل أسلوب الترجمة والجمل اللي شكلها AI",
+    desc: "يزيل نبرة الترجمة والجمل التي تبدو آلية",
     accent: true,
   },
   {
     title: "مشروع",
-    desc: "/arabic auto بيمسح المشروع ويشرحه بعربي يفهمه أي حد",
+    desc: "/arabic auto يمسح الملفات ويشرحها بعربي واضح للفريق",
     accent: false,
   },
 ];
@@ -63,7 +63,7 @@ export default function HomePage() {
 
           <div className="container-site hero-body">
             <div className="hero-chips">
-              <span className="hero-chip">سهل التثبيت</span>
+              <span className="hero-chip">تثبيت بأمر واحد</span>
               <span className="hero-chip">مصري أولاً</span>
               <span className="hero-chip">مفتوح المصدر</span>
             </div>
@@ -72,7 +72,7 @@ export default function HomePage() {
                 ثبّت المهارة
               </Link>
               <Link href="/examples" className="btn-secondary">
-                شوف أمثلة
+                راجع الأمثلة
               </Link>
             </div>
             <div className="hero-install-preview">
@@ -85,7 +85,7 @@ export default function HomePage() {
       <RevealSection className="section-gap tools-section" delay={80}>
         <SectionHeading
           title="أدوات مدعومة"
-          subtitle="أدوات مدعومة: Cursor وClaude وCodex وغيرهم. تثبيت تلقائي للأدوات الأساسية، وإعداد يدوي لباقي الأدوات."
+          subtitle="٢٤ أداة: Cursor وClaude وCodex وغيرهم. أمر واحد للتثبيت."
           className="section-heading--gap-md"
         />
         <ToolsMarquee />
@@ -98,7 +98,7 @@ export default function HomePage() {
       <RevealSection className="section-gap-loose" delay={160}>
         <SectionHeading
           title="المسار الافتراضي"
-          subtitle="استشارة ثم توضيح ثم توصية ثم كتابة ثم مراجعة. مش كتابة على طول."
+          subtitle="استشارة ثم توضيح ثم توصية ثم كتابة ثم مراجعة — قبل أي تسليم."
           className="section-heading--gap-md"
         />
         <ModeFlow />
@@ -108,12 +108,12 @@ export default function HomePage() {
         <SectionHeading title="قبل وبعد" className="section-heading--gap-lg" />
         <BeforeAfterCard
           before="اكتشف كيف يمكن لمهارة العربية أن تساعدك في إنشاء محتوى عربي احترافي."
-          after="المهارة دي شريكك جوه الـ IDE: بتفهم السياق وتكتب مصري من غير ما تحس إنها ترجمة."
+          after="المهارة شريكك داخل الـ IDE: تفهم السياق وتكتب مصري من غير ما يبان إنه مترجم."
         />
       </RevealSection>
 
       <RevealSection className="section-gap" delay={240}>
-        <SectionHeading title="ليه المهارة دي؟" className="section-heading--gap-lg" />
+        <SectionHeading title="لماذا المهارة؟" className="section-heading--gap-lg" />
         <div className="bento-grid">
           {bento.map((item) => (
             <div
@@ -132,7 +132,7 @@ export default function HomePage() {
       <RevealSection className="section-gap" delay={280}>
         <InstallCta
           heading="ثبّت المهارة"
-          sub="سطر واحد من التيرمنال وإنت جاهز."
+          sub="أمر واحد من التيرمنال، وتبقى جاهز للعمل."
         />
       </RevealSection>
 

@@ -7,9 +7,9 @@ export function SiteFooter() {
       <div className="container-site">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="font-semibold text-[var(--fg)] mb-4">خليك متابع</h3>
+            <h3 className="font-semibold text-[var(--fg)] mb-4">تابع التحديثات</h3>
             <p className="text-xs mb-4">
-              نشرة شهرية: إصدارات جديدة، أمثلة من المجتمع، ونصايح محتوى عربي.
+              نشرة شهرية: إصدارات جديدة، أمثلة من المجتمع، ونصائح محتوى عربي.
             </p>
             <NewsletterFormSlot />
           </div>

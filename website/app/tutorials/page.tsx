@@ -22,23 +22,23 @@ const lessons = [
     meta: "~٣ دقايق · مبتدئ",
   },
   {
-    title: "اكتب أول بوست مصري",
+    title: "اكتب أول منشور مصري",
     outcome: "منشور سوشيال مصري من برّيف بسيط.",
     steps: [
-      "اكتب الفكرة بشكل جزئي، مش لازم برّيف كامل",
-      "/arabic guide هيوضّح ويسأل",
+      "اكتب الفكرة بشكل جزئي — مش شرط برّيف كامل",
+      "/arabic guide يوضّح ويسأل",
       "/arabic write يولّد المحتوى",
       "/arabic audit يراجع قبل التسليم",
     ],
     meta: "~١٠ دقايق · مبتدئ",
   },
   {
-    title: "راجع نصك قبل ما تنشر",
+    title: "راجع النص قبل النشر",
     outcome: "تقرير تدقيق + قائمة إصلاحات.",
     steps: [
-      "حط النص في ملف .md",
+      "ضع النص في ملف .md",
       "/arabic audit --file path/to/file.md",
-      "طبّق أهم إصلاح، واطلب إعادة تدقيق لو محتاج",
+      "طبّق أهم إصلاح — واطلب إعادة تدقيق عند الحاجة",
     ],
     meta: "~٥ دقايق · متوسط",
   },
@@ -76,7 +76,7 @@ export default function TutorialsPage() {
       <p className="text-[var(--fg-muted)] mb-8 text-center">
         الموقع كله اتكتب بـ <code dir="ltr">/arabic</code>.{" "}
         <Link href="/about" className="text-[var(--brand)]">
-          شوف إزاي اتبنى
+          مسار البناء
         </Link>
         .
       </p>

@@ -17,8 +17,8 @@ export default function DocsPage() {
     <PageShell>
       <PageHero title="الوثائق والمصادر">
         <p>
-          النسخة الكاملة على GitHub. هنا ملخص سريع +{" "}
-          <strong className="text-[var(--fg)]">ثبّت المهارة</strong> الأول.
+          النسخة الكاملة على GitHub. هنا ملخص سريع، وابدأ بـ{" "}
+          <strong className="text-[var(--fg)]">ثبّت المهارة</strong>.
         </p>
       </PageHero>
 
@@ -89,7 +89,7 @@ export default function DocsPage() {
 
       <InstallCta
         heading="ثبّت المهارة"
-        sub="وبعدين ارجع للوثائق الكاملة على GitHub."
+        sub="ثم ارجع للوثائق الكاملة على GitHub."
       />
     </PageShell>
   );

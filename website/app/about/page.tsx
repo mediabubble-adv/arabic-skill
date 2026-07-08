@@ -37,9 +37,9 @@ const auditPages = [
 export default function AboutPage() {
   return (
     <PageShell>
-      <PageHero title="ليه مهارة العربية الرائعة؟">
+      <PageHero title="لماذا مهارة العربية الرائعة؟">
         <p>
-          وكالة محتوى عربي جوه الـ IDE بتاعك. بيستشير قبل ما يكتب.{" "}
+          وكالة محتوى عربي داخل الـ IDE. تستشير قبل الكتابة.{" "}
           <strong className="text-[var(--fg)]">مش مجرد ترجمة.</strong>
         </p>
       </PageHero>
@@ -55,8 +55,8 @@ export default function AboutPage() {
           plan → briefs → write → audit → Next.js port → deploy
         </pre>
         <p className="text-sm text-[var(--fg-muted)] mt-3 text-center max-w-2xl mx-auto">
-          كل نص عربي على الموقع من /arabic write على أدلة من الريبو. مفيش
-          copywriter من برّه.
+          كل نص عربي على الموقع ناتج عن /arabic write على أدلة من الريبو. مفيش
+          copywriter خارجي.
         </p>
       </section>
 
@@ -152,8 +152,8 @@ export default function AboutPage() {
           MediaBubble
         </h2>
         <p className="text-[var(--fg-muted)]">
-          منتج من MediaBubble: شريك محتوى عربي للفرق اللي بتبني بأدوات AI. الموقع
-          نفسه proof of concept: اتبنى بـ /arabic، اتدقق، واتنشر.
+          منتج من MediaBubble — شريك محتوى عربي للفرق التي تبني بأدوات AI. الموقع
+          نفسه إثبات: اتبنى بـ /arabic، اتدقق، واتنشر.
         </p>
       </section>
 

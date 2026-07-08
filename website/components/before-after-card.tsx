@@ -24,11 +24,11 @@ export function BeforeAfterCard({
 
       <div className="hidden md:grid md:grid-cols-2 gap-4">
         <div className="before-after-panel">
-          <p className="before-after-label">قبل: ترجمة جامدة</p>
+          <p className="before-after-label">قبل: نص مترجم جامد</p>
           <p className="text-[var(--fg-muted)] leading-relaxed">{before}</p>
         </div>
         <div className="before-after-panel before-after-panel--after">
-          <p className="before-after-label before-after-label--after">بعد: مصري طبيعي</p>
+          <p className="before-after-label before-after-label--after">بعد: مصري مضبوط</p>
           <p className="text-[var(--fg)] leading-relaxed">{after}</p>
         </div>
       </div>

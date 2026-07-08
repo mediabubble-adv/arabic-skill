@@ -79,13 +79,15 @@ Load in order:
 
 Load in order:
 
-1. `references/audit-mode.md` — 10-point QA + legacy/AI-likelihood scoring (**audit deliveries only**)
+1. `references/audit-mode.md` — 10-point QA + legacy/AI-likelihood scoring (**audit deliveries only**) + **mandatory report save + improve handoff**
 2. `references/humanization-protocol.md` — only when offering rewrites
 3. `references/taboos.md` — cultural dimension cross-check
 4. `voice.md` — when brand lexicon applies
 5. `references/project-context-scanner.md` — only for `/arabic audit --dir` (safe scan rules)
+6. `references/website-ui-system.md` — only for `/arabic audit website` / `--surface website` (component map)
+7. `references/rtl-audit.md` — when website audit includes markup or `/arabic audit rtl`
 
-**Do not load:** engines, output templates, or project-mode staging docs.
+**Do not load:** full engines or project-mode staging docs (unless website audit needs one engine slice already covered by website-ui-system).
 
 **Scoring rule:** Legacy-register and AI-likelihood scoring run on **`/arabic audit` outputs only** — not on every write delivery.
 
@@ -141,11 +143,11 @@ When `engines.md` or `output-templates.md` is needed, load **only the matching s
 |---|---|---|
 | caption / post / social | Captions Engine | A |
 | ad / meta / funnel | Marketing Funnel Engine | A or B |
-| landing / page / website | Website Content Engine | B |
+| landing / page / website | Website Content Engine + `website-ui-system.md` (+ `bilingual-pipeline.md` if dual-lang) | B |
 | blog / seo / aeo | SEO or AEO Engine | B |
 | video / script / youtube | Video Script Engine | C |
 | book / chapter / outline | Book Engine | E |
-| ui | UI/UX Microcopy Engine | A |
+| ui | UI/UX Microcopy Engine + `website-ui-system.md` | A |
 | contract / skill / rules | Professional Documents | F |
 
 Full routing table: `references/command-router.md`.
