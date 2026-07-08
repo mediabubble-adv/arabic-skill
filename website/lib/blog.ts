@@ -3,6 +3,7 @@ import path from "node:path";
 
 const POSTS_DIR = path.join(process.cwd(), "app/blog/posts");
 const SAFE_SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const SAFE_SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 export type BlogPostMeta = {
   slug: string;
@@ -15,6 +16,10 @@ export type BlogPostMeta = {
   category: string;
   tags: string[];
 };
+function isSafeSlug(slug: string): boolean {
+  return SAFE_SLUG_RE.test(slug);
+}
+
 
 function parseFrontmatter(raw: string): Record<string, string | string[]> {
   const match = raw.match(/^---\n([\s\S]*?)\n---/);
@@ -40,6 +45,7 @@ export function getAllPosts(): BlogPostMeta[] {
 
   return files
     .map((file) => {
+      if (!isSafeSlug(slug)) return null;
       const slug = file.replace(/\.mdx$/, "");
       if (!SAFE_SLUG_RE.test(slug)) return null;
       const raw = fs.readFileSync(path.join(POSTS_DIR, file), "utf8");
@@ -54,6 +60,7 @@ export function getAllPosts(): BlogPostMeta[] {
         readTime: String(fm.readTime ?? ""),
         category: String(fm.category ?? "Guide"),
         tags: Array.isArray(fm.keywords) ? fm.keywords : [],
+    .filter((post): post is BlogPostMeta => post !== null)
       };
     })
     .filter((post): post is BlogPostMeta => post !== null)
