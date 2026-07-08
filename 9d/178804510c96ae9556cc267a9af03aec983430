@@ -1,0 +1,115 @@
+docs/supported/copilot/README.md
+  s_673861cff7bff8::t_dbe8af2f2ff232 7-16
+package.json
+  s_673861cff7bff8::t_9ebc468ef62722 44
+  s_673861cff7bff8::t_b6576d3b241225 58
+docs/supported/hermes-agent/README.md
+  s_673861cff7bff8::t_44c7e3665880f0 43
+  s_673861cff7bff8::t_b1408e4934cf04 11-22
+  s_673861cff7bff8::t_09804ff0d53855 96
+README.md
+  s_673861cff7bff8::t_1d25847a4ce0f4 65,68-73,78-80
+docs/supported/codex/README.md
+  s_673861cff7bff8::t_aa41a823a6379e 49
+  s_673861cff7bff8::t_23353c211d6343 14
+website/lib/install-commands.ts
+  s_673861cff7bff8::t_e8194c86c447f6 13,16-21,33-34,36-42,46,54-62,64
+  s_673861cff7bff8::t_8c5dcef73083c4 63,65-100
+website/content/install.md
+  s_673861cff7bff8::t_c118304483a4a7 3,13,19,56-59,63,65,67,69,73,80,82,85-86,88-89
+  s_673861cff7bff8::t_4a21f830355387 83
+  s_673861cff7bff8::t_7001903a0bb0b3 36-49
+  s_673861cff7bff8::t_874e0e9070f787 75,93
+  s_673861cff7bff8::t_d7575b73a58dbf 22,25-29,34
+  s_673861cff7bff8::t_ac222fe34cb817 35
+bin/install-targets.json
+  s_673861cff7bff8::t_3888d3c763e910 1-273
+docs/supported/openclaw/README.md
+  s_673861cff7bff8::t_200f812afe7e4d 104
+  s_673861cff7bff8::t_343fe39a7e6178 11-23
+docs/supported/continue/README.md
+  s_673861cff7bff8::t_c4f2363c19ad06 7-16
+docs/supported/gemini/README.md
+  s_673861cff7bff8::t_7eb24ad0e7cd3f 7-16
+docs/supported/zed/README.md
+  s_673861cff7bff8::t_bb9b673e8ee7c3 7-16
+website/components/tool-tabs.tsx
+  s_673861cff7bff8::t_0eb9843ba7a1ca 5
+  s_673861cff7bff8::t_8dad368bd20575 38-44
+docs/supported/qwen/README.md
+  s_673861cff7bff8::t_83c9be74da2d1d 7-16
+docs/supported/cline/README.md
+  s_673861cff7bff8::t_0d25f00b9a7521 7-16
+tests/golden/install-cli-shape.md
+  s_673861cff7bff8::t_637587c67ffff8 1-40
+docs/supported/aider/README.md
+  s_673861cff7bff8::t_02818ca6a5c824 7-16
+docs/supported/claude/README.md
+  s_673861cff7bff8::t_07c78f3d5f3762 14
+docs/supported/vs-code/README.md
+  s_673861cff7bff8::t_8c0c88ab9f6ca7 7-16
+scripts/validate-npm-pack.sh
+  s_673861cff7bff8::t_0d3774aab92b7d 18
+docs/supported/openhands/README.md
+  s_673861cff7bff8::t_b5deb77443094d 7-16
+docs/supported/replit/README.md
+  s_673861cff7bff8::t_1bcd899c821a81 7-16
+docs/supported/windsurf/README.md
+  s_673861cff7bff8::t_b9e39d8cdcda3e 7-16
+scripts/validate-install-targets.sh
+  s_673861cff7bff8::t_2abd92f52474cc 57-60,100-101,104-131,135-145,155-174
+  s_673861cff7bff8::t_80fe5727bf3ee2 102-103
+  s_673861cff7bff8::t_48766ffb02865f 1-56,61-99,132-134,146-154,175-180
+website/e2e/g15-mobile-ux.spec.ts
+  s_673861cff7bff8::t_807e2a2c62957e 31-39
+bin/arabic-skill.js
+  s_673861cff7bff8::t_c6cc0ce18a881a 10,12,17-19,29-47,54-57,86,88-89,104,160-163,165-166,179-186,190-207,214-231,240,242-249,251-258,261-278,282-285,287-294,306-346,349,368-378,410-412,415-421,423-424,426-436,439
+  s_673861cff7bff8::t_9c7dc41c60a782 13-14,74-80,99-101,174-178,187-189,208-213,232-239,241,250,259-260,279-281,286,295-305,347-348,350-354,356-357,360-367,422,425
+docs/supported/chatgpt/README.md
+  s_673861cff7bff8::t_b956d88708512a 11-17
+docs/supported/amp/README.md
+  s_673861cff7bff8::t_b61f31a11989af 7-16
+docs/supported/jetbrains-junie/README.md
+  s_673861cff7bff8::t_df90e4db890870 7-16
+docs/supported/kiro/README.md
+  s_673861cff7bff8::t_39e957196f9be3 7-16
+docs/supported/opencode/README.md
+  s_673861cff7bff8::t_03ed005dead22f 98
+  s_673861cff7bff8::t_2a917843af7b9a 11-23
+  s_673861cff7bff8::t_5c4d322c31184e 45
+website/components/install-page-client.tsx
+  s_673861cff7bff8::t_654215fdcb5fc5 89,91,94,97
+  s_673861cff7bff8::t_eadeb306eedfff 77
+  s_673861cff7bff8::t_abc2709252ec71 126,149
+  s_673861cff7bff8::t_c3b59655211b72 14,17,22,24,27,29
+  s_673861cff7bff8::t_61caaf19531aa7 8
+  s_673861cff7bff8::t_987e93b63eb497 19
+  s_673861cff7bff8::t_338bfab9a38689 105,108-109,115,118-119,147
+docs/supported/sourcegraph-cody/README.md
+  s_673861cff7bff8::t_0539031e3d9bf9 7-16
+docs/supported/support-matrix.md
+  s_673861cff7bff8::t_33343da6a7138d 3-30
+website/components/print-install-section.tsx
+  s_673861cff7bff8::t_f740810cf0f9bd 1-41
+docs/supported/antigravity/README.md
+  s_673861cff7bff8::t_35ae578107ec81 98
+  s_673861cff7bff8::t_435f180b35205d 11,13-23
+docs/supported/kilo-code/README.md
+  s_673861cff7bff8::t_07057ebdcf0260 7-16
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "9d178804510c96ae9556cc267a9af03aec983430",
+  "prompts": {},
+  "sessions": {
+    "s_673861cff7bff8": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "c33fab7c-cc59-402e-ba0d-9aab4dcd27d9",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
