@@ -74,7 +74,7 @@ export default function AboutPage() {
 
       <section className="mb-10 card">
         <h2 className="text-xl font-semibold text-[var(--fg)] mb-2 text-center">
-          ملخص التدقيق (G16 frozen)
+          ملخص التدقيق (G16 — frozen)
         </h2>
         <p className="text-sm text-[var(--fg-muted)] mb-4 text-center">
           Snapshot date: 2026-07-04 · Register: L3 Masri · Verdict: PUBLISH
