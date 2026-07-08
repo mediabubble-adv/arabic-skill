@@ -27,4 +27,4 @@
 
 ## أدوات مدعومة
 
-Cursor · Claude · Codex · ChatGPT · Gemini · Qwen · Windsurf · VS Code — **+١٤ أداة**
+Cursor · Claude · Codex · ChatGPT · Gemini · Qwen · Windsurf · VS Code — **+٢٤ أداة**
