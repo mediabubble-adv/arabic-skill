@@ -92,8 +92,11 @@ const toolNameToId = {
 
 function expectedInstall(target) {
   if (target.mode === 'print') return 'print';
-  if (target.workspaceDir) return 'preset, workspace';
-  return 'preset';
+  if (target.mode === 'skills_home') {
+    return target.workspaceDir ? 'preset, workspace' : 'preset';
+  }
+  console.error('FAIL: unknown registry mode', JSON.stringify(target.mode), 'for id', target.id);
+  process.exit(1);
 }
 
 const registryById = new Map(reg.targets.map((t) => [t.id, t]));
@@ -190,6 +193,10 @@ for (const t of reg.targets) {
   }
   if (t.mode === 'print' && (!t.printSteps || t.printSteps.length === 0)) {
     console.error('FAIL:', t.id, 'print target missing printSteps');
+    process.exit(1);
+  }
+  if (t.mode !== 'skills_home' && t.mode !== 'print') {
+    console.error('FAIL:', t.id, 'unsupported mode', JSON.stringify(t.mode));
     process.exit(1);
   }
 }

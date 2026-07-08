@@ -186,8 +186,14 @@ For single-locale social captions, default **C** without asking unless the user 
 ### B9 — Slug / filename
 | Key | Behavior |
 |-----|----------|
-| **A** ◆ | Auto slug from goal+product (`instagram-captions-fitzcairo.yaml`) |
+| **A** ◆ | Auto slug from goal + product (see ASCII slug rules below) |
 | **B** | هسمّيه أنا… |
+
+**ASCII slug rules (required for filenames):**
+- Lowercase Latin, hyphens, ≤48 chars; no spaces.
+- **Arabic product names:** transliterate to English (strip diacritics, hyphenate words) — same convention as SEO slugs in `reference/arabic-seo-optimizer/reference/technical-seo.md` (e.g. مطعم فيتز → `fitz-cairo`).
+- If product is empty or cannot be transliterated cleanly → **goal-only** slug (`instagram-captions`, `landing-page`, `saas-website`).
+- Never write Arabic characters in the filename.
 
 Then show YAML preview → confirm → save.
 
@@ -222,7 +228,27 @@ languages: [ar]            # or [ar, en] / [en]
 notes: ""
 source: human-nl | guided | file | url
 created: YYYY-MM-DD
-suggested_command: "/arabic write caption --brief .arabic/briefs/{slug}.yaml"
+suggested_command: "<see goal → command table below>"
+```
+
+### Goal → `suggested_command` (required on save)
+
+Set `suggested_command` from the brief `goal` — never hardcode `write caption` for every goal:
+
+| `goal` (or B1 pick) | `suggested_command` |
+|---------------------|---------------------|
+| `social captions` | `/arabic write caption --brief .arabic/briefs/{slug}.yaml` |
+| `ad copy` | `/arabic write ad --brief .arabic/briefs/{slug}.yaml` |
+| `landing page` | `/arabic write page --brief .arabic/briefs/{slug}.yaml` |
+| `multi-page website` | `/arabic plan website --brief .arabic/briefs/{slug}.yaml` |
+| `video script` | `/arabic write video --brief .arabic/briefs/{slug}.yaml` |
+| other / free text | Best-match write or plan subcommand from NL extraction |
+
+Append `--dialect {dialect}` when dialect is set and not already in the brief defaults the write command reads.
+
+```yaml
+# example only — social captions
+suggested_command: "/arabic write caption --brief .arabic/briefs/instagram-captions-fitzcairo.yaml"
 ```
 
 **Optional extensions** (when goal says so):
@@ -236,18 +262,18 @@ suggested_command: "/arabic write caption --brief .arabic/briefs/{slug}.yaml"
 ## Save protocol
 
 1. Ensure `.arabic/briefs/` exists.
-2. Slug: lowercase ascii, hyphens, ≤48 chars; no spaces.
+2. Slug: lowercase ascii, hyphens, ≤48 chars; no spaces (transliterate Arabic product names per B9).
 3. If file exists → ask replace / new name.
-4. Write UTF-8 YAML.
+4. Write UTF-8 YAML with `suggested_command` from the goal → command table.
 5. Reply:
 
 ```markdown
 ✓ Saved `.arabic/briefs/{slug}.yaml`
 
 Next:
-/arabic write caption --brief .arabic/briefs/{slug}.yaml --dialect masri
+{suggested_command from the saved brief}
 
-Or open guided write without flags — brief already has dialect/platform.
+Or open guided write without extra flags — brief already has dialect/platform.
 ```
 
 With `--yes`: skip final confirm if preview was already shown once in-session.

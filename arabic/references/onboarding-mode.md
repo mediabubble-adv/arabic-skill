@@ -84,7 +84,7 @@ Briefs and plans may override `dialect` via `--dialect` or YAML fields.
 /arabic write caption --brief .arabic/briefs/example.yaml
 /arabic plan website --lang-order ar_en
 /arabic audit --file path/to/draft.md
-/arabic improve --from-audit .arabic/audits/your-report.md
+/arabic improve --from-audit .arabic/audits/{slug}-{date}.md
 /arabic voice save
 ```
 

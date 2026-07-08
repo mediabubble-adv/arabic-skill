@@ -90,13 +90,19 @@ Flags: `--voice`, `--dialect`, `--format`, `--dry-run`, `--file`, `--out`, `--fr
 
 ## `--from-audit` protocol
 
-1. Read the report. Require headings: Issues, Locks, Improve seeds, Copy-ready (see `tests/golden/audit-report-shape.md`).
+1. Read the report. Require headings: Issues, Locks to preserve, Improve seeds, Copy-ready (see `tests/golden/audit-report-shape.md`).
 2. Prefill Branch Card:
    - `from_audit: <path>`
-   - `primary_job` ← Improve seeds
+   - `primary_job` ← Improve seeds (`primary_job`)
+   - `Diagnosis` ← infer from `## Issues (ranked)` + `## Component map` (map dominant failure mode to one Q2 label; put key + one-line rationale on Branch Card):
+     - MSA bleed / overly formal → **B**
+     - slang-heavy / weak confidence → **C**
+     - repetitive / same-y openings → **D**
+     - audience mismatch / wrong register for reader → **E**
+     - mixed or unclear → **A** (agent states 2–3 failing signals from Issues, then continues)
    - `lang_order` ← seeds or bilingual-pipeline default `ar_en`
-   - `locks` ← Locks section (byte-sensitive strings)
-   - Failing component IDs ← Issues + Component map
+   - `locks` ← Locks to preserve section (byte-sensitive strings)
+   - Failing component IDs ← Issues + Component map (full instance IDs when present, e.g. `comp.button#install`)
 3. **Skip Q1 and Q2** (job + diagnosis already in the report). Announce:
    `✓ Seeded from audit — skipping job/diagnosis pickers`
 4. Ask only missing questions: dialect (if unset), audience if needed, **Q5 voice**, **Q6 scope** (default to `scope_paths`), **Q7** only if locks empty, **Q8 delivery**, language order if bilingual site and unset.
@@ -285,7 +291,7 @@ Before writing, assemble a **Branch Card** from answers and obey it:
 | Q4 audience | Proof type changes (code vs campaign vs ROI vs plain benefits) |
 | Q5 voice pack | Sentence length + warmth markers follow the pack table |
 
-**Anti-collapse rule:** If two branch cards would produce similar copy, amplify the highest-priority differing signal (Q1 > Q5 > Q4) until openings clearly diverge. Show the user one sample line of the chosen opening before the full write when `--dry-run` or Q8=C/D.
+**Anti-collapse rule:** If two branch cards would produce similar copy, amplify the highest-priority differing signal (Q1 > Q5 > Q4) until openings clearly diverge. Show the user one sample line of the chosen opening before the full write when Q8=C/D (or `--dry-run` on the delivery step only — does not require a full `### New Version` block; see Output Format).
 
 After the last answer, show:
 
@@ -324,6 +330,8 @@ Wait for **Y** (or user already said `--yes` / «ابعت» / «اكتب») befo
 
 ## Output Format
 
+**Default (Q8=A or B, and not `--dry-run`):**
+
 ```markdown
 ## Content Improvement Report
 
@@ -348,6 +356,36 @@ Wait for **Y** (or user already said `--yes` / «ابعت» / «اكتب») befo
 - …
 ```
 
+**Dry-run / Q8=C / Q8=D / `--dry-run`:** omit `### New Version`. Deliver only:
+
+```markdown
+## Content Improvement Report (dry-run)
+
+**Source:** …
+**Branch Card:** …
+**Mode:** direction only — no file writes
+
+### Direction Taken
+- …
+
+### Locks Preserved
+- …
+
+### Sample openings (3)
+1. …
+2. …
+3. …
+
+### Divergence Proof
+**Original sample:** …
+**New sample (opening line only):** …
+
+### Recommendation
+- …
+```
+
+**Q8=C (side-by-side samples):** use the dry-run template but add a short side-by-side table under `### Sample openings` instead of three full openings when scope is narrow.
+
 ---
 
 ## Flags
@@ -356,7 +394,7 @@ Wait for **Y** (or user already said `--yes` / «ابعت» / «اكتب») befo
 |------|---------|
 | `--voice <path>` | Prefill Q5=E |
 | `--dialect <name>` | Skip Q3 |
-| `--format annotated\|side-by-side\|bullet\|rewrite` | Prefill delivery style |
+| `--format annotated\|side-by-side\|bullet\|rewrite` | Prefill Q8 delivery (see mapping below) |
 | `--dry-run` | Force Q8=D path |
 | `--file` / `--out` | IO paths |
 | `--yes` | Skip final Y confirm (still run pickers unless user also said skip questions) |
@@ -364,8 +402,29 @@ Wait for **Y** (or user already said `--yes` / «ابعت» / «اكتب») befo
 | `--lang-order ar_en\|en_ar` | Prefill bilingual order (`bilingual-pipeline.md`) |
 | `--lang ar\|en\|ar,en` | Locale scope |
 
-If the user says **skip questions** / **just rewrite**: ask **only Q5 (voice)** + **Q7 (locks)** — still pickers, still one at a time — then Branch Card → write.  
-With `--from-audit`, “skip questions” still honors report locks and only asks delivery if missing.
+### `--format` → Q8 mapping
+
+| `--format` | Q8 | Output template |
+|------------|-----|-----------------|
+| `rewrite` | A | Default — full rewrite in files / page |
+| `annotated` | B | Default — report + new copy in chat (inline notes on changes) |
+| `side-by-side` | C | Dry-run variant with side-by-side samples table |
+| `bullet` | B | Default body, but `### Direction Taken` and `### Recommendation` as bullet lists only (no long prose blocks) |
+
+If `--dry-run` is also set, it wins over `--format` and forces the dry-run template (Q8=D).
+
+If the user says **skip questions** / **just rewrite**:
+
+- **Without `--from-audit`:** ask only **Q5 (voice)** + **Q7 (locks)** — still pickers, one at a time — then Branch Card → write.
+- **With `--from-audit`:** report seeds job, diagnosis, locks, and scope; ask only when still missing:
+  - **Q3** dialect (unless `--dialect`)
+  - **Q5** voice (unless `--voice` or `voice_hint` in Improve seeds)
+  - **Q8** delivery (unless `--dry-run`, `--format`, or user already chose delivery)
+  - **lang_order** (unless `--lang-order` or seeds)
+  - **Q7** only when `## Locks to preserve` is empty
+  - **Q4** audience only when diagnosis = E (audience mismatch) and audience cannot be inferred from the report
+
+Never generate files on Q8=D / `--dry-run`.
 
 ---
 

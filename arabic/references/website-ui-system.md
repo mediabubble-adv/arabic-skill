@@ -18,6 +18,26 @@
 
 Always assign stable IDs so audit issues and bilingual twins map 1:1.
 
+### Instance disambiguation (repeated components)
+
+Type-level IDs (`comp.button`, `block.features`) name the **pattern**. When the same pattern appears more than once on a page, add an **instance suffix**:
+
+```text
+{prefix}.{type}#{instance}
+```
+
+| Pattern | Example | When to use |
+|---------|---------|-------------|
+| Semantic slug from job/label | `comp.button#install`, `comp.button#learn-more` | Preferred — derived from CTA text, route, or `data-arabic-id` |
+| Block + page role | `block.features#pricing`, `block.cta_band#footer` | Repeated section types on one page |
+| Ordinal (last resort) | `comp.card#2`, `block.features#3` | Only when labels are identical and no stable semantic slug exists |
+
+**Rules:**
+1. One instance suffix per audited row in the component map — no duplicate `#install` on the same page.
+2. Bilingual twins share the same base ID (`comp.button#install` in AR and EN).
+3. Audit issues cite the **full** ID (`comp.button#install`, not bare `comp.button`) when targeting a specific instance.
+4. `/arabic improve --from-audit` uses these full IDs in `scope_paths` / failing-component list so rewrites hit the right button/card, not every instance of the type.
+
 ---
 
 ## 1. Chrome
