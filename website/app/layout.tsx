@@ -16,6 +16,7 @@ const mono = JetBrains_Mono({
   display: "swap",
 });
 
+// Runs before hydration to set the theme from localStorage, avoiding a flash.
 const noFlashTheme = `(function(){try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.dataset.theme=t;}else{document.documentElement.dataset.theme='dark';}}catch(e){document.documentElement.dataset.theme='dark';}})();`;
 
 export const metadata: Metadata = {
@@ -38,9 +39,6 @@ const softwareLd = {
   license: "https://github.com/mediabubble-adv/arabic-skill/blob/main/LICENSE",
 };
 
-// Runs before hydration to set the theme from localStorage, avoiding a flash.
-const noFlashTheme = `(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();`;
-
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -48,13 +46,12 @@ export default function RootLayout({
     <html lang="ar" dir="rtl" suppressHydrationWarning>
       <head>
         <InlineScript html={noFlashTheme} />
-      </head>
-      <body className={`${arabic.variable} ${mono.variable} antialiased`}>
-        <InlineScript html={noFlashTheme} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareLd) }}
         />
+      </head>
+      <body className={`${arabic.variable} ${mono.variable} antialiased`}>
         {children}
       </body>
     </html>

@@ -3,7 +3,6 @@ import path from "node:path";
 
 const POSTS_DIR = path.join(process.cwd(), "app/blog/posts");
 const SAFE_SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
-const SAFE_SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 export type BlogPostMeta = {
   slug: string;
@@ -16,10 +15,10 @@ export type BlogPostMeta = {
   category: string;
   tags: string[];
 };
+
 function isSafeSlug(slug: string): boolean {
   return SAFE_SLUG_RE.test(slug);
 }
-
 
 function parseFrontmatter(raw: string): Record<string, string | string[]> {
   const match = raw.match(/^---\n([\s\S]*?)\n---/);
@@ -38,6 +37,20 @@ function parseFrontmatter(raw: string): Record<string, string | string[]> {
   return data;
 }
 
+function metaFromFrontmatter(slug: string, fm: Record<string, string | string[]>): BlogPostMeta {
+  return {
+    slug,
+    title: String(fm.title ?? slug),
+    titleAr: fm.titleAr ? String(fm.titleAr) : undefined,
+    description: String(fm.description ?? ""),
+    author: String(fm.author ?? "MediaBubble"),
+    date: String(fm.date ?? ""),
+    readTime: String(fm.readTime ?? ""),
+    category: String(fm.category ?? "Guide"),
+    tags: Array.isArray(fm.keywords) ? fm.keywords : [],
+  };
+}
+
 export function getAllPosts(): BlogPostMeta[] {
   const files = fs
     .readdirSync(POSTS_DIR)
@@ -45,46 +58,29 @@ export function getAllPosts(): BlogPostMeta[] {
 
   return files
     .map((file) => {
-      if (!isSafeSlug(slug)) return null;
       const slug = file.replace(/\.mdx$/, "");
-      if (!SAFE_SLUG_RE.test(slug)) return null;
+      if (!isSafeSlug(slug)) return null;
       const raw = fs.readFileSync(path.join(POSTS_DIR, file), "utf8");
       const fm = parseFrontmatter(raw);
-      return {
-        slug,
-        title: String(fm.title ?? slug),
-        titleAr: fm.titleAr ? String(fm.titleAr) : undefined,
-        description: String(fm.description ?? ""),
-        author: String(fm.author ?? "MediaBubble"),
-        date: String(fm.date ?? ""),
-        readTime: String(fm.readTime ?? ""),
-        category: String(fm.category ?? "Guide"),
-        tags: Array.isArray(fm.keywords) ? fm.keywords : [],
-    .filter((post): post is BlogPostMeta => post !== null)
-      };
+      return metaFromFrontmatter(slug, fm);
     })
     .filter((post): post is BlogPostMeta => post !== null)
     .sort((a, b) => b.date.localeCompare(a.date));
 }
 
 export function getPostBySlug(slug: string): { meta: BlogPostMeta; body: string } | null {
+  if (!isSafeSlug(slug)) return null;
+
   const file = path.join(POSTS_DIR, `${slug}.mdx`);
-  if (!fs.existsSync(file)) return null;
-  const raw = fs.readFileSync(file, "utf8");
+  const resolved = path.resolve(file);
+  if (!resolved.startsWith(`${path.resolve(POSTS_DIR)}${path.sep}`)) return null;
+  if (!fs.existsSync(resolved)) return null;
+
+  const raw = fs.readFileSync(resolved, "utf8");
   const body = raw.replace(/^---[\s\S]*?---\n/, "");
   const fm = parseFrontmatter(raw);
   return {
-    meta: {
-      slug,
-      title: String(fm.title ?? slug),
-      titleAr: fm.titleAr ? String(fm.titleAr) : undefined,
-      description: String(fm.description ?? ""),
-      author: String(fm.author ?? "MediaBubble"),
-      date: String(fm.date ?? ""),
-      readTime: String(fm.readTime ?? ""),
-      category: String(fm.category ?? "Guide"),
-      tags: Array.isArray(fm.keywords) ? fm.keywords : [],
-    },
+    meta: metaFromFrontmatter(slug, fm),
     body,
   };
 }
