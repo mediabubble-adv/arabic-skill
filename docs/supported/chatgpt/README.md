@@ -8,7 +8,13 @@
 
 ## Install
 
-No CLI installer target exists for ChatGPT (`bin/arabic-skill.js` does not list it). Use one of:
+### Preferred (guided steps via CLI)
+
+```bash
+npx @mediabubble-adv/arabic-skill@latest install --target chatgpt
+```
+
+No filesystem skills folder — the CLI prints Custom GPT / Project packaging steps. Manual options:
 
 - **Custom GPT instructions:** paste `arabic/SKILL.md` body into the Custom GPT system prompt field; upload `arabic/references/*.md` and `arabic/dialects/*.md` as Knowledge files (subject to ChatGPT's per-file and total upload limits).
 - **Project instructions (ChatGPT Projects):** paste `SKILL.md` into project instructions; upload reference files as project files.

@@ -4,6 +4,16 @@
 
 `Partial`
 
+## Install
+
+### Preferred (guided steps via CLI)
+
+```bash
+npx @mediabubble-adv/arabic-skill@latest install --target vs-code
+```
+
+No verified global skills folder — extension-dependent. The CLI prints extension-specific instruction steps. Escape hatch: `install --dir <path>` once you confirm the extension's skills root.
+
 ## Why It Is Partial
 
 VS Code by itself is an editor, not a complete skill runtime. Support depends on which AI extension or agent layer is active.

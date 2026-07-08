@@ -5,27 +5,28 @@ import Link from "next/link";
 import { CopyBlock } from "@/components/copy-block";
 import { ToolTabs } from "@/components/tool-tabs";
 import { FaqAccordion } from "@/components/faq-accordion";
+import { PrintInstallSection } from "@/components/print-install-section";
 import { FIRST_COMMAND, INIT_BRIEF_EXAMPLE, PRIMARY_INSTALL } from "@/lib/install-commands";
 
 const FAQ = [
   {
     question: "هل المهارة مجانية؟",
-    answer: "آه. مفتوحة المصدر على GitHub. npx install مجاني.",
+    answer: "نعم. مفتوحة المصدر على GitHub. npx install مجاني.",
   },
   {
-    question: "لازم Cursor بس؟",
+    question: "هل Cursor شرط؟",
     answer:
-      "لأ. في ٢٤ أداة مدعومة. Cursor وClaude وCodex ليهم أوامر جاهزة.",
+      "لا. في ٢٤ أداة مدعومة — ٧ مسارات preset عالمية + دليل يدوي للباقي. Cursor وClaude وCodex وHermes وOpenClaw وOpenCode وAntigravity لهم أوامر npx جاهزة.",
   },
   {
-    question: "إيه الفرق عن ChatGPT؟",
+    question: "ما الفرق عن ChatGPT؟",
     answer:
-      "ChatGPT عام. المهارة دي متخصصة في العربي: لهجات، تأنيس، تدقيق، ومشاريع كبيرة بخطة.",
+      "ChatGPT عام. المهارة متخصصة في العربي: لهجات، تأنيس، تدقيق، ومشاريع كبيرة بخطة.",
   },
   {
-    question: "محتاج GitHub؟",
+    question: "هل أحتاج GitHub؟",
     answer:
-      "للتثبيت السريع: لأ. للـ rules والـ commands الكاملة في Cursor: clone يدوي.",
+      "للتثبيت السريع: لا. لقواعد وcommands كاملة في Cursor: clone يدوي.",
   },
 ];
 
@@ -73,6 +74,7 @@ function InstallPageClient() {
             </h2>
             <ToolTabs />
           </section>
+          <PrintInstallSection />
           <section>
             <h2 className="section-heading text-xl md:text-2xl font-semibold text-[var(--fg)]">
               أول أمر بعد التثبيت
@@ -84,15 +86,15 @@ function InstallPageClient() {
               بعد التثبيت
             </h3>
             <ol className="list-decimal list-inside text-[var(--fg-muted)] space-y-1 max-w-xl mx-auto">
-              <li>افتح المشروع اللي شغال عليه</li>
+              <li>افتح المشروع الحالي</li>
               <li>
-                اكتب <code dir="ltr">{FIRST_COMMAND}</code> وابدأ (من غير ملفات في الريبو)
+                اكتب <code dir="ltr">{FIRST_COMMAND}</code> وابدأ (حتى من غير ملفات إضافية في الريبو)
               </li>
               <li>
-                لو مشروع عميل: <code dir="ltr">/arabic init</code> ثم{" "}
+                لمشروع عميل: <code dir="ltr">/arabic init</code> ثم{" "}
                 <code dir="ltr">{INIT_BRIEF_EXAMPLE}</code>
               </li>
-              <li>لو عندك براند ثابت: /arabic voice save</li>
+              <li>لصوت براند ثابت: /arabic voice save</li>
             </ol>
           </section>
         </div>
@@ -100,29 +102,28 @@ function InstallPageClient() {
         <div className="space-y-6 text-[var(--fg-muted)] max-w-2xl mx-auto text-center">
           <section>
             <h2 className="text-xl font-semibold text-[var(--fg)] mb-2">
-              إيه المهارة؟
+              ما هي المهارة؟
             </h2>
             <p>
-              المهارة دي حزمة تعليمات بتتثبت في أداة الذكاء الاصطناعي بتاعتك، مش
-              شات منفصل. بتخلي الـ AI يكتب محتوى عربي بصوت طبيعي، يفهم السياق،
-              ويراجع قبل ما يسلّم.{" "}
+              حزمة تعليمات تتثبت داخل أداة الذكاء الاصطناعي — مش شات منفصل.
+              تخلي الـ AI يكتب عربي بصوت طبيعي، يقرأ السياق، ويراجع قبل التسليم.{" "}
               <strong className="text-[var(--fg)]">مش مجرد ترجمة.</strong>
             </p>
           </section>
           <section>
             <h2 className="text-xl font-semibold text-[var(--fg)] mb-2">
-              هتعمل إيه؟
+              ماذا ستفعل؟
             </h2>
             <p>
-              هتكتب منشورات، إعلانات، صفحات، سكريبتات بالمصري أو أي لهجة، من جوه
-              Cursor أو Claude أو Codex.
+              تكتب منشورات، إعلانات، صفحات، وسكريبتات بالمصري أو بأي لهجة، من
+              جوه Cursor أو Claude أو Codex.
             </p>
           </section>
           <div className="text-start">
             <CopyBlock text={PRIMARY_INSTALL} />
           </div>
           <p>
-            عايز تشوف قبل ما تثبت؟{" "}
+            تريد مراجعة قبل التثبيت؟{" "}
             <Link href="/examples" className="text-[var(--brand)]">
               الأمثلة
             </Link>{" "}
@@ -143,9 +144,9 @@ function InstallPageClient() {
       </section>
 
       <p className="mt-10 text-sm text-[var(--fg-muted)] border-t border-[var(--border)] pt-6 text-center">
-        الصفحة دي اتكتبت بـ <code dir="ltr">/arabic</code>.{" "}
+        الصفحة اتكتبت بـ <code dir="ltr">/arabic</code>.{" "}
         <Link href="/about" className="text-[var(--brand)]">
-          شوف إزاي
+          مسار البناء
         </Link>
         .
       </p>

@@ -4,6 +4,16 @@
 
 `Partial`
 
+## Install
+
+### Preferred (guided steps via CLI)
+
+```bash
+npx @mediabubble-adv/arabic-skill@latest install --target kilo-code
+```
+
+No verified global skills folder — the CLI prints local rules/docs adapter steps. Escape hatch: `install --dir <path>` when you have a confirmed skills root.
+
 ## Current Assumption
 
 Because this repo already contains a `.kilocode` folder, Kilo Code is worth supporting explicitly even if the current setup is minimal.

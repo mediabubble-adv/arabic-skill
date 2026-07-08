@@ -4,6 +4,16 @@
 
 `Partial`
 
+## Install
+
+### Preferred (guided steps via CLI)
+
+```bash
+npx @mediabubble-adv/arabic-skill@latest install --target sourcegraph-cody
+```
+
+No verified global skills folder — the CLI prints repo-context and instruction-wrapper steps. Escape hatch: `install --dir <path>` when you have a confirmed skills root.
+
 ## Why It Is Partial
 
 Cody is strong at codebase-aware assistance, but the full advisory-command-subagent model usually needs extra packaging.

@@ -1,0 +1,273 @@
+{
+  "version": 1,
+  "targets": [
+    {
+      "id": "cursor",
+      "mode": "skills_home",
+      "skillsDir": "~/.cursor/skills",
+      "profile": "docs/supported/cursor/README.md",
+      "integrationFiles": [
+        {
+          "label": "command",
+          "source": ".cursor/commands/arabic.md",
+          "destination": "~/.cursor/commands/arabic.md"
+        },
+        {
+          "label": "rule",
+          "source": ".cursor/rules/arabic.mdc",
+          "destination": "~/.cursor/rules/arabic.mdc"
+        }
+      ]
+    },
+    {
+      "id": "claude",
+      "mode": "skills_home",
+      "skillsDir": "~/.claude/skills",
+      "profile": "docs/supported/claude/README.md"
+    },
+    {
+      "id": "codex",
+      "mode": "skills_home",
+      "skillsDir": "~/.codex/skills",
+      "profile": "docs/supported/codex/README.md"
+    },
+    {
+      "id": "hermes-agent",
+      "mode": "skills_home",
+      "skillsDir": "~/.hermes/skills",
+      "workspaceDir": "skills",
+      "defaultScope": "home",
+      "profile": "docs/supported/hermes-agent/README.md",
+      "notes": "Agent Skills compatible; in-repo skills/ when --scope workspace"
+    },
+    {
+      "id": "openclaw",
+      "mode": "skills_home",
+      "skillsDir": "~/.openclaw/skills",
+      "workspaceDir": "skills",
+      "defaultScope": "home",
+      "profile": "docs/supported/openclaw/README.md"
+    },
+    {
+      "id": "opencode",
+      "mode": "skills_home",
+      "skillsDir": "~/.config/opencode/skills",
+      "workspaceDir": ".opencode/skills",
+      "defaultScope": "home",
+      "profile": "docs/supported/opencode/README.md"
+    },
+    {
+      "id": "antigravity",
+      "mode": "skills_home",
+      "skillsDir": "~/.gemini/config/skills",
+      "workspaceDir": ".agents/skills",
+      "defaultScope": "home",
+      "profile": "docs/supported/antigravity/README.md",
+      "notes": "Antigravity CLI may use ~/.gemini/antigravity-cli/skills/ on some versions"
+    },
+    {
+      "id": "chatgpt",
+      "mode": "print",
+      "profile": "docs/supported/chatgpt/README.md",
+      "manualReason": "No local skills folder — use Custom GPT, Projects, or per-chat paste",
+      "printSteps": [
+        "Custom GPT: paste arabic/SKILL.md body into the system prompt; upload arabic/references/*.md and arabic/dialects/*.md as Knowledge files (subject to upload limits).",
+        "ChatGPT Projects: paste SKILL.md into project instructions; upload reference packs as project files.",
+        "Per-conversation: paste SKILL.md at chat start — large reference packs may not fit; prefer Custom GPT or Projects.",
+        "Escape hatch: clone this repo and copy arabic/ manually; there is no filesystem install path for ChatGPT."
+      ]
+    },
+    {
+      "id": "aider",
+      "mode": "print",
+      "profile": "docs/supported/aider/README.md",
+      "manualReason": "No verified global skills folder — use repo docs and --dir",
+      "printSteps": [
+        "Clone mediabubble-adv/arabic-skill or run from a local checkout.",
+        "Add arabic/SKILL.md and key references to your repo docs (e.g. AGENTS.md, CONVENTIONS.md) per Aider startup conventions.",
+        "Use: npx @mediabubble-adv/arabic-skill@latest install --dir <your-skills-or-docs-path> if your setup has a skills directory.",
+        "See docs/supported/aider/README.md for CLI wrapper and command-tree packaging."
+      ]
+    },
+    {
+      "id": "amp",
+      "mode": "print",
+      "profile": "docs/supported/amp/README.md",
+      "manualReason": "No verified global skills folder — adapter + workspace conventions",
+      "printSteps": [
+        "Clone mediabubble-adv/arabic-skill or use a local checkout.",
+        "Package via Amp adapter/workspace conventions documented in docs/supported/amp/README.md.",
+        "Use: npx @mediabubble-adv/arabic-skill@latest install --dir <path> when you have a confirmed skills root.",
+        "Load SKILL.md progressively; map /arabic subcommands via prompt convention until native routing is tested."
+      ]
+    },
+    {
+      "id": "cline",
+      "mode": "print",
+      "profile": "docs/supported/cline/README.md",
+      "manualReason": "No verified global skills folder — .clinerules + repo docs",
+      "printSteps": [
+        "Clone mediabubble-adv/arabic-skill or use a local checkout.",
+        "Copy arabic/ into your project and wire .clinerules / Cline rules per docs/supported/cline/README.md.",
+        "Use: npx @mediabubble-adv/arabic-skill@latest install --dir <path> if Cline exposes a skills directory on your version.",
+        "Command tree works via prompt convention; native /arabic routing may vary by Cline version."
+      ]
+    },
+    {
+      "id": "continue",
+      "mode": "print",
+      "profile": "docs/supported/continue/README.md",
+      "manualReason": "No verified global skills folder — local config + repo context",
+      "printSteps": [
+        "Clone mediabubble-adv/arabic-skill or use a local checkout.",
+        "Add SKILL.md and selected references via Continue config and repo docs (see docs/supported/continue/README.md).",
+        "Use: npx @mediabubble-adv/arabic-skill@latest install --dir <path> when you have a confirmed skills root.",
+        "Map /arabic commands through prompt wrappers; subagents are limited on Continue."
+      ]
+    },
+    {
+      "id": "copilot",
+      "mode": "print",
+      "profile": "docs/supported/copilot/README.md",
+      "manualReason": "No verified global skills folder — custom instructions + repo docs",
+      "printSteps": [
+        "Clone mediabubble-adv/arabic-skill or use a local checkout.",
+        "Paste or reference SKILL.md via Copilot custom instructions and repo-local documentation.",
+        "Use: npx @mediabubble-adv/arabic-skill@latest install --dir <path> if your Copilot setup supports a skills folder.",
+        "See docs/supported/copilot/README.md for instruction packaging."
+      ]
+    },
+    {
+      "id": "gemini",
+      "mode": "print",
+      "profile": "docs/supported/gemini/README.md",
+      "manualReason": "No verified global skills folder — system instructions + prompt files",
+      "printSteps": [
+        "Clone mediabubble-adv/arabic-skill or use a local checkout.",
+        "Load SKILL.md via Gemini system instructions or project prompt files (see docs/supported/gemini/README.md).",
+        "For Antigravity IDE with native skills: npx @mediabubble-adv/arabic-skill@latest install --target antigravity",
+        "Use --dir <path> when you have a confirmed skills root for your Gemini surface."
+      ]
+    },
+    {
+      "id": "jetbrains-junie",
+      "mode": "print",
+      "profile": "docs/supported/jetbrains-junie/README.md",
+      "manualReason": "No verified global skills folder — IDE-specific instructions",
+      "printSteps": [
+        "Clone mediabubble-adv/arabic-skill or use a local checkout.",
+        "Wire SKILL.md through Junie / JetBrains AI project instructions per docs/supported/jetbrains-junie/README.md.",
+        "Use: npx @mediabubble-adv/arabic-skill@latest install --dir <path> if your Junie version exposes a skills directory.",
+        "Validate how Junie consumes project instructions before claiming full command routing."
+      ]
+    },
+    {
+      "id": "kilo-code",
+      "mode": "print",
+      "profile": "docs/supported/kilo-code/README.md",
+      "manualReason": "No verified global skills folder — local rules/docs + adapter",
+      "printSteps": [
+        "Clone mediabubble-adv/arabic-skill or use a local checkout.",
+        "Package via Kilo Code local config and docs per docs/supported/kilo-code/README.md.",
+        "Use: npx @mediabubble-adv/arabic-skill@latest install --dir <path> when you have a confirmed skills root.",
+        "Map /arabic via prompt convention until hands-on adapter testing is complete."
+      ]
+    },
+    {
+      "id": "kiro",
+      "mode": "print",
+      "profile": "docs/supported/kiro/README.md",
+      "manualReason": "No verified global skills folder — steering/spec/workflow docs",
+      "printSteps": [
+        "Clone mediabubble-adv/arabic-skill or use a local checkout.",
+        "Integrate SKILL.md via Kiro steering, spec, or workflow docs (see docs/supported/kiro/README.md).",
+        "Use: npx @mediabubble-adv/arabic-skill@latest install --dir <path> if Kiro exposes a skills directory.",
+        "Command routing is prompt-conventional until native support is verified."
+      ]
+    },
+    {
+      "id": "openhands",
+      "mode": "print",
+      "profile": "docs/supported/openhands/README.md",
+      "manualReason": "No verified global skills folder — platform/SDK adapter",
+      "printSteps": [
+        "Clone mediabubble-adv/arabic-skill or use a local checkout.",
+        "Package through OpenHands platform/SDK layers per docs/supported/openhands/README.md.",
+        "Use: npx @mediabubble-adv/arabic-skill@latest install --dir <path> when you have a confirmed skills root.",
+        "Subagents and workflows map well but need tool-specific adapter wiring."
+      ]
+    },
+    {
+      "id": "qwen",
+      "mode": "print",
+      "profile": "docs/supported/qwen/README.md",
+      "manualReason": "No verified global skills folder — system prompt/API wrapper",
+      "printSteps": [
+        "Clone mediabubble-adv/arabic-skill or use a local checkout.",
+        "Load SKILL.md via Qwen system prompt or API wrapper (see docs/supported/qwen/README.md).",
+        "Use: npx @mediabubble-adv/arabic-skill@latest install --dir <path> if your Qwen setup has a skills directory.",
+        "Full advisory-agent model needs a wrapper; core writing behavior works via instructions."
+      ]
+    },
+    {
+      "id": "replit",
+      "mode": "print",
+      "profile": "docs/supported/replit/README.md",
+      "manualReason": "No verified global skills folder — Replit Agent skills/docs",
+      "printSteps": [
+        "Clone mediabubble-adv/arabic-skill or use a local checkout.",
+        "Add arabic/ to your Replit project per Agent skills/docs conventions (see docs/supported/replit/README.md).",
+        "Use: npx @mediabubble-adv/arabic-skill@latest install --dir <path> inside your Repl when a skills root is confirmed.",
+        "Staged project workflows may need explicit prompts for /arabic subcommands."
+      ]
+    },
+    {
+      "id": "sourcegraph-cody",
+      "mode": "print",
+      "profile": "docs/supported/sourcegraph-cody/README.md",
+      "manualReason": "No verified global skills folder — repo context + instruction wrapper",
+      "printSteps": [
+        "Clone mediabubble-adv/arabic-skill or use a local checkout.",
+        "Wire SKILL.md through Cody repo context and instruction wrappers (see docs/supported/sourcegraph-cody/README.md).",
+        "Use: npx @mediabubble-adv/arabic-skill@latest install --dir <path> if Cody exposes a skills directory on your version.",
+        "Command routing is partial — prefer repo-local docs for stable behavior."
+      ]
+    },
+    {
+      "id": "vs-code",
+      "mode": "print",
+      "profile": "docs/supported/vs-code/README.md",
+      "manualReason": "No verified global skills folder — extension-dependent",
+      "printSteps": [
+        "Clone mediabubble-adv/arabic-skill or use a local checkout.",
+        "Install via your VS Code AI extension's skills/instructions path (see docs/supported/vs-code/README.md).",
+        "Use: npx @mediabubble-adv/arabic-skill@latest install --dir <path> once you confirm the extension's skills directory.",
+        "Capabilities vary by extension — validate custom instructions support first."
+      ]
+    },
+    {
+      "id": "windsurf",
+      "mode": "print",
+      "profile": "docs/supported/windsurf/README.md",
+      "manualReason": "No verified global skills folder — rules + docs + command conventions",
+      "printSteps": [
+        "Clone mediabubble-adv/arabic-skill or use a local checkout.",
+        "Package via Windsurf rules, docs, and command conventions (see docs/supported/windsurf/README.md).",
+        "Use: npx @mediabubble-adv/arabic-skill@latest install --dir <path> when you have a confirmed skills root.",
+        "Do not guess ~/.windsurf/skills — add a verified path to the profile before using a preset."
+      ]
+    },
+    {
+      "id": "zed",
+      "mode": "print",
+      "profile": "docs/supported/zed/README.md",
+      "manualReason": "No verified global skills folder — ACP/agent adapter + project docs",
+      "printSteps": [
+        "Clone mediabubble-adv/arabic-skill or use a local checkout.",
+        "Wire SKILL.md via Zed ACP/agent adapter and project docs (see docs/supported/zed/README.md).",
+        "Use: npx @mediabubble-adv/arabic-skill@latest install --dir <path> if Zed exposes a skills directory.",
+        "Subagents map well but need adapter-specific packaging."
+      ]
+    }
+  ]
+}

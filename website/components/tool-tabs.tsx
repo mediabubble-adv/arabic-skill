@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { CopyBlock } from "./copy-block";
-import { INSTALL_TABS } from "@/lib/install-commands";
+import { INSTALL_TABS, WORKSPACE_SCOPE_HINTS } from "@/lib/install-commands";
 
 export function ToolTabs() {
   const [activeId, setActiveId] = useState<(typeof INSTALL_TABS)[number]["id"]>(
@@ -35,6 +35,13 @@ export function ToolTabs() {
         ))}
       </div>
       <CopyBlock text={active.command} />
+      {WORKSPACE_SCOPE_HINTS[active.id] ? (
+        <p className="text-sm text-[var(--fg-muted)] text-center mt-3">
+          <code dir="ltr" className="text-xs">
+            {WORKSPACE_SCOPE_HINTS[active.id]}
+          </code>
+        </p>
+      ) : null}
     </div>
   );
 }

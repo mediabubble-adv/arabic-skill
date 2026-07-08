@@ -4,6 +4,16 @@
 
 `Partial`
 
+## Install
+
+### Preferred (guided steps via CLI)
+
+```bash
+npx @mediabubble-adv/arabic-skill@latest install --target copilot
+```
+
+No verified global skills folder — the CLI prints custom-instructions and repo-docs steps. Escape hatch: `install --dir <path>` when you have a confirmed skills root.
+
 ## Why It Is Partial
 
 Copilot can support structured instructions and repo-local documentation, but the full command-and-subagent model usually needs adaptation.

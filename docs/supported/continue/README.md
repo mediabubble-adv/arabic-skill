@@ -4,6 +4,16 @@
 
 `Partial`
 
+## Install
+
+### Preferred (guided steps via CLI)
+
+```bash
+npx @mediabubble-adv/arabic-skill@latest install --target continue
+```
+
+No verified global skills folder — the CLI prints local-config and repo-context steps. Escape hatch: `install --dir <path>` when you have a confirmed skills root.
+
 ## Important Note
 
 Continue was acquired by Cursor, but its open-source docs and model of local configuration still make it a useful compatibility target.

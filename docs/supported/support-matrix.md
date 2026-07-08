@@ -1,31 +1,33 @@
 # Support Matrix
 
-| Tool | Current Fit | Best Packaging | Commands | Subagents | Persistence | Fix Priority |
-|---|---|---|---|---|---|---|
-| Claude | Strong | system instructions + project docs + skill/rules pattern | Strong | Strong/Simulated | Strong | Low |
-| Cursor | Strong | repo rules + docs + command conventions | Strong | Partial/Simulated | Strong | Low |
-| Codex | Strong | skills-folder + docs | Partial | Unknown | Strong | Medium |
-| ChatGPT | Partial | Custom GPT / Project instructions + knowledge upload | Limited | Limited | Limited | High |
-| Antigravity | Partial | `.agents/skills/` + global skills + docs | Partial | Partial | Strong | Medium |
-| Aider | Strong | CLI wrapper + repo docs + command conventions | Strong | Simulated | Strong | Low |
-| Amp | Strong | CLI + plugins + custom agents adapter | Strong | Strong | Strong | Medium |
-| Cline | Strong | rules + CLI/IDE docs + command tree | Strong | Strong | Strong | Low |
-| Continue | Partial | local config + prompt docs + repo context | Partial | Limited | Partial | Medium |
-| Hermes Agent | Partial | `~/.hermes/skills/` + in-repo skills + docs | Partial | Partial | Strong | Medium |
-| Kiro | Partial | steering/spec/workflow docs + prompt wrapper | Partial | Partial | Partial | Medium |
-| JetBrains Junie | Partial | IDE-specific instructions + project docs | Partial | Limited | Partial | Medium |
-| OpenClaw | Partial | workspace `skills/` + `openclaw skills` + docs | Partial | Partial | Strong | Medium |
-| OpenHands | Strong | agent platform adapter + workflow docs | Strong | Strong | Strong | Medium |
-| Replit Agent | Partial | skills/docs + staged project workflows | Partial | Partial | Strong | Medium |
-| Sourcegraph Cody | Partial | repo context + instruction wrapper | Partial | Limited | Partial | Medium |
-| Windsurf | Strong | rules + docs + command conventions | Strong | Partial/Simulated | Strong | Low |
-| VS Code | Partial | docs + prompt files + extension-specific instructions | Partial | Limited | Partial | Medium |
-| OpenCode | Partial | `.opencode/skills/` + native `skill` tool + docs | Partial | Partial | Strong | Medium |
-| Kilo Code | Partial | local rules/docs + adapter conventions | Partial | Partial | Partial | Medium |
-| Gemini | Partial | system instructions + prompt files + project docs | Partial | Limited | Partial | Medium |
-| Qwen | Limited | system prompt/API wrapper + docs | Partial | Limited | Partial | High |
-| Copilot | Partial | custom instructions + prompt files + repo docs | Partial | Limited | Partial | Medium |
-| Zed | Strong | ACP/agent adapter + project docs | Partial | Strong | Strong | Medium |
+| Tool | Current Fit | Best Packaging | Commands | Subagents | Persistence | Fix Priority | Install |
+|---|---|---|---|---|---|---|---|
+| Claude | Strong | system instructions + project docs + skill/rules pattern | Strong | Strong/Simulated | Strong | Low | preset |
+| Cursor | Strong | repo rules + docs + command conventions | Strong | Partial/Simulated | Strong | Low | preset |
+| Codex | Strong | skills-folder + docs | Partial | Unknown | Strong | Medium | preset |
+| ChatGPT | Partial | Custom GPT / Project instructions + knowledge upload | Limited | Limited | Limited | High | print |
+| Antigravity | Partial | `.agents/skills/` + global skills + docs | Partial | Partial | Strong | Medium | preset, workspace |
+| Aider | Strong | CLI wrapper + repo docs + command conventions | Strong | Simulated | Strong | Low | print |
+| Amp | Strong | CLI + plugins + custom agents adapter | Strong | Strong | Strong | Medium | print |
+| Cline | Strong | rules + CLI/IDE docs + command tree | Strong | Strong | Strong | Low | print |
+| Continue | Partial | local config + prompt docs + repo context | Partial | Limited | Partial | Medium | print |
+| Hermes Agent | Partial | `~/.hermes/skills/` + in-repo skills + docs | Partial | Partial | Strong | Medium | preset, workspace |
+| Kiro | Partial | steering/spec/workflow docs + prompt wrapper | Partial | Partial | Partial | Medium | print |
+| JetBrains Junie | Partial | IDE-specific instructions + project docs | Partial | Limited | Partial | Medium | print |
+| OpenClaw | Partial | workspace `skills/` + `openclaw skills` + docs | Partial | Partial | Strong | Medium | preset, workspace |
+| OpenHands | Strong | agent platform adapter + workflow docs | Strong | Strong | Strong | Medium | print |
+| Replit Agent | Partial | skills/docs + staged project workflows | Partial | Partial | Strong | Medium | print |
+| Sourcegraph Cody | Partial | repo context + instruction wrapper | Partial | Limited | Partial | Medium | print |
+| Windsurf | Strong | rules + docs + command conventions | Strong | Partial/Simulated | Strong | Low | print |
+| VS Code | Partial | docs + prompt files + extension-specific instructions | Partial | Limited | Partial | Medium | print |
+| OpenCode | Partial | `.opencode/skills/` + native `skill` tool + docs | Partial | Partial | Strong | Medium | preset, workspace |
+| Kilo Code | Partial | local rules/docs + adapter conventions | Partial | Partial | Partial | Medium | print |
+| Gemini | Partial | system instructions + prompt files + project docs | Partial | Limited | Partial | Medium | print |
+| Qwen | Limited | system prompt/API wrapper + docs | Partial | Limited | Partial | High | print |
+| Copilot | Partial | custom instructions + prompt files + repo docs | Partial | Limited | Partial | Medium | print |
+| Zed | Strong | ACP/agent adapter + project docs | Partial | Strong | Strong | Medium | print |
+
+**Install column:** `preset` = `npx … install --target <id>` (global skills dir); `workspace` = add `--scope workspace`; `print` = guided manual steps (no file copy). Any tool also supports `install --dir <path>`. Run `install --list` for paths.
 
 ## Interpretation
 

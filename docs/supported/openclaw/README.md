@@ -8,7 +8,19 @@
 
 ## Install
 
-### Workspace (highest precedence)
+### Preferred (npx — workspace)
+
+```bash
+npx @mediabubble-adv/arabic-skill@latest install --target openclaw --scope workspace
+```
+
+### Preferred (npx — global)
+
+```bash
+npx @mediabubble-adv/arabic-skill@latest install --target openclaw
+```
+
+### Workspace (manual)
 
 ```bash
 git clone https://github.com/mediabubble-adv/arabic-skill.git
@@ -89,6 +101,6 @@ OpenClaw follows the AgentSkills spec with workspace and global skill roots, opt
 
 ## Fixes for First-Class Support
 
-- add OpenClaw to `bin/arabic-skill.js` `targetRoots` or document `openclaw skills install` as the preferred path
+- shipped in `bin/install-targets.json` as `--target openclaw` (global) and `--scope workspace`; `openclaw skills install` remains an alternative when CLI is available
 - create an OpenClaw adapter with allowlist + slash-command frontmatter
 - live-test multi-agent delegation for advisory → write → review loop

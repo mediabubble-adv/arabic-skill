@@ -8,6 +8,18 @@
 
 ## Install
 
+### Preferred (npx — global)
+
+```bash
+npx @mediabubble-adv/arabic-skill@latest install --target hermes-agent
+```
+
+### Preferred (npx — workspace)
+
+```bash
+npx @mediabubble-adv/arabic-skill@latest install --target hermes-agent --scope workspace
+```
+
 ### Manual (global skills root)
 
 ```bash
@@ -28,7 +40,7 @@ mkdir -p skills && cp -r arabic skills/arabic
 
 ## Why It Is Partial
 
-Hermes Agent implements the agentskills.io `SKILL.md` standard with progressive disclosure (`skills_list` → `skill_view`) and exposes each installed skill as a slash command. Core advisory and writing behavior fits well. Remaining gaps: no `npx` installer preset, unmapped native subagent orchestration for skill-defined roles, and hooks/triggers that vary by deployment.
+Hermes Agent implements the agentskills.io `SKILL.md` standard with progressive disclosure (`skills_list` → `skill_view`) and exposes each installed skill as a slash command. Core advisory and writing behavior fits well. Remaining gaps: unmapped native subagent orchestration for skill-defined roles, and hooks/triggers that vary by deployment.
 
 ## Expected Support
 
@@ -81,6 +93,6 @@ Hermes Agent implements the agentskills.io `SKILL.md` standard with progressive 
 
 ## Fixes for First-Class Support
 
-- add Hermes to `bin/arabic-skill.js` `targetRoots` after path verification
+- shipped in `bin/install-targets.json` as `--target hermes-agent` (global) and `--scope workspace` (in-repo)
 - create a Hermes adapter mapping guide → clarify → recommend → write → review to native lifecycle
 - live-test `/arabic` slash invocation and subcommand depth

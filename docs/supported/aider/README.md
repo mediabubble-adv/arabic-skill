@@ -4,6 +4,16 @@
 
 `Strong`
 
+## Install
+
+### Preferred (guided steps via CLI)
+
+```bash
+npx @mediabubble-adv/arabic-skill@latest install --target aider
+```
+
+No verified global skills folder — the CLI prints repo-docs and CLI-wrapper steps. Escape hatch: `install --dir <path>` when you have a confirmed skills root.
+
 ## Why It Fits Well
 
 Aider is explicitly a terminal-first AI pair programming tool and works well with repo-local markdown, command conventions, and file-based persistence.

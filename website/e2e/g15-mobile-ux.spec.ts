@@ -28,6 +28,15 @@ test.describe("G15 — mobile interactive components (390px)", () => {
     await expect(commandBlock).toContainText("codex");
   });
 
+  test("print install section on /install is visible", async ({ page }) => {
+    await page.goto("/install");
+    await expect(
+      page.getByRole("heading", { name: "أدوات بدليل يدوي" }),
+    ).toBeVisible();
+    await expect(page.getByText("ChatGPT")).toBeVisible();
+    await expect(page.getByText("install --target chatgpt")).toBeVisible();
+  });
+
   test("FAQ accordion on /install expands and collapses", async ({ page }) => {
     await page.goto("/install");
     const question = page.getByRole("button", {

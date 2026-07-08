@@ -4,6 +4,16 @@
 
 `Partial`
 
+## Install
+
+### Preferred (guided steps via CLI)
+
+```bash
+npx @mediabubble-adv/arabic-skill@latest install --target kiro
+```
+
+No verified global skills folder — the CLI prints steering/spec/workflow packaging steps. Escape hatch: `install --dir <path>` when you have a confirmed skills root.
+
 ## Current Assumption
 
 Kiro appears likely to fit a structured workflow model well, especially if it supports steering, specs, or staged execution. Exact support still needs validation.

@@ -8,7 +8,19 @@
 
 ## Install
 
-### Project-scoped
+### Preferred (npx — project)
+
+```bash
+npx @mediabubble-adv/arabic-skill@latest install --target opencode --scope workspace
+```
+
+### Preferred (npx — global)
+
+```bash
+npx @mediabubble-adv/arabic-skill@latest install --target opencode
+```
+
+### Project-scoped (manual)
 
 ```bash
 git clone https://github.com/mediabubble-adv/arabic-skill.git
@@ -30,7 +42,7 @@ cp -r arabic ~/.config/opencode/skills/arabic
 
 ## Why It Is Partial
 
-OpenCode natively discovers Agent Skills via the `skill` tool (`.opencode/skills/`, `~/.config/opencode/skills/`, plus Claude/agent-compatible paths). The portable runtime pack loads without an adapter rewrite. Gaps: no `npx` preset, permission gating in `opencode.json`, and convention-driven `/arabic` subcommands rather than a native router.
+OpenCode natively discovers Agent Skills via the `skill` tool (`.opencode/skills/`, `~/.config/opencode/skills/`, plus Claude/agent-compatible paths). The portable runtime pack loads without an adapter rewrite. Gaps: permission gating in `opencode.json`, and convention-driven `/arabic` subcommands rather than a native router.
 
 ## Expected Support
 
@@ -83,6 +95,6 @@ OpenCode natively discovers Agent Skills via the `skill` tool (`.opencode/skills
 
 ## Fixes for First-Class Support
 
-- add OpenCode to `bin/arabic-skill.js` `targetRoots` after path verification
+- shipped in `bin/install-targets.json` as `--target opencode` (global) and `--scope workspace`
 - document `opencode.json` permission patterns for team installs
 - live-test custom-agent overrides and long-running Project Mode sessions

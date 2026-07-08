@@ -4,6 +4,16 @@
 
 `Strong`
 
+## Install
+
+### Preferred (guided steps via CLI)
+
+```bash
+npx @mediabubble-adv/arabic-skill@latest install --target zed
+```
+
+No verified global skills folder — the CLI prints ACP/agent adapter steps. Escape hatch: `install --dir <path>` when you have a confirmed skills root.
+
 ## Why It Fits Well
 
 Zed has explicit agent support, ACP connectivity, tool permissions, and a bring-your-own-agent model. That makes it a good target for a portable skill architecture.

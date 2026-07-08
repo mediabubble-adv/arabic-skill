@@ -11,7 +11,7 @@
 ### Preferred (npx)
 
 ```bash
-npx @mediabubble-adv/arabic-skill install --target claude
+npx @mediabubble-adv/arabic-skill@latest install --target claude
 ```
 
 ### Manual Fallback
