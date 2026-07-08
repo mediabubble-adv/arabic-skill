@@ -1,0 +1,115 @@
+api/slack/auth.ts
+  s_673861cff7bff8::t_d6e54b0e35460a 5-14,19
+  s_673861cff7bff8::t_b3574858f02b78 89-148
+  s_673861cff7bff8::t_e91194b013b1de 42-43
+  s_673861cff7bff8::t_bcec785c74404a 88
+api/slack/commands.ts
+  s_673861cff7bff8::t_5f3dd36bfe35c3 1
+  s_673861cff7bff8::t_28d86481f7a609 29-32
+  s_673861cff7bff8::t_3fa7ffa3968bae 18
+  s_673861cff7bff8::t_523642683494eb 46,62
+  s_673861cff7bff8::t_182bd7cd3735f3 6,10
+app/api/slack/events/route.ts
+  s_673861cff7bff8::t_a8ca10618f2cbb 4-12,14-15
+app/api/webhooks/process/route.ts
+  s_673861cff7bff8::t_dd704935923ae6 18-22,24
+api/webhooks/url-validation.ts
+  s_673861cff7bff8::t_df90ffd130d7ed 1-63
+docs/guides/github-actions-integration.md
+  s_673861cff7bff8::t_c538b64a4ae344 430
+  s_673861cff7bff8::t_8bddab2e1199dd 79,82
+  s_673861cff7bff8::t_b7f718dc2f383e 190,256
+docs/guides/slack-bot-setup.md
+  s_673861cff7bff8::t_ea590b8d61d668 64
+  s_673861cff7bff8::t_486968495c931b 109
+  s_673861cff7bff8::t_0dbfcd5a68975b 112
+  s_673861cff7bff8::t_74e3dc65fff60c 132
+  s_673861cff7bff8::t_be4aa2f4afd1bb 138
+  s_673861cff7bff8::t_0ea5d8110e6412 167
+.github/workflows/generate-content.yml
+  s_673861cff7bff8::t_b9668d6a676c84 103
+docs/planning/p9b-advanced-integrations.md
+  s_673861cff7bff8::t_6c54efd75327f7 48
+DESIGN.md
+  s_673861cff7bff8::t_20a0f1b7e6ed68 72
+app/api/slack/commands/route.ts
+  s_673861cff7bff8::t_c9837badc4d707 3-11,13-14,16-17
+website/components/site-header.tsx
+  s_673861cff7bff8::t_3155485443fa83 13-14,17-25,28,31,33-55,57
+  s_673861cff7bff8::t_7c29cd6141b61f 141
+  s_673861cff7bff8::t_23808e10c1ee35 96
+api/slack/oauth.ts
+  s_673861cff7bff8::t_7f76c9e4a7db5a 4-8,10,17-21,23-32,39,48-51,83,99-111,129,131-132,136-137,139,141,144-145,157,201-212,222-223,254-262
+api/webhooks/management.ts
+  s_673861cff7bff8::t_e74db6cec9092a 254
+  s_673861cff7bff8::t_58edc08525f73a 140
+  s_673861cff7bff8::t_2db8564c9f8e73 4
+  s_673861cff7bff8::t_dc4b1c722367c9 20-21
+app/api/slack/interactive/route.ts
+  s_673861cff7bff8::t_74f3a57d3e90a7 4-7,9-10
+app/api/webhooks/receive/route.ts
+  s_673861cff7bff8::t_8dc52721b7facf 4-12,16-17
+website/components/newsletter-form-slot.tsx
+  s_673861cff7bff8::t_f46deb7c293cc3 3
+api/slack/oauth-state.ts
+  s_673861cff7bff8::t_8176a6474ad4d9 1-76
+docs/planning/9b1-slack-bot-design.md
+  s_673861cff7bff8::t_4002e16b8140e8 380
+  s_673861cff7bff8::t_71a11d4cba73da 454
+website/app/layout.tsx
+  s_673861cff7bff8::t_732b21f18615e8 3
+  s_673861cff7bff8::t_1da5b603ccdc86 48
+website/package.json
+  s_673861cff7bff8::t_8ce0dda4c32333 15-17
+migrations/001_slack_bot_schema.sql
+  s_673861cff7bff8::t_761c4c2d24d78f 19,22-24,31,37,40-42,54,57-58,70,73-76
+  s_673861cff7bff8::t_32e9f8c806884a 77
+api/webhooks/queue.ts
+  s_673861cff7bff8::t_c40c62a74bd782 3,16,39,42-47,50-51,54-55,64,66,70-87,98-101,109,117-118,124-128,131,138-143,148-152,155,187,222-224,234,250-252,256-261,266,268,276
+docs/planning/9b1-slack-app-review-planning.md
+  s_673861cff7bff8::t_d7f5ed3af63691 41
+docs/guides/slack-commands.md
+  s_673861cff7bff8::t_7a72a6f79b2080 3-4
+website/components/tools-marquee.tsx
+  s_673861cff7bff8::t_39c00cb733b423 41-47,52
+api/webhooks/handler.ts
+  s_673861cff7bff8::t_113b3de7baa779 6-9,34,42-43,59-63,68-76,88,138,159-160,180
+docs/planning/website-redesign-comps/INDEX.md
+  s_673861cff7bff8::t_3a5bbb5466edab 3-5,9,23-29
+migrations/002_webhooks_schema.sql
+  s_673861cff7bff8::t_6f29a356e4094c 17,20-22,36,39-42,57,60-65,77,80-83,96,99
+api/slack/interactive.ts
+  s_673861cff7bff8::t_ff2931ed03c6c4 1-2,8,11-27,33,41-46,48,84-118,121
+.github/workflows/slack-audit.yml
+  s_673861cff7bff8::t_f0fd398e764318 42,46-48,50
+  s_673861cff7bff8::t_4abcd59fb596f4 75
+api/slack/events.ts
+  s_673861cff7bff8::t_82dc915d3e5952 2-3,23-41,46,52-53,61-64,68,71-83,85-86
+PRODUCT.md
+  s_673861cff7bff8::t_8e51a0981c28c3 13
+docs/guides/slack-api.md
+  s_673861cff7bff8::t_09bc5da806577e 1-146
+docs/guides/template-author-guide.md
+  s_673861cff7bff8::t_c59d37437beb22 1-141
+slack-bot/manifest.json
+  s_673861cff7bff8::t_e5efb428276c3f 63
+  s_673861cff7bff8::t_d0d6d29efb6736 42
+docs/guides/webhooks-setup.md
+  s_673861cff7bff8::t_0ef65ff51446dc 1-187
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "65789b45bf39706773b8216eb014c0f4d9a0be84",
+  "prompts": {},
+  "sessions": {
+    "s_673861cff7bff8": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "c33fab7c-cc59-402e-ba0d-9aab4dcd27d9",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
