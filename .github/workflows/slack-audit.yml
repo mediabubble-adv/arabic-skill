@@ -39,12 +39,15 @@ jobs:
         id: extract
         env:
           ALL_CHANGED_FILES: ${{ steps.changes.outputs.all_changed_files }}
+          CHANGED_FILES_COUNT: ${{ steps.changes.outputs.all_changed_files_count }}
         run: |
           mkdir -p audit-results
           echo "Changed files:" > audit-results/summary.txt
-          printf '%s\n' "$ALL_CHANGED_FILES" >> audit-results/summary.txt
+          for file in $ALL_CHANGED_FILES; do
+            printf '%s\n' "$file" >> audit-results/summary.txt
+          done
           echo "" >> audit-results/summary.txt
-          echo "Files to audit: $(printf '%s\n' "$ALL_CHANGED_FILES" | wc -l)" >> audit-results/summary.txt
+          echo "Files to audit: ${CHANGED_FILES_COUNT}" >> audit-results/summary.txt
 
       - name: Notify audit started
         if: steps.changes.outputs.any_changed == 'true'
@@ -69,7 +72,7 @@ jobs:
 
       - name: Upload audit results
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: audit-results
           path: audit-results/

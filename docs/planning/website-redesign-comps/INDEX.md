@@ -1,10 +1,12 @@
 # Website Redesign — Section Reference Comps
 
-Palette: `#0B0B0F` bg · `#1FB28A` brand · `#E7C873` accent · IBM Plex Sans Arabic · RTL.
+Palette: `#0B0B0F` bg · `#1FB28A` brand · `#E7C873` accent · Almarai · RTL · Masri copy.
+
+Aligned with the eight shipped marketing routes: `/`, `/features`, `/install`, `/commands`, `/tutorials`, `/examples`, `/about`, `/docs`, plus `/newsletter`, `/privacy`, `/terms`. No `/blog`.
 
 | # | Page | Section | Comp file |
 |---|------|---------|-----------|
-| 1 | `/` | Hero (bottom-left over gradient) | `home-01-hero.png` |
+| 1 | `/` | Hero (full-bleed keyboard) | `home-01-hero.png` |
 | 2 | `/` | Trust stat strip | `home-02-stats.png` |
 | 3 | `/` | Mode flow | `home-03-mode-flow.png` |
 | 4 | `/` | Before/after | `home-04-before-after.png` |
@@ -18,13 +20,13 @@ Palette: `#0B0B0F` bg · `#1FB28A` brand · `#E7C873` accent · IBM Plex Sans Ar
 | 12 | `/install` | FAQ | `install-04-faq.png` |
 | 13 | `/install` | Trust strip | `install-05-trust.png` |
 | 14 | `/install` | Sticky mobile bar | `install-06-sticky.png` |
-| 15 | `/blog` | Index hero | `blog-01-hero.png` |
-| 16 | `/blog` | Post grid | `blog-02-grid.png` |
-| 17 | `/blog` | Category pills | `blog-03-categories.png` |
-| 18 | `/blog` | Post detail | `blog-04-post.png` |
-| 19 | `/newsletter` | Hero | `newsletter-01-hero.png` |
-| 20 | `/newsletter` | Signup form | `newsletter-02-form.png` |
-| 21 | `/newsletter` | Archive CTA | `newsletter-03-archive.png` |
+| 15 | `/features` | Page hero + bento | `features-01-hero.png` |
+| 16 | `/commands` | Command reference hero | `commands-01-hero.png` |
+| 17 | `/tutorials` | Tutorial index hero | `tutorials-01-hero.png` |
+| 18 | `/examples` | Before/after gallery | `examples-01-gallery.png` |
+| 19 | `/about` | Dogfood / G16 trail | `about-01-trail.png` |
+| 20 | `/docs` | Docs hub hero | `docs-01-hero.png` |
+| 21 | `/newsletter` | Signup hero | `newsletter-01-hero.png` |
 | 22 | shared | Header + mobile nav | `shared-nav.png` |
 
 Implementation follows this index; PNGs are visual references for layout rhythm.

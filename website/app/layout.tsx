@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Almarai, JetBrains_Mono } from "next/font/google";
+import { InlineScript } from "@/components/inline-script";
 import "./globals.css";
 
 const arabic = Almarai({
@@ -44,10 +45,7 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" suppressHydrationWarning>
       <head>
-        <script
-          suppressHydrationWarning
-          dangerouslySetInnerHTML={{ __html: noFlashTheme }}
-        />
+        <InlineScript html={noFlashTheme} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareLd) }}

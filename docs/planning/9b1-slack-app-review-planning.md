@@ -38,7 +38,7 @@ Plan for Slack app submission to official Slack App Directory. This is critical 
   - `chat:write` — Post results in channels
   - `commands` — Respond to slash commands
   - `users:read` — Get user info for analytics
-  - `team:info` — Get workspace name
+  - `team:read` — Get workspace name
   - `files:read` — Read uploaded files for audit
   - `reactions:read` — Track emoji reactions (future feature)
 

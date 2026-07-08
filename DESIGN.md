@@ -69,7 +69,7 @@ Tokens live in `website/app/globals.css`. Components in `website/components/`. C
 
 Neutrals are tinted dark editorial (`#0B0B0F` / `#141419`), never pure black. Brand green-teal carries CTAs, links, active tabs. Accent gold for positioning lock and highlights only.
 
-Light theme inverts neutrals; brand shifts to `#0E8C6B` for contrast. Hero uses radial `hero-gradient` (brand at 8–12% mix), not full-bleed color wash.
+Light theme inverts neutrals; brand shifts to `#0a7a5c` (`--brand`) with `--brand-strong: #066b51` for contrast (see `website/app/globals.css`). Hero uses radial `hero-gradient` (brand at 8–12% mix), not full-bleed color wash.
 
 Canonical OKLCH migration is a future polish; hex values above match shipped CSS.
 

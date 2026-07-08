@@ -102,11 +102,6 @@ export const SUPPORTED_TOOLS: SupportedTool[] = [
     icon: { kind: "color", src: "/supported/colors/replit-color.svg" },
   },
   {
-    id: "trae",
-    label: "Trae",
-    icon: { kind: "color", src: "/supported/colors/trae-color.svg" },
-  },
-  {
     id: "junie",
     label: "Junie",
     icon: { kind: "color", src: "/supported/colors/jetbrains-junie.svg" },
@@ -115,15 +110,6 @@ export const SUPPORTED_TOOLS: SupportedTool[] = [
     id: "openclaw",
     label: "OpenClaw",
     icon: { kind: "color", src: "/supported/colors/openclaw-color.svg" },
-  },
-  {
-    id: "manus",
-    label: "Manus",
-    icon: {
-      kind: "mono",
-      light: "/supported/black/manus.svg",
-      dark: "/supported/white/manus-dark.png",
-    },
   },
   {
     id: "hermes",

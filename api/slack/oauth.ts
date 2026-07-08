@@ -1,39 +1,42 @@
 import { VercelRequest, VercelResponse } from "@vercel/node";
 import axios from "axios";
-import { createHash, randomBytes } from "crypto";
 import { db } from "@/lib/db";
+import {
+  createOAuthState,
+  isAllowedRedirectUrl,
+  validateOAuthState,
+} from "./oauth-state";
 
-// State validation
-const OAUTH_STATES = new Map<string, { timestamp: number; redirect: string }>();
-const STATE_TIMEOUT = 10 * 60 * 1000; // 10 minutes
+const DEFAULT_REDIRECT = "https://arabic-skill.vercel.app";
 
 /**
  * Generates OAuth installation URL
  * GET /api/slack/oauth/start
  */
 export const handleOAuthStart = (req: VercelRequest, res: VercelResponse) => {
-  const redirectUrl = req.query.redirect_uri as string || "https://arabic-skill.vercel.app";
-  const state = randomBytes(16).toString("hex");
+  const requestedRedirect =
+    (req.query.redirect_uri as string) || DEFAULT_REDIRECT;
+  const redirectUrl = isAllowedRedirectUrl(requestedRedirect)
+    ? requestedRedirect
+    : DEFAULT_REDIRECT;
 
-  // Store state with expiration
-  OAUTH_STATES.set(state, {
-    timestamp: Date.now(),
-    redirect: redirectUrl,
-  });
-
-  // Clean old states
-  Array.from(OAUTH_STATES.entries()).forEach(([key, value]) => {
-    if (Date.now() - value.timestamp > STATE_TIMEOUT) {
-      OAUTH_STATES.delete(key);
-    }
-  });
+  let state: string;
+  try {
+    state = createOAuthState(redirectUrl);
+  } catch (error) {
+    return res.status(500).json({
+      error: "oauth_state_unavailable",
+      message:
+        error instanceof Error ? error.message : "Failed to create OAuth state",
+    });
+  }
 
   const clientId = process.env.SLACK_CLIENT_ID;
   const scope = [
     "chat:write",
     "commands",
     "users:read",
-    "team:info",
+    "team:read",
     "files:read",
     "reactions:read",
   ].join(",");
@@ -42,7 +45,10 @@ export const handleOAuthStart = (req: VercelRequest, res: VercelResponse) => {
   oauthUrl.searchParams.append("client_id", clientId!);
   oauthUrl.searchParams.append("scope", scope);
   oauthUrl.searchParams.append("state", state);
-  oauthUrl.searchParams.append("redirect_uri", "https://arabic-skill.vercel.app/api/slack/oauth/callback");
+  oauthUrl.searchParams.append(
+    "redirect_uri",
+    "https://arabic-skill.vercel.app/api/slack/oauth/callback"
+  );
 
   res.status(200).json({
     oauth_url: oauthUrl.toString(),
@@ -67,7 +73,6 @@ export const handleOAuthCallback = async (
     });
   }
 
-  // Validate state
   if (!state || typeof state !== "string") {
     return res.status(400).json({
       error: "invalid_state",
@@ -75,15 +80,13 @@ export const handleOAuthCallback = async (
     });
   }
 
-  const stateData = OAUTH_STATES.get(state);
+  const stateData = validateOAuthState(state);
   if (!stateData) {
     return res.status(400).json({
       error: "invalid_state",
       message: "State expired or invalid",
     });
   }
-
-  OAUTH_STATES.delete(state);
 
   if (!code || typeof code !== "string") {
     return res.status(400).json({
@@ -93,15 +96,19 @@ export const handleOAuthCallback = async (
   }
 
   try {
-    // Exchange code for token
-    const tokenResponse = await axios.post("https://slack.com/api/oauth.v2.access", null, {
-      params: {
-        client_id: process.env.SLACK_CLIENT_ID,
-        client_secret: process.env.SLACK_CLIENT_SECRET,
-        code,
-        redirect_uri: "https://arabic-skill.vercel.app/api/slack/oauth/callback",
-      },
-    });
+    const tokenResponse = await axios.post(
+      "https://slack.com/api/oauth.v2.access",
+      null,
+      {
+        params: {
+          client_id: process.env.SLACK_CLIENT_ID,
+          client_secret: process.env.SLACK_CLIENT_SECRET,
+          code,
+          redirect_uri:
+            "https://arabic-skill.vercel.app/api/slack/oauth/callback",
+        },
+      }
+    );
 
     if (!tokenResponse.data.ok) {
       console.error("Slack OAuth error:", tokenResponse.data);
@@ -113,29 +120,29 @@ export const handleOAuthCallback = async (
 
     const {
       access_token,
-      token_type,
-      scope,
       bot_user_id,
       app_id,
       team: { id: team_id, name: team_name },
       authed_user: { id: user_id },
     } = tokenResponse.data;
 
-    // Store workspace configuration
-    const workspaceId = `ws_${team_id}`;
-    await db.query(
+    const workspaceResult = await db.query(
       `
-      INSERT INTO workspaces (id, team_id, team_name, bot_token, bot_user_id, app_id, user_id, created_at)
-      VALUES ($1, $2, $3, $4, $5, $6, $7, NOW())
+      INSERT INTO workspaces (team_id, team_name, bot_token, bot_user_id, app_id, user_id, is_active, created_at)
+      VALUES ($1, $2, $3, $4, $5, $6, true, NOW())
       ON CONFLICT (team_id) DO UPDATE SET
         bot_token = EXCLUDED.bot_token,
         bot_user_id = EXCLUDED.bot_user_id,
+        is_active = true,
+        uninstalled_at = NULL,
         updated_at = NOW()
+      RETURNING id
       `,
-      [workspaceId, team_id, team_name, access_token, bot_user_id, app_id, user_id]
+      [team_id, team_name, access_token, bot_user_id, app_id, user_id]
     );
 
-    // Initialize workspace quota
+    const workspaceId = workspaceResult.rows[0].id;
+
     await db.query(
       `
       INSERT INTO workspace_quotas (workspace_id, plan, daily_limit, requests_today, reset_at)
@@ -145,11 +152,9 @@ export const handleOAuthCallback = async (
       [workspaceId, "free", 10]
     );
 
-    // Log successful installation
     console.log(`✅ Workspace installed: ${team_name} (${team_id})`);
 
-    // Redirect to success page or workspace
-    const redirectUrl = stateData.redirect || "https://arabic-skill.vercel.app";
+    const redirectUrl = stateData.redirect || DEFAULT_REDIRECT;
     const successUrl = new URL(redirectUrl);
     successUrl.searchParams.append("oauth_success", "true");
     successUrl.searchParams.append("workspace", team_name);
@@ -165,10 +170,6 @@ export const handleOAuthCallback = async (
   }
 };
 
-/**
- * Token refresh handler
- * POST /api/slack/oauth/refresh
- */
 export const handleTokenRefresh = async (
   req: VercelRequest,
   res: VercelResponse
@@ -183,7 +184,6 @@ export const handleTokenRefresh = async (
   }
 
   try {
-    // Get workspace to find team_id
     const workspaceResult = await db.query(
       "SELECT team_id FROM workspaces WHERE id = $1",
       [workspace_id]
@@ -198,15 +198,18 @@ export const handleTokenRefresh = async (
 
     const { team_id } = workspaceResult.rows[0];
 
-    // Exchange refresh token for new access token
-    const tokenResponse = await axios.post("https://slack.com/api/oauth.v2.access", null, {
-      params: {
-        client_id: process.env.SLACK_CLIENT_ID,
-        client_secret: process.env.SLACK_CLIENT_SECRET,
-        grant_type: "refresh_token",
-        refresh_token,
-      },
-    });
+    const tokenResponse = await axios.post(
+      "https://slack.com/api/oauth.v2.access",
+      null,
+      {
+        params: {
+          client_id: process.env.SLACK_CLIENT_ID,
+          client_secret: process.env.SLACK_CLIENT_SECRET,
+          grant_type: "refresh_token",
+          refresh_token,
+        },
+      }
+    );
 
     if (!tokenResponse.data.ok) {
       console.error("Token refresh failed:", tokenResponse.data);
@@ -216,9 +219,9 @@ export const handleTokenRefresh = async (
       });
     }
 
-    const { access_token, refresh_token: new_refresh_token } = tokenResponse.data;
+    const { access_token, refresh_token: new_refresh_token } =
+      tokenResponse.data;
 
-    // Update tokens in database
     await db.query(
       `
       UPDATE workspaces
@@ -244,14 +247,19 @@ export const handleTokenRefresh = async (
   }
 };
 
-/**
- * Workspace uninstall handler
- * DELETE /api/slack/oauth/uninstall
- */
 export const handleUninstall = async (
   req: VercelRequest,
   res: VercelResponse
 ) => {
+  const authHeader = req.headers.authorization;
+  const cronSecret = process.env.CRON_SECRET;
+  if (!cronSecret || authHeader !== `Bearer ${cronSecret}`) {
+    return res.status(401).json({
+      error: "unauthorized",
+      message: "Valid authorization required",
+    });
+  }
+
   const { workspace_id } = req.query;
 
   if (!workspace_id || typeof workspace_id !== "string") {
@@ -262,7 +270,6 @@ export const handleUninstall = async (
   }
 
   try {
-    // Mark workspace as inactive
     await db.query(
       `
       UPDATE workspaces
@@ -272,7 +279,6 @@ export const handleUninstall = async (
       [workspace_id]
     );
 
-    // Archive quota data (don't delete, keep for analytics)
     await db.query(
       `
       UPDATE workspace_quotas

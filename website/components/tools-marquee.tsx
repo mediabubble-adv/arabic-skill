@@ -38,15 +38,17 @@ export function ToolsMarquee() {
   const track = [...SUPPORTED_TOOLS, ...SUPPORTED_TOOLS];
 
   return (
-    <div className="tools-marquee" aria-hidden="true">
-      <div className="tools-marquee-track">
-        {track.map((tool, i) => (
-          <ToolIconBadge key={`${tool.id}-${i}`} tool={tool} />
-        ))}
+    <>
+      <div className="tools-marquee" aria-hidden="true">
+        <div className="tools-marquee-track">
+          {track.map((tool, i) => (
+            <ToolIconBadge key={`${tool.id}-${i}`} tool={tool} />
+          ))}
+        </div>
       </div>
       <p className="sr-only">
         أدوات مدعومة: {SUPPORTED_TOOLS.map((t) => t.label).join("، ")}
       </p>
-    </div>
+    </>
   );
 }

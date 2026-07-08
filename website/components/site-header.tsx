@@ -10,15 +10,51 @@ const allLinks = [...navLinks.slice(1), ...secondaryNavLinks];
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const panelId = useId();
+  const panelRef = useRef<HTMLElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
   const closeBtnRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1024px)");
+    const onViewportChange = () => {
+      if (mq.matches) setOpen(false);
+    };
+    mq.addEventListener("change", onViewportChange);
+    return () => mq.removeEventListener("change", onViewportChange);
+  }, []);
+
+  useEffect(() => {
     if (!open) return;
+
     closeBtnRef.current?.focus();
     document.body.style.overflow = "hidden";
+
     function onKey(e: KeyboardEvent) {
-      if (e.key === "Escape") setOpen(false);
+      if (e.key === "Escape") {
+        setOpen(false);
+        menuButtonRef.current?.focus();
+        return;
+      }
+
+      if (e.key !== "Tab" || !panelRef.current) return;
+
+      const focusable = panelRef.current.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
+      );
+      if (focusable.length === 0) return;
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     }
+
     document.addEventListener("keydown", onKey);
     return () => {
       document.body.style.overflow = "";
@@ -57,6 +93,7 @@ export function SiteHeader() {
             ثبّت المهارة
           </Link>
           <button
+            ref={menuButtonRef}
             type="button"
             className="lg:hidden inline-flex items-center justify-center size-11 rounded-md border border-[var(--border)] text-[var(--fg-muted)] hover:border-[var(--brand)] hover:text-[var(--brand)] focus-ring"
             aria-expanded={open}
@@ -101,6 +138,7 @@ export function SiteHeader() {
             onClick={() => setOpen(false)}
           />
           <nav
+            ref={panelRef}
             id={panelId}
             className="fixed inset-y-0 right-0 z-50 w-[min(100%,18rem)] border-l border-[var(--border)] bg-[var(--bg-elev)] p-6 shadow-2xl lg:hidden flex flex-col gap-1"
             aria-label="قائمة الجوال"

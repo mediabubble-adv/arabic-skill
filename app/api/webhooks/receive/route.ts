@@ -1,11 +1,20 @@
 import { handleWebhookReceive } from "@/api/webhooks/handler";
 
 export async function POST(req: Request) {
-  const body = await req.text();
+  const rawBody = await req.text();
+
+  let parsedBody: unknown;
+  try {
+    parsedBody = JSON.parse(rawBody);
+  } catch {
+    return Response.json({ error: "Invalid JSON body" }, { status: 400 });
+  }
+
   const mockReq = {
     method: "POST",
     headers: Object.fromEntries(req.headers),
-    body: JSON.parse(body),
+    rawBody,
+    body: parsedBody,
     query: Object.fromEntries(new URL(req.url).searchParams),
   };
 

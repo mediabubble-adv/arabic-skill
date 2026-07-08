@@ -10,7 +10,7 @@ Arabic content creators, marketers, and developers evaluating AI writing tools �
 
 ## Product Purpose
 
-Marketing site for **Awesome Arabic Skill** (`arabic`): drive install conversion (`npx @mediabubble-adv/arabic-skill install`) while proving the skill through dogfood transparency (Masri copy, `/about` audit trail, footer SSOT). Success = confident install copy + credible Arabic-first positioning (**مش مجرد ترجمة**).
+Marketing site for **Awesome Arabic Skill** (`arabic`): drive install conversion (`npx @mediabubble-adv/arabic-skill@latest install`) while proving the skill through dogfood transparency (Masri copy, `/about` audit trail, footer SSOT). Success = confident install copy + credible Arabic-first positioning (**مش مجرد ترجمة**).
 
 ## Brand Personality
 
