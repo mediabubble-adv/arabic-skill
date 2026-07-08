@@ -39,7 +39,7 @@ export default function ExamplesPage() {
       <PageHero title="أمثلة من الشغل الحقيقي">
         <p>
           كابشنز، إعلانات، صفحات هبوط، سكريبتات، ونصوص واجهة.{" "}
-          <em>ناتجة عن /arabic write</em>.{" "}
+          <em>ناتجة عن <code dir="ltr">/arabic write</code></em>.{" "}
           <Link href="/about">مسار البناء الكامل ←</Link>
         </p>
       </PageHero>
