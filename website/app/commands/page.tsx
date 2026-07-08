@@ -15,7 +15,7 @@ export default function CommandsPage() {
 
   return (
     <PageShell>
-      <MarkdownContent content={content} />
+      <MarkdownContent content={content} page />
       <InstallCta heading="ابدأ بـ /arabic guide" />
     </PageShell>
   );

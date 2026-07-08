@@ -1,0 +1,64 @@
+{
+  "_metadata": {
+    "major_version": 1,
+    "minor_version": 1
+  },
+  "display_information": {
+    "name": "Awesome Arabic Skill",
+    "description": "Write, audit, research Arabic content in Slack",
+    "long_description": "Slack bot for Arabic content creation, quality audits, and research intelligence. Support 11 dialects, brand voice configuration, and team workflows.",
+    "background_color": "#1a1a1a",
+    "is_app_marketable": true
+  },
+  "features": {
+    "app_home": {
+      "home_tab_enabled": true,
+      "messages_tab_enabled": true,
+      "messages_tab_read_only_enabled": false
+    },
+    "bot_user": {
+      "display_name": "Arabic Skill Bot",
+      "always_online": true
+    },
+    "slash_commands": [
+      {
+        "command": "/arabic",
+        "url": "https://arabic-skill.vercel.app/api/slack/commands",
+        "description": "Master command: write, audit, research, help, status, settings",
+        "usage_hint": "write caption --dialect masri --count 3",
+        "should_escape": false
+      }
+    ]
+  },
+  "oauth_config": {
+    "redirect_urls": [
+      "https://arabic-skill.vercel.app/api/slack/oauth/callback"
+    ],
+    "scopes": {
+      "bot": [
+        "chat:write",
+        "commands",
+        "users:read",
+        "team:read",
+        "files:read",
+        "reactions:read"
+      ]
+    }
+  },
+  "settings": {
+    "event_subscriptions": {
+      "request_url": "https://arabic-skill.vercel.app/api/slack/events",
+      "bot_events": [
+        "app_mention",
+        "message.app_home"
+      ]
+    },
+    "interactivity": {
+      "is_enabled": true,
+      "request_url": "https://arabic-skill.vercel.app/api/slack/interactive"
+    },
+    "org_deploy_enabled": false,
+    "socket_mode_enabled": false,
+    "token_rotation_enabled": true
+  }
+}

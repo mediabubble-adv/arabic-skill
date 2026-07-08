@@ -66,9 +66,10 @@
 
 ### 🌐 Website (`/arabic plan website`)
 - **Research:** scan the real product/repo (`project-context-scanner.md`) — do not invent features.
-- **Plan:** sitemap as MECE outline (home, product/service, about, pricing, FAQ, contact, blog hubs).
-- **Execute order:** home → core offer pages → trust pages (about/FAQ) → blog/SEO (apply `seo-aeo-masri.md` for Egypt).
-- **Continuity:** one brand lexicon and register across all pages.
+- **Plan:** sitemap as MECE outline (home, product/service, about, pricing, FAQ, contact, blog hubs). Map pages to `references/website-ui-system.md` page types + section/block IDs.
+- **Language order:** load `references/bilingual-pipeline.md`. Default `--lang-order ar_en`; support `en_ar`. Persist `lang_order` + `languages` on the plan continuity ledger.
+- **Execute order:** home → core offer pages → trust pages (about/FAQ) → blog/SEO (apply `seo-aeo-masri.md` for Egypt). For each page, write the first locale fully, then the twin from the intent map (never literal translate).
+- **Continuity:** one brand lexicon and register across all pages **and** both locales (shared component IDs).
 
 ### 📣 Campaign bundle (`/arabic plan campaign`)
 - Run the **Campaign Bundle Builder** in `references/ads-service-matrix.md` §3 as stages 3–5.
@@ -104,6 +105,7 @@ Track and reuse, never re-decide mid-project:
 - **Lexicon:** chosen term for each key concept (one term, used everywhere).
 - **Names & entities:** product, people, places — exact spelling.
 - **Register:** the locked L-level and dialect.
+- **Language order:** `lang_order` (`ar_en` | `en_ar`) and `languages` (`ar`, `en`, or both) for bilingual website/UI work.
 - **Claims:** every factual/marketing claim made, so later pieces don't contradict earlier ones.
 - **Voice markers:** the 1–2 humanization markers chosen for this project.
 

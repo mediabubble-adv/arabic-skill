@@ -4,6 +4,16 @@
 
 `Partial`
 
+## Install
+
+### Preferred (guided steps via CLI)
+
+```bash
+npx @mediabubble-adv/arabic-skill@latest install --target jetbrains-junie
+```
+
+No verified global skills folder — the CLI prints IDE-specific instruction steps. Escape hatch: `install --dir <path>` when you have a confirmed skills root.
+
 ## Why It Is Partial
 
 Junie is a JetBrains-integrated coding agent, but the `arabic` system is repo-doc and command driven, so support depends on how much project-local instruction and workflow control the IDE exposes.

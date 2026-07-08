@@ -61,6 +61,20 @@ Invoke the skill in chat or through Cursor slash commands; the examples below re
 /arabic voice load
 /arabic voice show
 
+# Brief builder (NL or guided → .arabic/briefs/*.yaml)
+/arabic brief
+/arabic brief from عايز ١٢ كابشن إنستغرام لمطعم في القاهرة
+/arabic brief show
+
+# Audit → report → improve
+/arabic audit --file content/page.ar.md
+/arabic audit website --file website/content/home.md
+/arabic improve --from-audit .arabic/audits/home-2026-07-08.md
+
+# Bilingual website copy
+/arabic plan website --lang-order ar_en
+/arabic write page --brief .arabic/briefs/site.yaml --lang-order en_ar
+
 # Research + setup + help
 /arabic research tiktok-hooks-2026
 /arabic init
@@ -80,6 +94,10 @@ Invoke the skill in chat or through Cursor slash commands; the examples below re
 | `--out` | `--out content/landing.ar.md` |
 | `--yes` | `--yes` (skip auto-confirmation) |
 | `--count` | `--count 12` |
+| `--lang-order` | `--lang-order ar_en` \| `en_ar` |
+| `--lang` | `--lang ar,en` |
+| `--from-audit` | `--from-audit .arabic/audits/home-2026-07-08.md` |
+| `--surface` | `--surface website` (with audit) |
 
 Full flag semantics: [command-surface.md §2a](../../planning/command-surface.md#2a-flag-reference).
 

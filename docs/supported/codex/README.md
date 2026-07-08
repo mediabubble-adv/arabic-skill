@@ -11,7 +11,7 @@
 ### Preferred (npx)
 
 ```bash
-npx @mediabubble-adv/arabic-skill install --target codex
+npx @mediabubble-adv/arabic-skill@latest install --target codex
 ```
 
 ### Manual Fallback
@@ -46,4 +46,4 @@ runtime pack as Claude and Cursor — no adapter layer needed for core content g
 
 ## Fixes for First-Class Support
 
-- Confirm `~/.codex/skills/` is the correct install path across Codex CLI versions (validate before marking `Strong` with confidence — currently inferred from `targetRoots`, not hands-on tested)
+- Confirm `~/.codex/skills/` is the correct install path across Codex CLI versions (shipped in `bin/install-targets.json` as `--target codex`; hands-on validation still recommended)

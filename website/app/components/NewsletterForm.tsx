@@ -28,22 +28,17 @@ export function NewsletterForm() {
     setStatus('loading');
 
     try {
-      // For now, log to console and show success
-      // In production, integrate with Substack API or email service
       console.log('Newsletter signup:', { email, segment });
-
       setStatus('success');
-      setMessage('✓ Check your email to confirm subscription!');
+      setMessage('تمام. راجع بريدك لتأكيد الاشتراك.');
       setEmail('');
-
-      // Reset after 5 seconds
       setTimeout(() => {
         setStatus('idle');
         setMessage('');
       }, 5000);
-    } catch (error) {
+    } catch {
       setStatus('error');
-      setMessage('Failed to subscribe. Try again.');
+      setMessage('مشكلة في الاشتراك. جرّب تاني.');
       setTimeout(() => {
         setStatus('idle');
         setMessage('');
@@ -63,10 +58,9 @@ export function NewsletterForm() {
       data-1p-ignore
     >
       <div className="space-y-4">
-        {/* Email Input */}
-        <div>
+        <div suppressHydrationWarning>
           <label htmlFor="email" className="block text-sm font-medium text-[var(--fg)] mb-1">
-            Email Address
+            البريد الإلكتروني
           </label>
           <input
             id="email"
@@ -79,29 +73,28 @@ export function NewsletterForm() {
             autoComplete="email"
             data-lpignore="true"
             data-1p-ignore
-            className="w-full px-4 py-2 bg-[var(--bg)] border border-[var(--border)] rounded-md text-[var(--fg)] placeholder:text-[var(--fg-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand)] disabled:opacity-60 disabled:cursor-not-allowed"
+            suppressHydrationWarning
+            className="input-field"
           />
         </div>
 
-        {/* Segment Selection */}
         <div>
           <label htmlFor="segment" className="block text-sm font-medium text-[var(--fg)] mb-1">
-            I&apos;m a...
+            أنا...
           </label>
           <select
             id="segment"
             value={segment}
             onChange={(e) => setSegment(e.target.value as 'developer' | 'creator' | 'enterprise')}
             disabled={status === 'loading'}
-            className="w-full px-4 py-2 bg-[var(--bg)] border border-[var(--border)] rounded-md text-[var(--fg)] focus:outline-none focus:ring-2 focus:ring-[var(--brand)] disabled:opacity-60 disabled:cursor-not-allowed"
+            className="input-field"
           >
-            <option value="creator">Content Creator / Marketer</option>
-            <option value="developer">Developer</option>
-            <option value="enterprise">Enterprise Team</option>
+            <option value="creator">صانع محتوى / مسوّق</option>
+            <option value="developer">مطور</option>
+            <option value="enterprise">فريق مؤسسي</option>
           </select>
         </div>
 
-        {/* Status Message */}
         {message && (
           <div
             className="text-sm p-3 rounded-md border"
@@ -114,20 +107,18 @@ export function NewsletterForm() {
           </div>
         )}
 
-        {/* Submit Button */}
         <button
           type="submit"
           disabled={status === 'loading'}
           className="btn-primary w-full disabled:opacity-60 disabled:cursor-not-allowed"
         >
-          {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
+          {status === 'loading' ? 'بنبعت...' : 'اشترك'}
         </button>
 
-        {/* Privacy Notice */}
         <p className="text-xs text-[var(--fg-muted)] text-center">
-          We respect your privacy.{' '}
+          بنحترم خصوصيتك.{' '}
           <a href="/privacy" className="text-[var(--brand)] hover:underline">
-            Privacy Policy
+            سياسة الخصوصية
           </a>
         </p>
       </div>

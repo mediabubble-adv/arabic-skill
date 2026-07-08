@@ -28,6 +28,15 @@ test.describe("G15 — mobile interactive components (390px)", () => {
     await expect(commandBlock).toContainText("codex");
   });
 
+  test("print install section on /install is visible", async ({ page }) => {
+    await page.goto("/install");
+    await expect(
+      page.getByRole("heading", { name: "أدوات بدليل يدوي" }),
+    ).toBeVisible();
+    await expect(page.getByText("ChatGPT")).toBeVisible();
+    await expect(page.getByText("install --target chatgpt")).toBeVisible();
+  });
+
   test("FAQ accordion on /install expands and collapses", async ({ page }) => {
     await page.goto("/install");
     const question = page.getByRole("button", {
@@ -43,38 +52,43 @@ test.describe("G15 — mobile interactive components (390px)", () => {
 
   test("before/after toggle on /examples", async ({ page }) => {
     await page.goto("/examples");
-    const tablist = page.getByRole("tablist", { name: "قبل وبعد" }).first();
-    const mobileText = tablist.locator(
-      "xpath=ancestor::div[contains(@class,'md:hidden')]/p",
-    );
+    await page.waitForLoadState("networkidle");
 
-    // Mobile defaults to "بعد" — lead with the good copy.
-    await expect(tablist.getByRole("tab", { name: "بعد" })).toHaveAttribute(
+    const tablist = page.getByTestId("before-after-tablist");
+    const mobileText = page.getByTestId("before-after-tablist-panel");
+
+    await expect(tablist).toBeVisible();
+    await expect(tablist.getByRole("tab", { name: /بعد/ })).toHaveAttribute(
       "aria-selected",
       "true",
     );
     await expect(mobileText).toHaveText(/عايز تلعب جيم/);
-    await tablist.getByRole("tab", { name: "قبل" }).click();
+    await tablist.getByRole("tab", { name: /قبل/ }).click();
     await expect(mobileText).toHaveText(/اكتشف تطبيقنا/);
-    await tablist.getByRole("tab", { name: "بعد" }).click();
+    await tablist.getByRole("tab", { name: /بعد/ }).click();
     await expect(mobileText).toHaveText(/عايز تلعب جيم/);
   });
 
   test("sticky install bar on / appears after mobile scroll", async ({
     page,
   }) => {
+    await page.addInitScript(() => {
+      sessionStorage.removeItem("install-bar-dismissed");
+    });
     await page.goto("/");
-    await expect(page.locator(".fixed.bottom-0")).toHaveCount(0);
+    await page.waitForLoadState("networkidle");
+
+    const stickyBar = page.getByTestId("sticky-install-bar");
+    await expect(stickyBar).toHaveCount(0);
     await page.evaluate(() =>
       window.scrollTo(0, document.documentElement.scrollHeight),
     );
-    const stickyBar = page.locator(".fixed.bottom-0");
-    await expect(stickyBar).toBeVisible();
+    await expect(stickyBar).toBeVisible({ timeout: 5000 });
+    const installLink = stickyBar.getByTestId("sticky-install-link");
+    await expect(installLink).toBeVisible();
+    await expect(installLink).toHaveAttribute("href", /\/install\/?$/);
     await expect(
-      stickyBar.getByRole("link", { name: "كل أوامر التثبيت" }),
-    ).toHaveAttribute("href", "/install");
-    await expect(
-      stickyBar.getByRole("button", { name: "انسخ أمر التثبيت" }),
+      stickyBar.getByRole("button", { name: /انسخ\s+أمر\s+التثبيت/ }),
     ).toBeVisible();
   });
 });

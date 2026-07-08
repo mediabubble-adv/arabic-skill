@@ -4,6 +4,16 @@
 
 `Limited`
 
+## Install
+
+### Preferred (guided steps via CLI)
+
+```bash
+npx @mediabubble-adv/arabic-skill@latest install --target qwen
+```
+
+No verified global skills folder — the CLI prints system-prompt/API wrapper steps. Escape hatch: `install --dir <path>` when you have a confirmed skills root.
+
 ## Why It Is Limited
 
 Qwen is best treated as a model target, not a full tool runtime, unless a specific agentic environment is chosen around it.
