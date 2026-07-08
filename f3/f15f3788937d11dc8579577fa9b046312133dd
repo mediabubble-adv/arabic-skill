@@ -1,0 +1,36 @@
+arabic/references/website-ui-system.md
+  s_673861cff7bff8::t_8adeb9c4dfa0cd 21-40
+arabic/skills/brief.md
+  s_673861cff7bff8::t_7ef6e72ef64724 231-251
+  s_673861cff7bff8::t_1b363e315c7773 189,192-196
+  s_673861cff7bff8::t_0a753cf0bc0325 265,267,274,276
+  s_673861cff7bff8::t_2367a431b6f959 197
+arabic/references/onboarding-mode.md
+  s_673861cff7bff8::t_9c1db91f02bffd 87
+scripts/validate-install-targets.sh
+  s_673861cff7bff8::t_1438ac1ee2eab4 198-201
+  s_673861cff7bff8::t_320590916d8a1e 95-99
+arabic/skills/improve.md
+  s_673861cff7bff8::t_c658f828986260 397
+  s_673861cff7bff8::t_334aeb3e47d3e8 405-427
+  s_673861cff7bff8::t_6ad0a0399c7132 93,96-102,104-105
+  s_673861cff7bff8::t_3990401e2655c9 294
+  s_673861cff7bff8::t_e5cb750f5677b4 333-334,359-387
+  s_673861cff7bff8::t_d0b72cc31d4308 388
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "f3f15f3788937d11dc8579577fa9b046312133dd",
+  "prompts": {},
+  "sessions": {
+    "s_673861cff7bff8": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "c33fab7c-cc59-402e-ba0d-9aab4dcd27d9",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
