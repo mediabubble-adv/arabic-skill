@@ -26,7 +26,7 @@ export function ToolTabs() {
             onClick={() => setActiveId(tab.id)}
             className={`rounded-md px-3 py-2 text-sm font-medium transition-colors ${
               activeId === tab.id
-                ? "bg-[var(--brand)] text-[var(--bg)]"
+                ? "bg-[var(--brand)] text-[var(--btn-on-brand)]"
                 : "border border-[var(--border)] text-[var(--fg-muted)] hover:border-[var(--brand)]"
             }`}
           >

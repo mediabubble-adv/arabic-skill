@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Sans_Arabic, JetBrains_Mono } from "next/font/google";
-import { InlineScript } from "@/components/inline-script";
+import { Almarai, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const arabic = IBM_Plex_Sans_Arabic({
-  subsets: ["arabic"],
-  weight: ["400", "500", "600", "700"],
+const arabic = Almarai({
+  subsets: ["arabic", "latin"],
+  weight: ["300", "400", "700", "800"],
   variable: "--font-arabic",
   display: "swap",
 });
@@ -22,7 +21,7 @@ const noFlashTheme = `(function(){try{var t=localStorage.getItem('theme');if(t==
 export const metadata: Metadata = {
   metadataBase: new URL("https://arabic-skill.vercel.app"),
   title: { default: "مهارة العربية الرائعة", template: "%s · مهارة العربية" },
-  description: "شريكك المصري لكتابة المحتوى — مش مجرد ترجمة.",
+  description: "شريكك المصري لكتابة المحتوى. مش مجرد ترجمة.",
 };
 
 const softwareLd = {
@@ -32,7 +31,7 @@ const softwareLd = {
   alternateName: "Awesome Arabic Skill",
   applicationCategory: "DeveloperApplication",
   operatingSystem: "Cross-platform",
-  description: "شريكك المصري لكتابة المحتوى — مش مجرد ترجمة.",
+  description: "شريكك المصري لكتابة المحتوى. مش مجرد ترجمة.",
   url: "https://arabic-skill.vercel.app",
   offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
   author: { "@type": "Organization", name: "MediaBubble" },
@@ -45,7 +44,10 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" suppressHydrationWarning>
       <head>
-        <InlineScript html={noFlashTheme} />
+        <script
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{ __html: noFlashTheme }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareLd) }}

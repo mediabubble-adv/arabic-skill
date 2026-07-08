@@ -7,7 +7,6 @@ export type SiteRoute =
   | "/examples"
   | "/about"
   | "/docs"
-  | "/blog"
   | "/newsletter"
   | "/privacy"
   | "/terms";
@@ -55,11 +54,6 @@ export const siteMeta: Record<
     description:
       "README، CHANGELOG، ٢٤ أداة، مساهمة — النسخة الكاملة على GitHub.",
   },
-  "/blog": {
-    title: "المدونة — محتوى عربي وتقني",
-    description:
-      "مقالات عن اللهجات، التأنيس، RTL، وحالات استخدام حقيقية لمهارة العربية.",
-  },
   "/newsletter": {
     title: "النشرة — خليك متابع",
     description:
@@ -87,5 +81,5 @@ export const navLinks: { href: SiteRoute; label: string }[] = [
 ];
 
 export const secondaryNavLinks: { href: SiteRoute; label: string }[] = [
-  { href: "/blog", label: "المدونة" },
+  { href: "/newsletter", label: "النشرة" },
 ];

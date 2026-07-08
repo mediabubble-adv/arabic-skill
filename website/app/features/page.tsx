@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageShell } from "@/components/page-shell";
+import { PageHero } from "@/components/page-hero";
 import { InstallCta } from "@/components/install-cta";
 import { getPageContent } from "@/lib/content";
 import { siteMeta } from "@/lib/site-meta";
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
 const capabilities = [
   {
     title: "كتابة المحتوى",
-    desc: "منشورات، إعلانات، صفحات هبوط، مدونات، سكريبتات — حسب اللي محتاجه.",
+    desc: "منشورات، إعلانات، صفحات هبوط، مدونات، سكريبتات حسب اللي محتاجه.",
   },
   {
     title: "اللهجات",
@@ -20,7 +21,7 @@ const capabilities = [
   },
   {
     title: "التأنيس",
-    desc: "بيشيل أسلوب الترجمة والجمل اللي شكلها AI — قبل ما يسلّم.",
+    desc: "بيشيل أسلوب الترجمة والجمل اللي شكلها AI قبل ما يسلّم.",
   },
   {
     title: "وعي المشروع",
@@ -28,19 +29,19 @@ const capabilities = [
   },
   {
     title: "البحث",
-    desc: "/arabic research بيجمع مصادر قبل ما يكتب — مش تخمين.",
+    desc: "/arabic research بيجمع مصادر قبل ما يكتب، مش تخمين.",
   },
   {
     title: "الأوامر",
-    desc: "write، audit، plan، coach — من غير ما تلف في شات طويل.",
+    desc: "write، audit، plan، coach من غير ما تلف في شات طويل.",
   },
   {
     title: "مشاريع كبيرة",
-    desc: "موقع، حملة، كتاب — خطة الأول، تنفيذ بعد الموافقة.",
+    desc: "موقع، حملة، كتاب: خطة الأول، تنفيذ بعد الموافقة.",
   },
   {
     title: "SEO و AEO",
-    desc: "محتوى عربي مظبوط للبحث ومحركات الإجابة — من غير إحصائيات وهمية.",
+    desc: "محتوى عربي مظبوط للبحث ومحركات الإجابة من غير إحصائيات وهمية.",
   },
 ];
 
@@ -50,12 +51,9 @@ export default function FeaturesPage() {
 
   return (
     <PageShell>
-      <header className="max-w-3xl mb-10">
-        <h1 className="text-3xl md:text-4xl font-bold text-[var(--fg)] mb-3">
-          المهارة دي بتعمل إيه؟
-        </h1>
-        <p className="text-[var(--fg-muted)]">{intro}</p>
-      </header>
+      <PageHero title="المهارة دي بتعمل إيه؟">
+        <p>{intro}</p>
+      </PageHero>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
         {capabilities.map((cap) => (
           <div key={cap.title} className="card">

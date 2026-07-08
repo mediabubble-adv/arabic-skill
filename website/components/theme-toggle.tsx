@@ -31,7 +31,7 @@ export function ThemeToggle() {
     <button
       type="button"
       onClick={toggle}
-      className="rounded-md border border-[var(--border)] px-2.5 py-1.5 text-sm text-[var(--fg-muted)] hover:border-[var(--brand)] hover:text-[var(--brand)] transition-colors"
+      className="inline-flex items-center justify-center size-11 rounded-md border border-[var(--border)] text-sm text-[var(--fg-muted)] hover:border-[var(--brand)] hover:text-[var(--brand)] transition-colors focus-ring"
       aria-label={theme === "dark" ? "التبديل للوضع الفاتح" : "التبديل للوضع الداكن"}
     >
       {theme === "dark" ? "☀" : "☾"}

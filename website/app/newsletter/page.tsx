@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageShell } from "@/components/page-shell";
+import { PageHero } from "@/components/page-hero";
+import { InstallCta } from "@/components/install-cta";
 import { NewsletterForm } from "@/app/components/NewsletterForm";
 import { siteMeta } from "@/lib/site-meta";
 
@@ -12,25 +14,22 @@ export const metadata: Metadata = {
 export default function NewsletterPage() {
   return (
     <PageShell>
-      <header className="section-gap max-w-2xl mx-auto text-center">
-        <h1 className="text-3xl md:text-4xl font-bold text-[var(--fg)] mb-4">
-          خليك متابع
-        </h1>
-        <p className="text-[var(--fg-muted)] mb-2">
-          نشرة شهرية: إصدارات جديدة، أمثلة من المجتمع، ونصايح محتوى عربي.
-        </p>
-        <p className="text-sm text-[var(--fg-muted)]">
+      <PageHero title="خليك متابع">
+        <p>نشرة شهرية: إصدارات جديدة، أمثلة من المجتمع، ونصايح محتوى عربي.</p>
+        <p className="text-sm mt-2">
           إيميل واحد في الشهر. من غير سبام. إلغاء الاشتراك في أي وقت.
         </p>
-      </header>
+      </PageHero>
 
       <section className="section-gap max-w-md mx-auto card">
-        <h2 className="text-xl font-semibold text-[var(--fg)] mb-6">اشترك</h2>
+        <h2 className="text-xl font-semibold text-[var(--fg)] mb-6 text-center">
+          اشترك
+        </h2>
         <NewsletterForm />
       </section>
 
       <section className="section-gap max-w-3xl mx-auto">
-        <h2 className="text-xl font-semibold text-[var(--fg)] mb-6">
+        <h2 className="section-heading text-xl md:text-2xl font-semibold text-[var(--fg)]">
           إيه اللي هيوصلك؟
         </h2>
         <div className="grid sm:grid-cols-3 gap-6">
@@ -55,7 +54,7 @@ export default function NewsletterPage() {
         </div>
       </section>
 
-      <section className="text-center text-sm text-[var(--fg-muted)]">
+      <section className="text-center text-sm text-[var(--fg-muted)] mb-10">
         <p>
           عندك سؤال؟{" "}
           <a
@@ -65,7 +64,16 @@ export default function NewsletterPage() {
             GitHub Discussions
           </a>
         </p>
+        <p className="mt-3">
+          أو ابدأ بالتثبيت من{" "}
+          <Link href="/install" className="text-[var(--brand)] hover:underline">
+            هنا
+          </Link>
+          .
+        </p>
       </section>
+
+      <InstallCta />
     </PageShell>
   );
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageShell } from "@/components/page-shell";
+import { PageHero } from "@/components/page-hero";
 import { InstallPageClient } from "@/components/install-page-client";
 import { siteMeta } from "@/lib/site-meta";
 
@@ -11,14 +12,9 @@ export const metadata: Metadata = {
 export default function InstallPage() {
   return (
     <PageShell>
-      <header className="max-w-3xl mb-8">
-        <h1 className="text-3xl md:text-4xl font-bold text-[var(--fg)] mb-3">
-          ثبّت المهارة في دقيقة
-        </h1>
-        <p className="text-[var(--fg-muted)]">
-          سطر واحد من التيرمنال — والمهارة تشتغل في Cursor أو Claude أو Codex.
-        </p>
-      </header>
+      <PageHero title="ثبّت المهارة في دقيقة">
+        <p>سطر واحد من التيرمنال، والمهارة تشتغل في Cursor أو Claude أو Codex.</p>
+      </PageHero>
       <InstallPageClient />
     </PageShell>
   );

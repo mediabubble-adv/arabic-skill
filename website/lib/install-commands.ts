@@ -2,6 +2,10 @@
 export const PRIMARY_INSTALL =
   "npx @mediabubble-adv/arabic-skill@latest install --target cursor";
 
+/** Hero teaser — short one-liner without tool target */
+export const HERO_INSTALL_SNIPPET =
+  "npx @mediabubble-adv/arabic-skill@latest install";
+
 export const SKILLS_REGISTRY_INSTALL =
   "npx skills add mediabubble-adv/arabic-skill -a cursor -g -y";
 

@@ -17,27 +17,23 @@ export function BeforeAfterCard({
   const [showAfter, setShowAfter] = useState(true);
 
   return (
-    <div className="card">
+    <div className="before-after">
       {label && (
         <p className="text-sm text-[var(--brand)] mb-3 font-medium">{label}</p>
       )}
 
       <div className="hidden md:grid md:grid-cols-2 gap-4">
-        <div className="rounded-lg border border-[var(--border)] p-4">
-          <p className="text-xs font-medium text-[var(--fg-muted)] mb-2">
-            قبل — ترجمة جامدة
-          </p>
+        <div className="before-after-panel">
+          <p className="before-after-label">قبل: ترجمة جامدة</p>
           <p className="text-[var(--fg-muted)] leading-relaxed">{before}</p>
         </div>
-        <div className="rounded-lg border border-[var(--accent)]/40 p-4">
-          <p className="text-xs font-medium text-[var(--accent)] mb-2">
-            بعد — مصري طبيعي
-          </p>
+        <div className="before-after-panel before-after-panel--after">
+          <p className="before-after-label before-after-label--after">بعد: مصري طبيعي</p>
           <p className="text-[var(--fg)] leading-relaxed">{after}</p>
         </div>
       </div>
 
-      <div className="md:hidden">
+      <div className="md:hidden before-after-panel before-after-panel--mobile">
         <div className="mb-4">
           <PillTabs
             tabs={[

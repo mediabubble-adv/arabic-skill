@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { NewsletterForm } from "@/app/components/NewsletterForm";
+import { NewsletterFormSlot } from "@/components/newsletter-form-slot";
 
 export function SiteFooter() {
   return (
@@ -11,7 +11,7 @@ export function SiteFooter() {
             <p className="text-xs mb-4">
               نشرة شهرية: إصدارات جديدة، أمثلة من المجتمع، ونصايح محتوى عربي.
             </p>
-            <NewsletterForm />
+            <NewsletterFormSlot />
           </div>
 
           <div>
@@ -20,13 +20,13 @@ export function SiteFooter() {
               <li>
                 <a
                   href="https://github.com/mediabubble-adv/arabic-skill/discussions"
-                  className="text-[var(--brand)] hover:underline"
+                  className="nav-link text-[var(--brand)] hover:underline rounded-sm"
                 >
                   GitHub Discussions
                 </a>
               </li>
               <li>
-                <Link href="/newsletter" className="text-[var(--brand)] hover:underline">
+                <Link href="/newsletter" className="nav-link text-[var(--brand)] hover:underline rounded-sm">
                   أرشيف النشرة
                 </Link>
               </li>
@@ -37,24 +37,24 @@ export function SiteFooter() {
             <h3 className="font-semibold text-[var(--fg)] mb-4">مصادر</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/docs" className="text-[var(--brand)] hover:underline">
+                <Link href="/docs" className="nav-link text-[var(--brand)] hover:underline rounded-sm">
                   الوثائق
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-[var(--brand)] hover:underline">
-                  المدونة
+                <Link href="/newsletter" className="nav-link text-[var(--brand)] hover:underline rounded-sm">
+                  النشرة
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-[var(--brand)] hover:underline">
+                <Link href="/about" className="nav-link text-[var(--brand)] hover:underline rounded-sm">
                   إزاي اتبنى؟
                 </Link>
               </li>
               <li>
                 <a
                   href="https://github.com/mediabubble-adv/arabic-skill"
-                  className="text-[var(--brand)] hover:underline"
+                  className="nav-link text-[var(--brand)] hover:underline rounded-sm"
                 >
                   GitHub
                 </a>
@@ -66,11 +66,11 @@ export function SiteFooter() {
         <div className="border-t border-[var(--border)] pt-6 text-xs">
           <p>
             اتبنى بـ <code dir="ltr">/arabic</code> · © 2026 MediaBubble ·{" "}
-            <Link href="/privacy" className="text-[var(--brand)] hover:underline">
+            <Link href="/privacy" className="nav-link text-[var(--brand)] hover:underline rounded-sm">
               الخصوصية
             </Link>
             {" · "}
-            <Link href="/terms" className="text-[var(--brand)] hover:underline">
+            <Link href="/terms" className="nav-link text-[var(--brand)] hover:underline rounded-sm">
               الشروط
             </Link>
           </p>

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { PRIMARY_INSTALL } from "@/lib/install-commands";
+import { HERO_INSTALL_SNIPPET } from "@/lib/install-commands";
 
 const DISMISS_KEY = "install-bar-dismissed";
 
@@ -27,7 +27,7 @@ export function StickyInstallBar() {
   if (!visible || dismissed) return null;
 
   async function copy() {
-    await navigator.clipboard.writeText(PRIMARY_INSTALL);
+    await navigator.clipboard.writeText(HERO_INSTALL_SNIPPET);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   }
@@ -47,7 +47,7 @@ export function StickyInstallBar() {
           type="button"
           onClick={dismiss}
           aria-label="إخفاء الشريط"
-          className="shrink-0 text-[var(--fg-muted)] hover:text-[var(--fg)] px-1 text-lg leading-none"
+          className="shrink-0 inline-flex items-center justify-center size-11 text-[var(--fg-muted)] hover:text-[var(--fg)] text-lg leading-none focus-ring rounded-md"
         >
           ×
         </button>

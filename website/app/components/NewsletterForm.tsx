@@ -30,7 +30,7 @@ export function NewsletterForm() {
     try {
       console.log('Newsletter signup:', { email, segment });
       setStatus('success');
-      setMessage('تمام — راجع بريدك لتأكيد الاشتراك.');
+      setMessage('تمام. راجع بريدك لتأكيد الاشتراك.');
       setEmail('');
       setTimeout(() => {
         setStatus('idle');

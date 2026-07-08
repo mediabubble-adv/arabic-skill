@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageShell } from "@/components/page-shell";
+import { PageHero } from "@/components/page-hero";
 import { siteMeta } from "@/lib/site-meta";
 
 export const metadata: Metadata = {
@@ -10,9 +11,10 @@ export const metadata: Metadata = {
 export default function TermsPage() {
   return (
     <PageShell>
-      <article className="prose-site max-w-3xl">
-        <h1>شروط الاستخدام</h1>
+      <PageHero title="شروط الاستخدام">
         <p>آخر تحديث: يوليو ٢٠٢٦</p>
+      </PageHero>
+      <article className="prose-site max-w-3xl mx-auto">
         <h2>الترخيص</h2>
         <p>
           مهارة العربية مفتوحة المصدر تحت رخصة MIT. الكود والمحتوى المرجعي على

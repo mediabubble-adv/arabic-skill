@@ -59,7 +59,7 @@ export function PillTabs({
             onKeyDown={(e) => onKeyDown(e, i)}
             className={`rounded-md ${pad} text-sm font-medium transition-colors ${
               selected
-                ? "bg-[var(--brand)] text-[var(--bg)]"
+                ? "bg-[var(--brand)] text-[var(--btn-on-brand)]"
                 : "border border-[var(--border)] text-[var(--fg-muted)] hover:border-[var(--brand)]"
             }`}
           >

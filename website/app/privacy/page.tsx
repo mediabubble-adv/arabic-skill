@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageShell } from "@/components/page-shell";
+import { PageHero } from "@/components/page-hero";
 import { siteMeta } from "@/lib/site-meta";
 
 export const metadata: Metadata = {
@@ -10,9 +11,10 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <PageShell>
-      <article className="prose-site max-w-3xl">
-        <h1>سياسة الخصوصية</h1>
+      <PageHero title="سياسة الخصوصية">
         <p>آخر تحديث: يوليو ٢٠٢٦</p>
+      </PageHero>
+      <article className="prose-site max-w-3xl mx-auto">
         <h2>البيانات اللي بنجمعها</h2>
         <p>
           نموذج النشرة بيجمع بريدك الإلكتروني ونوع الاشتراك (مطور / صانع محتوى /

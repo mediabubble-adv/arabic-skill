@@ -7,8 +7,12 @@ import { InstallCta } from "@/components/install-cta";
 import { StickyInstallBar } from "@/components/sticky-install-bar";
 import { StatStrip } from "@/components/stat-strip";
 import { CopyBlock } from "@/components/copy-block";
+import { RevealSection } from "@/components/reveal-section";
+import { HeroKeyboardBackground } from "@/components/hero-keyboard-bg";
+import { ToolsMarquee } from "@/components/tools-marquee";
+import { SectionHeading } from "@/components/section-heading";
 import { siteMeta } from "@/lib/site-meta";
-import { PRIMARY_INSTALL } from "@/lib/install-commands";
+import { HERO_INSTALL_SNIPPET } from "@/lib/install-commands";
 
 export const metadata: Metadata = {
   title: siteMeta["/"].title,
@@ -19,126 +23,119 @@ const bento = [
   {
     title: "محتوى",
     desc: "منشورات، إعلانات، صفحات هبوط، مدونات، سكريبتات",
-    span: false,
+    accent: false,
   },
   {
     title: "لهجات",
     desc: "١١+ لهجة. مصري أولاً.",
-    span: false,
+    accent: false,
   },
   {
     title: "تأنيس",
     desc: "بيشيل أسلوب الترجمة والجمل اللي شكلها AI",
-    span: true,
+    accent: true,
   },
   {
     title: "مشروع",
     desc: "/arabic auto بيمسح المشروع ويشرحه بعربي يفهمه أي حد",
-    span: false,
+    accent: false,
   },
-];
-
-const tools = [
-  "Cursor",
-  "Claude",
-  "Codex",
-  "ChatGPT",
-  "Gemini",
-  "Qwen",
-  "Windsurf",
-  "VS Code",
 ];
 
 export default function HomePage() {
   return (
     <PageShell>
-      <section className="hero-panel section-gap max-w-4xl">
-        <p className="text-[var(--brand)] text-sm font-medium mb-3">
-          Awesome Arabic Skill
-        </p>
-        <h1 className="text-3xl md:text-5xl font-bold text-[var(--fg)] leading-tight mb-4 max-w-2xl">
-          شريكك المصري لكتابة المحتوى جوه أدوات الذكاء الاصطناعي
-        </h1>
-        <p className="text-lg text-[var(--fg-muted)] mb-2 max-w-xl">
-          بيقرأ السياق، يوضّح الفكرة، يوصي بالاتجاه، يكتب، ويراجع — قبل ما
-          يسلّم.
-        </p>
-        <p className="text-lg font-semibold text-[var(--accent)] mb-6">
-          مش مجرد ترجمة.
-        </p>
-        <div className="flex flex-wrap gap-3 mb-8">
-          <Link href="/install" className="btn-primary">
-            ثبّت المهارة
-          </Link>
-          <Link href="/examples" className="btn-secondary">
-            شوف أمثلة
-          </Link>
-        </div>
-        <div className="max-w-xl">
-          <p className="text-xs text-[var(--fg-muted)] mb-2">معاينة حية</p>
-          <CopyBlock text={PRIMARY_INSTALL} />
-        </div>
-      </section>
+      <RevealSection className="hero-bleed section-gap-loose" delay={0}>
+        <div className="hero-stack">
+          <div className="container-site hero-head">
+            <p className="hero-eyebrow">Awesome Arabic Skill</p>
+            <h1 className="hero-title">
+              <span className="hero-title-line">شريكك المصري لكتابة المحتوى</span>
+              <br />
+              <span className="hero-title-line">جوه أدوات الذكاء الاصطناعي</span>
+            </h1>
+            <p className="hero-tagline hero-tagline--head">مش مجرد ترجمة.</p>
+          </div>
 
-      <StatStrip />
+          <div className="hero-keyboard-strip" aria-hidden>
+            <HeroKeyboardBackground className="hero-keyboard-illustration" />
+          </div>
 
-      <section className="section-gap">
-        <h2 className="text-xl font-semibold text-[var(--fg)] mb-4">
-          المسار الافتراضي
-        </h2>
+          <div className="container-site hero-body">
+            <div className="hero-chips">
+              <span className="hero-chip">سهل التثبيت</span>
+              <span className="hero-chip">مصري أولاً</span>
+              <span className="hero-chip">مفتوح المصدر</span>
+            </div>
+            <div className="hero-actions">
+              <Link href="/install" className="btn-primary">
+                ثبّت المهارة
+              </Link>
+              <Link href="/examples" className="btn-secondary">
+                شوف أمثلة
+              </Link>
+            </div>
+            <div className="hero-install-preview">
+              <CopyBlock text={HERO_INSTALL_SNIPPET} compact />
+            </div>
+          </div>
+        </div>
+      </RevealSection>
+
+      <RevealSection className="section-gap tools-section" delay={80}>
+        <SectionHeading
+          title="أدوات مدعومة"
+          subtitle="٢٤ أداة: Cursor وClaude وCodex وغيرهم. سطر واحد للتثبيت."
+          className="section-heading--gap-md"
+        />
+        <ToolsMarquee />
+      </RevealSection>
+
+      <RevealSection className="section-gap-tight" delay={120}>
+        <StatStrip />
+      </RevealSection>
+
+      <RevealSection className="section-gap-loose" delay={160}>
+        <SectionHeading
+          title="المسار الافتراضي"
+          subtitle="استشارة ثم توضيح ثم توصية ثم كتابة ثم مراجعة. مش كتابة على طول."
+          className="section-heading--gap-md"
+        />
         <ModeFlow />
-      </section>
+      </RevealSection>
 
-      <section className="section-gap">
-        <h2 className="text-xl font-semibold text-[var(--fg)] mb-4">
-          قبل وبعد
-        </h2>
+      <RevealSection className="section-gap-loose" delay={200}>
+        <SectionHeading title="قبل وبعد" className="section-heading--gap-lg" />
         <BeforeAfterCard
           before="اكتشف كيف يمكن لمهارة العربية أن تساعدك في إنشاء محتوى عربي احترافي."
-          after="المهارة دي شريكك جوه الـ IDE — بتفهم السياق وتكتب مصري من غير ما تحس إنها ترجمة."
+          after="المهارة دي شريكك جوه الـ IDE: بتفهم السياق وتكتب مصري من غير ما تحس إنها ترجمة."
         />
-      </section>
+      </RevealSection>
 
-      <section className="section-gap">
-        <h2 className="text-xl font-semibold text-[var(--fg)] mb-6">
-          ليه المهارة دي؟
-        </h2>
+      <RevealSection className="section-gap" delay={240}>
+        <SectionHeading title="ليه المهارة دي؟" className="section-heading--gap-lg" />
         <div className="bento-grid">
           {bento.map((item) => (
             <div
               key={item.title}
-              className={`card ${item.span ? "bento-span-2" : ""}`}
+              className={`card bento-card ${item.accent ? "bento-accent" : ""}`}
             >
-              <h3 className="font-semibold text-[var(--fg)] mb-2">
-                {item.title}
-              </h3>
-              <p className="text-sm text-[var(--fg-muted)]">{item.desc}</p>
+              <h3 className="font-semibold text-[var(--fg)] mb-2">{item.title}</h3>
+              <p className="text-sm text-[var(--fg-muted)] leading-relaxed">
+                {item.desc}
+              </p>
             </div>
           ))}
         </div>
-      </section>
+      </RevealSection>
 
-      <section className="section-gap overflow-hidden">
-        <p className="text-sm text-[var(--fg-muted)] mb-3">أدوات مدعومة</p>
-        <div className="flex flex-wrap gap-3 text-sm text-[var(--fg-muted)]">
-          {tools.map((tool) => (
-            <span
-              key={tool}
-              className="rounded-full border border-[var(--border)] px-3 py-1"
-            >
-              {tool}
-            </span>
-          ))}
-          <span className="rounded-full border border-[var(--brand)] px-3 py-1 text-[var(--brand)]">
-            +14 أداة
-          </span>
-        </div>
-      </section>
+      <RevealSection className="section-gap" delay={280}>
+        <InstallCta
+          heading="ثبّت المهارة"
+          sub="سطر واحد من التيرمنال وإنت جاهز."
+        />
+      </RevealSection>
 
-      <InstallCta
-        heading="ثبّت المهارة"
-        sub="سطر واحد من التيرمنال وإنت جاهز."
-      />
       <StickyInstallBar />
     </PageShell>
   );
