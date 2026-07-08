@@ -15,6 +15,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Ensure Cursor skill mirror is installed
+        run: |
+          if [ -f package.json ]; then npm ci; fi
+          node bin/arabic-skill.js install --dir .cursor/skills --force
+
       - name: Validate skill references
         run: ./scripts/validate-skill.sh
 

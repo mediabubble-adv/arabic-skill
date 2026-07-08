@@ -133,7 +133,7 @@
 | `--count` | write captions / ads | Controls variant count |
 | `--voice` | improve / brief | Load a specific voice.md (improve) or tone hint (brief) |
 | `--format` | improve | Output format: `annotated` (default), `side-by-side`, `bullet`, `rewrite` |
-| `--dry-run` | audit / improve | Show recommendations without rewriting |
+| `--dry-run` | audit / improve | Skip saving report (audit) or show recommendations without rewriting (improve) |
 | `--name` | brief | Force brief slug / filename (without `.yaml`) |
 | `--goal` | brief | Prefill brief goal (`caption`, `ad`, `page`, `website`, …) |
 | `--lang-order` | write / plan / improve / brief | `ar_en` (default) or `en_ar` — see `bilingual-pipeline.md` |

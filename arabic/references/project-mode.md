@@ -105,6 +105,7 @@ Track and reuse, never re-decide mid-project:
 - **Lexicon:** chosen term for each key concept (one term, used everywhere).
 - **Names & entities:** product, people, places — exact spelling.
 - **Register:** the locked L-level and dialect.
+- **Language order:** `lang_order` (`ar_en` | `en_ar`) and `languages` (`ar`, `en`, or both) for bilingual website/UI work.
 - **Claims:** every factual/marketing claim made, so later pieces don't contradict earlier ones.
 - **Voice markers:** the 1–2 humanization markers chosen for this project.
 

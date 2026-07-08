@@ -40,6 +40,24 @@ fetch_preset() {
       echo "arabic/references/examples.md"
       echo "arabic/references/taboos.md"
       ;;
+    website)
+      echo "arabic/references/project-mode.md"
+      echo "arabic/references/website-ui-system.md"
+      echo "arabic/references/bilingual-pipeline.md"
+      echo "arabic/references/engines.md"
+      ;;
+    ui)
+      echo "arabic/references/website-ui-system.md"
+      echo "arabic/references/engines.md"
+      echo "arabic/references/bilingual-pipeline.md"
+      ;;
+    audit-website)
+      echo "arabic/references/audit-mode.md"
+      echo "arabic/references/examples.md"
+      echo "arabic/references/taboos.md"
+      echo "arabic/references/website-ui-system.md"
+      echo "arabic/references/rtl-audit.md"
+      ;;
     research)
       echo "arabic/references/research-mode.md"
       echo "arabic/references/trends-and-hooks.md"

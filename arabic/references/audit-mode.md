@@ -149,7 +149,7 @@ C) خلاص — التقرير كفاية
 
 ### Saved report template
 
-```markdown
+````markdown
 # Audit Report — {slug}
 **Date:** YYYY-MM-DD
 **Source:** …
@@ -181,10 +181,10 @@ C) خلاص — التقرير كفاية
 - scope_paths: …
 
 ## Copy-ready
-\`\`\`text
+```text
 /arabic improve --from-audit .arabic/audits/{slug}-{date}.md
-\`\`\`
 ```
+````
 
 Structural fixture (fields only): `tests/golden/audit-report-shape.md`.
 
