@@ -14,11 +14,14 @@ https://YOUR_DOMAIN/api/slack/
 
 ## Authentication
 
-All Slack-facing routes verify the request using Slack's signing secret (`SLACK_SIGNING_SECRET`):
+Slack POST callbacks (slash commands, Events API, and interactive payloads) verify the request using Slack's signing secret (`SLACK_SIGNING_SECRET`):
 
 - Header: `X-Slack-Request-Timestamp`
 - Header: `X-Slack-Signature` (`v0=<hmac>`)
 
+Invalid signatures return `401`. Implementation: `api/slack/auth.ts` → `verifySlackRequest()`.
+
+OAuth routes (`/api/slack/oauth/start` and `/api/slack/oauth/callback`) do not use Slack request signing; they validate the `state` parameter via HMAC to prevent CSRF. See `api/slack/oauth-state.ts`.
 Invalid signatures return `401`. Implementation: `api/slack/auth.ts` → `verifySlackRequest()`.
 
 ## Endpoints
