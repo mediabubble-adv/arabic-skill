@@ -1,0 +1,134 @@
+website/app/privacy/page.tsx
+  s_673861cff7bff8::t_66534aa6c7068b 18,20-21,25-26,30-31
+website/components/mode-flow.tsx
+  s_673861cff7bff8::t_e784cb2257c6aa 21
+  s_673861cff7bff8::t_3f2cb47ff7c4f4 33
+  s_673861cff7bff8::t_fed4aab2561fb8 9
+docs/supported/cursor/commands.md
+  s_673861cff7bff8::t_53f3a5f714cfaf 69-77
+  s_673861cff7bff8::t_f19ffe972db74e 97-100
+  s_673861cff7bff8::t_6d71af9a507598 64-68
+arabic/references/engines.md
+  s_673861cff7bff8::t_c9496d6d770c69 36-39
+  s_673861cff7bff8::t_8dfd828187f930 493-494,505,511
+website/content/examples.md
+  s_673861cff7bff8::t_b5d4bacb7eae6b 3,5,10-11,21,30
+website/content/home.md
+  s_673861cff7bff8::t_fc43b33aa634c9 3,9,11-14,20,24,26,30
+arabic/references/onboarding-mode.md
+  s_673861cff7bff8::t_225c7b332237ec 83-84
+  s_673861cff7bff8::t_96b87192ee3ef9 85-87
+website/content/commands.md
+  s_673861cff7bff8::t_4ff809412b6034 3,9-16,22-25,30
+website/components/install-cta.tsx
+  s_673861cff7bff8::t_524d85ce07d61b 6-7
+arabic/references/load-discipline.md
+  s_673861cff7bff8::t_1410c94f33bb85 146,150
+  s_673861cff7bff8::t_ddfb6e4d5a45d7 82,87-88,90
+arabic/templates/.arabic/README.md
+  s_673861cff7bff8::t_abe319e413da7b 13
+arabic/references/command-router.md
+  s_673861cff7bff8::t_b0ae72b3918d20 134,137-138
+  s_673861cff7bff8::t_57a48b3276de37 25
+  s_673861cff7bff8::t_8d855fa068804b 139-142
+  s_673861cff7bff8::t_0b1ab98df3e043 161
+  s_673861cff7bff8::t_81f44cdbc99959 100-101,103,105
+  s_673861cff7bff8::t_f6a90d7984a0a7 104
+  s_40dce16d3d78b2::t_c374d768557930 127,135-136
+  s_673861cff7bff8::t_15aca8f9b86881 212
+  s_673861cff7bff8::t_5d2abc75807713 106-109
+  s_673861cff7bff8::t_f027de4d042346 126,129,131-132
+website/components/before-after-card.tsx
+  s_673861cff7bff8::t_fc3b5dacb0d963 27
+  s_673861cff7bff8::t_9b551adbc1e6b9 31
+website/content/features.md
+  s_673861cff7bff8::t_cb952e59a32e87 1,3,7,11,15,19,23,27,31,35,37
+website/app/terms/page.tsx
+  s_673861cff7bff8::t_291670c3a788db 21,25-26,30-31
+website/app/tutorials/page.tsx
+  s_673861cff7bff8::t_edcbb263bcb4d0 79
+  s_673861cff7bff8::t_07227d96311448 25,28-29,36,39,41
+website/app/newsletter/page.tsx
+  s_673861cff7bff8::t_5b97c5271eaa31 17-18,20
+  s_673861cff7bff8::t_922203eb245f6c 49
+arabic/references/audit-mode.md
+  s_673861cff7bff8::t_30be7dcdd0137a 102-103,107-108,110-112,115-139,142-188,190
+  s_673861cff7bff8::t_725bd454c04cd7 189
+  s_673861cff7bff8::t_347ce2cac1698a 266-267
+  s_673861cff7bff8::t_394e85f8e215b0 7-8,19-20,22-23,26
+website/app/about/page.tsx
+  s_673861cff7bff8::t_097d694331a59e 58-59
+  s_673861cff7bff8::t_c5cd423cc876c0 40,42
+  s_673861cff7bff8::t_edc2e95a5b2a99 155-156
+website/app/page.tsx
+  s_673861cff7bff8::t_c698317130f7e7 88
+  s_673861cff7bff8::t_36cffd8f02ea1a 25,30,35,40
+  s_673861cff7bff8::t_446a93e2edee3f 101
+  s_673861cff7bff8::t_7dc9be9d2c37ef 66,75
+  s_673861cff7bff8::t_dda571e488a487 111,116
+  s_673861cff7bff8::t_c4a9aadae7d26a 135
+website/content/about.md
+  s_673861cff7bff8::t_f9069427480a01 1,5,7,9,13-14,18-19,24,26,34,84,95
+website/app/features/page.tsx
+  s_673861cff7bff8::t_3be548bea9f8cd 16,20,24,28,32,36,40,44
+  s_673861cff7bff8::t_8ad631336d49db 54
+arabic/references/project-mode.md
+  s_673861cff7bff8::t_c38ec50baae061 69-72
+arabic/references/INDEX.md
+  s_673861cff7bff8::t_e47f4796c9fadb 18,22,27-28
+website/app/examples/page.tsx
+  s_673861cff7bff8::t_c54e569f78f359 16,20,27
+  s_673861cff7bff8::t_7f2227c243d885 41-42
+website/app/docs/page.tsx
+  s_673861cff7bff8::t_c5d761f0a7da3e 20-21
+  s_673861cff7bff8::t_80072319a83aee 92
+website/content/tutorials.md
+  s_673861cff7bff8::t_ee9a8ae23e5e27 7,10,15,19-20,26,30,32,36,40
+  s_673861cff7bff8::t_f1ef28cabbb07f 42
+website/content/docs.md
+  s_673861cff7bff8::t_63687679b16718 3,28,31
+website/components/site-footer.tsx
+  s_673861cff7bff8::t_44b536d5ea5903 10,12
+website/lib/site-meta.ts
+  s_673861cff7bff8::t_dbdf74e9be463f 26,31,41,45,50,55,58,60
+website/app/install/page.tsx
+  s_673861cff7bff8::t_59f244bb4735c9 16
+AGENTS.md
+  s_673861cff7bff8::t_905f2dddd8a640 28
+  s_ed86bc106faf73::t_c306730947ab97 3,11-14,24
+arabic/references/load-presets.md
+  s_673861cff7bff8::t_2c65a64836963d 48-83
+  s_673861cff7bff8::t_cbe096f3a09373 201-203
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "fa2d7df2e666e8cfb841b6054237dda599b7f78f",
+  "prompts": {},
+  "sessions": {
+    "s_40dce16d3d78b2": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "96b85b27-6753-409b-8e97-be682afca5e9",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": null
+    },
+    "s_673861cff7bff8": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "c33fab7c-cc59-402e-ba0d-9aab4dcd27d9",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    },
+    "s_ed86bc106faf73": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "16fb660f-59b3-4070-8d64-f8daf263dcae",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
