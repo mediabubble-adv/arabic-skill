@@ -115,7 +115,7 @@ Respond with:
 Handled types:
 
 - `app_mention` — bot mentioned in a channel
-- `message` (channel `app_home`) — App Home tab messages
+- `message` (`channel_type: "app_home"`) — App Home tab messages
 
 Always return `200` with `{}` to acknowledge (even on internal errors) to avoid Slack retries.
 
