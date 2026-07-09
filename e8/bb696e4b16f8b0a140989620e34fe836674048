@@ -1,0 +1,19 @@
+website/package-lock.json
+  s_48038c588fd754::t_877e9d7e81a8dc 11-13,1338-1384,1778-1783,2445-2477,2501-2512,2740-2745,2772-2783,3053-3064,3244-3252,3974-3979,4111-4130,4147-4162,4528-4540,4807-4812,4995-5006,6510-6530,6842-6850,6883-6929,7116-7124,7365-7373
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "e8bb696e4b16f8b0a140989620e34fe836674048",
+  "prompts": {},
+  "sessions": {
+    "s_48038c588fd754": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "36eec128-9ccb-4770-889e-eb2beea68c4e",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
