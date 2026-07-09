@@ -4,6 +4,16 @@
 
 `Strong`
 
+## Install
+
+### Preferred (guided steps via CLI)
+
+```bash
+npx @mediabubble-adv/arabic-skill@latest install --target amp
+```
+
+No verified global skills folder — the CLI prints adapter and workspace packaging steps. Escape hatch: `install --dir <path>` when you have a confirmed skills root.
+
 ## Why It Fits Well
 
 Amp has an explicit CLI, plugins, custom agents, and agent workflows. That makes it a strong target for the `arabic` architecture.

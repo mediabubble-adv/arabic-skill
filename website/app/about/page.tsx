@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageShell } from "@/components/page-shell";
+import { PageHero } from "@/components/page-hero";
 import { InstallCta } from "@/components/install-cta";
 import { siteMeta } from "@/lib/site-meta";
 
@@ -25,57 +26,60 @@ const commandTrail = [
 const auditPages = [
   { page: "home", score: "17/18", note: "مش مجرد ترجمة ✓" },
   { page: "install", score: "16/18", note: "fork + FAQ (AEO)" },
-  { page: "features", score: "17/18", note: "—" },
+  { page: "features", score: "17/18", note: "·" },
   { page: "commands", score: "18/18", note: "أقوى نبرة dev" },
-  { page: "tutorials", score: "16/18", note: "—" },
+  { page: "tutorials", score: "16/18", note: "·" },
   { page: "examples", score: "17/18", note: "«قبل» متعمد MSA" },
   { page: "about", score: "17/18", note: "meta/dogfood متوقع" },
-  { page: "docs", score: "18/18", note: "—" },
+  { page: "docs", score: "18/18", note: "·" },
 ];
 
 export default function AboutPage() {
   return (
     <PageShell>
-      <header className="max-w-3xl mb-10">
-        <h1 className="text-3xl md:text-4xl font-bold text-[var(--fg)] mb-3">
-          ليه مهارة العربية الرائعة؟
-        </h1>
-        <p className="text-[var(--fg-muted)]">
-          وكالة محتوى عربي جوه الـ IDE بتاعك. بيستشير قبل ما يكتب.{" "}
+      <PageHero title="لماذا مهارة العربية الرائعة؟">
+        <p>
+          وكالة محتوى عربي داخل الـ IDE. تستشير قبل الكتابة.{" "}
           <strong className="text-[var(--fg)]">مش مجرد ترجمة.</strong>
         </p>
-      </header>
+      </PageHero>
 
       <section className="mb-10">
-        <h2 className="text-xl font-semibold text-[var(--fg)] mb-4">
+        <h2 className="section-heading text-xl md:text-2xl font-semibold text-[var(--fg)]">
           مسار البناء (dogfood)
         </h2>
-        <pre className="rounded-lg border border-[var(--border)] bg-[var(--bg-elev)] p-4 text-sm text-[var(--fg-muted)] overflow-x-auto" dir="ltr">
+        <pre
+          className="rounded-lg border border-[var(--border)] bg-[var(--bg-elev)] p-4 text-sm text-[var(--fg-muted)] overflow-x-auto"
+          dir="ltr"
+        >
           plan → briefs → write → audit → Next.js port → deploy
         </pre>
-        <p className="text-sm text-[var(--fg-muted)] mt-3">
-          كل نص عربي على الموقع — من /arabic write على أدلة من الريبو. مفيش
-          copywriter من برّه.
+        <p className="text-sm text-[var(--fg-muted)] mt-3 text-center max-w-2xl mx-auto">
+          كل نص عربي على الموقع ناتج عن /arabic write على أدلة من الريبو. مفيش
+          copywriter خارجي.
         </p>
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-semibold text-[var(--fg)] mb-4">
+        <h2 className="section-heading text-xl md:text-2xl font-semibold text-[var(--fg)]">
           مسار الأوامر (frozen)
         </h2>
-        <pre className="rounded-lg border border-[var(--border)] bg-[var(--bg-elev)] p-4 text-xs md:text-sm text-[var(--fg-muted)] overflow-x-auto leading-relaxed" dir="ltr">
+        <pre
+          className="rounded-lg border border-[var(--border)] bg-[var(--bg-elev)] p-4 text-xs md:text-sm text-[var(--fg-muted)] overflow-x-auto leading-relaxed"
+          dir="ltr"
+        >
           {commandTrail.join("\n")}
         </pre>
       </section>
 
       <section className="mb-10 card">
-        <h2 className="text-xl font-semibold text-[var(--fg)] mb-2">
+        <h2 className="text-xl font-semibold text-[var(--fg)] mb-2 text-center">
           ملخص التدقيق (G16 — frozen)
         </h2>
-        <p className="text-sm text-[var(--fg-muted)] mb-4">
+        <p className="text-sm text-[var(--fg-muted)] mb-4 text-center">
           Snapshot date: 2026-07-04 · Register: L3 Masri · Verdict: PUBLISH
         </p>
-        <p className="text-lg font-semibold text-[var(--brand)] mb-4">
+        <p className="text-lg font-semibold text-[var(--brand)] mb-4 text-center">
           Overall: 17/18 ✅ PASS
         </p>
         <div className="overflow-x-auto">
@@ -104,24 +108,24 @@ export default function AboutPage() {
         <ul className="mt-4 text-sm text-[var(--fg-muted)] space-y-1">
           <li>
             <strong className="text-[var(--fg)]">Legacy register:</strong> clean
-            — مفيش MSA جامد في UI
+            · مفيش MSA جامد في UI
           </li>
           <li>
             <strong className="text-[var(--fg)]">AI-likelihood:</strong>{" "}
-            low–medium — FAQ/bento متوازية (AEO by design)
+            low–medium · FAQ/bento متوازية (AEO by design)
           </li>
           <li>
-            <strong className="text-[var(--fg)]">Brand ledger:</strong>{" "}
-            المهارة · ثبّت المهارة · مش مجرد ترجمة — ✓
+            <strong className="text-[var(--fg)]">Brand ledger:</strong> المهارة ·
+            ثبّت المهارة · مش مجرد ترجمة ✓
           </li>
         </ul>
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-semibold text-[var(--fg)] mb-3">
+        <h2 className="section-heading text-xl md:text-2xl font-semibold text-[var(--fg)]">
           مصادر
         </h2>
-        <ul className="text-sm text-[var(--fg-muted)] space-y-2">
+        <ul className="text-sm text-[var(--fg-muted)] space-y-2 max-w-xl mx-auto">
           <li>
             <a
               href="https://github.com/mediabubble-adv/arabic-skill/blob/main/docs/planning/website-dogfood.md"
@@ -129,7 +133,7 @@ export default function AboutPage() {
             >
               website-dogfood.md
             </a>{" "}
-            — sitemap + G13–G18
+            (sitemap + G13–G18)
           </li>
           <li>
             <a
@@ -138,18 +142,18 @@ export default function AboutPage() {
             >
               SKILL.md
             </a>{" "}
-            — runtime behavior
+            (runtime behavior)
           </li>
         </ul>
       </section>
 
-      <section className="mb-10">
+      <section className="mb-10 text-center max-w-2xl mx-auto">
         <h2 className="text-xl font-semibold text-[var(--fg)] mb-2">
           MediaBubble
         </h2>
         <p className="text-[var(--fg-muted)]">
-          منتج من MediaBubble — شريك محتوى عربي للفرق اللي بتبني بأدوات AI.
-          الموقع نفسه proof of concept: اتبنى بـ /arabic، اتدقق، واتنشر.
+          منتج من MediaBubble — شريك محتوى عربي للفرق التي تبني بأدوات AI. الموقع
+          نفسه إثبات: اتبنى بـ /arabic، اتدقق، واتنشر.
         </p>
       </section>
 

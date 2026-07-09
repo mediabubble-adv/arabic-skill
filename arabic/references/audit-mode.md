@@ -1,11 +1,11 @@
-# Audit Mode — 9-Point QA Pipeline
+# Audit Mode — 10-Point QA Pipeline
 
 Distilled from `reference/arabic-qa`. Load when the task is **reviewing** existing Arabic copy
 (`/arabic audit`, Audit Mode) or as the final review pass before delivery. Generalize the Masri
 examples to the **target dialect** locked for the piece.
 
-> Audit Mode never rewrites silently — it **scores, explains, then offers fixes**.
-> Flow: inspect → diagnose → explain → recommend fixes → optionally rewrite.
+> Audit Mode never rewrites silently — it **scores, explains, saves a report, then offers a handoff**.
+> Flow: inspect → diagnose → explain → **save `.arabic/audits/{slug}-{date}.md`** → picker (improve / surgical / done).
 >
 > **Load discipline:** Use `references/load-discipline.md` audit class. Legacy-register and
 > AI-likelihood scoring (§ below) apply to **`/arabic audit` deliveries only** — not every write.
@@ -16,12 +16,14 @@ examples to the **target dialect** locked for the piece.
 
 | Command | Loads | Behavior |
 |---|---|---|
-| `/arabic audit` | This file | 9-point QA on pasted text or `--file` |
+| `/arabic audit` | This file | 10-point QA on pasted text or `--file`; **always save report** + handoff (unless `--dry-run`) |
+| `/arabic audit website` | This file + `website-ui-system.md` (+ `rtl-audit.md` if markup) | Content QA + component map; `--surface website` |
 | `/arabic audit --platform <name>` | This file + § Platform register targets | Score check #1 against channel L-level |
-| `/arabic audit rtl` | `rtl-audit.md` + this file | Tier-1 RTL/UI source audit + Arabic string QA |
-| `/arabic audit --dir <path>` | `project-context-scanner.md` + this file | Capped scan (40 files) of Arabic copy in tree |
+| `/arabic audit rtl` | `rtl-audit.md` + this file | Tier-1 RTL/UI source audit + Arabic string QA; still save report + handoff |
+| `/arabic audit --dir <path>` | `project-context-scanner.md` + this file | Capped scan (40 files); one report covering the batch |
 
 RTL specifics: `references/rtl-audit.md`. Directory cap rules: same file + scanner safe exclusions.
+Website component IDs: `references/website-ui-system.md` §7.
 
 ---
 
@@ -82,33 +84,111 @@ Report **target** and **detected** register in the QA header (e.g. `Target: L1�
 | 7 | **English overload** | ≤2 loanwords/sentence, zero full English clauses | clean |
 | 8 | **Back-translation gut check** | literal back-translation that reads as natural English marketing = translationese | reads awkward in English, meaning intact = native |
 | 9 | **Brand lexicon compliance** | forbidden words present / approved words missing / register-disallowed vocab | fully compliant |
+| 10 | **Persuasion-lever consistency** (commercial tasks) | Copy activates the declared archetype + lead lever (per `persuasion-arab-psychology.md`); no contradictory levers; no archetype undermining | aligned with archetype + lever matrix |
 
-Per-check scoring: **0/2** if many violations (≥3, or any gender switch / translationese), **1/2** if 1–2, **2/2** if clean. (Full per-check thresholds + error catalog: `reference/arabic-qa`.)
+Per-check scoring: **0/2** if many violations (≥3, or any gender switch / translationese), **1/2** if 1–2, **2/2** if clean. (Full per-check thresholds + error catalog: `reference/arabic-qa`.) Check #10 applies only to commercial/persuasive tasks (ads, sales copy, brand voice); editorial/blog tasks skip it.
 
-## Scoring matrix (max 18)
+## Scoring matrix (max 20)
 
 | Score | Rating | Action |
 |-------|--------|--------|
-| 16–18 | ✅ PASS | Publish |
-| 13–15 | ⚠️ CONDITIONAL | Approve with noted exceptions |
-| 9–12 | 🔄 REVISE | Required fixes before re-audit |
-| < 9 | 🚫 BLOCKED | Full rewrite |
+| 18–20 | ✅ PASS | Publish |
+| 14–17 | ⚠️ CONDITIONAL | Approve with noted exceptions |
+| 10–13 | 🔄 REVISE | Required fixes before re-audit |
+| < 10 | 🚫 BLOCKED | Full rewrite |
 
 ## Output format
+
+Deliver the chat summary **and** persist the full report (next section).
 
 ```markdown
 ## Arabic QA Report
 **Overall:** 16/18 ✅ PASS   **Target register:** L3   **Detected:** L2–L3
+**Legacy register:** clean   **AI-likelihood:** low
+**Source:** [path or paste]   **Surface:** copy | website
 
-**Issues:**
-1. (minor) Line 3 — translationese: "اكتشف كيف يمكن…" reads as English marketing → rewrite native
-   → Fix: <concrete dialect-native rewrite>
+**Issues:** (highest impact first)
+1. (major) [component ID if known] — …
+   → Fix direction: …
 
 **Passed:** Register ✓ Conjugation ✓ Negation ✓ Gender ✓ Demonstratives ✓ English ✓ Brand ✓
-**Cultural scan:** CLEAN ✓   **Verdict:** PUBLISH
+**Cultural scan:** CLEAN ✓   **Verdict:** PUBLISH | CONDITIONAL | REVISE | BLOCKED
 ```
 
-Always end with the **single highest-impact fix** first, and offer: *"Want me to apply these and re-audit?"*
+Lead with the **single highest-impact issue**. Do **not** silently rewrite.
+
+---
+
+## Mandatory report save + improve handoff
+
+Unless the user passed `--dry-run`:
+
+1. Ensure `.arabic/audits/` exists (create if missing; do not create whole `.arabic/` without offering `/arabic init` when absent).
+2. Write UTF-8 markdown to:
+   - `--out <path>` if set, else
+   - `.arabic/audits/{slug}-{YYYY-MM-DD}.md`
+   - `slug` from file basename, route, or `paste` / `website`.
+3. Report body **must** include the template below.
+4. End the chat turn with **one** lettered picker (wait for reply):
+
+```text
+التقرير اتحفظ: `.arabic/audits/{slug}-{date}.md`
+
+A) /arabic improve باستخدام التقرير ده ◆
+B) إصلاحات جراحية هنا في الشات (أسلوب audit)
+C) خلاص — التقرير كفاية
+```
+
+| Reply | Action |
+|-------|--------|
+| **A** | Run `/arabic improve --from-audit .arabic/audits/…` (load `skills/improve.md`) |
+| **B** | Offer ranked surgical rewrites in chat; re-audit optional |
+| **C** | Stop; leave report on disk |
+
+`--yes` does **not** auto-start improve — it only skips unrelated confirms. Improve still needs **A** (or an explicit `--from-audit` command).
+
+### Saved report template
+
+````markdown
+# Audit Report — {slug}
+**Date:** YYYY-MM-DD
+**Source:** …
+**Dialect / register target:** …
+**Surface:** copy | website
+**Overall:** N/{18 or 20} · Verdict: …
+*(Use /20 when Check #10 — persuasion-lever consistency — is scored for commercial/persuasive tasks; otherwise /18.)*
+**Legacy register:** … · **AI-likelihood:** …
+
+## Issues (ranked)
+1. **[id]** severity — description
+   - Evidence: …
+   - Fix direction: …
+
+## Component map
+| ID | Locale | Verdict | Note |
+|----|--------|---------|------|
+| … | ar | pass/fail | … |
+
+*(Omit component map for pure prose audits without website surface.)*
+
+## Locks to preserve
+- Brand / G14 / G16 / bilingual keys / legal — list concrete strings
+
+## Improve seeds
+- primary_job: attraction | flow | tone | conversion | brand
+- voice_hint: …
+- lang_order: ar_en | en_ar | ar | en
+- scope_paths: …
+
+## Copy-ready
+```text
+/arabic improve --from-audit .arabic/audits/{slug}-{date}.md
+```
+````
+
+Structural fixture (fields only): `tests/golden/audit-report-shape.md`.
+
+---
 
 ## Legacy register + AI-likelihood (audit-only)
 
@@ -184,4 +264,6 @@ Prevent MSA bleed and cross-dialect mixing:
 - `humanization-protocol.md` — apply before auditing generated copy (anti-translationese, channel rules)
 - `taboos.md` — cultural red-lines for the cultural-fitness dimension
 - `rtl-audit.md` — source-based RTL/UI checks (tier 1 for `/arabic audit rtl`)
+- `website-ui-system.md` — component map for `/arabic audit website`
+- `skills/improve.md` — full rewrite via `--from-audit`
 - Deep cuts (error catalog, brand lexicon, platform registers): `reference/arabic-qa/`

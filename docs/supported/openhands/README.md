@@ -4,6 +4,16 @@
 
 `Strong`
 
+## Install
+
+### Preferred (guided steps via CLI)
+
+```bash
+npx @mediabubble-adv/arabic-skill@latest install --target openhands
+```
+
+No verified global skills folder — the CLI prints platform/SDK adapter steps. Escape hatch: `install --dir <path>` when you have a confirmed skills root.
+
 ## Why It Fits Well
 
 OpenHands is an agent platform, not just an editor plugin. It supports autonomous coding workflows, cloud/local execution, integrations, and SDK-based customization. That makes it a strong architecture match.

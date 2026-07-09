@@ -4,6 +4,16 @@
 
 `Strong`
 
+## Install
+
+### Preferred (guided steps via CLI)
+
+```bash
+npx @mediabubble-adv/arabic-skill@latest install --target cline
+```
+
+No verified global skills folder — the CLI prints `.clinerules` and repo-docs steps. Escape hatch: `install --dir <path>` when you have a confirmed skills root.
+
 ## Why It Fits Well
 
 Cline explicitly supports IDE, CLI, SDK, rules, plan/act workflows, MCP, and multi-agent patterns. That is very close to the architecture this skill wants.

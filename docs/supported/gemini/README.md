@@ -4,6 +4,16 @@
 
 `Partial`
 
+## Install
+
+### Preferred (guided steps via CLI)
+
+```bash
+npx @mediabubble-adv/arabic-skill@latest install --target gemini
+```
+
+No verified global skills folder for generic Gemini — the CLI prints system-instruction steps. For Antigravity IDE with native skills: `install --target antigravity`. Escape hatch: `install --dir <path>`.
+
 ## Why It Is Partial
 
 Gemini can support the portable parts of the skill well, but the full advisory-agent system depends on the exact Gemini surface being used.

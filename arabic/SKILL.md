@@ -124,23 +124,24 @@ taboo scan yourself before outputting. Always note which disciplines were applie
 
 Load the matching file from `dialects/` before writing any content.
 
-| Dialect | File | Character |
-|---|---|---|
-| مصري / Masri | `dialects/masri.md` | Witty, sarcastic, emotionally intelligent, mass-appeal |
-| سعودي / KSA | `dialects/ksa.md` | Direct, dignified, bold — Riyadhi / Hejazi / Qassimi sub-registers |
-| خليجي / Khaliji | `dialects/khaliji.md` | Elegant, aspirational, warm — flag divergences per country |
-| شامي / Levantine | `dialects/levantine.md` | Poetic, heartfelt, resilient |
-| عراقي / Iraqi | `dialects/iraqi.md` | Passionate, deeply poetic, dark humor |
-| يمني / Yemeni | `dialects/yemeni.md` | Traditional, proverb-rich, honorable |
-| مغربي / Maghrebi | `dialects/maghrebi.md` | Darija / Tunisian / Algerian — vibrant, French-inflected |
-| سوداني / Sudanese | `dialects/sudanese.md` | Gentle, melodic, community-oriented |
-| ليبي / Libyan | `dialects/libyan.md` | Warm, dry humor, Bedouin-influenced |
-| فصحى / MSA | `dialects/msa.md` | Formal, authoritative, pan-Arab |
-| لهجة بيضاء / White Dialect | `dialects/white-dialect.md` | Stripped MSA, no strong regional markers |
+| Dialect | File | Character | Tier |
+|---|---|---|---|
+| مصري / Masri | `dialects/masri.md` | Witty, sarcastic, emotionally intelligent, mass-appeal | 1 — deep |
+| سعودي / KSA | `dialects/ksa.md` | Direct, dignified, bold — Riyadhi / Hejazi / Qassimi sub-registers | 1 — deep |
+| خليجي / Khaliji | `dialects/khaliji.md` | Elegant, aspirational, warm — flag divergences per country | 1 — deep |
+| شامي / Levantine | `dialects/levantine.md` | Poetic, heartfelt, resilient | 1 — deep |
+| عراقي / Iraqi | `dialects/iraqi.md` | Passionate, deeply poetic, dark humor | 2 — solid |
+| مغربي / Maghrebi | `dialects/maghrebi.md` | Darija / Tunisian / Algerian — vibrant, French-inflected | 2 — solid |
+| فصحى / MSA | `dialects/msa.md` | Formal, authoritative, pan-Arab | 2 — solid |
+| لهجة بيضاء / White Dialect | `dialects/white-dialect.md` | Stripped MSA, no strong regional markers | 2 — solid |
+| يمني / Yemeni | `dialects/yemeni.md` | Traditional, proverb-rich, honorable | 3 — baseline |
+| سوداني / Sudanese | `dialects/sudanese.md` | Gentle, melodic, community-oriented | 3 — baseline |
+| ليبي / Libyan | `dialects/libyan.md` | Warm, dry humor, Bedouin-influenced | 3 — baseline |
 
 **Auto-selection:** Country mentioned → auto-select primary dialect and state the assumption.
 **Pan-Arab brief:** No dialect stated → ask "Which country is the primary audience?" Do NOT default to MSA for commercial or emotional content.
 **Khaliji without country:** Ask "Is this pan-Gulf or a specific country (UAE / Kuwait / Qatar / Bahrain / Oman)?"
+**Confidence tier router:** Tier 3 dialect + high-stakes commercial task (paid campaign, brand launch, legal/financial copy) → disclose the tier to the user ("this dialect's coverage is baseline-depth — markers are directionally correct but less battle-tested than Tier 1") and offer the White Dialect (`dialects/white-dialect.md`) as a lower-risk fallback.
 
 ---
 
@@ -261,7 +262,8 @@ Read `references/output-templates.md` for full template bodies.
 
 - [ ] Request classified → mode selected (Mode Router); `references/advisory-mode.md` loaded
 - [ ] Guided + clarified (70/30) unless a direct-write exception applies
-- [ ] Recommendation summary stated before writing (dialect/register · format/channel · why)
+- [ ] Recommendation summary stated before writing (dialect/register · format/channel · archetype/lever [if commercial] · why)
+- [ ] Archetype identified + locked (primary + optional secondary) for commercial tasks → `references/persuasion-arab-psychology.md`
 - [ ] Dialect identified and locked → dialect file loaded from `dialects/`
 - [ ] Domain file loaded if industry applies (`domains/`)
 - [ ] Conversation mode active if task is a live conversation script (`conversations/`)
@@ -269,8 +271,10 @@ Read `references/output-templates.md` for full template bodies.
 - [ ] Workspace identified → intake questions applied (70/30 rule from `references/intake-protocols.md`)
 - [ ] Engine selected → engine rules read from `references/engines.md`
 - [ ] Output template selected (A–F) → `references/output-templates.md`
+- [ ] Storytelling framework loaded (if commercial + narrative task) → `references/storytelling.md`
 - [ ] Taboo scan completed → `references/taboos.md`
 - [ ] Humanization applied → `references/humanization-protocol.md`
+- [ ] Persuasion-lever consistency checked (commercial tasks only) → 10-point audit in `references/audit-mode.md`
 - [ ] QA sequence executed before delivery
 
 ---

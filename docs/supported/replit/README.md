@@ -4,6 +4,16 @@
 
 `Partial`
 
+## Install
+
+### Preferred (guided steps via CLI)
+
+```bash
+npx @mediabubble-adv/arabic-skill@latest install --target replit
+```
+
+No verified global skills folder — the CLI prints Replit Agent skills/docs steps. Escape hatch: `install --dir <path>` inside your Repl when confirmed.
+
 ## Why It Is Partial
 
 Replit Agent is strong for building apps and staged agent workflows, but its center of gravity is product/app generation inside Replit rather than repo-native IDE skill routing.

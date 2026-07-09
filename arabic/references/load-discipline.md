@@ -48,9 +48,10 @@ Load in order; stop when the plan gate is satisfied:
 3. `references/project-context-scanner.md` — when the plan describes a real repo/product
 4. `references/output-templates.md` — **Templates H + I only** (recommendation + project plan)
 5. `references/engines.md` — **one engine row** matching the primary deliverable type
-6. `references/book-writing.md` — only for `plan book` or `plan series`
-7. `references/ads-service-matrix.md` — only for `plan campaign`
-8. `references/seo-aeo-masri.md` — only for Egypt-targeted website plans
+6. `references/storytelling.md` — only for narrative-heavy campaigns (multi-piece ad, funnel, video series)
+7. `references/book-writing.md` — only for `plan book` or `plan series`
+8. `references/ads-service-matrix.md` — only for `plan campaign`
+9. `references/seo-aeo-masri.md` — only for Egypt-targeted website plans
 
 **Do not load:** full audit pipeline, humanization protocol, or all engines during planning.
 
@@ -62,12 +63,13 @@ Load in order:
 
 1. `references/intake-protocols.md` — unless brief is complete (`--brief`)
 2. `references/engines.md` — **single engine section** for the subcommand
-3. `references/output-templates.md` — **one template (A–F)** for the subcommand
-4. `domains/{industry}.md` — only when industry applies
-5. `references/project-context-scanner.md` — only for `explain`, `tutorial`, `readme`, or repo-aware copy
-6. `references/humanization-protocol.md` — **after draft**, before delivery
-7. `references/taboos.md` — before final delivery
-8. `references/ads-service-matrix.md` — **one platform § only** for `write meta|google|tiktok|snap|linkedin|youtube|ad|ads`
+3. `references/storytelling.md` — **only for commercial narrative tasks** (ads, sales, funnel, video with story arc, testimonial)
+4. `references/output-templates.md` — **one template (A–F)** for the subcommand
+5. `domains/{industry}.md` — only when industry applies
+6. `references/project-context-scanner.md` — only for `explain`, `tutorial`, `readme`, or repo-aware copy
+7. `references/humanization-protocol.md` — **after draft**, before delivery
+8. `references/taboos.md` — before final delivery
+9. `references/ads-service-matrix.md` — **one platform § only** for `write meta|google|tiktok|snap|linkedin|youtube|ad|ads`
 
 **Do not load:** `audit-mode.md`, `project-mode.md`, or unrelated engines/templates.
 
@@ -77,13 +79,15 @@ Load in order:
 
 Load in order:
 
-1. `references/audit-mode.md` — 9-point QA + legacy/AI-likelihood scoring (**audit deliveries only**)
+1. `references/audit-mode.md` — 10-point QA + legacy/AI-likelihood scoring (**audit deliveries only**) + **mandatory report save + improve handoff**
 2. `references/humanization-protocol.md` — only when offering rewrites
 3. `references/taboos.md` — cultural dimension cross-check
 4. `voice.md` — when brand lexicon applies
 5. `references/project-context-scanner.md` — only for `/arabic audit --dir` (safe scan rules)
+6. `references/website-ui-system.md` — only for `/arabic audit website` / `--surface website` (component map)
+7. `references/rtl-audit.md` — when website audit includes markup or `/arabic audit rtl`
 
-**Do not load:** engines, output templates, or project-mode staging docs.
+**Do not load:** full engines or project-mode staging docs (unless website audit needs one engine slice already covered by website-ui-system).
 
 **Scoring rule:** Legacy-register and AI-likelihood scoring run on **`/arabic audit` outputs only** — not on every write delivery.
 
@@ -139,11 +143,11 @@ When `engines.md` or `output-templates.md` is needed, load **only the matching s
 |---|---|---|
 | caption / post / social | Captions Engine | A |
 | ad / meta / funnel | Marketing Funnel Engine | A or B |
-| landing / page / website | Website Content Engine | B |
+| landing / page / website | Website Content Engine + `website-ui-system.md` (+ `bilingual-pipeline.md` if dual-lang) | B |
 | blog / seo / aeo | SEO or AEO Engine | B |
 | video / script / youtube | Video Script Engine | C |
 | book / chapter / outline | Book Engine | E |
-| ui | UI/UX Microcopy Engine | A |
+| ui | UI/UX Microcopy Engine + `website-ui-system.md` | A |
 | contract / skill / rules | Professional Documents | F |
 
 Full routing table: `references/command-router.md`.

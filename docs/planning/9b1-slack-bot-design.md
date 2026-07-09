@@ -377,7 +377,7 @@ Next billing cycle: 2026-08-07
 - `chat:write` — Post bot messages
 - `commands` — Respond to slash commands
 - `users:read` — Get user info for analytics
-- `team:info` — Get workspace name/logo
+- `team:read` — Get workspace name/logo
 - `files:read` — Read uploaded files for audit
 - `reactions:read` — Track emoji reactions
 
@@ -451,7 +451,7 @@ We hit a temporary issue. Try again in 30s
   "oauth_config": {
     "redirect_urls": ["https://arabic-skill.vercel.app/api/slack/oauth/callback"],
     "scopes": {
-      "bot": ["chat:write", "commands", "users:read", "team:info", "files:read", "reactions:read"]
+      "bot": ["chat:write", "commands", "users:read", "team:read", "files:read", "reactions:read"]
     }
   },
   "settings": {

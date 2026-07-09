@@ -45,6 +45,42 @@ Presets are named file bundles optimized for common workflows. Each preset group
 
 ---
 
+### `website`
+**For:** `/arabic plan website` · `write landing|page|website`  
+**Includes:**
+- `references/project-mode.md` (website slice) — plan only
+- `references/website-ui-system.md`
+- `references/bilingual-pipeline.md` — when dual-language
+- Website Content Engine slice in `references/engines.md`
+- 1 dialect
+
+**Use:** Multi-page marketing/SaaS site copy with component IDs
+
+---
+
+### `ui`
+**For:** `/arabic write ui`  
+**Includes:**
+- `references/website-ui-system.md`
+- UI/UX Microcopy Engine slice in `references/engines.md`
+- `references/bilingual-pipeline.md` — when dual-language
+- 1 dialect
+
+**Use:** Buttons, forms, empty states, dashboard labels
+
+---
+
+### `audit-website`
+**For:** `/arabic audit website` · `--surface website`  
+**Includes:**
+- `audit` preset
+- `references/website-ui-system.md`
+- `references/rtl-audit.md` — when markup present
+
+**Use:** Content QA + component map + optional RTL
+
+---
+
 ### `research`
 **For:** `/arabic research [query]`  
 **Includes:**
@@ -162,9 +198,9 @@ Presets are named file bundles optimized for common workflows. Each preset group
 
 ### Auto-select by command
 ```
-/arabic plan <project>      → load "plan"
-/arabic write <type>        → load "write"
-/arabic audit [scope]       → load "audit"
+/arabic plan <project>      → load "plan" (website → also "website")
+/arabic write <type>        → load "write" (landing/page/website → "website"; ui → "ui")
+/arabic audit [scope]       → load "audit" (website → "audit-website")
 /arabic research [query]    → load "research"
 /arabic coach               → load "coach"
 /arabic init                → load "init"

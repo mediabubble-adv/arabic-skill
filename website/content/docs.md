@@ -1,6 +1,6 @@
 # الوثائق والمصادر
 
-النسخة الكاملة على GitHub — هنا ملخص سريع + **ثبّت المهارة** الأول.
+النسخة الكاملة على GitHub — هنا ملخص سريع، وابدأ بـ **ثبّت المهارة**.
 
 ## بدء سريع
 
@@ -25,7 +25,7 @@
 ## تثبيت (G14)
 
 ```bash
-npx @mediabubble-adv/arabic-skill install --target cursor
+npx @mediabubble-adv/arabic-skill@latest install --target cursor
 ```
 
-**ثبّت المهارة** — وبعدين ارجع للوثائق الكاملة على GitHub.
+**ثبّت المهارة** — ثم ارجع للوثائق الكاملة على GitHub.
