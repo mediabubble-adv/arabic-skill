@@ -1,0 +1,23 @@
+arabic/references/INDEX.md
+  s_b1f4a5458bae4b::t_38b013807ddb10 141-142,144
+package-lock.json
+  s_b1f4a5458bae4b::t_41e01c4d7e911a 3,9
+website/package-lock.json
+  s_b1f4a5458bae4b::t_f4aa3e1d3da2b5 11-13,1338-1384,1778-1783,2445-2477,2501-2512,2740-2745,2772-2783,3053-3064,3244-3252,3974-3979,4111-4130,4147-4162,4528-4540,4807-4812,4995-5006,6510-6530,6842-6850,6883-6929,7116-7124,7365-7373
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "9fec01ce58b7d05810822b1ec0a7a8a6751b4be0",
+  "prompts": {},
+  "sessions": {
+    "s_b1f4a5458bae4b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9e9c76ea-3954-489c-8e86-bbda4d26b01b",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
