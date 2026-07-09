@@ -3,9 +3,12 @@ import { createHmac, timingSafeEqual } from "crypto";
 import { db } from "@/lib/db";
 import { AnyWebhookPayload, WebhookEventType } from "./types";
 
+export interface WebhookRequest extends VercelRequest {
+  rawBody?: string;
+}
+
 /**
  * Verify webhook signature (HMAC-SHA256)
- * Prevents unauthorized webhook requests
  */
 export function verifyWebhookSignature(
   payload: string,
@@ -28,60 +31,61 @@ export function verifyWebhookSignature(
  * POST /api/webhooks/receive
  */
 export async function handleWebhookReceive(
-  req: VercelRequest,
+  req: WebhookRequest,
   res: VercelResponse
 ) {
-  // Only accept POST
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
   try {
-    // Get webhook ID from path or header
-    const webhookId = (req.query.id as string) || req.headers["x-webhook-id"] as string;
+    const webhookId =
+      (req.query.id as string) || (req.headers["x-webhook-id"] as string);
     if (!webhookId) {
       return res.status(400).json({ error: "Missing webhook ID" });
     }
 
-    // Get signature from header
     const signature = req.headers["x-webhook-signature"] as string;
     if (!signature) {
       return res.status(401).json({ error: "Missing signature" });
     }
 
-    // Get webhook subscription from database
     const subscription = await getWebhookSubscription(webhookId);
     if (!subscription) {
       console.warn(`Webhook not found: ${webhookId}`);
       return res.status(404).json({ error: "Webhook not found" });
     }
 
-    // Verify signature
-    const payload = typeof req.body === "string" ? req.body : JSON.stringify(req.body);
-    if (!verifyWebhookSignature(payload, signature, subscription.secret)) {
+    const rawPayload =
+      req.rawBody ??
+      (typeof req.body === "string" ? req.body : JSON.stringify(req.body));
+
+    if (!verifyWebhookSignature(rawPayload, signature, subscription.secret)) {
       console.warn(`Invalid signature for webhook: ${webhookId}`);
       return res.status(401).json({ error: "Invalid signature" });
     }
 
-    // Parse payload
-    const data: AnyWebhookPayload = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
+    let data: AnyWebhookPayload;
+    try {
+      data =
+        typeof req.body === "string"
+          ? JSON.parse(req.body)
+          : (req.body as AnyWebhookPayload);
+    } catch {
+      return res.status(400).json({ error: "Invalid JSON payload" });
+    }
 
-    // Verify event type is subscribed
     if (!subscription.events.includes(data.event)) {
       console.log(`Webhook not subscribed to event: ${data.event}`);
       return res.status(202).json({ received: true });
     }
 
-    // Queue webhook for processing
     await queueWebhookJob(subscription.id, data);
-
-    // Record successful receipt
     await recordWebhookDelivery(subscription.id, data, "pending", null);
 
-    // Return immediately (async processing)
     return res.status(202).json({
       received: true,
-      job_id: data.id
+      job_id: data.id,
     });
   } catch (error) {
     console.error("Error handling webhook:", error);
@@ -89,9 +93,6 @@ export async function handleWebhookReceive(
   }
 }
 
-/**
- * Get webhook subscription from database
- */
 async function getWebhookSubscription(webhookId: string) {
   try {
     const result = await db.query(
@@ -121,9 +122,6 @@ async function getWebhookSubscription(webhookId: string) {
   }
 }
 
-/**
- * Queue webhook for async processing
- */
 async function queueWebhookJob(
   subscriptionId: string,
   payload: AnyWebhookPayload
@@ -137,7 +135,7 @@ async function queueWebhookJob(
       [
         `job_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
         "webhook",
-        JSON.stringify({ subscription_id: subscriptionId, ...payload }),
+        JSON.stringify({ ...payload, subscription_id: subscriptionId }),
         "pending",
         "normal",
       ]
@@ -148,9 +146,6 @@ async function queueWebhookJob(
   }
 }
 
-/**
- * Record webhook delivery attempt
- */
 async function recordWebhookDelivery(
   subscriptionId: string,
   payload: AnyWebhookPayload,
@@ -161,11 +156,10 @@ async function recordWebhookDelivery(
   try {
     await db.query(
       `
-      INSERT INTO webhook_deliveries (id, subscription_id, payload, status, response, error, attempt_count, created_at)
-      VALUES ($1, $2, $3, $4, $5, $6, 1, NOW())
+      INSERT INTO webhook_deliveries (subscription_id, payload, status, response, error, attempt_count, created_at)
+      VALUES ($1, $2, $3, $4, $5, 1, NOW())
       `,
       [
-        `delivery_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
         subscriptionId,
         JSON.stringify(payload),
         status,
@@ -178,19 +172,13 @@ async function recordWebhookDelivery(
   }
 }
 
-/**
- * Webhook health check
- * GET /api/webhooks/health
- */
 export async function handleWebhookHealth(
   req: VercelRequest,
   res: VercelResponse
 ) {
   try {
-    // Check database connection
-    const result = await db.query("SELECT 1");
+    await db.query("SELECT 1");
 
-    // Get queue stats
     const queueStats = await db.query(
       `
       SELECT

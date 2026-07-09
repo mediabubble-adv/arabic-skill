@@ -15,9 +15,13 @@ import { processNextJob } from "@/api/webhooks/queue";
  * }
  */
 export async function GET(req: Request) {
-  // Verify this is a cron request from Vercel
+  const cronSecret = process.env.CRON_SECRET;
+  if (!cronSecret) {
+    return Response.json({ error: "Cron secret not configured" }, { status: 503 });
+  }
+
   const authHeader = req.headers.get("authorization");
-  if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
+  if (authHeader !== `Bearer ${cronSecret}`) {
     return Response.json({ error: "Unauthorized" }, { status: 401 });
   }
 

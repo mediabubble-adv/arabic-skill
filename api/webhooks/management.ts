@@ -1,6 +1,7 @@
 import { db } from "@/lib/db";
 import { WebhookEventType, WebhookSubscription } from "./types";
 import { randomBytes } from "crypto";
+import { assertSafeWebhookUrl } from "./url-validation";
 
 /**
  * Webhook Management API
@@ -16,6 +17,8 @@ export async function createWebhook(
   events: WebhookEventType[]
 ): Promise<WebhookSubscription> {
   try {
+    await assertSafeWebhookUrl(url);
+
     // Generate secret for HMAC verification
     const secret = randomBytes(32).toString("hex");
 
@@ -134,6 +137,7 @@ export async function updateWebhook(
     let paramIndex = 2;
 
     if (updates.url !== undefined) {
+      await assertSafeWebhookUrl(updates.url);
       fields.push(`url = $${paramIndex}`);
       values.push(updates.url);
       paramIndex++;
@@ -247,7 +251,7 @@ export async function testWebhook(webhookId: string): Promise<{
         "X-Webhook-ID": webhookId,
       },
       body: JSON.stringify(testPayload),
-      timeout: 10000,
+      signal: AbortSignal.timeout(10000),
     });
 
     return {

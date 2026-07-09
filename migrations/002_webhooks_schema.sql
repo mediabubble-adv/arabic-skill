@@ -2,7 +2,6 @@
 -- Phase 9B-2: Webhooks Integration
 -- Version: 1.0
 
--- Webhook Subscriptions table
 CREATE TABLE IF NOT EXISTS webhook_subscriptions (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   workspace_id UUID NOT NULL,
@@ -15,12 +14,12 @@ CREATE TABLE IF NOT EXISTS webhook_subscriptions (
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW(),
 
-  FOREIGN KEY (workspace_id) REFERENCES workspaces(id) ON DELETE CASCADE,
-  INDEX idx_workspace_id (workspace_id),
-  INDEX idx_is_active (is_active)
+  FOREIGN KEY (workspace_id) REFERENCES workspaces(id) ON DELETE CASCADE
 );
 
--- Webhook Deliveries table: Track all webhook delivery attempts
+CREATE INDEX IF NOT EXISTS idx_webhook_subscriptions_workspace_id ON webhook_subscriptions (workspace_id);
+CREATE INDEX IF NOT EXISTS idx_webhook_subscriptions_is_active ON webhook_subscriptions (is_active);
+
 CREATE TABLE IF NOT EXISTS webhook_deliveries (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   subscription_id UUID NOT NULL,
@@ -34,13 +33,13 @@ CREATE TABLE IF NOT EXISTS webhook_deliveries (
   created_at TIMESTAMP DEFAULT NOW(),
   completed_at TIMESTAMP,
 
-  FOREIGN KEY (subscription_id) REFERENCES webhook_subscriptions(id) ON DELETE CASCADE,
-  INDEX idx_subscription_id (subscription_id),
-  INDEX idx_status (status),
-  INDEX idx_created_at (created_at)
+  FOREIGN KEY (subscription_id) REFERENCES webhook_subscriptions(id) ON DELETE CASCADE
 );
 
--- Async Queue Jobs table: Track all queued jobs (webhooks, batch, workflows)
+CREATE INDEX IF NOT EXISTS idx_webhook_deliveries_subscription_id ON webhook_deliveries (subscription_id);
+CREATE INDEX IF NOT EXISTS idx_webhook_deliveries_status ON webhook_deliveries (status);
+CREATE INDEX IF NOT EXISTS idx_webhook_deliveries_created_at ON webhook_deliveries (created_at);
+
 CREATE TABLE IF NOT EXISTS queue_jobs (
   id VARCHAR(100) PRIMARY KEY,
   type VARCHAR(50) NOT NULL,
@@ -55,16 +54,15 @@ CREATE TABLE IF NOT EXISTS queue_jobs (
   created_at TIMESTAMP DEFAULT NOW(),
   started_at TIMESTAMP,
   completed_at TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT NOW(),
-
-  INDEX idx_status (status),
-  INDEX idx_type (type),
-  INDEX idx_priority (priority),
-  INDEX idx_next_retry (next_retry_at),
-  INDEX idx_created_at (created_at)
+  updated_at TIMESTAMP DEFAULT NOW()
 );
 
--- Webhook Events Catalog table: Log all webhook events for analytics
+CREATE INDEX IF NOT EXISTS idx_queue_jobs_status ON queue_jobs (status);
+CREATE INDEX IF NOT EXISTS idx_queue_jobs_type ON queue_jobs (type);
+CREATE INDEX IF NOT EXISTS idx_queue_jobs_priority ON queue_jobs (priority);
+CREATE INDEX IF NOT EXISTS idx_queue_jobs_next_retry ON queue_jobs (next_retry_at);
+CREATE INDEX IF NOT EXISTS idx_queue_jobs_created_at ON queue_jobs (created_at);
+
 CREATE TABLE IF NOT EXISTS webhook_events_log (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   workspace_id UUID NOT NULL,
@@ -76,13 +74,13 @@ CREATE TABLE IF NOT EXISTS webhook_events_log (
   created_at TIMESTAMP DEFAULT NOW(),
 
   FOREIGN KEY (workspace_id) REFERENCES workspaces(id) ON DELETE CASCADE,
-  FOREIGN KEY (subscription_id) REFERENCES webhook_subscriptions(id) ON DELETE SET NULL,
-  INDEX idx_workspace_id (workspace_id),
-  INDEX idx_event_type (event_type),
-  INDEX idx_created_at (created_at)
+  FOREIGN KEY (subscription_id) REFERENCES webhook_subscriptions(id) ON DELETE SET NULL
 );
 
--- Comments for documentation
+CREATE INDEX IF NOT EXISTS idx_webhook_events_log_workspace_id ON webhook_events_log (workspace_id);
+CREATE INDEX IF NOT EXISTS idx_webhook_events_log_event_type ON webhook_events_log (event_type);
+CREATE INDEX IF NOT EXISTS idx_webhook_events_log_created_at ON webhook_events_log (created_at);
+
 COMMENT ON TABLE webhook_subscriptions IS 'Webhook endpoint registrations per workspace';
 COMMENT ON TABLE webhook_deliveries IS 'Webhook delivery attempts and retries';
 COMMENT ON TABLE queue_jobs IS 'Async job queue for webhooks, batch, workflow processing';
@@ -95,8 +93,7 @@ COMMENT ON COLUMN queue_jobs.priority IS 'Job priority for queue ordering (high/
 COMMENT ON COLUMN queue_jobs.max_attempts IS 'Maximum number of retry attempts before failure';
 COMMENT ON COLUMN queue_jobs.next_retry_at IS 'Scheduled time for next retry (exponential backoff)';
 
--- Create indexes for performance
-CREATE INDEX idx_queue_jobs_pending ON queue_jobs (status, next_retry_at, priority, created_at)
+CREATE INDEX IF NOT EXISTS idx_queue_jobs_pending ON queue_jobs (status, next_retry_at, priority, created_at)
   WHERE status = 'pending';
 
-CREATE INDEX idx_webhook_events_by_type_and_time ON webhook_events_log (workspace_id, event_type, created_at DESC);
+CREATE INDEX IF NOT EXISTS idx_webhook_events_by_type_and_time ON webhook_events_log (workspace_id, event_type, created_at DESC);

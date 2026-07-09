@@ -76,10 +76,10 @@ jobs:
         if: steps.changed-files.outputs.any_changed == 'true'
         id: extract
         run: |
+          : > /tmp/arabic_text.txt
           for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
             echo "Auditing: $file"
-            # Extract Arabic text using regex or grep
-            grep -oP '[؀-ۿ]+' "$file" > /tmp/arabic_text.txt
+            grep -oP '[؀-ۿ]+' "$file" >> /tmp/arabic_text.txt || true
           done
           wc -l /tmp/arabic_text.txt
 
@@ -187,7 +187,7 @@ jobs:
           echo "${{ steps.feature.outputs.feature_name }}" > /tmp/artifacts/feature.txt
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: feature-info
           path: /tmp/artifacts/feature.txt
@@ -253,7 +253,7 @@ jobs:
           echo "Files Reviewed: ${{ steps.find-files.outputs.files }}" >> review.log
 
       - name: Upload review log
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: content-review-${{ matrix.dialect }}
           path: review.log
@@ -427,7 +427,7 @@ if: steps.changed-files.outputs.any_changed == 'true'
 Keep audit results and generated content:
 ```yaml
 - name: Upload artifact
-  uses: actions/upload-artifact@v3
+  uses: actions/upload-artifact@v4
   with:
     name: audit-results
     path: results/

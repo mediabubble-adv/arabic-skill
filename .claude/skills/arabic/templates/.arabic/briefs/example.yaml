@@ -1,0 +1,11 @@
+# Starter brief — edit or duplicate for Pro Mode writes
+dialect: masri
+market: egypt
+goal: social captions
+platform: instagram
+product: ""
+audience: Egyptian mobile users, 25-40
+tone: witty, trustworthy, L2-L3 Masri
+count: 3
+cta: try free / DM us
+notes: Replace product and CTA before `/arabic write caption --brief .arabic/briefs/example.yaml`
