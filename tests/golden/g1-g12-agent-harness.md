@@ -38,6 +38,17 @@ npm run golden:harness -- --run --report auto
 
 Uses `GOLDEN_HARNESS_MODEL` (default `gpt-4o-mini`) and loads `arabic/SKILL.md` + manifest `required_files` as system context.
 
+**Using Gemini instead of OpenAI:** the harness talks to `{OPENAI_BASE_URL}/chat/completions`, and Gemini exposes an OpenAI-compatible endpoint at the same shape — no code changes needed, just point the base URL and key at Gemini:
+
+```bash
+export OPENAI_API_KEY=<your-gemini-key>
+export OPENAI_BASE_URL="https://generativelanguage.googleapis.com/v1beta/openai/"
+export GOLDEN_HARNESS_MODEL="gemini-3.5-flash"
+npm run golden:harness -- --run --id G1
+```
+
+Note: the OpenAI compatibility layer covers the standard chat-completions shape (system/user messages, `choices[0].message.content`), which is all this harness uses — but it doesn't expose Gemini-native-only features.
+
 ## AH-03 — Signal checks (automated after LLM response)
 
 | ID | Key signals |

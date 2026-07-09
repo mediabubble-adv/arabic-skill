@@ -16,7 +16,7 @@ Masri-first, pan-Arab capable — it thinks, briefs, writes, humanizes, and audi
 [![Dialects](https://img.shields.io/badge/dialects-11%20%2B%204%20SEO%20markets-e0a63c)](./arabic/dialects/)
 [![Website](https://img.shields.io/badge/website-arabic--skill.vercel.app-10b981?logo=vercel&logoColor=white)](https://arabic-skill.vercel.app)
 
-**[🌐 Website](https://arabic-skill.vercel.app)** · **[⚡ Quick Start](#-quick-start)** · **[🧰 Supported Tools](#-works-with-your-ai-tool)** · **[📚 Docs](./docs/README.md)** · **[💬 Discord](https://discord.gg/arabic-skill)**
+**[🌐 Website](https://arabic-skill.vercel.app)** · **[⚡ Quick Start](#-quick-start)** · **[🧰 Supported Tools](#-works-with-your-ai-tool)** · **[📚 Docs](./docs/README.md)** · **[💬 Discord](https://discord.gg/cjhhJFF5N)**
 
 </div>
 
@@ -308,7 +308,7 @@ Website UX: `npm run validate:website-playwright` (CI `website-e2e`). Opt-in LLM
 
 ## 💬 Community & Support
 
-- **[Discord](https://discord.gg/arabic-skill)** — real-time chat, #help channel, feature voting
+- **[Discord](https://discord.gg/cjhhJFF5N)** — real-time chat, #help channel, feature voting
 - **[GitHub Discussions](https://github.com/mediabubble-adv/arabic-skill/discussions)** — questions, ideas, announcements
 - **[Substack Newsletter](https://arabic-skill.substack.com)** — release notes, metrics reports, tips
 - **[GitHub Issues](https://github.com/mediabubble-adv/arabic-skill/issues)** — bugs and feature requests (48–72h response)
@@ -323,7 +323,7 @@ Website UX: `npm run validate:website-playwright` (CI `website-e2e`). Opt-in LLM
 npx @mediabubble-adv/arabic-skill@latest install --target cursor
 ```
 
-**[🌐 Explore the website](https://arabic-skill.vercel.app)** · **[⭐ Star this repo](https://github.com/mediabubble-adv/arabic-skill)** · **[💬 Join Discord](https://discord.gg/arabic-skill)**
+**[🌐 Explore the website](https://arabic-skill.vercel.app)** · **[⭐ Star this repo](https://github.com/mediabubble-adv/arabic-skill)** · **[💬 Join Discord](https://discord.gg/cjhhJFF5N)**
 
 MIT © [MediaBubble](./LICENSE) · Built for the Arab world · 2026
 
