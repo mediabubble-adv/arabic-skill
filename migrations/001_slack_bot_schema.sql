@@ -2,6 +2,7 @@
 -- Phase 9B-1: Slack Bot Integration
 -- Version: 1.0
 
+-- Workspaces table: Slack workspace installations
 CREATE TABLE IF NOT EXISTS workspaces (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   team_id VARCHAR(20) NOT NULL UNIQUE,
@@ -16,30 +17,31 @@ CREATE TABLE IF NOT EXISTS workspaces (
   is_active BOOLEAN DEFAULT true,
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW(),
-  uninstalled_at TIMESTAMP
+  uninstalled_at TIMESTAMP,
+
+  INDEX idx_team_id (team_id),
+  INDEX idx_is_active (is_active)
 );
 
-CREATE INDEX IF NOT EXISTS idx_workspaces_team_id ON workspaces (team_id);
-CREATE INDEX IF NOT EXISTS idx_workspaces_is_active ON workspaces (is_active);
-
+-- Workspace Quotas table: Daily request limits per workspace
 CREATE TABLE IF NOT EXISTS workspace_quotas (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   workspace_id UUID NOT NULL,
   plan VARCHAR(50) DEFAULT 'free',
   daily_limit INTEGER DEFAULT 10,
   requests_today INTEGER DEFAULT 0,
-  reset_at TIMESTAMP DEFAULT (NOW() + INTERVAL '1 day'),
+  reset_at TIMESTAMP DEFAULT (NOW() + INTERVAL 1 DAY),
   archived_at TIMESTAMP,
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW(),
 
   UNIQUE(workspace_id),
-  FOREIGN KEY (workspace_id) REFERENCES workspaces(id) ON DELETE CASCADE
+  FOREIGN KEY (workspace_id) REFERENCES workspaces(id) ON DELETE CASCADE,
+  INDEX idx_workspace_id (workspace_id),
+  INDEX idx_reset_at (reset_at)
 );
 
-CREATE INDEX IF NOT EXISTS idx_workspace_quotas_workspace_id ON workspace_quotas (workspace_id);
-CREATE INDEX IF NOT EXISTS idx_workspace_quotas_reset_at ON workspace_quotas (reset_at);
-
+-- Workspace Settings table: Dialect, tone, and feature preferences
 CREATE TABLE IF NOT EXISTS workspace_settings (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   workspace_id UUID NOT NULL,
@@ -51,11 +53,11 @@ CREATE TABLE IF NOT EXISTS workspace_settings (
   updated_at TIMESTAMP DEFAULT NOW(),
 
   UNIQUE(workspace_id),
-  FOREIGN KEY (workspace_id) REFERENCES workspaces(id) ON DELETE CASCADE
+  FOREIGN KEY (workspace_id) REFERENCES workspaces(id) ON DELETE CASCADE,
+  INDEX idx_workspace_id (workspace_id)
 );
 
-CREATE INDEX IF NOT EXISTS idx_workspace_settings_workspace_id ON workspace_settings (workspace_id);
-
+-- Command Logs table: Analytics on command usage
 CREATE TABLE IF NOT EXISTS slack_command_logs (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   workspace_id UUID NOT NULL,
@@ -67,14 +69,14 @@ CREATE TABLE IF NOT EXISTS slack_command_logs (
   error_message TEXT,
   created_at TIMESTAMP DEFAULT NOW(),
 
-  FOREIGN KEY (workspace_id) REFERENCES workspaces(id) ON DELETE CASCADE
+  FOREIGN KEY (workspace_id) REFERENCES workspaces(id) ON DELETE CASCADE,
+  INDEX idx_workspace_id (workspace_id),
+  INDEX idx_user_id (user_id),
+  INDEX idx_command (command),
+  INDEX idx_created_at (created_at)
 );
 
-CREATE INDEX IF NOT EXISTS idx_slack_command_logs_workspace_id ON slack_command_logs (workspace_id);
-CREATE INDEX IF NOT EXISTS idx_slack_command_logs_user_id ON slack_command_logs (user_id);
-CREATE INDEX IF NOT EXISTS idx_slack_command_logs_command ON slack_command_logs (command);
-CREATE INDEX IF NOT EXISTS idx_slack_command_logs_created_at ON slack_command_logs (created_at);
-
+-- Comments for schema documentation
 COMMENT ON TABLE workspaces IS 'Slack workspace installations with OAuth tokens and configuration';
 COMMENT ON TABLE workspace_quotas IS 'Daily request quotas per workspace (free: 10/day, pro: 100/day)';
 COMMENT ON TABLE workspace_settings IS 'Workspace-level feature flags and default preferences';

@@ -14,7 +14,7 @@ Awesome Arabic Skill is now available as a Slack bot. This guide walks through:
 
 **Prerequisites:**
 - Admin access to a Slack workspace
-- Node.js 18+
+- Node.js 20+
 - Access to the Awesome Arabic Skill Vercel deployment
 
 ## Step 1: Create Slack App
@@ -61,7 +61,7 @@ Awesome Arabic Skill is now available as a Slack bot. This guide walks through:
         "chat:write",
         "commands",
         "users:read",
-        "team:read",
+        "team:info",
         "files:read",
         "reactions:read"
       ]
@@ -106,10 +106,10 @@ Save these temporarily — you'll add them to environment variables next.
 Copy the environment variables template:
 
 ```bash
-cp .env.slack.example .env.local
+cp .env.slack.example .env.slack.local
 ```
 
-Edit `.env.local` and fill in the values:
+Edit `.env.slack.local` and fill in the values:
 
 ```env
 SLACK_CLIENT_ID=xoxb-your-client-id-here
@@ -129,13 +129,13 @@ DATABASE_URL=postgresql://user:password@localhost:5432/arabic_skill
 Then load them:
 
 ```bash
-export $(grep -v '^#' .env.local | xargs)
+export $(cat .env.slack.local | xargs)
 ```
 
 Or in development:
 
 ```bash
-npm run dev  # Next.js auto-loads .env.local
+npm run dev  # Next.js auto-loads .env files
 ```
 
 ### Option B: Vercel Production
@@ -164,7 +164,7 @@ vercel env pull .env.local --yes
    - `chat:write`
    - `commands`
    - `users:read`
-   - `team:read`
+   - `team:info`
    - `files:read`
    - `reactions:read`
 

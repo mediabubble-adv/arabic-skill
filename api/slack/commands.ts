@@ -1,13 +1,13 @@
-import { VercelResponse } from "@vercel/node";
+import { VercelRequest, VercelResponse } from "@vercel/node";
 import { waitUntil } from "@vercel/functions";
 import {
   verifySlackRequest,
   getWorkspaceByTeamId,
-  reserveQuotaUsage,
+  checkWorkspaceQuota,
+  incrementQuotaUsage,
   logCommandExecution,
   getWorkspaceSettings,
   SlackCommand,
-  SlackRequest,
 } from "./auth";
 
 /**
@@ -15,7 +15,7 @@ import {
  * POST /api/slack/commands
  */
 export async function handleSlashCommand(
-  req: SlackRequest,
+  req: VercelRequest,
   res: VercelResponse
 ) {
   const startTime = Date.now();
@@ -26,10 +26,7 @@ export async function handleSlashCommand(
     return res.status(401).json({ error: "Invalid request signature" });
   }
 
-  const command: SlackCommand =
-    req.body instanceof URLSearchParams
-      ? (Object.fromEntries(req.body.entries()) as unknown as SlackCommand)
-      : req.body;
+  const command: SlackCommand = req.body;
   const { team_id, user_id, trigger_id, text, response_url, channel_id } =
     command;
 
@@ -43,10 +40,11 @@ export async function handleSlashCommand(
   }
 
   // Check quota
-  const quota = await reserveQuotaUsage(workspace.id);
+  const quota = await checkWorkspaceQuota(workspace.id);
   if (!quota.allowed) {
     const errorMessage = `Quota exceeded (0/${quota.limit} remaining). Upgrade to Pro for 100+ requests/day.`;
 
+    // Log failed command
     waitUntil(
       logCommandExecution(
         workspace.id,
@@ -59,7 +57,7 @@ export async function handleSlashCommand(
       )
     );
 
-    return res.status(200).json({
+    return res.status(429).json({
       response_type: "ephemeral",
       text: `❌ ${errorMessage}`,
       blocks: [
@@ -136,6 +134,7 @@ export async function handleSlashCommand(
         // Send response to Slack
         await sendResponse(response_url, result);
 
+        // Log successful command
         const duration = Date.now() - startTime;
         await logCommandExecution(
           workspace.id,
@@ -145,6 +144,9 @@ export async function handleSlashCommand(
           duration,
           true
         );
+
+        // Increment quota usage
+        await incrementQuotaUsage(workspace.id);
       } catch (error) {
         console.error("Error processing command:", error);
         await sendResponse(response_url, {

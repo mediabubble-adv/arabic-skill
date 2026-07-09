@@ -2,21 +2,11 @@ import { VercelRequest, VercelResponse } from "@vercel/node";
 import { createHmac, timingSafeEqual } from "crypto";
 import { db } from "@/lib/db";
 
-export interface SlackRequest extends VercelRequest {
-  rawBody?: string;
-}
-
-function getRequestBody(req: SlackRequest): string {
-  if (req.rawBody) return req.rawBody;
-  if (typeof req.body === "string") return req.body;
-  return JSON.stringify(req.body);
-}
-
 /**
  * Verify Slack request signature
  * https://api.slack.com/authentication/verifying-requests-from-slack
  */
-export const verifySlackRequest = (req: SlackRequest): boolean => {
+export const verifySlackRequest = (req: VercelRequest): boolean => {
   const slackSigningSecret = process.env.SLACK_SIGNING_SECRET;
   if (!slackSigningSecret) {
     console.error("Missing SLACK_SIGNING_SECRET");
@@ -39,8 +29,8 @@ export const verifySlackRequest = (req: SlackRequest): boolean => {
     return false;
   }
 
-  // Reconstruct the signing base string from the exact raw payload bytes
-  const body = getRequestBody(req);
+  // Reconstruct the signing base string
+  const body = typeof req.body === "string" ? req.body : JSON.stringify(req.body);
   const baseString = `v0:${timestamp}:${body}`;
 
   // Generate the signature
@@ -82,67 +72,6 @@ export const getWorkspaceByTeamId = async (
   } catch (error) {
     console.error("Error fetching workspace:", error);
     return null;
-  }
-};
-
-/**
- * Atomically reserve one unit of daily quota.
- */
-export const reserveQuotaUsage = async (
-  workspaceId: string
-): Promise<{ allowed: boolean; remaining: number; limit: number }> => {
-  try {
-    await db.query(
-      `
-      UPDATE workspace_quotas
-      SET requests_today = 0, reset_at = NOW() + INTERVAL '1 day'
-      WHERE workspace_id = $1 AND reset_at <= NOW()
-      `,
-      [workspaceId]
-    );
-
-    const result = await db.query(
-      `
-      UPDATE workspace_quotas
-      SET requests_today = requests_today + 1
-      WHERE workspace_id = $1 AND requests_today < daily_limit
-      RETURNING daily_limit, requests_today
-      `,
-      [workspaceId]
-    );
-
-    if (result.rows.length === 0) {
-      const quota = await db.query(
-        `
-        SELECT daily_limit, requests_today
-        FROM workspace_quotas
-        WHERE workspace_id = $1
-        LIMIT 1
-        `,
-        [workspaceId]
-      );
-
-      if (quota.rows.length === 0) {
-        return { allowed: false, remaining: 0, limit: 0 };
-      }
-
-      const { daily_limit, requests_today } = quota.rows[0];
-      return {
-        allowed: false,
-        remaining: Math.max(0, daily_limit - requests_today),
-        limit: daily_limit,
-      };
-    }
-
-    const { daily_limit, requests_today } = result.rows[0];
-    return {
-      allowed: true,
-      remaining: Math.max(0, daily_limit - requests_today),
-      limit: daily_limit,
-    };
-  } catch (error) {
-    console.error("Error reserving quota:", error);
-    return { allowed: false, remaining: 0, limit: 0 };
   }
 };
 

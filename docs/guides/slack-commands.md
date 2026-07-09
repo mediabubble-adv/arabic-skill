@@ -1,7 +1,7 @@
 # Slack Bot Command Reference
 
-**Phase 9B-1: Slack Bot Integration (planned — not yet shipped)**  
-**Status:** Draft / pre-greenlit  
+**Phase 9B-1: Slack Bot Integration**  
+**Version:** 1.0  
 **Last Updated:** 2026-07-07
 
 ## Master Command: `/arabic`

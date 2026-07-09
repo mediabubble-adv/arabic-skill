@@ -1,18 +1,9 @@
 import { handleEvents } from "@/api/slack/events";
 
 export async function POST(req: Request) {
-  const rawBody = await req.text();
-
-  let parsedBody: unknown;
-  try {
-    parsedBody = JSON.parse(rawBody);
-  } catch {
-    return Response.json({ error: "Invalid JSON body" }, { status: 400 });
-  }
-
+  const body = await req.text();
   const mockReq = {
-    rawBody,
-    body: parsedBody,
+    body: JSON.parse(body),
     headers: Object.fromEntries(req.headers),
     method: "POST",
   };

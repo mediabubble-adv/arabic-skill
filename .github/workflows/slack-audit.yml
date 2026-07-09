@@ -27,7 +27,7 @@ jobs:
 
       - name: Find changed content
         id: changes
-        uses: tj-actions/changed-files@v46.0.1
+        uses: tj-actions/changed-files@v41
         with:
           files: |
             content/**/*.md
@@ -39,15 +39,13 @@ jobs:
         id: extract
         env:
           ALL_CHANGED_FILES: ${{ steps.changes.outputs.all_changed_files }}
-          CHANGED_FILES_COUNT: ${{ steps.changes.outputs.all_changed_files_count }}
         run: |
           mkdir -p audit-results
           echo "Changed files:" > audit-results/summary.txt
-          for file in $ALL_CHANGED_FILES; do
-            printf '%s\n' "$file" >> audit-results/summary.txt
-          done
+          echo "$ALL_CHANGED_FILES" >> audit-results/summary.txt
           echo "" >> audit-results/summary.txt
-          echo "Files to audit: ${CHANGED_FILES_COUNT}" >> audit-results/summary.txt
+          FILE_COUNT=$(printf '%s\n' "$ALL_CHANGED_FILES" | wc -l)
+          echo "Files to audit: $FILE_COUNT" >> audit-results/summary.txt
 
       - name: Notify audit started
         if: steps.changes.outputs.any_changed == 'true'
@@ -72,7 +70,7 @@ jobs:
 
       - name: Upload audit results
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: audit-results
           path: audit-results/
