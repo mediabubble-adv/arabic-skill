@@ -1,9 +1,20 @@
 import { handleSlashCommand } from "@/api/slack/commands";
 
+function parseSlashCommandBody(body: string): Record<string, string> {
+  const params = new URLSearchParams(body);
+  const command: Record<string, string> = {};
+  params.forEach((value, key) => {
+    command[key] = value;
+  });
+  return command;
+}
+
 export async function POST(req: Request) {
-  const body = await req.text();
+  const rawBody = await req.text();
+
   const mockReq = {
-    body: new URLSearchParams(body),
+    rawBody,
+    body: parseSlashCommandBody(rawBody),
     headers: Object.fromEntries(req.headers),
     method: "POST",
   };

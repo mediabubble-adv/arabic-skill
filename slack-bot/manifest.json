@@ -39,7 +39,7 @@
         "chat:write",
         "commands",
         "users:read",
-        "team:info",
+        "team:read",
         "files:read",
         "reactions:read"
       ]
@@ -60,6 +60,5 @@
     "org_deploy_enabled": false,
     "socket_mode_enabled": false,
     "token_rotation_enabled": true
-  },
-  "verification_token": "${SLACK_VERIFICATION_TOKEN}"
+  }
 }

@@ -1,9 +1,17 @@
 import { handleInteractive } from "@/api/slack/interactive";
 
 export async function POST(req: Request) {
-  const body = await req.text();
+  const rawBody = await req.text();
+  const params = new URLSearchParams(rawBody);
+  const payload = params.get("payload");
+  if (!payload) {
+    return Response.json({ error: "missing_payload" }, { status: 400 });
+  }
+
+
   const mockReq = {
-    body,
+    rawBody,
+    body: { payload },
     headers: Object.fromEntries(req.headers),
     method: "POST",
   };
