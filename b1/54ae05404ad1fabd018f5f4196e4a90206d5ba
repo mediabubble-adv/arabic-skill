@@ -1,0 +1,21 @@
+website/e2e/g15-mobile-ux.spec.ts
+  s_c4aad23104c816::t_37101c11972cfd 47
+  s_c4aad23104c816::t_5f6799fe893e2d 36-38
+  s_c4aad23104c816::t_fef874a5c51efb 67,71
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "b154ae05404ad1fabd018f5f4196e4a90206d5ba",
+  "prompts": {},
+  "sessions": {
+    "s_c4aad23104c816": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c4af2a40-c9b0-4098-a7a7-50ecbb478139",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
