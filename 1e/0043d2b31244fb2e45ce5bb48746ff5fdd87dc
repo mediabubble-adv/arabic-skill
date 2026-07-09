@@ -1,0 +1,19 @@
+tests/golden/g1-g12-agent-harness.md
+  s_d10e816e7d973b::t_971af36035b2ee 41-51
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "1e0043d2b31244fb2e45ce5bb48746ff5fdd87dc",
+  "prompts": {},
+  "sessions": {
+    "s_d10e816e7d973b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ee2f0d5d-341c-4c32-860b-1042519bf1d0",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
