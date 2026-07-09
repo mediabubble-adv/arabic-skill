@@ -1,4 +1,4 @@
-# Golden — audit report shape (structure only)
+# Golden Test — audit report shape (structure only)
 
 Fixture for agents and validators: a saved `/arabic audit` report under `.arabic/audits/` must expose these headings/fields. Values here are placeholders.
 
@@ -36,3 +36,8 @@ Fixture for agents and validators: a saved `/arabic audit` report under `.arabic
 
 Required sections: title `# Audit Report`, **Overall**, `## Issues (ranked)`, `## Locks to preserve`, `## Improve seeds`, `## Copy-ready`.  
 `## Component map` required when **Surface:** website.
+
+## Validation
+
+- [ ] Saved audit reports under `.arabic/audits/` include every required section above
+- [ ] `## Component map` is present whenever **Surface:** is website
