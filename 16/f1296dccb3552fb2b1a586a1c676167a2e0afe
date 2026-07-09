@@ -1,0 +1,20 @@
+.github/workflows/golden-harness-nightly.yml
+  s_bf8f18754ac8cf::t_1cdd2319370970 17-18,21,23-27,29,39,47
+  s_bf8f18754ac8cf::t_40b75068c7e980 19-20,22
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "16f1296dccb3552fb2b1a586a1c676167a2e0afe",
+  "prompts": {},
+  "sessions": {
+    "s_bf8f18754ac8cf": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "56cfbe33-2b92-485f-9a6d-1455c5153bc6",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
