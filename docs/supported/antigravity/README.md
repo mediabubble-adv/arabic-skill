@@ -8,9 +8,19 @@
 
 ## Install
 
-No `npx` preset yet — use manual install to a skills root Antigravity scans:
+### Preferred (npx — workspace)
 
-### Workspace (project-scoped)
+```bash
+npx @mediabubble-adv/arabic-skill@latest install --target antigravity --scope workspace
+```
+
+### Preferred (npx — global)
+
+```bash
+npx @mediabubble-adv/arabic-skill@latest install --target antigravity
+```
+
+### Workspace (manual)
 
 ```bash
 git clone https://github.com/mediabubble-adv/arabic-skill.git
@@ -85,6 +95,6 @@ Antigravity natively supports the Agent Skills open standard (`SKILL.md` with pr
 
 ## Fixes for First-Class Support
 
-- add Antigravity to `bin/arabic-skill.js` `targetRoots` after path verification across IDE + CLI
+- shipped in `bin/install-targets.json` as `--target antigravity` (global) and `--scope workspace`; verify CLI skills root per Antigravity version
 - create a dedicated adapter doc mapping advisory roles to Antigravity workflows
 - live-test `/arabic` prompt conventions and agent-manager delegation

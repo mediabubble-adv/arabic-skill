@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageShell } from "@/components/page-shell";
+import { PageHero } from "@/components/page-hero";
 import { InstallCta } from "@/components/install-cta";
 import { siteMeta } from "@/lib/site-meta";
 
@@ -15,29 +16,29 @@ const lessons = [
     outcome: "أمر التثبيت من README اتنسخ + /arabic guide شغال.",
     steps: [
       "افتح التيرمنال في مشروعك",
-      "انسخ: npx @mediabubble-adv/arabic-skill install --target cursor",
+      "انسخ أمر التثبيت من صفحة /install",
       "اكتب /arabic guide في Cursor",
     ],
     meta: "~٣ دقايق · مبتدئ",
   },
   {
-    title: "اكتب أول بوست مصري",
+    title: "اكتب أول منشور مصري",
     outcome: "منشور سوشيال مصري من برّيف بسيط.",
     steps: [
-      "اكتب الفكرة بشكل جزئي — مش لازم برّيف كامل",
-      "/arabic guide هيوضّح ويسأل",
+      "اكتب الفكرة بشكل جزئي — مش شرط برّيف كامل",
+      "/arabic guide يوضّح ويسأل",
       "/arabic write يولّد المحتوى",
       "/arabic audit يراجع قبل التسليم",
     ],
     meta: "~١٠ دقايق · مبتدئ",
   },
   {
-    title: "راجع نصك قبل ما تنشر",
+    title: "راجع النص قبل النشر",
     outcome: "تقرير تدقيق + قائمة إصلاحات.",
     steps: [
-      "حط النص في ملف .md",
+      "ضع النص في ملف .md",
       "/arabic audit --file path/to/file.md",
-      "طبّق أهم إصلاح — واطلب إعادة تدقيق لو محتاج",
+      "طبّق أهم إصلاح — واطلب إعادة تدقيق عند الحاجة",
     ],
     meta: "~٥ دقايق · متوسط",
   },
@@ -46,22 +47,16 @@ const lessons = [
 export default function TutorialsPage() {
   return (
     <PageShell>
-      <header className="max-w-3xl mb-10">
-        <h1 className="text-3xl md:text-4xl font-bold text-[var(--fg)] mb-3">
-          اتعلّم بالعربي
-        </h1>
-        <p className="text-[var(--fg-muted)]">
-          دروس من شغل المهارة نفسها —{" "}
-          <strong className="text-[var(--fg)]">مش مجرد ترجمة</strong> من
-          إنجليزي.
+      <PageHero title="اتعلّم بالعربي">
+        <p>
+          دروس من شغل المهارة نفسها.{" "}
+          <strong className="text-[var(--fg)]">مش مجرد ترجمة</strong> من إنجليزي.
         </p>
-      </header>
+      </PageHero>
       <div className="space-y-6 mb-10">
         {lessons.map((lesson, i) => (
           <article key={lesson.title} className="card">
-            <p className="text-sm text-[var(--brand)] mb-1">
-              الدرس {i + 1}
-            </p>
+            <p className="text-sm text-[var(--brand)] mb-1">الدرس {i + 1}</p>
             <h2 className="text-xl font-semibold text-[var(--fg)] mb-2">
               {lesson.title}
             </h2>
@@ -78,10 +73,10 @@ export default function TutorialsPage() {
           </article>
         ))}
       </div>
-      <p className="text-[var(--fg-muted)] mb-8">
-        الموقع كله اتكتب بـ <code dir="ltr">/arabic</code> —{" "}
+      <p className="text-[var(--fg-muted)] mb-8 text-center">
+        الموقع كله اتكتب بـ <code dir="ltr">/arabic</code>.{" "}
         <Link href="/about" className="text-[var(--brand)]">
-          شوف إزاي اتبنى
+          مسار البناء
         </Link>
         .
       </p>

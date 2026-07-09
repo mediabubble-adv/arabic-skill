@@ -62,13 +62,22 @@ Browse: [skills.sh](https://skills.sh) · Listing is driven by install telemetry
 ### Other targets
 
 ```bash
+npx @mediabubble-adv/arabic-skill@latest install --list
 npx @mediabubble-adv/arabic-skill@latest install --target claude
 npx @mediabubble-adv/arabic-skill@latest install --target codex
+npx @mediabubble-adv/arabic-skill@latest install --target hermes-agent
+npx @mediabubble-adv/arabic-skill@latest install --target openclaw
+npx @mediabubble-adv/arabic-skill@latest install --target opencode
+npx @mediabubble-adv/arabic-skill@latest install --target antigravity
+npx @mediabubble-adv/arabic-skill@latest install --target antigravity --scope workspace
+npx @mediabubble-adv/arabic-skill@latest install --target chatgpt
 npx @mediabubble-adv/arabic-skill@latest install --target all
 npx @mediabubble-adv/arabic-skill@latest install --dir ~/.cursor/skills --force
 ```
 
-See [Cursor support](./docs/supported/cursor/README.md), [Claude support](./docs/supported/claude/README.md), or the [supported tools index](./docs/supported/README.md). The repo documents **24** AI coding surfaces (profiles below). Install website: [https://arabic-skill.vercel.app](https://arabic-skill.vercel.app)
+`install --list` shows all **24** tools (`skills_home` presets + `print` guided steps). `install --target all` installs every global skills preset (skips print-only tools). Print tools (e.g. ChatGPT) print manual packaging steps instead of copying files.
+
+See [Cursor support](./docs/supported/cursor/README.md), [Claude support](./docs/supported/claude/README.md), or the [supported tools index](./docs/supported/README.md). Install website: [https://arabic-skill.vercel.app](https://arabic-skill.vercel.app)
 
 ### After install
 

@@ -15,6 +15,7 @@ CONTENTS="$(npm pack --dry-run 2>&1 | awk '/Tarball Contents/{flag=1;next}/^npm 
 
 required=(
   "bin/arabic-skill.js"
+  "bin/install-targets.json"
   "arabic/SKILL.md"
   ".cursor/commands/arabic.md"
   ".cursor/rules/arabic.mdc"

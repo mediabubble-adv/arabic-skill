@@ -45,7 +45,7 @@ Embed Awesome Arabic Skill into Slack workflows:
 ### Deliverables
 
 **Slack App Manifest** (`slack-bot/manifest.json`)
-- OAuth scopes: `chat:write`, `commands`, `users:read`, `team:info`
+- OAuth scopes: `chat:write`, `commands`, `users:read`, `team:read`
 - Slash commands: `/arabic`, `/arabic-help`, `/arabic-status`
 - Interactive components: modals, buttons, select menus
 - Event subscriptions: message reactions, app mentions

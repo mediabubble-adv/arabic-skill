@@ -4,6 +4,16 @@
 
 `Strong`
 
+## Install
+
+### Preferred (guided steps via CLI)
+
+```bash
+npx @mediabubble-adv/arabic-skill@latest install --target windsurf
+```
+
+No verified global skills folder — do not guess `~/.windsurf/skills`. The CLI prints rules/docs packaging steps. Escape hatch: `install --dir <path>` when you have a confirmed skills root.
+
 ## Why It Fits Well
 
 Windsurf is close to the same integration category as Cursor for this skill:

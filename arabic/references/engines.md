@@ -2,6 +2,15 @@
 
 Apply the matching engine before generating any content. Engines can be combined.
 
+## Persuasion Overlay (Commercial Tasks)
+
+For any commercial task (ads, sales, campaigns, brand voice, funnels), **label each output section with its target archetype + lead lever** per `persuasion-arab-psychology.md`. This ensures consistent psychological activation:
+- **Awareness stage** → usually Ambitious Achiever + FOMO
+- **Consideration** → Faithful Steward + Barakah/Thiqa, or Family Guardian + Thiqa
+- **Decision/CTA** → Generous Host + Reciprocity, or Faithful Steward + Halal assurance
+
+All commercial engines below integrate this layer; it is not optional.
+
 ---
 
 ## ⚡ Hybrid Engine Routing Table
@@ -23,6 +32,10 @@ When two engines apply simultaneously, use this table to decide synthesis order 
 ## 🌐 Website Content Engine
 
 Full page copy — not just headlines but the complete persuasive structure of each page.
+
+**Slice-load (do not invent ad hoc):**
+- Page/section/component naming + content slots → `references/website-ui-system.md`
+- Dual-language order and twin passes → `references/bilingual-pipeline.md` when `--lang-order` / bilingual brief is set
 
 ### Page Structures
 
@@ -128,6 +141,8 @@ Address trust before addressing price. Always.
 
 Label every piece with: stage, psychological lever activated, and next step in the sequence.
 
+**For narrative-driven funnels:** Load `storytelling.md` — selects narrative device per archetype (Proverb, Hakawati, Nested, We-Arc, Honor-Restoration) and applies dialect-specific pacing (Masri punchline, Levantine lyrical, Gulf dignified).
+
 ---
 
 ## 💰 Sales Content Engine
@@ -150,6 +165,8 @@ Sales converts desire that marketing created. Different psychology, different st
 - Trust barrier is higher than in Western markets. The brand must demonstrate they understand the region before it can sell.
 - Community endorsement outperforms celebrity endorsement. "2500 عميل من السعودية" > a famous name.
 - WhatsApp CTA converts higher than email CTA in most Arab markets. Use it.
+
+**For narrative-driven sales copy:** Load `storytelling.md` — founder story, testimonial arc, honor-restoration before/after. Pairing archetype to narrative device elevates credibility and emotional resonance.
 
 **VSL (Video Sales Letter) Script:**
 - Hook (0–10 sec): Start with a painful or shocking truth, not a greeting.
@@ -473,6 +490,8 @@ Split into two distinct tracks. Identify the track before outlining.
 
 ## 🖥 UI/UX Microcopy Engine
 
+**Slice-load:** component catalog, blocks, forms, popups, hero/cards → `references/website-ui-system.md` (component + microcopy-slot sections). Char limits below remain SSOT for length gates.
+
 **Character limits (Arabic):**
 - H1 (Hero Headline): 40–60 characters max
 - H2 (Section Header): 30–50 characters
@@ -483,12 +502,13 @@ Split into two distinct tracks. Identify the track before outlining.
 - Meta Title: 55–60 characters
 
 **Arabic UI rules:**
-- Arabic is 20–30% longer than English. Validate all char limits in the Arabic version, not the English.
+- Arabic is 20–30% longer than English. Validate all char limits in the Arabic version, not the English. For bilingual UI, run `references/bilingual-pipeline.md` after the first locale.
 - RTL reading: Users scan right-to-left. Lead with the most critical word — avoid starting with articles (ال) on primary CTAs.
 - Error messages: Be specific, not vague. "حدث خطأ" is useless. "الرقم المُدخل غير مكتمل — يجب أن يكون 11 رقمًا" is helpful.
 - Empty state copy: Should feel human, not like a system message. "لا توجد نتائج بعد — ابدأ بإضافة..." not "No results found."
 - Onboarding copy: Benefits-first, not instructions-first. "شوف كيف تكسب أكثر" not "يمكنك عرض تقاريرك هنا."
 - App Store (ASO): Title = keyword + brand. First line of description = single strongest benefit, no filler.
+- Name every string slot with a stable ID (`hero.cta`, `form.email.error`) so EN/AR twins and audits can map issues.
 
 ---
 
