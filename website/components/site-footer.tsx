@@ -19,6 +19,14 @@ export function SiteFooter() {
             <ul className="space-y-2">
               <li>
                 <a
+                  href="https://discord.gg/cjhhJFF5N"
+                  className="nav-link text-[var(--brand)] hover:underline rounded-sm"
+                >
+                  Discord
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://github.com/mediabubble-adv/arabic-skill/discussions"
                   className="nav-link text-[var(--brand)] hover:underline rounded-sm"
                 >

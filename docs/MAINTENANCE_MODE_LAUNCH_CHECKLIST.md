@@ -16,12 +16,12 @@
 ## Setup Checklist: Get to Full Operation
 
 ### Discord Setup (10-15 min)
-- [ ] Create Discord server: [DISCORD_SETUP.md](./community/DISCORD_SETUP.md)
+- [x] Create Discord server: [DISCORD_SETUP.md](./community/DISCORD_SETUP.md)
 - [ ] Follow channel creation guide (section 2)
 - [ ] Create welcome message (section 3)
-- [ ] Generate public invite link
-- [ ] Add invite link to README
-- [ ] Add invite link to install site footer (already coded, just needs Discord URL)
+- [x] Generate public invite link (`https://discord.gg/cjhhJFF5N`)
+- [x] Add invite link to README
+- [x] Add invite link to install site footer
 - [ ] Invite core team to moderator roles
 
 ### GitHub Discussions Setup (5-10 min)
