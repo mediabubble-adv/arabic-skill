@@ -37,12 +37,15 @@ jobs:
       - name: Extract Arabic content
         if: steps.changes.outputs.any_changed == 'true'
         id: extract
+        env:
+          ALL_CHANGED_FILES: ${{ steps.changes.outputs.all_changed_files }}
         run: |
           mkdir -p audit-results
           echo "Changed files:" > audit-results/summary.txt
-          echo "${{ steps.changes.outputs.all_changed_files }}" >> audit-results/summary.txt
+          echo "$ALL_CHANGED_FILES" >> audit-results/summary.txt
           echo "" >> audit-results/summary.txt
-          echo "Files to audit: $(echo '${{ steps.changes.outputs.all_changed_files }}' | wc -l)" >> audit-results/summary.txt
+          FILE_COUNT=$(printf '%s\n' "$ALL_CHANGED_FILES" | wc -l)
+          echo "Files to audit: $FILE_COUNT" >> audit-results/summary.txt
 
       - name: Notify audit started
         if: steps.changes.outputs.any_changed == 'true'
