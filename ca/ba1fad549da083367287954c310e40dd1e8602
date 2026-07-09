@@ -1,0 +1,26 @@
+website/components/site-footer.tsx
+  s_d10e816e7d973b::t_30bdd567b4569f 22-27
+  s_d10e816e7d973b::t_c6d8dc4f2cacde 20-21
+docs/MAINTENANCE_MODE_LAUNCH_CHECKLIST.md
+  s_d10e816e7d973b::t_3566d14704ef23 19,22-24
+README.md
+  s_d10e816e7d973b::t_9325d91f95cea0 19
+  s_d10e816e7d973b::t_99602550586cfe 311
+  s_d10e816e7d973b::t_749b965352ec22 326
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "caba1fad549da083367287954c310e40dd1e8602",
+  "prompts": {},
+  "sessions": {
+    "s_d10e816e7d973b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ee2f0d5d-341c-4c32-860b-1042519bf1d0",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
