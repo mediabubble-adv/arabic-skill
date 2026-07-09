@@ -27,7 +27,7 @@ jobs:
 
       - name: Find changed content
         id: changes
-        uses: tj-actions/changed-files@v40
+        uses: tj-actions/changed-files@v41
         with:
           files: |
             content/**/*.md
