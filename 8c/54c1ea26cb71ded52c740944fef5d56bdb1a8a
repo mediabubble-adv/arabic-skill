@@ -1,0 +1,19 @@
+website/package-lock.json
+  s_c4aad23104c816::t_f4dcaf7ce3bbda 11-13,1278-1324,1557-1622,1772-1777,2409-2441,2465-2476,2704-2709,2736-2747,3017-3028,3208-3216,3938-3943,4075-4094,4111-4126,4131,4493-4505,4772-4777,4960-4971,6463-6483,6795-6803,6836-6882,7069-7077,7318-7326
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "8c54c1ea26cb71ded52c740944fef5d56bdb1a8a",
+  "prompts": {},
+  "sessions": {
+    "s_c4aad23104c816": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c4af2a40-c9b0-4098-a7a7-50ecbb478139",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
