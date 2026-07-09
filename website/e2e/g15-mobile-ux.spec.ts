@@ -33,7 +33,9 @@ test.describe("G15 — mobile interactive components (390px)", () => {
     await expect(
       page.getByRole("heading", { name: "أدوات بدليل يدوي" }),
     ).toBeVisible();
-    await expect(page.getByText("ChatGPT")).toBeVisible();
+    await expect(
+      page.getByRole("heading", { name: "ChatGPT" }),
+    ).toBeVisible();
     await expect(page.getByText("install --target chatgpt")).toBeVisible();
   });
 
@@ -42,7 +44,7 @@ test.describe("G15 — mobile interactive components (390px)", () => {
     const question = page.getByRole("button", {
       name: "هل المهارة مجانية؟",
     });
-    const answer = page.getByText("آه — مفتوحة المصدر على GitHub");
+    const answer = page.getByText("نعم. مفتوحة المصدر على GitHub");
     await expect(answer).toBeVisible();
     await question.click();
     await expect(answer).not.toBeVisible();
@@ -62,11 +64,11 @@ test.describe("G15 — mobile interactive components (390px)", () => {
       "aria-selected",
       "true",
     );
-    await expect(mobileText).toHaveText(/عايز تلعب جيم/);
+    await expect(mobileText).toHaveText(/تمرين من غير أعذار/);
     await tablist.getByRole("tab", { name: /قبل/ }).click();
     await expect(mobileText).toHaveText(/اكتشف تطبيقنا/);
     await tablist.getByRole("tab", { name: /بعد/ }).click();
-    await expect(mobileText).toHaveText(/عايز تلعب جيم/);
+    await expect(mobileText).toHaveText(/تمرين من غير أعذار/);
   });
 
   test("sticky install bar on / appears after mobile scroll", async ({

@@ -1,4 +1,4 @@
-# Install CLI output shape (golden reference)
+# Golden Test — install CLI output shape
 
 Fixture for structural checks on `bin/arabic-skill.js` install UX — no LLM run required.
 Validated by `scripts/validate-install-targets.sh`.
@@ -38,3 +38,8 @@ Validated by `scripts/validate-install-targets.sh`.
 - Unknown target: `Unknown target: bogus` + grouped id list; exit non-zero
 - Missing `--target` value: `Missing value for --target`
 - `--scope workspace` on cursor: `Target cursor has no workspace path`
+
+## Validation
+
+- [ ] `bash scripts/validate-install-targets.sh` exits 0
+- [ ] CLI output matches every shape listed above

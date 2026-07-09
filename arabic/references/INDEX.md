@@ -138,7 +138,7 @@ Never load all files. Load strictly on demand per task class.
 | P8A (load presets) | load-presets.md + scripts/load-preset.sh (smart bundling, preset CLI tool) | ✅ Complete |
 | R3 (research command) | research-mode.md + monthly cron doc | ✅ Complete |
 
-**Total planned files:** 63
-**Total built:** 63 — v1.2.8 + research command wiring + geographic trilogy (Gulf/KSA/Levantine SEO/AEO) + load presets (P8A)
+**Total planned files:** 67
+**Total built:** 67 — v1.2.9 + persuasion psychology + commercial storytelling + Masri website redesign (bilingual-pipeline.md + website-ui-system.md)
 
-Breakdown: SKILL.md (1) + voice.md (1) + references/ (26, incl. this INDEX + load-presets.md) + dialects/ (11) + domains/ (14) + conversations/ (6) + professional-docs/ (4) = 63.
+Breakdown: SKILL.md (1) + voice.md (1) + references/ (30, incl. this INDEX + load-presets.md) + dialects/ (11) + domains/ (14) + conversations/ (6) + professional-docs/ (4) = 67.
