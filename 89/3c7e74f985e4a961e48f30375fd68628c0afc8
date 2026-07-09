@@ -1,0 +1,227 @@
+.claude/skills/arabic/conversations/community-management.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-314
+.claude/skills/arabic/domains/beauty-fashion.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-232
+.claude/skills/arabic/domains/food-beverage.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-233
+.claude/skills/arabic/voice.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-82
+.claude/skills/arabic/references/load-presets.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-241
+.claude/skills/arabic/conversations/sales-conversation.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-223
+.claude/skills/arabic/references/seo-aeo-masri.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-141
+docs/guides/slack-bot-setup.md
+  s_5631bc105026cf::t_60911e4b087b7d 17,64,109,112,132,138,167
+.claude/skills/arabic/professional-docs/compliance-language.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-235
+.claude/skills/arabic/domains/government-ngo.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-245
+.claude/skills/arabic/references/book-writing.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-126
+.claude/skills/arabic/references/storytelling.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-279
+api/slack/commands.ts
+  s_5631bc105026cf::t_60911e4b087b7d 1,6,10,18,29-32,46,62
+.claude/skills/arabic/domains/dev-tech.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-143
+.claude/skills/arabic/references/project-context-scanner.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-133
+.claude/skills/arabic/references/project-mode.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-121
+.claude/skills/arabic/dialects/levantine.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-335
+.claude/skills/arabic/references/seasonal-calendar.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-99
+.claude/skills/arabic/references/advisory-mode.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-133
+.claude/skills/arabic/references/intake-protocols.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-155
+.claude/skills/arabic/templates/.arabic/config.yaml
+  s_5631bc105026cf::t_60911e4b087b7d 1-5
+.claude/skills/arabic/dialects/white-dialect.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-203
+api/slack/auth.ts
+  s_5631bc105026cf::t_60911e4b087b7d 5-14,19,42-43,88-145
+  s_5631bc105026cf::t_7aa349e75d2d7b 146-148
+.claude/skills/arabic/professional-docs/agent-rules.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-327
+.claude/skills/arabic/dialects/maghrebi.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-270
+.claude/skills/arabic/dialects/yemeni.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-189
+.claude/skills/arabic/skills/brief.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-304
+.claude/skills/arabic/dialects/msa.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-196
+api/webhooks/queue.ts
+  s_5631bc105026cf::t_60911e4b087b7d 3,16,39,42-47,50-51,54-55,64,66,70-87,98-101,109,117-118,124-128,131,138-143,148-152,155,187,222-224,234,250-252,256-261,266,268,276
+app/api/slack/interactive/route.ts
+  s_5631bc105026cf::t_60911e4b087b7d 4-11,13-14
+.claude/skills/arabic/skills/improve.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-410
+.claude/skills/arabic/references/seo-aeo-levantine.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-141
+.claude/skills/arabic/conversations/negotiation.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-267
+.claude/skills/arabic/references/prompt-engineering.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-80
+.claude/skills/arabic/domains/real-estate.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-200
+app/api/webhooks/receive/route.ts
+  s_5631bc105026cf::t_60911e4b087b7d 4-12,16-17
+docs/guides/github-actions-integration.md
+  s_5631bc105026cf::t_60911e4b087b7d 79,82,190,256,430
+migrations/002_webhooks_schema.sql
+  s_5631bc105026cf::t_60911e4b087b7d 17,20-22,36,39-42,57,60-65,77,80-83,96,99
+slack-bot/manifest.json
+  s_5631bc105026cf::t_60911e4b087b7d 42,63
+.claude/skills/arabic/references/audit-mode.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-268
+.claude/skills/arabic/domains/healthcare.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-218
+.claude/skills/arabic/dialects/khaliji.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-307
+.claude/skills/arabic/domains/legal.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-212
+api/slack/interactive.ts
+  s_5631bc105026cf::t_60911e4b087b7d 1-2,8,11-27,33,41-46,48,84-118,121
+migrations/001_slack_bot_schema.sql
+  s_5631bc105026cf::t_60911e4b087b7d 19,22-24,31,37,40-42,54,57-58,70,73-76
+  s_5631bc105026cf::t_7768f8675f6ace 77
+.claude/skills/arabic/references/seo-aeo-gulf.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-141
+docs/guides/slack-commands.md
+  s_5631bc105026cf::t_60911e4b087b7d 3-4
+.claude/skills/arabic/domains/education.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-219
+.github/workflows/generate-content.yml
+  s_5631bc105026cf::t_60911e4b087b7d 103
+.claude/skills/arabic/references/command-router.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-214
+.claude/skills/arabic/references/load-discipline.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-162
+.claude/skills/arabic/domains/finance-banking.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-233
+.claude/skills/arabic/references/output-templates.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-529
+.claude/skills/arabic/conversations/coaching-consulting.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-260
+.claude/skills/arabic/references/examples.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-489
+.claude/skills/arabic/references/bilingual-pipeline.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-97
+app/api/slack/commands/route.ts
+  s_5631bc105026cf::t_60911e4b087b7d 3-11,13-14,16-17
+.claude/skills/arabic/references/trends-and-hooks.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-221
+api/slack/events.ts
+  s_5631bc105026cf::t_60911e4b087b7d 2-3,23-41,46,52-53,61-64,68,71-83,85-86
+api/webhooks/management.ts
+  s_5631bc105026cf::t_60911e4b087b7d 4,20-21,140,254
+docs/planning/9b1-slack-app-review-planning.md
+  s_5631bc105026cf::t_60911e4b087b7d 41
+.claude/skills/arabic/dialects/libyan.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-123
+.claude/skills/arabic/domains/fitness-wellness.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-236
+.claude/skills/arabic/templates/.arabic/briefs/example.yaml
+  s_5631bc105026cf::t_60911e4b087b7d 1-11
+.github/workflows/slack-audit.yml
+  s_5631bc105026cf::t_60911e4b087b7d 30,42,46-48,50,75
+.claude/skills/arabic/references/rtl-audit.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-88
+app/api/slack/events/route.ts
+  s_5631bc105026cf::t_60911e4b087b7d 4-12,14-15
+.claude/skills/arabic/conversations/interview-podcast.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-250
+.claude/skills/arabic/professional-docs/contracts.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-275
+.claude/skills/arabic/domains/hospitality-tourism.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-211
+.claude/skills/arabic/dialects/ksa.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-297
+.claude/skills/arabic/references/humanization-protocol.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-294
+.claude/skills/arabic/references/seo-aeo-ksa.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-141
+.claude/skills/arabic/dialects/masri.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-455
+.claude/skills/arabic/domains/ads-media.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-153
+.claude/skills/arabic/references/taboos.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-149
+app/api/webhooks/process/route.ts
+  s_5631bc105026cf::t_60911e4b087b7d 18-22,24
+.claude/skills/arabic/references/website-ui-system.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-153
+.claude/skills/arabic/domains/ecommerce-retail.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-243
+api/slack/oauth.ts
+  s_5631bc105026cf::t_60911e4b087b7d 4-8,10,17-21,23-32,39,48-51,83,99-111,129,131-132,136-137,139,141,144-145,157,201-212,222-223,254-262
+.claude/skills/arabic/references/engines.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-650
+api/webhooks/handler.ts
+  s_5631bc105026cf::t_60911e4b087b7d 6-9,34,42-43,59-63,68-76,88,138,159-160,180
+.claude/skills/arabic/references/research-mode.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-156
+.claude/skills/arabic/references/persuasion-arab-psychology.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-257
+.claude/skills/arabic/professional-docs/skill-writing.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-282
+.claude/skills/arabic/dialects/iraqi.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-236
+.claude/skills/arabic/dialects/sudanese.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-130
+.claude/skills/arabic/references/ads-service-matrix.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-128
+.claude/skills/arabic/references/onboarding-mode.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-103
+.claude/skills/arabic/conversations/customer-service.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-282
+.claude/skills/arabic/domains/tech-saas.md
+  s_5631bc105026cf::t_60911e4b087b7d 1-196
+.claude/skills/arabic/SKILL.md
+  s_5631bc105026cf::t_7f95aec88f437c 1-298
+.claude/skills/arabic/references/INDEX.md
+  s_5631bc105026cf::t_a7e096611a9983 1-144
+.claude/skills/arabic/skills/README.md
+  s_5631bc105026cf::t_c938ba04c39b19 1-87
+.claude/skills/arabic/templates/.arabic/README.md
+  s_5631bc105026cf::t_5fa2c9d2e1ce50 1-13
+website/assets/fonts/Alexandria/OFL.txt
+  s_5631bc105026cf::t_ee8666a5dedf58 1-93
+website/assets/fonts/Alexandria/README.txt
+  s_5631bc105026cf::t_be6e5d20926ba2 1-71
+website/assets/fonts/Almarai/OFL.txt
+  s_5631bc105026cf::t_5f6320a34f20f2 1-93
+website/assets/fonts/Cairo/OFL.txt
+  s_5631bc105026cf::t_6407e61075270c 1-93
+website/assets/fonts/Cairo/README.txt
+  s_5631bc105026cf::t_197263cf6b32d2 1-71
+website/assets/fonts/Noto_Kufi_Arabic/OFL.txt
+  s_5631bc105026cf::t_4c79a51e07f3a0 1-93
+website/assets/fonts/Noto_Kufi_Arabic/README.txt
+  s_5631bc105026cf::t_7d0192f7de5757 1-71
+website/assets/fonts/Tajawal/OFL.txt
+  s_5631bc105026cf::t_411932afe5e07f 1-93
+website/assets/fonts/Vibes/OFL.txt
+  s_5631bc105026cf::t_b7286a76375d80 1-93
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "893c7e74f985e4a961e48f30375fd68628c0afc8",
+  "prompts": {},
+  "sessions": {
+    "s_5631bc105026cf": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "db19e55e-698a-4fb1-a0e3-f3d154c9fd41",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
