@@ -1,0 +1,25 @@
+tests/golden/install-cli-shape.md
+  s_c4aad23104c816::t_4d5c19cbb1d59d 1
+  s_c4aad23104c816::t_6fbd7b9439a459 41-45
+arabic/references/INDEX.md
+  s_c4aad23104c816::t_b593b62353f28b 141-142,144
+tests/golden/audit-report-shape.md
+  s_c4aad23104c816::t_dde0c2474638b6 39-43
+  s_c4aad23104c816::t_f0d9b8247054da 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "3238b2cdcdfcdc8892559d834be91f23479af167",
+  "prompts": {},
+  "sessions": {
+    "s_c4aad23104c816": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c4af2a40-c9b0-4098-a7a7-50ecbb478139",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
