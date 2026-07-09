@@ -10,12 +10,23 @@ permissions:
 
 jobs:
   harness:
-    if: ${{ secrets.OPENAI_API_KEY != '' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
+      - name: Check for OPENAI_API_KEY secret
+        id: check
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          if [ -n "$OPENAI_API_KEY" ]; then
+            echo "has_key=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_key=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Run G1–G12 golden harness
+        if: steps.check.outputs.has_key == 'true'
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GOLDEN_HARNESS_MODEL: ${{ vars.GOLDEN_HARNESS_MODEL }}
@@ -25,17 +36,15 @@ jobs:
           npm run golden:harness -- --run --report "tests/golden/reports/nightly-${STAMP}.json"
 
       - name: Upload harness report
+        if: steps.check.outputs.has_key == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: golden-harness-report
           path: tests/golden/reports/nightly-*.json
           if-no-files-found: error
 
-  harness-skipped:
-    if: ${{ secrets.OPENAI_API_KEY == '' }}
-    runs-on: ubuntu-latest
-    steps:
       - name: Skip notice
+        if: steps.check.outputs.has_key == 'false'
         run: |
           echo "OPENAI_API_KEY secret not configured — nightly harness skipped."
           echo "Add repository secret OPENAI_API_KEY to enable weekly G1–G12 LLM runs."
