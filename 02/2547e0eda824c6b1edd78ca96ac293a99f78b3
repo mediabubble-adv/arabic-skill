@@ -1,0 +1,30 @@
+website/lib/webhooks/auth.ts
+  s_5586d40ee1d611::t_80494928276fbe 1,4-5
+  s_5586d40ee1d611::t_7a1df2cc5166cc 2,8,10-14,23-24,26-27
+  s_5586d40ee1d611::t_a800da6da05d55 33-53
+  s_5586d40ee1d611::t_9fccec05f75943 54
+website/migrations/003_webhook_api_key.sql
+  s_5586d40ee1d611::t_dbe1b09574744d 1-9
+website/lib/slack/oauth.ts
+  s_5586d40ee1d611::t_c3c5fe64dceb89 39-48,60
+  s_5586d40ee1d611::t_258195d7540dc1 117-121,137,144-146,149-150,153,155,159,161,165
+  s_5586d40ee1d611::t_a447c798bbb18b 182-186
+  s_5586d40ee1d611::t_52540ffb96ffc9 2
+  s_5586d40ee1d611::t_cd20bd5a4ba0f3 203-212,214,216,223,234-244,253-257
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "022547e0eda824c6b1edd78ca96ac293a99f78b3",
+  "prompts": {},
+  "sessions": {
+    "s_5586d40ee1d611": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1306dd5b-d23b-4c28-a5e7-576c80e234e3",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
