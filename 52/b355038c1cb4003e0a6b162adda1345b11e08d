@@ -1,0 +1,22 @@
+website/lib/webhooks/queue.ts
+  s_5586d40ee1d611::t_c3f0a0323a409b 156,158-162,164-166,168,170-172,174-196,198,200-217
+  s_5586d40ee1d611::t_d8680019c9626e 15-19,21-35,38-43,45-51,53-54
+  s_5586d40ee1d611::t_55cba9839e3ea5 246,255-258
+  s_5586d40ee1d611::t_39d950fd4a59bd 62-84,86,88-102
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "52b355038c1cb4003e0a6b162adda1345b11e08d",
+  "prompts": {},
+  "sessions": {
+    "s_5586d40ee1d611": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1306dd5b-d23b-4c28-a5e7-576c80e234e3",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
