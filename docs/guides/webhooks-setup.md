@@ -151,6 +151,10 @@ Configure Vercel Cron to hit `/api/webhooks/process` with header:
 Authorization: Bearer ${CRON_SECRET}
 ```
 
+`website/vercel.json` schedules this at `0 0 * * *` (once daily) — the Vercel Hobby plan
+rejects the deployment outright if a cron schedule runs more than once a day. Upgrade to
+Pro to raise the frequency (down to once a minute) for lower webhook-delivery latency.
+
 The worker drains `queue_jobs` (max attempts: 3, exponential backoff). Failed jobs increment `failure_count` on the subscription.
 
 ## GitHub Actions integration

@@ -2,7 +2,7 @@
   "crons": [
     {
       "path": "/api/webhooks/process",
-      "schedule": "* * * * *"
+      "schedule": "0 0 * * *"
     }
   ]
 }
