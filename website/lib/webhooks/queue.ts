@@ -1,4 +1,4 @@
-import axios from "axios";
+import { createHmac } from "crypto";
 import { db } from "@/lib/db";
 import { QueueJob } from "./types";
 
@@ -84,7 +84,7 @@ async function claimNextPendingJob(): Promise<QueueJob | null> {
         LIMIT 1
         FOR UPDATE SKIP LOCKED
       )
-      RETURNING id, type, payload, status, attempt_count, max_attempts, error, created_at
+      RETURNING id, type, payload, status, priority, attempt_count, max_attempts, error, created_at
       `,
       []
     );
@@ -100,6 +100,7 @@ async function claimNextPendingJob(): Promise<QueueJob | null> {
           ? JSON.parse(row.payload)
           : row.payload,
       status: row.status,
+      priority: row.priority,
       attempt_count: row.attempt_count,
       max_attempts: row.max_attempts,
       error: row.error,
@@ -160,7 +161,7 @@ async function scheduleRetry(
 }
 
 async function processWebhookJob(job: QueueJob) {
-  const { subscription_id, ...payload } = job.payload;
+  const { subscription_id, ...payload } = job.payload as { subscription_id: string; [key: string]: unknown };
 
   const subscription = await db.query(
     "SELECT url, secret FROM webhook_subscriptions WHERE id = $1",
@@ -173,21 +174,22 @@ async function processWebhookJob(job: QueueJob) {
 
   const { url, secret } = subscription.rows[0];
 
-  const { createHmac } = require("crypto");
   const hmac = createHmac("sha256", secret);
   hmac.update(JSON.stringify(payload));
   const signature = `sha256=${hmac.digest("hex")}`;
 
-  const response = await axios.post(url, payload, {
+  const response = await fetch(url, {
+    method: "POST",
     headers: {
       "X-Webhook-Signature": signature,
       "X-Webhook-ID": subscription_id,
       "Content-Type": "application/json",
     },
-    timeout: 30000,
+    body: JSON.stringify(payload),
+    signal: AbortSignal.timeout(30000),
   });
 
-  if (response.status >= 400) {
+  if (!response.ok) {
     throw new Error(`Webhook delivery failed: ${response.status}`);
   }
 
@@ -195,7 +197,10 @@ async function processWebhookJob(job: QueueJob) {
 }
 
 async function processBatchJob(job: QueueJob) {
-  const { operations, callback_url } = job.payload;
+  const { operations, callback_url } = job.payload as {
+    operations: Array<{ id: string; type: string; config: Record<string, unknown> }>;
+    callback_url?: string;
+  };
   const results = [];
 
   for (const operation of operations) {
@@ -217,12 +222,14 @@ async function processBatchJob(job: QueueJob) {
 
   if (callback_url) {
     try {
-      await axios.post(callback_url, {
-        job_id: job.id,
-        status: results.every((r) => r.status === "completed")
-          ? "success"
-          : "partial",
-        results,
+      await fetch(callback_url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          job_id: job.id,
+          status: results.every((r) => r.status === "completed") ? "success" : "partial",
+          results,
+        }),
       });
     } catch (error) {
       console.error("Error sending batch callback:", error);
@@ -230,7 +237,7 @@ async function processBatchJob(job: QueueJob) {
   }
 }
 
-async function processOperation(operation: Record<string, any>) {
+async function processOperation(operation: { type: string }) {
   const { type } = operation;
 
   switch (type) {
@@ -246,14 +253,12 @@ async function processOperation(operation: Record<string, any>) {
 }
 
 async function processWorkflowJob(job: QueueJob) {
-  const { workflow_id, steps } = job.payload;
-  console.log(
-    `Processing workflow ${workflow_id} with ${steps?.length || 0} steps`
-  );
+  const { workflow_id, steps } = job.payload as { workflow_id: string; steps?: unknown[] };
+  console.log(`Processing workflow ${workflow_id} with ${steps?.length || 0} steps`);
 }
 
 async function processCleanupJob(job: QueueJob) {
-  const rawDays = job.payload?.retention_days ?? 30;
+  const rawDays = (job.payload as { retention_days?: unknown })?.retention_days ?? 30;
   const retentionDays = Number.parseInt(String(rawDays), 10);
 
   if (!Number.isFinite(retentionDays) || retentionDays < 1 || retentionDays > 3650) {
@@ -268,7 +273,7 @@ async function processCleanupJob(job: QueueJob) {
     [retentionDays]
   );
 
-  console.log(`Deleted ${result.rowCount} old webhook deliveries`);
+  console.log(`Deleted ${result.rowCount ?? 0} old webhook deliveries`);
 }
 
 export async function workerLoop(

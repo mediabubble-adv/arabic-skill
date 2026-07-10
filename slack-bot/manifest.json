@@ -6,9 +6,8 @@
   "display_information": {
     "name": "Awesome Arabic Skill",
     "description": "Write, audit, research Arabic content in Slack",
-    "long_description": "Slack bot for Arabic content creation, quality audits, and research intelligence. Support 11 dialects, brand voice configuration, and team workflows.",
-    "background_color": "#1a1a1a",
-    "is_app_marketable": true
+    "long_description": "Awesome Arabic Skill brings Arabic-first content writing, quality auditing, and research directly into Slack. Use /arabic write, audit, research, status, and settings to generate on-brand copy across 11 Arabic dialects, catch translationese and tone issues, and keep your team's voice consistent without leaving your workspace.",
+    "background_color": "#1a1a1a"
   },
   "features": {
     "app_home": {
@@ -41,7 +40,8 @@
         "users:read",
         "team:read",
         "files:read",
-        "reactions:read"
+        "reactions:read",
+        "app_mentions:read"
       ]
     }
   },

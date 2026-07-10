@@ -1,12 +1,19 @@
 import { db } from "@/lib/db";
 import { WebhookEventType, WebhookSubscription } from "./types";
-import { randomBytes } from "crypto";
+import { randomBytes, createHmac } from "crypto";
 import { assertSafeWebhookUrl } from "./url-validation";
 
 /**
  * Webhook Management API
  * Create, read, update, delete webhook subscriptions
  */
+
+/** Strip the HMAC secret before a webhook subscription is returned to a client. */
+export function omitSecret(webhook: WebhookSubscription): Omit<WebhookSubscription, "secret"> {
+  const rest: Partial<WebhookSubscription> = { ...webhook };
+  delete rest.secret;
+  return rest as Omit<WebhookSubscription, "secret">;
+}
 
 /**
  * Create webhook subscription
@@ -133,7 +140,7 @@ export async function updateWebhook(
 ): Promise<WebhookSubscription | null> {
   try {
     const fields: string[] = [];
-    const values: any[] = [webhookId];
+    const values: unknown[] = [webhookId];
     let paramIndex = 2;
 
     if (updates.url !== undefined) {
@@ -202,7 +209,7 @@ export async function deleteWebhook(webhookId: string): Promise<boolean> {
       [webhookId]
     );
 
-    return result.rowCount > 0;
+    return (result.rowCount ?? 0) > 0;
   } catch (error) {
     console.error("Error deleting webhook:", error);
     return false;
@@ -225,7 +232,6 @@ export async function testWebhook(webhookId: string): Promise<{
       return { status: "error", error: "Webhook not found" };
     }
 
-    // Create test payload
     const testPayload = {
       id: `test_${Date.now()}`,
       event: "test",
@@ -236,13 +242,10 @@ export async function testWebhook(webhookId: string): Promise<{
       },
     };
 
-    // Generate signature
-    const { createHmac } = require("crypto");
     const hmac = createHmac("sha256", webhook.secret);
     hmac.update(JSON.stringify(testPayload));
     const signature = `sha256=${hmac.digest("hex")}`;
 
-    // Send test delivery
     const response = await fetch(webhook.url, {
       method: "POST",
       headers: {

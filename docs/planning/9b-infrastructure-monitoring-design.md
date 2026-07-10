@@ -261,7 +261,7 @@ posthog.capture('team_member_added', {
 │ - Webhooks: $280                         │
 │ - Template API: $80                      │
 │                                          │
-│ Vercel Postgres:         $320 (26%)      │
+│ Neon (Marketplace):      $320 (26%)      │
 │ - webhooks table: $120                   │
 │ - templates table: $140                  │
 │ - analytics queries: $60                 │
@@ -527,7 +527,7 @@ Audit trail:        7 years (compliance)
 | Service | Cost | Purpose |
 |---------|------|---------|
 | Vercel Functions | $300-500 | Compute (scales with usage) |
-| Vercel Postgres | $100-200 | Database (scales with storage) |
+| Neon (Vercel Marketplace) | $100-200 | Database (scales with storage) |
 | Vercel Queues | $50-100 | Async job processing |
 | Sentry | $29 | Error tracking |
 | PostHog | Free | Product analytics |

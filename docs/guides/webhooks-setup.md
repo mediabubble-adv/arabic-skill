@@ -22,11 +22,11 @@ Webhooks let external systems POST structured events to Awesome Arabic Skill. Re
 | `GET` | `/api/webhooks/health` | Health + queue statistics |
 | `GET` | `/api/webhooks/process` | Cron worker (processes pending jobs) |
 
-Implementation: `api/webhooks/handler.ts`, `api/webhooks/queue.ts`, `api/webhooks/management.ts`.
+Implementation: `website/lib/webhooks/handler.ts`, `website/lib/webhooks/queue.ts`, `website/lib/webhooks/management.ts`.
 
 ## Register a webhook
 
-Subscriptions are stored in `webhook_subscriptions` (see `api/webhooks/management.ts`):
+Subscriptions are stored in `webhook_subscriptions` (see `website/lib/webhooks/management.ts`):
 
 ```typescript
 createWebhook(workspaceId, url, events)
@@ -39,7 +39,7 @@ Each subscription receives:
 
 ### Supported event types
 
-From `api/webhooks/types.ts`:
+From `website/lib/webhooks/types.ts`:
 
 | Event | Purpose |
 |-------|---------|

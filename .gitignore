@@ -15,3 +15,4 @@ public/assets/cline-brand-assets/
 !.cursor/commands/arabic.md
 !.cursor/rules/arabic.mdc
 tests/golden/reports/*.json
+*.af~lock~
