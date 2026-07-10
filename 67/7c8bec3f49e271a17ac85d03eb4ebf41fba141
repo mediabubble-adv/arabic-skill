@@ -1,0 +1,23 @@
+website/lib/db.ts
+  s_5586d40ee1d611::t_bbadc3a992398a 1-7
+website/package.json
+  s_5586d40ee1d611::t_c535fdf1b89e9c 22-23,31
+website/package-lock.json
+  s_5586d40ee1d611::t_5a120242d777d8 18-19,27,1795-1804,4152,8528-8548
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "677c8bec3f49e271a17ac85d03eb4ebf41fba141",
+  "prompts": {},
+  "sessions": {
+    "s_5586d40ee1d611": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1306dd5b-d23b-4c28-a5e7-576c80e234e3",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
