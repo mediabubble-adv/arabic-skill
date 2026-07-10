@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createHash, randomBytes } from "crypto";
+import { pbkdf2Sync, randomBytes } from "crypto";
 import { db } from "@/lib/db";
 import {
   createOAuthState,
@@ -142,7 +142,16 @@ export async function handleOAuthCallback(req: NextRequest): Promise<NextRespons
     } = tokenData;
 
     const rawWebhookApiKey = randomBytes(32).toString("hex");
-    const webhookApiKeyHash = createHash("sha256").update(rawWebhookApiKey).digest("hex");
+    const webhookApiKeySalt = randomBytes(16).toString("hex");
+    const webhookApiKeyIterations = 210000;
+    const webhookApiKeyDerived = pbkdf2Sync(
+      rawWebhookApiKey,
+      webhookApiKeySalt,
+      webhookApiKeyIterations,
+      32,
+      "sha512"
+    ).toString("hex");
+    const webhookApiKeyHash = `pbkdf2$sha512$${webhookApiKeyIterations}$${webhookApiKeySalt}$${webhookApiKeyDerived}`;
 
     const workspaceResult = await db.query(
       `
