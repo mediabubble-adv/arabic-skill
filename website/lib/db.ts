@@ -1,4 +1,10 @@
-import { Pool, type QueryResultRow } from "@neondatabase/serverless";
+import { Pool, neonConfig, type QueryResultRow } from "@neondatabase/serverless";
+import ws from "ws";
+
+// Node 20/21 (including local `next dev`) have no global WebSocket; Node 22+
+// and Vercel's edge/serverless runtimes do. Without this, Pool.query() fails
+// with "All attempts to open a WebSocket to connect to the database failed."
+neonConfig.webSocketConstructor = ws;
 
 /**
  * Shared Postgres connection pool (Neon, via Vercel Marketplace).
