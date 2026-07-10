@@ -113,25 +113,31 @@ function handleViewSubmission(payload: SlackInteractive): NextResponse {
   return NextResponse.json({ response_action: "clear" });
 }
 
+const SLACK_RESPONSE_URL_PATH = /^\/actions\/[A-Za-z0-9/_-]+$/;
+
 /**
  * Slack signs the request that carries response_url, but signature verification
- * doesn't constrain response_url's value itself — pin it to Slack's own domain
- * and expected path shape so this fetch cannot be abused as an SSRF primitive.
+ * doesn't constrain response_url's value itself. Validating the string and then
+ * still fetching the ORIGINAL string isn't enough to satisfy SSRF taint tracking
+ * (the value reaching fetch() is still attacker-influenced regardless of what a
+ * boolean check concluded about it) — rebuild the URL from a hardcoded hostname
+ * literal plus only the validated path, so the fetch target is provably fixed to
+ * hooks.slack.com from the source code itself.
  */
-function isSlackResponseUrl(url: string): boolean {
+function toSafeSlackResponseUrl(url: string): string | null {
   try {
     const parsed = new URL(url);
 
-    if (parsed.protocol !== "https:") return false;
-    if (parsed.hostname !== "hooks.slack.com") return false;
-    if (parsed.port) return false;
-    if (parsed.username || parsed.password) return false;
-    if (parsed.search || parsed.hash) return false;
+    if (parsed.protocol !== "https:") return null;
+    if (parsed.hostname !== "hooks.slack.com") return null;
+    if (parsed.port) return null;
+    if (parsed.username || parsed.password) return null;
+    if (parsed.search || parsed.hash) return null;
+    if (!SLACK_RESPONSE_URL_PATH.test(parsed.pathname)) return null;
 
-    // Slack interactive response URLs are expected under /actions/...
-    return /^\/actions\/[A-Za-z0-9/_-]+$/.test(parsed.pathname);
+    return `https://hooks.slack.com${parsed.pathname}`;
   } catch {
-    return false;
+    return null;
   }
 }
 
@@ -145,7 +151,8 @@ function redactUrlForLogging(url: string): string {
 }
 
 async function sendResponse(responseUrl: string, payload: unknown): Promise<void> {
-  if (!isSlackResponseUrl(responseUrl)) {
+  const safeUrl = toSafeSlackResponseUrl(responseUrl);
+  if (!safeUrl) {
     console.error(
       "Refusing to send response to non-Slack response_url, host:",
       redactUrlForLogging(responseUrl)
@@ -154,7 +161,7 @@ async function sendResponse(responseUrl: string, payload: unknown): Promise<void
   }
 
   try {
-    await fetch(responseUrl, {
+    await fetch(safeUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
