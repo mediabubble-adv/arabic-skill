@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { createHash, randomBytes } from "crypto";
 import { db } from "@/lib/db";
 import {
   createOAuthState,
@@ -35,6 +36,16 @@ export async function handleOAuthStart(req: NextRequest): Promise<NextResponse> 
   }
 
   const clientId = process.env.SLACK_CLIENT_ID;
+  if (!clientId) {
+    return NextResponse.json(
+      {
+        error: "slack_client_id_missing",
+        message: "SLACK_CLIENT_ID is not configured",
+      },
+      { status: 500 }
+    );
+  }
+
   const scope = [
     "chat:write",
     "commands",
@@ -46,7 +57,7 @@ export async function handleOAuthStart(req: NextRequest): Promise<NextResponse> 
   ].join(",");
 
   const oauthUrl = new URL("https://slack.com/oauth/v2/authorize");
-  oauthUrl.searchParams.append("client_id", clientId ?? "");
+  oauthUrl.searchParams.append("client_id", clientId);
   oauthUrl.searchParams.append("scope", scope);
   oauthUrl.searchParams.append("state", state);
   oauthUrl.searchParams.append("redirect_uri", OAUTH_CALLBACK_URL);
@@ -103,10 +114,11 @@ export async function handleOAuthCallback(req: NextRequest): Promise<NextRespons
       redirect_uri: OAUTH_CALLBACK_URL,
     });
 
-    const tokenResponse = await fetch(
-      `https://slack.com/api/oauth.v2.access?${tokenParams.toString()}`,
-      { method: "POST" }
-    );
+    const tokenResponse = await fetch("https://slack.com/api/oauth.v2.access", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: tokenParams.toString(),
+    });
     const tokenData = await tokenResponse.json();
 
     if (!tokenData.ok) {
@@ -122,28 +134,35 @@ export async function handleOAuthCallback(req: NextRequest): Promise<NextRespons
 
     const {
       access_token,
+      refresh_token,
       bot_user_id,
       app_id,
       team: { id: team_id, name: team_name },
       authed_user: { id: user_id },
     } = tokenData;
 
+    const rawWebhookApiKey = randomBytes(32).toString("hex");
+    const webhookApiKeyHash = createHash("sha256").update(rawWebhookApiKey).digest("hex");
+
     const workspaceResult = await db.query(
       `
-      INSERT INTO workspaces (team_id, team_name, bot_token, bot_user_id, app_id, user_id, is_active, created_at)
-      VALUES ($1, $2, $3, $4, $5, $6, true, NOW())
+      INSERT INTO workspaces (team_id, team_name, bot_token, refresh_token, bot_user_id, app_id, user_id, webhook_api_key_hash, is_active, created_at)
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, true, NOW())
       ON CONFLICT (team_id) DO UPDATE SET
         bot_token = EXCLUDED.bot_token,
+        refresh_token = EXCLUDED.refresh_token,
         bot_user_id = EXCLUDED.bot_user_id,
+        webhook_api_key_hash = COALESCE(workspaces.webhook_api_key_hash, EXCLUDED.webhook_api_key_hash),
         is_active = true,
         uninstalled_at = NULL,
         updated_at = NOW()
-      RETURNING id
+      RETURNING id, webhook_api_key_hash
       `,
-      [team_id, team_name, access_token, bot_user_id, app_id, user_id]
+      [team_id, team_name, access_token, refresh_token ?? null, bot_user_id, app_id, user_id, webhookApiKeyHash]
     );
 
     const workspaceId = workspaceResult.rows[0].id;
+    const issuedNewWebhookApiKey = workspaceResult.rows[0].webhook_api_key_hash === webhookApiKeyHash;
 
     await db.query(
       `
@@ -160,7 +179,11 @@ export async function handleOAuthCallback(req: NextRequest): Promise<NextRespons
     const successUrl = new URL(redirectUrl);
     successUrl.searchParams.append("oauth_success", "true");
     successUrl.searchParams.append("workspace", team_name);
-    successUrl.searchParams.append("workspace_id", team_id);
+    successUrl.searchParams.append("workspace_id", workspaceId);
+    successUrl.searchParams.append("team_id", team_id);
+    if (issuedNewWebhookApiKey) {
+      successUrl.searchParams.append("webhook_api_key", rawWebhookApiKey);
+    }
 
     return NextResponse.redirect(successUrl.toString(), 302);
   } catch (error) {
@@ -177,18 +200,27 @@ export async function handleOAuthCallback(req: NextRequest): Promise<NextRespons
  * POST /api/slack/oauth/refresh
  */
 export async function handleTokenRefresh(req: NextRequest): Promise<NextResponse> {
-  const { workspace_id, refresh_token } = await req.json();
-
-  if (!workspace_id || !refresh_token) {
+  const cronSecret = process.env.CRON_SECRET;
+  const authHeader = req.headers.get("authorization");
+  if (!cronSecret || authHeader !== `Bearer ${cronSecret}`) {
     return NextResponse.json(
-      { error: "missing_parameters", message: "workspace_id and refresh_token required" },
+      { error: "unauthorized", message: "Valid authorization required" },
+      { status: 401 }
+    );
+  }
+
+  const { workspace_id } = await req.json();
+
+  if (!workspace_id) {
+    return NextResponse.json(
+      { error: "missing_parameters", message: "workspace_id required" },
       { status: 400 }
     );
   }
 
   try {
     const workspaceResult = await db.query(
-      "SELECT team_id FROM workspaces WHERE id = $1",
+      "SELECT team_id, refresh_token FROM workspaces WHERE id = $1",
       [workspace_id]
     );
 
@@ -199,7 +231,17 @@ export async function handleTokenRefresh(req: NextRequest): Promise<NextResponse
       );
     }
 
-    const { team_id } = workspaceResult.rows[0];
+    const { team_id, refresh_token } = workspaceResult.rows[0];
+
+    if (!refresh_token) {
+      return NextResponse.json(
+        {
+          error: "no_refresh_token",
+          message: `Workspace ${workspace_id} has no refresh token on file; reinstall the app to obtain one`,
+        },
+        { status: 400 }
+      );
+    }
 
     const tokenParams = new URLSearchParams({
       client_id: process.env.SLACK_CLIENT_ID ?? "",
@@ -208,10 +250,11 @@ export async function handleTokenRefresh(req: NextRequest): Promise<NextResponse
       refresh_token,
     });
 
-    const tokenResponse = await fetch(
-      `https://slack.com/api/oauth.v2.access?${tokenParams.toString()}`,
-      { method: "POST" }
-    );
+    const tokenResponse = await fetch("https://slack.com/api/oauth.v2.access", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: tokenParams.toString(),
+    });
     const tokenData = await tokenResponse.json();
 
     if (!tokenData.ok) {
