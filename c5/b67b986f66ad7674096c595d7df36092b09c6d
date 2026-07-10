@@ -1,0 +1,21 @@
+website/.gitignore
+  s_48b288ce558ad5::t_dd78cdd4048009 49
+.gitignore
+  s_48b288ce558ad5::t_ccc438c0d28d97 19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.12",
+  "base_commit_sha": "c5b67b986f66ad7674096c595d7df36092b09c6d",
+  "prompts": {},
+  "sessions": {
+    "s_48b288ce558ad5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "66534995-809b-4290-89fc-0eedaf6120bf",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
