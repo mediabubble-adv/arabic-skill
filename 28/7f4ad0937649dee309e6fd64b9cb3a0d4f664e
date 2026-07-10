@@ -1,0 +1,130 @@
+website/vercel.json
+  s_50609d687b526f::t_7c7a607da7f41e 1-8
+website/lib/slack/oauth-state.ts
+  s_50609d687b526f::t_bd9b4089ed1270 1-76
+website/lib/slack/events.ts
+  s_50609d687b526f::t_fc4daf415ff597 1-179
+website/lib/slack/interactive.ts
+  s_50609d687b526f::t_1a8847e242ca65 1-118
+website/app/api/webhooks/[id]/stats/route.ts
+  s_50609d687b526f::t_8f213a1bc39ddb 1-26
+website/app/api/slack/oauth/refresh/route.ts
+  s_50609d687b526f::t_10a29149b0b289 1-3
+website/app/api/webhooks/health/route.ts
+  s_50609d687b526f::t_430d65e83e9922 1-3
+website/package.json
+  s_50609d687b526f::t_4abb8db4223ce4 15
+website/lib/webhooks/url-validation.ts
+  s_50609d687b526f::t_117c087baf4f7b 1-63
+website/app/api/slack/oauth/uninstall/route.ts
+  s_50609d687b526f::t_60966410aa7fdf 1-3
+website/app/api/webhooks/receive/route.ts
+  s_50609d687b526f::t_569784ec4c7edc 1-3
+website/next.config.ts
+  s_8520762a9ffc53::t_27034e6d286189 4,8,10
+  s_8520762a9ffc53::t_1364664dbac7a3 2,7,9
+  s_8520762a9ffc53::t_51764624315a61 3
+website/app/api/webhooks/process/route.ts
+  s_50609d687b526f::t_76fa8981176a36 18-26,29
+  s_50609d687b526f::t_c6f6b1d1cf54d8 1-17,27-28,30-31
+website/lib/webhooks/handler.ts
+  s_50609d687b526f::t_0277fec40ffa16 1-193
+website/app/api/slack/oauth/start/route.ts
+  s_50609d687b526f::t_6161f97a2fc4ea 1-3
+slack-bot/manifest.json
+  s_50609d687b526f::t_f8096bee895d59 9-10
+  s_50609d687b526f::t_69a620d5d0a48b 43-44
+website/app/api/slack/events/route.ts
+  s_50609d687b526f::t_8a667982fcac0e 1-3
+docs/guides/webhooks-setup.md
+  s_50609d687b526f::t_ed720c6fc81b9a 25,29,42
+website/app/api/slack/interactive/route.ts
+  s_50609d687b526f::t_f2c2c1756ae921 1-3
+website/lib/db.ts
+  s_50609d687b526f::t_de7dbc26f7e41c 1-29
+website/lib/webhooks/queue.ts
+  s_50609d687b526f::t_de506625d314c9 87,103
+  s_50609d687b526f::t_2fe8800a197dd4 1-86,88-102,104-299
+website/app/api/slack/commands/route.ts
+  s_50609d687b526f::t_afc7044d1ffbf5 1-3
+website/app/api/webhooks/[id]/test/route.ts
+  s_50609d687b526f::t_91939fc52351ab 1-26
+website/lib/slack/oauth.ts
+  s_50609d687b526f::t_829ce8a108a6d3 45
+  s_50609d687b526f::t_90d04a286efdbe 1-44,46-303
+website/app/api/webhooks/[id]/route.ts
+  s_50609d687b526f::t_2f878f70e4faa1 33
+  s_50609d687b526f::t_51e99fe0577619 45
+  s_50609d687b526f::t_387c635ea08dfd 35
+  s_50609d687b526f::t_a05e355c04def5 63
+  s_50609d687b526f::t_2801fe4e943014 4,8-12,14-16,20,23
+  s_50609d687b526f::t_4ef09a031c066d 1-2,5-7,13,17-19,21-22,24-32,34,36-44,46-62,64-78,80-83
+  s_50609d687b526f::t_0b12d7a5c2974b 79
+  s_50609d687b526f::t_5d7bbafe7155e1 3
+website/lib/slack/auth.ts
+  s_50609d687b526f::t_71a3b0db81c031 1-361
+website/lib/slack/commands.ts
+  s_50609d687b526f::t_eb55af36cfa0ad 1-339
+website/app/api/webhooks/route.ts
+  s_50609d687b526f::t_c41c28d2a16d93 1-2,4-50
+  s_50609d687b526f::t_1cdc37006b0341 3
+website/app/api/slack/oauth/callback/route.ts
+  s_50609d687b526f::t_95037c7913591a 1-3
+docs/guides/slack-bot-setup.md
+  s_50609d687b526f::t_423cce57d13f4f 176
+  s_50609d687b526f::t_b20efb6ff0fc43 70-71
+  s_50609d687b526f::t_0a73f5779a28ce 52,61,77,85
+  s_50609d687b526f::t_2de0887bd8f595 20-23
+  s_50609d687b526f::t_ba552afb8e4860 92-94
+docs/planning/9b-infrastructure-monitoring-design.md
+  s_50609d687b526f::t_cb400d20ca03b5 264
+  s_50609d687b526f::t_ab2aa46d2d8a0d 530
+website/lib/webhooks/management.ts
+  s_50609d687b526f::t_0d7a41552ef928 1-10,18-142,144-313
+  s_50609d687b526f::t_be03d357d6eebe 143
+  s_50609d687b526f::t_12cfc21be3b07f 11-17
+docs/guides/slack-api.md
+  s_50609d687b526f::t_ed720c6fc81b9a 24-25,57,132
+  s_50609d687b526f::t_23e77a3d892ee2 22
+website/lib/webhooks/types.ts
+  s_50609d687b526f::t_222dbc76d4c505 1-27,29-84,86-101,103-130,132-144,147-202,204-208,210-214
+  s_50609d687b526f::t_60bbf1c9f7e55a 28,85,102,131,145-146,203,209
+website/lib/webhooks/auth.ts
+  s_50609d687b526f::t_c249f5def8bbeb 1-26
+.gitignore
+  s_5586d40ee1d611::t_95a34e94f2cbda 18
+website/package-lock.json
+  s_50609d687b526f::t_7167e90bb69859 11,1063-1071
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "287f4ad0937649dee309e6fd64b9cb3a0d4f664e",
+  "prompts": {},
+  "sessions": {
+    "s_50609d687b526f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "10cb4cf3-697b-42ee-adeb-d5a3d4ed343a",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    },
+    "s_5586d40ee1d611": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1306dd5b-d23b-4c28-a5e7-576c80e234e3",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    },
+    "s_8520762a9ffc53": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "1236f5db-0e96-4f1d-8dad-8723ddf9f945",
+        "model": "default"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
