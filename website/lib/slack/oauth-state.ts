@@ -1,6 +1,6 @@
 import { createHmac, randomBytes } from "crypto";
 
-const STATE_MAX_AGE_MS = 10 * 60 * 1000;
+const STATE_MAX_AGE_MS = 30 * 60 * 1000;
 
 const ALLOWED_REDIRECT_HOSTS = new Set([
   "arabic-skill.vercel.app",
