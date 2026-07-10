@@ -1,0 +1,35 @@
+website/app/api/webhooks/route.ts
+  s_5586d40ee1d611::t_dcf984d3ddbe0d 36,38-43,45-46,48
+  s_5586d40ee1d611::t_2259f6c6b6a336 47,54
+  s_5586d40ee1d611::t_6b3bc6adf7cd62 4
+  s_5586d40ee1d611::t_838335fbd39985 16-21
+website/lib/webhooks/management.ts
+  s_5586d40ee1d611::t_452ce49aefd90b 141-159,161-178
+  s_5586d40ee1d611::t_bddc7b581bb09c 126
+website/app/api/webhooks/[id]/stats/route.ts
+  s_5586d40ee1d611::t_a6c064a10f5900 2-3,13-14
+website/app/api/webhooks/[id]/route.ts
+  s_5586d40ee1d611::t_61505486e1d489 34-46
+  s_5586d40ee1d611::t_59cab473fcfc21 2-4
+website/app/api/webhooks/[id]/test/route.ts
+  s_5586d40ee1d611::t_9ea25b5c4dc4b6 2-3,13-14,16-17
+website/lib/webhooks/types.ts
+  s_5586d40ee1d611::t_ca79e77bcdeeae 20-36
+  s_5586d40ee1d611::t_bc071fa177813a 19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "83848e4d13de9f274a373c03504bbe4f0efe5e8a",
+  "prompts": {},
+  "sessions": {
+    "s_5586d40ee1d611": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1306dd5b-d23b-4c28-a5e7-576c80e234e3",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
