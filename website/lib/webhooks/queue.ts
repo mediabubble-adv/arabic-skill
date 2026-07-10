@@ -12,51 +12,46 @@ import { QueueJob } from "./types";
  * Called by cron job or continuous worker
  */
 export async function processNextJob(): Promise<QueueJob | null> {
-  try {
-    const job = await claimNextPendingJob();
-    if (!job) {
-      return null;
-    }
-
-    try {
-      switch (job.type) {
-        case "webhook":
-          await processWebhookJob(job);
-          break;
-        case "batch":
-          await processBatchJob(job);
-          break;
-        case "workflow":
-          await processWorkflowJob(job);
-          break;
-        case "cleanup":
-          await processCleanupJob(job);
-          break;
-        default:
-          console.warn(`Unknown job type: ${job.type}`);
-      }
-
-      await updateJobStatus(job.id, "completed", undefined, job.attempt_count);
-      return job;
-    } catch (error) {
-      const nextAttempt = job.attempt_count + 1;
-      const message =
-        error instanceof Error ? error.message : "Unknown error";
-
-      if (nextAttempt >= job.max_attempts) {
-        await updateJobStatus(job.id, "failed", message, nextAttempt);
-        console.error(`Job failed after ${job.max_attempts} attempts:`, job.id);
-      } else {
-        const backoffMs = Math.pow(2, nextAttempt) * 1000;
-        await scheduleRetry(job.id, backoffMs, message, nextAttempt);
-        console.log(`Job ${job.id} scheduled for retry in ${backoffMs}ms`);
-      }
-
-      return { ...job, attempt_count: nextAttempt };
-    }
-  } catch (error) {
-    console.error("Error processing queue job:", error);
+  const job = await claimNextPendingJob();
+  if (!job) {
     return null;
+  }
+
+  try {
+    switch (job.type) {
+      case "webhook":
+        await processWebhookJob(job);
+        break;
+      case "batch":
+        await processBatchJob(job);
+        break;
+      case "workflow":
+        await processWorkflowJob(job);
+        break;
+      case "cleanup":
+        await processCleanupJob(job);
+        break;
+      default:
+        console.warn(`Unknown job type: ${job.type}`);
+    }
+
+    await updateJobStatus(job.id, "completed", undefined, job.attempt_count);
+    return job;
+  } catch (error) {
+    const nextAttempt = job.attempt_count + 1;
+    const message =
+      error instanceof Error ? error.message : "Unknown error";
+
+    if (nextAttempt >= job.max_attempts) {
+      await updateJobStatus(job.id, "failed", message, nextAttempt);
+      console.error(`Job failed after ${job.max_attempts} attempts:`, job.id);
+    } else {
+      const backoffMs = Math.pow(2, nextAttempt) * 1000;
+      await scheduleRetry(job.id, backoffMs, message, nextAttempt);
+      console.log(`Job ${job.id} scheduled for retry in ${backoffMs}ms`);
+    }
+
+    return { ...job, attempt_count: nextAttempt };
   }
 }
 
@@ -64,52 +59,47 @@ export async function processNextJob(): Promise<QueueJob | null> {
  * Atomically claim the next pending job.
  */
 async function claimNextPendingJob(): Promise<QueueJob | null> {
-  try {
-    const result = await db.query(
-      `
-      UPDATE queue_jobs
-      SET status = 'processing', started_at = NOW(), updated_at = NOW()
-      WHERE id = (
-        SELECT id
-        FROM queue_jobs
-        WHERE status = 'pending'
-          AND (next_retry_at IS NULL OR next_retry_at <= NOW())
-        ORDER BY
-          CASE priority
-            WHEN 'high' THEN 1
-            WHEN 'normal' THEN 2
-            WHEN 'low' THEN 3
-          END ASC,
-          created_at ASC
-        LIMIT 1
-        FOR UPDATE SKIP LOCKED
-      )
-      RETURNING id, type, payload, status, priority, attempt_count, max_attempts, error, created_at
-      `,
-      []
-    );
+  const result = await db.query(
+    `
+    UPDATE queue_jobs
+    SET status = 'processing', started_at = NOW(), updated_at = NOW()
+    WHERE id = (
+      SELECT id
+      FROM queue_jobs
+      WHERE status = 'pending'
+        AND (next_retry_at IS NULL OR next_retry_at <= NOW())
+      ORDER BY
+        CASE priority
+          WHEN 'high' THEN 1
+          WHEN 'normal' THEN 2
+          WHEN 'low' THEN 3
+        END ASC,
+        created_at ASC
+      LIMIT 1
+      FOR UPDATE SKIP LOCKED
+    )
+    RETURNING id, type, payload, status, priority, attempt_count, max_attempts, error, created_at
+    `,
+    []
+  );
 
-    if (result.rows.length === 0) return null;
+  if (result.rows.length === 0) return null;
 
-    const row = result.rows[0];
-    return {
-      id: row.id,
-      type: row.type,
-      payload:
-        typeof row.payload === "string"
-          ? JSON.parse(row.payload)
-          : row.payload,
-      status: row.status,
-      priority: row.priority,
-      attempt_count: row.attempt_count,
-      max_attempts: row.max_attempts,
-      error: row.error,
-      created_at: new Date(row.created_at),
-    };
-  } catch (error) {
-    console.error("Error claiming next job:", error);
-    return null;
-  }
+  const row = result.rows[0];
+  return {
+    id: row.id,
+    type: row.type,
+    payload:
+      typeof row.payload === "string"
+        ? JSON.parse(row.payload)
+        : row.payload,
+    status: row.status,
+    priority: row.priority,
+    attempt_count: row.attempt_count,
+    max_attempts: row.max_attempts,
+    error: row.error,
+    created_at: new Date(row.created_at),
+  };
 }
 
 async function updateJobStatus(
@@ -163,37 +153,68 @@ async function scheduleRetry(
 async function processWebhookJob(job: QueueJob) {
   const { subscription_id, ...payload } = job.payload as { subscription_id: string; [key: string]: unknown };
 
-  const subscription = await db.query(
-    "SELECT url, secret FROM webhook_subscriptions WHERE id = $1",
-    [subscription_id]
-  );
+  let statusCode: number | undefined;
 
-  if (subscription.rows.length === 0) {
-    throw new Error(`Subscription not found: ${subscription_id}`);
+  try {
+    const subscription = await db.query(
+      "SELECT url, secret FROM webhook_subscriptions WHERE id = $1",
+      [subscription_id]
+    );
+
+    if (subscription.rows.length === 0) {
+      throw new Error(`Subscription not found: ${subscription_id}`);
+    }
+
+    const { url, secret } = subscription.rows[0];
+
+    const hmac = createHmac("sha256", secret);
+    hmac.update(JSON.stringify(payload));
+    const signature = `sha256=${hmac.digest("hex")}`;
+
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "X-Webhook-Signature": signature,
+        "X-Webhook-ID": subscription_id,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+      signal: AbortSignal.timeout(30000),
+    });
+
+    statusCode = response.status;
+
+    if (!response.ok) {
+      throw new Error(`Webhook delivery failed: ${response.status}`);
+    }
+
+    await recordWebhookDelivery(subscription_id, job.payload, "delivered", statusCode);
+    console.log(`Webhook delivered to ${url}`);
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Unknown error";
+    await recordWebhookDelivery(subscription_id, job.payload, "failed", statusCode, message);
+    throw error;
   }
+}
 
-  const { url, secret } = subscription.rows[0];
-
-  const hmac = createHmac("sha256", secret);
-  hmac.update(JSON.stringify(payload));
-  const signature = `sha256=${hmac.digest("hex")}`;
-
-  const response = await fetch(url, {
-    method: "POST",
-    headers: {
-      "X-Webhook-Signature": signature,
-      "X-Webhook-ID": subscription_id,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(payload),
-    signal: AbortSignal.timeout(30000),
-  });
-
-  if (!response.ok) {
-    throw new Error(`Webhook delivery failed: ${response.status}`);
+async function recordWebhookDelivery(
+  subscriptionId: string,
+  payload: unknown,
+  status: "delivered" | "failed",
+  statusCode?: number,
+  error?: string
+) {
+  try {
+    await db.query(
+      `
+      INSERT INTO webhook_deliveries (id, subscription_id, payload, status, status_code, error, completed_at)
+      VALUES (gen_random_uuid(), $1, $2, $3, $4, $5, NOW())
+      `,
+      [subscriptionId, JSON.stringify(payload), status, statusCode ?? null, error ?? null]
+    );
+  } catch (err) {
+    console.error("Error recording webhook delivery:", err);
   }
-
-  console.log(`Webhook delivered to ${url}`);
 }
 
 async function processBatchJob(job: QueueJob) {
@@ -222,7 +243,7 @@ async function processBatchJob(job: QueueJob) {
 
   if (callback_url) {
     try {
-      await fetch(callback_url, {
+      const response = await fetch(callback_url, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -231,6 +252,10 @@ async function processBatchJob(job: QueueJob) {
           results,
         }),
       });
+
+      if (!response.ok) {
+        throw new Error(`Batch callback failed: ${response.status}`);
+      }
     } catch (error) {
       console.error("Error sending batch callback:", error);
     }
