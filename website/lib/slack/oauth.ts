@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { pbkdf2Sync, randomBytes } from "crypto";
+import { createHash, randomBytes } from "crypto";
 import { db } from "@/lib/db";
 import {
   createOAuthState,
@@ -141,17 +141,15 @@ export async function handleOAuthCallback(req: NextRequest): Promise<NextRespons
       authed_user: { id: user_id },
     } = tokenData;
 
+    // Fast, unsalted SHA-256 is correct here (not a CodeQL false-positive to
+    // suppress via a slower algorithm): rawWebhookApiKey is 256 bits of CSPRNG
+    // output, not a user-chosen password. A slow/salted KDF (bcrypt/PBKDF2)
+    // defends against offline brute-forcing of LOW-entropy secrets, which
+    // doesn't apply here, and would also break authenticateWorkspace's O(1)
+    // `WHERE webhook_api_key_hash = $1` lookup — a per-row salt makes that
+    // lookup impossible without already knowing which row to check.
     const rawWebhookApiKey = randomBytes(32).toString("hex");
-    const webhookApiKeySalt = randomBytes(16).toString("hex");
-    const webhookApiKeyIterations = 210000;
-    const webhookApiKeyDerived = pbkdf2Sync(
-      rawWebhookApiKey,
-      webhookApiKeySalt,
-      webhookApiKeyIterations,
-      32,
-      "sha512"
-    ).toString("hex");
-    const webhookApiKeyHash = `pbkdf2$sha512$${webhookApiKeyIterations}$${webhookApiKeySalt}$${webhookApiKeyDerived}`;
+    const webhookApiKeyHash = createHash("sha256").update(rawWebhookApiKey).digest("hex");
 
     const workspaceResult = await db.query(
       `
