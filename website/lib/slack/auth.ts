@@ -343,7 +343,7 @@ export interface SlackCommand {
 export interface SlackInteractive {
   type: "block_actions" | "view_submission" | "view_closed";
   trigger_id: string;
-  team: { id: string; domain: string };
+  team: { id: string; domain: string } | null;
   user: { id: string; username: string };
   view?: {
     id: string;

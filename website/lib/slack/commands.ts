@@ -328,11 +328,15 @@ function extractArgValue(args: string[], flag: string): string | null {
 /** Send a response to Slack via response_url */
 async function sendResponse(responseUrl: string, payload: unknown): Promise<void> {
   try {
-    await fetch(responseUrl, {
+    const response = await fetch(responseUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
     });
+
+    if (!response.ok) {
+      throw new Error(`Slack response_url returned ${response.status}`);
+    }
   } catch (error) {
     console.error("Error sending response to Slack:", error);
   }

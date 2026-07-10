@@ -34,7 +34,15 @@ export async function handleInteractive(req: NextRequest): Promise<NextResponse>
     return NextResponse.json({ error: "missing_payload" }, { status: 400 });
   }
 
-  const workspace = await getWorkspaceByTeamId(payload.team.id);
+  const teamId = payload.team?.id;
+  if (!teamId) {
+    return NextResponse.json(
+      { error: "unsupported_installation_type", message: "Enterprise Grid org-installed apps are not yet supported" },
+      { status: 400 }
+    );
+  }
+
+  const workspace = await getWorkspaceByTeamId(teamId);
   if (!workspace) {
     return NextResponse.json(
       { error: "workspace_not_found", message: "Workspace not found or inactive" },

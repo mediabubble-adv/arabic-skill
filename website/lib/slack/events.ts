@@ -13,6 +13,7 @@ interface SlackEvent {
     ts: string;
     channel: string;
     event_ts: string;
+    tab?: string;
   };
   type: string;
   event_id: string;
@@ -58,7 +59,12 @@ export async function handleEvents(req: NextRequest): Promise<NextResponse> {
     return NextResponse.json({ error: "Invalid request signature" }, { status: 401 });
   }
 
-  const body: SlackEvent = JSON.parse(rawBody);
+  let body: SlackEvent;
+  try {
+    body = JSON.parse(rawBody);
+  } catch {
+    return NextResponse.json({ error: "invalid_json" }, { status: 400 });
+  }
 
   if (body.type === "url_verification") {
     console.log("Slack URL verification challenge");
@@ -81,6 +87,9 @@ export async function handleEvents(req: NextRequest): Promise<NextResponse> {
         switch (body.event.type) {
           case "app_mention":
             await handleAppMention(body.event, workspace);
+            break;
+          case "app_home_opened":
+            await publishAppHome(workspace, body.event.user);
             break;
           case "message":
             if (body.event.channel === "app_home") {
@@ -163,6 +172,7 @@ export async function publishAppHome(workspace: SlackWorkspace, userId: string):
             {
               type: "button",
               text: { type: "plain_text", text: "View Settings" },
+              url: "https://arabic-skill.vercel.app/docs",
               action_id: "view_settings_btn",
             },
           ],
