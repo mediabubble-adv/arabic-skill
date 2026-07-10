@@ -17,6 +17,24 @@ export type WebhookEventType =
   | "workspace.configure";
 
 /**
+ * All valid webhook event type values, for runtime validation of request bodies.
+ */
+export const WEBHOOK_EVENT_TYPES: readonly WebhookEventType[] = [
+  "content.generate",
+  "content.audit",
+  "content.research",
+  "batch.process",
+  "template.create",
+  "template.publish",
+  "workflow.complete",
+  "workspace.configure",
+];
+
+export function isWebhookEventType(value: unknown): value is WebhookEventType {
+  return typeof value === "string" && (WEBHOOK_EVENT_TYPES as readonly string[]).includes(value);
+}
+
+/**
  * Base webhook payload
  */
 export interface WebhookPayload {

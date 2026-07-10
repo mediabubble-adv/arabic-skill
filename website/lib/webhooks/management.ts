@@ -123,7 +123,7 @@ export async function listWebhooks(workspaceId: string): Promise<WebhookSubscrip
     }));
   } catch (error) {
     console.error("Error listing webhooks:", error);
-    return [];
+    throw error;
   }
 }
 
@@ -138,41 +138,44 @@ export async function updateWebhook(
     is_active?: boolean;
   }
 ): Promise<WebhookSubscription | null> {
+  const fields: string[] = [];
+  const values: unknown[] = [webhookId];
+  let paramIndex = 2;
+
+  // Validation runs before any DB write and is intentionally outside the
+  // try/catch below, so a rejected URL throws instead of being swallowed
+  // into the same "not found" null as a genuine 0-row update.
+  if (updates.url !== undefined) {
+    await assertSafeWebhookUrl(updates.url);
+    fields.push(`url = $${paramIndex}`);
+    values.push(updates.url);
+    paramIndex++;
+  }
+
+  if (updates.events !== undefined) {
+    fields.push(`events = $${paramIndex}`);
+    values.push(updates.events);
+    paramIndex++;
+  }
+
+  if (updates.is_active !== undefined) {
+    fields.push(`is_active = $${paramIndex}`);
+    values.push(updates.is_active);
+    paramIndex++;
+  }
+
+  if (fields.length === 0) {
+    return getWebhook(webhookId);
+  }
+
+  const query = `
+    UPDATE webhook_subscriptions
+    SET ${fields.join(", ")}, updated_at = NOW()
+    WHERE id = $1
+    RETURNING id, workspace_id, url, events, secret, is_active, failure_count, last_triggered_at, created_at, updated_at
+  `;
+
   try {
-    const fields: string[] = [];
-    const values: unknown[] = [webhookId];
-    let paramIndex = 2;
-
-    if (updates.url !== undefined) {
-      await assertSafeWebhookUrl(updates.url);
-      fields.push(`url = $${paramIndex}`);
-      values.push(updates.url);
-      paramIndex++;
-    }
-
-    if (updates.events !== undefined) {
-      fields.push(`events = $${paramIndex}`);
-      values.push(updates.events);
-      paramIndex++;
-    }
-
-    if (updates.is_active !== undefined) {
-      fields.push(`is_active = $${paramIndex}`);
-      values.push(updates.is_active);
-      paramIndex++;
-    }
-
-    if (fields.length === 0) {
-      return getWebhook(webhookId);
-    }
-
-    const query = `
-      UPDATE webhook_subscriptions
-      SET ${fields.join(", ")}, updated_at = NOW()
-      WHERE id = $1
-      RETURNING id, workspace_id, url, events, secret, is_active, failure_count, last_triggered_at, created_at, updated_at
-    `;
-
     const result = await db.query(query, values);
 
     if (result.rows.length === 0) return null;
