@@ -1,32 +1,22 @@
-import { VercelRequest, VercelResponse } from "@vercel/node";
 import { createHmac, timingSafeEqual } from "crypto";
 import { db } from "@/lib/db";
 
-export interface SlackRequest extends VercelRequest {
-  rawBody?: string;
-}
-
-function getRequestBody(req: SlackRequest): string {
-  if (req.rawBody) return req.rawBody;
-  if (typeof req.body === "string") return req.body;
-  return JSON.stringify(req.body);
-}
-
 /**
- * Verify Slack request signature
+ * Verify a Slack request signature against the raw request body.
  * https://api.slack.com/authentication/verifying-requests-from-slack
  */
-export const verifySlackRequest = (req: SlackRequest): boolean => {
+export const verifySlackSignature = (
+  rawBody: string,
+  timestamp: string | null,
+  signature: string | null
+): boolean => {
   const slackSigningSecret = process.env.SLACK_SIGNING_SECRET;
   if (!slackSigningSecret) {
     console.error("Missing SLACK_SIGNING_SECRET");
     return false;
   }
 
-  const timestamp = req.headers["x-slack-request-timestamp"] as string;
-  const slackSignature = req.headers["x-slack-signature"] as string;
-
-  if (!timestamp || !slackSignature) {
+  if (!timestamp || !signature) {
     console.warn("Missing Slack signature headers");
     return false;
   }
@@ -34,24 +24,20 @@ export const verifySlackRequest = (req: SlackRequest): boolean => {
   // Prevent replay attacks (request must be within 5 minutes)
   const requestTime = parseInt(timestamp, 10);
   const currentTime = Math.floor(Date.now() / 1000);
-  if (Math.abs(currentTime - requestTime) > 300) {
+  if (!Number.isFinite(requestTime) || Math.abs(currentTime - requestTime) > 300) {
     console.warn("Request timestamp outside 5-minute window");
     return false;
   }
 
-  // Reconstruct the signing base string from the exact raw payload bytes
-  const body = getRequestBody(req);
-  const baseString = `v0:${timestamp}:${body}`;
+  const baseString = `v0:${timestamp}:${rawBody}`;
 
-  // Generate the signature
   const hmac = createHmac("sha256", slackSigningSecret);
   hmac.update(baseString);
   const computedSignature = `v0=${hmac.digest("hex")}`;
 
-  // Compare signatures (timing-safe comparison)
   try {
     return timingSafeEqual(
-      Buffer.from(slackSignature),
+      Buffer.from(signature),
       Buffer.from(computedSignature)
     );
   } catch {
@@ -78,7 +64,7 @@ export const getWorkspaceByTeamId = async (
       [teamId]
     );
 
-    return result.rows[0] || null;
+    return (result.rows[0] as SlackWorkspace) || null;
   } catch (error) {
     console.error("Error fetching workspace:", error);
     return null;
@@ -171,7 +157,6 @@ export const checkWorkspaceQuota = async (
     const now = new Date();
     const resetTime = new Date(reset_at);
 
-    // If quota resets today, check current count
     if (resetTime > now) {
       const remaining = daily_limit - requests_today;
       return {
@@ -181,7 +166,6 @@ export const checkWorkspaceQuota = async (
       };
     }
 
-    // Reset quota if reset time has passed
     await db.query(
       `
       UPDATE workspace_quotas
@@ -259,7 +243,7 @@ export const getWorkspaceSettings = async (
       [workspaceId]
     );
 
-    return result.rows[0] || null;
+    return (result.rows[0] as WorkspaceSettings) || null;
   } catch (error) {
     console.error("Error fetching workspace settings:", error);
     return null;
@@ -275,7 +259,7 @@ export const updateWorkspaceSettings = async (
 ): Promise<boolean> => {
   try {
     const updates: string[] = [];
-    const values: any[] = [workspaceId];
+    const values: unknown[] = [workspaceId];
     let paramIndex = 2;
 
     if (settings.default_dialect) {
@@ -359,12 +343,12 @@ export interface SlackCommand {
 export interface SlackInteractive {
   type: "block_actions" | "view_submission" | "view_closed";
   trigger_id: string;
-  team: { id: string; domain: string };
+  team: { id: string; domain: string } | null;
   user: { id: string; username: string };
   view?: {
     id: string;
     hash: string;
-    state: { values: Record<string, any> };
+    state: { values: Record<string, unknown> };
     previous_view_id: string | null;
   };
   actions?: Array<{

@@ -22,11 +22,11 @@ Webhooks let external systems POST structured events to Awesome Arabic Skill. Re
 | `GET` | `/api/webhooks/health` | Health + queue statistics |
 | `GET` | `/api/webhooks/process` | Cron worker (processes pending jobs) |
 
-Implementation: `api/webhooks/handler.ts`, `api/webhooks/queue.ts`, `api/webhooks/management.ts`.
+Implementation: `website/lib/webhooks/handler.ts`, `website/lib/webhooks/queue.ts`, `website/lib/webhooks/management.ts`.
 
 ## Register a webhook
 
-Subscriptions are stored in `webhook_subscriptions` (see `api/webhooks/management.ts`):
+Subscriptions are stored in `webhook_subscriptions` (see `website/lib/webhooks/management.ts`):
 
 ```typescript
 createWebhook(workspaceId, url, events)
@@ -39,7 +39,7 @@ Each subscription receives:
 
 ### Supported event types
 
-From `api/webhooks/types.ts`:
+From `website/lib/webhooks/types.ts`:
 
 | Event | Purpose |
 |-------|---------|
@@ -150,6 +150,15 @@ Configure Vercel Cron to hit `/api/webhooks/process` with header:
 ```
 Authorization: Bearer ${CRON_SECRET}
 ```
+
+`website/vercel.json` schedules this at `0 0 * * *` (once daily) — the Vercel Hobby plan
+rejects the deployment outright if a cron schedule runs more than once a day. Upgrade to
+Pro to raise the frequency (down to once a minute) for lower webhook-delivery latency.
+
+Vercel Cron only fires on Production deployments — a preview deployment (PR branch) will
+never run this worker, so queued jobs sit `pending` until promoted to production. To
+verify queue processing on a preview, call `GET /api/webhooks/process` directly with the
+`CRON_SECRET` header instead of waiting for the schedule.
 
 The worker drains `queue_jobs` (max attempts: 3, exponential backoff). Failed jobs increment `failure_count` on the subscription.
 

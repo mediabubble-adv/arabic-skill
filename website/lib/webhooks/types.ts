@@ -17,6 +17,24 @@ export type WebhookEventType =
   | "workspace.configure";
 
 /**
+ * All valid webhook event type values, for runtime validation of request bodies.
+ */
+export const WEBHOOK_EVENT_TYPES: readonly WebhookEventType[] = [
+  "content.generate",
+  "content.audit",
+  "content.research",
+  "batch.process",
+  "template.create",
+  "template.publish",
+  "workflow.complete",
+  "workspace.configure",
+];
+
+export function isWebhookEventType(value: unknown): value is WebhookEventType {
+  return typeof value === "string" && (WEBHOOK_EVENT_TYPES as readonly string[]).includes(value);
+}
+
+/**
  * Base webhook payload
  */
 export interface WebhookPayload {
@@ -25,7 +43,7 @@ export interface WebhookPayload {
   timestamp: number;
   workspace_id: string;
   user_id?: string;
-  data: Record<string, any>;
+  data: Record<string, unknown>;
   metadata?: {
     source?: "slack" | "github" | "api" | "automation";
     correlation_id?: string;
@@ -82,7 +100,7 @@ export interface BatchProcessPayload extends WebhookPayload {
     operations: Array<{
       id: string;
       type: "generate" | "audit" | "research";
-      config: Record<string, any>;
+      config: Record<string, unknown>;
     }>;
     parallel?: boolean;
     callback_url?: string;
@@ -99,7 +117,7 @@ export interface TemplateCreatePayload extends WebhookPayload {
     description: string;
     dialect: string;
     prompt_template: string;
-    output_schema?: Record<string, any>;
+    output_schema?: Record<string, unknown>;
     tags?: string[];
   };
 }
@@ -128,7 +146,7 @@ export interface WorkflowCompletePayload extends WebhookPayload {
     results: Array<{
       step_id: string;
       status: "success" | "failed" | "skipped";
-      output?: any;
+      output?: unknown;
       error?: string;
     }>;
     duration_ms: number;
@@ -142,8 +160,8 @@ export interface WorkspaceConfigurePayload extends WebhookPayload {
   event: "workspace.configure";
   data: {
     setting_key: string;
-    old_value?: any;
-    new_value: any;
+    old_value?: unknown;
+    new_value: unknown;
     changed_by: string;
   };
 }
@@ -200,13 +218,13 @@ export interface WebhookDelivery {
 export interface QueueJob {
   id: string;
   type: "webhook" | "batch" | "workflow" | "cleanup";
-  payload: AnyWebhookPayload | Record<string, any>;
+  payload: AnyWebhookPayload | Record<string, unknown>;
   status: "pending" | "processing" | "completed" | "failed";
   priority: "low" | "normal" | "high";
   attempt_count: number;
   max_attempts: number;
   error?: string;
-  result?: any;
+  result?: unknown;
   created_at: Date;
   started_at?: Date;
   completed_at?: Date;

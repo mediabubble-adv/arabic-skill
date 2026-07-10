@@ -17,6 +17,10 @@ Awesome Arabic Skill is now available as a Slack bot. This guide walks through:
 - Node.js 18+
 - Access to the Awesome Arabic Skill Vercel deployment
 
+The bot backend lives inside the `website/` Next.js app (`website/app/api/slack/`,
+`website/lib/slack/`), not a separate deployment — run all commands below from
+`website/`.
+
 ## Step 1: Create Slack App
 
 ### Via Slack App Manifest (Recommended)
@@ -45,7 +49,7 @@ Awesome Arabic Skill is now available as a Slack bot. This guide walks through:
     "slash_commands": [
       {
         "command": "/arabic",
-        "url": "https://YOUR_DOMAIN/api/slack/commands",
+        "url": "https://arabic-skill.vercel.app/api/slack/commands",
         "description": "Master command: write, audit, research, help, status, settings",
         "usage_hint": "write caption --dialect masri --count 3",
         "should_escape": false
@@ -54,7 +58,7 @@ Awesome Arabic Skill is now available as a Slack bot. This guide walks through:
   },
   "oauth_config": {
     "redirect_urls": [
-      "https://YOUR_DOMAIN/api/slack/oauth/callback"
+      "https://arabic-skill.vercel.app/api/slack/oauth/callback"
     ],
     "scopes": {
       "bot": [
@@ -63,13 +67,14 @@ Awesome Arabic Skill is now available as a Slack bot. This guide walks through:
         "users:read",
         "team:read",
         "files:read",
-        "reactions:read"
+        "reactions:read",
+        "app_mentions:read"
       ]
     }
   },
   "settings": {
     "event_subscriptions": {
-      "request_url": "https://YOUR_DOMAIN/api/slack/events",
+      "request_url": "https://arabic-skill.vercel.app/api/slack/events",
       "bot_events": [
         "app_mention",
         "message.app_home"
@@ -77,15 +82,16 @@ Awesome Arabic Skill is now available as a Slack bot. This guide walks through:
     },
     "interactivity": {
       "is_enabled": true,
-      "request_url": "https://YOUR_DOMAIN/api/slack/interactive"
+      "request_url": "https://arabic-skill.vercel.app/api/slack/interactive"
     },
     "token_rotation_enabled": true
   }
 }
 ```
 
-**Update the URLs** in the manifest to match your deployment:
-- Replace `YOUR_DOMAIN` with your Vercel domain (e.g., `arabic-skill.vercel.app`)
+The URLs above already point at the production deployment (`arabic-skill.vercel.app`).
+If you're self-hosting on a different domain, replace it in all four URLs before
+pasting the manifest.
 
 5. Click **"Create"**
 
@@ -167,6 +173,7 @@ vercel env pull .env.local --yes
    - `team:read`
    - `files:read`
    - `reactions:read`
+   - `app_mentions:read`
 
 3. Click **"Install to Workspace"** (or **"Reinstall to Workspace"** if upgrading)
 4. Authorize the requested permissions

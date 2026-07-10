@@ -19,10 +19,10 @@ Slack POST callbacks (slash commands, Events API, and interactive payloads) veri
 - Header: `X-Slack-Request-Timestamp`
 - Header: `X-Slack-Signature` (`v0=<hmac>`)
 
-Invalid signatures return `401`. Implementation: `api/slack/auth.ts` → `verifySlackRequest()`.
+Invalid signatures return `401`. Implementation: `website/lib/slack/auth.ts` → `verifySlackSignature()`.
 
-OAuth routes (`/api/slack/oauth/start` and `/api/slack/oauth/callback`) do not use Slack request signing; they validate the `state` parameter via HMAC to prevent CSRF. See `api/slack/oauth-state.ts`.
-Invalid states return `400`. Implementation: `api/slack/oauth-state.ts` → `validateOAuthState()`.
+OAuth routes (`/api/slack/oauth/start` and `/api/slack/oauth/callback`) do not use Slack request signing; they validate the `state` parameter via HMAC to prevent CSRF. See `website/lib/slack/oauth-state.ts`.
+Invalid states return `400`. Implementation: `website/lib/slack/oauth-state.ts` → `validateOAuthState()`.
 
 ## Endpoints
 
@@ -54,7 +54,7 @@ App manifest template: `slack-bot/manifest.json`.
 | `response_url` | URL for delayed responses (3-minute window) |
 | `trigger_id` | Opens modals / interactive flows |
 
-TypeScript shape: `SlackCommand` in `api/slack/auth.ts`.
+TypeScript shape: `SlackCommand` in `website/lib/slack/auth.ts`.
 
 ### Immediate response
 
@@ -129,7 +129,7 @@ Always return `200` with `{}` to acknowledge (even on internal errors) to avoid 
 | `view_submission` | Modal submit |
 | `view_closed` | Modal dismissed |
 
-TypeScript shape: `SlackInteractive` in `api/slack/auth.ts`.
+TypeScript shape: `SlackInteractive` in `website/lib/slack/auth.ts`.
 
 ## Outbound Slack webhooks (GitHub Actions)
 

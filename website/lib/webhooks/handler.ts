@@ -1,11 +1,7 @@
-import { VercelRequest, VercelResponse } from "@vercel/node";
+import { NextRequest, NextResponse } from "next/server";
 import { createHmac, timingSafeEqual } from "crypto";
 import { db } from "@/lib/db";
 import { AnyWebhookPayload, WebhookEventType } from "./types";
-
-export interface WebhookRequest extends VercelRequest {
-  rawBody?: string;
-}
 
 /**
  * Verify webhook signature (HMAC-SHA256)
@@ -27,69 +23,54 @@ export function verifyWebhookSignature(
 }
 
 /**
- * Handle incoming webhook request
- * POST /api/webhooks/receive
+ * Handle incoming webhook request.
+ * POST /api/webhooks/receive?id=<webhook_id>
  */
-export async function handleWebhookReceive(
-  req: WebhookRequest,
-  res: VercelResponse
-) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
-  }
-
+export async function handleWebhookReceive(req: NextRequest): Promise<NextResponse> {
   try {
     const webhookId =
-      (req.query.id as string) || (req.headers["x-webhook-id"] as string);
+      req.nextUrl.searchParams.get("id") || req.headers.get("x-webhook-id");
     if (!webhookId) {
-      return res.status(400).json({ error: "Missing webhook ID" });
+      return NextResponse.json({ error: "Missing webhook ID" }, { status: 400 });
     }
 
-    const signature = req.headers["x-webhook-signature"] as string;
+    const signature = req.headers.get("x-webhook-signature");
     if (!signature) {
-      return res.status(401).json({ error: "Missing signature" });
+      return NextResponse.json({ error: "Missing signature" }, { status: 401 });
     }
 
     const subscription = await getWebhookSubscription(webhookId);
     if (!subscription) {
       console.warn(`Webhook not found: ${webhookId}`);
-      return res.status(404).json({ error: "Webhook not found" });
+      return NextResponse.json({ error: "Webhook not found" }, { status: 404 });
     }
 
-    const rawPayload =
-      req.rawBody ??
-      (typeof req.body === "string" ? req.body : JSON.stringify(req.body));
+    const rawPayload = await req.text();
 
     if (!verifyWebhookSignature(rawPayload, signature, subscription.secret)) {
       console.warn(`Invalid signature for webhook: ${webhookId}`);
-      return res.status(401).json({ error: "Invalid signature" });
+      return NextResponse.json({ error: "Invalid signature" }, { status: 401 });
     }
 
     let data: AnyWebhookPayload;
     try {
-      data =
-        typeof req.body === "string"
-          ? JSON.parse(req.body)
-          : (req.body as AnyWebhookPayload);
+      data = JSON.parse(rawPayload);
     } catch {
-      return res.status(400).json({ error: "Invalid JSON payload" });
+      return NextResponse.json({ error: "Invalid JSON payload" }, { status: 400 });
     }
 
     if (!subscription.events.includes(data.event)) {
       console.log(`Webhook not subscribed to event: ${data.event}`);
-      return res.status(202).json({ received: true });
+      return NextResponse.json({ received: true }, { status: 202 });
     }
 
     await queueWebhookJob(subscription.id, data);
     await recordWebhookDelivery(subscription.id, data, "pending", null);
 
-    return res.status(202).json({
-      received: true,
-      job_id: data.id,
-    });
+    return NextResponse.json({ received: true, job_id: data.id }, { status: 202 });
   } catch (error) {
     console.error("Error handling webhook:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }
 
@@ -133,7 +114,7 @@ async function queueWebhookJob(
       VALUES ($1, $2, $3, $4, $5, 0, 3, NOW())
       `,
       [
-        `job_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+        `job_${Date.now()}_${Math.random().toString(36).slice(2, 11)}`,
         "webhook",
         JSON.stringify({ ...payload, subscription_id: subscriptionId }),
         "pending",
@@ -172,10 +153,11 @@ async function recordWebhookDelivery(
   }
 }
 
-export async function handleWebhookHealth(
-  req: VercelRequest,
-  res: VercelResponse
-) {
+/**
+ * Webhook infra health check.
+ * GET /api/webhooks/health
+ */
+export async function handleWebhookHealth(): Promise<NextResponse> {
   try {
     await db.query("SELECT 1");
 
@@ -191,7 +173,7 @@ export async function handleWebhookHealth(
 
     const stats = queueStats.rows[0];
 
-    return res.status(200).json({
+    return NextResponse.json({
       status: "healthy",
       timestamp: new Date().toISOString(),
       database: "connected",
@@ -203,9 +185,9 @@ export async function handleWebhookHealth(
     });
   } catch (error) {
     console.error("Health check failed:", error);
-    return res.status(503).json({
-      status: "unhealthy",
-      error: "Database connection failed",
-    });
+    return NextResponse.json(
+      { status: "unhealthy", error: "Database connection failed" },
+      { status: 503 }
+    );
   }
 }
