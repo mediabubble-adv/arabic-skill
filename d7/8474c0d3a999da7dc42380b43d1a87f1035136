@@ -1,0 +1,20 @@
+website/lib/slack/oauth.ts
+  s_5586d40ee1d611::t_17ee0696841987 144-150,152
+  s_5586d40ee1d611::t_0b28ebc7bd0320 2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "d78474c0d3a999da7dc42380b43d1a87f1035136",
+  "prompts": {},
+  "sessions": {
+    "s_5586d40ee1d611": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1306dd5b-d23b-4c28-a5e7-576c80e234e3",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
