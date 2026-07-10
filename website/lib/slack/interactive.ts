@@ -127,9 +127,21 @@ function isSlackResponseUrl(url: string): boolean {
   }
 }
 
+/** response_url embeds a bearer token in its path — never log the raw value. */
+function redactUrlForLogging(url: string): string {
+  try {
+    return new URL(url).hostname;
+  } catch {
+    return "unparseable_url";
+  }
+}
+
 async function sendResponse(responseUrl: string, payload: unknown): Promise<void> {
   if (!isSlackResponseUrl(responseUrl)) {
-    console.error("Refusing to send response to non-Slack response_url:", responseUrl);
+    console.error(
+      "Refusing to send response to non-Slack response_url, host:",
+      redactUrlForLogging(responseUrl)
+    );
     return;
   }
 
