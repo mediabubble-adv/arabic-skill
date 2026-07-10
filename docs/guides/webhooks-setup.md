@@ -155,6 +155,11 @@ Authorization: Bearer ${CRON_SECRET}
 rejects the deployment outright if a cron schedule runs more than once a day. Upgrade to
 Pro to raise the frequency (down to once a minute) for lower webhook-delivery latency.
 
+Vercel Cron only fires on Production deployments — a preview deployment (PR branch) will
+never run this worker, so queued jobs sit `pending` until promoted to production. To
+verify queue processing on a preview, call `GET /api/webhooks/process` directly with the
+`CRON_SECRET` header instead of waiting for the schedule.
+
 The worker drains `queue_jobs` (max attempts: 3, exponential backoff). Failed jobs increment `failure_count` on the subscription.
 
 ## GitHub Actions integration
