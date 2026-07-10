@@ -157,7 +157,7 @@ export async function handleOAuthCallback(req: NextRequest): Promise<NextRespons
       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, true, NOW())
       ON CONFLICT (team_id) DO UPDATE SET
         bot_token = EXCLUDED.bot_token,
-        refresh_token = EXCLUDED.refresh_token,
+        refresh_token = COALESCE(EXCLUDED.refresh_token, workspaces.refresh_token),
         bot_user_id = EXCLUDED.bot_user_id,
         webhook_api_key_hash = COALESCE(workspaces.webhook_api_key_hash, EXCLUDED.webhook_api_key_hash),
         is_active = true,
