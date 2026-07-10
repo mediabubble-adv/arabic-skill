@@ -108,13 +108,20 @@ function handleViewSubmission(payload: SlackInteractive): NextResponse {
 /**
  * Slack signs the request that carries response_url, but signature verification
  * doesn't constrain response_url's value itself — pin it to Slack's own domain
- * so a compromised signing secret (or a verification bug) can't be turned into
- * an open SSRF proxy via this fetch.
+ * and expected path shape so this fetch cannot be abused as an SSRF primitive.
  */
 function isSlackResponseUrl(url: string): boolean {
   try {
     const parsed = new URL(url);
-    return parsed.protocol === "https:" && parsed.hostname === "hooks.slack.com";
+
+    if (parsed.protocol !== "https:") return false;
+    if (parsed.hostname !== "hooks.slack.com") return false;
+    if (parsed.port) return false;
+    if (parsed.username || parsed.password) return false;
+    if (parsed.search || parsed.hash) return false;
+
+    // Slack interactive response URLs are expected under /actions/...
+    return /^\/actions\/[A-Za-z0-9/_-]+$/.test(parsed.pathname);
   } catch {
     return false;
   }
