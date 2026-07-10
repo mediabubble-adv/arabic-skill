@@ -16,3 +16,4 @@ public/assets/cline-brand-assets/
 !.cursor/rules/arabic.mdc
 tests/golden/reports/*.json
 *.af~lock~
+.vercel
