@@ -79,14 +79,27 @@ function handleBlockActions(payload: SlackInteractive): NextResponse {
       (async () => {
         switch (action.action_id) {
           case "approve_content":
-            await sendResponse(response_url, { response_type: "in_channel", text: "✅ Content approved!" });
-            break;
-          case "reject_content":
+          case "reject_content": {
+            // Keep the generated content visible; just strip the buttons and
+            // append a status line. Re-render from the original message's
+            // blocks so the copy the user is acting on is never discarded.
+            const approved = action.action_id === "approve_content";
+            const preservedBlocks = (payload.message?.blocks ?? []).filter(
+              (block) => block.type !== "actions"
+            );
+            const status = approved
+              ? `✅ Approved by <@${payload.user.id}>`
+              : `❌ Rejected by <@${payload.user.id}>`;
             await sendResponse(response_url, {
-              response_type: "ephemeral",
-              text: "❌ Content rejected. Please revise and try again.",
+              response_type: "in_channel",
+              replace_original: true,
+              blocks: [
+                ...preservedBlocks,
+                { type: "context", elements: [{ type: "mrkdwn", text: status }] },
+              ],
             });
             break;
+          }
           case "regenerate_content": {
             const params = decodeWriteParams(action.value);
             if (!params) {

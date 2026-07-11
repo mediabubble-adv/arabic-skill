@@ -358,4 +358,9 @@ export interface SlackInteractive {
     selected_option?: { value: string; text: { type: string; text: string } };
   }>;
   response_url?: string;
+  // The message the interaction fired from; Slack includes its full blocks so
+  // an action can re-render the original content instead of discarding it.
+  message?: {
+    blocks?: Array<{ type: string; [key: string]: unknown }>;
+  };
 }

@@ -203,7 +203,8 @@ export function buildWriteResponseBlocks(
 
   if (!result.ok) {
     return {
-      response_type: "ephemeral",
+      response_type: "in_channel",
+      replace_original: true,
       blocks: [
         header,
         meta,
@@ -228,6 +229,7 @@ export function buildWriteResponseBlocks(
 
   return {
     response_type: "in_channel",
+    replace_original: true,
     blocks: [
       header,
       meta,

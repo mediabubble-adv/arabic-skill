@@ -87,16 +87,17 @@ export async function handleSlashCommand(req: NextRequest): Promise<NextResponse
     });
   }
 
+  const args = parseCommandArgs(text);
+  const subcommand = (args[0] || "help").toLowerCase();
+
   // Process command in background; acknowledge immediately per Slack's 3s budget.
   waitUntil(
     (async () => {
       try {
-        const args = parseCommandArgs(text);
-        const subcommand = args[0] || "help";
         const settings = await getWorkspaceSettings(workspace.id);
 
         let result;
-        switch (subcommand.toLowerCase()) {
+        switch (subcommand) {
           case "write":
             result = await handleWriteCommand(args, settings);
             break;
@@ -151,6 +152,18 @@ export async function handleSlashCommand(req: NextRequest): Promise<NextResponse
       }
     })()
   );
+
+  // `write` acknowledges with an in_channel placeholder so the generated
+  // content can post publicly — an ephemeral ack would lock the whole
+  // response_url thread to "only visible to you", and Slack won't let a
+  // later reply upgrade an ephemeral message to in_channel. Other
+  // subcommands (help/status/settings) stay private.
+  if (subcommand === "write") {
+    return NextResponse.json({
+      response_type: "in_channel",
+      text: "⏳ Generating Arabic content…",
+    });
+  }
 
   return NextResponse.json({
     response_type: "ephemeral",
