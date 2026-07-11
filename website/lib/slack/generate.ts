@@ -87,12 +87,14 @@ export type WriteResult =
   | { ok: true; variants: string[] }
   | { ok: false; error: string };
 
-export async function generateWriteContent(params: {
+export interface WriteParams {
   contentType: string;
   dialect: string;
   count: number;
   brief: string;
-}): Promise<WriteResult> {
+}
+
+export async function generateWriteContent(params: WriteParams): Promise<WriteResult> {
   const { contentType, dialect, count, brief } = params;
 
   try {
@@ -133,4 +135,116 @@ export async function generateWriteContent(params: {
       error: error instanceof Error ? error.message : "Unknown error calling Gemini",
     };
   }
+}
+
+/** Split text into Slack-block-safe chunks, breaking on paragraph/line boundaries where possible. */
+export function chunkText(text: string, maxLen: number): string[] {
+  if (text.length <= maxLen) return [text];
+
+  const chunks: string[] = [];
+  let remaining = text;
+  while (remaining.length > maxLen) {
+    let cut = remaining.lastIndexOf("\n\n", maxLen);
+    if (cut < maxLen * 0.5) cut = remaining.lastIndexOf("\n", maxLen);
+    if (cut < maxLen * 0.5) cut = maxLen;
+    chunks.push(remaining.slice(0, cut).trim());
+    remaining = remaining.slice(cut).trim();
+  }
+  if (remaining) chunks.push(remaining);
+  return chunks;
+}
+
+// Slack block button `value` is capped at 2000 chars; leave headroom for the
+// JSON wrapper (contentType/dialect/count keys) around the brief itself.
+const MAX_ENCODED_BRIEF_LENGTH = 1500;
+
+/** Encode write params into a button value so "Regenerate" can replay the same request. */
+function encodeWriteParams(params: WriteParams): string {
+  return JSON.stringify({
+    ...params,
+    brief: params.brief.slice(0, MAX_ENCODED_BRIEF_LENGTH),
+  });
+}
+
+/** Decode a "Regenerate" button's value back into write params. Returns null if malformed. */
+export function decodeWriteParams(value: string | undefined): WriteParams | null {
+  if (!value) return null;
+  try {
+    const parsed = JSON.parse(value);
+    if (
+      typeof parsed.contentType !== "string" ||
+      typeof parsed.dialect !== "string" ||
+      typeof parsed.count !== "number" ||
+      typeof parsed.brief !== "string"
+    ) {
+      return null;
+    }
+    return parsed;
+  } catch {
+    return null;
+  }
+}
+
+/** Build the full Slack response payload (blocks + actions) for a write result. */
+export function buildWriteResponseBlocks(
+  params: WriteParams,
+  result: WriteResult
+): Record<string, unknown> {
+  const { contentType, dialect, count } = params;
+
+  const header = {
+    type: "header",
+    text: { type: "plain_text", text: "✍️ Arabic Skill — Write Mode", emoji: true },
+  };
+  const meta = {
+    type: "section",
+    text: { type: "mrkdwn", text: `*Type:* ${contentType}\n*Dialect:* ${dialect}\n*Count:* ${count}` },
+  };
+
+  if (!result.ok) {
+    return {
+      response_type: "ephemeral",
+      blocks: [
+        header,
+        meta,
+        {
+          type: "section",
+          text: {
+            type: "mrkdwn",
+            text: `❌ *Generation failed:* ${result.error}\nPlease try again — if this keeps happening, contact the app developer.`,
+          },
+        },
+      ],
+    };
+  }
+
+  const contentBlocks = result.variants.flatMap((variant, index) => {
+    const label = result.variants.length > 1 ? `*Variant ${index + 1}:*\n` : "";
+    return chunkText(variant, 2900).map((chunk, chunkIndex) => ({
+      type: "section",
+      text: { type: "mrkdwn", text: chunkIndex === 0 ? `${label}${chunk}` : chunk },
+    }));
+  });
+
+  return {
+    response_type: "in_channel",
+    blocks: [
+      header,
+      meta,
+      ...contentBlocks,
+      {
+        type: "actions",
+        elements: [
+          { type: "button", text: { type: "plain_text", text: "👍 Approve" }, action_id: "approve_content", style: "primary" },
+          { type: "button", text: { type: "plain_text", text: "👎 Reject" }, action_id: "reject_content" },
+          {
+            type: "button",
+            text: { type: "plain_text", text: "🔄 Regenerate" },
+            action_id: "regenerate_content",
+            value: encodeWriteParams(params),
+          },
+        ],
+      },
+    ],
+  };
 }

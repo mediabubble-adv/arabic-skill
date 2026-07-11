@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { waitUntil } from "@vercel/functions";
 import { verifySlackSignature, getWorkspaceByTeamId, SlackInteractive } from "./auth";
+import { buildWriteResponseBlocks, decodeWriteParams, generateWriteContent } from "./generate";
 
 function parseInteractivePayload(rawBody: string): SlackInteractive {
   const params = new URLSearchParams(rawBody);
@@ -86,9 +87,19 @@ function handleBlockActions(payload: SlackInteractive): NextResponse {
               text: "❌ Content rejected. Please revise and try again.",
             });
             break;
-          case "regenerate_content":
-            await sendResponse(response_url, { response_type: "ephemeral", text: "🔄 Regenerating content..." });
+          case "regenerate_content": {
+            const params = decodeWriteParams(action.value);
+            if (!params) {
+              await sendResponse(response_url, {
+                response_type: "ephemeral",
+                text: "❌ Can't regenerate this message — it's from before this feature was added, or the request expired. Run `/arabic write` again.",
+              });
+              break;
+            }
+            const result = await generateWriteContent(params);
+            await sendResponse(response_url, buildWriteResponseBlocks(params, result));
             break;
+          }
           case "view_full_report":
             await sendResponse(response_url, {
               response_type: "ephemeral",

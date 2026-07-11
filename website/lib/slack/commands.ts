@@ -10,7 +10,12 @@ import {
   SlackWorkspace,
   WorkspaceSettings,
 } from "./auth";
-import { generateWriteContent, normalizeContentType, normalizeDialect } from "./generate";
+import {
+  buildWriteResponseBlocks,
+  generateWriteContent,
+  normalizeContentType,
+  normalizeDialect,
+} from "./generate";
 
 /**
  * Slack slash command handler.
@@ -176,55 +181,9 @@ async function handleWriteCommand(
   const count = Math.min(Math.max(Number.isFinite(requestedCount) ? requestedCount : 1, 1), 5);
   const brief = extractBrief(args);
 
-  const result = await generateWriteContent({ contentType, dialect, count, brief });
-
-  const header = {
-    type: "header",
-    text: { type: "plain_text", text: "✍️ Arabic Skill — Write Mode", emoji: true },
-  };
-  const meta = {
-    type: "section",
-    text: { type: "mrkdwn", text: `*Type:* ${contentType}\n*Dialect:* ${dialect}\n*Count:* ${count}` },
-  };
-
-  if (!result.ok) {
-    return {
-      response_type: "ephemeral",
-      blocks: [
-        header,
-        meta,
-        {
-          type: "section",
-          text: { type: "mrkdwn", text: `❌ *Generation failed:* ${result.error}\nPlease try again — if this keeps happening, contact the app developer.` },
-        },
-      ],
-    };
-  }
-
-  const contentBlocks = result.variants.flatMap((variant, index) => {
-    const label = result.variants.length > 1 ? `*Variant ${index + 1}:*\n` : "";
-    return chunkText(variant, 2900).map((chunk, chunkIndex) => ({
-      type: "section",
-      text: { type: "mrkdwn", text: chunkIndex === 0 ? `${label}${chunk}` : chunk },
-    }));
-  });
-
-  return {
-    response_type: "in_channel",
-    blocks: [
-      header,
-      meta,
-      ...contentBlocks,
-      {
-        type: "actions",
-        elements: [
-          { type: "button", text: { type: "plain_text", text: "👍 Approve" }, action_id: "approve_content", style: "primary" },
-          { type: "button", text: { type: "plain_text", text: "👎 Reject" }, action_id: "reject_content" },
-          { type: "button", text: { type: "plain_text", text: "🔄 Regenerate" }, action_id: "regenerate_content" },
-        ],
-      },
-    ],
-  };
+  const params = { contentType, dialect, count, brief };
+  const result = await generateWriteContent(params);
+  return buildWriteResponseBlocks(params, result);
 }
 
 /** Handle /arabic audit command */
@@ -366,23 +325,6 @@ function extractBrief(args: string[]): string {
     }
   }
   return args.filter((_, i) => !skip.has(i)).join(" ").trim();
-}
-
-/** Split text into Slack-block-safe chunks, breaking on paragraph/line boundaries where possible. */
-function chunkText(text: string, maxLen: number): string[] {
-  if (text.length <= maxLen) return [text];
-
-  const chunks: string[] = [];
-  let remaining = text;
-  while (remaining.length > maxLen) {
-    let cut = remaining.lastIndexOf("\n\n", maxLen);
-    if (cut < maxLen * 0.5) cut = remaining.lastIndexOf("\n", maxLen);
-    if (cut < maxLen * 0.5) cut = maxLen;
-    chunks.push(remaining.slice(0, cut).trim());
-    remaining = remaining.slice(cut).trim();
-  }
-  if (remaining) chunks.push(remaining);
-  return chunks;
 }
 
 /** Send a response to Slack via response_url */
