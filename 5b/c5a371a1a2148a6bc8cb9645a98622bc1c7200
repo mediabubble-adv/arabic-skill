@@ -1,0 +1,34 @@
+website/package.json
+  s_48b288ce558ad5::t_d8ac981799e2b9 17
+  s_48b288ce558ad5::t_f3e5c00e9e7360 6,8
+website/scripts/copy-arabic-reference.mjs
+  s_48b288ce558ad5::t_b776aa4f5f5cd7 1-30
+website/lib/slack/generate.ts
+  s_48b288ce558ad5::t_16ab075a8a72a2 1-29,35-132
+  s_48b288ce558ad5::t_a581001f4fcf90 30-34
+website/.gitignore
+  s_48b288ce558ad5::t_651f1be8553d6e 50
+  s_48b288ce558ad5::t_eb857aa2a05ce2 51
+website/lib/slack/commands.ts
+  s_48b288ce558ad5::t_1f71c3fd6d449e 355-387
+  s_48b288ce558ad5::t_d71e493a1a9043 13
+  s_48b288ce558ad5::t_9cd2f435f2a7c1 173-179,181-210,215-217
+website/package-lock.json
+  s_48b288ce558ad5::t_35308c629f1fac 11,465-488,1307-1363,2878-2897,2910-2918,2977-2982,3219-3227,3423-3431,4167-4189,4306-4317,4376-4425,4557-4582,5421-5429,5480-5500,5829-5834,6910-6929,6949-6966,7410-7432,7746-7765,8776-8784
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.12",
+  "base_commit_sha": "5bc5a371a1a2148a6bc8cb9645a98622bc1c7200",
+  "prompts": {},
+  "sessions": {
+    "s_48b288ce558ad5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "66534995-809b-4290-89fc-0eedaf6120bf",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
