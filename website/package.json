@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "node scripts/copy-arabic-reference.mjs",
     "dev": "next dev",
+    "prebuild": "node scripts/copy-arabic-reference.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
@@ -12,6 +14,7 @@
     "test:e2e:install": "playwright install chromium"
   },
   "dependencies": {
+    "@google/genai": "^2.11.0",
     "@neondatabase/serverless": "^1.0.2",
     "@slack/web-api": "^7.9.3",
     "@vercel/functions": "^2.2.2",

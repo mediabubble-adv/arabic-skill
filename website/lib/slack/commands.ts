@@ -10,6 +10,7 @@ import {
   SlackWorkspace,
   WorkspaceSettings,
 } from "./auth";
+import { generateWriteContent, normalizeContentType, normalizeDialect } from "./generate";
 
 /**
  * Slack slash command handler.
@@ -169,25 +170,51 @@ async function handleWriteCommand(
   args: string[],
   settings: WorkspaceSettings | null
 ): Promise<Record<string, unknown>> {
-  const contentType = args[1] || "caption";
-  const dialect = extractArgValue(args, "--dialect") || settings?.default_dialect || "masri";
-  const count = parseInt(extractArgValue(args, "--count") || "1", 10);
+  const contentType = normalizeContentType(args[1]);
+  const dialect = normalizeDialect(extractArgValue(args, "--dialect") || settings?.default_dialect);
+  const requestedCount = parseInt(extractArgValue(args, "--count") || "1", 10);
+  const count = Math.min(Math.max(Number.isFinite(requestedCount) ? requestedCount : 1, 1), 5);
+  const brief = extractBrief(args);
 
-  // TODO: wire to the /arabic CLI write command instead of this placeholder.
-  const placeholderContent = `Generated ${contentType} in ${dialect} (count: ${count})...`;
+  const result = await generateWriteContent({ contentType, dialect, count, brief });
+
+  const header = {
+    type: "header",
+    text: { type: "plain_text", text: "✍️ Arabic Skill — Write Mode", emoji: true },
+  };
+  const meta = {
+    type: "section",
+    text: { type: "mrkdwn", text: `*Type:* ${contentType}\n*Dialect:* ${dialect}\n*Count:* ${count}` },
+  };
+
+  if (!result.ok) {
+    return {
+      response_type: "ephemeral",
+      blocks: [
+        header,
+        meta,
+        {
+          type: "section",
+          text: { type: "mrkdwn", text: `❌ *Generation failed:* ${result.error}\nPlease try again — if this keeps happening, contact the app developer.` },
+        },
+      ],
+    };
+  }
+
+  const contentBlocks = result.variants.flatMap((variant, index) => {
+    const label = result.variants.length > 1 ? `*Variant ${index + 1}:*\n` : "";
+    return chunkText(variant, 2900).map((chunk, chunkIndex) => ({
+      type: "section",
+      text: { type: "mrkdwn", text: chunkIndex === 0 ? `${label}${chunk}` : chunk },
+    }));
+  });
 
   return {
     response_type: "in_channel",
     blocks: [
-      {
-        type: "header",
-        text: { type: "plain_text", text: "✍️ Arabic Skill — Write Mode", emoji: true },
-      },
-      {
-        type: "section",
-        text: { type: "mrkdwn", text: `*Type:* ${contentType}\n*Dialect:* ${dialect}\n*Count:* ${count}` },
-      },
-      { type: "section", text: { type: "mrkdwn", text: placeholderContent } },
+      header,
+      meta,
+      ...contentBlocks,
       {
         type: "actions",
         elements: [
@@ -323,6 +350,39 @@ function extractArgValue(args: string[], flag: string): string | null {
     return args[index + 1];
   }
   return null;
+}
+
+/**
+ * Everything in a write/audit command's args that isn't the subcommand,
+ * the content type, or a recognized --flag/value pair is treated as the brief.
+ * Example: ["write", "blog", "--dialect", "masri", "about", "our", "launch"] => "about our launch"
+ */
+function extractBrief(args: string[]): string {
+  const skip = new Set<number>([0, 1]);
+  for (let i = 0; i < args.length; i++) {
+    if (args[i].startsWith("--")) {
+      skip.add(i);
+      if (i + 1 < args.length) skip.add(i + 1);
+    }
+  }
+  return args.filter((_, i) => !skip.has(i)).join(" ").trim();
+}
+
+/** Split text into Slack-block-safe chunks, breaking on paragraph/line boundaries where possible. */
+function chunkText(text: string, maxLen: number): string[] {
+  if (text.length <= maxLen) return [text];
+
+  const chunks: string[] = [];
+  let remaining = text;
+  while (remaining.length > maxLen) {
+    let cut = remaining.lastIndexOf("\n\n", maxLen);
+    if (cut < maxLen * 0.5) cut = remaining.lastIndexOf("\n", maxLen);
+    if (cut < maxLen * 0.5) cut = maxLen;
+    chunks.push(remaining.slice(0, cut).trim());
+    remaining = remaining.slice(cut).trim();
+  }
+  if (remaining) chunks.push(remaining);
+  return chunks;
 }
 
 /** Send a response to Slack via response_url */
