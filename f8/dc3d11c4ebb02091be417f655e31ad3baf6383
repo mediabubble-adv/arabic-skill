@@ -1,0 +1,27 @@
+website/lib/slack/generate.ts
+  s_48b288ce558ad5::t_8d7b9307a94ef7 139-237,239-250
+  s_48b288ce558ad5::t_9a2b8876959b88 90,95-97
+  s_48b288ce558ad5::t_ed92dad2f36ded 238
+website/lib/slack/commands.ts
+  s_48b288ce558ad5::t_9c03dd96265403 13-18
+  s_48b288ce558ad5::t_d82afd9200a7ad 184-186
+website/lib/slack/interactive.ts
+  s_48b288ce558ad5::t_d9a7f65db8b74b 90-100,102
+  s_48b288ce558ad5::t_f134f26a916bb6 4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.12",
+  "base_commit_sha": "f8dc3d11c4ebb02091be417f655e31ad3baf6383",
+  "prompts": {},
+  "sessions": {
+    "s_48b288ce558ad5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "66534995-809b-4290-89fc-0eedaf6120bf",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Yasser Dorgham <yasser.dorgham@gmail.com>"
+    }
+  }
+}
