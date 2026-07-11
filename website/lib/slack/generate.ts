@@ -107,7 +107,11 @@ export async function generateWriteContent(params: {
     ].join("\n");
 
     const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
+      // "latest" alias rather than a dated model ID: gemini-2.5-flash is
+      // still listed by ai.models.list() but was rejected at generate-time
+      // with "no longer available to new users" for a freshly created key —
+      // a dated ID can silently go stale later even if it works today.
+      model: "gemini-flash-latest",
       contents: userPrompt,
       config: { systemInstruction },
     });
