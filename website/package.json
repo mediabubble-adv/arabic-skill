@@ -18,7 +18,7 @@
     "@neondatabase/serverless": "^1.0.2",
     "@slack/web-api": "^7.9.3",
     "@vercel/functions": "^2.2.2",
-    "next": "16.2.10",
+    "next": "16.3.8",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-markdown": "^10.1.0",
